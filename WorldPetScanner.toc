@@ -1,0 +1,33 @@
+## Interface: 100207
+## Title: WorldPetScanner
+## Author: Salkari
+## Version: v10.2.7-1
+## SavedVariables: WPSDB
+## OptionalDeps: CanIMogIt, AllTheThings
+
+embeds.xml
+Libs\LibQTip-1.0\LibQTip-1.0.lua
+
+Core.lua
+
+Models\Challenge.lua
+Models\Reward.lua
+Models\Task.lua
+
+DB\Data\Legion.lua
+DB\Data\BattleForAzeroth.lua
+DB\Data\Shadowlands.lua
+DB\Data\Dragonflight.lua
+
+DB\Expansions.lua
+DB\Zones.lua
+DB\Items.lua
+DB\Pets.lua
+DB\Links.lua
+
+Locales.lua
+Utilities.lua
+TasksDisplay.lua
+TaskFinder.lua
+WorldPetScanner.lua
+Options.lua
