@@ -13,8 +13,7 @@ local L = WPS.L
 
 local ldb = LibStub:GetLibrary("LibDataBroker-1.1")
 local dataobj =
-	ldb:NewDataObject(
-		"WorldPetScanner",
+	ldb:NewDataObject("WorldPetScanner",
 		{
 			type = "data source",
 			text = "WPS",
@@ -148,7 +147,8 @@ function WPS:OnEnable()
 			if name == "PLAYER_ENTERING_WORLD" then
 				self:ScheduleTimer(
 					function()
-						self:BuildPetList()
+						--self:BuildPetList()
+						self.PetList = {}
 					end,
 					self.db.profile.options.delay
 				)
@@ -189,6 +189,7 @@ function WPS:Show()
 	self:Debug("Show")
 	if (self.PopUp) then		
 		WPS:CloseWindow()
+		return
 	end
 	
 	self:CreateTaskList()

@@ -107,7 +107,7 @@ function Reward:Display()
             self._display = self:Link()
         elseif self:IsItem() then
             if self:HasIcon() then
-                self._display = self.quantity.."x".."|T"..self._itemIcon..":24|t"
+                self._display = self.quantity.."x".."|T"..self._itemIcon..":20:20:0:0:32:32:2:30:2:30|t"
             else
                 self._display = self.quantity.."x"..self:Link()
             end
@@ -118,7 +118,7 @@ function Reward:Display()
         end
 
         if (not self.guaranteed) then
-            self._display = self._display .. "|TInterface\\PETBATTLES\\PetBattle-StatIcons:20:20:0:0:32:32:16:32:0:16|t  "
+            self._display = self._display .. "|TInterface\\Buttons\\UI-GroupLoot-Dice-Up:20|t  "
         end
     end
 

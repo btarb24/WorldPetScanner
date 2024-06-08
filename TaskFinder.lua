@@ -139,7 +139,7 @@ function WPS:CheckForPetsViaQuest(questID, allQuestsInZone)
                         customTooltip = customTooltip .. "\n" .. petViaQuest.CustomTooltip[rewardIdx]
                     end
                 end
-                
+
                 table.insert(pets, Reward:newPet(reward.CreatureID, reward.SpellID, reward.CreatureName, reward.Guaranteed))
             end 
         end
@@ -207,7 +207,7 @@ function WPS:UpdateItemTotals(itemID, quantity)
 	end
 
 	if WPS.TrainingStones[itemID] then
-		local existingTrainingStones = self.trainingStoneTotals[itemId]
+		local existingTrainingStones = self.trainingStoneTotals[itemID]
 		self.hasTrainingStones = true
 		if (existingTrainingStones == nil) then
 			table.insert(self.trainingStoneTotals, itemID, quantity)

@@ -85,9 +85,9 @@ function WPS:GetIconIndent(itemID)
         return 0
     elseif itemID == WPS.Bandage then
         return 30
-    elseif WPS.TrainingStones[itemID] then
-        return 60
     elseif WPS.BattleStones[itemID] then
+        return 60
+    elseif WPS.TrainingStones[itemID] then
         return 90
     else 
         return -30 -- just to notice it

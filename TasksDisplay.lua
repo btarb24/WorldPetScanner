@@ -10,21 +10,66 @@ function WPS:CreateQTip()
         local tooltip = LibQTip:Acquire("WorldPetScanner", 2, "LEFT", "LEFT")
         self.tooltip = tooltip
 
+--title icon
+        if (tooltip.icon) then
+            tooltip.icon:SetTexture()
+        end
         tooltip.icon = tooltip:CreateTexture("WPS_Icon", "BACKGROUND")
-        tooltip.icon:SetWidth(36)
-        tooltip.icon:SetHeight(36)
+        tooltip.icon:SetWidth(38)
+        tooltip.icon:SetHeight(38)
         tooltip.icon:SetTexture("Interface\\Icons\\Inv_pet_maggot")
-        tooltip.icon:SetPoint("TOPLEFT", 7, -8);
-
-        tooltip.title = tooltip:CreateFontString(nil, "OVERLAY");
-        tooltip.title:SetFontObject(tooltip:GetHeaderFont())
-        tooltip.title:SetPoint("TOPLEFT", 50, -10);
+        tooltip.icon:SetTexCoord(.1,.9,.1,.9)
+        tooltip.icon:SetPoint("TOPLEFT", 10, -10);
+--app title
+        if (tooltip.title) then
+            tooltip.title:SetText()
+        end
+        tooltip.title = tooltip:CreateFontString(nil, "OVERLAY");        
+        local fontFile, fontHeight, fontFlags = tooltip:GetHeaderFont():GetFont()
+        tooltip.title:SetFont(fontFile, fontHeight+3, fontFlags)
+        tooltip.title:SetPoint("TOPLEFT", 53, -12);
         tooltip.title:SetText("World Pet Scanner")
-
-        tooltip.title = tooltip:CreateFontString(nil, "OVERLAY");
-        tooltip.title:SetFontObject(tooltip:GetFont());
-        tooltip.title:SetPoint("TOPLEFT", 50, -30);
-        tooltip.title:SetText(WPS:GetRegionName() .. "   " .. date("%b %d, 20%y  %H:%M"))
+--date 
+        if (tooltip.date) then
+            tooltip.date:SetText()
+        end
+        tooltip.date = tooltip:CreateFontString(nil, "OVERLAY");
+        tooltip.date:SetFont(fontFile, fontHeight-2, fontFlags)
+        tooltip.date:SetPoint("TOPLEFT", 55, -34);
+        tooltip.date:SetText(WPS:GetRegionName() .. "   " .. date("%b %d, 20%y  %H:%M"))
+-- item totals    
+        local charms = self.charmTotal.."x".."|T"..WPS.Textures[WPS.PetCharm]..":20:20:0:0:32:32:2:30:2:30|t"        
+        local bandages  = self.bandageTotal.."x".."|T"..WPS.Textures[WPS.Bandage]..":20:20:0:0:32:32:2:30:2:30|t"
+        local blueStones  = self.blueStoneTotal.."x".."|T"..WPS.Textures[WPS.BlueStone]..":20:20:0:0:32:32:2:30:2:30|t"
+        local trainingStones = ""
+        for tStone, _ in pairs(WPS.TrainingStones) do
+            local tStoneTotal = self.trainingStoneTotals[tStone]
+            if tStoneTotal ~= nil then
+                trainingStones = trainingStones .. tStoneTotal.."x".."|T"..WPS.Textures[tStone]..":20:20:0:0:32:32:2:30:2:30|t   "
+            end
+        end
+        local header = charms .. "    " .. bandages .. "    " .. blueStones .. "    " .. trainingStones
+        
+        if (tooltip.totals1) then
+            tooltip.totals1:SetText()
+        end
+        tooltip.totals1 = tooltip:CreateFontString(nil, "OVERLAY");
+        tooltip.totals1:SetFont(fontFile, fontHeight-1, fontFlags)
+        tooltip.totals1:SetPoint("TOPRIGHT", -4, -7);
+        tooltip.totals1:SetText(header)
+--pet/ach totals
+        local achievs = "0x".."|TInterface\\Icons\\Achievement_guildperk_mrpopularity:18:18:0:0:32:32:2:30:2:30|t"
+        local certainPets  = "0x".."|TInterface\\Icons\\Tracking_WildPet:20|t"
+        local chancePets  = "0x".."|TInterface\\Buttons\\UI-GroupLoot-Dice-Up:20|t"
+        local header = achievs .. "    " .. certainPets .. "    " .. chancePets 
+        
+        if (tooltip.totals2) then
+            tooltip.totals2:SetText()
+        end
+        tooltip.totals2 = tooltip:CreateFontString(nil, "OVERLAY");
+        tooltip.totals2:SetFont(fontFile, fontHeight-1, fontFlags)
+        tooltip.totals2:SetPoint("TOPRIGHT", -10, -29);
+        tooltip.totals2:SetText(header)
 
         tooltip:SetScript("OnHide", function()
             if WPS.PopUp then
@@ -33,9 +78,9 @@ function WPS:CreateQTip()
         end)
 
         tooltip:SetColumnLayout(5, "LEFT", "LEFT", "LEFT", "LEFT", "LEFT")
-        tooltip:AddHeader("")
-        tooltip:AddHeader("")
-        tooltip:AddHeader("")
+        tooltip:AddLine(" ")
+        tooltip:AddLine(" ")
+        tooltip:AddLine(" ")
         tooltip:SetFrameStrata("MEDIUM")
         tooltip:SetFrameLevel(100)
         tooltip:AddSeparator()
@@ -76,11 +121,16 @@ function WPS:UpdateQTip(tasks)
                     currentZoneID = task.zoneID
                 end
                 colNum = colNum + 1
+                if colNum > tooltip:GetColumnCount() then
+                    tooltip:AddColumn()
+                end
 
 --time col
-                if self.db.profile.options.popupShowTime then
-                    tooltip:SetCell(lineNum, colNum, self:formatTime(task:Time()), "LEFT", 1, LibQTip.LabelProvider, nil, nil, 100, 55)
-                end
+               tooltip:SetCell(lineNum, colNum, self:formatTime(task:Time()), "LEFT", 1, LibQTip.LabelProvider, nil, nil, 100, 55)
+               colNum = colNum + 1
+               if colNum > tooltip:GetColumnCount() then
+                   tooltip:AddColumn()
+               end
 
 --challenge col
                 tooltip:SetCell(lineNum, colNum, task.challenge:Display())
@@ -111,12 +161,12 @@ function WPS:UpdateQTip(tasks)
                         end
                     )
                 end
-
---reward icon col
                 colNum = colNum+1
                 if colNum > tooltip:GetColumnCount() then
                     tooltip:AddColumn()
                 end
+
+--reward icon col
                 
                 if (not task.iconReward) then
                     tooltip:SetCell(lineNum, colNum, "", "LEFT", 1, LibQTip.LabelProvider, nil, nil, 100, 55)
@@ -191,20 +241,6 @@ function WPS:UpdateQTip(tasks)
             end
         end
     end
-
--- charm totals    
-    local charms = self.charmTotal.."x".."|T"..WPS.Textures[WPS.PetCharm]..":24|t"        
-    local bandages  = self.bandageTotal.."x".."|T"..WPS.Textures[WPS.Bandage]..":24|t"
-    local blueStones  = self.blueStoneTotal.."x".."|T"..WPS.Textures[WPS.BlueStone]..":24|t"
-    local trainingStones = ""
-    for tStone, _ in pairs(WPS.TrainingStones) do
-        local tStoneTotal = self.trainingStoneTotals[tStone]
-        if tStoneTotal ~= nil then
-            trainingStones = trainingStones .. tStoneTotal.."x".."|T"..WPS.Textures[tStone]..":24|t   "
-        end
-    end
-    local header = charms .. "   " .. bandages .. "   " .. blueStones .. "   " .. trainingStones
-    tooltip:SetCell(2, 2, header, "RIGHT", tooltip:GetColumnCount()-1)
     
     tooltip:Show()
 end
@@ -256,7 +292,6 @@ function WPS:ShowWindow(tasks, left, top)
     
     local PopUp = self.PopUp
     PopUp:Show()
-    PopUp.shown = true
 
     self:CreateQTip()
     self.tooltip:SetAutoHideDelay()
@@ -278,10 +313,13 @@ function WPS:ShowWindow(tasks, left, top)
 end
 
 function WPS:CloseWindow()
-    if WPS.tooltip ~= nil then
-        LibQTip:Release(WPS.tooltip)
-        WPS.tooltip = nil
+    if self.tooltip ~= nil then
+        WPS:Debug("released")
+        self.tooltip:Release()
+        self.tooltip = nil
     end
-
-    self.PopUp.shown = false
+    if (self.PopUp) then
+        self.PopUp:Hide()
+        self.PopUp = nil
+    end
 end
