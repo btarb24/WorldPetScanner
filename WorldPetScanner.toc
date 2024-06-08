@@ -3,7 +3,6 @@
 ## Author: Salkari
 ## Version: v10.2.7-1
 ## SavedVariables: WPSDB
-## OptionalDeps: CanIMogIt, AllTheThings
 
 embeds.xml
 Libs\LibQTip-1.0\LibQTip-1.0.lua
