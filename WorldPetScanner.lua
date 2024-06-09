@@ -24,20 +24,7 @@ local dataobj =
 local icon = LibStub("LibDBIcon-1.0")
 
 function WPS:OnInitialize()
-	-- Remove data for the other faction
-	local faction = UnitFactionGroup("player")
-	for k, v in pairs(self.data) do
-		for kk, vv in pairs(v) do
-			if type(vv) == "table" then
-				for kkk, vvv in pairs(vv) do
-					if vvv.faction and not (vvv.faction == faction) then
-						self.data[k][kk][kkk] = nil
-					end
-				end
-			end
-		end
-	end
-	self.faction = faction
+	self.faction = UnitFactionGroup("player")
 
 	-- Defaults
 	local defaults = {
@@ -165,7 +152,7 @@ WPS:RegisterChatCommand("petscan", "ChatCommand")
 WPS:RegisterChatCommand("wps", "ChatCommand")
 function WPS:ChatCommand(input)
 	local arg1 = string.lower(input)
-	self:Show()
+	self:Show(arg1)
 end
 
 function WPS:UpdateMinimapIcon()
@@ -185,14 +172,22 @@ function dataobj:OnClick(button)
 	end
 end
 
-function WPS:Show()
+function WPS:Show(mode)
 	self:Debug("Show")
 	if (self.PopUp) then		
 		WPS:CloseWindow()
 		return
 	end
 	
-	self:CreateTaskList()
+	self.taskList = {}
+	self.charmTotal = 0;
+	self.bandageTotal = 0;
+	self.blueStoneTotal = 0;
+	self.hasTrainingStones = false
+	self.trainingStoneTotals = {}
+
+	local scannedQuestList, worldQuestTaskResults = self:ScanWorldQuests()
+	self:ProcessTaskData(mode, scannedQuestList, worldQuestTaskResults)
 
 	local sortedTasks = self:SortTaskList(self.taskList)
 	self:ShowWindow(sortedTasks)
@@ -215,7 +210,7 @@ function WPS:SortTaskList(list)
 end
 
 function WPS:Sort(a, b)
-	if a.expansionID > b.expansionID then return true end
-	if a.expansionID < b.expansionID then return false end
-	return a.zoneID < b.zoneID
+	if a.challenge.expansionID > b.challenge.expansionID then return true end
+	if a.challenge.expansionID < b.challenge.expansionID then return false end
+	return a.challenge.zoneID < b.challenge.zoneID
 end

@@ -1,0 +1,84 @@
+https://www.townlong-yak.com/framexml/live/Blizzard_APIDocumentation
+
+/dump C_Map.GetBestMapForUnit('player')
+
+/dump C_TaskQuest.IsActive(44894)
+
+/dump AuraUtil   ....list methods
+
+/dump C_UnitAuras.GetPlayerAuraBySpellID(11426)
+
+/dump C_TaskQuest.GetQuestsForPlayerByMapID(2022)
+
+/dump C_AreaPoiInfo.GetAreaPOISecondsLeft(poiInfo.areaPoiID)
+/dump C_AreaPoiInfo.GetAreaPOIInfo(uiMapID, areaPoiID)
+
+
+
+TRADING POST / PRIME / STORE DEPARTURE / Stuff like Snowy Owl etc - Only the starting and ending dates
+
+WORLD EVENTS & TWITCH DROPS 
+If there's more than 1 world event then the ones ending sooner come first
+
+Charms & Stones (This is different between regions)
+Expansions top-down but patches down-top, otherwise alphabetical order (in Legion the exception is Val'sharah, because of how the Broken Isles were planned out; it comes after Azsuna and before Highmountain). When BfA is involved short timers precede the longer ones
+
+Dailies, WQ, etc by expansion
+Top-down both expansions and patches, rarer events precede more frequent ones
+
+    Dragonflight
+*        Emerald Dream: Claws for Concern (every 16 days so can be automated)
+x        Valdrakken: Little Scales Daycare (6 minor dailies + 5 pairs of major dailies giving rise to 30 combinations, can be automated)
+        Zaralek Cavern: The rare cycles, 3 days + 1 absent, only Glimmerogg and Loamm are important, they're opposites (Day 2 of one is Day 0 of the other, this can also be automated)
++        The Forbidden Reach WQ-s (which of the 4 elementals is up)
+*        Elemental Storms are not predictable and reliable anymore, but you perhaps should know about this
+
+    Shadowlands
++        Zereth Mortis: Cluck, Cluck, Boom (daily) 
+*						Fish Eyes (WQ which can be on full reset or midday reset) 
+        Korthia: Local Reagents/Oozing with Character (they give awards per covenant and we just say it's possible) 
+				 Zelnithop spawning (Based on dailies present in the area)
+        The Maw (same patch as Korthia): Tormentors of Torghast with Gralebboih every 18 hours (can be automated)
+        Animated Ulna and Bunny Soul whichever zone they're up in +
+		Revendreth: 
++		A Stolen Stone Fiend, 
+*		Muck it Up, 
++		Swarming Souls with a weird 4:48 frequency
+Battle for Azeroth
+*        Waycrest Manor: Witchy Kitchen - vengeful chicken
+        Vol'dun assaults (can be automated)
+
+    Legion
+        Repeatable Tamers & Family Familiar (they overlap except Andurs & Rydyr not being FF, and Flummox not being good for levelling)
++        Falcosaur Swarm (two up, alternate every 1.5 days) 
+WoD -- all Garrison content -- it DOES differ between regions!
+        Garrison inn: Mylune with For the Birds and Cowled Ranger with The Huntresses, once per character (this can MAYBE be automated, I am not 100% sure, the Ranger is much rarer)
+        Squirt the Wandering Trainer (this goes without saying)
+
+Callings
+    Follow a 3 day pattern that goes as follows:
+        A Call to X:
+            Bastion: Gilded Wader chances (specific treasures, 1-4 per day)
+            Maldraxxus: up to 3 Skittering Venomspitter chances and not always present Slime-Coated Crate (I put the coords in because you won't see it unless you zone in to House of Plagues)
+            Revendreth: Bleakwood Chest (high spawn chance) & Secret Treasure in a specific location (very low spawn chance)
+        Storm the Maw/Challenges in X/Anima Salvage/Rare Resources:
+            We only care about Rare Resources there because they spawn treasures in all the zones
+        Training in X/Aiding X:
+            Only Training in X are important, one of 3 trainees digs out Dirty Glinting Objects. Only 3 combinations are possible and seeing one trainee is enough to know which one it is (I will find the table later)
+
+    Legion Emissaries
+		The Dreamweavers 
+		Kirin Tor of Dalaran
+
+Weekly and semi-weekly content
+*    The Waking Shores Brightblade's Bones (it's a WQ but lasts 3,5 days and resets you know when)
+      Maw Assaults (all but Venthyr. 
+*			Necro: Lil' Abom (Crafted from treasure pieces scattered round the assault zone) Fodder (completion cache)
+*			Fae: Infused Etherwyrm if A Shady Place is up + Invasive Buzzer (completion cache)
++			Kyrian: sly, copperback, screecher
+    Uldum 
+*		aqir: AqirTunneler, Rotbreath
+*		blackEmpire: Wicked Lurker
+	Vale of Eternal Blossoms 
+	
+    Krasarang Wilds: Wanderer's Festival Hatchlings every Sunday (doesn't seem like it should be there but don't feel like creating a single line for MoP

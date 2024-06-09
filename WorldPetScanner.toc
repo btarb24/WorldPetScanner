@@ -21,8 +21,8 @@ DB\Data\Dragonflight.lua
 DB\Expansions.lua
 DB\Zones.lua
 DB\Items.lua
-DB\Pets.lua
-DB\Links.lua
+
+Data\Tasks.lua
 
 Locales.lua
 Utilities.lua

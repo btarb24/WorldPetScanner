@@ -6,7 +6,8 @@ Reward.__index = Reward;
 WPS.REWARD_TYPE = {
     ITEM = "item",
     PET = "pet",
-    ACHIEVEMENT = "achiev"
+    ACHIEVEMENT = "achiev",
+    PET_VIA_ITEM = "petViaItem",
 }
 
 WPS.REWARD_ITEMCATEGORY = {
@@ -16,18 +17,25 @@ WPS.REWARD_ITEMCATEGORY = {
     BANDAGE = "bandage",
 }
 
-function Reward:newItem(itemID, quantity, guaranteed)
+function Reward:new(rewardData)
     local instance = {}
-    setmetatable(instance, Reward)  
+    setmetatable(instance, Reward)
     
-    instance.type = WPS.REWARD_TYPE.ITEM
-    instance._itemCategory = WPS:GetItemCategory(itemID)
-    instance.id = itemID
-    instance._itemIcon = WPS.Textures[itemID]
-    instance.guaranteed = guaranteed
-
-    if quantity ~= nil then 
-        instance.quantity = quantity
+    instance.type = rewardData.type
+    instance.creatureID = rewardData.creatureID
+    instance.creatureName = rewardData.creatureName
+    instance.spellID = rewardData.spellID
+    instance.itemID = rewardData.itemID
+    instance.itemName = rewardData.itemName
+    instance.itemIcon = WPS.Textures[rewardData.itemID]
+    instance.itemCategory = WPS:GetItemCategory(rewardData.itemID)
+    instance.chance = rewardData.chance
+    instance.note = rewardData.note
+    instance.achievementID = rewardData.achievementID
+    instance.achievementName = rewardData.achievementName
+    
+    if rewardData.quantity ~= nil then 
+        instance.quantity = rewardData.quantity
     else
         instance.quantity = 1
     end
@@ -35,28 +43,20 @@ function Reward:newItem(itemID, quantity, guaranteed)
     return instance
 end
 
-function Reward:newPet(petID, petSpellID, name, guaranteed)
-    local instance = {}
-    setmetatable(instance, Reward)
-
-    instance.type = WPS.REWARD_TYPE.PET
-    instance.id = petID
-    instance._petSpellID = petSpellID
-    instance.quantity = 0
-    instance.guaranteed = guaranteed
-    instance.name = name
-
-    return instance
-end
-
-function Reward:newAchievment(achievementID)
+function Reward:newItem(itemID, quantity)
     local instance = {}
     setmetatable(instance, Reward)  
     
-    instance.type = WPS.REWARD_TYPE.ACHIEVEMENT
-    instance.id = achievementID
-    instance.quantity = 0
-    instance.guaranteed = true
+    instance.type = WPS.REWARD_TYPE.ITEM
+    instance.itemID = itemID
+    instance.itemCategory = WPS:GetItemCategory(itemID)
+    instance.itemIcon = WPS.Textures[itemID]
+
+    if quantity ~= nil then 
+        instance.quantity = quantity
+    else
+        instance.quantity = 1
+    end
 
     return instance
 end
@@ -69,22 +69,26 @@ function Reward:IsPet()
     return self.type == WPS.REWARD_TYPE.PET
 end
 
+function Reward:IsPetViaItem()
+    return self.type == WPS.REWARD_TYPE.PET_VIA_ITEM
+end
+
 function Reward:IsAchievement()
     return self.type == WPS.REWARD_TYPE.ACHIEVEMENT
 end
 
 function Reward:HasIcon()
-    return self._itemIcon ~= nil
+    return self.itemIcon ~= nil
 end
 
 function Reward:Link()
     if self._link == nil then
-        if self:IsPet() then
-            self._link = WPS:BuildPetSpellLink(self._petSpellID, self.name)
+        if self:IsPet() or self:IsPetViaItem() then
+            self._link = WPS:BuildPetSpellLink(self.spellID, self.creatureName)
         elseif self:IsItem() then
-            self._link = select(2, GetItemInfo(self.id))
+            self._link = select(2, GetItemInfo(self.itemID))
         elseif self:IsAchievement() then
-            self._link = GetAchievementLink(self.id)
+            self._link = GetAchievementLink(self.achievementID)
         else
             self._link = "unknown reward type"
         end
@@ -95,19 +99,19 @@ end
 
 function Reward:IDForLink()
     if self:IsPet() then
-        return self._petSpellID
+        return self.spellID
     else
-        return id
+        return self.itemID
     end
 end
 
 function Reward:Display()
     if self._display == nil then
-        if self:IsPet() then 
+        if self:IsPet() or self:IsPetViaItem() then 
             self._display = self:Link()
         elseif self:IsItem() then
             if self:HasIcon() then
-                self._display = self.quantity.."x".."|T"..self._itemIcon..":20:20:0:0:32:32:2:30:2:30|t"
+                self._display = self.quantity.."x".."|T"..self.itemIcon..":20:20:0:0:32:32:2:30:2:30|t"
             else
                 self._display = self.quantity.."x"..self:Link()
             end
@@ -117,7 +121,7 @@ function Reward:Display()
             self._display = "unknown reward type"
         end
 
-        if (not self.guaranteed) then
+        if (self.chance) then
             self._display = self._display .. "|TInterface\\Buttons\\UI-GroupLoot-Dice-Up:20|t  "
         end
     end

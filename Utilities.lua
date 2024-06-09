@@ -40,6 +40,8 @@ function WPS:GetExpansionByMapId(mapId)
 end
 
 function WPS:formatTime(t)
+    if (not t) then return "-" end
+
 	local t = math.floor(t or 0)
 	local d, h, m, timeString
 	d = math.floor(t / 60 / 24)
@@ -87,6 +89,22 @@ function WPS:GetRegionName()
     elseif regionID == 5 then
         return "China"
     end
+end
+
+function WPS:BuildQuestLink(questID, name)
+    return "|cffffff00|Hquest:".. questID .. "|h[" .. name .."]|h|r"
+end
+
+function WPS:BuildPetSpellLink(spellID, name)
+    if (spellID) then
+        return "|cff67BCFF|Hspell:".. spellID .. "|h[" .. name .."]|h|r"
+    else
+        return "|cff67BCFF|[" .. name .."]|r"
+    end
+end
+
+function WPS.GetSpellLink(spellID)
+    return "|cff71d5ff|Hspell:2061:0|h[Flash Heal]|h|r"
 end
 
 function WPS:ListZones()

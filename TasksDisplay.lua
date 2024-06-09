@@ -98,27 +98,27 @@ function WPS:UpdateQTip(tasks)
         for _, task in ipairs(tasks) do
 
 --expansion
-            if (task.expansionID ~= currentExpansionID) then
+            if (task.challenge.expansionID ~= currentExpansionID) then
                 tooltip:AddLine(string.format("|cff33ff33%s|r", task:ExpansionName()))                
                 tooltip:SetLineScript(tooltip:GetLineCount(), "OnMouseDown",
                     function()
-                        WPS.Expansions[task.expansionID].Collapsed = not WPS.Expansions[task.expansionID].Collapsed
+                        WPS.Expansions[task.challenge.expansionID].Collapsed = not WPS.Expansions[task.challenge.expansionID].Collapsed
                         WPS:CloseWindow()
                         WPS:ShowWindow(tasks, tooltip:GetLeft(), tooltip:GetTop())
                     end
                 )
                 lineNum = lineNum + 1
-                currentExpansionID = task.expansionID
+                currentExpansionID = task.challenge.expansionID
             end
 
-            if not WPS.Expansions[task.expansionID].Collapsed then
+            if not WPS.Expansions[task.challenge.expansionID].Collapsed then
                 tooltip:AddLine()
                 lineNum = lineNum + 1
 --zone col
                 local colNum = 1
-                if (task.zoneID ~= currentZoneID) then
+                if (task.challenge.zoneID ~= currentZoneID) then
                     tooltip:SetCell(lineNum, colNum, "     " .. task:ZoneName(), "LEFT", 1, LibQTip.LabelProvider, nil, nil, 200, 200)
-                    currentZoneID = task.zoneID
+                    currentZoneID = task.challenge.zoneID
                 end
                 colNum = colNum + 1
                 if colNum > tooltip:GetColumnCount() then
@@ -134,7 +134,7 @@ function WPS:UpdateQTip(tasks)
 
 --challenge col
                 tooltip:SetCell(lineNum, colNum, task.challenge:Display())
-                if task.challenge:Link() then
+                if task.challenge:HasTooltip() then
                     tooltip:SetCellScript(
                         lineNum,
                         colNum,
@@ -144,8 +144,8 @@ function WPS:UpdateQTip(tasks)
                             GameTooltip:ClearLines()
                             GameTooltip:ClearAllPoints()
                             GameTooltip:SetPoint("BOTTOMLEFT", self, "TOPLEFT", 0, 0)
-                            if task.challenge.customTooltip then
-                                GameTooltip:SetText(task.challenge.customTooltip)    
+                            if task.challenge.note then
+                                GameTooltip:SetText(task.challenge.note)    
                             else
                                 GameTooltip:SetHyperlink(task.challenge:Link())
                             end
@@ -177,7 +177,7 @@ function WPS:UpdateQTip(tasks)
                     local fontFile, fontHeight, fontFlags = oldFont:GetFont()
                     newFont:SetFont(fontFile, fontHeight-2, fontFlags)
                     
-                    local indent = WPS:GetIconIndent(task.iconReward.id)
+                    local indent = WPS:GetIconIndent(task.iconReward.itemCategory)
                     tooltip:SetCell(lineNum, colNum, display, newFont, "LEFT", 1, LibQTip.LabelProvider, indent, 0, 170, 55)         
                     if task.iconReward:Link() then           
                         tooltip:SetCellScript(
@@ -221,10 +221,10 @@ function WPS:UpdateQTip(tasks)
                             GameTooltip:ClearLines()
                             ContainerFrameItemButton_CalculateItemTooltipAnchors(self, GameTooltip)
 
-                            if reward:Link() then
-                                GameTooltip:SetHyperlink(reward:Link())
+                            if reward.note then
+                                GameTooltip:SetText(reward.note)    
                             else
-                                GameTooltip:SetText("hmmmmm....")
+                                GameTooltip:SetHyperlink(reward:Link())
                             end
                             GameTooltip:Show()
                         end

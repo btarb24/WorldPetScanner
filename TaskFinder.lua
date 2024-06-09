@@ -1,66 +1,10 @@
 local WPS = WorldPetScanner
 
-function WPS:CreateTaskList()
-	self:Debug("CreateTaskList")
-	self.taskList = {}
-	self.charmTotal = 0;
-	self.bandageTotal = 0;
-	self.blueStoneTotal = 0;
-	self.hasTrainingStones = false
-	self.trainingStoneTotals = {}
-
-	local availableQuests = self:ScanWorldQuests()
-    self:CheckForPetsViaAchievements(availableQuests)
-	self:ScanDailies()
-end
-
-function WPS:ScanDailies()
-	self:Debug("ScanDailies")
-	for questID, questData in pairs(WPS.ItemsViaDaily) do
-		local questCompleted = C_QuestLog.IsQuestFlaggedCompleted(questID)
-		if not questCompleted then
-			if questData.Reward.Type == "item" then
-				local challenge = Challenge:newDailyQuest(questID, questData.Name)
-				local reward = Reward:newItem(questData.Reward.ItemID, questData.Reward.Quantity, questData.Reward.Guaranteed)
-				local task = Task:new(questData.ExpansionID, questData.ZoneID, challenge)
-                task:AddReward(reward)
-				self:UpdateItemTotals(questData.Reward.ItemID, questData.Reward.Quantity)
-				table.insert(self.taskList, task)
-			end
-		end
-	end
-end
-
-function WPS:CheckForPetsViaAchievements(availableQuests)
-    for achID, achDetail in pairs(WPS.PetViaAchievement) do        
-        WPS:checkAchievement(availableQuests, achID, achDetail)
-    end
-end
-
-function WPS:checkAchievement(availableQuests, achID, achDetail)
-    if (self.PetList[achDetail.CreatureID]) then
-        return
-    end
-
-    local numCriteria = GetAchievementNumCriteria(achID)
-    for idx = 1, numCriteria do
-        local criteriaString, criteriaType, completed, quantity, reqQuantity, charName, flags, assetID, quantityString, criteriaID = GetAchievementCriteriaInfo(achID, idx)
-        completed = false
-        local questLoc = availableQuests[assetID]
-        if not completed and questLoc then
-            local challenge = Challenge:newAchievement(achID, questID, achDetail.CustomToolitp)
-            local reward = Reward:newPet(achDetail.CreatureID, achDetail.SpellID, achDetail.CreatureName, true)
-            local task = Task:new(questLoc.expansionID, questLoc.zoneID, challenge)
-            task:AddReward(reward)
-            table.insert(self.taskList, task)
-            return
-        end
-    end
-end
-
 function WPS:ScanWorldQuests()
 	self:Debug("ScanWorldQuests")
-    local questIDs = {}
+    local scannedQuestList = {}
+    local questsToRetry = {}
+    local worldQuestTaskResults = {}
 	for expansionID in pairs(self.ZoneIDList) do
 		for mapID, mapDetails in pairs(self.ZoneIDList[expansionID]) do
 			if mapDetails.scanWorldQuests then
@@ -69,30 +13,24 @@ function WPS:ScanWorldQuests()
 					for i = 1, #taskPOIs do
                         local questID = taskPOIs[i].questId
 
-                        if (mapID == 2112) then
-                            WPS:Debug(questID)
-                        end
-                        if (questID == 73124) then WPS.Debug("found quest") end
-                        if (not questIDs[questID]) then
+                        if (not scannedQuestList[questID]) then
                             local zoneID = taskPOIs[i].mapID
-                            table.insert(questIDs, questID, {expansionID = expansionID , zoneID = zoneID})
+                            table.insert(scannedQuestList, questID, {expansionID = expansionID , zoneID = zoneID})
                             if HaveQuestData(questID) and not HaveQuestRewardData(questID) then
                                 C_TaskQuest.RequestPreloadRewardData(questID)
                                 self:Debug("RequestPreloadRewardData"..questID)
-                                retry = true
+                                table.insert(questsToRetry, questID, {expansionID = expansionID , zoneID = zoneID})
                             end
                             
                             local directQuestRewards = WPS:GetDesiredQuestRewards(questID, expansionID, zoneID)
-                            local petRewards, questName, customTooltip = WPS:CheckForPetsViaQuest(questID, taskPOIs)
                             
-                            if (not WPS:IsEmpty(directQuestRewards) or not WPS:IsEmpty(petRewards)) then
-                                local challenge = Challenge:newWorldQuest(questID, questName, customTooltip)
-                                local task = Task:new(expansionID, zoneID, challenge, directQuestRewards)                                
-                                task:AddRewards(petRewards)
+                            if (not WPS:IsEmpty(directQuestRewards)) then
+                                local trigger = {type = WPS.TRIGGER_TYPE.WORLD_QUEST, questID = questID}
+                                local challenge = Challenge:newWorldQuest(questID, expansionID, zoneID)
+                                local task = Task:new(trigger, challenge, directQuestRewards)
                                 table.insert(self.taskList, task)
+                                worldQuestTaskResults[questID] = task
                             end
-                            
-                            WPS:CheckForPetsViaRareDrop(questID, expansionID, zoneID)
                         end
 					end
 				end
@@ -100,7 +38,74 @@ function WPS:ScanWorldQuests()
 		end
 	end
 
-    return questIDs
+    return scannedQuestList, worldQuestTaskResults
+end
+
+function WPS:ProcessTaskData(mode, scannedQuestList, worldQuestTaskResults)
+    for _,taskData in pairs(WPS.TaskData) do
+        local triggerType = taskData.trigger.type
+
+        if (mode == "report" and taskData.excludeFromReport) then
+            --skip
+        elseif triggerType == WPS.TRIGGER_TYPE.AURA then
+            WPS:ProcessAuraTrigger(taskData)
+        elseif triggerType == WPS.TRIGGER_TYPE.WORLD_QUEST or triggerType == WPS.TRIGGER_TYPE.DAILY_QUEST then
+            WPS:ProcessQuestTrigger(taskData, scannedQuestList, worldQuestTaskResults)
+        elseif triggerType == WPS.TRIGGER_TYPE.ACHIEVEMENT then
+            WPS:ProcessAchievementTrigger(taskData)
+        elseif triggerType == WPS.TRIGGER_TYPE.AREA_POI then
+            WPS:ProcessAreaPoiTrigger(taskData)
+        end
+    end
+end
+
+function WPS:ProcessAuraTrigger(taskData)
+    local playerAura = C_UnitAuras.GetPlayerAuraBySpellID(taskData.trigger.auraID)
+    if (playerAura) then
+        table.insert(self.taskList, Task:new(taskData.trigger, taskData.challenge, taskData.rewards))
+    end
+end
+
+function WPS:ProcessQuestTrigger(taskData, scannedQuestList, worldQuestTaskResults)
+    local satisfied = false
+    if (taskData.trigger.questEvaluationType == WPS.QUEST_EVAL_TYPE.FLAG) then
+        satisfied = not C_QuestLog.IsQuestFlaggedCompleted(taskData.trigger.questID)
+    elseif taskData.trigger.questEvaluationType == WPS.QUEST_EVAL_TYPE.ISACTIVE then
+        satisfied = C_TaskQuest.IsActive(taskData.trigger.questID)
+    elseif taskData.trigger.questEvaluationType == WPS.QUEST_EVAL_TYPE.BYMAP then
+        local questFound = scannedQuestList[taskData.trigger.questID]
+        if (questFound) then
+            local existingTask = worldQuestTaskResults[taskData.trigger.questID]
+            if (taskData.challenge.checkForExistingTask and existingTask) then
+                for _, rewardData in pairs(taskData.rewards) do
+                    existingTask:AddReward(Reward:new(rewardData))
+                end
+            else
+                satisfied = true
+            end
+        end
+    end
+
+    if (satisfied) then
+        table.insert(self.taskList, Task:new(taskData.trigger, taskData.challenge, taskData.rewards))
+    end
+end
+
+function WPS:ProcessAchievementTrigger(taskData)
+    local completed = select(4, GetAchievementInfo(taskData.trigger.achievementID))
+    if not completed then
+        table.insert(self.taskList, Task:new(taskData.trigger, taskData.challenge, taskData.rewards))
+    end
+end
+
+function WPS:ProcessAreaPoiTrigger(taskData)
+    for _, entry in pairs(taskData.trigger.areaPOIList) do
+        if C_AreaPoiInfo.GetAreaPOISecondsLeft(entry.areaPoiID) then
+            taskData.trigger.areaPoiID = entry.areaPoiID
+            table.insert(self.taskList, Task:new(taskData.trigger, taskData.challenge, taskData.rewards))
+            return
+        end
+    end
 end
 
 function WPS:GetDesiredQuestRewards(questID, expansionID, zoneID)
@@ -123,74 +128,6 @@ function WPS:GetDesiredQuestRewards(questID, expansionID, zoneID)
 	end
 
 	return rewards
-end
-
-function WPS:CheckForPetsViaQuest(questID, allQuestsInZone)
-	local pets = {}
-    local petViaQuest = WPS.PetsViaQuests[questID]
-    if (petViaQuest) then
-        local customTooltip = petViaQuest.CustomTooltip
-        for rewardIdx, reward in pairs(petViaQuest.Rewards) do
-            if not self.PetList[reward.CreatureID] and WPS:DoesAdditionalRewardCriteriaPass(reward.AdditionalCriteria, allQuestsInZone) then
-                if (type(petViaQuest.CustomTooltip) == "table" and petViaQuest.CustomTooltip[rewardIdx]) then
-                    if (customTooltip == petViaQuest.CustomTooltip) then
-                        customTooltip = petViaQuest.CustomTooltip[rewardIdx]
-                    else
-                        customTooltip = customTooltip .. "\n" .. petViaQuest.CustomTooltip[rewardIdx]
-                    end
-                end
-
-                table.insert(pets, Reward:newPet(reward.CreatureID, reward.SpellID, reward.CreatureName, reward.Guaranteed))
-            end 
-        end
-
-        return pets, petViaQuest.Name, customTooltip
-    end
-end
-
-function WPS:DoesAdditionalRewardCriteriaPass(additionalCriteia, allQuestsInZone)
-    if not additionalCriteia then
-        return true
-    end
-
-    if (additionalCriteia.QuestNotAvailable) then
-        if WPS:TaskPoiListContainsQuestId(allQuestsInZone, additionalCriteia.QuestNotAvailable) then
-            return false;
-        end
-    end
-
-    if additionalCriteia.QuestAvailable then
-        if not WPS:TaskPoiListContainsQuestId(allQuestsInZone, additionalCriteia.QuestNotAvailable) then
-            return false;
-        end
-    end
-
-    return true
-end
-
-function WPS:TaskPoiListContainsQuestId(taskPOIs, questId)
-    for _, taskPOI in pairs(taskPOIs) do
-        if taskPOI.questId == questID then
-            return true
-        end
-    end
-
-    return false
-end
-
-function WPS:CheckForPetsViaRareDrop(questId, expansionID, zoneID)
-	local PetsViaRareDrop = WPS.PetsViaRareDrop[questID]
-	if (PetsViaRareDrop) then
-		for dropDetail in pairs(PetsViaRareDrop.Rewards) do
-			if (not self.PetList[dropDetail.CreatureID]) then
-				local challenge = Challenge:newRareKill(dropDetail.RareID, dropDetail.RareName, questID, PetsViaRareDrop.CustomToolitp)
-				local reward = Reward:newPet(dropDetail.CreatureID, dropDetail.SpellID, dropDetail.CreatureName, dropDetail.Guaranteed)
-				local task = Task:new(expansionID, zoneID, challenge, reward)
-				task:AddReward(petReward)
-				table.insert(self.taskList, task)
-			end
-		end
-	end
 end
 
 function WPS:UpdateItemTotals(itemID, quantity)

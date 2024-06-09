@@ -1,0 +1,1705 @@
+mapID: 1  name: Durotar  parentMapID: 12  mapType: 3  flags: 6
+mapID: 2  name: Burning Blade Coven  parentMapID: 1  mapType: 5  flags: 0
+mapID: 3  name: Tiragarde Keep  parentMapID: 1  mapType: 5  flags: 0
+mapID: 4  name: Tiragarde Keep  parentMapID: 1  mapType: 5  flags: 0
+mapID: 5  name: Skull Rock  parentMapID: 1  mapType: 5  flags: 0
+mapID: 6  name: Dustwind Cave  parentMapID: 1  mapType: 5  flags: 0
+mapID: 7  name: Mulgore  parentMapID: 12  mapType: 3  flags: 6
+mapID: 8  name: Palemane Rock  parentMapID: 7  mapType: 5  flags: 0
+mapID: 9  name: The Venture Co. Mine  parentMapID: 7  mapType: 5  flags: 0
+mapID: 10  name: Northern Barrens  parentMapID: 12  mapType: 3  flags: 6
+mapID: 11  name: Wailing Caverns  parentMapID: 10  mapType: 5  flags: 0
+mapID: 12  name: Kalimdor  parentMapID: 947  mapType: 2  flags: 0
+mapID: 13  name: Eastern Kingdoms  parentMapID: 947  mapType: 2  flags: 0
+mapID: 14  name: Arathi Highlands  parentMapID: 13  mapType: 3  flags: 6
+mapID: 15  name: Badlands  parentMapID: 13  mapType: 3  flags: 6
+mapID: 16  name: Uldaman  parentMapID: 15  mapType: 5  flags: 0
+mapID: 17  name: Blasted Lands  parentMapID: 13  mapType: 3  flags: 6
+mapID: 18  name: Tirisfal Glades  parentMapID: 13  mapType: 3  flags: 6
+mapID: 19  name: Scarlet Monastery Entrance  parentMapID: 18  mapType: 5  flags: 0
+mapID: 20  name: Keeper's Rest  parentMapID: 18  mapType: 5  flags: 0
+mapID: 21  name: Silverpine Forest  parentMapID: 13  mapType: 3  flags: 6
+mapID: 22  name: Western Plaguelands  parentMapID: 13  mapType: 3  flags: 6
+mapID: 23  name: Eastern Plaguelands  parentMapID: 13  mapType: 3  flags: 6
+mapID: 24  name: Light's Hope Chapel  parentMapID: 23  mapType: 5  flags: 0
+mapID: 25  name: Hillsbrad Foothills  parentMapID: 13  mapType: 3  flags: 6
+mapID: 26  name: The Hinterlands  parentMapID: 13  mapType: 3  flags: 6
+mapID: 27  name: Dun Morogh  parentMapID: 13  mapType: 3  flags: 6
+mapID: 28  name: Coldridge Pass  parentMapID: 27  mapType: 5  flags: 0
+mapID: 29  name: The Grizzled Den  parentMapID: 27  mapType: 5  flags: 0
+mapID: 30  name: New Tinkertown  parentMapID: 27  mapType: 5  flags: 0
+mapID: 31  name: Gol'Bolar Quarry  parentMapID: 27  mapType: 5  flags: 0
+mapID: 32  name: Searing Gorge  parentMapID: 13  mapType: 3  flags: 6
+mapID: 33  name: Blackrock Mountain  parentMapID: 36  mapType: 5  flags: 0
+mapID: 34  name: Blackrock Mountain  parentMapID: 36  mapType: 5  flags: 0
+mapID: 35  name: Blackrock Mountain  parentMapID: 32  mapType: 5  flags: 0
+mapID: 36  name: Burning Steppes  parentMapID: 13  mapType: 3  flags: 6
+mapID: 37  name: Elwynn Forest  parentMapID: 13  mapType: 3  flags: 6
+mapID: 38  name: Fargodeep Mine  parentMapID: 37  mapType: 5  flags: 0
+mapID: 39  name: Fargodeep Mine  parentMapID: 37  mapType: 5  flags: 0
+mapID: 40  name: Jasperlode Mine  parentMapID: 37  mapType: 5  flags: 0
+mapID: 41  name: Dalaran  parentMapID: 42  mapType: 5  flags: 0
+mapID: 42  name: Deadwind Pass  parentMapID: 13  mapType: 3  flags: 6
+mapID: 43  name: The Master's Cellar  parentMapID: 42  mapType: 5  flags: 0
+mapID: 44  name: The Master's Cellar  parentMapID: 42  mapType: 5  flags: 0
+mapID: 45  name: The Master's Cellar  parentMapID: 42  mapType: 5  flags: 0
+mapID: 46  name: Karazhan Catacombs  parentMapID: 42  mapType: 5  flags: 0
+mapID: 47  name: Duskwood  parentMapID: 13  mapType: 3  flags: 6
+mapID: 48  name: Loch Modan  parentMapID: 13  mapType: 3  flags: 6
+mapID: 49  name: Redridge Mountains  parentMapID: 13  mapType: 3  flags: 6
+mapID: 50  name: Northern Stranglethorn  parentMapID: 224  mapType: 3  flags: 6
+mapID: 51  name: Swamp of Sorrows  parentMapID: 13  mapType: 3  flags: 6
+mapID: 52  name: Westfall  parentMapID: 13  mapType: 3  flags: 6
+mapID: 53  name: Gold Coast Quarry  parentMapID: 52  mapType: 5  flags: 0
+mapID: 54  name: Jangolode Mine  parentMapID: 52  mapType: 5  flags: 0
+mapID: 55  name: The Deadmines  parentMapID: 52  mapType: 5  flags: 0
+mapID: 56  name: Wetlands  parentMapID: 13  mapType: 3  flags: 6
+mapID: 57  name: Teldrassil  parentMapID: 12  mapType: 3  flags: 6
+mapID: 58  name: Shadowthread Cave  parentMapID: 57  mapType: 5  flags: 0
+mapID: 59  name: Fel Rock  parentMapID: 57  mapType: 5  flags: 0
+mapID: 60  name: Ban'ethil Barrow Den  parentMapID: 57  mapType: 5  flags: 0
+mapID: 61  name: Ban'ethil Barrow Den  parentMapID: 57  mapType: 5  flags: 0
+mapID: 62  name: Darkshore  parentMapID: 12  mapType: 3  flags: 6
+mapID: 63  name: Ashenvale  parentMapID: 12  mapType: 3  flags: 6
+mapID: 64  name: Thousand Needles  parentMapID: 12  mapType: 3  flags: 6
+mapID: 65  name: Stonetalon Mountains  parentMapID: 12  mapType: 3  flags: 6
+mapID: 66  name: Desolace  parentMapID: 12  mapType: 3  flags: 6
+mapID: 67  name: Maraudon  parentMapID: 66  mapType: 5  flags: 0
+mapID: 68  name: Maraudon  parentMapID: 66  mapType: 5  flags: 0
+mapID: 69  name: Feralas  parentMapID: 12  mapType: 3  flags: 6
+mapID: 70  name: Dustwallow Marsh  parentMapID: 12  mapType: 3  flags: 6
+mapID: 71  name: Tanaris  parentMapID: 12  mapType: 3  flags: 6
+mapID: 72  name: The Noxious Lair  parentMapID: 71  mapType: 5  flags: 0
+mapID: 73  name: The Gaping Chasm  parentMapID: 71  mapType: 5  flags: 0
+mapID: 74  name: Caverns of Time  parentMapID: 71  mapType: 5  flags: 0
+mapID: 75  name: Caverns of Time  parentMapID: 71  mapType: 5  flags: 0
+mapID: 76  name: Azshara  parentMapID: 12  mapType: 3  flags: 6
+mapID: 77  name: Felwood  parentMapID: 12  mapType: 3  flags: 6
+mapID: 78  name: Un'Goro Crater  parentMapID: 12  mapType: 3  flags: 6
+mapID: 79  name: The Slithering Scar  parentMapID: 78  mapType: 5  flags: 0
+mapID: 80  name: Moonglade  parentMapID: 12  mapType: 3  flags: 6
+mapID: 81  name: Silithus  parentMapID: 12  mapType: 3  flags: 6
+mapID: 82  name: Twilight's Run  parentMapID: 81  mapType: 5  flags: 0
+mapID: 83  name: Winterspring  parentMapID: 12  mapType: 3  flags: 6
+mapID: 84  name: Stormwind City  parentMapID: 13  mapType: 3  flags: 7
+mapID: 85  name: Orgrimmar  parentMapID: 12  mapType: 3  flags: 7
+mapID: 86  name: Orgrimmar  parentMapID: 85  mapType: 6  flags: 512
+mapID: 87  name: Ironforge  parentMapID: 13  mapType: 3  flags: 6
+mapID: 88  name: Thunder Bluff  parentMapID: 12  mapType: 3  flags: 6
+mapID: 89  name: Darnassus  parentMapID: 12  mapType: 3  flags: 7
+mapID: 90  name: Undercity  parentMapID: 13  mapType: 3  flags: 6
+mapID: 91  name: Alterac Valley  parentMapID: 25  mapType: 6  flags: 0
+mapID: 92  name: Warsong Gulch  parentMapID: 10  mapType: 6  flags: 0
+mapID: 93  name: Arathi Basin  parentMapID: 14  mapType: 6  flags: 0
+mapID: 94  name: Eversong Woods  parentMapID: 13  mapType: 3  flags: 6
+mapID: 95  name: Ghostlands  parentMapID: 13  mapType: 3  flags: 6
+mapID: 96  name: Amani Catacombs  parentMapID: 95  mapType: 5  flags: 0
+mapID: 97  name: Azuremyst Isle  parentMapID: 12  mapType: 3  flags: 6
+mapID: 98  name: Tides' Hollow  parentMapID: 97  mapType: 5  flags: 0
+mapID: 99  name: Stillpine Hold  parentMapID: 97  mapType: 5  flags: 0
+mapID: 100  name: Hellfire Peninsula  parentMapID: 101  mapType: 3  flags: 6
+mapID: 101  name: Outland  parentMapID: 946  mapType: 2  flags: 0
+mapID: 102  name: Zangarmarsh  parentMapID: 101  mapType: 3  flags: 6
+mapID: 103  name: The Exodar  parentMapID: 12  mapType: 3  flags: 6
+mapID: 104  name: Shadowmoon Valley  parentMapID: 101  mapType: 3  flags: 6
+mapID: 105  name: Blade's Edge Mountains  parentMapID: 101  mapType: 3  flags: 6
+mapID: 106  name: Bloodmyst Isle  parentMapID: 12  mapType: 3  flags: 6
+mapID: 107  name: Nagrand  parentMapID: 101  mapType: 3  flags: 6
+mapID: 108  name: Terokkar Forest  parentMapID: 101  mapType: 3  flags: 6
+mapID: 109  name: Netherstorm  parentMapID: 101  mapType: 3  flags: 6
+mapID: 110  name: Silvermoon City  parentMapID: 13  mapType: 3  flags: 6
+mapID: 111  name: Shattrath City  parentMapID: 101  mapType: 3  flags: 6
+mapID: 112  name: Eye of the Storm  parentMapID: 109  mapType: 6  flags: 0
+mapID: 113  name: Northrend  parentMapID: 947  mapType: 2  flags: 0
+mapID: 114  name: Borean Tundra  parentMapID: 113  mapType: 3  flags: 6
+mapID: 115  name: Dragonblight  parentMapID: 113  mapType: 3  flags: 6
+mapID: 116  name: Grizzly Hills  parentMapID: 113  mapType: 3  flags: 6
+mapID: 117  name: Howling Fjord  parentMapID: 113  mapType: 3  flags: 6
+mapID: 118  name: Icecrown  parentMapID: 113  mapType: 3  flags: 6
+mapID: 119  name: Sholazar Basin  parentMapID: 113  mapType: 3  flags: 6
+mapID: 120  name: The Storm Peaks  parentMapID: 113  mapType: 3  flags: 6
+mapID: 121  name: Zul'Drak  parentMapID: 113  mapType: 3  flags: 6
+mapID: 122  name: Isle of Quel'Danas  parentMapID: 13  mapType: 3  flags: 6
+mapID: 123  name: Wintergrasp  parentMapID: 113  mapType: 3  flags: 6
+mapID: 124  name: Plaguelands: The Scarlet Enclave  parentMapID: 23  mapType: 6  flags: 0
+mapID: 125  name: Dalaran  parentMapID: 127  mapType: 4  flags: 0
+mapID: 126  name: Dalaran  parentMapID: 127  mapType: 4  flags: 0
+mapID: 127  name: Crystalsong Forest  parentMapID: 113  mapType: 3  flags: 6
+mapID: 128  name: Strand of the Ancients  parentMapID: 115  mapType: 6  flags: 0
+mapID: 129  name: The Nexus  parentMapID: 114  mapType: 4  flags: 0
+mapID: 130  name: The Culling of Stratholme  parentMapID: 71  mapType: 4  flags: 0
+mapID: 131  name: The Culling of Stratholme  parentMapID: 130  mapType: 4  flags: 0
+mapID: 132  name: Ahn'kahet: The Old Kingdom  parentMapID: 115  mapType: 4  flags: 0
+mapID: 133  name: Utgarde Keep  parentMapID: 117  mapType: 4  flags: 0
+mapID: 134  name: Utgarde Keep  parentMapID: 117  mapType: 4  flags: 0
+mapID: 135  name: Utgarde Keep  parentMapID: 117  mapType: 4  flags: 0
+mapID: 136  name: Utgarde Pinnacle  parentMapID: 117  mapType: 4  flags: 0
+mapID: 137  name: Utgarde Pinnacle  parentMapID: 117  mapType: 4  flags: 0
+mapID: 138  name: Halls of Lightning  parentMapID: 120  mapType: 4  flags: 0
+mapID: 139  name: Halls of Lightning  parentMapID: 120  mapType: 4  flags: 0
+mapID: 140  name: Halls of Stone  parentMapID: 120  mapType: 4  flags: 0
+mapID: 141  name: The Eye of Eternity  parentMapID: 114  mapType: 4  flags: 0
+mapID: 142  name: The Oculus  parentMapID: 114  mapType: 6  flags: 0
+mapID: 143  name: The Oculus  parentMapID: 114  mapType: 4  flags: 0
+mapID: 144  name: The Oculus  parentMapID: 114  mapType: 4  flags: 0
+mapID: 145  name: The Oculus  parentMapID: 114  mapType: 4  flags: 0
+mapID: 146  name: The Oculus  parentMapID: 114  mapType: 4  flags: 0
+mapID: 147  name: Ulduar  parentMapID: 120  mapType: 4  flags: 0
+mapID: 148  name: Ulduar  parentMapID: 147  mapType: 4  flags: 0
+mapID: 149  name: Ulduar  parentMapID: 147  mapType: 4  flags: 0
+mapID: 150  name: Ulduar  parentMapID: 147  mapType: 4  flags: 0
+mapID: 151  name: Ulduar  parentMapID: 147  mapType: 4  flags: 0
+mapID: 152  name: Ulduar  parentMapID: 147  mapType: 4  flags: 0
+mapID: 153  name: Gundrak  parentMapID: 121  mapType: 6  flags: 0
+mapID: 154  name: Gundrak  parentMapID: 121  mapType: 4  flags: 0
+mapID: 155  name: The Obsidian Sanctum  parentMapID: 115  mapType: 6  flags: 0
+mapID: 156  name: Vault of Archavon  parentMapID: 123  mapType: 4  flags: 0
+mapID: 157  name: Azjol-Nerub  parentMapID: 115  mapType: 4  flags: 0
+mapID: 158  name: Azjol-Nerub  parentMapID: 115  mapType: 4  flags: 0
+mapID: 159  name: Azjol-Nerub  parentMapID: 115  mapType: 4  flags: 0
+mapID: 160  name: Drak'Tharon Keep  parentMapID: 121  mapType: 4  flags: 0
+mapID: 161  name: Drak'Tharon Keep  parentMapID: 121  mapType: 4  flags: 0
+mapID: 162  name: Naxxramas  parentMapID: 115  mapType: 4  flags: 0
+mapID: 163  name: Naxxramas  parentMapID: 115  mapType: 4  flags: 0
+mapID: 164  name: Naxxramas  parentMapID: 115  mapType: 4  flags: 0
+mapID: 165  name: Naxxramas  parentMapID: 115  mapType: 4  flags: 0
+mapID: 166  name: Naxxramas  parentMapID: 115  mapType: 4  flags: 0
+mapID: 167  name: Naxxramas  parentMapID: 115  mapType: 4  flags: 0
+mapID: 168  name: The Violet Hold  parentMapID: 125  mapType: 4  flags: 0
+mapID: 169  name: Isle of Conquest  parentMapID: 118  mapType: 6  flags: 0
+mapID: 170  name: Hrothgar's Landing  parentMapID: 113  mapType: 3  flags: 6
+mapID: 171  name: Trial of the Champion  parentMapID: 118  mapType: 4  flags: 0
+mapID: 172  name: Trial of the Crusader  parentMapID: 118  mapType: 4  flags: 0
+mapID: 173  name: Trial of the Crusader  parentMapID: 118  mapType: 4  flags: 0
+mapID: 174  name: The Lost Isles  parentMapID: 948  mapType: 3  flags: 6
+mapID: 175  name: Kaja'mite Cavern  parentMapID: 174  mapType: 5  flags: 0
+mapID: 176  name: Volcanoth's Lair  parentMapID: 174  mapType: 5  flags: 0
+mapID: 177  name: Gallywix Labor Mine  parentMapID: 174  mapType: 5  flags: 0
+mapID: 178  name: Gallywix Labor Mine  parentMapID: 174  mapType: 5  flags: 0
+mapID: 179  name: Gilneas  parentMapID: 13  mapType: 6  flags: 6
+mapID: 180  name: Emberstone Mine  parentMapID: 179  mapType: 5  flags: 0
+mapID: 181  name: Greymane Manor  parentMapID: 179  mapType: 5  flags: 0
+mapID: 182  name: Greymane Manor  parentMapID: 179  mapType: 5  flags: 0
+mapID: 183  name: The Forge of Souls  parentMapID: 118  mapType: 4  flags: 0
+mapID: 184  name: Pit of Saron  parentMapID: 118  mapType: 6  flags: 0
+mapID: 185  name: Halls of Reflection  parentMapID: 118  mapType: 4  flags: 0
+mapID: 186  name: Icecrown Citadel  parentMapID: 118  mapType: 4  flags: 0
+mapID: 187  name: Icecrown Citadel  parentMapID: 118  mapType: 4  flags: 0
+mapID: 188  name: Icecrown Citadel  parentMapID: 118  mapType: 4  flags: 0
+mapID: 189  name: Icecrown Citadel  parentMapID: 118  mapType: 4  flags: 0
+mapID: 190  name: Icecrown Citadel  parentMapID: 118  mapType: 4  flags: 0
+mapID: 191  name: Icecrown Citadel  parentMapID: 118  mapType: 4  flags: 0
+mapID: 192  name: Icecrown Citadel  parentMapID: 118  mapType: 4  flags: 0
+mapID: 193  name: Icecrown Citadel  parentMapID: 118  mapType: 4  flags: 0
+mapID: 194  name: Kezan  parentMapID: 948  mapType: 3  flags: 6
+mapID: 195  name: Kaja'mine  parentMapID: 194  mapType: 5  flags: 0
+mapID: 196  name: Kaja'mine  parentMapID: 194  mapType: 5  flags: 0
+mapID: 197  name: Kaja'mine  parentMapID: 194  mapType: 5  flags: 0
+mapID: 198  name: Mount Hyjal  parentMapID: 12  mapType: 3  flags: 6
+mapID: 199  name: Southern Barrens  parentMapID: 12  mapType: 3  flags: 6
+mapID: 200  name: The Ruby Sanctum  parentMapID: 115  mapType: 6  flags: 0
+mapID: 201  name: Kelp'thar Forest  parentMapID: 203  mapType: 3  flags: 6
+mapID: 202  name: Gilneas City  parentMapID: 179  mapType: 3  flags: 6
+mapID: 203  name: Vashj'ir  parentMapID: 13  mapType: 3  flags: 6
+mapID: 204  name: Abyssal Depths  parentMapID: 203  mapType: 3  flags: 6
+mapID: 205  name: Shimmering Expanse  parentMapID: 203  mapType: 3  flags: 6
+mapID: 206  name: Twin Peaks  parentMapID: 241  mapType: 6  flags: 0
+mapID: 207  name: Deepholm  parentMapID: 948  mapType: 3  flags: 6
+mapID: 208  name: Twilight Depths  parentMapID: 207  mapType: 5  flags: 0
+mapID: 209  name: Twilight Depths  parentMapID: 207  mapType: 5  flags: 0
+mapID: 210  name: The Cape of Stranglethorn  parentMapID: 224  mapType: 3  flags: 6
+mapID: 213  name: Ragefire Chasm  parentMapID: 85  mapType: 4  flags: 0
+mapID: 217  name: Ruins of Gilneas  parentMapID: 13  mapType: 3  flags: 6
+mapID: 218  name: Ruins of Gilneas City  parentMapID: 217  mapType: 6  flags: 1
+mapID: 219  name: Zul'Farrak  parentMapID: 71  mapType: 6  flags: 0
+mapID: 220  name: The Temple of Atal'Hakkar  parentMapID: 51  mapType: 4  flags: 0
+mapID: 221  name: Blackfathom Deeps  parentMapID: 63  mapType: 4  flags: 0
+mapID: 222  name: Blackfathom Deeps  parentMapID: 63  mapType: 4  flags: 0
+mapID: 223  name: Blackfathom Deeps  parentMapID: 63  mapType: 4  flags: 0
+mapID: 224  name: Stranglethorn Vale  parentMapID: 13  mapType: 3  flags: 6
+mapID: 225  name: The Stockade  parentMapID: 84  mapType: 4  flags: 0
+mapID: 226  name: Gnomeregan  parentMapID: 27  mapType: 4  flags: 0
+mapID: 227  name: Gnomeregan  parentMapID: 27  mapType: 4  flags: 0
+mapID: 228  name: Gnomeregan  parentMapID: 27  mapType: 4  flags: 0
+mapID: 229  name: Gnomeregan  parentMapID: 27  mapType: 4  flags: 0
+mapID: 230  name: Uldaman  parentMapID: 15  mapType: 4  flags: 0
+mapID: 231  name: Uldaman  parentMapID: 15  mapType: 4  flags: 0
+mapID: 232  name: Molten Core  parentMapID: 36  mapType: 4  flags: 0
+mapID: 233  name: Zul'Gurub  parentMapID: 50  mapType: 6  flags: 0
+mapID: 234  name: Dire Maul  parentMapID: 69  mapType: 6  flags: 0
+mapID: 235  name: Dire Maul  parentMapID: 69  mapType: 4  flags: 0
+mapID: 236  name: Dire Maul  parentMapID: 69  mapType: 4  flags: 0
+mapID: 237  name: Dire Maul  parentMapID: 69  mapType: 4  flags: 0
+mapID: 238  name: Dire Maul  parentMapID: 69  mapType: 4  flags: 0
+mapID: 239  name: Dire Maul  parentMapID: 69  mapType: 4  flags: 0
+mapID: 240  name: Dire Maul  parentMapID: 69  mapType: 4  flags: 0
+mapID: 241  name: Twilight Highlands  parentMapID: 13  mapType: 3  flags: 6
+mapID: 242  name: Blackrock Depths  parentMapID: 32  mapType: 4  flags: 0
+mapID: 243  name: Blackrock Depths  parentMapID: 32  mapType: 4  flags: 0
+mapID: 244  name: Tol Barad  parentMapID: 13  mapType: 3  flags: 0
+mapID: 245  name: Tol Barad Peninsula  parentMapID: 13  mapType: 3  flags: 0
+mapID: 246  name: The Shattered Halls  parentMapID: 100  mapType: 4  flags: 0
+mapID: 247  name: Ruins of Ahn'Qiraj  parentMapID: 81  mapType: 6  flags: 0
+mapID: 248  name: Onyxia's Lair  parentMapID: 70  mapType: 4  flags: 0
+mapID: 249  name: Uldum  parentMapID: 12  mapType: 3  flags: 6
+mapID: 250  name: Blackrock Spire  parentMapID: 36  mapType: 4  flags: 0
+mapID: 251  name: Blackrock Spire  parentMapID: 36  mapType: 4  flags: 0
+mapID: 252  name: Blackrock Spire  parentMapID: 36  mapType: 4  flags: 0
+mapID: 253  name: Blackrock Spire  parentMapID: 36  mapType: 4  flags: 0
+mapID: 254  name: Blackrock Spire  parentMapID: 36  mapType: 4  flags: 0
+mapID: 255  name: Blackrock Spire  parentMapID: 36  mapType: 4  flags: 0
+mapID: 256  name: Auchenai Crypts  parentMapID: 108  mapType: 4  flags: 0
+mapID: 257  name: Auchenai Crypts  parentMapID: 108  mapType: 4  flags: 0
+mapID: 258  name: Sethekk Halls  parentMapID: 108  mapType: 4  flags: 0
+mapID: 259  name: Sethekk Halls  parentMapID: 108  mapType: 4  flags: 0
+mapID: 260  name: Shadow Labyrinth  parentMapID: 108  mapType: 4  flags: 0
+mapID: 261  name: The Blood Furnace  parentMapID: 100  mapType: 4  flags: 0
+mapID: 262  name: The Underbog  parentMapID: 102  mapType: 4  flags: 0
+mapID: 263  name: The Steamvault  parentMapID: 102  mapType: 4  flags: 0
+mapID: 264  name: The Steamvault  parentMapID: 102  mapType: 4  flags: 0
+mapID: 265  name: The Slave Pens  parentMapID: 102  mapType: 4  flags: 0
+mapID: 266  name: The Botanica  parentMapID: 109  mapType: 4  flags: 0
+mapID: 267  name: The Mechanar  parentMapID: 109  mapType: 4  flags: 0
+mapID: 268  name: The Mechanar  parentMapID: 109  mapType: 4  flags: 0
+mapID: 269  name: The Arcatraz  parentMapID: 109  mapType: 4  flags: 0
+mapID: 270  name: The Arcatraz  parentMapID: 109  mapType: 4  flags: 0
+mapID: 271  name: The Arcatraz  parentMapID: 109  mapType: 4  flags: 0
+mapID: 272  name: Mana-Tombs  parentMapID: 108  mapType: 4  flags: 0
+mapID: 273  name: The Black Morass  parentMapID: 75  mapType: 6  flags: 0
+mapID: 274  name: Old Hillsbrad Foothills  parentMapID: 75  mapType: 6  flags: 0
+mapID: 275  name: The Battle for Gilneas  parentMapID: 179  mapType: 6  flags: 0
+mapID: 276  name: The Maelstrom  parentMapID: 948  mapType: 3  flags: 6
+mapID: 277  name: Lost City of the Tol'vir  parentMapID: 249  mapType: 6  flags: 0
+mapID: 279  name: Wailing Caverns  parentMapID: 10  mapType: 4  flags: 0
+mapID: 280  name: Maraudon  parentMapID: 66  mapType: 4  flags: 0
+mapID: 281  name: Maraudon  parentMapID: 66  mapType: 4  flags: 0
+mapID: 282  name: Baradin Hold  parentMapID: 244  mapType: 4  flags: 0
+mapID: 283  name: Blackrock Caverns  parentMapID: 36  mapType: 4  flags: 0
+mapID: 284  name: Blackrock Caverns  parentMapID: 36  mapType: 4  flags: 0
+mapID: 285  name: Blackwing Descent  parentMapID: 36  mapType: 4  flags: 0
+mapID: 286  name: Blackwing Descent  parentMapID: 36  mapType: 4  flags: 0
+mapID: 287  name: Blackwing Lair  parentMapID: 36  mapType: 4  flags: 0
+mapID: 288  name: Blackwing Lair  parentMapID: 36  mapType: 4  flags: 0
+mapID: 289  name: Blackwing Lair  parentMapID: 36  mapType: 4  flags: 0
+mapID: 290  name: Blackwing Lair  parentMapID: 36  mapType: 4  flags: 0
+mapID: 291  name: The Deadmines  parentMapID: 52  mapType: 4  flags: 0
+mapID: 292  name: The Deadmines  parentMapID: 52  mapType: 4  flags: 0
+mapID: 293  name: Grim Batol  parentMapID: 241  mapType: 4  flags: 0
+mapID: 294  name: The Bastion of Twilight  parentMapID: 241  mapType: 4  flags: 0
+mapID: 295  name: The Bastion of Twilight  parentMapID: 241  mapType: 4  flags: 0
+mapID: 296  name: The Bastion of Twilight  parentMapID: 241  mapType: 4  flags: 0
+mapID: 297  name: Halls of Origination  parentMapID: 249  mapType: 4  flags: 0
+mapID: 298  name: Halls of Origination  parentMapID: 249  mapType: 4  flags: 0
+mapID: 299  name: Halls of Origination  parentMapID: 249  mapType: 4  flags: 0
+mapID: 300  name: Razorfen Downs  parentMapID: 64  mapType: 4  flags: 0
+mapID: 301  name: Razorfen Kraul  parentMapID: 199  mapType: 4  flags: 0
+mapID: 302  name: Scarlet Monastery  parentMapID: 18  mapType: 4  flags: 0
+mapID: 303  name: Scarlet Monastery  parentMapID: 18  mapType: 4  flags: 0
+mapID: 304  name: Scarlet Monastery  parentMapID: 18  mapType: 4  flags: 0
+mapID: 305  name: Scarlet Monastery  parentMapID: 18  mapType: 4  flags: 0
+mapID: 306  name: Legacy of Scholomance  parentMapID: 22  mapType: 4  flags: 0
+mapID: 307  name: Legacy of Scholomance  parentMapID: 22  mapType: 4  flags: 0
+mapID: 308  name: Legacy of Scholomance  parentMapID: 22  mapType: 4  flags: 0
+mapID: 309  name: Legacy of Scholomance  parentMapID: 22  mapType: 4  flags: 0
+mapID: 310  name: Shadowfang Keep  parentMapID: 21  mapType: 4  flags: 0
+mapID: 311  name: Shadowfang Keep  parentMapID: 21  mapType: 4  flags: 0
+mapID: 312  name: Shadowfang Keep  parentMapID: 21  mapType: 4  flags: 0
+mapID: 313  name: Shadowfang Keep  parentMapID: 21  mapType: 4  flags: 0
+mapID: 314  name: Shadowfang Keep  parentMapID: 21  mapType: 4  flags: 0
+mapID: 315  name: Shadowfang Keep  parentMapID: 21  mapType: 4  flags: 0
+mapID: 316  name: Shadowfang Keep  parentMapID: 21  mapType: 4  flags: 0
+mapID: 317  name: Stratholme  parentMapID: 23  mapType: 4  flags: 0
+mapID: 318  name: Stratholme  parentMapID: 23  mapType: 4  flags: 0
+mapID: 319  name: Ahn'Qiraj  parentMapID: 81  mapType: 4  flags: 0
+mapID: 320  name: Ahn'Qiraj  parentMapID: 81  mapType: 4  flags: 0
+mapID: 321  name: Ahn'Qiraj  parentMapID: 81  mapType: 4  flags: 0
+mapID: 322  name: Throne of the Tides  parentMapID: 204  mapType: 4  flags: 0
+mapID: 323  name: Throne of the Tides  parentMapID: 204  mapType: 4  flags: 0
+mapID: 324  name: The Stonecore  parentMapID: 207  mapType: 4  flags: 0
+mapID: 325  name: The Vortex Pinnacle  parentMapID: 249  mapType: 4  flags: 0
+mapID: 327  name: Ahn'Qiraj: The Fallen Kingdom  parentMapID: 12  mapType: 6  flags: 2
+mapID: 328  name: Throne of the Four Winds  parentMapID: 249  mapType: 4  flags: 0
+mapID: 329  name: Hyjal Summit  parentMapID: 75  mapType: 6  flags: 0
+mapID: 330  name: Gruul's Lair  parentMapID: 105  mapType: 4  flags: 0
+mapID: 331  name: Magtheridon's Lair  parentMapID: 100  mapType: 4  flags: 0
+mapID: 332  name: Serpentshrine Cavern  parentMapID: 102  mapType: 4  flags: 0
+mapID: 333  name: Zul'Aman  parentMapID: 95  mapType: 6  flags: 0
+mapID: 334  name: Tempest Keep  parentMapID: 109  mapType: 4  flags: 0
+mapID: 335  name: Sunwell Plateau  parentMapID: 122  mapType: 4  flags: 0
+mapID: 336  name: Sunwell Plateau  parentMapID: 335  mapType: 4  flags: 0
+mapID: 337  name: Zul'Gurub  parentMapID: 50  mapType: 6  flags: 0
+mapID: 338  name: Molten Front  parentMapID: 198  mapType: 6  flags: 0
+mapID: 339  name: Black Temple  parentMapID: 104  mapType: 4  flags: 0
+mapID: 340  name: Black Temple  parentMapID: 339  mapType: 4  flags: 0
+mapID: 341  name: Black Temple  parentMapID: 339  mapType: 4  flags: 0
+mapID: 342  name: Black Temple  parentMapID: 339  mapType: 4  flags: 0
+mapID: 343  name: Black Temple  parentMapID: 339  mapType: 4  flags: 0
+mapID: 344  name: Black Temple  parentMapID: 339  mapType: 4  flags: 0
+mapID: 345  name: Black Temple  parentMapID: 339  mapType: 4  flags: 0
+mapID: 346  name: Black Temple  parentMapID: 339  mapType: 4  flags: 0
+mapID: 347  name: Hellfire Ramparts  parentMapID: 100  mapType: 4  flags: 0
+mapID: 348  name: Magisters' Terrace  parentMapID: 122  mapType: 4  flags: 0
+mapID: 349  name: Magisters' Terrace  parentMapID: 122  mapType: 4  flags: 0
+mapID: 350  name: Karazhan  parentMapID: 42  mapType: 4  flags: 0
+mapID: 351  name: Karazhan  parentMapID: 42  mapType: 4  flags: 0
+mapID: 352  name: Karazhan  parentMapID: 42  mapType: 4  flags: 0
+mapID: 353  name: Karazhan  parentMapID: 42  mapType: 4  flags: 0
+mapID: 354  name: Karazhan  parentMapID: 42  mapType: 4  flags: 0
+mapID: 355  name: Karazhan  parentMapID: 42  mapType: 4  flags: 0
+mapID: 356  name: Karazhan  parentMapID: 42  mapType: 4  flags: 0
+mapID: 357  name: Karazhan  parentMapID: 42  mapType: 4  flags: 0
+mapID: 358  name: Karazhan  parentMapID: 42  mapType: 4  flags: 0
+mapID: 359  name: Karazhan  parentMapID: 42  mapType: 4  flags: 0
+mapID: 360  name: Karazhan  parentMapID: 42  mapType: 4  flags: 0
+mapID: 361  name: Karazhan  parentMapID: 42  mapType: 4  flags: 0
+mapID: 362  name: Karazhan  parentMapID: 42  mapType: 4  flags: 0
+mapID: 363  name: Karazhan  parentMapID: 42  mapType: 4  flags: 0
+mapID: 364  name: Karazhan  parentMapID: 42  mapType: 4  flags: 0
+mapID: 365  name: Karazhan  parentMapID: 42  mapType: 4  flags: 0
+mapID: 366  name: Karazhan  parentMapID: 42  mapType: 4  flags: 0
+mapID: 367  name: Firelands  parentMapID: 198  mapType: 4  flags: 0
+mapID: 368  name: Firelands  parentMapID: 367  mapType: 4  flags: 0
+mapID: 369  name: Firelands  parentMapID: 367  mapType: 4  flags: 0
+mapID: 370  name: The Nexus  parentMapID: 114  mapType: 4  flags: 0
+mapID: 371  name: The Jade Forest  parentMapID: 424  mapType: 3  flags: 6
+mapID: 372  name: Greenstone Quarry  parentMapID: 371  mapType: 5  flags: 0
+mapID: 373  name: Greenstone Quarry  parentMapID: 371  mapType: 5  flags: 0
+mapID: 374  name: The Widow's Wail  parentMapID: 371  mapType: 5  flags: 0
+mapID: 375  name: Oona Kagu  parentMapID: 371  mapType: 5  flags: 0
+mapID: 376  name: Valley of the Four Winds  parentMapID: 424  mapType: 3  flags: 6
+mapID: 377  name: Cavern of Endless Echoes  parentMapID: 376  mapType: 5  flags: 0
+mapID: 378  name: The Wandering Isle  parentMapID: 947  mapType: 6  flags: 2
+mapID: 379  name: Kun-Lai Summit  parentMapID: 424  mapType: 3  flags: 6
+mapID: 380  name: Howlingwind Cavern  parentMapID: 379  mapType: 5  flags: 0
+mapID: 381  name: Pranksters' Hollow  parentMapID: 379  mapType: 5  flags: 0
+mapID: 382  name: Knucklethump Hole  parentMapID: 379  mapType: 5  flags: 0
+mapID: 383  name: The Deeper  parentMapID: 379  mapType: 5  flags: 0
+mapID: 384  name: The Deeper  parentMapID: 379  mapType: 5  flags: 0
+mapID: 385  name: Tomb of Conquerors  parentMapID: 379  mapType: 5  flags: 0
+mapID: 386  name: Ruins of Korune  parentMapID: 379  mapType: 5  flags: 0
+mapID: 387  name: Ruins of Korune  parentMapID: 379  mapType: 5  flags: 0
+mapID: 388  name: Townlong Steppes  parentMapID: 424  mapType: 3  flags: 6
+mapID: 389  name: Niuzao Temple  parentMapID: 388  mapType: 5  flags: 0
+mapID: 390  name: Vale of Eternal Blossoms  parentMapID: 424  mapType: 3  flags: 6
+mapID: 391  name: Shrine of Two Moons  parentMapID: 390  mapType: 5  flags: 0
+mapID: 392  name: Shrine of Two Moons  parentMapID: 390  mapType: 5  flags: 0
+mapID: 393  name: Shrine of Seven Stars  parentMapID: 390  mapType: 5  flags: 0
+mapID: 394  name: Shrine of Seven Stars  parentMapID: 390  mapType: 5  flags: 0
+mapID: 395  name: Guo-Lai Halls  parentMapID: 390  mapType: 5  flags: 0
+mapID: 396  name: Guo-Lai Halls  parentMapID: 390  mapType: 5  flags: 0
+mapID: 397  name: Eye of the Storm  parentMapID: 109  mapType: 6  flags: 0
+mapID: 398  name: Well of Eternity  parentMapID: 71  mapType: 6  flags: 0
+mapID: 399  name: Hour of Twilight  parentMapID: 71  mapType: 4  flags: 0
+mapID: 400  name: Hour of Twilight  parentMapID: 399  mapType: 4  flags: 0
+mapID: 401  name: End Time  parentMapID: 71  mapType: 4  flags: 0
+mapID: 402  name: End Time  parentMapID: 401  mapType: 4  flags: 0
+mapID: 403  name: End Time  parentMapID: 401  mapType: 4  flags: 0
+mapID: 404  name: End Time  parentMapID: 401  mapType: 4  flags: 0
+mapID: 405  name: End Time  parentMapID: 401  mapType: 4  flags: 0
+mapID: 406  name: End Time  parentMapID: 401  mapType: 4  flags: 0
+mapID: 407  name: Darkmoon Island  parentMapID: 947  mapType: 6  flags: 0
+mapID: 408  name: Darkmoon Island  parentMapID: 407  mapType: 4  flags: 0
+mapID: 409  name: Dragon Soul  parentMapID: 71  mapType: 4  flags: 0
+mapID: 410  name: Dragon Soul  parentMapID: 409  mapType: 4  flags: 0
+mapID: 411  name: Dragon Soul  parentMapID: 409  mapType: 4  flags: 0
+mapID: 412  name: Dragon Soul  parentMapID: 409  mapType: 4  flags: 0
+mapID: 413  name: Dragon Soul  parentMapID: 409  mapType: 4  flags: 0
+mapID: 414  name: Dragon Soul  parentMapID: 409  mapType: 4  flags: 0
+mapID: 415  name: Dragon Soul  parentMapID: 409  mapType: 4  flags: 0
+mapID: 416  name: Dustwallow Marsh  parentMapID: 70  mapType: 6  flags: 0
+mapID: 417  name: Temple of Kotmogu  parentMapID: 390  mapType: 6  flags: 0
+mapID: 418  name: Krasarang Wilds  parentMapID: 424  mapType: 3  flags: 6
+mapID: 419  name: Ruins of Ogudei  parentMapID: 418  mapType: 5  flags: 0
+mapID: 420  name: Ruins of Ogudei  parentMapID: 418  mapType: 5  flags: 0
+mapID: 421  name: Ruins of Ogudei  parentMapID: 418  mapType: 5  flags: 0
+mapID: 422  name: Dread Wastes  parentMapID: 424  mapType: 3  flags: 6
+mapID: 423  name: Silvershard Mines  parentMapID: 224  mapType: 4  flags: 0
+mapID: 424  name: Pandaria  parentMapID: 947  mapType: 2  flags: 0
+mapID: 425  name: Northshire  parentMapID: 37  mapType: 3  flags: 0
+mapID: 426  name: Echo Ridge Mine  parentMapID: 37  mapType: 5  flags: 0
+mapID: 427  name: Coldridge Valley  parentMapID: 27  mapType: 6  flags: 0
+mapID: 428  name: Frostmane Hovel  parentMapID: 27  mapType: 5  flags: 0
+mapID: 429  name: Temple of the Jade Serpent  parentMapID: 371  mapType: 4  flags: 0
+mapID: 430  name: Temple of the Jade Serpent  parentMapID: 371  mapType: 4  flags: 0
+mapID: 431  name: Scarlet Halls  parentMapID: 18  mapType: 4  flags: 0
+mapID: 432  name: Scarlet Halls  parentMapID: 18  mapType: 4  flags: 0
+mapID: 433  name: The Veiled Stair  parentMapID: 424  mapType: 3  flags: 6
+mapID: 434  name: The Ancient Passage  parentMapID: 379  mapType: 5  flags: 0
+mapID: 435  name: Scarlet Monastery  parentMapID: 18  mapType: 4  flags: 0
+mapID: 436  name: Scarlet Monastery  parentMapID: 18  mapType: 4  flags: 0
+mapID: 437  name: Gate of the Setting Sun  parentMapID: 390  mapType: 4  flags: 0
+mapID: 438  name: Gate of the Setting Sun  parentMapID: 390  mapType: 4  flags: 0
+mapID: 439  name: Stormstout Brewery  parentMapID: 376  mapType: 4  flags: 0
+mapID: 440  name: Stormstout Brewery  parentMapID: 376  mapType: 4  flags: 0
+mapID: 441  name: Stormstout Brewery  parentMapID: 376  mapType: 4  flags: 0
+mapID: 442  name: Stormstout Brewery  parentMapID: 376  mapType: 4  flags: 0
+mapID: 443  name: Shado-Pan Monastery  parentMapID: 379  mapType: 4  flags: 0
+mapID: 444  name: Shado-Pan Monastery  parentMapID: 443  mapType: 4  flags: 0
+mapID: 445  name: Shado-Pan Monastery  parentMapID: 443  mapType: 4  flags: 0
+mapID: 446  name: Shado-Pan Monastery  parentMapID: 443  mapType: 4  flags: 0
+mapID: 447  name: A Brewing Storm  parentMapID: 371  mapType: 6  flags: 0
+mapID: 448  name: The Jade Forest  parentMapID: 371  mapType: 6  flags: 0
+mapID: 449  name: Temple of Kotmogu  parentMapID: 390  mapType: 6  flags: 0
+mapID: 450  name: Unga Ingoo  parentMapID: 418  mapType: 6  flags: 0
+mapID: 451  name: Assault on Zan'vess  parentMapID: 422  mapType: 6  flags: 0
+mapID: 452  name: Brewmoon Festival  parentMapID: 379  mapType: 6  flags: 0
+mapID: 453  name: Mogu'shan Palace  parentMapID: 390  mapType: 4  flags: 0
+mapID: 454  name: Mogu'shan Palace  parentMapID: 390  mapType: 4  flags: 0
+mapID: 455  name: Mogu'shan Palace  parentMapID: 390  mapType: 4  flags: 0
+mapID: 456  name: Terrace of Endless Spring  parentMapID: 433  mapType: 6  flags: 0
+mapID: 457  name: Siege of Niuzao Temple  parentMapID: 388  mapType: 4  flags: 0
+mapID: 458  name: Siege of Niuzao Temple  parentMapID: 457  mapType: 4  flags: 0
+mapID: 459  name: Siege of Niuzao Temple  parentMapID: 457  mapType: 4  flags: 0
+mapID: 460  name: Shadowglen  parentMapID: 57  mapType: 3  flags: 6
+mapID: 461  name: Valley of Trials  parentMapID: 1  mapType: 3  flags: 6
+mapID: 462  name: Camp Narache  parentMapID: 7  mapType: 3  flags: 6
+mapID: 463  name: Echo Isles  parentMapID: 1  mapType: 3  flags: 6
+mapID: 464  name: Spitescale Cavern  parentMapID: 1  mapType: 5  flags: 0
+mapID: 465  name: Deathknell  parentMapID: 18  mapType: 3  flags: 6
+mapID: 466  name: Night Web's Hollow  parentMapID: 18  mapType: 5  flags: 0
+mapID: 467  name: Sunstrider Isle  parentMapID: 94  mapType: 3  flags: 6
+mapID: 468  name: Ammen Vale  parentMapID: 97  mapType: 3  flags: 6
+mapID: 469  name: New Tinkertown  parentMapID: 27  mapType: 3  flags: 6
+mapID: 470  name: Frostmane Hold  parentMapID: 27  mapType: 5  flags: 0
+mapID: 471  name: Mogu'shan Vaults  parentMapID: 390  mapType: 4  flags: 0
+mapID: 472  name: Mogu'shan Vaults  parentMapID: 390  mapType: 4  flags: 0
+mapID: 473  name: Mogu'shan Vaults  parentMapID: 390  mapType: 4  flags: 0
+mapID: 474  name: Heart of Fear  parentMapID: 422  mapType: 4  flags: 0
+mapID: 475  name: Heart of Fear  parentMapID: 422  mapType: 4  flags: 0
+mapID: 476  name: Scholomance  parentMapID: 22  mapType: 4  flags: 0
+mapID: 477  name: Scholomance  parentMapID: 22  mapType: 4  flags: 0
+mapID: 478  name: Scholomance  parentMapID: 22  mapType: 4  flags: 0
+mapID: 479  name: Scholomance  parentMapID: 22  mapType: 4  flags: 0
+mapID: 480  name: Proving Grounds  parentMapID: 379  mapType: 4  flags: 0
+mapID: 481  name: Crypt of Forgotten Kings  parentMapID: 379  mapType: 4  flags: 0
+mapID: 482  name: Crypt of Forgotten Kings  parentMapID: 379  mapType: 4  flags: 0
+mapID: 483  name: Dustwallow Marsh  parentMapID: 70  mapType: 6  flags: 0
+mapID: 486  name: Krasarang Wilds  parentMapID: 418  mapType: 6  flags: 0
+mapID: 487  name: A Little Patience  parentMapID: 418  mapType: 6  flags: 0
+mapID: 488  name: Dagger in the Dark  parentMapID: 433  mapType: 6  flags: 0
+mapID: 489  name: Dagger in the Dark  parentMapID: 379  mapType: 4  flags: 0
+mapID: 490  name: Black Temple  parentMapID: 104  mapType: 4  flags: 0
+mapID: 491  name: Black Temple  parentMapID: 490  mapType: 4  flags: 0
+mapID: 492  name: Black Temple  parentMapID: 490  mapType: 4  flags: 0
+mapID: 493  name: Black Temple  parentMapID: 490  mapType: 4  flags: 0
+mapID: 494  name: Black Temple  parentMapID: 490  mapType: 4  flags: 0
+mapID: 495  name: Black Temple  parentMapID: 490  mapType: 4  flags: 0
+mapID: 496  name: Black Temple  parentMapID: 490  mapType: 4  flags: 0
+mapID: 497  name: Black Temple  parentMapID: 490  mapType: 4  flags: 0
+mapID: 498  name: Krasarang Wilds  parentMapID: 418  mapType: 6  flags: 0
+mapID: 499  name: Deeprun Tram  parentMapID: 84  mapType: 4  flags: 0
+mapID: 500  name: Deeprun Tram  parentMapID: 84  mapType: 4  flags: 0
+mapID: 501  name: Dalaran  parentMapID: 13  mapType: 4  flags: 0
+mapID: 502  name: Dalaran  parentMapID: 13  mapType: 4  flags: 0
+mapID: 503  name: Brawl'gar Arena  parentMapID: 85  mapType: 4  flags: 0
+mapID: 504  name: Isle of Thunder  parentMapID: 424  mapType: 3  flags: 6
+mapID: 505  name: Lightning Vein Mine  parentMapID: 504  mapType: 5  flags: 0
+mapID: 506  name: The Swollen Vault  parentMapID: 504  mapType: 5  flags: 0
+mapID: 507  name: Isle of Giants  parentMapID: 424  mapType: 3  flags: 6
+mapID: 508  name: Throne of Thunder  parentMapID: 504  mapType: 4  flags: 0
+mapID: 509  name: Throne of Thunder  parentMapID: 504  mapType: 4  flags: 0
+mapID: 510  name: Throne of Thunder  parentMapID: 504  mapType: 4  flags: 0
+mapID: 511  name: Throne of Thunder  parentMapID: 504  mapType: 4  flags: 0
+mapID: 512  name: Throne of Thunder  parentMapID: 504  mapType: 4  flags: 0
+mapID: 513  name: Throne of Thunder  parentMapID: 504  mapType: 4  flags: 0
+mapID: 514  name: Throne of Thunder  parentMapID: 504  mapType: 4  flags: 0
+mapID: 515  name: Throne of Thunder  parentMapID: 504  mapType: 4  flags: 0
+mapID: 516  name: Isle of Thunder  parentMapID: 424  mapType: 6  flags: 2
+mapID: 517  name: Lightning Vein Mine  parentMapID: 516  mapType: 5  flags: 0
+mapID: 518  name: Thunder King's Citadel  parentMapID: 504  mapType: 4  flags: 0
+mapID: 519  name: Deepwind Gorge  parentMapID: 376  mapType: 6  flags: 0
+mapID: 520  name: Vale of Eternal Blossoms  parentMapID: 390  mapType: 6  flags: 0
+mapID: 521  name: Vale of Eternal Blossoms  parentMapID: 390  mapType: 4  flags: 0
+mapID: 522  name: The Secrets of Ragefire  parentMapID: 85  mapType: 4  flags: 0
+mapID: 523  name: Dun Morogh  parentMapID: 27  mapType: 6  flags: 0
+mapID: 524  name: Battle on the High Seas  parentMapID: 12  mapType: 6  flags: 0
+mapID: 525  name: Frostfire Ridge  parentMapID: 572  mapType: 3  flags: 6
+mapID: 526  name: Turgall's Den  parentMapID: 525  mapType: 5  flags: 0
+mapID: 527  name: Turgall's Den  parentMapID: 525  mapType: 5  flags: 0
+mapID: 528  name: Turgall's Den  parentMapID: 525  mapType: 5  flags: 0
+mapID: 529  name: Turgall's Den  parentMapID: 525  mapType: 5  flags: 0
+mapID: 530  name: Grom'gar  parentMapID: 525  mapType: 5  flags: 0
+mapID: 531  name: Grulloc's Grotto  parentMapID: 525  mapType: 5  flags: 0
+mapID: 532  name: Grulloc's Grotto  parentMapID: 525  mapType: 5  flags: 0
+mapID: 533  name: Snowfall Alcove  parentMapID: 525  mapType: 5  flags: 0
+mapID: 534  name: Tanaan Jungle  parentMapID: 572  mapType: 3  flags: 6
+mapID: 535  name: Talador  parentMapID: 572  mapType: 3  flags: 6
+mapID: 536  name: Tomb of Lights  parentMapID: 535  mapType: 5  flags: 0
+mapID: 537  name: Tomb of Souls  parentMapID: 535  mapType: 5  flags: 0
+mapID: 538  name: The Breached Ossuary  parentMapID: 535  mapType: 5  flags: 0
+mapID: 539  name: Shadowmoon Valley  parentMapID: 572  mapType: 3  flags: 6
+mapID: 540  name: Bloodthorn Cave  parentMapID: 539  mapType: 5  flags: 0
+mapID: 541  name: Den of Secrets  parentMapID: 539  mapType: 5  flags: 0
+mapID: 542  name: Spires of Arak  parentMapID: 572  mapType: 3  flags: 6
+mapID: 543  name: Gorgrond  parentMapID: 572  mapType: 3  flags: 6
+mapID: 544  name: Moira's Reach  parentMapID: 543  mapType: 5  flags: 0
+mapID: 545  name: Moira's Reach  parentMapID: 543  mapType: 5  flags: 0
+mapID: 546  name: Fissure of Fury  parentMapID: 543  mapType: 5  flags: 0
+mapID: 547  name: Fissure of Fury  parentMapID: 543  mapType: 5  flags: 0
+mapID: 548  name: Cragplume Cauldron  parentMapID: 543  mapType: 5  flags: 0
+mapID: 549  name: Cragplume Cauldron  parentMapID: 543  mapType: 5  flags: 0
+mapID: 550  name: Nagrand  parentMapID: 572  mapType: 3  flags: 6
+mapID: 551  name: The Masters' Cavern  parentMapID: 550  mapType: 5  flags: 0
+mapID: 552  name: Stonecrag Gorge  parentMapID: 550  mapType: 5  flags: 0
+mapID: 553  name: Oshu'gun  parentMapID: 550  mapType: 5  flags: 0
+mapID: 554  name: Timeless Isle  parentMapID: 424  mapType: 3  flags: 6
+mapID: 555  name: Cavern of Lost Spirits  parentMapID: 554  mapType: 5  flags: 0
+mapID: 556  name: Siege of Orgrimmar  parentMapID: 390  mapType: 4  flags: 0
+mapID: 557  name: Siege of Orgrimmar  parentMapID: 556  mapType: 4  flags: 0
+mapID: 558  name: Siege of Orgrimmar  parentMapID: 556  mapType: 4  flags: 0
+mapID: 559  name: Siege of Orgrimmar  parentMapID: 556  mapType: 4  flags: 0
+mapID: 560  name: Siege of Orgrimmar  parentMapID: 556  mapType: 4  flags: 0
+mapID: 561  name: Siege of Orgrimmar  parentMapID: 556  mapType: 4  flags: 0
+mapID: 562  name: Siege of Orgrimmar  parentMapID: 556  mapType: 4  flags: 0
+mapID: 563  name: Siege of Orgrimmar  parentMapID: 556  mapType: 4  flags: 0
+mapID: 564  name: Siege of Orgrimmar  parentMapID: 556  mapType: 4  flags: 0
+mapID: 565  name: Siege of Orgrimmar  parentMapID: 556  mapType: 4  flags: 0
+mapID: 566  name: Siege of Orgrimmar  parentMapID: 556  mapType: 4  flags: 0
+mapID: 567  name: Siege of Orgrimmar  parentMapID: 556  mapType: 4  flags: 0
+mapID: 568  name: Siege of Orgrimmar  parentMapID: 556  mapType: 4  flags: 0
+mapID: 569  name: Siege of Orgrimmar  parentMapID: 556  mapType: 4  flags: 0
+mapID: 570  name: Siege of Orgrimmar  parentMapID: 556  mapType: 4  flags: 0
+mapID: 571  name: Celestial Tournament  parentMapID: 554  mapType: 6  flags: 0
+mapID: 572  name: Draenor  parentMapID: 946  mapType: 2  flags: 0
+mapID: 573  name: Bloodmaul Slag Mines  parentMapID: 525  mapType: 4  flags: 0
+mapID: 574  name: Shadowmoon Burial Grounds  parentMapID: 539  mapType: 4  flags: 0
+mapID: 575  name: Shadowmoon Burial Grounds  parentMapID: 539  mapType: 4  flags: 0
+mapID: 576  name: Shadowmoon Burial Grounds  parentMapID: 539  mapType: 4  flags: 0
+mapID: 577  name: Tanaan Jungle  parentMapID: 572  mapType: 6  flags: 0
+mapID: 578  name: Umbral Halls  parentMapID: 577  mapType: 5  flags: 0
+mapID: 579  name: Lunarfall Excavation  parentMapID: 582  mapType: 5  flags: 0
+mapID: 580  name: Lunarfall Excavation  parentMapID: 582  mapType: 5  flags: 0
+mapID: 581  name: Lunarfall Excavation  parentMapID: 582  mapType: 5  flags: 0
+mapID: 582  name: Lunarfall  parentMapID: 539  mapType: 6  flags: 13
+mapID: 585  name: Frostwall Mine  parentMapID: 590  mapType: 5  flags: 0
+mapID: 586  name: Frostwall Mine  parentMapID: 590  mapType: 5  flags: 0
+mapID: 587  name: Frostwall Mine  parentMapID: 590  mapType: 5  flags: 0
+mapID: 588  name: Ashran  parentMapID: 572  mapType: 3  flags: 0
+mapID: 589  name: Ashran Mine  parentMapID: 588  mapType: 5  flags: 0
+mapID: 590  name: Frostwall  parentMapID: 525  mapType: 6  flags: 13
+mapID: 593  name: Auchindoun  parentMapID: 535  mapType: 4  flags: 0
+mapID: 594  name: Shattrath City  parentMapID: 572  mapType: 6  flags: 4096
+mapID: 595  name: Iron Docks  parentMapID: 543  mapType: 4  flags: 0
+mapID: 596  name: Blackrock Foundry  parentMapID: 543  mapType: 4  flags: 0
+mapID: 597  name: Blackrock Foundry  parentMapID: 543  mapType: 4  flags: 0
+mapID: 598  name: Blackrock Foundry  parentMapID: 543  mapType: 4  flags: 0
+mapID: 599  name: Blackrock Foundry  parentMapID: 543  mapType: 4  flags: 0
+mapID: 600  name: Blackrock Foundry  parentMapID: 543  mapType: 4  flags: 0
+mapID: 601  name: Skyreach  parentMapID: 542  mapType: 4  flags: 0
+mapID: 602  name: Skyreach  parentMapID: 542  mapType: 4  flags: 0
+mapID: 606  name: Grimrail Depot  parentMapID: 543  mapType: 4  flags: 0
+mapID: 607  name: Grimrail Depot  parentMapID: 543  mapType: 4  flags: 0
+mapID: 608  name: Grimrail Depot  parentMapID: 543  mapType: 4  flags: 0
+mapID: 609  name: Grimrail Depot  parentMapID: 543  mapType: 4  flags: 0
+mapID: 610  name: Highmaul  parentMapID: 550  mapType: 4  flags: 0
+mapID: 611  name: Highmaul  parentMapID: 610  mapType: 4  flags: 0
+mapID: 612  name: Highmaul  parentMapID: 610  mapType: 4  flags: 0
+mapID: 613  name: Highmaul  parentMapID: 610  mapType: 4  flags: 0
+mapID: 614  name: Highmaul  parentMapID: 610  mapType: 4  flags: 0
+mapID: 615  name: Highmaul  parentMapID: 610  mapType: 4  flags: 0
+mapID: 616  name: Upper Blackrock Spire  parentMapID: 36  mapType: 4  flags: 0
+mapID: 617  name: Upper Blackrock Spire  parentMapID: 36  mapType: 4  flags: 0
+mapID: 618  name: Upper Blackrock Spire  parentMapID: 36  mapType: 4  flags: 0
+mapID: 619  name: Broken Isles  parentMapID: 947  mapType: 2  flags: 0
+mapID: 620  name: The Everbloom  parentMapID: 543  mapType: 4  flags: 0
+mapID: 621  name: The Everbloom  parentMapID: 620  mapType: 4  flags: 0
+mapID: 622  name: Stormshield  parentMapID: 588  mapType: 6  flags: 0
+mapID: 623  name: Hillsbrad Foothills (Southshore vs. Tarren Mill)  parentMapID: 25  mapType: 6  flags: 0
+mapID: 624  name: Warspear  parentMapID: 588  mapType: 6  flags: 0
+mapID: 626  name: Dalaran  parentMapID: 619  mapType: 4  flags: 0
+mapID: 627  name: Dalaran  parentMapID: 619  mapType: 4  flags: 32768
+mapID: 628  name: Dalaran  parentMapID: 619  mapType: 4  flags: 0
+mapID: 629  name: Dalaran  parentMapID: 619  mapType: 4  flags: 0
+mapID: 630  name: Azsuna  parentMapID: 619  mapType: 3  flags: 6
+mapID: 631  name: Nar'thalas Academy  parentMapID: 630  mapType: 5  flags: 0
+mapID: 632  name: Oceanus Cove  parentMapID: 630  mapType: 5  flags: 0
+mapID: 633  name: Temple of a Thousand Lights  parentMapID: 630  mapType: 5  flags: 0
+mapID: 634  name: Stormheim  parentMapID: 619  mapType: 3  flags: 6
+mapID: 635  name: Shield's Rest  parentMapID: 634  mapType: 5  flags: 0
+mapID: 636  name: Stormscale Cavern  parentMapID: 634  mapType: 5  flags: 0
+mapID: 637  name: Thorignir Refuge  parentMapID: 634  mapType: 5  flags: 0
+mapID: 638  name: Thorignir Refuge  parentMapID: 634  mapType: 5  flags: 0
+mapID: 639  name: Aggramar's Vault  parentMapID: 634  mapType: 5  flags: 0
+mapID: 640  name: Vault of Eyir  parentMapID: 634  mapType: 5  flags: 0
+mapID: 641  name: Val'sharah  parentMapID: 619  mapType: 3  flags: 6
+mapID: 642  name: Darkpens  parentMapID: 641  mapType: 5  flags: 0
+mapID: 643  name: Sleeper's Barrow  parentMapID: 641  mapType: 5  flags: 0
+mapID: 644  name: Sleeper's Barrow  parentMapID: 641  mapType: 5  flags: 0
+mapID: 645  name: Twisting Nether  parentMapID: 619  mapType: 6  flags: 0
+mapID: 646  name: Broken Shore  parentMapID: 619  mapType: 3  flags: 6
+mapID: 647  name: Acherus: The Ebon Hold  parentMapID: 619  mapType: 5  flags: 0
+mapID: 648  name: Acherus: The Ebon Hold  parentMapID: 619  mapType: 5  flags: 0
+mapID: 649  name: Helheim  parentMapID: 634  mapType: 6  flags: 0
+mapID: 650  name: Highmountain  parentMapID: 619  mapType: 3  flags: 6
+mapID: 651  name: Bitestone Enclave  parentMapID: 650  mapType: 5  flags: 0
+mapID: 652  name: Thunder Totem  parentMapID: 650  mapType: 5  flags: 0
+mapID: 653  name: Cave of the Blood Trial  parentMapID: 650  mapType: 5  flags: 0
+mapID: 654  name: Mucksnout Den  parentMapID: 650  mapType: 5  flags: 0
+mapID: 655  name: Lifespring Cavern  parentMapID: 650  mapType: 5  flags: 0
+mapID: 656  name: Lifespring Cavern  parentMapID: 650  mapType: 5  flags: 0
+mapID: 657  name: Path of Huln  parentMapID: 650  mapType: 5  flags: 0
+mapID: 658  name: Path of Huln  parentMapID: 650  mapType: 5  flags: 0
+mapID: 659  name: Stonedark Grotto  parentMapID: 650  mapType: 5  flags: 0
+mapID: 660  name: Feltotem Caverns  parentMapID: 650  mapType: 5  flags: 0
+mapID: 661  name: Hellfire Citadel  parentMapID: 534  mapType: 4  flags: 0
+mapID: 662  name: Hellfire Citadel  parentMapID: 661  mapType: 4  flags: 0
+mapID: 663  name: Hellfire Citadel  parentMapID: 661  mapType: 4  flags: 0
+mapID: 664  name: Hellfire Citadel  parentMapID: 661  mapType: 4  flags: 0
+mapID: 665  name: Hellfire Citadel  parentMapID: 661  mapType: 4  flags: 0
+mapID: 666  name: Hellfire Citadel  parentMapID: 661  mapType: 4  flags: 0
+mapID: 667  name: Hellfire Citadel  parentMapID: 661  mapType: 4  flags: 0
+mapID: 668  name: Hellfire Citadel  parentMapID: 661  mapType: 4  flags: 0
+mapID: 669  name: Hellfire Citadel  parentMapID: 661  mapType: 4  flags: 0
+mapID: 670  name: Hellfire Citadel  parentMapID: 661  mapType: 4  flags: 0
+mapID: 671  name: The Cove of Nashal  parentMapID: 619  mapType: 6  flags: 0
+mapID: 672  name: Mardum, the Shattered Abyss  parentMapID: 619  mapType: 6  flags: 0
+mapID: 673  name: Cryptic Hollow  parentMapID: 672  mapType: 5  flags: 0
+mapID: 674  name: Soul Engine  parentMapID: 672  mapType: 5  flags: 0
+mapID: 675  name: Soul Engine  parentMapID: 672  mapType: 5  flags: 0
+mapID: 676  name: Broken Shore  parentMapID: 619  mapType: 6  flags: 2
+mapID: 677  name: Vault of the Wardens  parentMapID: 630  mapType: 4  flags: 64
+mapID: 678  name: Vault of the Wardens  parentMapID: 630  mapType: 4  flags: 64
+mapID: 679  name: Vault of the Wardens  parentMapID: 630  mapType: 4  flags: 64
+mapID: 680  name: Suramar  parentMapID: 619  mapType: 3  flags: 6
+mapID: 681  name: The Arcway Vaults  parentMapID: 680  mapType: 5  flags: 0
+mapID: 682  name: Felsoul Hold  parentMapID: 680  mapType: 5  flags: 0
+mapID: 683  name: The Arcway Vaults  parentMapID: 680  mapType: 5  flags: 0
+mapID: 684  name: Shattered Locus  parentMapID: 680  mapType: 5  flags: 0
+mapID: 685  name: Shattered Locus  parentMapID: 680  mapType: 5  flags: 0
+mapID: 686  name: Elor'shan  parentMapID: 680  mapType: 5  flags: 0
+mapID: 687  name: Kel'balor  parentMapID: 680  mapType: 5  flags: 0
+mapID: 688  name: Ley Station Anora  parentMapID: 680  mapType: 5  flags: 0
+mapID: 689  name: Ley Station Moonfall  parentMapID: 680  mapType: 5  flags: 0
+mapID: 690  name: Ley Station Aethenar  parentMapID: 680  mapType: 5  flags: 0
+mapID: 691  name: Nyell's Workshop  parentMapID: 680  mapType: 5  flags: 0
+mapID: 692  name: Falanaar Arcway  parentMapID: 680  mapType: 5  flags: 0
+mapID: 693  name: Falanaar Arcway  parentMapID: 680  mapType: 5  flags: 0
+mapID: 694  name: Helmouth Shallows  parentMapID: 619  mapType: 6  flags: 4130
+mapID: 695  name: Skyhold  parentMapID: 619  mapType: 4  flags: 64
+mapID: 696  name: Stormheim  parentMapID: 619  mapType: 6  flags: 0
+mapID: 697  name: Azshara  parentMapID: 76  mapType: 6  flags: 0
+mapID: 698  name: Icecrown Citadel  parentMapID: 118  mapType: 4  flags: 64
+mapID: 699  name: Icecrown Citadel  parentMapID: 118  mapType: 4  flags: 64
+mapID: 700  name: Icecrown Citadel  parentMapID: 118  mapType: 4  flags: 64
+mapID: 701  name: Icecrown Citadel  parentMapID: 118  mapType: 4  flags: 64
+mapID: 702  name: Netherlight Temple  parentMapID: 619  mapType: 4  flags: 64
+mapID: 703  name: Halls of Valor  parentMapID: 634  mapType: 4  flags: 64
+mapID: 704  name: Halls of Valor  parentMapID: 703  mapType: 4  flags: 64
+mapID: 705  name: Halls of Valor  parentMapID: 703  mapType: 4  flags: 64
+mapID: 706  name: Helmouth Cliffs  parentMapID: 634  mapType: 4  flags: 64
+mapID: 707  name: Helmouth Cliffs  parentMapID: 706  mapType: 4  flags: 64
+mapID: 708  name: Helmouth Cliffs  parentMapID: 706  mapType: 4  flags: 64
+mapID: 709  name: The Wandering Isle  parentMapID: 619  mapType: 6  flags: 0
+mapID: 710  name: Vault of the Wardens  parentMapID: 630  mapType: 4  flags: 64
+mapID: 711  name: Vault of the Wardens  parentMapID: 630  mapType: 4  flags: 64
+mapID: 712  name: Vault of the Wardens  parentMapID: 630  mapType: 4  flags: 64
+mapID: 713  name: Eye of Azshara  parentMapID: 630  mapType: 6  flags: 64
+mapID: 714  name: Niskara  parentMapID: 619  mapType: 6  flags: 0
+mapID: 715  name: Emerald Dreamway  parentMapID: 747  mapType: 6  flags: 0
+mapID: 716  name: Skywall  parentMapID: 249  mapType: 4  flags: 64
+mapID: 717  name: Dreadscar Rift  parentMapID: 619  mapType: 6  flags: 0
+mapID: 718  name: Dreadscar Rift  parentMapID: 619  mapType: 6  flags: 0
+mapID: 719  name: Mardum, the Shattered Abyss  parentMapID: 619  mapType: 4  flags: 64
+mapID: 720  name: Mardum, the Shattered Abyss  parentMapID: 719  mapType: 4  flags: 64
+mapID: 721  name: Mardum, the Shattered Abyss  parentMapID: 719  mapType: 4  flags: 64
+mapID: 723  name: The Violet Hold  parentMapID: 627  mapType: 4  flags: 64
+mapID: 725  name: The Maelstrom  parentMapID: 948  mapType: 6  flags: 0
+mapID: 726  name: The Maelstrom  parentMapID: 619  mapType: 6  flags: 0
+mapID: 728  name: Terrace of Endless Spring  parentMapID: 433  mapType: 6  flags: 0
+mapID: 729  name: Crumbling Depths  parentMapID: 207  mapType: 5  flags: 0
+mapID: 731  name: Neltharion's Lair  parentMapID: 650  mapType: 6  flags: 64
+mapID: 732  name: Violet Hold  parentMapID: 627  mapType: 4  flags: 64
+mapID: 733  name: Darkheart Thicket  parentMapID: 641  mapType: 6  flags: 64
+mapID: 734  name: Hall of the Guardian  parentMapID: 627  mapType: 4  flags: 64
+mapID: 735  name: Hall of the Guardian  parentMapID: 627  mapType: 4  flags: 64
+mapID: 736  name: The Beyond  parentMapID: 114  mapType: 4  flags: 64
+mapID: 737  name: The Vortex Pinnacle  parentMapID: 249  mapType: 4  flags: 64
+mapID: 738  name: Firelands  parentMapID: 198  mapType: 6  flags: 0
+mapID: 739  name: Trueshot Lodge  parentMapID: 650  mapType: 3  flags: 0
+mapID: 740  name: Shadowgore Citadel  parentMapID: 619  mapType: 4  flags: 64
+mapID: 741  name: Shadowgore Citadel  parentMapID: 619  mapType: 4  flags: 64
+mapID: 742  name: Abyssal Maw  parentMapID: 204  mapType: 4  flags: 64
+mapID: 743  name: Abyssal Maw  parentMapID: 204  mapType: 4  flags: 64
+mapID: 744  name: Ulduar  parentMapID: 120  mapType: 4  flags: 64
+mapID: 745  name: Ulduar  parentMapID: 120  mapType: 4  flags: 64
+mapID: 746  name: Ulduar  parentMapID: 120  mapType: 4  flags: 64
+mapID: 747  name: The Dreamgrove  parentMapID: 641  mapType: 6  flags: 0
+mapID: 748  name: Niskara  parentMapID: 619  mapType: 6  flags: 0
+mapID: 749  name: The Arcway  parentMapID: 680  mapType: 4  flags: 64
+mapID: 750  name: Thunder Totem  parentMapID: 650  mapType: 6  flags: 0
+mapID: 751  name: Black Rook Hold  parentMapID: 641  mapType: 4  flags: 64
+mapID: 752  name: Black Rook Hold  parentMapID: 641  mapType: 4  flags: 64
+mapID: 753  name: Black Rook Hold  parentMapID: 641  mapType: 4  flags: 64
+mapID: 754  name: Black Rook Hold  parentMapID: 641  mapType: 4  flags: 64
+mapID: 755  name: Black Rook Hold  parentMapID: 641  mapType: 4  flags: 64
+mapID: 756  name: Black Rook Hold  parentMapID: 641  mapType: 4  flags: 64
+mapID: 757  name: Ursoc's Lair  parentMapID: 116  mapType: 6  flags: 0
+mapID: 758  name: Gloaming Reef  parentMapID: 641  mapType: 6  flags: 0
+mapID: 759  name: Black Temple  parentMapID: 104  mapType: 4  flags: 64
+mapID: 760  name: Malorne's Nightmare  parentMapID: 198  mapType: 6  flags: 0
+mapID: 761  name: Court of Stars  parentMapID: 680  mapType: 4  flags: 64
+mapID: 762  name: Court of Stars  parentMapID: 761  mapType: 4  flags: 64
+mapID: 763  name: Court of Stars  parentMapID: 761  mapType: 4  flags: 64
+mapID: 764  name: The Nighthold  parentMapID: 680  mapType: 4  flags: 64
+mapID: 765  name: The Nighthold  parentMapID: 680  mapType: 4  flags: 64
+mapID: 766  name: The Nighthold  parentMapID: 680  mapType: 4  flags: 64
+mapID: 767  name: The Nighthold  parentMapID: 680  mapType: 4  flags: 64
+mapID: 768  name: The Nighthold  parentMapID: 680  mapType: 4  flags: 64
+mapID: 769  name: The Nighthold  parentMapID: 680  mapType: 4  flags: 64
+mapID: 770  name: The Nighthold  parentMapID: 680  mapType: 4  flags: 64
+mapID: 771  name: The Nighthold  parentMapID: 680  mapType: 4  flags: 64
+mapID: 772  name: The Nighthold  parentMapID: 680  mapType: 4  flags: 64
+mapID: 773  name: Tol Barad  parentMapID: 13  mapType: 6  flags: 0
+mapID: 774  name: Tol Barad  parentMapID: 244  mapType: 4  flags: 64
+mapID: 775  name: The Exodar  parentMapID: 12  mapType: 6  flags: 0
+mapID: 776  name: Azuremyst Isle  parentMapID: 12  mapType: 6  flags: 2
+mapID: 777  name: The Emerald Nightmare  parentMapID: 641  mapType: 4  flags: 64
+mapID: 778  name: The Emerald Nightmare  parentMapID: 641  mapType: 4  flags: 64
+mapID: 779  name: The Emerald Nightmare  parentMapID: 641  mapType: 4  flags: 64
+mapID: 780  name: The Emerald Nightmare  parentMapID: 641  mapType: 4  flags: 64
+mapID: 781  name: The Emerald Nightmare  parentMapID: 641  mapType: 4  flags: 64
+mapID: 782  name: The Emerald Nightmare  parentMapID: 12  mapType: 4  flags: 64
+mapID: 783  name: The Emerald Nightmare  parentMapID: 13  mapType: 4  flags: 64
+mapID: 784  name: The Emerald Nightmare  parentMapID: 13  mapType: 4  flags: 64
+mapID: 785  name: The Emerald Nightmare  parentMapID: 12  mapType: 4  flags: 64
+mapID: 786  name: The Emerald Nightmare  parentMapID: 641  mapType: 4  flags: 64
+mapID: 787  name: The Emerald Nightmare  parentMapID: 641  mapType: 4  flags: 64
+mapID: 788  name: The Emerald Nightmare  parentMapID: 641  mapType: 4  flags: 64
+mapID: 789  name: The Emerald Nightmare  parentMapID: 641  mapType: 4  flags: 64
+mapID: 790  name: Eye of Azshara  parentMapID: 619  mapType: 3  flags: 6
+mapID: 791  name: Temple of the Jade Serpent  parentMapID: 371  mapType: 4  flags: 64
+mapID: 792  name: Temple of the Jade Serpent  parentMapID: 371  mapType: 4  flags: 64
+mapID: 793  name: Black Rook Hold  parentMapID: 641  mapType: 6  flags: 0
+mapID: 794  name: Karazhan  parentMapID: 42  mapType: 4  flags: 64
+mapID: 795  name: Karazhan  parentMapID: 42  mapType: 4  flags: 64
+mapID: 796  name: Karazhan  parentMapID: 42  mapType: 4  flags: 64
+mapID: 797  name: Karazhan  parentMapID: 42  mapType: 4  flags: 64
+mapID: 798  name: The Arcway  parentMapID: 680  mapType: 4  flags: 64
+mapID: 799  name: The Oculus  parentMapID: 114  mapType: 6  flags: 0
+mapID: 800  name: The Oculus  parentMapID: 114  mapType: 4  flags: 64
+mapID: 801  name: The Oculus  parentMapID: 114  mapType: 4  flags: 64
+mapID: 802  name: The Oculus  parentMapID: 114  mapType: 4  flags: 64
+mapID: 803  name: The Oculus  parentMapID: 114  mapType: 4  flags: 64
+mapID: 804  name: Scarlet Monastery  parentMapID: 18  mapType: 4  flags: 64
+mapID: 805  name: Scarlet Monastery  parentMapID: 18  mapType: 4  flags: 64
+mapID: 806  name: Trial of Valor  parentMapID: 634  mapType: 4  flags: 64
+mapID: 807  name: Trial of Valor  parentMapID: 806  mapType: 4  flags: 64
+mapID: 808  name: Trial of Valor  parentMapID: 806  mapType: 4  flags: 64
+mapID: 809  name: Karazhan  parentMapID: 42  mapType: 4  flags: 64
+mapID: 810  name: Karazhan  parentMapID: 42  mapType: 4  flags: 64
+mapID: 811  name: Karazhan  parentMapID: 42  mapType: 4  flags: 64
+mapID: 812  name: Karazhan  parentMapID: 42  mapType: 4  flags: 64
+mapID: 813  name: Karazhan  parentMapID: 42  mapType: 4  flags: 64
+mapID: 814  name: Karazhan  parentMapID: 42  mapType: 4  flags: 64
+mapID: 815  name: Karazhan  parentMapID: 42  mapType: 4  flags: 64
+mapID: 816  name: Karazhan  parentMapID: 42  mapType: 4  flags: 64
+mapID: 817  name: Karazhan  parentMapID: 42  mapType: 4  flags: 64
+mapID: 818  name: Karazhan  parentMapID: 42  mapType: 4  flags: 64
+mapID: 819  name: Karazhan  parentMapID: 42  mapType: 4  flags: 64
+mapID: 820  name: Karazhan  parentMapID: 42  mapType: 4  flags: 64
+mapID: 821  name: Karazhan  parentMapID: 42  mapType: 4  flags: 64
+mapID: 822  name: Karazhan  parentMapID: 42  mapType: 4  flags: 64
+mapID: 823  name: Pit of Saron  parentMapID: 118  mapType: 6  flags: 0
+mapID: 824  name: Islands  parentMapID: 947  mapType: 6  flags: 0
+mapID: 825  name: Wailing Caverns  parentMapID: 10  mapType: 4  flags: 64
+mapID: 826  name: Cave of the Bloodtotem  parentMapID: 650  mapType: 4  flags: 64
+mapID: 827  name: Stratholme  parentMapID: 22  mapType: 4  flags: 64
+mapID: 828  name: The Eye of Eternity  parentMapID: 114  mapType: 4  flags: 64
+mapID: 829  name: Halls of Valor  parentMapID: 634  mapType: 4  flags: 64
+mapID: 830  name: Krokuun  parentMapID: 905  mapType: 3  flags: 6
+mapID: 831  name: The Vindicaar  parentMapID: 830  mapType: 5  flags: 0
+mapID: 832  name: The Vindicaar  parentMapID: 830  mapType: 5  flags: 0
+mapID: 833  name: Nath'raxas Spire  parentMapID: 830  mapType: 5  flags: 0
+mapID: 834  name: Coldridge Valley  parentMapID: 27  mapType: 6  flags: 0
+mapID: 835  name: The Deadmines  parentMapID: 52  mapType: 4  flags: 64
+mapID: 836  name: The Deadmines  parentMapID: 52  mapType: 4  flags: 64
+mapID: 837  name: Arathi Basin  parentMapID: 14  mapType: 6  flags: 0
+mapID: 838  name: Battle for Blackrock Mountain  parentMapID: 36  mapType: 6  flags: 0
+mapID: 839  name: The Maelstrom  parentMapID: 948  mapType: 4  flags: 64
+mapID: 840  name: Gnomeregan  parentMapID: 27  mapType: 4  flags: 64
+mapID: 841  name: Gnomeregan  parentMapID: 27  mapType: 4  flags: 64
+mapID: 842  name: Gnomeregan  parentMapID: 27  mapType: 4  flags: 64
+mapID: 843  name: Shado-Pan Showdown  parentMapID: 379  mapType: 6  flags: 0
+mapID: 844  name: Arathi Basin  parentMapID: 14  mapType: 6  flags: 0
+mapID: 845  name: Cathedral of Eternal Night  parentMapID: 646  mapType: 4  flags: 64
+mapID: 846  name: Cathedral of Eternal Night  parentMapID: 646  mapType: 4  flags: 64
+mapID: 847  name: Cathedral of Eternal Night  parentMapID: 646  mapType: 4  flags: 64
+mapID: 848  name: Cathedral of Eternal Night  parentMapID: 646  mapType: 4  flags: 64
+mapID: 849  name: Cathedral of Eternal Night  parentMapID: 646  mapType: 4  flags: 64
+mapID: 850  name: Tomb of Sargeras  parentMapID: 646  mapType: 4  flags: 64
+mapID: 851  name: Tomb of Sargeras  parentMapID: 646  mapType: 4  flags: 64
+mapID: 852  name: Tomb of Sargeras  parentMapID: 646  mapType: 4  flags: 64
+mapID: 853  name: Tomb of Sargeras  parentMapID: 646  mapType: 4  flags: 64
+mapID: 854  name: Tomb of Sargeras  parentMapID: 646  mapType: 4  flags: 64
+mapID: 855  name: Tomb of Sargeras  parentMapID: 646  mapType: 4  flags: 64
+mapID: 856  name: Tomb of Sargeras  parentMapID: 646  mapType: 4  flags: 64
+mapID: 857  name: Throne of the Four Winds  parentMapID: 249  mapType: 4  flags: 64
+mapID: 858  name: Assault on Broken Shore  parentMapID: 619  mapType: 6  flags: 0
+mapID: 859  name: Warsong Gulch  parentMapID: 10  mapType: 6  flags: 0
+mapID: 860  name: The Ruby Sanctum  parentMapID: 115  mapType: 6  flags: 0
+mapID: 861  name: Mardum, the Shattered Abyss  parentMapID: 672  mapType: 6  flags: 0
+mapID: 862  name: Zuldazar  parentMapID: 875  mapType: 3  flags: 6
+mapID: 863  name: Nazmir  parentMapID: 875  mapType: 3  flags: 6
+mapID: 864  name: Vol'dun  parentMapID: 875  mapType: 3  flags: 6
+mapID: 865  name: Stormheim  parentMapID: 634  mapType: 4  flags: 64
+mapID: 866  name: Stormheim  parentMapID: 634  mapType: 4  flags: 64
+mapID: 867  name: Azsuna  parentMapID: 630  mapType: 4  flags: 64
+mapID: 868  name: Val'sharah  parentMapID: 641  mapType: 4  flags: 64
+mapID: 869  name: Highmountain  parentMapID: 650  mapType: 4  flags: 64
+mapID: 870  name: Highmountain  parentMapID: 650  mapType: 4  flags: 64
+mapID: 871  name: The Lost Glacier  parentMapID: 113  mapType: 6  flags: 0
+mapID: 872  name: Stormstout Brewery  parentMapID: 376  mapType: 4  flags: 64
+mapID: 873  name: Stormstout Brewery  parentMapID: 376  mapType: 4  flags: 64
+mapID: 874  name: Stormstout Brewery  parentMapID: 376  mapType: 4  flags: 64
+mapID: 875  name: Zandalar  parentMapID: 947  mapType: 2  flags: 0
+mapID: 876  name: Kul Tiras  parentMapID: 947  mapType: 2  flags: 0
+mapID: 877  name: Fields of the Eternal Hunt  parentMapID: 634  mapType: 6  flags: 0
+mapID: 879  name: Mardum, the Shattered Abyss  parentMapID: 672  mapType: 4  flags: 64
+mapID: 880  name: Mardum, the Shattered Abyss  parentMapID: 672  mapType: 4  flags: 64
+mapID: 881  name: The Eye of Eternity  parentMapID: 114  mapType: 4  flags: 64
+mapID: 882  name: Eredath  parentMapID: 905  mapType: 3  flags: 6
+mapID: 883  name: The Vindicaar  parentMapID: 882  mapType: 5  flags: 0
+mapID: 884  name: The Vindicaar  parentMapID: 882  mapType: 5  flags: 0
+mapID: 885  name: Antoran Wastes  parentMapID: 905  mapType: 3  flags: 6
+mapID: 886  name: The Vindicaar  parentMapID: 885  mapType: 5  flags: 0
+mapID: 887  name: The Vindicaar  parentMapID: 885  mapType: 5  flags: 0
+mapID: 888  name: Hall of Communion  parentMapID: 119  mapType: 4  flags: 64
+mapID: 889  name: Arcatraz  parentMapID: 109  mapType: 4  flags: 64
+mapID: 890  name: Arcatraz  parentMapID: 109  mapType: 4  flags: 64
+mapID: 891  name: Azuremyst Isle  parentMapID: 12  mapType: 4  flags: 64
+mapID: 892  name: Azuremyst Isle  parentMapID: 891  mapType: 4  flags: 64
+mapID: 893  name: Azuremyst Isle  parentMapID: 891  mapType: 4  flags: 64
+mapID: 894  name: Azuremyst Isle  parentMapID: 891  mapType: 4  flags: 64
+mapID: 895  name: Tiragarde Sound  parentMapID: 876  mapType: 3  flags: 6
+mapID: 896  name: Drustvar  parentMapID: 876  mapType: 3  flags: 6
+mapID: 897  name: The Deaths of Chromie  parentMapID: 113  mapType: 4  flags: 64
+mapID: 898  name: The Deaths of Chromie  parentMapID: 897  mapType: 4  flags: 64
+mapID: 899  name: The Deaths of Chromie  parentMapID: 897  mapType: 4  flags: 64
+mapID: 900  name: The Deaths of Chromie  parentMapID: 897  mapType: 4  flags: 64
+mapID: 901  name: The Deaths of Chromie  parentMapID: 897  mapType: 4  flags: 64
+mapID: 902  name: The Deaths of Chromie  parentMapID: 897  mapType: 4  flags: 64
+mapID: 903  name: The Seat of the Triumvirate  parentMapID: 882  mapType: 6  flags: 64
+mapID: 904  name: Silithus Brawl  parentMapID: 81  mapType: 6  flags: 0
+mapID: 905  name: Argus  parentMapID: 619  mapType: 2  flags: 1024
+mapID: 906  name: Arathi Highlands  parentMapID: 13  mapType: 6  flags: 0
+mapID: 907  name: Seething Shore  parentMapID: 12  mapType: 6  flags: 0
+mapID: 908  name: Ruins of Lordaeron  parentMapID: 13  mapType: 6  flags: 0
+mapID: 909  name: Antorus, the Burning Throne  parentMapID: 885  mapType: 4  flags: 64
+mapID: 910  name: Antorus, the Burning Throne  parentMapID: 909  mapType: 4  flags: 64
+mapID: 911  name: Antorus, the Burning Throne  parentMapID: 909  mapType: 4  flags: 64
+mapID: 912  name: Antorus, the Burning Throne  parentMapID: 909  mapType: 4  flags: 64
+mapID: 913  name: Antorus, the Burning Throne  parentMapID: 909  mapType: 4  flags: 64
+mapID: 914  name: Antorus, the Burning Throne  parentMapID: 909  mapType: 4  flags: 64
+mapID: 915  name: Antorus, the Burning Throne  parentMapID: 909  mapType: 4  flags: 64
+mapID: 916  name: Antorus, the Burning Throne  parentMapID: 909  mapType: 4  flags: 64
+mapID: 917  name: Antorus, the Burning Throne  parentMapID: 909  mapType: 4  flags: 64
+mapID: 918  name: Antorus, the Burning Throne  parentMapID: 909  mapType: 4  flags: 64
+mapID: 919  name: Antorus, the Burning Throne  parentMapID: 909  mapType: 4  flags: 64
+mapID: 920  name: Antorus, the Burning Throne  parentMapID: 909  mapType: 4  flags: 64
+mapID: 921  name: Invasion Point: Aurinor  parentMapID: 905  mapType: 6  flags: 0
+mapID: 922  name: Invasion Point: Bonich  parentMapID: 905  mapType: 6  flags: 0
+mapID: 923  name: Invasion Point: Cen'gar  parentMapID: 905  mapType: 6  flags: 0
+mapID: 924  name: Invasion Point: Naigtal  parentMapID: 905  mapType: 6  flags: 0
+mapID: 925  name: Invasion Point: Sangua  parentMapID: 905  mapType: 6  flags: 0
+mapID: 926  name: Invasion Point: Val  parentMapID: 905  mapType: 6  flags: 0
+mapID: 927  name: Greater Invasion Point: Pit Lord Vilemus  parentMapID: 905  mapType: 6  flags: 0
+mapID: 928  name: Greater Invasion Point: Mistress Alluradel  parentMapID: 905  mapType: 6  flags: 0
+mapID: 929  name: Greater Invasion Point: Matron Folnuna  parentMapID: 905  mapType: 6  flags: 0
+mapID: 930  name: Greater Invasion Point: Inquisitor Meto  parentMapID: 905  mapType: 6  flags: 0
+mapID: 931  name: Greater Invasion Point: Sotanathor  parentMapID: 905  mapType: 6  flags: 0
+mapID: 932  name: Greater Invasion Point: Occularus  parentMapID: 905  mapType: 6  flags: 0
+mapID: 933  name: Forge of Aeons  parentMapID: 572  mapType: 6  flags: 0
+mapID: 934  name: Atal'Dazar  parentMapID: 862  mapType: 4  flags: 64
+mapID: 935  name: Atal'Dazar  parentMapID: 862  mapType: 4  flags: 64
+mapID: 936  name: Freehold  parentMapID: 895  mapType: 4  flags: 64
+mapID: 938  name: Gilneas Island  parentMapID: 947  mapType: 6  flags: 0
+mapID: 939  name: Tropical Isle 8.0  parentMapID: 947  mapType: 6  flags: 0
+mapID: 940  name: The Vindicaar  parentMapID: 830  mapType: 4  flags: 64
+mapID: 941  name: The Vindicaar  parentMapID: 830  mapType: 4  flags: 64
+mapID: 942  name: Stormsong Valley  parentMapID: 876  mapType: 3  flags: 6
+mapID: 943  name: Arathi Highlands  parentMapID: 13  mapType: 6  flags: 2
+mapID: 946  name: Cosmic  parentMapID: 0  mapType: 0  flags: 384
+mapID: 947  name: Azeroth  parentMapID: 946  mapType: 1  flags: 256
+mapID: 948  name: The Maelstrom  parentMapID: 947  mapType: 2  flags: 0
+mapID: 971  name: Telogrus Rift  parentMapID: 619  mapType: 6  flags: 4
+mapID: 972  name: Telogrus Rift  parentMapID: 619  mapType: 6  flags: 4
+mapID: 973  name: The Sunwell  parentMapID: 335  mapType: 4  flags: 64
+mapID: 974  name: Tol Dagor  parentMapID: 895  mapType: 6  flags: 68
+mapID: 975  name: Tol Dagor  parentMapID: 895  mapType: 4  flags: 64
+mapID: 976  name: Tol Dagor  parentMapID: 895  mapType: 4  flags: 64
+mapID: 977  name: Tol Dagor  parentMapID: 895  mapType: 4  flags: 64
+mapID: 978  name: Tol Dagor  parentMapID: 895  mapType: 4  flags: 64
+mapID: 979  name: Tol Dagor  parentMapID: 895  mapType: 4  flags: 64
+mapID: 980  name: Tol Dagor  parentMapID: 895  mapType: 4  flags: 64
+mapID: 981  name: Un'gol Ruins  parentMapID: 947  mapType: 6  flags: 4
+mapID: 985  name: Eastern Kingdoms  parentMapID: 0  mapType: 2  flags: 4
+mapID: 986  name: Kalimdor  parentMapID: 0  mapType: 2  flags: 4
+mapID: 987  name: Outland  parentMapID: 0  mapType: 2  flags: 4
+mapID: 988  name: Northrend  parentMapID: 0  mapType: 2  flags: 4
+mapID: 989  name: Pandaria  parentMapID: 0  mapType: 2  flags: 4
+mapID: 990  name: Draenor  parentMapID: 0  mapType: 2  flags: 4
+mapID: 991  name: Zandalar  parentMapID: 0  mapType: 2  flags: 4
+mapID: 992  name: Kul Tiras  parentMapID: 0  mapType: 2  flags: 4
+mapID: 993  name: Broken Isles  parentMapID: 0  mapType: 2  flags: 4
+mapID: 994  name: Argus  parentMapID: 0  mapType: 2  flags: 4
+mapID: 997  name: Tirisfal Glades  parentMapID: 0  mapType: 3  flags: 0
+mapID: 998  name: Undercity  parentMapID: 908  mapType: 3  flags: 6
+mapID: 1004  name: Kings' Rest  parentMapID: 862  mapType: 4  flags: 64
+mapID: 1009  name: Atul'Aman  parentMapID: 864  mapType: 5  flags: 0
+mapID: 1010  name: The MOTHERLODE!!  parentMapID: 194  mapType: 3  flags: 64
+mapID: 1011  name: Zandalar  parentMapID: 0  mapType: 2  flags: 4
+mapID: 1012  name: Stormwind City  parentMapID: 13  mapType: 6  flags: 0
+mapID: 1013  name: The Stockade  parentMapID: 13  mapType: 6  flags: 0
+mapID: 1014  name: Kul Tiras  parentMapID: 0  mapType: 2  flags: 4
+mapID: 1015  name: Waycrest Manor  parentMapID: 896  mapType: 4  flags: 64
+mapID: 1016  name: Waycrest Manor  parentMapID: 896  mapType: 4  flags: 64
+mapID: 1017  name: Waycrest Manor  parentMapID: 896  mapType: 4  flags: 64
+mapID: 1018  name: Waycrest Manor  parentMapID: 896  mapType: 4  flags: 64
+mapID: 1021  name: Chamber of Heart  parentMapID: 81  mapType: 4  flags: 64
+mapID: 1022  name: Uncharted Island  parentMapID: 0  mapType: 3  flags: 0
+mapID: 1029  name: Waycrest Manor  parentMapID: 896  mapType: 4  flags: 64
+mapID: 1030  name: Greymane Manor  parentMapID: 217  mapType: 5  flags: 0
+mapID: 1031  name: Greymane Manor  parentMapID: 179  mapType: 5  flags: 0
+mapID: 1032  name: Skittering Hollow  parentMapID: 0  mapType: 3  flags: 0
+mapID: 1033  name: The Rotting Mire  parentMapID: 0  mapType: 3  flags: 0
+mapID: 1034  name: Verdant Wilds  parentMapID: 0  mapType: 3  flags: 0
+mapID: 1035  name: Molten Cay  parentMapID: 0  mapType: 3  flags: 0
+mapID: 1036  name: The Dread Chain  parentMapID: 0  mapType: 3  flags: 0
+mapID: 1037  name: Whispering Reef  parentMapID: 0  mapType: 3  flags: 0
+mapID: 1038  name: Temple of Sethraliss  parentMapID: 864  mapType: 4  flags: 64
+mapID: 1039  name: Shrine of the Storm  parentMapID: 942  mapType: 3  flags: 64
+mapID: 1040  name: Shrine of the Storm  parentMapID: 942  mapType: 4  flags: 64
+mapID: 1041  name: The Underrot  parentMapID: 863  mapType: 3  flags: 64
+mapID: 1042  name: The Underrot  parentMapID: 863  mapType: 4  flags: 64
+mapID: 1043  name: Temple of Sethraliss  parentMapID: 864  mapType: 4  flags: 64
+mapID: 1044  name: Arathi Highlands  parentMapID: 13  mapType: 6  flags: 2
+mapID: 1045  name: Thros, The Blighted Lands  parentMapID: 896  mapType: 4  flags: 64
+mapID: 1148  name: Uldir  parentMapID: 863  mapType: 4  flags: 64
+mapID: 1149  name: Uldir  parentMapID: 863  mapType: 4  flags: 64
+mapID: 1150  name: Uldir  parentMapID: 863  mapType: 4  flags: 64
+mapID: 1151  name: Uldir  parentMapID: 863  mapType: 4  flags: 64
+mapID: 1152  name: Uldir  parentMapID: 863  mapType: 4  flags: 64
+mapID: 1153  name: Uldir  parentMapID: 863  mapType: 4  flags: 64
+mapID: 1154  name: Uldir  parentMapID: 863  mapType: 4  flags: 64
+mapID: 1155  name: Uldir  parentMapID: 863  mapType: 4  flags: 64
+mapID: 1156  name: The Great Sea  parentMapID: 947  mapType: 6  flags: 0
+mapID: 1157  name: The Great Sea  parentMapID: 947  mapType: 6  flags: 0
+mapID: 1158  name: Arathi Highlands  parentMapID: 0  mapType: 3  flags: 0
+mapID: 1159  name: Blackrock Depths  parentMapID: 32  mapType: 4  flags: 64
+mapID: 1160  name: Blackrock Depths  parentMapID: 32  mapType: 4  flags: 64
+mapID: 1161  name: Boralus  parentMapID: 895  mapType: 3  flags: 4
+mapID: 1162  name: Siege of Boralus  parentMapID: 895  mapType: 4  flags: 64
+mapID: 1163  name: Dazar'alor  parentMapID: 1165  mapType: 5  flags: 0
+mapID: 1164  name: Dazar'alor  parentMapID: 1165  mapType: 5  flags: 0
+mapID: 1165  name: Dazar'alor  parentMapID: 862  mapType: 3  flags: 4
+mapID: 1166  name: Zanchul  parentMapID: 1165  mapType: 4  flags: 64
+mapID: 1167  name: Zanchul  parentMapID: 1165  mapType: 4  flags: 64
+mapID: 1169  name: Tol Dagor  parentMapID: 876  mapType: 3  flags: 4
+mapID: 1170  name: Gorgrond - Mag'har Scenario  parentMapID: 0  mapType: 3  flags: 0
+mapID: 1171  name: Gol Thovas  parentMapID: 895  mapType: 5  flags: 0
+mapID: 1172  name: Gol Thovas  parentMapID: 895  mapType: 5  flags: 0
+mapID: 1173  name: Rastakhan's Might  parentMapID: 862  mapType: 5  flags: 0
+mapID: 1174  name: Rastakhan's Might  parentMapID: 862  mapType: 5  flags: 0
+mapID: 1176  name: Breath Of Pa'ku  parentMapID: 862  mapType: 5  flags: 0
+mapID: 1177  name: Breath Of Pa'ku  parentMapID: 862  mapType: 4  flags: 64
+mapID: 1179  name: Abyssal Melody  parentMapID: 942  mapType: 5  flags: 0
+mapID: 1180  name: Abyssal Melody  parentMapID: 942  mapType: 5  flags: 0
+mapID: 1181  name: Zuldazar  parentMapID: 875  mapType: 6  flags: 4098
+mapID: 1182  name: Saltstone Mine  parentMapID: 942  mapType: 4  flags: 64
+mapID: 1183  name: Thornheart  parentMapID: 942  mapType: 4  flags: 64
+mapID: 1184  name: Winterchill Mine  parentMapID: 895  mapType: 5  flags: 0
+mapID: 1185  name: Winterchill Mine  parentMapID: 895  mapType: 5  flags: 0
+mapID: 1186  name: Blackrock Depths  parentMapID: 32  mapType: 4  flags: 64
+mapID: 1187  name: Azsuna  parentMapID: 993  mapType: 3  flags: 0
+mapID: 1188  name: Val'sharah  parentMapID: 993  mapType: 3  flags: 0
+mapID: 1189  name: Highmountain  parentMapID: 993  mapType: 3  flags: 0
+mapID: 1190  name: Stormheim  parentMapID: 993  mapType: 3  flags: 0
+mapID: 1191  name: Suramar  parentMapID: 993  mapType: 3  flags: 0
+mapID: 1192  name: Broken Shore  parentMapID: 993  mapType: 3  flags: 0
+mapID: 1193  name: Zuldazar  parentMapID: 1011  mapType: 3  flags: 0
+mapID: 1194  name: Nazmir  parentMapID: 1011  mapType: 3  flags: 0
+mapID: 1195  name: Vol'dun  parentMapID: 1011  mapType: 3  flags: 0
+mapID: 1196  name: Tiragarde Sound  parentMapID: 1014  mapType: 3  flags: 0
+mapID: 1197  name: Drustvar  parentMapID: 1014  mapType: 3  flags: 0
+mapID: 1198  name: Stormsong Valley  parentMapID: 1014  mapType: 3  flags: 0
+mapID: 1203  name: Darkshore  parentMapID: 12  mapType: 6  flags: 0
+mapID: 1208  name: Eastern Kingdoms  parentMapID: 0  mapType: 2  flags: 4
+mapID: 1209  name: Kalimdor  parentMapID: 0  mapType: 2  flags: 4
+mapID: 1244  name: Arathi Highlands  parentMapID: 1208  mapType: 3  flags: 0
+mapID: 1245  name: Badlands  parentMapID: 1208  mapType: 3  flags: 0
+mapID: 1246  name: Blasted Lands  parentMapID: 1208  mapType: 3  flags: 0
+mapID: 1247  name: Tirisfal Glades  parentMapID: 1208  mapType: 3  flags: 0
+mapID: 1248  name: Silverpine Forest  parentMapID: 1208  mapType: 3  flags: 0
+mapID: 1249  name: Western Plaguelands  parentMapID: 1208  mapType: 3  flags: 0
+mapID: 1250  name: Eastern Plaguelands  parentMapID: 1208  mapType: 3  flags: 0
+mapID: 1251  name: Hillsbrad Foothills  parentMapID: 1208  mapType: 3  flags: 0
+mapID: 1252  name: The Hinterlands  parentMapID: 1208  mapType: 3  flags: 0
+mapID: 1253  name: Dun Morogh  parentMapID: 1208  mapType: 3  flags: 0
+mapID: 1254  name: Searing Gorge  parentMapID: 1208  mapType: 3  flags: 0
+mapID: 1255  name: Burning Steppes  parentMapID: 1208  mapType: 3  flags: 0
+mapID: 1256  name: Elwynn Forest  parentMapID: 1208  mapType: 3  flags: 0
+mapID: 1257  name: Deadwind Pass  parentMapID: 1208  mapType: 3  flags: 0
+mapID: 1258  name: Duskwood  parentMapID: 1208  mapType: 3  flags: 0
+mapID: 1259  name: Loch Modan  parentMapID: 1208  mapType: 3  flags: 0
+mapID: 1260  name: Redridge Mountains  parentMapID: 1208  mapType: 3  flags: 0
+mapID: 1261  name: Swamp of Sorrows  parentMapID: 1208  mapType: 3  flags: 0
+mapID: 1262  name: Westfall  parentMapID: 1208  mapType: 3  flags: 0
+mapID: 1263  name: Wetlands  parentMapID: 1208  mapType: 3  flags: 0
+mapID: 1264  name: Stormwind City  parentMapID: 1208  mapType: 3  flags: 0
+mapID: 1265  name: Ironforge  parentMapID: 1208  mapType: 3  flags: 0
+mapID: 1266  name: Undercity  parentMapID: 1208  mapType: 3  flags: 0
+mapID: 1267  name: Eversong Woods  parentMapID: 1208  mapType: 3  flags: 0
+mapID: 1268  name: Ghostlands  parentMapID: 1208  mapType: 3  flags: 0
+mapID: 1269  name: Silvermoon City  parentMapID: 1208  mapType: 3  flags: 0
+mapID: 1270  name: Isle of Quel'Danas  parentMapID: 1208  mapType: 3  flags: 0
+mapID: 1271  name: Gilneas  parentMapID: 1208  mapType: 3  flags: 0
+mapID: 1272  name: Vashj'ir  parentMapID: 1208  mapType: 3  flags: 0
+mapID: 1273  name: Ruins of Gilneas  parentMapID: 1208  mapType: 3  flags: 0
+mapID: 1274  name: Stranglethorn Vale  parentMapID: 1208  mapType: 3  flags: 0
+mapID: 1275  name: Twilight Highlands  parentMapID: 1208  mapType: 3  flags: 0
+mapID: 1276  name: Tol Barad  parentMapID: 1208  mapType: 3  flags: 0
+mapID: 1277  name: Tol Barad Peninsula  parentMapID: 1208  mapType: 3  flags: 0
+mapID: 1305  name: Durotar  parentMapID: 1209  mapType: 3  flags: 0
+mapID: 1306  name: Mulgore  parentMapID: 1209  mapType: 3  flags: 0
+mapID: 1307  name: Northern Barrens  parentMapID: 1209  mapType: 3  flags: 0
+mapID: 1308  name: Teldrassil  parentMapID: 1209  mapType: 3  flags: 0
+mapID: 1309  name: Darkshore  parentMapID: 1209  mapType: 3  flags: 0
+mapID: 1310  name: Ashenvale  parentMapID: 1209  mapType: 3  flags: 0
+mapID: 1311  name: Thousand Needles  parentMapID: 1209  mapType: 3  flags: 0
+mapID: 1312  name: Stonetalon Mountains  parentMapID: 1209  mapType: 3  flags: 0
+mapID: 1313  name: Desolace  parentMapID: 1209  mapType: 3  flags: 0
+mapID: 1314  name: Feralas  parentMapID: 1209  mapType: 3  flags: 0
+mapID: 1315  name: Dustwallow Marsh  parentMapID: 1209  mapType: 3  flags: 0
+mapID: 1316  name: Tanaris  parentMapID: 1209  mapType: 3  flags: 0
+mapID: 1317  name: Azshara  parentMapID: 1209  mapType: 3  flags: 0
+mapID: 1318  name: Felwood  parentMapID: 1209  mapType: 3  flags: 0
+mapID: 1319  name: Un'Goro Crater  parentMapID: 1209  mapType: 3  flags: 0
+mapID: 1320  name: Moonglade  parentMapID: 1209  mapType: 3  flags: 0
+mapID: 1321  name: Silithus  parentMapID: 1209  mapType: 3  flags: 0
+mapID: 1322  name: Winterspring  parentMapID: 1209  mapType: 3  flags: 0
+mapID: 1323  name: Thunder Bluff  parentMapID: 1209  mapType: 3  flags: 0
+mapID: 1324  name: Darnassus  parentMapID: 1209  mapType: 3  flags: 0
+mapID: 1325  name: Azuremyst Isle  parentMapID: 1209  mapType: 3  flags: 0
+mapID: 1326  name: The Exodar  parentMapID: 1209  mapType: 3  flags: 0
+mapID: 1327  name: Bloodmyst Isle  parentMapID: 1209  mapType: 3  flags: 0
+mapID: 1328  name: Mount Hyjal  parentMapID: 1209  mapType: 3  flags: 0
+mapID: 1329  name: Southern Barrens  parentMapID: 1209  mapType: 3  flags: 0
+mapID: 1330  name: Uldum  parentMapID: 1209  mapType: 3  flags: 0
+mapID: 1331  name: The Exodar  parentMapID: 1209  mapType: 3  flags: 0
+mapID: 1332  name: Darkshore  parentMapID: 12  mapType: 6  flags: 0
+mapID: 1333  name: Darkshore  parentMapID: 12  mapType: 6  flags: 0
+mapID: 1334  name: Wintergrasp  parentMapID: 0  mapType: 3  flags: 0
+mapID: 1335  name: Cooking: Impossible  parentMapID: 0  mapType: 3  flags: 0
+mapID: 1336  name: Havenswood  parentMapID: 0  mapType: 3  flags: 0
+mapID: 1337  name: Jorundall  parentMapID: 0  mapType: 3  flags: 0
+mapID: 1338  name: Darkshore  parentMapID: 12  mapType: 6  flags: 0
+mapID: 1339  name: Warsong Gulch  parentMapID: 10  mapType: 3  flags: 0
+mapID: 1343  name: 8.1 Darkshore Outdoor Final Phase  parentMapID: 0  mapType: 6  flags: 0
+mapID: 1345  name: Crucible of Storms  parentMapID: 942  mapType: 4  flags: 0
+mapID: 1346  name: Crucible of Storms  parentMapID: 942  mapType: 4  flags: 0
+mapID: 1347  name: Zandalari Treasury  parentMapID: 0  mapType: 3  flags: 0
+mapID: 1348  name: Zandalari Treasury  parentMapID: 862  mapType: 4  flags: 0
+mapID: 1349  name: Tol Dagor  parentMapID: 895  mapType: 6  flags: 68
+mapID: 1350  name: Tol Dagor  parentMapID: 895  mapType: 4  flags: 64
+mapID: 1351  name: Tol Dagor  parentMapID: 895  mapType: 4  flags: 64
+mapID: 1352  name: Battle of Dazar'alor  parentMapID: 862  mapType: 4  flags: 0
+mapID: 1353  name: Battle of Dazar'alor  parentMapID: 862  mapType: 4  flags: 0
+mapID: 1354  name: Battle of Dazar'alor  parentMapID: 862  mapType: 4  flags: 0
+mapID: 1355  name: Nazjatar  parentMapID: 947  mapType: 3  flags: 6
+mapID: 1356  name: Battle of Dazar'alor  parentMapID: 862  mapType: 4  flags: 0
+mapID: 1357  name: Battle of Dazar'alor  parentMapID: 862  mapType: 4  flags: 0
+mapID: 1358  name: Battle of Dazar'alor  parentMapID: 862  mapType: 4  flags: 0
+mapID: 1359  name: Icecrown Citadel  parentMapID: 118  mapType: 4  flags: 64
+mapID: 1360  name: Icecrown Citadel  parentMapID: 118  mapType: 4  flags: 64
+mapID: 1361  name: OldIronforge  parentMapID: 87  mapType: 4  flags: 0
+mapID: 1362  name: Shrine of the Storm  parentMapID: 0  mapType: 3  flags: 0
+mapID: 1363  name: Crucible of Storms  parentMapID: 942  mapType: 4  flags: 0
+mapID: 1364  name: Battle of Dazar'alor  parentMapID: 862  mapType: 4  flags: 2
+mapID: 1366  name: Arathi Basin  parentMapID: 0  mapType: 6  flags: 0
+mapID: 1367  name: Battle of Dazar'alor  parentMapID: 862  mapType: 4  flags: 128
+mapID: 1371  name: GnomereganA  parentMapID: 27  mapType: 4  flags: 0
+mapID: 1372  name: GnomereganB  parentMapID: 27  mapType: 4  flags: 0
+mapID: 1374  name: GnomereganD  parentMapID: 27  mapType: 4  flags: 0
+mapID: 1375  name: Halls of Stone  parentMapID: 120  mapType: 4  flags: 0
+mapID: 1379  name: 8.3 Visions of N'Zoth - Prototype  parentMapID: 0  mapType: 3  flags: 0
+mapID: 1380  name: GnomereganC  parentMapID: 27  mapType: 4  flags: 0
+mapID: 1381  name: Uldir  parentMapID: 863  mapType: 4  flags: 0
+mapID: 1382  name: Uldir  parentMapID: 863  mapType: 4  flags: 0
+mapID: 1383  name: Arathi Basin  parentMapID: 14  mapType: 6  flags: 0
+mapID: 1384  name: Northrend  parentMapID: 0  mapType: 2  flags: 4
+mapID: 1396  name: Borean Tundra  parentMapID: 1384  mapType: 3  flags: 0
+mapID: 1397  name: Dragonblight  parentMapID: 1384  mapType: 3  flags: 0
+mapID: 1398  name: Grizzly Hills  parentMapID: 1384  mapType: 3  flags: 0
+mapID: 1399  name: Howling Fjord  parentMapID: 1384  mapType: 3  flags: 0
+mapID: 1400  name: Icecrown  parentMapID: 1384  mapType: 3  flags: 0
+mapID: 1401  name: Sholazar Basin  parentMapID: 1384  mapType: 3  flags: 0
+mapID: 1402  name: The Storm Peaks  parentMapID: 1384  mapType: 3  flags: 0
+mapID: 1403  name: Zul'Drak  parentMapID: 1384  mapType: 3  flags: 0
+mapID: 1404  name: Wintergrasp  parentMapID: 1384  mapType: 3  flags: 0
+mapID: 1405  name: Crystalsong Forest  parentMapID: 1384  mapType: 3  flags: 0
+mapID: 1406  name: Hrothgar's Landing  parentMapID: 1384  mapType: 3  flags: 0
+mapID: 1407  name: Prison of Ink  parentMapID: 896  mapType: 4  flags: 0
+mapID: 1408  name: Ashran  parentMapID: 0  mapType: 3  flags: 0
+mapID: 1409  name: Exile's Reach  parentMapID: 0  mapType: 6  flags: 0
+mapID: 1462  name: Mechagon Island  parentMapID: 876  mapType: 3  flags: 6
+mapID: 1465  name: Scarlet Halls  parentMapID: 18  mapType: 4  flags: 0
+mapID: 1467  name: Outland  parentMapID: 0  mapType: 2  flags: 4
+mapID: 1468  name: The Dreamgrove  parentMapID: 641  mapType: 6  flags: 0
+mapID: 1469  name: Vision of Orgrimmar  parentMapID: 12  mapType: 6  flags: 0
+mapID: 1470  name: Vision of Stormwind  parentMapID: 13  mapType: 6  flags: 0
+mapID: 1471  name: Emerald Dreamway  parentMapID: 747  mapType: 6  flags: 0
+mapID: 1472  name: The Dragon's Spine  parentMapID: 650  mapType: 6  flags: 0
+mapID: 1473  name: Chamber of Heart  parentMapID: 81  mapType: 4  flags: 64
+mapID: 1474  name: The Maelstrom - Heart of Azeroth  parentMapID: 948  mapType: 6  flags: 0
+mapID: 1475  name: The Emerald Dream  parentMapID: 747  mapType: 6  flags: 0
+mapID: 1476  name: Twilight Highlands  parentMapID: 13  mapType: 6  flags: 0
+mapID: 1478  name: Ashran  parentMapID: 572  mapType: 6  flags: 0
+mapID: 1479  name: Baine Rescue  parentMapID: 556  mapType: 6  flags: 0
+mapID: 1490  name: Mechagon  parentMapID: 876  mapType: 4  flags: 0
+mapID: 1491  name: Mechagon  parentMapID: 876  mapType: 4  flags: 0
+mapID: 1493  name: Mechagon  parentMapID: 876  mapType: 4  flags: 0
+mapID: 1494  name: Mechagon  parentMapID: 876  mapType: 4  flags: 0
+mapID: 1497  name: Mechagon  parentMapID: 876  mapType: 4  flags: 0
+mapID: 1499  name: Zin-Azshari  parentMapID: 1355  mapType: 5  flags: 0
+mapID: 1500  name:   parentMapID: 1355  mapType: 5  flags: 0
+mapID: 1501  name: Crestfall  parentMapID: 876  mapType: 6  flags: 0
+mapID: 1502  name: Snowblossom Village  parentMapID: 424  mapType: 6  flags: 0
+mapID: 1504  name: Nazjatar  parentMapID: 0  mapType: 2  flags: 4
+mapID: 1505  name: Stratholme  parentMapID: 23  mapType: 4  flags: 0
+mapID: 1512  name: The Eternal Palace  parentMapID: 1355  mapType: 4  flags: 0
+mapID: 1513  name: The Eternal Palace  parentMapID: 1355  mapType: 4  flags: 0
+mapID: 1514  name: The Eternal Palace  parentMapID: 1355  mapType: 4  flags: 0
+mapID: 1515  name: The Eternal Palace  parentMapID: 1355  mapType: 4  flags: 0
+mapID: 1516  name: The Eternal Palace  parentMapID: 1355  mapType: 4  flags: 0
+mapID: 1517  name: The Eternal Palace  parentMapID: 1355  mapType: 4  flags: 0
+mapID: 1518  name: The Eternal Palace  parentMapID: 1355  mapType: 4  flags: 0
+mapID: 1519  name: The Eternal Palace  parentMapID: 1355  mapType: 4  flags: 0
+mapID: 1520  name: The Eternal Palace  parentMapID: 1355  mapType: 4  flags: 0
+mapID: 1521  name: Karazhan Catacombs  parentMapID: 0  mapType: 6  flags: 0
+mapID: 1522  name: Crumbling Cavern  parentMapID: 1462  mapType: 5  flags: 0
+mapID: 1523  name: Solesa Naksu [DNT]  parentMapID: 0  mapType: 3  flags: 0
+mapID: 1524  name:   parentMapID: 1355  mapType: 5  flags: 0
+mapID: 1525  name: Revendreth  parentMapID: 1550  mapType: 3  flags: 6
+mapID: 1527  name: Uldum  parentMapID: 12  mapType: 3  flags: 326
+mapID: 1528  name: Nazjatar  parentMapID: 947  mapType: 6  flags: 68
+mapID: 1530  name: Vale of Eternal Blossoms  parentMapID: 424  mapType: 3  flags: 70
+mapID: 1531  name: Crapopolis  parentMapID: 194  mapType: 6  flags: 64
+mapID: 1532  name: Crapopolis  parentMapID: 194  mapType: 6  flags: 0
+mapID: 1533  name: Bastion  parentMapID: 1550  mapType: 3  flags: 6
+mapID: 1534  name: Orgrimmar  parentMapID: 12  mapType: 6  flags: 0
+mapID: 1535  name: Durotar  parentMapID: 12  mapType: 6  flags: 0
+mapID: 1536  name: Maldraxxus  parentMapID: 1550  mapType: 3  flags: 6
+mapID: 1537  name: Alterac Valley  parentMapID: 25  mapType: 6  flags: 0
+mapID: 1538  name: Blackwing Descent  parentMapID: 36  mapType: 4  flags: 0
+mapID: 1539  name: Blackwing Descent  parentMapID: 36  mapType: 4  flags: 0
+mapID: 1540  name: Halls of Origination  parentMapID: 249  mapType: 4  flags: 0
+mapID: 1541  name: Halls of Origination  parentMapID: 249  mapType: 4  flags: 0
+mapID: 1542  name: Halls of Origination  parentMapID: 249  mapType: 4  flags: 0
+mapID: 1543  name: The Maw  parentMapID: 1550  mapType: 3  flags: 6
+mapID: 1544  name: Mogu'shan Palace  parentMapID: 390  mapType: 4  flags: 0
+mapID: 1545  name: Mogu'shan Palace  parentMapID: 390  mapType: 4  flags: 0
+mapID: 1546  name: Mogu'shan Palace  parentMapID: 390  mapType: 4  flags: 0
+mapID: 1547  name: Mogu'shan Vaults  parentMapID: 390  mapType: 4  flags: 0
+mapID: 1548  name: Mogu'shan Vaults  parentMapID: 390  mapType: 4  flags: 0
+mapID: 1549  name: Mogu'shan Vaults  parentMapID: 390  mapType: 4  flags: 0
+mapID: 1550  name: The Shadowlands  parentMapID: 946  mapType: 2  flags: 2304
+mapID: 1552  name: Caverns of Time  parentMapID: 71  mapType: 4  flags: 0
+mapID: 1553  name: Caverns of Time  parentMapID: 71  mapType: 4  flags: 0
+mapID: 1554  name: Serpentshrine Cavern  parentMapID: 102  mapType: 4  flags: 0
+mapID: 1555  name: Tempest Keep  parentMapID: 109  mapType: 4  flags: 0
+mapID: 1556  name: Hyjal Summit  parentMapID: 198  mapType: 6  flags: 0
+mapID: 1557  name: Naxxramas  parentMapID: 23  mapType: 4  flags: 0
+mapID: 1558  name: Icecrown Citadel  parentMapID: 118  mapType: 6  flags: 0
+mapID: 1559  name: The Bastion of Twilight  parentMapID: 241  mapType: 6  flags: 0
+mapID: 1560  name: Blackwing Lair  parentMapID: 36  mapType: 6  flags: 0
+mapID: 1561  name: Firelands  parentMapID: 367  mapType: 6  flags: 0
+mapID: 1563  name: Trial of the Crusader  parentMapID: 118  mapType: 6  flags: 0
+mapID: 1565  name: Ardenweald  parentMapID: 1550  mapType: 3  flags: 6
+mapID: 1569  name: Bastion  parentMapID: 1647  mapType: 3  flags: 16384
+mapID: 1570  name: Vale of Eternal Blossoms  parentMapID: 424  mapType: 6  flags: 0
+mapID: 1571  name: Uldum  parentMapID: 12  mapType: 6  flags: 70
+mapID: 1573  name: Mechagon City  parentMapID: 876  mapType: 4  flags: 0
+mapID: 1574  name: Mechagon City  parentMapID: 876  mapType: 4  flags: 0
+mapID: 1576  name: Deepwind Gorge  parentMapID: 376  mapType: 6  flags: 0
+mapID: 1577  name: Gilneas City  parentMapID: 13  mapType: 3  flags: 0
+mapID: 1578  name: Blackrock Depths  parentMapID: 32  mapType: 4  flags: 0
+mapID: 1579  name: Pools Of Power  parentMapID: 1530  mapType: 5  flags: 0
+mapID: 1580  name: Ny'alotha  parentMapID: 947  mapType: 4  flags: 0
+mapID: 1581  name: Ny'alotha  parentMapID: 947  mapType: 4  flags: 0
+mapID: 1582  name: Ny'alotha  parentMapID: 947  mapType: 4  flags: 0
+mapID: 1590  name: Ny'alotha  parentMapID: 947  mapType: 4  flags: 0
+mapID: 1591  name: Ny'alotha  parentMapID: 947  mapType: 4  flags: 0
+mapID: 1592  name: Ny'alotha  parentMapID: 947  mapType: 4  flags: 0
+mapID: 1593  name: Ny'alotha  parentMapID: 947  mapType: 4  flags: 0
+mapID: 1594  name: Ny'alotha  parentMapID: 947  mapType: 4  flags: 0
+mapID: 1595  name: Ny'alotha  parentMapID: 947  mapType: 4  flags: 0
+mapID: 1596  name: Ny'alotha  parentMapID: 947  mapType: 4  flags: 0
+mapID: 1597  name: Ny'alotha  parentMapID: 947  mapType: 4  flags: 0
+mapID: 1600  name: Vault of Y'Shaarj  parentMapID: 1530  mapType: 5  flags: 0
+mapID: 1602  name: Icecrown Citadel  parentMapID: 118  mapType: 4  flags: 0
+mapID: 1603  name: Ardenweald  parentMapID: 1550  mapType: 6  flags: 68
+mapID: 1604  name: Chamber Of Heart  parentMapID: 81  mapType: 4  flags: 64
+mapID: 1609  name: Darkmaul Citadel  parentMapID: 1409  mapType: 4  flags: 0
+mapID: 1610  name: Darkmaul Citadel  parentMapID: 1409  mapType: 4  flags: 0
+mapID: 1611  name: Dark Citadel  parentMapID: 0  mapType: 4  flags: 0
+mapID: 1614  name: JT_New_A  parentMapID: 0  mapType: 4  flags: 0
+mapID: 1615  name: TG10_Floor [Deprecated]  parentMapID: 1543  mapType: 6  flags: 0
+mapID: 1616  name: TG11_Floor [Deprecated]  parentMapID: 1543  mapType: 6  flags: 0
+mapID: 1617  name: TG12_Floor [Deprecated]  parentMapID: 1543  mapType: 6  flags: 0
+mapID: 1618  name: Torghast  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1619  name: Torghast  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1620  name: Torghast  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1621  name: Torghast  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1623  name: Torghast  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1624  name: Torghast  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1627  name: Torghast  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1628  name: Torghast  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1629  name: Torghast  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1630  name: Torghast  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1631  name: Torghast  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1632  name: Torghast  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1635  name: Torghast  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1636  name: Torghast  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1641  name: Torghast  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1642  name: Val'sharah  parentMapID: 619  mapType: 6  flags: 0
+mapID: 1643  name: Ardenweald  parentMapID: 0  mapType: 3  flags: 0
+mapID: 1644  name: Ember Court  parentMapID: 1525  mapType: 6  flags: 0
+mapID: 1645  name: Torghast  parentMapID: 0  mapType: 2  flags: 4
+mapID: 1647  name: The Shadowlands  parentMapID: 0  mapType: 2  flags: 8192
+mapID: 1648  name: The Maw  parentMapID: 1550  mapType: 6  flags: 70
+mapID: 1649  name: Etheric Vault  parentMapID: 1536  mapType: 5  flags: 0
+mapID: 1650  name: Sightless Hold  parentMapID: 1536  mapType: 5  flags: 0
+mapID: 1651  name: Molten Forge  parentMapID: 1536  mapType: 5  flags: 0
+mapID: 1652  name: Vault of Souls  parentMapID: 1536  mapType: 5  flags: 0
+mapID: 1656  name: Torghast - Map Floor 10 [Deprecated]  parentMapID: 1550  mapType: 6  flags: 0
+mapID: 1658  name: Alpha_TG_R02  parentMapID: 0  mapType: 4  flags: 0
+mapID: 1659  name: Alpha_TG_R03  parentMapID: 1550  mapType: 4  flags: 0
+mapID: 1661  name: Alpha_TG_R05  parentMapID: 1550  mapType: 4  flags: 0
+mapID: 1662  name: Queen's Conservatory  parentMapID: 1565  mapType: 6  flags: 0
+mapID: 1663  name: Halls of Atonement  parentMapID: 1525  mapType: 4  flags: 0
+mapID: 1664  name: Halls of Atonement  parentMapID: 1525  mapType: 4  flags: 0
+mapID: 1665  name: Halls of Atonement  parentMapID: 1525  mapType: 4  flags: 0
+mapID: 1666  name: The Necrotic Wake  parentMapID: 1533  mapType: 4  flags: 0
+mapID: 1667  name: The Necrotic Wake  parentMapID: 1533  mapType: 4  flags: 128
+mapID: 1668  name: The Necrotic Wake  parentMapID: 1533  mapType: 4  flags: 128
+mapID: 1669  name: Mists of Tirna Scithe  parentMapID: 1565  mapType: 4  flags: 0
+mapID: 1670  name: Oribos  parentMapID: 1550  mapType: 4  flags: 98304
+mapID: 1671  name: Oribos  parentMapID: 1550  mapType: 4  flags: 65540
+mapID: 1672  name: Oribos  parentMapID: 1550  mapType: 4  flags: 65536
+mapID: 1673  name: Oribos  parentMapID: 1550  mapType: 4  flags: 65536
+mapID: 1674  name: Plaguefall  parentMapID: 1536  mapType: 4  flags: 0
+mapID: 1675  name: Sanguine Depths  parentMapID: 1525  mapType: 4  flags: 0
+mapID: 1676  name: Sanguine Depths  parentMapID: 1525  mapType: 4  flags: 0
+mapID: 1677  name: De Other Side  parentMapID: 1565  mapType: 4  flags: 0
+mapID: 1678  name: De Other Side  parentMapID: 1565  mapType: 4  flags: 0
+mapID: 1679  name: De Other Side  parentMapID: 1565  mapType: 4  flags: 0
+mapID: 1680  name: De Other Side  parentMapID: 1565  mapType: 4  flags: 0
+mapID: 1681  name: Icecrown Citadel  parentMapID: 118  mapType: 4  flags: 0
+mapID: 1682  name: Icecrown Citadel  parentMapID: 118  mapType: 4  flags: 0
+mapID: 1683  name: Theater of Pain  parentMapID: 1536  mapType: 4  flags: 0
+mapID: 1684  name: Theater of Pain  parentMapID: 1536  mapType: 4  flags: 0
+mapID: 1685  name: Theater of Pain  parentMapID: 1536  mapType: 4  flags: 0
+mapID: 1686  name: Theater of Pain  parentMapID: 1536  mapType: 4  flags: 0
+mapID: 1687  name: Theater of Pain  parentMapID: 1536  mapType: 4  flags: 0
+mapID: 1688  name: Revendreth  parentMapID: 1550  mapType: 6  flags: 2
+mapID: 1689  name: Maldraxxus  parentMapID: 1550  mapType: 6  flags: 4162
+mapID: 1690  name: Aspirant's Quarters  parentMapID: 1533  mapType: 5  flags: 0
+mapID: 1691  name: Shattered Grove  parentMapID: 905  mapType: 6  flags: 0
+mapID: 1692  name: Spires Of Ascension  parentMapID: 1533  mapType: 4  flags: 0
+mapID: 1693  name: Spires Of Ascension  parentMapID: 1533  mapType: 4  flags: 0
+mapID: 1694  name: Spires Of Ascension  parentMapID: 1533  mapType: 4  flags: 0
+mapID: 1695  name: Spires Of Ascension  parentMapID: 1533  mapType: 4  flags: 0
+mapID: 1697  name: Plaguefall  parentMapID: 1536  mapType: 4  flags: 0
+mapID: 1698  name: Seat of the Primus  parentMapID: 1536  mapType: 4  flags: 64
+mapID: 1699  name: Sinfall  parentMapID: 1525  mapType: 4  flags: 68
+mapID: 1700  name: Sinfall  parentMapID: 1525  mapType: 4  flags: 0
+mapID: 1701  name: Heart of the Forest  parentMapID: 1565  mapType: 4  flags: 4
+mapID: 1702  name: Heart of the Forest  parentMapID: 1565  mapType: 4  flags: 0
+mapID: 1703  name: Heart of the Forest  parentMapID: 1565  mapType: 4  flags: 0
+mapID: 1705  name: Torghast - Entrance  parentMapID: 0  mapType: 6  flags: 0
+mapID: 1707  name: Elysian Hold  parentMapID: 1533  mapType: 4  flags: 4
+mapID: 1708  name: Elysian Hold  parentMapID: 1533  mapType: 4  flags: 0
+mapID: 1709  name: Ardenweald  parentMapID: 1565  mapType: 6  flags: 0
+mapID: 1711  name: Ascension Coliseum  parentMapID: 1533  mapType: 6  flags: 0
+mapID: 1712  name: Torghast  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1713  name: Path of Wisdom  parentMapID: 1533  mapType: 5  flags: 0
+mapID: 1714  name: Third Chamber of Kalliope  parentMapID: 1533  mapType: 5  flags: 0
+mapID: 1715  name: Vestibule Of Eternity  parentMapID: 905  mapType: 6  flags: 0
+mapID: 1716  name: Torghast - Map Floor 22  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1717  name: Chill's Reach  parentMapID: 905  mapType: 6  flags: 0
+mapID: 1720  name: Covenant_Ard_Torghast  parentMapID: 1543  mapType: 4  flags: 0
+mapID: 1721  name: Torghast  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1724  name: Vortrexxis  parentMapID: 1536  mapType: 4  flags: 0
+mapID: 1726  name: The North Sea  parentMapID: 0  mapType: 6  flags: 128
+mapID: 1727  name: The North Sea  parentMapID: 0  mapType: 6  flags: 128
+mapID: 1728  name: The Runecarver  parentMapID: 0  mapType: 6  flags: 0
+mapID: 1734  name: Revendreth  parentMapID: 1550  mapType: 6  flags: 128
+mapID: 1735  name: Castle Nathria  parentMapID: 1525  mapType: 4  flags: 66
+mapID: 1736  name: Torghast  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1738  name: Revendreth  parentMapID: 1647  mapType: 6  flags: 0
+mapID: 1739  name: Ardenweald  parentMapID: 1647  mapType: 6  flags: 0
+mapID: 1740  name: Ardenweald  parentMapID: 1647  mapType: 3  flags: 16384
+mapID: 1741  name: Maldraxxus  parentMapID: 1647  mapType: 3  flags: 16384
+mapID: 1742  name: Revendreth  parentMapID: 1647  mapType: 3  flags: 16384
+mapID: 1744  name: Castle Nathria  parentMapID: 1525  mapType: 4  flags: 64
+mapID: 1745  name: Castle Nathria  parentMapID: 1525  mapType: 4  flags: 64
+mapID: 1746  name: Castle Nathria  parentMapID: 1525  mapType: 4  flags: 64
+mapID: 1747  name: Castle Nathria  parentMapID: 1525  mapType: 4  flags: 64
+mapID: 1748  name: Castle Nathria  parentMapID: 1525  mapType: 4  flags: 64
+mapID: 1749  name: Torghast  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1750  name: Castle Nathria  parentMapID: 1525  mapType: 4  flags: 64
+mapID: 1751  name: Torghast  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1752  name: Torghast  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1753  name: Torghast  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1754  name: Torghast  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1755  name: Castle Nathria  parentMapID: 1525  mapType: 6  flags: 0
+mapID: 1756  name: Torghast  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1757  name: Torghast  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1758  name: Torghast  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1759  name: Torghast  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1760  name: Torghast  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1761  name: Torghast  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1762  name: Torghast, Tower of the Damned  parentMapID: 0  mapType: 6  flags: 128
+mapID: 1763  name: Torghast  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1764  name: Torghast  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1765  name: Torghast  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1766  name: Torghast  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1767  name: Torghast  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1768  name: Torghast  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1769  name: Torghast  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1770  name: Torghast  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1771  name: Torghast  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1772  name: Torghast  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1773  name: Torghast  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1774  name: Torghast  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1776  name: Torghast  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1777  name: Torghast  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1778  name: Torghast  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1779  name: Torghast  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1780  name: Torghast  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1781  name: Torghast  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1782  name: Torghast  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1783  name: Torghast  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1784  name: Torghast  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1785  name: Torghast  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1786  name: Torghast  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1787  name: Torghast  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1788  name: Torghast  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1789  name: Torghast  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1791  name: Torghast  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1792  name: Torghast  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1793  name: Torghast  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1794  name: Torghast  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1795  name: Torghast  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1796  name: Torghast  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1797  name: Torghast  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1798  name: Torghast  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1799  name: Torghast  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1800  name: Torghast  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1801  name: Torghast  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1802  name: Torghast  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1803  name: Torghast  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1804  name: Torghast  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1805  name: Torghast  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1806  name: Torghast  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1807  name: Torghast  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1808  name: Torghast  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1809  name: Torghast  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1810  name: Torghast  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1811  name: Torghast  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1812  name: Torghast  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1813  name: Bastion  parentMapID: 1647  mapType: 6  flags: 0
+mapID: 1814  name: Maldraxxus  parentMapID: 1647  mapType: 6  flags: 0
+mapID: 1816  name: Claw's Edge  parentMapID: 1565  mapType: 5  flags: 0
+mapID: 1818  name: Tirna Vaal  parentMapID: 1565  mapType: 5  flags: 0
+mapID: 1819  name: Fungal Terminus  parentMapID: 1565  mapType: 5  flags: 0
+mapID: 1820  name: Pit of Anguish  parentMapID: 1543  mapType: 5  flags: 0
+mapID: 1821  name: Pit of Anguish  parentMapID: 1543  mapType: 5  flags: 0
+mapID: 1822  name: Extractor's Sanatorium  parentMapID: 1543  mapType: 5  flags: 0
+mapID: 1823  name: Altar of Domination  parentMapID: 1543  mapType: 5  flags: 0
+mapID: 1824  name: Matriarch's Den  parentMapID: 1565  mapType: 5  flags: 0
+mapID: 1825  name: The Root Cellar  parentMapID: 1565  mapType: 5  flags: 0
+mapID: 1826  name: The Root Cellar  parentMapID: 1565  mapType: 5  flags: 0
+mapID: 1827  name: The Root Cellar  parentMapID: 1565  mapType: 5  flags: 0
+mapID: 1829  name:   parentMapID: 1565  mapType: 5  flags: 0
+mapID: 1833  name: Torghast  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1834  name: Torghast - Map Floor 24  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1835  name: Torghast - Map Floor 25  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1836  name: Torghast - Map Floor 26  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1837  name: Torghast - Map Floor 27  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1838  name: Torghast - Map Floor 41  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1839  name: Torghast - Map Floor 28  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1840  name: Torghast - Map Floor 40  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1841  name: Torghast - Map Floor 39  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1842  name: Torghast - Map Floor 29  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1843  name: Torghast - Map Floor 38  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1844  name: Torghast - Map Floor 32  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1845  name: Torghast - Map Floor 31  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1846  name: Torghast - Map Floor 33  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1847  name: Torghast - Map Floor 34  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1848  name: Torghast - Map Floor 14  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1849  name: Torghast - Map Floor 16  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1850  name: Torghast - Map Floor 18  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1851  name: Torghast - Map Floor 42  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1852  name: Torghast - Map Floor 44  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1853  name: Torghast - Map Floor 46  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1854  name: Torghast - Map Floor 48  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1855  name: Torghast - Map Floor 49  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1856  name: Torghast - Map Floor 50  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1857  name: Torghast - Map Floor 51  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1858  name: Torghast - Map Floor 52  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1859  name: Torghast - Map Floor 53  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1860  name: Torghast - Map Floor 54  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1861  name: Torghast - Map Floor 57  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1862  name: Torghast - Map Floor 59  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1863  name: Torghast - Map Floor 61  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1864  name: Torghast - Map Floor 63  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1865  name: Torghast - Map Floor 64  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1867  name: Torghast - Map Floor 66  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1868  name: Torghast - Map Floor 67  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1869  name: Torghast - Map Floor 68  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1870  name: Torghast - Map Floor 69  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1871  name: Torghast - Map Floor 70  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1872  name: Torghast - Map Floor 71  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1873  name: Torghast - Map Floor 74  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1874  name: Torghast - Map Floor 75  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1875  name: Torghast - Map Floor 76  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1876  name: Torghast - Map Floor 77  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1877  name: Torghast - Map Floor 78  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1878  name: Torghast - Map Floor 80  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1879  name: Torghast - Map Floor 81  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1880  name: Torghast - Map Floor 83  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1881  name: Torghast - Map Floor 84  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1882  name: Torghast - Map Floor 86  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1883  name: Torghast - Map Floor 87  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1884  name: Torghast - Map Floor 88  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1885  name: Torghast - Map Floor 89  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1886  name: Torghast - Map Floor 92  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1887  name: Torghast - Map Floor 93  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1888  name: Torghast - Map Floor 94  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1889  name: Torghast - Map Floor 95  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1890  name: Torghast - Map Floor 97  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1891  name: Torghast - Map Floor 98  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1892  name: Torghast - Map Floor 99  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1893  name: Torghast - Map Floor 100  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1894  name: Torghast - Map Floor 23  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1895  name: Torghast - Map Floor 35  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1896  name: Torghast - Map Floor 56  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1897  name: Torghast - Map Floor 62  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1898  name: Torghast - Map Floor 82  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1899  name: Torghast - Map Floor 101  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1900  name: Torghast - Map Floor 58  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1901  name: Torghast - Map Floor 73  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1902  name: Torghast - Map Floor 79  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1903  name: Torghast - Map Floor 85  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1904  name: Torghast - Map Floor 90  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1905  name: Torghast - Map Floor 96  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1907  name: Torghast - Map Floor 102  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1908  name: Torghast - Map Floor 60  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1909  name: Torghast - Map Floor 21  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1910  name: Torghast - Map Floor 91  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1911  name: Torghast - Entrance  parentMapID: 1543  mapType: 6  flags: 0
+mapID: 1912  name: The Runecarver's Oubliette  parentMapID: 1543  mapType: 6  flags: 0
+mapID: 1913  name: Torghast  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1914  name: Torghast  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1917  name: De Other Side  parentMapID: 1565  mapType: 6  flags: 0
+mapID: 1920  name: Torghast  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1921  name: Torghast  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1922  name: Draenor  parentMapID: 0  mapType: 2  flags: 4
+mapID: 1923  name: Pandaria  parentMapID: 0  mapType: 2  flags: 4
+mapID: 1958  name: Firelands  parentMapID: 198  mapType: 4  flags: 0
+mapID: 1959  name: Firelands  parentMapID: 198  mapType: 4  flags: 0
+mapID: 1960  name: The Maw  parentMapID: 1550  mapType: 3  flags: 6
+mapID: 1961  name: Korthia  parentMapID: 1543  mapType: 3  flags: 6
+mapID: 1962  name: Torghast  parentMapID: 1543  mapType: 6  flags: 0
+mapID: 1963  name: Torghast  parentMapID: 1543  mapType: 6  flags: 0
+mapID: 1964  name: Torghast  parentMapID: 1543  mapType: 6  flags: 0
+mapID: 1965  name: Torghast  parentMapID: 1543  mapType: 6  flags: 0
+mapID: 1966  name: Torghast  parentMapID: 1543  mapType: 6  flags: 0
+mapID: 1967  name: Torghast  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1968  name: Torghast  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1969  name: Torghast  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1970  name: Zereth Mortis  parentMapID: 1550  mapType: 3  flags: 6
+mapID: 1971  name: Skyhold  parentMapID: 619  mapType: 6  flags: 64
+mapID: 1974  name: Torghast  parentMapID: 1543  mapType: 6  flags: 0
+mapID: 1975  name: Torghast  parentMapID: 1543  mapType: 6  flags: 0
+mapID: 1976  name: Torghast  parentMapID: 1543  mapType: 6  flags: 0
+mapID: 1977  name: Torghast  parentMapID: 1543  mapType: 6  flags: 0
+mapID: 1978  name: Dragon Isles  parentMapID: 947  mapType: 2  flags: 0
+mapID: 1979  name: Torghast  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 1980  name: Torghast  parentMapID: 1543  mapType: 6  flags: 0
+mapID: 1981  name: Torghast  parentMapID: 1543  mapType: 6  flags: 0
+mapID: 1982  name: Torghast  parentMapID: 1543  mapType: 6  flags: 0
+mapID: 1983  name: Torghast  parentMapID: 1543  mapType: 6  flags: 0
+mapID: 1984  name: Torghast  parentMapID: 1543  mapType: 6  flags: 0
+mapID: 1985  name: Torghast  parentMapID: 1543  mapType: 6  flags: 0
+mapID: 1986  name: Torghast  parentMapID: 1543  mapType: 6  flags: 0
+mapID: 1987  name: Torghast  parentMapID: 1543  mapType: 6  flags: 0
+mapID: 1988  name: Torghast  parentMapID: 1543  mapType: 6  flags: 0
+mapID: 1989  name: Tazavesh, the Veiled Market  parentMapID: 1550  mapType: 4  flags: 0
+mapID: 1990  name: Tazavesh, the Veiled Market  parentMapID: 1550  mapType: 4  flags: 0
+mapID: 1991  name: Tazavesh, the Veiled Market  parentMapID: 1550  mapType: 4  flags: 0
+mapID: 1992  name: Tazavesh, the Veiled Market  parentMapID: 1550  mapType: 4  flags: 0
+mapID: 1993  name: Tazavesh, the Veiled Market  parentMapID: 1550  mapType: 4  flags: 0
+mapID: 1995  name: Tazavesh, the Veiled Market  parentMapID: 1550  mapType: 4  flags: 0
+mapID: 1996  name: Tazavesh, the Veiled Market  parentMapID: 1550  mapType: 4  flags: 0
+mapID: 1997  name: Tazavesh, the Veiled Market  parentMapID: 1995  mapType: 4  flags: 0
+mapID: 1998  name: Sanctum of Domination  parentMapID: 1543  mapType: 4  flags: 0
+mapID: 1999  name: Sanctum of Domination  parentMapID: 1543  mapType: 4  flags: 0
+mapID: 2000  name: Sanctum of Domination  parentMapID: 1543  mapType: 4  flags: 0
+mapID: 2001  name: Sanctum of Domination  parentMapID: 1543  mapType: 4  flags: 0
+mapID: 2002  name: Sanctum of Domination  parentMapID: 1543  mapType: 4  flags: 0
+mapID: 2003  name: Sanctum of Domination  parentMapID: 1543  mapType: 4  flags: 0
+mapID: 2004  name: Sanctum of Domination  parentMapID: 1543  mapType: 4  flags: 0
+mapID: 2005  name: Ardenweald  parentMapID: 1550  mapType: 6  flags: 4098
+mapID: 2006  name: Cavern of Contemplation  parentMapID: 1961  mapType: 5  flags: 0
+mapID: 2007  name: Gromit Hollow  parentMapID: 1961  mapType: 5  flags: 0
+mapID: 2008  name: Chamber of the Sigil  parentMapID: 1961  mapType: 5  flags: 0
+mapID: 2009  name: TG106_Floor_MM  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 2010  name: Torghast  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 2011  name: Torghast  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 2012  name: Torghast  parentMapID: 1543  mapType: 6  flags: 2
+mapID: 2016  name: Tazavesh, the Veiled Market  parentMapID: 1550  mapType: 6  flags: 4
+mapID: 2017  name: Spires of Ascension  parentMapID: 1533  mapType: 6  flags: 0
+mapID: 2018  name: Spires of Ascension  parentMapID: 1533  mapType: 6  flags: 0
+mapID: 2019  name: Torghast  parentMapID: 1543  mapType: 6  flags: 0
+mapID: 2022  name: The Waking Shores  parentMapID: 1978  mapType: 3  flags: 6
+mapID: 2023  name: Ohn'ahran Plains  parentMapID: 1978  mapType: 3  flags: 6
+mapID: 2024  name: The Azure Span  parentMapID: 1978  mapType: 3  flags: 6
+mapID: 2025  name: Thaldraszus  parentMapID: 1978  mapType: 3  flags: 6
+mapID: 2026  name: The Forbidden Reach Deprecated  parentMapID: 0  mapType: 6  flags: 0
+mapID: 2027  name: Blooming Foundry  parentMapID: 1970  mapType: 5  flags: 0
+mapID: 2028  name: Locrian Esper  parentMapID: 1970  mapType: 5  flags: 0
+mapID: 2029  name: Gravid Repose  parentMapID: 1970  mapType: 5  flags: 0
+mapID: 2030  name: Nexus of Actualization  parentMapID: 1970  mapType: 5  flags: 0
+mapID: 2031  name: Crypts of the Eternal  parentMapID: 1970  mapType: 5  flags: 0
+mapID: 2042  name: The Crucible  parentMapID: 1670  mapType: 4  flags: 0
+mapID: 2046  name: Zereth Mortis  parentMapID: 0  mapType: 2  flags: 8196
+mapID: 2047  name: Sepulcher of the First Ones  parentMapID: 1970  mapType: 4  flags: 0
+mapID: 2048  name: Sepulcher of the First Ones  parentMapID: 1970  mapType: 4  flags: 0
+mapID: 2049  name: Sepulcher of the First Ones  parentMapID: 1970  mapType: 4  flags: 0
+mapID: 2050  name: Sepulcher of the First Ones  parentMapID: 1970  mapType: 4  flags: 0
+mapID: 2051  name: Sepulcher of the First Ones  parentMapID: 1970  mapType: 4  flags: 0
+mapID: 2052  name: Sepulcher of the First Ones  parentMapID: 1970  mapType: 4  flags: 0
+mapID: 2055  name: Sepulcher of the First Ones  parentMapID: 0  mapType: 2  flags: 4
+mapID: 2057  name: Dragon Isles  parentMapID: 0  mapType: 2  flags: 4
+mapID: 2059  name: Resonant Peaks  parentMapID: 2046  mapType: 2  flags: 16388
+mapID: 2061  name: Sepulcher of the First Ones  parentMapID: 1970  mapType: 4  flags: 0
+mapID: 2063  name: Dragon Isles  parentMapID: 0  mapType: 3  flags: 0
+mapID: 2066  name: Catalyst Wards  parentMapID: 1970  mapType: 5  flags: 0
+mapID: 2070  name: Tirisfal Glades  parentMapID: 13  mapType: 3  flags: 4098
+mapID: 2071  name: Uldaman: Legacy of Tyr  parentMapID: 15  mapType: 4  flags: 0
+mapID: 2072  name: Uldaman: Legacy of Tyr  parentMapID: 15  mapType: 4  flags: 0
+mapID: 2073  name: The Azure Vault  parentMapID: 2024  mapType: 4  flags: 0
+mapID: 2074  name: The Azure Vault  parentMapID: 2024  mapType: 4  flags: 0
+mapID: 2075  name: The Azure Vault  parentMapID: 2024  mapType: 4  flags: 0
+mapID: 2076  name: The Azure Vault  parentMapID: 2024  mapType: 4  flags: 0
+mapID: 2077  name: The Azure Vault  parentMapID: 2024  mapType: 4  flags: 0
+mapID: 2080  name: Neltharus  parentMapID: 2022  mapType: 4  flags: 0
+mapID: 2081  name: Neltharus  parentMapID: 2022  mapType: 4  flags: 0
+mapID: 2082  name: Halls Of Infusion  parentMapID: 2025  mapType: 4  flags: 0
+mapID: 2083  name: Halls Of Infusion  parentMapID: 2025  mapType: 4  flags: 0
+mapID: 2084  name: The Emerald Dreamway  parentMapID: 747  mapType: 6  flags: 0
+mapID: 2085  name: The Primalist Future  parentMapID: 2025  mapType: 6  flags: 0
+mapID: 2088  name: Pandaren Revolution  parentMapID: 424  mapType: 6  flags: 0
+mapID: 2089  name: The Black Empire  parentMapID: 947  mapType: 6  flags: 0
+mapID: 2090  name: The Gnoll War  parentMapID: 13  mapType: 6  flags: 4098
+mapID: 2091  name: War of the Shifting Sands  parentMapID: 12  mapType: 6  flags: 4098
+mapID: 2092  name: Azmerloth  parentMapID: 113  mapType: 6  flags: 0
+mapID: 2093  name: The Nokhud Offensive  parentMapID: 1978  mapType: 4  flags: 64
+mapID: 2094  name: Ruby Life Pools  parentMapID: 2022  mapType: 4  flags: 64
+mapID: 2095  name: Ruby Life Pools  parentMapID: 2022  mapType: 4  flags: 0
+mapID: 2096  name: Brackenhide Hollow  parentMapID: 2024  mapType: 4  flags: 0
+mapID: 2097  name: Algeth'ar Academy  parentMapID: 2025  mapType: 4  flags: 0
+mapID: 2098  name: Algeth'ar Academy  parentMapID: 2025  mapType: 4  flags: 0
+mapID: 2099  name: Algeth'ar Academy  parentMapID: 2025  mapType: 4  flags: 0
+mapID: 2100  name: The Siege Creche  parentMapID: 2151  mapType: 5  flags: 0
+mapID: 2101  name: The Support Creche  parentMapID: 2151  mapType: 5  flags: 0
+mapID: 2102  name: The War Creche  parentMapID: 2151  mapType: 5  flags: 0
+mapID: 2106  name: Brackenhide Hollow  parentMapID: 2024  mapType: 4  flags: 0
+mapID: 2107  name: The Forbidden Reach  parentMapID: 0  mapType: 3  flags: 0
+mapID: 2109  name: The War Creche  parentMapID: 2118  mapType: 5  flags: 0
+mapID: 2110  name: The Support Creche  parentMapID: 2118  mapType: 5  flags: 0
+mapID: 2111  name: The Siege Creche  parentMapID: 2118  mapType: 5  flags: 0
+mapID: 2112  name: Valdrakken  parentMapID: 2025  mapType: 3  flags: 4
+mapID: 2118  name: The Forbidden Reach  parentMapID: 1978  mapType: 3  flags: 6
+mapID: 2119  name: Vault of the Incarnates  parentMapID: 2025  mapType: 4  flags: 0
+mapID: 2120  name: Vault of the Incarnates  parentMapID: 2025  mapType: 4  flags: 0
+mapID: 2121  name: Vault of the Incarnates  parentMapID: 2025  mapType: 4  flags: 0
+mapID: 2122  name: Vault of the Incarnates  parentMapID: 2025  mapType: 4  flags: 0
+mapID: 2123  name: Vault of the Incarnates  parentMapID: 2025  mapType: 4  flags: 0
+mapID: 2124  name: Vault of the Incarnates  parentMapID: 2025  mapType: 4  flags: 0
+mapID: 2125  name: Vault of the Incarnates  parentMapID: 2025  mapType: 4  flags: 0
+mapID: 2126  name: Vault of the Incarnates  parentMapID: 2025  mapType: 4  flags: 0
+mapID: 2127  name: The Waking Shores  parentMapID: 2057  mapType: 3  flags: 4
+mapID: 2128  name: The Azure Span  parentMapID: 2057  mapType: 3  flags: 4
+mapID: 2129  name: Ohn'ahran Plains  parentMapID: 2057  mapType: 3  flags: 4
+mapID: 2130  name: Thaldraszus  parentMapID: 2057  mapType: 3  flags: 4
+mapID: 2131  name: The Forbidden Reach  parentMapID: 0  mapType: 3  flags: 4
+mapID: 2132  name: The Azure Span  parentMapID: 2024  mapType: 5  flags: 0
+mapID: 2133  name: Zaralek Cavern  parentMapID: 1978  mapType: 3  flags: 6
+mapID: 2134  name: Valdrakken  parentMapID: 2130  mapType: 3  flags: 4
+mapID: 2135  name: Valdrakken  parentMapID: 1978  mapType: 6  flags: 0
+mapID: 2146  name: The Eastern Glades  parentMapID: 18  mapType: 6  flags: 0
+mapID: 2147  name: Azeroth  parentMapID: 0  mapType: 2  flags: 4
+mapID: 2149  name: Ohn'ahran Plains  parentMapID: 0  mapType: 2  flags: 4
+mapID: 2150  name: Dragonskull Island  parentMapID: 2151  mapType: 5  flags: 0
+mapID: 2151  name: The Forbidden Reach  parentMapID: 1978  mapType: 3  flags: 6
+mapID: 2154  name: Froststone Vault  parentMapID: 2151  mapType: 5  flags: 0
+mapID: 2162  name: Alterac Valley  parentMapID: 25  mapType: 6  flags: 0
+mapID: 2165  name: The Throughway  parentMapID: 2133  mapType: 3  flags: 0
+mapID: 2166  name: Aberrus, the Shadowed Crucible  parentMapID: 2133  mapType: 4  flags: 0
+mapID: 2167  name: Aberrus, the Shadowed Crucible  parentMapID: 2133  mapType: 4  flags: 0
+mapID: 2168  name: Aberrus, the Shadowed Crucible  parentMapID: 2133  mapType: 4  flags: 0
+mapID: 2169  name: Aberrus, the Shadowed Crucible  parentMapID: 2133  mapType: 4  flags: 0
+mapID: 2170  name: Aberrus, the Shadowed Crucible  parentMapID: 2133  mapType: 4  flags: 0
+mapID: 2171  name: Aberrus, the Shadowed Crucible  parentMapID: 2133  mapType: 4  flags: 0
+mapID: 2172  name: Aberrus, the Shadowed Crucible  parentMapID: 2133  mapType: 4  flags: 0
+mapID: 2173  name: Aberrus, the Shadowed Crucible  parentMapID: 2133  mapType: 4  flags: 0
+mapID: 2174  name: Aberrus, the Shadowed Crucible  parentMapID: 2133  mapType: 4  flags: 0
+mapID: 2175  name: Zaralek Cavern  parentMapID: 2057  mapType: 3  flags: 131076
+mapID: 2176  name: The Maelstrom  parentMapID: 947  mapType: 6  flags: 0
+mapID: 2183  name: The Azure Vault  parentMapID: 2024  mapType: 6  flags: 0
+mapID: 2184  name: Zaralek Cavern  parentMapID: 2133  mapType: 5  flags: 0
+mapID: 2190  name: Sanctum of Chronology  parentMapID: 2198  mapType: 4  flags: 0
+mapID: 2191  name: Millennia's Threshold  parentMapID: 2198  mapType: 4  flags: 0
+mapID: 2192  name: Locus of Eternity  parentMapID: 2198  mapType: 4  flags: 0
+mapID: 2193  name: Spoke of Endless Winter  parentMapID: 2198  mapType: 4  flags: 0
+mapID: 2194  name: Crossroads of Fate  parentMapID: 2198  mapType: 4  flags: 0
+mapID: 2195  name: Infinite Conflux  parentMapID: 2198  mapType: 4  flags: 0
+mapID: 2196  name: Twisting Approach  parentMapID: 2198  mapType: 4  flags: 0
+mapID: 2197  name: Immemorial Battlefield  parentMapID: 2198  mapType: 4  flags: 0
+mapID: 2198  name: Dawn of the Infinite  parentMapID: 2025  mapType: 4  flags: 262272
+mapID: 2199  name: Tyrhold Reservoir  parentMapID: 2025  mapType: 6  flags: 0
+mapID: 2200  name: Emerald Dream  parentMapID: 1978  mapType: 3  flags: 6
+mapID: 2201  name: Azq'roth  parentMapID: 947  mapType: 4  flags: 0
+mapID: 2202  name: Azewrath  parentMapID: 946  mapType: 4  flags: 0
+mapID: 2203  name: Azmourne  parentMapID: 118  mapType: 4  flags: 0
+mapID: 2204  name: Azmerloth  parentMapID: 2092  mapType: 4  flags: 0
+mapID: 2205  name: Ulderoth  parentMapID: 905  mapType: 4  flags: 0
+mapID: 2206  name: A.Z.E.R.O.T.H.  parentMapID: 1462  mapType: 4  flags: 0
+mapID: 2207  name: The Warlands  parentMapID: 947  mapType: 4  flags: 0
+mapID: 2211  name: Aberrus, the Shadowed Crucible  parentMapID: 2133  mapType: 6  flags: 0
+mapID: 2220  name: The Nighthold  parentMapID: 680  mapType: 4  flags: 0
+mapID: 2221  name: The Nighthold  parentMapID: 680  mapType: 4  flags: 0
+mapID: 2228  name: The Black Empire  parentMapID: 947  mapType: 4  flags: 0
+mapID: 2230  name: Halls Of Valor  parentMapID: 634  mapType: 4  flags: 0
+mapID: 2231  name: Halls Of Valor  parentMapID: 634  mapType: 4  flags: 0
+mapID: 2232  name: Amirdrassil  parentMapID: 2200  mapType: 4  flags: 0
+mapID: 2233  name: Amirdrassil  parentMapID: 2200  mapType: 4  flags: 0
+mapID: 2234  name: Amirdrassil  parentMapID: 2200  mapType: 4  flags: 0
+mapID: 2235  name: The Northern Boughs  parentMapID: 2234  mapType: 4  flags: 0
+mapID: 2236  name: The Eastern Boughs  parentMapID: 2234  mapType: 4  flags: 0
+mapID: 2237  name: The Southern Boughs  parentMapID: 2234  mapType: 4  flags: 0
+mapID: 2238  name: Amirdrassil  parentMapID: 2200  mapType: 4  flags: 0
+mapID: 2239  name: Amirdrassil  parentMapID: 1978  mapType: 3  flags: 4
+mapID: 2240  name: Amirdrassil  parentMapID: 2200  mapType: 4  flags: 0
+mapID: 2241  name: Emerald Dream  parentMapID: 0  mapType: 3  flags: 131076
+mapID: 2244  name: Amirdrassil  parentMapID: 2200  mapType: 4  flags: 0
+mapID: 2252  name: Dragon Isles  parentMapID: 0  mapType: 2  flags: 4
+mapID: 2253  name: Sor'theril Barrow Den  parentMapID: 2200  mapType: 5  flags: 524288
+mapID: 2254  name: Barrows of Reverie  parentMapID: 2200  mapType: 5  flags: 524288
+mapID: 2257  name: Arathi Highlands  parentMapID: 0  mapType: 3  flags: 524288
+mapID: 2262  name: Traitor's Rest  parentMapID: 2024  mapType: 6  flags: 0
+mapID: 2266  name: Millenia's Threshold  parentMapID: 2025  mapType: 4  flags: 0
+mapID: 2268  name: Amirdrassil  parentMapID: 2057  mapType: 3  flags: 4

@@ -80,14 +80,14 @@ function WPS:GetItemCategory(itemID)
     end
 end
 
-function WPS:GetIconIndent(itemID)
-    if itemID == WPS.PetCharm then
+function WPS:GetIconIndent(itemCategory)
+    if itemCategory == WPS.REWARD_ITEMCATEGORY.CHARM then
         return 0
-    elseif itemID == WPS.Bandage then
+    elseif itemCategory == WPS.REWARD_ITEMCATEGORY.BANDAGE then
         return 30
-    elseif WPS.BattleStones[itemID] then
+    elseif itemCategory == WPS.REWARD_ITEMCATEGORY.TRAINING_STONE then
         return 60
-    elseif WPS.TrainingStones[itemID] then
+    elseif itemCategory == WPS.REWARD_ITEMCATEGORY.BATTLE_STONE then
         return 90
     else 
         return -30 -- just to notice it

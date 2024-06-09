@@ -3,6 +3,8 @@ local WPS = WorldPetScanner
 WPS.ZoneIDList = {
     [4] = {
         [407] = {scanWorldQuests = false, Name = "Darkmoon Faire"},
+        [84] = {scanWorldQuests = false, Name = "Stormwind City"},
+        [85] = {scanWorldQuests = false, Name = "Orgrimmar"},
     },
     [5] = {
         [422] = {scanWorldQuests = false, Name = "Dread Wastes"},
@@ -76,9 +78,9 @@ WPS.ZoneIDList = {
         [1565] = {scanWorldQuests = false, Name = "Ardenweald"},
         [1670] = {scanWorldQuests = false, Name = "Oribos 1st floor"},
         [1671] = {scanWorldQuests = false, Name = "Oribos 2nd floor"},
-        [1543] = {scanWorldQuests = true, Name = "The Maw"},
+        [1543] = {scanWorldQuests = false, Name = "The Maw"},
         [1961] = {scanWorldQuests = false, Name = "Korthia"},
-        [1970] = {scanWorldQuests = true, Name = "Zereth Mortis"},
+        [1970] = {scanWorldQuests = false, Name = "Zereth Mortis"},
     },
     [10] = {
         [1978] = {scanWorldQuests = true, Name = "Dragon Isles"},  -- covers all main DI zones
@@ -86,7 +88,7 @@ WPS.ZoneIDList = {
         [2023] = {scanWorldQuests = false, Name = "Ohn'ahran Plains"}, --2129(2057)
         [2024] = {scanWorldQuests = false, Name = "The Azure Span"}, --2128(2057), 2132(2024)
         [2025] = {scanWorldQuests = false, Name = "Thaldraszus"}, --2130(2057)
-        [2112] = {scanWorldQuests = true, Name = "Valdrakken"}, --2134(2130), 2135(1978)
+        [2112] = {scanWorldQuests = false, Name = "Valdrakken"}, --2134(2130), 2135(1978)
         [2151] = {scanWorldQuests = false, Name = "The Forbidden Reach"}, -- 2118, 2131(0)
         [2133] = {scanWorldQuests = true, Name = "Zaralek Cavern"},
         [2200] = {scanWorldQuests = false, Name = "Emerald Dream"},
