@@ -237,7 +237,7 @@ WPS.TaskData = {
         rewards = {
             [1] = {
                 type = WPS.REWARD_TYPE.PET,
-                creatureID = 353206,
+                creatureID = 179008,
                 spellID = 353230,
                 creatureName = "Lil' Abom",
                 note = "His 5 body parts are scattered around the questing area. Collect and combine into the pet.\n  -Lil' Abom Head - 32.2 56.0 | 30.3 63.3 | 27.4 56.6\n  -Lil' Abom Spare Arm - 33.3 65.8 | 39.2 66.5\n  -Lil' Abom Torso - 36.4 64.4 | 39.9 62.6 (cave ent:36.9 67.4)\n  -Lil' Abom Legs - 29.4 67.2\n  -Lil' Abom Right Hand - back of cave on left 38.5 58.5"
@@ -750,7 +750,7 @@ WPS.TaskData = {
         rewards = {
             [1] = {
                 type = WPS.REWARD_TYPE.PET_VIA_ITEM,
-                creatureID = 174478,
+                creatureID = 162012,
                 spellID = 315370,
                 creatureName = "Wicked Lurker",
                 itemID = 174478,
@@ -854,7 +854,7 @@ WPS.TaskData = {
             questName = "Swarming Souls",
             npcID = 170048,
             npcName = "Manifestation of Wrath",
-            note = "Option1: Deliver souls to the Avowed Ritualist for a chance to spawn the Manifestation of Wrath\n for 9% loot drop of the [Bottled Up Rage]\nOption2: kill the Prideful Hulk rare at 68,82 for a 5% loot drop chance.\nKill Leeched Souls to spawn the rare."
+            note = "Option1: Deliver souls to the Avowed Ritualist for a chance to spawn the Manifestation of Wrath\n  for 9% loot drop of the [Bottled Up Rage]\nOption2: kill the Prideful Hulk rare at 68,82 for a 5% loot drop chance.\n  Kill Leeched Souls to spawn the rare."
         },
         rewards = {
             [1] = {
@@ -998,6 +998,34 @@ WPS.TaskData = {
                 creatureID = 192259,
                 creatureName = "Storm-Touched Bluefeather",
                 note = "Battle one and capture it during any storm event in Thaldraszus"
+            },
+        }
+    },
+    {
+        trigger = {
+            type = WPS.TRIGGER_TYPE.AURA,
+            auraID = 335150,
+            auraName = "Sign of the Destroyer",
+            auraDescription = "Cataclysm Timewalking",
+            isTimewalking = true,
+        },
+        challenge = {
+            type = WPS.CHALLENGE_TYPE.RARE_KILL,
+            expansionID = 4,
+            zoneID = 198,
+            npcID = 52530,
+            npcName = "Alysrazor <Timewalking Firelands>",
+            note = "1. Kill Alysrazor during a Firelands Timewalking raid (must be timewalking)\n2. Loot 20x[Inert Phoenix Ash] from fire elementals in Un'Goro Crater\n3. Find 10x [Sacred Phoenix Ash] in Spires of Arak\n4. Purchase [Phoneix Ash Talisman] from Zektar in Spires of Arak (52,50)\n5. Turn in the talisman to Tarjin the Blind in Waking Shores(16,63)"
+        },
+        rewards = {
+            [1] = {
+                type = WPS.REWARD_TYPE.PET_VIA_ITEM,
+                creatureID = 171136,
+                spellID = 375084,
+                creatureName = "Phoenix Wishwing",
+                itemID = 199099,
+                itemName = "Glittering Phoenix Ember",
+                note = "A rather long gathering chain",
             },
         }
     },

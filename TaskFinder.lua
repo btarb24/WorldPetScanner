@@ -1,7 +1,6 @@
 local WPS = WorldPetScanner
 
 function WPS:ScanWorldQuests()
-	self:Debug("ScanWorldQuests")
     local scannedQuestList = {}
     local questsToRetry = {}
     local worldQuestTaskResults = {}
@@ -38,7 +37,7 @@ function WPS:ScanWorldQuests()
 		end
 	end
 
-    return scannedQuestList, worldQuestTaskResults
+    return scannedQuestList, worldQuestTaskResults, questsToRetry
 end
 
 function WPS:ProcessTaskData(mode, scannedQuestList, worldQuestTaskResults)
@@ -48,25 +47,25 @@ function WPS:ProcessTaskData(mode, scannedQuestList, worldQuestTaskResults)
         if (mode == "report" and taskData.excludeFromReport) then
             --skip
         elseif triggerType == WPS.TRIGGER_TYPE.AURA then
-            WPS:ProcessAuraTrigger(taskData)
+            WPS:ProcessAuraTrigger(mode, taskData)
         elseif triggerType == WPS.TRIGGER_TYPE.WORLD_QUEST or triggerType == WPS.TRIGGER_TYPE.DAILY_QUEST then
-            WPS:ProcessQuestTrigger(taskData, scannedQuestList, worldQuestTaskResults)
+            WPS:ProcessQuestTrigger(mode, taskData, scannedQuestList, worldQuestTaskResults)
         elseif triggerType == WPS.TRIGGER_TYPE.ACHIEVEMENT then
-            WPS:ProcessAchievementTrigger(taskData)
+            WPS:ProcessAchievementTrigger(mode, taskData)
         elseif triggerType == WPS.TRIGGER_TYPE.AREA_POI then
-            WPS:ProcessAreaPoiTrigger(taskData)
+            WPS:ProcessAreaPoiTrigger(mode, taskData)
         end
     end
 end
 
-function WPS:ProcessAuraTrigger(taskData)
+function WPS:ProcessAuraTrigger(mode, taskData)
     local playerAura = C_UnitAuras.GetPlayerAuraBySpellID(taskData.trigger.auraID)
     if (playerAura) then
-        table.insert(self.taskList, Task:new(taskData.trigger, taskData.challenge, taskData.rewards))
+        WPS:AddTask(mode, taskData)
     end
 end
 
-function WPS:ProcessQuestTrigger(taskData, scannedQuestList, worldQuestTaskResults)
+function WPS:ProcessQuestTrigger(mode, taskData, scannedQuestList, worldQuestTaskResults)
     local satisfied = false
     if (taskData.trigger.questEvaluationType == WPS.QUEST_EVAL_TYPE.FLAG) then
         satisfied = not C_QuestLog.IsQuestFlaggedCompleted(taskData.trigger.questID)
@@ -77,8 +76,11 @@ function WPS:ProcessQuestTrigger(taskData, scannedQuestList, worldQuestTaskResul
         if (questFound) then
             local existingTask = worldQuestTaskResults[taskData.trigger.questID]
             if (taskData.challenge.checkForExistingTask and existingTask) then
-                for _, rewardData in pairs(taskData.rewards) do
-                    existingTask:AddReward(Reward:new(rewardData))
+                local rewards = WPS:CleanRewards(mode, taskData)
+                if (not WPS:IsEmpty(rewards)) then
+                    for _, rewardData in pairs(rewards) do
+                        existingTask:AddReward(Reward:new(rewardData))
+                    end
                 end
             else
                 satisfied = true
@@ -87,25 +89,56 @@ function WPS:ProcessQuestTrigger(taskData, scannedQuestList, worldQuestTaskResul
     end
 
     if (satisfied) then
-        table.insert(self.taskList, Task:new(taskData.trigger, taskData.challenge, taskData.rewards))
+        WPS:AddTask(mode, taskData)
     end
 end
 
-function WPS:ProcessAchievementTrigger(taskData)
+function WPS:ProcessAchievementTrigger(mode, taskData)
     local completed = select(4, GetAchievementInfo(taskData.trigger.achievementID))
     if not completed then
-        table.insert(self.taskList, Task:new(taskData.trigger, taskData.challenge, taskData.rewards))
+        WPS:AddTask(mode, taskData)
     end
 end
 
-function WPS:ProcessAreaPoiTrigger(taskData)
+function WPS:ProcessAreaPoiTrigger(mode, taskData)
     for _, entry in pairs(taskData.trigger.areaPOIList) do
         if C_AreaPoiInfo.GetAreaPOISecondsLeft(entry.areaPoiID) then
             taskData.trigger.areaPoiID = entry.areaPoiID
-            table.insert(self.taskList, Task:new(taskData.trigger, taskData.challenge, taskData.rewards))
+            WPS:AddTask(mode, taskData)
             return
         end
     end
+end
+
+function WPS:AddTask(mode, taskData)
+    if mode == "test" then
+        table.insert(self.taskList, Task:new(taskData.trigger, taskData.challenge, taskData.rewards))
+        return
+    end
+
+    local rewards = WPS:CleanRewards(mode, taskData)
+    if not WPS:IsEmpty(rewards) then
+        table.insert(self.taskList, Task:new(taskData.trigger, taskData.challenge, rewards))
+    end
+end
+
+function WPS:CleanRewards(mode, taskData)
+    if mode == "test" then
+        return taskData.rewards
+    end
+
+    local keptRewards = {}
+    for i, reward in pairs(taskData.rewards) do        
+        if reward.type == WPS.REWARD_TYPE.PET or reward.type == WPS.REWARD_TYPE.PET_VIA_ITEM then
+            if not WPS.PetList[reward.creatureID] then
+                table.insert(keptRewards, reward)
+            end
+        else
+            table.insert(keptRewards, reward)
+        end
+    end
+
+    return keptRewards
 end
 
 function WPS:GetDesiredQuestRewards(questID, expansionID, zoneID)

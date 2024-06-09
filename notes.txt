@@ -12,8 +12,7 @@ https://www.townlong-yak.com/framexml/live/Blizzard_APIDocumentation
 
 /dump C_AreaPoiInfo.GetAreaPOISecondsLeft(poiInfo.areaPoiID)
 /dump C_AreaPoiInfo.GetAreaPOIInfo(uiMapID, areaPoiID)
-
-
+/dump C_AreaPoiInfo.GetAreaPOIForMap(uiMapID)
 
 TRADING POST / PRIME / STORE DEPARTURE / Stuff like Snowy Owl etc - Only the starting and ending dates
 
@@ -31,7 +30,7 @@ Top-down both expansions and patches, rarer events precede more frequent ones
 x        Valdrakken: Little Scales Daycare (6 minor dailies + 5 pairs of major dailies giving rise to 30 combinations, can be automated)
         Zaralek Cavern: The rare cycles, 3 days + 1 absent, only Glimmerogg and Loamm are important, they're opposites (Day 2 of one is Day 0 of the other, this can also be automated)
 +        The Forbidden Reach WQ-s (which of the 4 elementals is up)
-*        Elemental Storms are not predictable and reliable anymore, but you perhaps should know about this
++        Elemental Storms are not predictable and reliable anymore, but you perhaps should know about this
 
     Shadowlands
 +        Zereth Mortis: Cluck, Cluck, Boom (daily) 
@@ -82,3 +81,6 @@ Weekly and semi-weekly content
 	Vale of Eternal Blossoms 
 	
     Krasarang Wilds: Wanderer's Festival Hatchlings every Sunday (doesn't seem like it should be there but don't feel like creating a single line for MoP
+
+
+    Anthea, Bert, Crysa, Darkmoon Faire

@@ -12,6 +12,7 @@ WPS.Expansions = {
     [6] = {
         Name = "Warlords of Draenor",
         Collapsed = false,
+        CollapseInReportMode = true,
     },
     [7] = {
         Name = "Legion",

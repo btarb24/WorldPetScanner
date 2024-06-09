@@ -134,8 +134,7 @@ function WPS:OnEnable()
 			if name == "PLAYER_ENTERING_WORLD" then
 				self:ScheduleTimer(
 					function()
-						--self:BuildPetList()
-						self.PetList = {}
+						self:BuildPetList()
 					end,
 					self.db.profile.options.delay
 				)
@@ -165,15 +164,20 @@ end
 
 function dataobj:OnClick(button)
 	if button == "LeftButton" then
-		WPS:Show()
-		start = 2135
+		local mode
+		if IsShiftKeyDown() then
+			mode = "report"
+		elseif IsControlKeyDown() then 
+			mode = "test"
+		end
+		WPS:Show(mode)
+		
 	elseif button == "RightButton" then
 		Settings.OpenToCategory("WorldPetScanner")
 	end
 end
 
 function WPS:Show(mode)
-	self:Debug("Show")
 	if (self.PopUp) then		
 		WPS:CloseWindow()
 		return
@@ -186,20 +190,27 @@ function WPS:Show(mode)
 	self.hasTrainingStones = false
 	self.trainingStoneTotals = {}
 
-	local scannedQuestList, worldQuestTaskResults = self:ScanWorldQuests()
+	local scannedQuestList, worldQuestTaskResults, questsToRetry = self:ScanWorldQuests()
 	self:ProcessTaskData(mode, scannedQuestList, worldQuestTaskResults)
 
+	local isPartialResult = not WPS:IsEmpty(questsToRetry)
 	local sortedTasks = self:SortTaskList(self.taskList)
-	self:ShowWindow(sortedTasks)
+	self:ShowWindow(sortedTasks, mode, isPartialResult)
 end
 
 function WPS:BuildPetList()
 	self.PetList = {}
-	local total = C_PetJournal.GetNumPets()
+	local total, collected = C_PetJournal.GetNumPets()
 	for i = 1, total do
 		local petID, _, owned, _, _, _, _, _, _, _, companionID = C_PetJournal.GetPetInfoByIndex(i)
-		if (petID ~= nil) then
-			table.Insert(PetList, petID, owned)
+		if companionID == 200770 or companionID == 200692 or companionID == 200690 or companionID == 200693 then 
+			WPS:Debug(companionID)
+			WPS:Debug(owned)
+			WPS:Debug(petID)
+		end
+		
+		if (petID ~= nil and owned) then
+			table.insert(self.PetList, companionID, owned)
 		end
 	end
 end

@@ -5,6 +5,7 @@ WPS.ZoneIDList = {
         [407] = {scanWorldQuests = false, Name = "Darkmoon Faire"},
         [84] = {scanWorldQuests = false, Name = "Stormwind City"},
         [85] = {scanWorldQuests = false, Name = "Orgrimmar"},
+        [198] = {scanWorldQuests = false, Name = "Mount Hyjal"},
     },
     [5] = {
         [422] = {scanWorldQuests = false, Name = "Dread Wastes"},
