@@ -47,6 +47,10 @@ WPS.TrainingStones = {
     [116424] = true  -- aqauatic
 }
 
+WPS.NotableItems = {
+    [183111] = true, -- Animated Ulna
+}
+
 WPS.Textures = {
     [WPS.PetCharm] = 2004597, -- charm
     [WPS.Bandage] = 133675, -- bandage

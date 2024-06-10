@@ -4,6 +4,7 @@ function WPS:ScanWorldQuests()
     local scannedQuestList = {}
     local questsToRetry = {}
     local worldQuestTaskResults = {}
+    local questsWithNotableRewards = {}
 	for expansionID in pairs(self.ZoneIDList) do
 		for mapID, mapDetails in pairs(self.ZoneIDList[expansionID]) do
 			if mapDetails.scanWorldQuests then
@@ -20,7 +21,7 @@ function WPS:ScanWorldQuests()
                                 table.insert(questsToRetry, questID, {expansionID = expansionID , zoneID = zoneID})
                             end
                             
-                            local directQuestRewards = WPS:GetDesiredQuestRewards(questID, expansionID, zoneID)
+                            local directQuestRewards = WPS:GetDesiredQuestRewards(taskPOIs[i], expansionID, zoneID, questsWithNotableRewards)
                             
                             if (not WPS:IsEmpty(directQuestRewards)) then
                                 local trigger = {type = WPS.TRIGGER_TYPE.WORLD_QUEST, questID = questID}
@@ -36,10 +37,10 @@ function WPS:ScanWorldQuests()
 		end
 	end
 
-    return scannedQuestList, worldQuestTaskResults, questsToRetry
+    return scannedQuestList, worldQuestTaskResults, questsWithNotableRewards, questsToRetry
 end
 
-function WPS:ProcessTaskData(mode, scannedQuestList, worldQuestTaskResults)
+function WPS:ProcessTaskData(mode, scannedQuestList, worldQuestTaskResults, questsWithNotableRewards)
     for _,taskData in pairs(WPS.TaskData) do
         local triggerType = taskData.trigger.type
 
@@ -53,6 +54,8 @@ function WPS:ProcessTaskData(mode, scannedQuestList, worldQuestTaskResults)
             WPS:ProcessAchievementTrigger(mode, taskData)
         elseif triggerType == WPS.TRIGGER_TYPE.AREA_POI then
             WPS:ProcessAreaPoiTrigger(mode, taskData)
+        elseif triggerType == WPS.TRIGGER_TYPE.WORLD_QUEST_REWARD then
+        WPS:ProcessWorldQuestRewardTrigger(mode, taskData, questsWithNotableRewards)
         end
     end
 end
@@ -109,10 +112,27 @@ function WPS:ProcessAreaPoiTrigger(mode, taskData)
     end
 end
 
+function WPS:ProcessWorldQuestRewardTrigger(mode, taskData, questsWithNotableRewards)
+    local questMatch = questsWithNotableRewards[taskData.trigger.itemID]
+    if questMatch then
+        taskData.challenge.questID = questMatch.questId
+        WPS:AddTask(mode, taskData)
+        return
+    end
+end
+
 function WPS:AddTask(mode, taskData)
     if mode == "test" or mode == "report" then
         table.insert(self.taskList, Task:new(taskData.trigger, taskData.challenge, taskData.rewards))
         return
+    end
+
+    if (taskData.additionalCriteria) then
+        for questId, necessaryCompletionState in taskData.additionalCriteria do
+            if not C_QuestLog.IsQuestFlaggedCompleted(questId) == necessaryCompletionState then
+                return
+            end
+        end
     end
 
     local rewards = WPS:CleanRewards(mode, taskData)
@@ -140,8 +160,9 @@ function WPS:CleanRewards(mode, taskData)
     return keptRewards
 end
 
-function WPS:GetDesiredQuestRewards(questID, expansionID, zoneID)
+function WPS:GetDesiredQuestRewards(taskPOI, expansionID, zoneID, questsWithNotableRewards)
 	local rewards = {}
+    local questID = taskPOI.questId
 	local numQuestRewards = GetNumQuestLogRewards(questID)
 
 	if numQuestRewards > 0 then		
@@ -149,12 +170,12 @@ function WPS:GetDesiredQuestRewards(questID, expansionID, zoneID)
 			local itemName, itemTexture, quantity, quality, isUsable, itemID = GetQuestLogRewardInfo(rewardIndex, questID)
             if (not itemID) then
                 WPS:Debug("missing itemID for quest: "..questID.." idx: ".. rewardIndex)
-            else
-                if (WPS:GetItemCategory(itemID) ~= nil) then
-                    local reward = Reward:newItem(itemID, quantity, true)
-                    WPS:UpdateItemTotals(itemID, quantity)
-                    table.insert(rewards, reward)
-                end
+            elseif WPS:GetItemCategory(itemID) ~= nil then
+                local reward = Reward:newItem(itemID, quantity, true)
+                WPS:UpdateItemTotals(itemID, quantity)
+                table.insert(rewards, reward)
+            elseif WPS.NotableItems[itemID] then
+                table.insert(questsWithNotableRewards, itemID, taskPOI)
             end
 		end			
 	end

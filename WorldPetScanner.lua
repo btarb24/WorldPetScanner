@@ -190,8 +190,8 @@ function WPS:Show(mode)
 	self.hasTrainingStones = false
 	self.trainingStoneTotals = {}
 
-	local scannedQuestList, worldQuestTaskResults, questsToRetry = self:ScanWorldQuests()
-	self:ProcessTaskData(mode, scannedQuestList, worldQuestTaskResults)
+	local scannedQuestList, worldQuestTaskResults, questsWithNotableRewards, questsToRetry = self:ScanWorldQuests()
+	self:ProcessTaskData(mode, scannedQuestList, worldQuestTaskResults, questsWithNotableRewards)
 
 	local isPartialResult = not WPS:IsEmpty(questsToRetry)
 	local sortedTasks = self:SortTaskList(self.taskList)

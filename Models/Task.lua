@@ -62,7 +62,7 @@ end
 function Task:Time()
     if self.trigger.type == WPS.TRIGGER_TYPE.AURA then
         return nil
-    elseif self.trigger.type == WPS.TRIGGER_TYPE.WORLD_QUEST or self.trigger.type == WPS.TRIGGER_TYPE.DAILY_QUEST then
+    elseif self.trigger.type == WPS.TRIGGER_TYPE.WORLD_QUEST or self.trigger.type == WPS.TRIGGER_TYPE.DAILY_QUEST or self.trigger.type == WPS.TRIGGER_TYPE.WORLD_QUEST_REWARD then
         return C_TaskQuest.GetQuestTimeLeftMinutes(self.challenge.questID)
     elseif self.trigger.type == WPS.TRIGGER_TYPE.AREA_POI then
         return C_AreaPoiInfo.GetAreaPOISecondsLeft(self.trigger.areaPoiID)/60

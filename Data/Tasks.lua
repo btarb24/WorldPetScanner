@@ -6,6 +6,7 @@ WPS.TRIGGER_TYPE = {
     AURA = "aura",
     ACHIEVEMENT = "achievement",
     AREA_POI = "areapoi",
+    WORLD_QUEST_REWARD = "worldQuestReward",
 }
 WPS.QUEST_EVAL_TYPE = {
     FLAG = "flaggedCompletion",
@@ -615,7 +616,7 @@ WPS.TaskData = {
             },
             [3] = {
                 type = WPS.REWARD_TYPE.PET,
-                creatureID = 184186,
+                creatureID = 184186, 
                 spellID = 364259,
                 creatureName = "Archetype of Renewal",
                 chance = true
@@ -1026,6 +1027,36 @@ WPS.TaskData = {
                 itemID = 199099,
                 itemName = "Glittering Phoenix Ember",
                 note = "A rather long gathering chain",
+            },
+        }
+    },
+    {
+        trigger = {
+            type = WPS.TRIGGER_TYPE.WORLD_QUEST_REWARD,
+            itemID = 183111,
+            itemName = "Animated Ulna",
+            questNotCompleted = 62318
+        },
+        additionalCriteria = {
+            questsCompleted = {
+                [62318] = false --clicking the Skeletal Hand Fragments 
+            }
+        },
+        challenge = {
+            type = WPS.CHALLENGE_TYPE.QUEST,
+            expansionID = 9,
+            zoneID = 1536,
+            note = "1. Complete the pet battle to receive [Animated Ulna]\n2. Purchase [Animated Radius] from Nalcorn Talsen (50,34) for 250 charms\n3. Travel to 47.39,62.11 and click the Skeletal Hand Fragments to receive [Flexing Phalanges]\n    -Once per character. Only available if you have both of the Animated items\n5. Combine the items to receive the [Carpal] pet"
+        },
+        rewards = {
+            [1] = {
+                type = WPS.REWARD_TYPE.PET_VIA_ITEM,
+                creatureID = 173847,
+                spellID = 340717,
+                creatureName = "Carpal",
+                itemID = 183111,
+                itemName = "Animated Ulna",
+                note = "1. Complete the pet battle to receive [Animated Ulna]\n2. Purchase [Animated Radius] from an Undying Army Quartermaster for 250 charms\n3. Travel to 47.39,62.11 and click the Skeletal Hand Fragments to receive [Flexing Phalanges]\n    -Once per character. Only available if you have both of the Animated items\n5. Combine the items to receive the [Carpal] pet"
             },
         }
     },

@@ -87,6 +87,8 @@ function WPS:CreateQTip(mode, isPartialResult)
             end
         end)
 
+
+
         tooltip:SetColumnLayout(5, "LEFT", "LEFT", "LEFT", "LEFT", "LEFT")
         tooltip:AddLine(" ")
         tooltip:AddLine(" ")
@@ -107,7 +109,7 @@ function WPS:UpdateQTip(tasks, mode, isPartialResult)
         local currentExpansionID, currentZoneID
         for _, task in ipairs(tasks) do
 
---expansion
+ --expansion
             if (task.challenge.expansionID ~= currentExpansionID) then
                 tooltip:AddLine(string.format("|cff33ff33%s|r", task:ExpansionName()))                
                 tooltip:SetLineScript(tooltip:GetLineCount(), "OnMouseDown",
@@ -125,7 +127,7 @@ function WPS:UpdateQTip(tasks, mode, isPartialResult)
             if not WPS.Expansions[task.challenge.expansionID].Collapsed and not collapseForReport then
                 tooltip:AddLine()
                 lineNum = lineNum + 1
---zone col
+ --zone col
                 local colNum = 1
                 if (task.challenge.zoneID ~= currentZoneID) then
                     tooltip:SetCell(lineNum, colNum, "     " .. task:ZoneName(), "LEFT", 1, LibQTip.LabelProvider, nil, nil, 200, 200)
@@ -136,14 +138,14 @@ function WPS:UpdateQTip(tasks, mode, isPartialResult)
                     tooltip:AddColumn()
                 end
 
---time col
+ --time col
                tooltip:SetCell(lineNum, colNum, self:formatTime(task:Time()), "LEFT", 1, LibQTip.LabelProvider, nil, nil, 100, 55)
                colNum = colNum + 1
                if colNum > tooltip:GetColumnCount() then
                    tooltip:AddColumn()
                end
 
---challenge col
+ --challenge col
                 tooltip:SetCell(lineNum, colNum, task.challenge:Display())
                 if task.challenge:HasTooltip() then
                     tooltip:SetCellScript(
@@ -177,7 +179,7 @@ function WPS:UpdateQTip(tasks, mode, isPartialResult)
                     tooltip:AddColumn()
                 end
 
---reward icon col
+ --reward icon col
                 
                 if (not task.iconReward) then
                     tooltip:SetCell(lineNum, colNum, "", "LEFT", 1, LibQTip.LabelProvider, nil, nil, 100, 55)
@@ -214,7 +216,7 @@ function WPS:UpdateQTip(tasks, mode, isPartialResult)
                     end
                 end
 
--- reward link col
+ -- reward link col
                 for idx =1, #task.nonIconRewards do
                     local reward = task.nonIconRewards[idx]
                     colNum = colNum + 1
