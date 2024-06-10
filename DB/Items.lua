@@ -85,9 +85,9 @@ function WPS:GetIconIndent(itemCategory)
         return 0
     elseif itemCategory == WPS.REWARD_ITEMCATEGORY.BANDAGE then
         return 30
-    elseif itemCategory == WPS.REWARD_ITEMCATEGORY.TRAINING_STONE then
-        return 60
     elseif itemCategory == WPS.REWARD_ITEMCATEGORY.BATTLE_STONE then
+        return 60
+    elseif itemCategory == WPS.REWARD_ITEMCATEGORY.TRAINING_STONE then
         return 90
     else 
         return -30 -- just to notice it

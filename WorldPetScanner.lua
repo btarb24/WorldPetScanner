@@ -202,13 +202,7 @@ function WPS:BuildPetList()
 	self.PetList = {}
 	local total, collected = C_PetJournal.GetNumPets()
 	for i = 1, total do
-		local petID, _, owned, _, _, _, _, _, _, _, companionID = C_PetJournal.GetPetInfoByIndex(i)
-		if companionID == 200770 or companionID == 200692 or companionID == 200690 or companionID == 200693 then 
-			WPS:Debug(companionID)
-			WPS:Debug(owned)
-			WPS:Debug(petID)
-		end
-		
+		local petID, _, owned, _, _, _, _, _, _, _, companionID = C_PetJournal.GetPetInfoByIndex(i)		
 		if (petID ~= nil and owned) then
 			table.insert(self.PetList, companionID, owned)
 		end

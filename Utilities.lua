@@ -99,7 +99,7 @@ function WPS:BuildPetSpellLink(spellID, name)
     if (spellID) then
         return "|cff67BCFF|Hspell:".. spellID .. "|h[" .. name .."]|h|r"
     else
-        return "|cff67BCFF|[" .. name .."]|r"
+        return "|cff67BCFF[" .. name .."]|r"
     end
 end
 

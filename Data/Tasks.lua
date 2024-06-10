@@ -576,7 +576,7 @@ WPS.TaskData = {
         rewards = {
             [1] = {
                 type = WPS.REWARD_TYPE.PET,
-                creatureID = 189366,
+                creatureID = 184189,
                 spellID = 364178,
                 creatureName = "Violent Poultrid",
                 note = "Complete the quest for a chance at receiving [Schematic: Violent Poultrid]. Protoform synthesis costs:\n  200x Genesis Mote\n  1x Glimmer of Malice\n  1x Poultrid Lattice",
@@ -958,13 +958,13 @@ WPS.TaskData = {
             type = WPS.CHALLENGE_TYPE.PETBATTLE,
             expansionID = 10,
             zoneID = 2024,
-            npcID = 192257,
+            npcID = 192256,
             npcName = "Storm-Touched Ottuk",
         },
         rewards = {
             [1] = {
                 type = WPS.REWARD_TYPE.PET,
-                creatureID = 192257,
+                creatureID = 192256,
                 creatureName = "Storm-Touched Ottuk",
                 note = "Battle one and capture it during any storm event in The Azure Span"
             },

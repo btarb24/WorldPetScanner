@@ -17,7 +17,6 @@ function WPS:ScanWorldQuests()
                             table.insert(scannedQuestList, questID, {expansionID = expansionID , zoneID = zoneID})
                             if HaveQuestData(questID) and not HaveQuestRewardData(questID) then
                                 C_TaskQuest.RequestPreloadRewardData(questID)
-                                self:Debug("RequestPreloadRewardData"..questID)
                                 table.insert(questsToRetry, questID, {expansionID = expansionID , zoneID = zoneID})
                             end
                             
@@ -111,7 +110,7 @@ function WPS:ProcessAreaPoiTrigger(mode, taskData)
 end
 
 function WPS:AddTask(mode, taskData)
-    if mode == "test" then
+    if mode == "test" or mode == "report" then
         table.insert(self.taskList, Task:new(taskData.trigger, taskData.challenge, taskData.rewards))
         return
     end
@@ -123,7 +122,7 @@ function WPS:AddTask(mode, taskData)
 end
 
 function WPS:CleanRewards(mode, taskData)
-    if mode == "test" then
+    if mode == "test" or mode == "report" then
         return taskData.rewards
     end
 
