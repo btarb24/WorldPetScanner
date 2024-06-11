@@ -55,7 +55,9 @@ function WPS:ProcessTaskData(mode, scannedQuestList, worldQuestTaskResults, ques
         elseif triggerType == WPS.TRIGGER_TYPE.AREA_POI then
             WPS:ProcessAreaPoiTrigger(mode, taskData)
         elseif triggerType == WPS.TRIGGER_TYPE.WORLD_QUEST_REWARD then
-        WPS:ProcessWorldQuestRewardTrigger(mode, taskData, questsWithNotableRewards)
+            WPS:ProcessWorldQuestRewardTrigger(mode, taskData, questsWithNotableRewards)
+        elseif triggerType == WPS.TRIGGER_TYPE.PERIODIC_ROTATION then
+            WPS:ProcessPeriodicRotationTrigger(mode, taskData)
         end
     end
 end
@@ -118,6 +120,23 @@ function WPS:ProcessWorldQuestRewardTrigger(mode, taskData, questsWithNotableRew
         taskData.challenge.questID = questMatch.questId
         WPS:AddTask(mode, taskData)
         return
+    end
+end
+
+function WPS:ProcessPeriodicRotationTrigger(mode, taskData)
+    local daysSinceStartDay = WPS:GetDaysSince(taskData.trigger.startYear, taskData.trigger.startDayOfYear)
+    local secondsInADay = 86400
+
+    for i = 0, taskData.trigger.daysDuration-1 do
+        if (daysSinceStartDay - i) % taskData.trigger.daysInCycle == 0 then
+            if (taskData.trigger.daysDuration == 1) then
+                taskData.trigger.timeRemaining = GetQuestResetTime()
+            else
+                taskData.trigger.timeRemaining = GetQuestResetTime() + ((taskData.trigger.daysDuration -1 - i)*secondsInADay)
+            end
+            WPS:AddTask(mode, taskData)
+            return
+        end
     end
 end
 

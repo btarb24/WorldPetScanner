@@ -39,6 +39,64 @@ function WPS:GetExpansionByMapId(mapId)
     return -1
 end
 
+function WPS:GetDaysSince(startYear, startDayOfYear)
+    local currentYear = date("%Y")
+    local currentDayOfYear = date("*t").yday
+
+    local yearsDelta = currentYear - startYear
+    local daysDelta
+    if (yearsDelta == 0) then
+        daysDelta = currentDayOfYear - startDayOfYear
+    else
+        for i = startYear, currentYear do
+            if (i == startYear) then
+                if (WPS:IsLeapYear(i)) then
+                    daysDelta = 366-startDayOfYear
+                else
+                    daysDelta = 365-startDayOfYear
+                end
+            elseif (i < currentYear) then
+                if (WPS:IsLeapYear(i)) then
+                    daysDelta = daysDelta + 366
+                else
+                    daysDelta = daysDelta + 365
+                end
+            else
+                daysDelta = daysDelta + currentDayOfYear
+            end
+        end
+    end
+
+    if (WPS:ShouldReduceServerDayBy1DueToResetTime()) then
+        return daysDelta -1
+    else
+        return daysDelta
+    end
+end
+
+function WPS:IsLeapYear(year)
+    local knownLeapYear = 2024
+    local dif = year - knownLeapYear
+    return dif % 4 == 0
+end
+
+function WPS:ShouldReduceServerDayBy1DueToResetTime()
+    local serverTimeH, serverTimeM = GetGameTime()
+    local resetSeconds = GetQuestResetTime()
+    
+    local hourDelta = 23 - serverTimeH
+    local minDelta = 60 - serverTimeM
+    local secondsUntilEndOfDay = (hourDelta*3600) + (minDelta*60)
+    local questResetIsToday = resetSeconds < secondsUntilEndOfDay
+    
+    local currentDayOfYear = date("*t").yday
+    if (questResetIsToday) then 
+        return true
+    else
+        return false
+    end
+end
+
 function WPS:formatTime(t)
     if (not t) then return "-" end
 
@@ -47,15 +105,22 @@ function WPS:formatTime(t)
 	d = math.floor(t / 60 / 24)
 	h = math.floor(t / 60 % 24)
 	m = t % 60
+    local mString = m
+    if m < 10 then
+        mString = "0"
+    else
+        mString = m
+    end
+
 	if d > 0 then
 		if h > 0 then
-			timeString = string.format("%dd %dh", d, h)
+			timeString = string.format("%dd %dh %dm", d, h, mString)
 		else
 			timeString = string.format("%dd", d)
 		end
 	elseif h > 0 then
 		if m > 0 then
-			timeString = string.format("%dh %dm", h, m)
+			timeString = string.format("%dh %dm", h, mString)
 		else
 			timeString = string.format("%dh", h)
 		end

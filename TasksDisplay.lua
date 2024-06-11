@@ -46,7 +46,7 @@ function WPS:CreateQTip(mode, isPartialResult)
         if isPartialResult then
             partialDisplay = "  |cffFF0000[PARTIAL RESULT]|r"
         end
-        tooltip.date:SetText(WPS:GetRegionName() .. "   " .. date("%b %d, 20%y  %H:%M") .. modeDisplay .. partialDisplay)
+        tooltip.date:SetText(WPS:GetRegionName() .. "   " .. date("%b %d, %Y  %H:%M") .. modeDisplay .. partialDisplay)
 -- item totals    
         local charms = self.charmTotal.."x".."|T"..WPS.Textures[WPS.PetCharm]..":20:20:0:0:32:32:2:30:2:30|t"        
         local bandages  = self.bandageTotal.."x".."|T"..WPS.Textures[WPS.Bandage]..":20:20:0:0:32:32:2:30:2:30|t"
@@ -139,7 +139,7 @@ function WPS:UpdateQTip(tasks, mode, isPartialResult)
                 end
 
  --time col
-               tooltip:SetCell(lineNum, colNum, self:formatTime(task:Time()), "LEFT", 1, LibQTip.LabelProvider, nil, nil, 100, 55)
+               tooltip:SetCell(lineNum, colNum, self:formatTime(task:Time()), "RIGHT", 1, LibQTip.LabelProvider, nil, nil, 140, 55)
                colNum = colNum + 1
                if colNum > tooltip:GetColumnCount() then
                    tooltip:AddColumn()

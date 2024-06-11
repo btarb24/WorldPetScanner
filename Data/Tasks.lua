@@ -7,6 +7,7 @@ WPS.TRIGGER_TYPE = {
     ACHIEVEMENT = "achievement",
     AREA_POI = "areapoi",
     WORLD_QUEST_REWARD = "worldQuestReward",
+    PERIODIC_ROTATION = 'periodicRotation',
 }
 WPS.QUEST_EVAL_TYPE = {
     FLAG = "flaggedCompletion",
@@ -279,7 +280,7 @@ WPS.TaskData = {
             },
             [2] = {
                 type = WPS.REWARD_TYPE.PET_VIA_ITEM,
-                creatureID = 179083,
+                creatureID = 179132,
                 spellID = 353451,
                 creatureName = "Copperback Etherwyrm",
                 itemID = 185993,
@@ -349,7 +350,7 @@ WPS.TaskData = {
         rewards = {
             [1] = {
                 type = WPS.REWARD_TYPE.PET,
-                creatureID = 128158,
+                creatureID = 115784,
                 spellID = 230073,
                 creatureName = "Snowfeather Hatchling",
                 note = "Kill the Snowfeather Matriarch (48,10) and then click the Orphaned Snowfeather (32,28)"
@@ -535,11 +536,19 @@ WPS.TaskData = {
         }
     },
     {
+        -- this quest is only detectible if you're standing in the emerald dream
+        --trigger = {
+        --    type = WPS.TRIGGER_TYPE.WORLD_QUEST,
+        --    questID = 78370,
+        --    questName = "Claws for Concern",
+        --    questEvaluationType = WPS.QUEST_EVAL_TYPE.ISACTIVE,
+        --},
         trigger = {
-            type = WPS.TRIGGER_TYPE.WORLD_QUEST,
-            questID = 78370,
-            questName = "Claws for Concern",
-            questEvaluationType = WPS.QUEST_EVAL_TYPE.ISACTIVE,
+            type = WPS.TRIGGER_TYPE.PERIODIC_ROTATION,
+            startDayOfYear = 146,
+            startYear = 2024,
+            daysInCycle = 16,
+            daysDuration = 3
         },
         challenge = {
             type = WPS.CHALLENGE_TYPE.QUEST,
@@ -552,10 +561,181 @@ WPS.TaskData = {
         rewards = {
             [1] = {
                 type = WPS.REWARD_TYPE.PET,
-                creatureID = 179132,
+                creatureID = 212206,
                 spellID = 426060,
                 creatureName = "Blueloo",
                 note = "Find all 18 birds for the Fiends in Feathers achievement. Best to do it in a raid so you can get them all in one event."
+            },
+        }
+    },
+    {
+        trigger = {
+            type = WPS.TRIGGER_TYPE.PERIODIC_ROTATION, --ZaralekCavern | Loamm
+            startDayOfYear = 160,
+            startYear = 2024,
+            daysInCycle = 4,
+            daysDuration = 3
+        },
+        challenge = {
+            type = WPS.CHALLENGE_TYPE.RARE_KILL,
+            expansionID = 10,
+            zoneID = 2133,
+            npcID = 203618,
+            npcName = "Klakatak",
+            note = "1. kill Klakatak for a 52% chance to drop [Clacking Claw]\n2. Use the Clacking Claw to gain a transformation buff for 10 minutes.\n3. Locate a Curious Top Hat critter and interact with it to gain the Lord Stantley pet.\n   -Some top hat locations: 39,64 | 44,78 | 52,67 | 62,70 | 63,56"
+        },
+        rewards = {
+            [1] = {
+                type = WPS.REWARD_TYPE.PET,
+                creatureID = 204263,
+                spellID = 408027,
+                creatureName = "Lord Stantley",
+                chance = true,
+                note = "1. kill Klakatak for a 52% chance to drop [Clacking Claw]\n2. Use the Clacking Claw to gain a transformation buff for 10 minutes.\n3. Locate a Curious Top Hat critter and interact with it to gain the Lord Stantley pet.\n   -Some top hat locations: 39,64 | 44,78 | 52,67 | 62,70 | 63,56"
+            },
+        }
+    },
+    {
+        trigger = {
+            type = WPS.TRIGGER_TYPE.PERIODIC_ROTATION, --ZaralekCavern | Loamm
+            startDayOfYear = 160,
+            startYear = 2024,
+            daysInCycle = 4,
+            daysDuration = 3
+        },
+        challenge = {
+            type = WPS.CHALLENGE_TYPE.RARE_KILL,
+            expansionID = 10,
+            zoneID = 2133,
+            npcID = 203462,
+            npcName = "Kob'rok",
+        },
+        rewards = {
+            [1] = {
+                type = WPS.REWARD_TYPE.PET,
+                creatureID = 204345,
+                spellID = 408264,
+                creatureName = "Skaarn",
+                chance = true,
+                note = "5% drop chance"
+            },
+            [2] = {
+                type = WPS.REWARD_TYPE.PET_VIA_ITEM,
+                creatureID = 204343,
+                spellID = 408257,
+                creatureName = "Salverun",
+                itemID = 206021,
+                itemName = "Kob'rok's Luminescent Scale",
+                chance = false,
+                note = "1. Complete nifflin digs to receive [Ouroboros Tablet].\n2. Keep completing digs and using tablets until your tablet says to Combine with the Luminescent Scale.\3. Kill Kob'rok for an 100% chance at the [Kob'rok's Luminescent Scale]\n4. Combine the scale with a [Ouroboros Tablet] and you'll receive Salverun"
+            },
+        }
+    },
+    {
+        trigger = {
+            type = WPS.TRIGGER_TYPE.PERIODIC_ROTATION, --ZaralekCavern | Loamm
+            startDayOfYear = 160,
+            startYear = 2024,
+            daysInCycle = 4,
+            daysDuration = 3
+        },
+        challenge = {
+            type = WPS.CHALLENGE_TYPE.RARE_KILL,
+            expansionID = 10,
+            zoneID = 2133,
+            npcID = 203593,
+            npcName = "Underlight Queen",
+            note = "Kill for a 5% drop chance of the Teardrop Moth pet"
+        },
+        rewards = {
+            [1] = {
+                type = WPS.REWARD_TYPE.PET,
+                creatureID = 204363,
+                spellID = 408317,
+                creatureName = "Teardrop Moth",
+                chance = true,
+                note = "5% drop chance"
+            },
+        }
+    },
+    {
+        trigger = {
+            type = WPS.TRIGGER_TYPE.PERIODIC_ROTATION, --ZaralekCavern | Glimmerogg
+            startDayOfYear = 162,
+            startYear = 2024,
+            daysInCycle = 4,
+            daysDuration = 3
+        },
+        challenge = {
+            type = WPS.CHALLENGE_TYPE.RARE_KILL,
+            expansionID = 10,
+            zoneID = 2133,
+            npcID = 203468,
+            npcName = "Aquifon",
+            note = "Kill for a 5% drop chance of the Aquapo pet"
+        },
+        rewards = {
+            [1] = {
+                type = WPS.REWARD_TYPE.PET,
+                creatureID = 204359,
+                spellID = 408308,
+                creatureName = "Aquapo",
+                chance = true,
+                note = "5% drop chance"
+            },
+        }
+    },
+    {
+        trigger = {
+            type = WPS.TRIGGER_TYPE.PERIODIC_ROTATION, --ZaralekCavern | Glimmerogg
+            startDayOfYear = 162,
+            startYear = 2024,
+            daysInCycle = 4,
+            daysDuration = 3
+        },
+        challenge = {
+            type = WPS.CHALLENGE_TYPE.RARE_KILL,
+            expansionID = 10,
+            zoneID = 2133,
+            npcID = 203621,
+            npcName = "Brullo the Strong",
+            note = "Kill for a 3% drop chance of the Brul pet"
+        },
+        rewards = {
+            [1] = {
+                type = WPS.REWARD_TYPE.PET,
+                creatureID = 204303,
+                spellID = 408110,
+                creatureName = "Brul",
+                chance = true,
+                note = "3% drop chance"
+            },
+        }
+    },
+    {
+        trigger = {
+            type = WPS.TRIGGER_TYPE.PERIODIC_ROTATION, --ZaralekCavern | Glimmerogg
+            startDayOfYear = 162,
+            startYear = 2024,
+            daysInCycle = 4,
+            daysDuration = 3
+        },
+        challenge = {
+            type = WPS.CHALLENGE_TYPE.RARE_KILL,
+            expansionID = 10,
+            zoneID = 2133,
+            npcID = 203625,
+            npcName = "Karokta",
+            note = "Kill for a 5% drop chance of the Ridged Shalewing pet"
+        },
+        rewards = {
+            [1] = {
+                type = WPS.REWARD_TYPE.PET,
+                creatureID = 204339,
+                spellID = 408251,
+                creatureName = "Ridged Shalewing",
+                chance = true,
+                note = "5% drop chance"
             },
         }
     },
@@ -860,8 +1040,8 @@ WPS.TaskData = {
         rewards = {
             [1] = {
                 type = WPS.REWARD_TYPE.PET_VIA_ITEM,
-                creatureID = 171136,
-                spellID = 333819,
+                creatureID = 171118,
+                spellID = 333795,
                 creatureName = "Wrathling",
                 itemID = 183859,
                 itemName = "Bottled Up Rage",
@@ -1021,12 +1201,12 @@ WPS.TaskData = {
         rewards = {
             [1] = {
                 type = WPS.REWARD_TYPE.PET_VIA_ITEM,
-                creatureID = 171136,
+                creatureID = 189117,
                 spellID = 375084,
                 creatureName = "Phoenix Wishwing",
                 itemID = 199099,
                 itemName = "Glittering Phoenix Ember",
-                note = "A rather long gathering chain",
+                note = "1. Kill Alysrazor during a Firelands Timewalking raid (must be timewalking)\n2. Loot 20x[Inert Phoenix Ash] from fire elementals in Un'Goro Crater\n3. Find 10x [Sacred Phoenix Ash] in Spires of Arak\n4. Purchase [Phoneix Ash Talisman] from Zektar in Spires of Arak (52,50)\n5. Turn in the talisman to Tarjin the Blind in Waking Shores(16,63)"
             },
         }
     },

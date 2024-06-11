@@ -62,6 +62,8 @@ end
 function Task:Time()
     if self.trigger.type == WPS.TRIGGER_TYPE.AURA then
         return nil
+    elseif self.trigger.type == WPS.TRIGGER_TYPE.PERIODIC_ROTATION then
+        return self.trigger.timeRemaining / 60
     elseif self.trigger.type == WPS.TRIGGER_TYPE.WORLD_QUEST or self.trigger.type == WPS.TRIGGER_TYPE.DAILY_QUEST or self.trigger.type == WPS.TRIGGER_TYPE.WORLD_QUEST_REWARD then
         return C_TaskQuest.GetQuestTimeLeftMinutes(self.challenge.questID)
     elseif self.trigger.type == WPS.TRIGGER_TYPE.AREA_POI then

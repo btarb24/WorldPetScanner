@@ -8,11 +8,26 @@ https://www.townlong-yak.com/framexml/live/Blizzard_APIDocumentation
 
 /dump C_UnitAuras.GetPlayerAuraBySpellID(11426)
 
-/dump C_TaskQuest.GetQuestsForPlayerByMapID(2022)
+/dump C_TaskQuest.GetQuestsForPlayerByMapID(2200)
 
 /dump C_AreaPoiInfo.GetAreaPOISecondsLeft(poiInfo.areaPoiID)
 /dump C_AreaPoiInfo.GetAreaPOIInfo(uiMapID, areaPoiID)
 /dump C_AreaPoiInfo.GetAreaPOIForMap(uiMapID)
+
+/script print(_VERSION)   .. prints the lua version in wow
+
+
+IDEAS
+* levelling
+* all capturable pets by zone
+* listen to events to remove completed Items
+* click to popout a Crafted
+* alert when specifics are IsActive
+* constantly available pets via rares/boss/worldItem/etc
+* achievements
+* new layout?
+* close button
+
 
 TRADING POST / PRIME / STORE DEPARTURE / Stuff like Snowy Owl etc - Only the starting and ending dates
 
@@ -26,9 +41,9 @@ Dailies, WQ, etc by expansion
 Top-down both expansions and patches, rarer events precede more frequent ones
 
     Dragonflight
-*        Emerald Dream: Claws for Concern (every 16 days so can be automated)
++        Emerald Dream: Claws for Concern (every 16 days so can be automated)
 x        Valdrakken: Little Scales Daycare (6 minor dailies + 5 pairs of major dailies giving rise to 30 combinations, can be automated)
-        Zaralek Cavern: The rare cycles, 3 days + 1 absent, only Glimmerogg and Loamm are important, they're opposites (Day 2 of one is Day 0 of the other, this can also be automated)
++        Zaralek Cavern: The rare cycles, 3 days + 1 absent, only Glimmerogg and Loamm are important, they're opposites (Day 2 of one is Day 0 of the other, this can also be automated)
 +        The Forbidden Reach WQ-s (which of the 4 elementals is up)
 +        Elemental Storms are not predictable and reliable anymore, but you perhaps should know about this
 
@@ -38,6 +53,8 @@ x        Valdrakken: Little Scales Daycare (6 minor dailies + 5 pairs of major d
         Korthia: Local Reagents/Oozing with Character (they give awards per covenant and we just say it's possible) 
 				 Zelnithop spawning (Based on dailies present in the area)
         The Maw (same patch as Korthia): Tormentors of Torghast with Gralebboih every 18 hours (can be automated)
+                https://docs.google.com/spreadsheets/d/1BIYbUzajF79PJU_t3LcnjLxsojv9KTd6WMW_Owg0WZo/edit?gid=1003989903#gid=1003989903
+                
         Animated Ulna and Bunny Soul whichever zone they're up in +
 		Revendreth: 
 +		A Stolen Stone Fiend, 
@@ -72,7 +89,7 @@ Callings
 Weekly and semi-weekly content
 *    The Waking Shores Brightblade's Bones (it's a WQ but lasts 3,5 days and resets you know when)
       Maw Assaults (all but Venthyr. 
-*			Necro: Lil' Abom (Crafted from treasure pieces scattered round the assault zone) Fodder (completion cache)
++			Necro: Lil' Abom (Crafted from treasure pieces scattered round the assault zone) Fodder (completion cache)
 *			Fae: Infused Etherwyrm if A Shady Place is up + Invasive Buzzer (completion cache)
 +			Kyrian: sly, copperback, screecher
     Uldum 
@@ -84,3 +101,33 @@ Weekly and semi-weekly content
 
 
     Anthea, Bert, Crysa, Darkmoon Faire
+
+
+Quests once per character
+Mylune - Everbloom Peachick (For The Birds quest)
+Cowled Ranger - Sentinel's Companion (The Huntresses quest)
+16 DAY ROTATIONS    
+            EU              BOTH                AM/OCE
+    day0    mylune
+    day1    CowledRanger                        Mylune
+    day2    
+    day3                    ClawsForConcern
+    day4    Mylune          ClawsForConcern
+    day5                    ClawsForConcern     Mylune
+    day6
+    day7
+    day8    Mylune          
+    day9                                        Mylune
+    day10
+    day11
+    day12   Mylune          
+    day13                                       Mylune
+    day14                                       CowledRanger
+    day15
+
+
++    Zaralek Cavern rare spawn zone ROTATIONS
+    https://www.wowhead.com/news/zaralek-cavern-rare-and-event-rotation-explained-how-do-rares-work-332822
+
+
+    Training in X quests -- see colored table in Remte's chat
