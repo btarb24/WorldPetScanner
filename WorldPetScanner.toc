@@ -26,7 +26,8 @@ Data\Tasks.lua
 
 Locales.lua
 Utilities.lua
-TasksDisplay.lua
+Display\ReportDisplay.lua
+Display\MainDisplay.lua
 TaskFinder.lua
 WorldPetScanner.lua
 Options.lua

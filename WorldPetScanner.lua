@@ -134,7 +134,7 @@ function WPS:OnEnable()
 			if name == "PLAYER_ENTERING_WORLD" then
 				self:ScheduleTimer(
 					function()
-						self:BuildPetList()
+						--self:BuildPetList()
 					end,
 					self.db.profile.options.delay
 				)
@@ -173,7 +173,7 @@ function dataobj:OnClick(button)
 		WPS:Show(mode)
 		
 	elseif button == "RightButton" then
-		Settings.OpenToCategory("WorldPetScanner")
+		WPS:Show("report")
 	end
 end
 
@@ -189,13 +189,19 @@ function WPS:Show(mode)
 	self.blueStoneTotal = 0;
 	self.hasTrainingStones = false
 	self.trainingStoneTotals = {}
+	self:BuildPetList()
 
 	local scannedQuestList, worldQuestTaskResults, questsWithNotableRewards, questsToRetry = self:ScanWorldQuests()
 	self:ProcessTaskData(mode, scannedQuestList, worldQuestTaskResults, questsWithNotableRewards)
 
 	local isPartialResult = not WPS:IsEmpty(questsToRetry)
 	local sortedTasks = self:SortTaskList(self.taskList)
-	self:ShowWindow(sortedTasks, mode, isPartialResult)
+	local groupedTasks = self:GroupTasks(sortedTasks)
+	if (mode == "report") then
+		self:ShowReportWindow(sortedTasks, mode, isPartialResult)
+	else
+		self:ShowMainWindow(groupedTasks, mode, isPartialResult)
+	end
 end
 
 function WPS:BuildPetList()
@@ -218,4 +224,44 @@ function WPS:Sort(a, b)
 	if a.challenge.expansionID > b.challenge.expansionID then return true end
 	if a.challenge.expansionID < b.challenge.expansionID then return false end
 	return a.challenge.zoneID < b.challenge.zoneID
+end
+
+function WPS:GroupTasks(list)
+	local groupedTasks = {}
+
+    local currentExpansionID, currentZoneID
+	for _, task in ipairs(list) do
+		if (task.challenge.expansionID ~= currentExpansionID) then			
+			local expansion = {
+				[ID] = task.challenge.expansionID
+			}
+			expansion.zones = {
+				[1] = {
+					ID = task.challenge.zoneID,
+					tasks = {
+						[1] = task
+					}
+				}
+			}
+			table.insert(groupedTasks, #groupedTasks+1, expansion)
+		elseif currentZoneID ~= task.challenge.zoneID then
+			local expansion = groupedTasks[#groupedTasks]
+			local zone = {
+				ID = task.challenge.zoneID,
+				tasks = {
+					[1] = task
+				}
+			}
+			table.insert(expansion.zones, #expansion.zones+1, zone)
+		else
+			local expansion = groupedTasks[#groupedTasks]
+			local zone = expansion.zones[#expansion.zones]
+			table.insert(zone.tasks, #zone.tasks+1, task)
+		end
+
+		currentExpansionID = task.challenge.expansionID
+		currentZoneID = task.challenge.zoneID
+	end
+
+	return groupedTasks
 end

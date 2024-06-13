@@ -16,17 +16,22 @@ https://www.townlong-yak.com/framexml/live/Blizzard_APIDocumentation
 
 /script print(_VERSION)   .. prints the lua version in wow
 
+TODO
+* move tabs to their own lua files
+* Add a refresh button
+  - keep all tasks, even if have pet 
+  - can then swap between modes without refreshing Data
+  - make sure we always save the 'end time' rather than 'time remaining'
+* falkosaur pet food
 
 IDEAS
 * levelling
 * all capturable pets by zone
 * listen to events to remove completed Items
-* click to popout a Crafted
+* click to popout a Card
 * alert when specifics are IsActive
 * constantly available pets via rares/boss/worldItem/etc
 * achievements
-* new layout?
-* close button
 
 
 TRADING POST / PRIME / STORE DEPARTURE / Stuff like Snowy Owl etc - Only the starting and ending dates
@@ -131,3 +136,21 @@ Cowled Ranger - Sentinel's Companion (The Huntresses quest)
 
 
     Training in X quests -- see colored table in Remte's chat
+
+
+/framestack
+
+
+5 layers: BACKGROUND, BORDER, ARTWORK, OVERLAY, HIGHLIGHT
+    
+--set frame bg to green
+    bla.bg = child:Createtexture(nill, "BACKGROUND")
+    bla.bg:SetAllPoints(true)
+    bla.bg:SetColorTexture(.2, .6, 0, .8)
+
+Exporting builtin content:
+    create shortcut of wow.exe and append " -console" to the target
+    run wow.exe and press Tilde to open console
+        exportInterfaceFiles colored
+        exportInterfaceFiles art
+    2 new folders created in the _retail folder.  BlizzardInterfaceCode, BlizzardInterfaceArt

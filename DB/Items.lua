@@ -84,6 +84,7 @@ function WPS:GetItemCategory(itemID)
     end
 end
 
+WPS.IconColumnWidth = 120
 function WPS:GetIconIndent(itemCategory)
     if itemCategory == WPS.REWARD_ITEMCATEGORY.CHARM then
         return 0

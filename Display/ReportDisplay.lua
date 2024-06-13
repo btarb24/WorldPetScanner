@@ -4,7 +4,7 @@ local WPS = WorldPetScanner
 local L = WPS.L
 local LibQTip = LibStub("LibQTip-1.0")
 
-function WPS:CreateQTip(mode, isPartialResult)
+function WPS:CreateReportQTip(mode, isPartialResult)
     if not LibQTip:IsAcquired("WorldPetScanner") and not self.tooltip then
         local tooltip = LibQTip:Acquire("WorldPetScanner", 2, "LEFT", "LEFT")
         self.tooltip = tooltip
@@ -47,7 +47,7 @@ function WPS:CreateQTip(mode, isPartialResult)
             partialDisplay = "  |cffFF0000[PARTIAL RESULT]|r"
         end
         tooltip.date:SetText(WPS:GetRegionName() .. "   " .. date("%b %d, %Y  %H:%M") .. modeDisplay .. partialDisplay)
--- item totals    
+-- item totals
         local charms = self.charmTotal.."x".."|T"..WPS.Textures[WPS.PetCharm]..":20:20:0:0:32:32:2:30:2:30|t"        
         local bandages  = self.bandageTotal.."x".."|T"..WPS.Textures[WPS.Bandage]..":20:20:0:0:32:32:2:30:2:30|t"
         local blueStones  = self.blueStoneTotal.."x".."|T"..WPS.Textures[WPS.BlueStone]..":20:20:0:0:32:32:2:30:2:30|t"
@@ -99,7 +99,7 @@ function WPS:CreateQTip(mode, isPartialResult)
     end
 end
 
-function WPS:UpdateQTip(tasks, mode, isPartialResult)
+function WPS:UpdateReportQTip(tasks, mode, isPartialResult)
     local tooltip = self.tooltip
     if WPS:IsEmpty(tasks) then
         self:Debug("NO_QUESTS")
@@ -116,7 +116,7 @@ function WPS:UpdateQTip(tasks, mode, isPartialResult)
                     function()
                         WPS.Expansions[task.challenge.expansionID].Collapsed = not WPS.Expansions[task.challenge.expansionID].Collapsed
                         WPS:CloseWindow()
-                        WPS:ShowWindow(tasks, mode, isPartialResult, tooltip:GetLeft(), tooltip:GetTop())
+                        WPS:ShowReportWindow(tasks, mode, isPartialResult, tooltip:GetLeft(), tooltip:GetTop())
                     end
                 )
                 lineNum = lineNum + 1
@@ -258,7 +258,7 @@ function WPS:UpdateQTip(tasks, mode, isPartialResult)
     tooltip:Show()
 end
 
-function WPS:ShowWindow(tasks, mode, isPartialResult, left, top)
+function WPS:ShowReportWindow(tasks, mode, isPartialResult, left, top)
     if not self.PopUp then
         local PopUp = CreateFrame("Frame", "WorldPetScannerPopUp", UIParent)
 
@@ -301,15 +301,15 @@ function WPS:ShowWindow(tasks, mode, isPartialResult, left, top)
             end
         )
     end
-    
+
     local PopUp = self.PopUp
     PopUp:Show()
 
-    self:CreateQTip(mode, isPartialResult)
+    self:CreateReportQTip(mode, isPartialResult)
     self.tooltip:SetAutoHideDelay()
     self.tooltip:ClearAllPoints()
     self.tooltip:SetPoint("TOPLEFT", PopUp, "TOPLEFT", 2, -27)
-    self:UpdateQTip(tasks, mode, isPartialResult)
+    self:UpdateReportQTip(tasks, mode, isPartialResult)
     PopUp:SetWidth(self.tooltip:GetWidth() + 8.5)
     PopUp:SetHeight(self.tooltip:GetHeight() + 32)
     PopUp:SetScale(self.tooltip:GetScale())
