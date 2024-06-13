@@ -13,20 +13,15 @@ Models\Challenge.lua
 Models\Reward.lua
 Models\Task.lua
 
-DB\Data\Legion.lua
-DB\Data\BattleForAzeroth.lua
-DB\Data\Shadowlands.lua
-DB\Data\Dragonflight.lua
-
 DB\Expansions.lua
 DB\Zones.lua
 DB\Items.lua
 
 Data\Tasks.lua
 
-Locales.lua
 Utilities.lua
 Display\ReportDisplay.lua
+Display\TodaysEvents.lua
 Display\MainDisplay.lua
 TaskFinder.lua
 WorldPetScanner.lua

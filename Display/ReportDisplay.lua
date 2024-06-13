@@ -1,15 +1,19 @@
 ---@class WorldPetScanner
 local WPS = WorldPetScanner
+local DISPLAY = WPS.DISPLAY
+local UTILITIES = WPS.UTILITIES
+local DATA = WPS.DATA
+local EXPANSIONS = WPS.EXPANSIONS
 
 local L = WPS.L
 local LibQTip = LibStub("LibQTip-1.0")
 
-function WPS:CreateReportQTip(mode, isPartialResult)
-    if not LibQTip:IsAcquired("WorldPetScanner") and not self.tooltip then
+local function CreateQTip(mode, isPartialResult)
+    if not LibQTip:IsAcquired("WorldPetScanner") and not DISPLAY.Report.tooltip then
         local tooltip = LibQTip:Acquire("WorldPetScanner", 2, "LEFT", "LEFT")
-        self.tooltip = tooltip
+        DISPLAY.Report.tooltip = tooltip
 
---title icon
+ --title icon
         if (tooltip.icon) then
             tooltip.icon:SetTexture()
         end
@@ -19,7 +23,7 @@ function WPS:CreateReportQTip(mode, isPartialResult)
         tooltip.icon:SetTexture("Interface\\Icons\\Inv_pet_maggot")
         tooltip.icon:SetTexCoord(.1,.9,.1,.9)
         tooltip.icon:SetPoint("TOPLEFT", 10, -10);
---app title
+ --app title
         if (tooltip.title) then
             tooltip.title:SetText()
         end
@@ -28,7 +32,7 @@ function WPS:CreateReportQTip(mode, isPartialResult)
         tooltip.title:SetFont(fontFile, fontHeight+3, fontFlags)
         tooltip.title:SetPoint("TOPLEFT", 53, -12);
         tooltip.title:SetText("World Pet Scanner")
---date 
+ --date 
         if (tooltip.date) then
             tooltip.date:SetText()
         end
@@ -46,14 +50,14 @@ function WPS:CreateReportQTip(mode, isPartialResult)
         if isPartialResult then
             partialDisplay = "  |cffFF0000[PARTIAL RESULT]|r"
         end
-        tooltip.date:SetText(WPS:GetRegionName() .. "   " .. date("%b %d, %Y  %H:%M") .. modeDisplay .. partialDisplay)
--- item totals
-        local charms = self.charmTotal.."x".."|T"..WPS.Textures[WPS.PetCharm]..":20:20:0:0:32:32:2:30:2:30|t"        
-        local bandages  = self.bandageTotal.."x".."|T"..WPS.Textures[WPS.Bandage]..":20:20:0:0:32:32:2:30:2:30|t"
-        local blueStones  = self.blueStoneTotal.."x".."|T"..WPS.Textures[WPS.BlueStone]..":20:20:0:0:32:32:2:30:2:30|t"
+        tooltip.date:SetText(UTILITIES:GetRegionName() .. "   " .. date("%b %d, %Y  %H:%M") .. modeDisplay .. partialDisplay)
+ -- item totals
+        local charms = DATA.charmTotal.."x".."|T"..WPS.Textures[WPS.PetCharm]..":20:20:0:0:32:32:2:30:2:30|t"        
+        local bandages  = DATA.bandageTotal.."x".."|T"..WPS.Textures[WPS.Bandage]..":20:20:0:0:32:32:2:30:2:30|t"
+        local blueStones  = DATA.blueStoneTotal.."x".."|T"..WPS.Textures[WPS.BlueStone]..":20:20:0:0:32:32:2:30:2:30|t"
         local trainingStones = ""
         for tStone, _ in pairs(WPS.TrainingStones) do
-            local tStoneTotal = self.trainingStoneTotals[tStone]
+            local tStoneTotal = DATA.trainingStoneTotals[tStone]
             if tStoneTotal ~= nil then
                 trainingStones = trainingStones .. tStoneTotal.."x".."|T"..WPS.Textures[tStone]..":20:20:0:0:32:32:2:30:2:30|t   "
             end
@@ -67,7 +71,7 @@ function WPS:CreateReportQTip(mode, isPartialResult)
         tooltip.totals1:SetFont(fontFile, fontHeight-1, fontFlags)
         tooltip.totals1:SetPoint("TOPRIGHT", -4, -7);
         tooltip.totals1:SetText(header)
---pet/ach totals
+ --pet/ach totals
         local achievs = "0x".."|TInterface\\Icons\\Achievement_guildperk_mrpopularity:18:18:0:0:32:32:2:30:2:30|t"
         local certainPets  = "0x".."|TInterface\\Icons\\Tracking_WildPet:20|t"
         local chancePets  = "0x".."|TInterface\\Buttons\\UI-GroupLoot-Dice-Up:20|t"
@@ -99,32 +103,31 @@ function WPS:CreateReportQTip(mode, isPartialResult)
     end
 end
 
-function WPS:UpdateReportQTip(tasks, mode, isPartialResult)
-    local tooltip = self.tooltip
-    if WPS:IsEmpty(tasks) then
-        self:Debug("NO_QUESTS")
-        tooltip:AddLine(L["NO_QUESTS"])
+local function UpdateReportQTip(mode, isPartialResult)
+    local tooltip = DISPLAY.Report.tooltip
+    if UTILITIES:IsEmpty(DATA.sortedTasks) then
+        tooltip:AddLine("There are currently no tasks available")
     else        
         local lineNum = tooltip:GetLineCount()
         local currentExpansionID, currentZoneID
-        for _, task in ipairs(tasks) do
+        for _, task in ipairs(DATA.sortedTasks) do
 
  --expansion
             if (task.challenge.expansionID ~= currentExpansionID) then
                 tooltip:AddLine(string.format("|cff33ff33%s|r", task:ExpansionName()))                
                 tooltip:SetLineScript(tooltip:GetLineCount(), "OnMouseDown",
                     function()
-                        WPS.Expansions[task.challenge.expansionID].Collapsed = not WPS.Expansions[task.challenge.expansionID].Collapsed
-                        WPS:CloseWindow()
-                        WPS:ShowReportWindow(tasks, mode, isPartialResult, tooltip:GetLeft(), tooltip:GetTop())
+                        EXPANSIONS.list[task.challenge.expansionID].Collapsed = not EXPANSIONS.list[task.challenge.expansionID].Collapsed
+                        DISPLAY.Report:CloseWindow()
+                        WPS:ShowReportWindow(DATA.sortedTasks, mode, isPartialResult, tooltip:GetLeft(), tooltip:GetTop())
                     end
                 )
                 lineNum = lineNum + 1
                 currentExpansionID = task.challenge.expansionID
             end
 
-            local collapseForReport = mode == "report" and WPS.Expansions[task.challenge.expansionID].CollapseInReportMode
-            if not WPS.Expansions[task.challenge.expansionID].Collapsed and not collapseForReport then
+            local collapseForReport = mode == "report" and EXPANSIONS.list[task.challenge.expansionID].CollapseInReportMode
+            if not EXPANSIONS.list[task.challenge.expansionID].Collapsed and not collapseForReport then
                 tooltip:AddLine()
                 lineNum = lineNum + 1
  --zone col
@@ -139,7 +142,7 @@ function WPS:UpdateReportQTip(tasks, mode, isPartialResult)
                 end
 
  --time col
-               tooltip:SetCell(lineNum, colNum, self:formatTime(task:Time()), "RIGHT", 1, LibQTip.LabelProvider, nil, nil, 140, 55)
+               tooltip:SetCell(lineNum, colNum, UTILITIES:formatTime(task:Time()), "RIGHT", 1, LibQTip.LabelProvider, nil, nil, 140, 55)
                colNum = colNum + 1
                if colNum > tooltip:GetColumnCount() then
                    tooltip:AddColumn()
@@ -258,11 +261,11 @@ function WPS:UpdateReportQTip(tasks, mode, isPartialResult)
     tooltip:Show()
 end
 
-function WPS:ShowReportWindow(tasks, mode, isPartialResult, left, top)
-    if not self.PopUp then
+function DISPLAY.Report:ShowWindow(mode, isPartialResult, left, top)
+    if not DISPLAY.Report.PopUp then
         local PopUp = CreateFrame("Frame", "WorldPetScannerPopUp", UIParent)
 
-        self.PopUp = PopUp
+        DISPLAY.Report.PopUp = PopUp
         PopUp:SetMovable(true)
         PopUp:EnableMouse(true)
         PopUp:RegisterForDrag("LeftButton")
@@ -297,40 +300,36 @@ function WPS:ShowReportWindow(tasks, mode, isPartialResult, left, top)
 
         PopUp:SetScript("OnHide",
             function()
-                WPS:CloseWindow()
+                DISPLAY.Report:CloseWindow()
             end
         )
     end
 
-    local PopUp = self.PopUp
+    local PopUp = DISPLAY.Report.PopUp
     PopUp:Show()
 
-    self:CreateReportQTip(mode, isPartialResult)
-    self.tooltip:SetAutoHideDelay()
-    self.tooltip:ClearAllPoints()
-    self.tooltip:SetPoint("TOPLEFT", PopUp, "TOPLEFT", 2, -27)
-    self:UpdateReportQTip(tasks, mode, isPartialResult)
-    PopUp:SetWidth(self.tooltip:GetWidth() + 8.5)
-    PopUp:SetHeight(self.tooltip:GetHeight() + 32)
-    PopUp:SetScale(self.tooltip:GetScale())
-    if (PopUp:GetEffectiveScale() ~= self.tooltip:GetEffectiveScale()) then
-        PopUp:SetScale(PopUp:GetScale() * self.tooltip:GetEffectiveScale() / PopUp:GetEffectiveScale())
+    CreateQTip(mode, isPartialResult)
+    DISPLAY.Report.tooltip:SetAutoHideDelay()
+    DISPLAY.Report.tooltip:ClearAllPoints()
+    DISPLAY.Report.tooltip:SetPoint("TOPLEFT", PopUp, "TOPLEFT", 2, -27)
+    UpdateReportQTip(mode, isPartialResult)
+    local tooltip = DISPLAY.Report.tooltip
+    PopUp:SetWidth(tooltip:GetWidth() + 8.5)
+    PopUp:SetHeight(tooltip:GetHeight() + 32)
+    PopUp:SetScale(tooltip:GetScale())
+    if (PopUp:GetEffectiveScale() ~= tooltip:GetEffectiveScale()) then
+        PopUp:SetScale(PopUp:GetScale() * tooltip:GetEffectiveScale() / PopUp:GetEffectiveScale())
     end
-    PopUp:SetFrameLevel(self.tooltip:GetFrameLevel())
-
-    if self.db.profile.options.popupRememberPosition then
-        PopUp:ClearAllPoints()
-        PopUp:SetPoint("TOPLEFT", UIParent, "BOTTOMLEFT", self.db.profile.options.popupX, self.db.profile.options.popupY)
-    end
+    PopUp:SetFrameLevel(tooltip:GetFrameLevel())
 end
 
-function WPS:CloseWindow()
-    if self.tooltip ~= nil then
-        self.tooltip:Release()
-        self.tooltip = nil
+function DISPLAY.Report:CloseWindow()
+    if DISPLAY.Report.tooltip ~= nil then
+        DISPLAY.Report.tooltip:Release()
+        DISPLAY.Report.tooltip = nil
     end
-    if (self.PopUp) then
-        self.PopUp:Hide()
-        self.PopUp = nil
+    if (DISPLAY.Report.PopUp) then
+        DISPLAY.Report.PopUp:Hide()
+        DISPLAY.Report.PopUp = nil
     end
 end

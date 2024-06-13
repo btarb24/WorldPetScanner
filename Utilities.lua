@@ -1,86 +1,16 @@
 ---@class WorldPetScanner
 local WPS = WorldPetScanner
+local UTILITIES = WPS.UTILITIES
 
 local GetTitleForQuestID = C_QuestLog.GetTitleForQuestID
 
-ExpansionByZoneID = {
-    -- BfA
-    [1169] = 8 -- Tol Dagor
-}
-
-WPS.debug = true
-function WPS:Debug(...)
-	if self.debug == true then
-		print(...)
-	end
-end
-
-function WPS:IsEmpty(table)
-    if table == nil then
-        return true
-    end
-
-    return next(table) == nil
-end
-
-function WPS:GetExpansionByMapId(mapId)
-    if ExpansionByZoneID[mapId] then
-        return ExpansionByZoneID[mapId]
-    end
-
-    for expansion, zones in pairs(WPS.ZoneIDList) do
-        for mapID, mapEnabled in pairs(zones) do
-            if mapId == mapID then
-                return expansion
-            end
-        end
-    end
-
-    return -1
-end
-
-function WPS:GetDaysSince(startYear, startDayOfYear)
-    local currentYear = date("%Y")
-    local currentDayOfYear = date("*t").yday
-
-    local yearsDelta = currentYear - startYear
-    local daysDelta
-    if (yearsDelta == 0) then
-        daysDelta = currentDayOfYear - startDayOfYear
-    else
-        for i = startYear, currentYear do
-            if (i == startYear) then
-                if (WPS:IsLeapYear(i)) then
-                    daysDelta = 366-startDayOfYear
-                else
-                    daysDelta = 365-startDayOfYear
-                end
-            elseif (i < currentYear) then
-                if (WPS:IsLeapYear(i)) then
-                    daysDelta = daysDelta + 366
-                else
-                    daysDelta = daysDelta + 365
-                end
-            else
-                daysDelta = daysDelta + currentDayOfYear
-            end
-        end
-    end
-
-    if (WPS:ShouldReduceServerDayBy1DueToResetTime()) then
-        return daysDelta -1
-    else
-        return daysDelta
-    end
-end
-
-function WPS:IsLeapYear(year)
+local function IsLeapYear(year)
     local knownLeapYear = 2024
     local dif = year - knownLeapYear
     return dif % 4 == 0
 end
 
-function WPS:ShouldReduceServerDayBy1DueToResetTime()
+local function ShouldReduceServerDayBy1DueToResetTime()
     local serverTimeH, serverTimeM = GetGameTime()
     local resetSeconds = GetQuestResetTime()
     
@@ -97,7 +27,50 @@ function WPS:ShouldReduceServerDayBy1DueToResetTime()
     end
 end
 
-function WPS:formatTime(t)
+function UTILITIES:IsEmpty(table)
+    if table == nil then
+        return true
+    end
+
+    return next(table) == nil
+end
+
+function UTILITIES:GetDaysSince(startYear, startDayOfYear)
+    local currentYear = date("%Y")
+    local currentDayOfYear = date("*t").yday
+
+    local yearsDelta = currentYear - startYear
+    local daysDelta
+    if (yearsDelta == 0) then
+        daysDelta = currentDayOfYear - startDayOfYear
+    else
+        for i = startYear, currentYear do
+            if (i == startYear) then
+                if (IsLeapYear(i)) then
+                    daysDelta = 366-startDayOfYear
+                else
+                    daysDelta = 365-startDayOfYear
+                end
+            elseif (i < currentYear) then
+                if (IsLeapYear(i)) then
+                    daysDelta = daysDelta + 366
+                else
+                    daysDelta = daysDelta + 365
+                end
+            else
+                daysDelta = daysDelta + currentDayOfYear
+            end
+        end
+    end
+
+    if (ShouldReduceServerDayBy1DueToResetTime()) then
+        return daysDelta -1
+    else
+        return daysDelta
+    end
+end
+
+function UTILITIES:formatTime(t)
     if (not t) then return "-" end
 
 	local t = math.floor(t or 0)
@@ -141,7 +114,7 @@ function WPS:formatTime(t)
 	return timeString
 end
 
-function WPS:GetRegionName()
+function UTILITIES:GetRegionName()
     local regionID = GetCurrentRegion()
     if regionID == 1 then
         return "US"
@@ -156,68 +129,57 @@ function WPS:GetRegionName()
     end
 end
 
-function WPS:BuildQuestLink(questID, name)
+function UTILITIES:BuildQuestLink(questID, name)
     return "|cffffff00|Hquest:".. questID .. "|h[" .. name .."]|h|r"
 end
 
-function WPS:BuildPetSpellLink(spellID, name)
-    if (spellID) then
-        return "|cff67BCFF|Hspell:".. spellID .. "|h[" .. name .."]|h|r"
-    else
-        return "|cff67BCFF[" .. name .."]|r"
-    end
+function UTILITIES:SortTaskList(list)
+	table.sort(list, function(a, b) return UTILITIES:Sort(a, b) end)
+	return list
 end
 
-function WPS.GetSpellLink(spellID)
-    return "|cff71d5ff|Hspell:2061:0|h[Flash Heal]|h|r"
+function UTILITIES:Sort(a, b)
+	if a.challenge.expansionID > b.challenge.expansionID then return true end
+	if a.challenge.expansionID < b.challenge.expansionID then return false end
+	return a.challenge.zoneID < b.challenge.zoneID
 end
 
-function WPS:ListZones()
-    
-    local textToShow = ""
-    for n = 1, 3000 do 
-        local info = C_Map.GetMapInfo(n)
-        if (info) then
-            textToShow = textToShow .. "mapID: "..info.mapID .. "  name: " .. info.name .. "  parentMapID: " ..info.parentMapID .. "  mapType: "..info.mapType .. "  flags: " .. info.flags .. "\n"
-        end
-    end
-    WPS:SetTextInFrame(textToShow)
-    
-    local f = CreateFrame("Frame", "MyScrollMessageTextFrame", UIParent)
-    f:SetSize(150, 150)
-    f:SetPoint("CENTER")
-    f:SetFrameStrata("BACKGROUND")
-    f.Close = CreateFrame("Button", "$parentClose", f)
-    f.Close:SetSize(24, 24)
-    f.Close:SetPoint("TOPRIGHT")
-    f.Close:SetNormalTexture("Interface/Buttons/UI-Panel-MinimizeButton-Up")
-    f.Close:SetPushedTexture("Interface/Buttons/UI-Panel-MinimizeButton-Down")
-    f.Close:SetHighlightTexture("Interface/Buttons/UI-Panel-MinimizeButton-Highlight", "ADD")
-    f.Close:SetScript("OnClick", function(self)
-        self:GetParent():Hide()
-    end)
-    f.Select = CreateFrame("Button", "$parentSelect", f, "UIPanelButtonTemplate")
-    f.Select:SetSize(14, 14)
-    f.Select:SetPoint("RIGHT", f.Close, "LEFT")
-    f.Select:SetText("S")
-    f.Select:SetScript("OnClick", function(self)
-        self:GetParent().Text:HighlightText() -- parameters (start, end) or default all
-        self:GetParent().Text:SetFocus()
-    end)
-    
-    f.SF = CreateFrame("ScrollFrame", "$parent_DF", f, "UIPanelScrollFrameTemplate")
-    f.SF:SetPoint("TOPLEFT", f, 12, -30)
-    f.SF:SetPoint("BOTTOMRIGHT", f, -30, 10)
-    f.Text = CreateFrame("EditBox", nil, f)
-    f.Text:SetMultiLine(true)
-    f.Text:SetSize(180, 170)
-    f.Text:SetPoint("TOPLEFT", f.SF)
-    f.Text:SetPoint("BOTTOMRIGHT", f.SF)
-    f.Text:SetMaxLetters(99999)
-    f.Text:SetFontObject(GameFontNormal)
-    f.Text:SetAutoFocus(false)
-    f.Text:SetScript("OnEscapePressed", function(self) self:ClearFocus() end) 
-    f.SF:SetScrollChild(f.Text)
-    
-    f.Text:SetText(textToShow)
+function UTILITIES:GroupTasks(list)
+	local groupedTasks = {}
+
+    local currentExpansionID, currentZoneID
+	for _, task in ipairs(list) do
+		if (task.challenge.expansionID ~= currentExpansionID) then			
+			local expansion = {
+				[ID] = task.challenge.expansionID
+			}
+			expansion.zones = {
+				[1] = {
+					ID = task.challenge.zoneID,
+					tasks = {
+						[1] = task
+					}
+				}
+			}
+			table.insert(groupedTasks, #groupedTasks+1, expansion)
+		elseif currentZoneID ~= task.challenge.zoneID then
+			local expansion = groupedTasks[#groupedTasks]
+			local zone = {
+				ID = task.challenge.zoneID,
+				tasks = {
+					[1] = task
+				}
+			}
+			table.insert(expansion.zones, #expansion.zones+1, zone)
+		else
+			local expansion = groupedTasks[#groupedTasks]
+			local zone = expansion.zones[#expansion.zones]
+			table.insert(zone.tasks, #zone.tasks+1, task)
+		end
+
+		currentExpansionID = task.challenge.expansionID
+		currentZoneID = task.challenge.zoneID
+	end
+
+	return groupedTasks
 end

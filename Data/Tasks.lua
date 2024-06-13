@@ -627,7 +627,7 @@ WPS.TaskData = {
                 itemID = 206021,
                 itemName = "Kob'rok's Luminescent Scale",
                 chance = false,
-                note = "1. Complete nifflin digs to receive [Ouroboros Tablet].\n2. Keep completing digs and using tablets until your tablet says to Combine with the Luminescent Scale.\3. Kill Kob'rok for an 100% chance at the [Kob'rok's Luminescent Scale]\n4. Combine the scale with a [Ouroboros Tablet] and you'll receive Salverun"
+                note = "1. Complete nifflin digs to receive [Ouroboros Tablet].\n2. Keep completing digs and using tablets until your tablet says to Combine with the Luminescent Scale.\n3. Kill Kob'rok for an 100% chance at the [Kob'rok's Luminescent Scale]\n4. Combine the scale with a [Ouroboros Tablet] and you'll receive Salverun"
             },
         }
     },

@@ -1,6 +1,7 @@
 local WPS = WorldPetScanner
+local ZONES = WPS.ZONES
 
-WPS.ZoneIDList = {
+ZONES.list = {
     [4] = {
         [407] = {scanWorldQuests = false, Name = "Darkmoon Faire"},
         [84] = {scanWorldQuests = false, Name = "Stormwind City"},
@@ -98,8 +99,8 @@ WPS.ZoneIDList = {
     }
 }
 
-function WPS:GetZoneName(expansionID, zoneID)
-    local expansionZoneList = WPS.ZoneIDList[expansionID]
+function ZONES:GetName(expansionID, zoneID)
+    local expansionZoneList = ZONES.list[expansionID]
     if expansionZoneList then
         local zoneMatch = expansionZoneList[zoneID]
         if zoneMatch then

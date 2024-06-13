@@ -81,10 +81,19 @@ function Reward:HasIcon()
     return self.itemIcon ~= nil
 end
 
+
+local function BuildPetSpellLink(spellID, name)
+    if (spellID) then
+        return "|cff67BCFF|Hspell:".. spellID .. "|h[" .. name .."]|h|r"
+    else
+        return "|cff67BCFF[" .. name .."]|r"
+    end
+end
+
 function Reward:Link()
     if self._link == nil then
         if self:IsPet() or self:IsPetViaItem() then
-            self._link = WPS:BuildPetSpellLink(self.spellID, self.creatureName)
+            self._link = BuildPetSpellLink(self.spellID, self.creatureName)
         elseif self:IsItem() then
             self._link = select(2, GetItemInfo(self.itemID))
         elseif self:IsAchievement() then

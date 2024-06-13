@@ -1,6 +1,7 @@
 local WPS = WorldPetScanner
+local EXPANSIONS = WPS.EXPANSIONS
 
-WPS.Expansions = {
+EXPANSIONS.list = {
     [4] = {
         Name = "Cataclysm",
         Collapsed = false,
@@ -32,8 +33,8 @@ WPS.Expansions = {
     }
 }
 
-function WPS:GetExpansionName(id)
-    local exp = WPS.Expansions[id];
+function EXPANSIONS:GetName(id)
+    local exp = EXPANSIONS.list[id];
     if (exp) then
         return exp.Name
     else

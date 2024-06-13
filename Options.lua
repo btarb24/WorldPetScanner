@@ -373,7 +373,7 @@ function WPS:UpdateOptions()
 				[self.ExpansionList[i] .. "WorldQuests"].args
 
 			-- Zones
-			if WPS.ZoneIDList[i] then
+			if ZONES.list[i] then
 				args.zone = {
 					order = newOrder(),
 					name = "Zones",
@@ -381,7 +381,7 @@ function WPS:UpdateOptions()
 					args = {},
 					inline = false
 				}
-				for k, v in pairs(WPS.ZoneIDList[i]) do
+				for k, v in pairs(ZONES.list[i]) do
 					local name = C_Map.GetMapInfo(v).name
 					args.zone.args[name] = {
 						type = "toggle",

@@ -4,6 +4,10 @@ WorldPetScanner = LibStub("AceAddon-3.0"):NewAddon("WorldPetScanner", "AceConsol
 
 ---@class WorldPetScanner
 local WPS = WorldPetScanner
-
-WPS.data = {}
+WPS.UTILITIES = {}
+WPS.TASKFINDER = {}
+WPS.DISPLAY = {Report = {}, Main = {}, TodaysEvents = {}}
+WPS.DATA = {}
+WPS.ZONES = {}
+WPS.EXPANSIONS = {}
 WPS.links = {}

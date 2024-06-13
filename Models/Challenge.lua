@@ -1,4 +1,5 @@
 local WPS = WorldPetScanner
+local UTILITIES = WPS.UTILITIES
 
 Challenge = {}
 Challenge.__index = Challenge;
@@ -82,7 +83,7 @@ function Challenge:Link()
         if self:IsQuest() then
             self._link = GetQuestLink(self.questID)
             if (not self._link) then
-                self._link = WPS:BuildQuestLink(self.questID, self.questName)
+                self._link = UTILITIES:BuildQuestLink(self.questID, self.questName)
             end
         elseif self:IsVendor() then
             self._link = nil

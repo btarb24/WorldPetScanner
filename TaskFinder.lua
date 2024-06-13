@@ -1,148 +1,58 @@
 local WPS = WorldPetScanner
+local TASKFINDER = WPS.TASKFINDER
+local DISPLAY = WPS.DISPLAY
+local DATA = WPS.DATA
+local UTILITIES = WPS.UTILITIES
+local ZONES = WPS.ZONES
 
-function WPS:ScanWorldQuests()
-    local scannedQuestList = {}
-    local questsToRetry = {}
-    local worldQuestTaskResults = {}
-    local questsWithNotableRewards = {}
-	for expansionID in pairs(self.ZoneIDList) do
-		for mapID, mapDetails in pairs(self.ZoneIDList[expansionID]) do
-			if mapDetails.scanWorldQuests then
-				local taskPOIs = C_TaskQuest.GetQuestsForPlayerByMapID(mapID)
-				if taskPOIs then
-					for i = 1, #taskPOIs do
-                        local questID = taskPOIs[i].questId
+local retryTimer
 
-                        if (not scannedQuestList[questID]) then
-                            local zoneID = taskPOIs[i].mapID
-                            table.insert(scannedQuestList, questID, {expansionID = expansionID , zoneID = zoneID})
-                            if HaveQuestData(questID) and not HaveQuestRewardData(questID) then
-                                C_TaskQuest.RequestPreloadRewardData(questID)
-                                table.insert(questsToRetry, questID, {expansionID = expansionID , zoneID = zoneID})
-                            end
-                            
-                            local directQuestRewards = WPS:GetDesiredQuestRewards(taskPOIs[i], expansionID, zoneID, questsWithNotableRewards)
-                            
-                            if (not WPS:IsEmpty(directQuestRewards)) then
-                                local trigger = {type = WPS.TRIGGER_TYPE.WORLD_QUEST, questID = questID}
-                                local challenge = Challenge:newWorldQuest(questID, expansionID, zoneID)
-                                local task = Task:new(trigger, challenge, directQuestRewards)
-                                table.insert(self.taskList, task)
-                                worldQuestTaskResults[questID] = task
-                            end
-                        end
-					end
-				end
-			end
-		end
+local function UpdateItemTotals(itemID, quantity)
+	if itemID == WPS.PetCharm then
+		DATA.charmTotal = DATA.charmTotal + quantity
 	end
 
-    return scannedQuestList, worldQuestTaskResults, questsWithNotableRewards, questsToRetry
+	if itemID == WPS.Bandage then
+		DATA.bandageTotal = DATA.bandageTotal + quantity
+	end
+
+	if itemID == WPS.BlueStone then
+		DATA.blueStoneTotal = DATA.blueStoneTotal + quantity
+	end
+
+	if WPS.TrainingStones[itemID] then
+		local existingTrainingStones = DATA.trainingStoneTotals[itemID]
+		DATA.hasTrainingStones = true
+		if (existingTrainingStones == nil) then
+			table.insert(DATA.trainingStoneTotals, itemID, quantity)
+		else
+			DATA.trainingStoneTotals[itemID] = existingTrainingStones + quantity
+		end
+	end
 end
 
-function WPS:ProcessTaskData(mode, scannedQuestList, worldQuestTaskResults, questsWithNotableRewards)
-    for _,taskData in pairs(WPS.TaskData) do
-        local triggerType = taskData.trigger.type
-
-        if (mode == "report" and taskData.excludeFromReport) then
-            --skip
-        elseif triggerType == WPS.TRIGGER_TYPE.AURA then
-            WPS:ProcessAuraTrigger(mode, taskData)
-        elseif triggerType == WPS.TRIGGER_TYPE.WORLD_QUEST or triggerType == WPS.TRIGGER_TYPE.DAILY_QUEST then
-            WPS:ProcessQuestTrigger(mode, taskData, scannedQuestList, worldQuestTaskResults)
-        elseif triggerType == WPS.TRIGGER_TYPE.ACHIEVEMENT then
-            WPS:ProcessAchievementTrigger(mode, taskData)
-        elseif triggerType == WPS.TRIGGER_TYPE.AREA_POI then
-            WPS:ProcessAreaPoiTrigger(mode, taskData)
-        elseif triggerType == WPS.TRIGGER_TYPE.WORLD_QUEST_REWARD then
-            WPS:ProcessWorldQuestRewardTrigger(mode, taskData, questsWithNotableRewards)
-        elseif triggerType == WPS.TRIGGER_TYPE.PERIODIC_ROTATION then
-            WPS:ProcessPeriodicRotationTrigger(mode, taskData)
-        end
-    end
-end
-
-function WPS:ProcessAuraTrigger(mode, taskData)
-    local playerAura = C_UnitAuras.GetPlayerAuraBySpellID(taskData.trigger.auraID)
-    if (playerAura) then
-        WPS:AddTask(mode, taskData)
-    end
-end
-
-function WPS:ProcessQuestTrigger(mode, taskData, scannedQuestList, worldQuestTaskResults)
-    local satisfied = false
-    if (taskData.trigger.questEvaluationType == WPS.QUEST_EVAL_TYPE.FLAG) then
-        satisfied = not C_QuestLog.IsQuestFlaggedCompleted(taskData.trigger.questID)
-    elseif taskData.trigger.questEvaluationType == WPS.QUEST_EVAL_TYPE.ISACTIVE then
-        satisfied = C_TaskQuest.IsActive(taskData.trigger.questID)
-    elseif taskData.trigger.questEvaluationType == WPS.QUEST_EVAL_TYPE.BYMAP then
-        local questFound = scannedQuestList[taskData.trigger.questID]
-        if (questFound) then
-            local existingTask = worldQuestTaskResults[taskData.trigger.questID]
-            if (taskData.challenge.checkForExistingTask and existingTask) then
-                local rewards = WPS:CleanRewards(mode, taskData)
-                if (not WPS:IsEmpty(rewards)) then
-                    for _, rewardData in pairs(rewards) do
-                        existingTask:AddReward(Reward:new(rewardData))
-                    end
-                end
-            else
-                satisfied = true
-            end
-        end
-    end
-
-    if (satisfied) then
-        WPS:AddTask(mode, taskData)
-    end
-end
-
-function WPS:ProcessAchievementTrigger(mode, taskData)
-    local completed = select(4, GetAchievementInfo(taskData.trigger.achievementID))
-    if not completed then
-        WPS:AddTask(mode, taskData)
-    end
-end
-
-function WPS:ProcessAreaPoiTrigger(mode, taskData)
-    for _, entry in pairs(taskData.trigger.areaPOIList) do
-        if C_AreaPoiInfo.GetAreaPOISecondsLeft(entry.areaPoiID) then
-            taskData.trigger.areaPoiID = entry.areaPoiID
-            WPS:AddTask(mode, taskData)
-            return
-        end
-    end
-end
-
-function WPS:ProcessWorldQuestRewardTrigger(mode, taskData, questsWithNotableRewards)
-    local questMatch = questsWithNotableRewards[taskData.trigger.itemID]
-    if questMatch then
-        taskData.challenge.questID = questMatch.questId
-        WPS:AddTask(mode, taskData)
-        return
-    end
-end
-
-function WPS:ProcessPeriodicRotationTrigger(mode, taskData)
-    local daysSinceStartDay = WPS:GetDaysSince(taskData.trigger.startYear, taskData.trigger.startDayOfYear)
-    local secondsInADay = 86400
-
-    for i = 0, taskData.trigger.daysDuration-1 do
-        if (daysSinceStartDay - i) % taskData.trigger.daysInCycle == 0 then
-            if (taskData.trigger.daysDuration == 1) then
-                taskData.trigger.timeRemaining = GetQuestResetTime()
-            else
-                taskData.trigger.timeRemaining = GetQuestResetTime() + ((taskData.trigger.daysDuration -1 - i)*secondsInADay)
-            end
-            WPS:AddTask(mode, taskData)
-            return
-        end
-    end
-end
-
-function WPS:AddTask(mode, taskData)
+local function CleanRewards(mode, taskData)
     if mode == "test" or mode == "report" then
-        table.insert(self.taskList, Task:new(taskData.trigger, taskData.challenge, taskData.rewards))
+        return taskData.rewards
+    end
+
+    local keptRewards = {}
+    for i, reward in pairs(taskData.rewards) do        
+        if reward.type == WPS.REWARD_TYPE.PET or reward.type == WPS.REWARD_TYPE.PET_VIA_ITEM then
+            if not DATA.petList[reward.creatureID] then
+                table.insert(keptRewards, reward)
+            end
+        else
+            table.insert(keptRewards, reward)
+        end
+    end
+
+    return keptRewards
+end
+
+local function AddTask(mode, taskData)
+    if mode == "test" or mode == "report" then
+        table.insert(DATA.taskList, Task:new(taskData.trigger, taskData.challenge, taskData.rewards))
         return
     end
 
@@ -154,32 +64,91 @@ function WPS:AddTask(mode, taskData)
         end
     end
 
-    local rewards = WPS:CleanRewards(mode, taskData)
-    if not WPS:IsEmpty(rewards) then
-        table.insert(self.taskList, Task:new(taskData.trigger, taskData.challenge, rewards))
+    local rewards = CleanRewards(mode, taskData)
+    if not UTILITIES:IsEmpty(rewards) then
+        table.insert(DATA.taskList, Task:new(taskData.trigger, taskData.challenge, rewards))
     end
 end
 
-function WPS:CleanRewards(mode, taskData)
-    if mode == "test" or mode == "report" then
-        return taskData.rewards
+local function ProcessAuraTrigger(mode, taskData)
+    local playerAura = C_UnitAuras.GetPlayerAuraBySpellID(taskData.trigger.auraID)
+    if (playerAura) then
+        AddTask(mode, taskData)
     end
+end
 
-    local keptRewards = {}
-    for i, reward in pairs(taskData.rewards) do        
-        if reward.type == WPS.REWARD_TYPE.PET or reward.type == WPS.REWARD_TYPE.PET_VIA_ITEM then
-            if not WPS.PetList[reward.creatureID] then
-                table.insert(keptRewards, reward)
+local function ProcessQuestTrigger(mode, taskData)
+    local satisfied = false
+    if (taskData.trigger.questEvaluationType == WPS.QUEST_EVAL_TYPE.FLAG) then
+        satisfied = not C_QuestLog.IsQuestFlaggedCompleted(taskData.trigger.questID)
+    elseif taskData.trigger.questEvaluationType == WPS.QUEST_EVAL_TYPE.ISACTIVE then
+        satisfied = C_TaskQuest.IsActive(taskData.trigger.questID)
+    elseif taskData.trigger.questEvaluationType == WPS.QUEST_EVAL_TYPE.BYMAP then
+        local questFound = DATA.scannedQuestList[taskData.trigger.questID]
+        if (questFound) then
+            local existingTask = DATA.worldQuestTaskResults[taskData.trigger.questID]
+            if (taskData.challenge.checkForExistingTask and existingTask) then
+                local rewards = CleanRewards(mode, taskData)
+                if (not UTILITIES:IsEmpty(rewards)) then
+                    for _, rewardData in pairs(rewards) do
+                        existingTask:AddReward(Reward:new(rewardData))
+                    end
+                end
+            else
+                satisfied = true
             end
-        else
-            table.insert(keptRewards, reward)
         end
     end
 
-    return keptRewards
+    if (satisfied) then
+        AddTask(mode, taskData)
+    end
 end
 
-function WPS:GetDesiredQuestRewards(taskPOI, expansionID, zoneID, questsWithNotableRewards)
+local function ProcessAchievementTrigger(mode, taskData)
+    local completed = select(4, GetAchievementInfo(taskData.trigger.achievementID))
+    if not completed then
+        AddTask(mode, taskData)
+    end
+end
+
+local function ProcessAreaPoiTrigger(mode, taskData)
+    for _, entry in pairs(taskData.trigger.areaPOIList) do
+        if C_AreaPoiInfo.GetAreaPOISecondsLeft(entry.areaPoiID) then
+            taskData.trigger.areaPoiID = entry.areaPoiID
+            AddTask(mode, taskData)
+            return
+        end
+    end
+end
+
+local function ProcessWorldQuestRewardTrigger(mode, taskData)
+    local questMatch = DATA.questsWithNotableRewards[taskData.trigger.itemID]
+    if questMatch then
+        taskData.challenge.questID = questMatch.questId
+        AddTask(mode, taskData)
+        return
+    end
+end
+
+local function ProcessPeriodicRotationTrigger(mode, taskData)
+    local daysSinceStartDay = UTILITIES:GetDaysSince(taskData.trigger.startYear, taskData.trigger.startDayOfYear)
+    local secondsInADay = 86400
+
+    for i = 0, taskData.trigger.daysDuration-1 do
+        if (daysSinceStartDay - i) % taskData.trigger.daysInCycle == 0 then
+            if (taskData.trigger.daysDuration == 1) then
+                taskData.trigger.timeRemaining = GetQuestResetTime()
+            else
+                taskData.trigger.timeRemaining = GetQuestResetTime() + ((taskData.trigger.daysDuration -1 - i)*secondsInADay)
+            end
+            AddTask(mode, taskData)
+            return
+        end
+    end
+end
+
+local function GetDesiredQuestRewards(taskPOI, expansionID, zoneID)
 	local rewards = {}
     local questID = taskPOI.questId
 	local numQuestRewards = GetNumQuestLogRewards(questID)
@@ -191,10 +160,10 @@ function WPS:GetDesiredQuestRewards(taskPOI, expansionID, zoneID, questsWithNota
                 WPS:Debug("missing itemID for quest: "..questID.." idx: ".. rewardIndex)
             elseif WPS:GetItemCategory(itemID) ~= nil then
                 local reward = Reward:newItem(itemID, quantity, true)
-                WPS:UpdateItemTotals(itemID, quantity)
+                UpdateItemTotals(itemID, quantity)
                 table.insert(rewards, reward)
             elseif WPS.NotableItems[itemID] then
-                table.insert(questsWithNotableRewards, itemID, taskPOI)
+                table.insert(DATA.questsWithNotableRewards, itemID, taskPOI)
             end
 		end			
 	end
@@ -202,26 +171,113 @@ function WPS:GetDesiredQuestRewards(taskPOI, expansionID, zoneID, questsWithNota
 	return rewards
 end
 
-function WPS:UpdateItemTotals(itemID, quantity)
-	if itemID == WPS.PetCharm then
-		self.charmTotal = self.charmTotal + quantity
-	end
+local function AnalyzeQuestRewards(taskPOI, expansionID, zoneID)
+    local directQuestRewards = GetDesiredQuestRewards(taskPOI, expansionID, zoneID)
+    
+    if (not UTILITIES:IsEmpty(directQuestRewards)) then
+        local questID = taskPOI.questId
+        local trigger = {type = WPS.TRIGGER_TYPE.WORLD_QUEST, questID = questID}
+        local challenge = Challenge:newWorldQuest(questID, expansionID, zoneID)
+        local task = Task:new(trigger, challenge, directQuestRewards)
+        table.insert(DATA.taskList, task)
+        DATA.worldQuestTaskResults[questID] = task
+    end
+end
 
-	if itemID == WPS.Bandage then
-		self.bandageTotal = self.bandageTotal + quantity
-	end
+local function PerformRetry()
+    retryTimer = nil
+    for questID, questData in pairs(DATA.questsToRetry) do        
+        if HaveQuestData(questID) and not HaveQuestRewardData(questID) then
+            C_TaskQuest.RequestPreloadRewardData(questID)
+            WPS:Debug(questID)
+        else
+            DATA.questsToRetry[questID] = nil
+            AnalyzeQuestRewards(questData.taskPOI, questData.expansionID, questData.zoneID)
+        end
+    end
 
-	if itemID == WPS.BlueStone then
-		self.blueStoneTotal = self.blueStoneTotal + quantity
-	end
+    if (UTILITIES:IsEmpty(DATA.questsToRetry)) then
+        DATA.sortedTasks = UTILITIES:SortTaskList(DATA.taskList)
+        DATA.groupedTasks = UTILITIES:GroupTasks(DATA.sortedTasks)
+        DISPLAY.TodaysEvents:HideLoading()
+    else
+        retryTimer = WPS:ScheduleTimer(PerformRetry, 1)
+    end
+end
 
-	if WPS.TrainingStones[itemID] then
-		local existingTrainingStones = self.trainingStoneTotals[itemID]
-		self.hasTrainingStones = true
-		if (existingTrainingStones == nil) then
-			table.insert(self.trainingStoneTotals, itemID, quantity)
-		else
-			self.trainingStoneTotals[itemID] = existingTrainingStones + quantity
+function TASKFINDER:RefreshTodaysEvents(mode)
+    print("RefreshTodaysEvents")
+    if (retryTimer) then
+        WPS:CancelTimer(retryTimer)
+    end
+    
+    DISPLAY.TodaysEvents:ShowLoading()
+    DATA.taskList = {}
+    DATA.sortedTasks = {}
+    DATA.groupedTasks = {}
+    DATA.scannedQuestList = {}
+    DATA.questsToRetry = {}
+    DATA.worldQuestTaskResults = {}
+    DATA.questsWithNotableRewards = {}	
+	DATA.taskList = {}
+	DATA.charmTotal = 0;
+	DATA.bandageTotal = 0;
+	DATA.blueStoneTotal = 0;
+	DATA.hasTrainingStones = false
+	DATA.trainingStoneTotals = {}
+	for expansionID in pairs(ZONES.list) do
+		for mapID, mapDetails in pairs(ZONES.list[expansionID]) do
+			if mapDetails.scanWorldQuests then
+				local taskPOIs = C_TaskQuest.GetQuestsForPlayerByMapID(mapID)
+				if taskPOIs then
+					for i = 1, #taskPOIs do
+                        local questID = taskPOIs[i].questId
+
+                        if (not DATA.scannedQuestList[questID]) then
+                            local zoneID = taskPOIs[i].mapID
+                            table.insert(DATA.scannedQuestList, questID, {taskPOI = taskPOIs[i], expansionID = expansionID, zoneID = zoneID})
+                            if HaveQuestData(questID) and not HaveQuestRewardData(questID) then
+                                C_TaskQuest.RequestPreloadRewardData(questID)
+                                table.insert(DATA.questsToRetry, questID, {taskPOI = taskPOIs[i], expansionID = expansionID , zoneID = zoneID})
+                            else
+                                AnalyzeQuestRewards(taskPOIs[i], expansionID, zoneID)
+                            end                            
+                        end
+					end
+				end
+			end
 		end
 	end
+
+    for _,taskData in pairs(WPS.TaskData) do
+        local triggerType = taskData.trigger.type
+
+        if (mode == "report" and taskData.excludeFromReport) then
+            --skip
+        elseif triggerType == WPS.TRIGGER_TYPE.AURA then
+            ProcessAuraTrigger(mode, taskData)
+        elseif triggerType == WPS.TRIGGER_TYPE.WORLD_QUEST or triggerType == WPS.TRIGGER_TYPE.DAILY_QUEST then
+            ProcessQuestTrigger(mode, taskData)
+        elseif triggerType == WPS.TRIGGER_TYPE.ACHIEVEMENT then
+            ProcessAchievementTrigger(mode, taskData)
+        elseif triggerType == WPS.TRIGGER_TYPE.AREA_POI then
+            ProcessAreaPoiTrigger(mode, taskData)
+        elseif triggerType == WPS.TRIGGER_TYPE.WORLD_QUEST_REWARD then
+            ProcessWorldQuestRewardTrigger(mode, taskData)
+        elseif triggerType == WPS.TRIGGER_TYPE.PERIODIC_ROTATION then
+            ProcessPeriodicRotationTrigger(mode, taskData)
+        end
+    end
+
+    print(#DATA.questsToRetry)
+    if UTILITIES:IsEmpty(DATA.questsToRetry) then
+        print("hiding")
+        DISPLAY.TodaysEvents:HideLoading()
+    else
+        retryTimer = WPS:ScheduleTimer(PerformRetry, 1)
+    end
+    
+	DATA.sortedTasks = UTILITIES:SortTaskList(DATA.taskList)
+	DATA.groupedTasks = UTILITIES:GroupTasks(DATA.sortedTasks)
+    print("RefreshTodaysEvents complete" ..#DATA.groupedTasks)
 end

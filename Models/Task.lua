@@ -1,4 +1,6 @@
 local WPS = WorldPetScanner
+local ZONES = WPS.ZONES
+local EXPANSIONS = WPS.EXPANSIONS
 
 Task = {}
 Task.__index = Task
@@ -45,7 +47,7 @@ end
 
 function Task:ExpansionName()
     if self._expansionName == nil then
-        self._expansionName = WPS:GetExpansionName(self.challenge.expansionID)
+        self._expansionName = EXPANSIONS:GetName(self.challenge.expansionID)
     end
 
     return self._expansionName
@@ -53,7 +55,7 @@ end
 
 function Task:ZoneName()
     if self._zoneName == nil then
-        self._zoneName = WPS:GetZoneName(self.challenge.expansionID, self.challenge.zoneID)
+        self._zoneName = ZONES:GetName(self.challenge.expansionID, self.challenge.zoneID)
     end
 
     return self._zoneName

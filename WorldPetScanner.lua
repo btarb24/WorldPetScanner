@@ -1,5 +1,9 @@
 ---@class WorldPetScanner
 local WPS = WorldPetScanner
+local DATA = WPS.DATA
+local DISPLAY = WPS.DISPLAY
+local UTILITIES = WPS.UTILITIES
+local TASKFINDER = WPS.TASKFINDER
 
 local LibQTip = LibStub("LibQTip-1.0")
 
@@ -23,128 +27,42 @@ local dataobj =
 
 local icon = LibStub("LibDBIcon-1.0")
 
+local function BuildPetList()
+	DATA.petList = {}
+	local total, collected = C_PetJournal.GetNumPets()
+	for i = 1, total do
+		local petID, _, owned, _, _, _, _, _, _, _, companionID = C_PetJournal.GetPetInfoByIndex(i)		
+		if (petID ~= nil and owned) then
+			table.insert(DATA.petList, companionID, owned)
+		end
+	end
+end
+
 function WPS:OnInitialize()
 	self.faction = UnitFactionGroup("player")
 
+	self.db = LibStub("AceDB-3.0"):New("WPSDB", defaults, true)
+
 	-- Defaults
 	local defaults = {
-		char = {
-			["*"] = {
-				["profession"] = {
-					["*"] = {
-						isMaxLevel = true
-					}
-				}
-			}
-		},
 		profile = {
 			options = {
-				["*"] = true,
-				chat = true,
-				PopUp = false,
-				popupRememberPosition = false,
-				popupX = 600,
-				popupY = 800,
-				zone = { ["*"] = true },
-				reward = {
-					currency = {},
-					craftingreagent = { ["*"] = false },
-					["*"] = {
-						["*"] = true,
-						profession = {
-							["*"] = {
-								skillup = true
-							}
-						}
-					}
-				},
-				emissary = { ["*"] = false },
-				missionTable = {
-					reward = {
-						gold = false,
-						goldMin = 0,
-						["*"] = {
-							["*"] = false
-						}
-					}
-				},
-				delay = 5,
 				LibDBIcon = { hide = false }
 			},
-			["achievements"] = { exclusive = {}, ["*"] = "default" },
-			["pets"] = { exclusive = {}, ["*"] = "default" },
-			custom = {
-				["*"] = { ["*"] = true }
-			},
-			["*"] = { ["*"] = true }
 		},
 		global = {
-			completed = { ["*"] = false },
-			custom = {
-				["*"] = { ["*"] = false }
-			}
 		}
 	}
 	self.db = LibStub("AceDB-3.0"):New("WPSDB", defaults, true)
-
-	-- copy old data
-	if type(self.db.global.custom) == "table" then
-		for k, v in pairs(self.db.global.custom) do
-			if type(k) == "number" then
-				self.db.global.custom.worldQuest[k] = v
-				self.db.global.custom[k] = nil
-			end
-		end
-	end
-	if type(self.db.global.customReward) == "table" then
-		for k, v in pairs(self.db.global.customReward) do
-			self.db.global.custom.worldQuestReward[k] = true
-		end
-		self.db.global.customReward = nil
-	end
 
 	-- Minimap Icon
 	icon:Register("WorldPetScanner", dataobj, self.db.profile.options.LibDBIcon)
 end
 
 function WPS:OnEnable()
-	local name, server = UnitFullName("player")
-	self.playerName = name .. "-" .. server
-	------------------
-	-- 	Options
-	------------------
-	LibStub("AceConfig-3.0"):RegisterOptionsTable(
-		"WorldPetScanner",
-		function()
-			return self:GetOptions()
-		end
-	)
-	self.optionsFrame = LibStub("AceConfigDialog-3.0"):AddToBlizOptions("WorldPetScanner", "WorldPetScanner")
-	local profiles = LibStub("AceDBOptions-3.0"):GetOptionsTable(self.db)
-	LibStub("AceConfig-3.0"):RegisterOptionsTable("WorldPetScanProfiles", profiles)
-	self.optionsFrame.Profiles =
-		LibStub("AceConfigDialog-3.0"):AddToBlizOptions("WorldPetScanProfiles", "Profiles", "WorldPetScanner")
-
-	self.event = CreateFrame("Frame")
-	self.event:RegisterEvent("PLAYER_ENTERING_WORLD")
-	self.event:SetScript(
-		"OnEvent",
-		function(...)
-			local _, name, id = ...
-			if name == "PLAYER_ENTERING_WORLD" then
-				self:ScheduleTimer(
-					function()
-						--self:BuildPetList()
-					end,
-					self.db.profile.options.delay
-				)
-
-				self.event:UnregisterEvent("PLAYER_ENTERING_WORLD")
-			end
-		end
-	)
-
-	LoadAddOn("Blizzard_GarrisonUI")
+	BuildPetList()
+	DISPLAY:CreateHostWindow()
+	TASKFINDER:RefreshTodaysEvents(mode)
 end
 
 WPS:RegisterChatCommand("petscan", "ChatCommand")
@@ -163,105 +81,39 @@ function WPS:UpdateMinimapIcon()
 end
 
 function dataobj:OnClick(button)
+	local mode
+
 	if button == "LeftButton" then
-		local mode
-		if IsShiftKeyDown() then
-			mode = "report"
-		elseif IsControlKeyDown() then 
+		if IsControlKeyDown() then 
 			mode = "test"
 		end
-		WPS:Show(mode)
 		
 	elseif button == "RightButton" then
-		WPS:Show("report")
+		mode ="report"
 	end
+	
+	TASKFINDER:RefreshTodaysEvents(mode)
+	WPS:Show(mode)
 end
 
 function WPS:Show(mode)
-	if (self.PopUp) then		
-		WPS:CloseWindow()
+	if (DISPLAY.Report.PopUp) then		
+		DISPLAY.Report:CloseWindow()
 		return
 	end
 	
-	self.taskList = {}
-	self.charmTotal = 0;
-	self.bandageTotal = 0;
-	self.blueStoneTotal = 0;
-	self.hasTrainingStones = false
-	self.trainingStoneTotals = {}
-	self:BuildPetList()
-
-	local scannedQuestList, worldQuestTaskResults, questsWithNotableRewards, questsToRetry = self:ScanWorldQuests()
-	self:ProcessTaskData(mode, scannedQuestList, worldQuestTaskResults, questsWithNotableRewards)
-
-	local isPartialResult = not WPS:IsEmpty(questsToRetry)
-	local sortedTasks = self:SortTaskList(self.taskList)
-	local groupedTasks = self:GroupTasks(sortedTasks)
+	local isPartialResult = not UTILITIES:IsEmpty(DATA.questsToRetry)
+	print(mode)
 	if (mode == "report") then
-		self:ShowReportWindow(sortedTasks, mode, isPartialResult)
+		DISPLAY.Report:ShowWindow(mode, isPartialResult)
 	else
-		self:ShowMainWindow(groupedTasks, mode, isPartialResult)
+		DISPLAY.Main:ShowWindow(mode)
 	end
 end
 
-function WPS:BuildPetList()
-	self.PetList = {}
-	local total, collected = C_PetJournal.GetNumPets()
-	for i = 1, total do
-		local petID, _, owned, _, _, _, _, _, _, _, companionID = C_PetJournal.GetPetInfoByIndex(i)		
-		if (petID ~= nil and owned) then
-			table.insert(self.PetList, companionID, owned)
-		end
+WPS.debug = true
+function WPS:Debug(...)
+	if self.debug == true then
+		print(...)
 	end
-end
-
-function WPS:SortTaskList(list)
-	table.sort(list, function(a, b) return WPS:Sort(a, b) end)
-	return list
-end
-
-function WPS:Sort(a, b)
-	if a.challenge.expansionID > b.challenge.expansionID then return true end
-	if a.challenge.expansionID < b.challenge.expansionID then return false end
-	return a.challenge.zoneID < b.challenge.zoneID
-end
-
-function WPS:GroupTasks(list)
-	local groupedTasks = {}
-
-    local currentExpansionID, currentZoneID
-	for _, task in ipairs(list) do
-		if (task.challenge.expansionID ~= currentExpansionID) then			
-			local expansion = {
-				[ID] = task.challenge.expansionID
-			}
-			expansion.zones = {
-				[1] = {
-					ID = task.challenge.zoneID,
-					tasks = {
-						[1] = task
-					}
-				}
-			}
-			table.insert(groupedTasks, #groupedTasks+1, expansion)
-		elseif currentZoneID ~= task.challenge.zoneID then
-			local expansion = groupedTasks[#groupedTasks]
-			local zone = {
-				ID = task.challenge.zoneID,
-				tasks = {
-					[1] = task
-				}
-			}
-			table.insert(expansion.zones, #expansion.zones+1, zone)
-		else
-			local expansion = groupedTasks[#groupedTasks]
-			local zone = expansion.zones[#expansion.zones]
-			table.insert(zone.tasks, #zone.tasks+1, task)
-		end
-
-		currentExpansionID = task.challenge.expansionID
-		currentZoneID = task.challenge.zoneID
-	end
-
-	return groupedTasks
 end
