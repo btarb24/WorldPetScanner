@@ -1,23 +1,23 @@
----@class WorldPetScanner
-local WPS = WorldPetScanner
-local DISPLAY = WPS.DISPLAY
-local UTILITIES = WPS.UTILITIES
-local DATA = WPS.DATA
-local EXPANSIONS = WPS.EXPANSIONS
+---@class PetAdvisor
+local PETAD = PetAdvisor
+local DISPLAY = PETAD.DISPLAY
+local UTILITIES = PETAD.UTILITIES
+local DATA = PETAD.DATA
+local EXPANSIONS = PETAD.EXPANSIONS
 
-local L = WPS.L
+local L = PETAD.L
 local LibQTip = LibStub("LibQTip-1.0")
 
 local function CreateQTip(mode, isPartialResult)
-    if not LibQTip:IsAcquired("WorldPetScanner") and not DISPLAY.Report.tooltip then
-        local tooltip = LibQTip:Acquire("WorldPetScanner", 2, "LEFT", "LEFT")
+    if not LibQTip:IsAcquired("PetAdvisor") and not DISPLAY.Report.tooltip then
+        local tooltip = LibQTip:Acquire("PetAdvisor", 2, "LEFT", "LEFT")
         DISPLAY.Report.tooltip = tooltip
 
  --title icon
         if (tooltip.icon) then
             tooltip.icon:SetTexture()
         end
-        tooltip.icon = tooltip:CreateTexture("WPS_Icon", "BACKGROUND")
+        tooltip.icon = tooltip:CreateTexture("PA_Icon", "BACKGROUND")
         tooltip.icon:SetWidth(38)
         tooltip.icon:SetHeight(38)
         tooltip.icon:SetTexture("Interface\\Icons\\Inv_pet_maggot")
@@ -39,12 +39,6 @@ local function CreateQTip(mode, isPartialResult)
         tooltip.date = tooltip:CreateFontString(nil, "OVERLAY");
         tooltip.date:SetFont(fontFile, fontHeight-2, fontFlags)
         tooltip.date:SetPoint("TOPLEFT", 55, -34);
-        local modeDisplay = ""
-        if mode == "report" then 
-            modeDisplay = "  [Report mode]"
-        elseif mode == "test" then
-            modeDisplay = "  [Test mode]"
-        end
 
         local partialDisplay = ""
         if isPartialResult then
@@ -52,14 +46,14 @@ local function CreateQTip(mode, isPartialResult)
         end
         tooltip.date:SetText(UTILITIES:GetRegionName() .. "   " .. date("%b %d, %Y  %H:%M") .. modeDisplay .. partialDisplay)
  -- item totals
-        local charms = DATA.charmTotal.."x".."|T"..WPS.Textures[WPS.PetCharm]..":20:20:0:0:32:32:2:30:2:30|t"        
-        local bandages  = DATA.bandageTotal.."x".."|T"..WPS.Textures[WPS.Bandage]..":20:20:0:0:32:32:2:30:2:30|t"
-        local blueStones  = DATA.blueStoneTotal.."x".."|T"..WPS.Textures[WPS.BlueStone]..":20:20:0:0:32:32:2:30:2:30|t"
+        local charms = DATA.charmTotal.."x".."|T"..PETAD.Textures[PETAD.PetCharm]..":20:20:0:0:32:32:2:30:2:30|t"        
+        local bandages  = DATA.bandageTotal.."x".."|T"..PETAD.Textures[PETAD.Bandage]..":20:20:0:0:32:32:2:30:2:30|t"
+        local blueStones  = DATA.blueStoneTotal.."x".."|T"..PETAD.Textures[PETAD.BlueStone]..":20:20:0:0:32:32:2:30:2:30|t"
         local trainingStones = ""
-        for tStone, _ in pairs(WPS.TrainingStones) do
+        for tStone, _ in pairs(PETAD.TrainingStones) do
             local tStoneTotal = DATA.trainingStoneTotals[tStone]
             if tStoneTotal ~= nil then
-                trainingStones = trainingStones .. tStoneTotal.."x".."|T"..WPS.Textures[tStone]..":20:20:0:0:32:32:2:30:2:30|t   "
+                trainingStones = trainingStones .. tStoneTotal.."x".."|T"..PETAD.Textures[tStone]..":20:20:0:0:32:32:2:30:2:30|t   "
             end
         end
         local header = charms .. "    " .. bandages .. "    " .. blueStones .. "    " .. trainingStones
@@ -86,8 +80,8 @@ local function CreateQTip(mode, isPartialResult)
         tooltip.totals2:SetText(header)
 
         tooltip:SetScript("OnHide", function()
-            if WPS.PopUp then
-                WPS.PopUp:Hide()
+            if PETAD.PopUp then
+                PETAD.PopUp:Hide()
             end
         end)
 
@@ -119,7 +113,7 @@ local function UpdateReportQTip(mode, isPartialResult)
                     function()
                         EXPANSIONS.list[task.challenge.expansionID].Collapsed = not EXPANSIONS.list[task.challenge.expansionID].Collapsed
                         DISPLAY.Report:CloseWindow()
-                        WPS:ShowReportWindow(DATA.sortedTasks, mode, isPartialResult, tooltip:GetLeft(), tooltip:GetTop())
+                        PETAD:ShowReportWindow(DATA.sortedTasks, mode, isPartialResult, tooltip:GetLeft(), tooltip:GetTop())
                     end
                 )
                 lineNum = lineNum + 1
@@ -193,7 +187,7 @@ local function UpdateReportQTip(mode, isPartialResult)
                     local fontFile, fontHeight, fontFlags = oldFont:GetFont()
                     newFont:SetFont(fontFile, fontHeight-2, fontFlags)
                     
-                    local indent = WPS:GetIconIndent(task.iconReward.itemCategory)
+                    local indent = PETAD:GetIconIndent(task.iconReward.itemCategory)
                     tooltip:SetCell(lineNum, colNum, display, newFont, "LEFT", 1, LibQTip.LabelProvider, indent, 0, 170, 55)         
                     if task.iconReward:Link() then           
                         tooltip:SetCellScript(
@@ -263,7 +257,7 @@ end
 
 function DISPLAY.Report:ShowWindow(mode, isPartialResult, left, top)
     if not DISPLAY.Report.PopUp then
-        local PopUp = CreateFrame("Frame", "WorldPetScannerPopUp", UIParent)
+        local PopUp = CreateFrame("Frame", "PetAdvisorPopUp", UIParent)
 
         DISPLAY.Report.PopUp = PopUp
         PopUp:SetMovable(true)
@@ -280,9 +274,9 @@ function DISPLAY.Report:ShowWindow(mode, isPartialResult, left, top)
             function(self)
                 self.moving = nil
                 self:StopMovingOrSizing()
-                if WPS.db.profile.options.popupRememberPosition then
-                    WPS.db.profile.options.popupX = self:GetLeft()
-                    WPS.db.profile.options.popupY = self:GetTop()
+                if PETAD.db.profile.options.popupRememberPosition then
+                    PETAD.db.profile.options.popupX = self:GetLeft()
+                    PETAD.db.profile.options.popupY = self:GetTop()
                 end
             end
         )

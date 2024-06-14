@@ -1,16 +1,16 @@
-local WPS = WorldPetScanner
+local PETAD = PetAdvisor
 
 Reward = {}
 Reward.__index = Reward;
 
-WPS.REWARD_TYPE = {
+PETAD.REWARD_TYPE = {
     ITEM = "item",
     PET = "pet",
     ACHIEVEMENT = "achiev",
     PET_VIA_ITEM = "petViaItem",
 }
 
-WPS.REWARD_ITEMCATEGORY = {
+PETAD.REWARD_ITEMCATEGORY = {
     CHARM = "charm",
     BATTLE_STONE = "battleStone",
     TRAINING_STONE = "trainingStone",
@@ -27,8 +27,8 @@ function Reward:new(rewardData)
     instance.spellID = rewardData.spellID
     instance.itemID = rewardData.itemID
     instance.itemName = rewardData.itemName
-    instance.itemIcon = WPS.Textures[rewardData.itemID]
-    instance.itemCategory = WPS:GetItemCategory(rewardData.itemID)
+    instance.itemIcon = PETAD.Textures[rewardData.itemID]
+    instance.itemCategory = PETAD:GetItemCategory(rewardData.itemID)
     instance.chance = rewardData.chance
     instance.note = rewardData.note
     instance.achievementID = rewardData.achievementID
@@ -47,10 +47,10 @@ function Reward:newItem(itemID, quantity)
     local instance = {}
     setmetatable(instance, Reward)  
     
-    instance.type = WPS.REWARD_TYPE.ITEM
+    instance.type = PETAD.REWARD_TYPE.ITEM
     instance.itemID = itemID
-    instance.itemCategory = WPS:GetItemCategory(itemID)
-    instance.itemIcon = WPS.Textures[itemID]
+    instance.itemCategory = PETAD:GetItemCategory(itemID)
+    instance.itemIcon = PETAD.Textures[itemID]
 
     if quantity ~= nil then 
         instance.quantity = quantity
@@ -62,19 +62,19 @@ function Reward:newItem(itemID, quantity)
 end
 
 function Reward:IsItem()
-    return self.type == WPS.REWARD_TYPE.ITEM
+    return self.type == PETAD.REWARD_TYPE.ITEM
 end
 
 function Reward:IsPet()
-    return self.type == WPS.REWARD_TYPE.PET
+    return self.type == PETAD.REWARD_TYPE.PET
 end
 
 function Reward:IsPetViaItem()
-    return self.type == WPS.REWARD_TYPE.PET_VIA_ITEM
+    return self.type == PETAD.REWARD_TYPE.PET_VIA_ITEM
 end
 
 function Reward:IsAchievement()
-    return self.type == WPS.REWARD_TYPE.ACHIEVEMENT
+    return self.type == PETAD.REWARD_TYPE.ACHIEVEMENT
 end
 
 function Reward:HasIcon()

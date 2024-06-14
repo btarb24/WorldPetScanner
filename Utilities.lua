@@ -1,6 +1,6 @@
----@class WorldPetScanner
-local WPS = WorldPetScanner
-local UTILITIES = WPS.UTILITIES
+---@class PetAdvisor
+local PETAD = PetAdvisor
+local UTILITIES = PETAD.UTILITIES
 
 local GetTitleForQuestID = C_QuestLog.GetTitleForQuestID
 

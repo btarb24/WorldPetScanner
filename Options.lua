@@ -1,5 +1,5 @@
-local WPS = WorldPetScanner
-local L = WPS.L
+local PETAD = PetAdvisor
+local L = PETAD.L
 
 -- Blizzard
 local GetCurrencyInfo = C_CurrencyInfo.GetCurrencyInfo
@@ -11,7 +11,7 @@ local worldQuestType = {
 	["LE_QUEST_TAG_TYPE_PET_BATTLE"] = Enum.QuestTagType.PetBattle
 }
 
-WPS.EmissaryQuestIDList = {
+PETAD.EmissaryQuestIDList = {
 	[7] = {
 		42233, -- Highmountain Tribes
 		42420, -- Court of Farondis
@@ -51,7 +51,7 @@ do
 	end
 end
 
-function WPS:UpdateOptions()
+function PETAD:UpdateOptions()
 	------------------
 	-- 	Options Table
 	------------------
@@ -81,11 +81,11 @@ function WPS:UpdateOptions()
 								type = "toggle",
 								name = "Gold",
 								set = function(info, val)
-									WPS.db.profile.options.reward.general.gold = val
+									PETAD.db.profile.options.reward.general.gold = val
 								end,
 								descStyle = "inline",
 								get = function()
-									return WPS.db.profile.options.reward.general.gold
+									return PETAD.db.profile.options.reward.general.gold
 								end,
 								order = newOrder()
 							},
@@ -94,10 +94,10 @@ function WPS:UpdateOptions()
 								type = "input",
 								order = newOrder(),
 								set = function(info, val)
-									WPS.db.profile.options.reward.general.goldMin = tonumber(val)
+									PETAD.db.profile.options.reward.general.goldMin = tonumber(val)
 								end,
 								get = function()
-									return tostring(WPS.db.profile.options.reward.general.goldMin)
+									return tostring(PETAD.db.profile.options.reward.general.goldMin)
 								end
 							}
 						}
@@ -120,11 +120,11 @@ function WPS:UpdateOptions()
 						name = "Chat",
 						width = "double",
 						set = function(info, val)
-							WPS.db.profile.options.chat = val
+							PETAD.db.profile.options.chat = val
 						end,
 						descStyle = "inline",
 						get = function()
-							return WPS.db.profile.options.chat
+							return PETAD.db.profile.options.chat
 						end,
 						order = newOrder()
 					},
@@ -133,11 +133,11 @@ function WPS:UpdateOptions()
 						name = "PopUp",
 						width = "double",
 						set = function(info, val)
-							WPS.db.profile.options.PopUp = val
+							PETAD.db.profile.options.PopUp = val
 						end,
 						descStyle = "inline",
 						get = function()
-							return WPS.db.profile.options.PopUp
+							return PETAD.db.profile.options.PopUp
 						end,
 						order = newOrder()
 					},
@@ -146,11 +146,11 @@ function WPS:UpdateOptions()
 						name = "Remember PopUp position",
 						width = "double",
 						set = function(info, val)
-							WPS.db.profile.options.popupRememberPosition = val
+							PETAD.db.profile.options.popupRememberPosition = val
 						end,
 						descStyle = "inline",
 						get = function()
-							return WPS.db.profile.options.popupRememberPosition
+							return PETAD.db.profile.options.popupRememberPosition
 						end,
 						order = newOrder()
 					},
@@ -159,11 +159,11 @@ function WPS:UpdateOptions()
 						name = "Sort quests by name",
 						width = "double",
 						set = function(info, val)
-							WPS.db.profile.options.sortByName = val
+							PETAD.db.profile.options.sortByName = val
 						end,
 						descStyle = "inline",
 						get = function()
-							return WPS.db.profile.options.sortByName
+							return PETAD.db.profile.options.sortByName
 						end,
 						order = newOrder()
 					},
@@ -172,11 +172,11 @@ function WPS:UpdateOptions()
 						name = "Sort quests by zone name",
 						width = "double",
 						set = function(info, val)
-							WPS.db.profile.options.sortByZoneName = val
+							PETAD.db.profile.options.sortByZoneName = val
 						end,
 						descStyle = "inline",
 						get = function()
-							return WPS.db.profile.options.sortByZoneName
+							return PETAD.db.profile.options.sortByZoneName
 						end,
 						order = newOrder()
 					},
@@ -185,11 +185,11 @@ function WPS:UpdateOptions()
 						name = "Show expansion in chat",
 						width = "double",
 						set = function(info, val)
-							WPS.db.profile.options.chatShowExpansion = val
+							PETAD.db.profile.options.chatShowExpansion = val
 						end,
 						descStyle = "inline",
 						get = function()
-							return WPS.db.profile.options.chatShowExpansion
+							return PETAD.db.profile.options.chatShowExpansion
 						end,
 						order = newOrder()
 					},
@@ -198,11 +198,11 @@ function WPS:UpdateOptions()
 						name = "Show zone in chat",
 						width = "double",
 						set = function(info, val)
-							WPS.db.profile.options.chatShowZone = val
+							PETAD.db.profile.options.chatShowZone = val
 						end,
 						descStyle = "inline",
 						get = function()
-							return WPS.db.profile.options.chatShowZone
+							return PETAD.db.profile.options.chatShowZone
 						end,
 						order = newOrder()
 					},
@@ -211,11 +211,11 @@ function WPS:UpdateOptions()
 						name = "Show time left in chat",
 						width = "double",
 						set = function(info, val)
-							WPS.db.profile.options.chatShowTime = val
+							PETAD.db.profile.options.chatShowTime = val
 						end,
 						descStyle = "inline",
 						get = function()
-							return WPS.db.profile.options.chatShowTime
+							return PETAD.db.profile.options.chatShowTime
 						end,
 						order = newOrder()
 					},
@@ -224,11 +224,11 @@ function WPS:UpdateOptions()
 						name = "Show expansion in popup",
 						width = "double",
 						set = function(info, val)
-							WPS.db.profile.options.popupShowExpansion = val
+							PETAD.db.profile.options.popupShowExpansion = val
 						end,
 						descStyle = "inline",
 						get = function()
-							return WPS.db.profile.options.popupShowExpansion
+							return PETAD.db.profile.options.popupShowExpansion
 						end,
 						order = newOrder()
 					},
@@ -237,11 +237,11 @@ function WPS:UpdateOptions()
 						name = "Show zone in popup",
 						width = "double",
 						set = function(info, val)
-							WPS.db.profile.options.popupShowZone = val
+							PETAD.db.profile.options.popupShowZone = val
 						end,
 						descStyle = "inline",
 						get = function()
-							return WPS.db.profile.options.popupShowZone
+							return PETAD.db.profile.options.popupShowZone
 						end,
 						order = newOrder()
 					},
@@ -250,11 +250,11 @@ function WPS:UpdateOptions()
 						name = "Show time left in popup",
 						width = "double",
 						set = function(info, val)
-							WPS.db.profile.options.popupShowTime = val
+							PETAD.db.profile.options.popupShowTime = val
 						end,
 						descStyle = "inline",
 						get = function()
-							return WPS.db.profile.options.popupShowTime
+							return PETAD.db.profile.options.popupShowTime
 						end,
 						order = newOrder()
 					},
@@ -264,10 +264,10 @@ function WPS:UpdateOptions()
 						order = newOrder(),
 						width = "double",
 						set = function(info, val)
-							WPS.db.profile.options.delay = tonumber(val)
+							PETAD.db.profile.options.delay = tonumber(val)
 						end,
 						get = function()
-							return tostring(WPS.db.profile.options.delay)
+							return tostring(PETAD.db.profile.options.delay)
 						end
 					},
 					delayCombat = {
@@ -276,10 +276,10 @@ function WPS:UpdateOptions()
 						order = newOrder(),
 						width = "double",
 						set = function(info, val)
-							WPS.db.profile.options.delayCombat = val
+							PETAD.db.profile.options.delayCombat = val
 						end,
 						get = function()
-							return WPS.db.profile.options.delayCombat
+							return PETAD.db.profile.options.delayCombat
 						end
 					},
 					esc = {
@@ -288,11 +288,11 @@ function WPS:UpdateOptions()
 						desc = "Requires a reload",
 						width = "double",
 						set = function(info, val)
-							WPS.db.profile.options.esc = val
+							PETAD.db.profile.options.esc = val
 						end,
 						descStyle = "inline",
 						get = function()
-							return WPS.db.profile.options.esc
+							return PETAD.db.profile.options.esc
 						end,
 						order = newOrder()
 					},
@@ -301,12 +301,12 @@ function WPS:UpdateOptions()
 						name = "Show Minimap Icon",
 						width = "double",
 						set = function(info, val)
-							WPS.db.profile.options.LibDBIcon.hide = not val
-							WPS:UpdateMinimapIcon()
+							PETAD.db.profile.options.LibDBIcon.hide = not val
+							PETAD:UpdateMinimapIcon()
 						end,
 						descStyle = "inline",
 						get = function()
-							return not WPS.db.profile.options.LibDBIcon.hide
+							return not PETAD.db.profile.options.LibDBIcon.hide
 						end,
 						order = newOrder()
 					}
@@ -328,11 +328,11 @@ function WPS:UpdateOptions()
 			type = "toggle",
 			name = L[k],
 			set = function(info, val)
-				WPS.db.profile.options.reward.general.worldQuestType[v] = val
+				PETAD.db.profile.options.reward.general.worldQuestType[v] = val
 			end,
 			descStyle = "inline",
 			get = function()
-				return WPS.db.profile.options.reward.general.worldQuestType[v] or false
+				return PETAD.db.profile.options.reward.general.worldQuestType[v] or false
 			end,
 			order = newOrder()
 		}
@@ -387,11 +387,11 @@ function WPS:UpdateOptions()
 						type = "toggle",
 						name = name,
 						set = function(info, val)
-							WPS.db.profile.options.zone[v] = val
+							PETAD.db.profile.options.zone[v] = val
 						end,
 						descStyle = "inline",
 						get = function()
-							return WPS.db.profile.options.zone[v] or false
+							return PETAD.db.profile.options.zone[v] or false
 						end,
 						order = newOrder()
 					}
@@ -415,11 +415,11 @@ function WPS:UpdateOptions()
 							type = "toggle",
 							name = GetTitleForQuestID(v) or tostring(v),
 							set = function(info, val)
-								WPS.db.profile.options.emissary[v] = val
+								PETAD.db.profile.options.emissary[v] = val
 							end,
 							descStyle = "inline",
 							get = function()
-								return WPS.db.profile.options.emissary[v]
+								return PETAD.db.profile.options.emissary[v]
 							end,
 							order = newOrder()
 						}
@@ -443,37 +443,37 @@ function WPS:UpdateOptions()
 	self:UpdateCustom()
 end
 
-function WPS:GetOptions()
+function PETAD:GetOptions()
 	self:UpdateOptions()
 	self:SortOptions()
 	return self.options
 end
 
-function WPS:ToggleSet(info, val, ...)
+function PETAD:ToggleSet(info, val, ...)
 	-- print(info[#info-2],info[#info-1],info[#info])
 	local expansion = info[#info - 2]
 	local category = info[#info - 1]
 	local option = info[#info]
-	WPS.db.profile[category][tonumber(option)] = val
+	PETAD.db.profile[category][tonumber(option)] = val
 	if val == "exclusive" then
 		local name, server = UnitFullName("player")
-		WPS.db.profile[category].exclusive[tonumber(option)] = name .. "-" .. server
-	elseif WPS.db.profile[category].exclusive[tonumber(option)] then
-		WPS.db.profile[category].exclusive[tonumber(option)] = nil
+		PETAD.db.profile[category].exclusive[tonumber(option)] = name .. "-" .. server
+	elseif PETAD.db.profile[category].exclusive[tonumber(option)] then
+		PETAD.db.profile[category].exclusive[tonumber(option)] = nil
 	end
-	-- if not WPS.db.profile[expansion] then WPS.db.profile[expansion] = {} end
-	--[[if not WPS.db.profile[category] then WPS.db.profile[category] = {} end
+	-- if not PETAD.db.profile[expansion] then PETAD.db.profile[expansion] = {} end
+	--[[if not PETAD.db.profile[category] then PETAD.db.profile[category] = {} end
 if not val == true then
-WPS.db.profile[category][option] = true
+PETAD.db.profile[category][option] = true
 else
-WPS.db.profile[category][option] = nil
+PETAD.db.profile[category][option] = nil
 end-- ]]
 end
 
-function WPS:ToggleGet()
+function PETAD:ToggleGet()
 end
 
-function WPS:CreateGroup(options, data, groupName)
+function PETAD:CreateGroup(options, data, groupName)
 	if data[groupName] then
 		options[groupName] = {
 			order = 1,
@@ -524,13 +524,13 @@ function WPS:CreateGroup(options, data, groupName)
 				set = "ToggleSet",
 				-- descStyle = "inline",
 				get = function(info)
-					local value = WPS.db.profile[groupName][id]
+					local value = PETAD.db.profile[groupName][id]
 					if value == "exclusive" then
 						local name, server = UnitFullName("player")
 						name = name .. "-" .. server
-						if WPS.db.profile[info[#info - 1]].exclusive[id] ~= name then
+						if PETAD.db.profile[info[#info - 1]].exclusive[id] ~= name then
 							info.option.values.other = string.format(L["tracking_other"],
-								WPS.db.profile[info[#info - 1]].exclusive[id])
+								PETAD.db.profile[info[#info - 1]].exclusive[id])
 							return "other"
 						end
 					end
@@ -544,7 +544,7 @@ function WPS:CreateGroup(options, data, groupName)
 					optionsTimer =
 						self:ScheduleTimer(
 							function()
-								LibStub("AceConfigRegistry-3.0"):NotifyChange("WorldPetScanner")
+								LibStub("AceConfigRegistry-3.0"):NotifyChange("PetAdvisor")
 							end,
 							2
 						)
@@ -557,7 +557,7 @@ function WPS:CreateGroup(options, data, groupName)
 	end
 end
 
-function WPS:CreateCustomQuest()
+function PETAD:CreateCustomQuest()
 	if not self.db.global.custom then
 		self.db.global.custom = {}
 	end
@@ -571,7 +571,7 @@ function WPS:CreateCustomQuest()
 	self:UpdateCustomQuests()
 end
 
-function WPS:UpdateCustomQuests()
+function PETAD:UpdateCustomQuests()
 	local data = self.db.global.custom.worldQuest
 	if type(data) ~= "table" then
 		return false
@@ -582,11 +582,11 @@ function WPS:UpdateCustomQuests()
 			type = "toggle",
 			name = GetQuestLink(id) or GetTitleForQuestID(id) or tostring(id),
 			set = function(info, val)
-				WPS.db.profile.custom.worldQuest[id] = val
+				PETAD.db.profile.custom.worldQuest[id] = val
 			end,
 			descStyle = "inline",
 			get = function()
-				return WPS.db.profile.custom.worldQuest[id]
+				return PETAD.db.profile.custom.worldQuest[id]
 			end,
 			order = newOrder(),
 			width = 1.2
@@ -676,7 +676,7 @@ function WPS:UpdateCustomQuests()
 	end
 end
 
-function WPS:CreateCustomReward()
+function PETAD:CreateCustomReward()
 	if not self.db.global.custom then
 		self.db.global.custom = {}
 	end
@@ -687,7 +687,7 @@ function WPS:CreateCustomReward()
 	self:UpdateCustomRewards()
 end
 
-function WPS:UpdateCustomRewards()
+function PETAD:UpdateCustomRewards()
 	local data = self.db.global.custom.worldQuestReward
 	if type(data) ~= "table" then
 		return false
@@ -700,11 +700,11 @@ function WPS:UpdateCustomRewards()
 			name = itemLink or tostring(id),
 			--width = "double",
 			set = function(info, val)
-				WPS.db.profile.custom.worldQuestReward[id] = val
+				PETAD.db.profile.custom.worldQuestReward[id] = val
 			end,
 			descStyle = "inline",
 			get = function()
-				return WPS.db.profile.custom.worldQuestReward[id]
+				return PETAD.db.profile.custom.worldQuestReward[id]
 			end,
 			order = newOrder(),
 			width = 1.2
@@ -732,7 +732,7 @@ function WPS:UpdateCustomRewards()
 	end
 end
 
-function WPS:CreateCustomMission()
+function PETAD:CreateCustomMission()
 	if not self.db.global.custom then
 		self.db.global.custom = {}
 	end
@@ -746,7 +746,7 @@ function WPS:CreateCustomMission()
 	self:UpdateCustomMissions()
 end
 
-function WPS:UpdateCustomMissions()
+function PETAD:UpdateCustomMissions()
 	local data = self.db.global.custom.mission
 	if type(data) ~= "table" then
 		return false
@@ -757,11 +757,11 @@ function WPS:UpdateCustomMissions()
 			type = "toggle",
 			name = C_Garrison.GetMissionLink(id) or tostring(id),
 			set = function(info, val)
-				WPS.db.profile.custom.mission[id] = val
+				PETAD.db.profile.custom.mission[id] = val
 			end,
 			descStyle = "inline",
 			get = function()
-				return WPS.db.profile.custom.mission[id]
+				return PETAD.db.profile.custom.mission[id]
 			end,
 			order = newOrder(),
 			width = 1.2
@@ -817,7 +817,7 @@ function WPS:UpdateCustomMissions()
 	end
 end
 
-function WPS:CreateCustomMissionReward()
+function PETAD:CreateCustomMissionReward()
 	if not self.db.global.custom then
 		self.db.global.custom = {}
 	end
@@ -828,7 +828,7 @@ function WPS:CreateCustomMissionReward()
 	self:UpdateCustomMissionRewards()
 end
 
-function WPS:UpdateCustomMissionRewards()
+function PETAD:UpdateCustomMissionRewards()
 	local data = self.db.global.custom.missionReward
 	if type(data) ~= "table" then
 		return false
@@ -840,11 +840,11 @@ function WPS:UpdateCustomMissionRewards()
 			type = "toggle",
 			name = itemLink or tostring(id),
 			set = function(info, val)
-				WPS.db.profile.custom.missionReward[id] = val
+				PETAD.db.profile.custom.missionReward[id] = val
 			end,
 			descStyle = "inline",
 			get = function()
-				return WPS.db.profile.custom.missionReward[id]
+				return PETAD.db.profile.custom.missionReward[id]
 			end,
 			order = newOrder(),
 			width = 1.2
@@ -872,8 +872,8 @@ function WPS:UpdateCustomMissionRewards()
 	end
 end
 
-function WPS:SortOptions()
-	for k, v in pairs(WPS.options.args.general.args) do
+function PETAD:SortOptions()
+	for k, v in pairs(PETAD.options.args.general.args) do
 		for kk, vv in pairs(v.args) do
 			local t = {}
 			for kkk, vvv in pairs(vv.args) do

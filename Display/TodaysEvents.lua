@@ -1,15 +1,15 @@
-local WPS = WorldPetScanner
-local DISPLAY = WPS.DISPLAY
-local UTILITIES = WPS.UTILITIES
-local DATA = WPS.DATA
-local ZONES = WPS.ZONES
-local EXPANSIONS = WPS.EXPANSIONS
+local PETAD = PetAdvisor
+local DISPLAY = PETAD.DISPLAY
+local UTILITIES = PETAD.UTILITIES
+local DATA = PETAD.DATA
+local ZONES = PETAD.ZONES
+local EXPANSIONS = PETAD.EXPANSIONS
 
 local function DetermineTab1Width(fontString)
     local maxZoneWidth = 0
     local maxTimeWidth = 0
     local maxChallengeWidth = 0
-    local maxRewardIconWidth = WPS.IconColumnWidth
+    local maxRewardIconWidth = PETAD.IconColumnWidth
     local maxRewardLinkWidth = 0
 
     for _, expansion in pairs(DATA.groupedTasks) do
@@ -43,38 +43,38 @@ local function DetermineTab1Width(fontString)
 end
 
 local function ResetTabContent()
-    if (WPSMainFrameTab1.content.scrollFrame) then
-        WPSMainFrameTab1.content.scrollFrame:Hide()
-        WPSMainFrameTab1.content.scrollFrame:ClearAllPoints()
-        WPSMainFrameTab1.content.scrollFrame = nil
+    if (PAMainFrameTab1.content.scrollFrame) then
+        PAMainFrameTab1.content.scrollFrame:Hide()
+        PAMainFrameTab1.content.scrollFrame:ClearAllPoints()
+        PAMainFrameTab1.content.scrollFrame = nil
     end
 
-    WPSMainFrameTab1.content.scrollFrame = CreateFrame("ScrollFrame", nil, WPSMainFrameTab1.content, "UIPanelScrollFrameTemplate")
-    WPSMainFrameTab1.content.scrollFrame:SetClipsChildren(true)
-	WPSMainFrameTab1.content.scrollFrame:SetPoint("TOPLEFT", WPSMainFrameTab1.content, "TOPLEFT", 10, -55);
-	WPSMainFrameTab1.content.scrollFrame:SetPoint("BOTTOMRIGHT", WPSMainFrameTab1.content, "BOTTOMRIGHT",0,4);
-	WPSMainFrameTab1.content.scrollFrame.ScrollBar:ClearAllPoints();
-    WPSMainFrameTab1.content.scrollFrame.ScrollBar:SetPoint("TOPLEFT", WPSMainFrameTab1.content.scrollFrame, "TOPRIGHT", -12, -18);
-    WPSMainFrameTab1.content.scrollFrame.ScrollBar:SetPoint("BOTTOMRIGHT", WPSMainFrameTab1.content.scrollFrame, "BOTTOMRIGHT", -7, 24);
-    local scrollFrameChild = CreateFrame("Frame", nil, WPSMainFrameTab1.content.scrollFrame)
-    WPSMainFrameTab1.content.scrollFrame:SetScrollChild(scrollFrameChild)
-    WPSMainFrameTab1.content.scrollFrame.child = scrollFrameChild
+    PAMainFrameTab1.content.scrollFrame = CreateFrame("ScrollFrame", nil, PAMainFrameTab1.content, "UIPanelScrollFrameTemplate")
+    PAMainFrameTab1.content.scrollFrame:SetClipsChildren(true)
+	PAMainFrameTab1.content.scrollFrame:SetPoint("TOPLEFT", PAMainFrameTab1.content, "TOPLEFT", 10, -55);
+	PAMainFrameTab1.content.scrollFrame:SetPoint("BOTTOMRIGHT", PAMainFrameTab1.content, "BOTTOMRIGHT",0,4);
+	PAMainFrameTab1.content.scrollFrame.ScrollBar:ClearAllPoints();
+    PAMainFrameTab1.content.scrollFrame.ScrollBar:SetPoint("TOPLEFT", PAMainFrameTab1.content.scrollFrame, "TOPRIGHT", -12, -18);
+    PAMainFrameTab1.content.scrollFrame.ScrollBar:SetPoint("BOTTOMRIGHT", PAMainFrameTab1.content.scrollFrame, "BOTTOMRIGHT", -7, 24);
+    local scrollFrameChild = CreateFrame("Frame", nil, PAMainFrameTab1.content.scrollFrame)
+    PAMainFrameTab1.content.scrollFrame:SetScrollChild(scrollFrameChild)
+    PAMainFrameTab1.content.scrollFrame.child = scrollFrameChild
 end
 
 function DISPLAY.TodaysEvents:ShowLoading()
-    WPSMainFrameTab1.content.refreshButton:Hide()
-    WPSMainFrameTab1.content.spinner:Show()
+    PAMainFrameTab1.content.refreshButton:Hide()
+    PAMainFrameTab1.content.spinner:Show()
 end
 
 function DISPLAY.TodaysEvents:HideLoading()
-    WPSMainFrameTab1.content.refreshButton:Show()
-    WPSMainFrameTab1.content.spinner:Hide()
+    PAMainFrameTab1.content.refreshButton:Show()
+    PAMainFrameTab1.content.spinner:Hide()
     DISPLAY.TodaysEvents:Update()
 end
 
 function DISPLAY.TodaysEvents:Update()
     ResetTabContent()
-    local tab1Content = WPSMainFrameTab1.content
+    local tab1Content = PAMainFrameTab1.content
     local scrollFrame = tab1Content.scrollFrame
     if UTILITIES:IsEmpty(DATA.groupedTasks) then
         local noResults = scrollFrame:CreateFontString(nil, "OVERLAY", "GameFontHighlight");
@@ -88,29 +88,29 @@ function DISPLAY.TodaysEvents:Update()
 
     --ITEM TOTALS AT TOP
     
-    local charms = DATA.charmTotal.."x".."|T"..WPS.Textures[WPS.PetCharm]..":26:26:0:0:32:32:2:30:2:30|t"        
-    local bandages  = DATA.bandageTotal.."x".."|T"..WPS.Textures[WPS.Bandage]..":26:26:0:0:32:32:2:30:2:30|t"
-    local blueStones  = DATA.blueStoneTotal.."x".."|T"..WPS.Textures[WPS.BlueStone]..":26:26:0:0:32:32:2:30:2:30|t"
+    local charms = DATA.charmTotal.."x".."|T"..PETAD.Textures[PETAD.PetCharm]..":26:26:0:0:32:32:2:30:2:30|t"        
+    local bandages  = DATA.bandageTotal.."x".."|T"..PETAD.Textures[PETAD.Bandage]..":26:26:0:0:32:32:2:30:2:30|t"
+    local blueStones  = DATA.blueStoneTotal.."x".."|T"..PETAD.Textures[PETAD.BlueStone]..":26:26:0:0:32:32:2:30:2:30|t"
     local trainingStones = ""
-    for tStone, _ in pairs(WPS.TrainingStones) do
+    for tStone, _ in pairs(PETAD.TrainingStones) do
         local tStoneTotal = DATA.trainingStoneTotals[tStone]
         if tStoneTotal ~= nil then
-            trainingStones = trainingStones .. tStoneTotal.."x".."|T"..WPS.Textures[tStone]..":26:26:0:0:32:32:2:30:2:30|t   "
+            trainingStones = trainingStones .. tStoneTotal.."x".."|T"..PETAD.Textures[tStone]..":26:26:0:0:32:32:2:30:2:30|t   "
         end
     end
     local header = charms .. "    " .. bandages .. "    " .. blueStones .. "    " .. trainingStones
     
-    if (WPSMainFrameTab1.content.totals1) then
-        WPSMainFrameTab1.content.totals1:SetText()
+    if (PAMainFrameTab1.content.totals1) then
+        PAMainFrameTab1.content.totals1:SetText()
     end
-    WPSMainFrameTab1.content.totals1 = WPSMainFrameTab1.content:CreateFontString(nil, "OVERLAY", "GameFontHighlight");
-    local fontFile, fontHeight, fontFlags = WPSMainFrameTab1.content.totals1:GetFont()
-    WPSMainFrameTab1.content.totals1:SetFont(fontFile, fontHeight+2, fontFlags)
-    WPSMainFrameTab1.content.totals1:SetPoint("TOPRIGHT", -2, -4);
-    WPSMainFrameTab1.content.totals1:SetText(header)
+    PAMainFrameTab1.content.totals1 = PAMainFrameTab1.content:CreateFontString(nil, "OVERLAY", "GameFontHighlight");
+    local fontFile, fontHeight, fontFlags = PAMainFrameTab1.content.totals1:GetFont()
+    PAMainFrameTab1.content.totals1:SetFont(fontFile, fontHeight+2, fontFlags)
+    PAMainFrameTab1.content.totals1:SetPoint("TOPRIGHT", -2, -4);
+    PAMainFrameTab1.content.totals1:SetText(header)
 
     --SEPARATOR LINE
-    local line = WPSMainFrameTab1.content:CreateLine()
+    local line = PAMainFrameTab1.content:CreateLine()
     line:SetColorTexture(.3, .3, 0)
     line:SetStartPoint("TOPLEFT", 10, -40)
     line:SetEndPoint("TOPRIGHT", -10, -40)
@@ -188,7 +188,7 @@ function DISPLAY.TodaysEvents:Update()
 
                 --REWARD ICON                
                 if (task.iconReward) then
-                    local iconIndent = WPS:GetIconIndent(task.iconReward.itemCategory)
+                    local iconIndent = PETAD:GetIconIndent(task.iconReward.itemCategory)
                     local iconReward = zonesFrame:CreateFontString(nil, "OVERLAY", "GameFontHighlight");
                     local fontFile, fontHeight, fontFlags = iconReward:GetFont()
                     iconReward:SetFont(fontFile, fontHeight-2, fontFlags)
@@ -221,7 +221,7 @@ function DISPLAY.TodaysEvents:Update()
                     if (linkAnchor) then
                         iconLink:SetPoint("TOPLEFT", linkAnchor, "TOPRIGHT", DISPLAY.Constants.columnSeparation, 0);   
                     else
-                        iconLink:SetPoint("TOPLEFT", taskTime, "TOPRIGHT", maxChallengeWidth +WPS.IconColumnWidth +(DISPLAY.Constants.columnSeparation*4), 0);
+                        iconLink:SetPoint("TOPLEFT", taskTime, "TOPRIGHT", maxChallengeWidth +PETAD.IconColumnWidth +(DISPLAY.Constants.columnSeparation*4), 0);
                     end
                     linkAnchor = iconLink
                     iconLink:SetScript("OnEnter",
@@ -255,4 +255,7 @@ function DISPLAY.TodaysEvents:Update()
     end
 
     scrollFrame.child:SetSize(totalWidth, totalHeight)
+    
+    --Hack to make it so the window doesn't load empty
+    local currentHeight = PAMainFrameTab1.content.scrollFrame.child:GetHeight()
 end

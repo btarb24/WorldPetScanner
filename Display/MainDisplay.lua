@@ -1,8 +1,8 @@
----@class WorldPetScanner
-local WPS = WorldPetScanner
-local DISPLAY = WPS.DISPLAY
-local UTILITIES = WPS.UTILITIES
-local TASKFINDER = WPS.TASKFINDER
+---@class PetAdvisor
+local PETAD = PetAdvisor
+local DISPLAY = PETAD.DISPLAY
+local UTILITIES = PETAD.UTILITIES
+local TASKFINDER = PETAD.TASKFINDER
 
 
 DISPLAY.Constants = {
@@ -26,27 +26,27 @@ local function Tab_OnClick(self)
     end
     self:GetParent().content = self.content
     self.content:Show()
-    WPSMainFrame:SetWidth(self.content.contentWidth)
-    WPSMainFrame.SelectedTab = self
+    PAMainFrame:SetWidth(self.content.contentWidth)
+    PAMainFrame.SelectedTab = self
 end
 
 local function CollapseButton_OnClick(self, button)
     self.collapsed = not self.collapsed
     local heightAdjustment = self:GetParent().childrenHostFrame:GetHeight()
-    local currentHeight = WPSMainFrameTab1.content.scrollFrame.child:GetHeight()
+    local currentHeight = PAMainFrameTab1.content.scrollFrame.child:GetHeight()
     if (self.collapsed) then
         self:SetNormalTexture("Interface\\Buttons\\UI-PlusButton-UP");
         self:GetParent().childrenHostFrame:Hide()
         self:GetParent().movingAnchor:ClearAllPoints()
         self:GetParent().movingAnchor:SetPoint("TOPLEFT", self, "BOTTOMLEFT")
         
-        WPSMainFrameTab1.content.scrollFrame.child:SetHeight(currentHeight-heightAdjustment)
+        PAMainFrameTab1.content.scrollFrame.child:SetHeight(currentHeight-heightAdjustment)
     else
         self:SetNormalTexture("Interface\\Buttons\\UI-MinusButton-UP");
         self:GetParent().childrenHostFrame:Show()
         self:GetParent().movingAnchor:ClearAllPoints()
         self:GetParent().movingAnchor:SetPoint("TOPLEFT", self:GetParent(), "BOTTOMLEFT")
-        WPSMainFrameTab1.content.scrollFrame.child:SetHeight(currentHeight+heightAdjustment)
+        PAMainFrameTab1.content.scrollFrame.child:SetHeight(currentHeight+heightAdjustment)
     end
 end
 
@@ -63,10 +63,10 @@ local function ScrollFrame_OnMouseWheel(self, delta)
 end
 
 local function UpdateHostWindow()
-    if (WPSMainFrame.mode == "test") then
-        WPSMainFrame.TitleNote:SetText("*test mode*")
+    if (PAMainFrame.mode == "test") then
+        PAMainFrame.TitleNote:SetText("*test mode*")
     else
-        WPSMainFrame.TitleNote:SetText("")
+        PAMainFrame.TitleNote:SetText("")
     end
 end
 
@@ -87,12 +87,12 @@ function DISPLAY:BuildCollapseButton(parent)
 end
 
 function DISPLAY:CreateHostWindow()
-    if WPSMainFrame then
-        WPSMainFrame:Hide()
-        return WPSMainFrame
+    if PAMainFrame then
+        PAMainFrame:Hide()
+        return PAMainFrame
     end
 
-    local mainFrame = CreateFrame("Frame", "WPSMainFrame", UIParent, "ButtonFrameBaseTemplate")
+    local mainFrame = CreateFrame("Frame", "PAMainFrame", UIParent, "ButtonFrameBaseTemplate")
     mainFrame:Hide()
     mainFrame:SetFrameStrata("HIGH")
     mainFrame:Lower()
@@ -103,33 +103,33 @@ function DISPLAY:CreateHostWindow()
     mainFrame:SetMovable(true)
     mainFrame:EnableMouse(true)
 	mainFrame:SetScript("OnMouseWheel", ScrollFrame_OnMouseWheel);
-    ButtonFrameTemplate_HideButtonBar(WPSMainFrame) -- maybe show the button bar with some toggle options in it??
+    ButtonFrameTemplate_HideButtonBar(PAMainFrame) -- maybe show the button bar with some toggle options in it??
     --only enable drag on the titlebar
     mainFrame.TitleContainer:GetParent():EnableMouse(true)
     mainFrame.TitleContainer:GetParent():RegisterForDrag("LeftButton")
     mainFrame.TitleContainer:GetParent():SetScript("OnDragStart",
         function(self)
-            WPSMainFrame.moving = true
-            WPSMainFrame:StartMoving()
+            PAMainFrame.moving = true
+            PAMainFrame:StartMoving()
         end
     )
     mainFrame.TitleContainer:GetParent():SetScript("OnDragStop",
         function(self)
-            WPSMainFrame.moving = nil
-            WPSMainFrame:StopMovingOrSizing()
+            PAMainFrame.moving = nil
+            PAMainFrame:StopMovingOrSizing()
         end
     )
 
-    WPSMainFramePortrait:SetTexture("Interface\\Icons\\Inv_pet_maggot")
-    WPSMainFrameTitleText:SetText("The Pet Advisor")
+    PAMainFramePortrait:SetTexture("Interface\\Icons\\Inv_pet_maggot")
+    PAMainFrameTitleText:SetText("Pet Advisor")
     mainFrame.TitleNote = mainFrame:CreateFontString(nil, "OVERLAY", "GameFontHighlight");
     mainFrame.TitleNote:SetPoint("TOPLEFT", mainFrame, "TOPLEFT", 40,10);
 
-  --  WPSMainFrameInset:Hide()
-    --WPSMainFrameBg:Hide()
-    WPSMainFrameBg:SetTexture(nil)
-    WPSMainFrameBg:SetColorTexture(.1, .1,.1,.8)
-    WPSMainFrame.TopTileStreaks:Hide()
+  --  PAMainFrameInset:Hide()
+    --PAMainFrameBg:Hide()
+    PAMainFrameBg:SetTexture(nil)
+    PAMainFrameBg:SetColorTexture(.1, .1,.1,.8)
+    PAMainFrame.TopTileStreaks:Hide()
     
     local resizeButton = CreateFrame("Button", nil, mainFrame)
     resizeButton:SetSize(16, 16)
@@ -139,29 +139,29 @@ function DISPLAY:CreateHostWindow()
     resizeButton:SetPushedTexture("Interface\\ChatFrame\\UI-ChatIM-SizeGrabber-Down")
     resizeButton:SetScript("OnMouseDown", 
         function(self, button)
-            WPSMainFrame:StartSizing("BOTTOMRIGHT")
-            WPSMainFrame:SetUserPlaced(true)
+            PAMainFrame:StartSizing("BOTTOMRIGHT")
+            PAMainFrame:SetUserPlaced(true)
         end)     
     resizeButton:SetScript("OnMouseUp", 
         function(self, button)
-            WPSMainFrame:StopMovingOrSizing()
+            PAMainFrame:StopMovingOrSizing()
         end)
 
 
-    WPSMainFrame.numTabs = 6
-    local tab1 = CreateFrame("Button", "WPSMainFrameTab1", WPSMainFrame, "PanelTabButtonTemplate") --"CharacterFrameTabButtonTemplate"
+    PAMainFrame.numTabs = 6
+    local tab1 = CreateFrame("Button", "PAMainFrameTab1", PAMainFrame, "PanelTabButtonTemplate") --"CharacterFrameTabButtonTemplate"
     tab1:SetID(1)
     tab1:SetText("Today's events")
     tab1:SetWidth(100)
     tab1.Text:SetWidth(100)
     tab1:ClearAllPoints()
-    tab1:SetPoint("TOPLEFT", WPSMainFrame, "BOTTOMLEFT", 11, 2)
+    tab1:SetPoint("TOPLEFT", PAMainFrame, "BOTTOMLEFT", 11, 2)
     tab1:SetScript("OnClick", Tab_OnClick)
-    tab1.content = CreateFrame("Frame", nil, WPSMainFrame)
+    tab1.content = CreateFrame("Frame", nil, PAMainFrame)
     tab1.content:Hide()
     tab1.content.contentWidth = DISPLAY.Constants.minWidth
-	tab1.content:SetPoint("TOPLEFT", WPSMainFrame, "TOPLEFT", 4, -25);
-	tab1.content:SetPoint("BOTTOMRIGHT", WPSMainFrame, "BOTTOMRIGHT", -3, 4);
+	tab1.content:SetPoint("TOPLEFT", PAMainFrame, "TOPLEFT", 4, -25);
+	tab1.content:SetPoint("BOTTOMRIGHT", PAMainFrame, "BOTTOMRIGHT", -3, 4);
     tab1.content.bg = tab1.content:CreateTexture(nil, "BACKGROUND")
     tab1.content.bg:SetAllPoints(true)
     tab1.content.bg:SetColorTexture(.2, 0,.6,.05)    
@@ -173,12 +173,12 @@ function DISPLAY:CreateHostWindow()
     tab1.content.refreshButton:SetPoint("TOPLEFT", tab1.content, "TOPLEFT", 60, -4)
 	tab1.content.refreshButton:SetScript("OnClick", 
         function() 
-            TASKFINDER:RefreshTodaysEvents(WPSMainFrame.mode); 
+            TASKFINDER:RefreshTodaysEvents(PAMainFrame.mode); 
             DISPLAY.TodaysEvents:Update();
         end
     );
 
-    local tab2 = CreateFrame("Button", "WPSMainFrameTab2", WPSMainFrame, "PanelTabButtonTemplate") --"CharacterFrameTabButtonTemplate"
+    local tab2 = CreateFrame("Button", "PAMainFrameTab2", PAMainFrame, "PanelTabButtonTemplate") --"CharacterFrameTabButtonTemplate"
     tab2:SetID(2)
     tab2:SetText("Capturable")
     tab2:SetWidth(100)
@@ -186,16 +186,16 @@ function DISPLAY:CreateHostWindow()
     tab2:ClearAllPoints()
     tab2:SetPoint("TOPLEFT", tab1, "TOPRIGHT", 3, 0)
     tab2:SetScript("OnClick", Tab_OnClick)
-    tab2.content = CreateFrame("Frame", nil, WPSMainFrame)
+    tab2.content = CreateFrame("Frame", nil, PAMainFrame)
     tab2.content.contentWidth = DISPLAY.Constants.minWidth
-    tab2.content:SetPoint("TOPLEFT", WPSMainFrame, "TOPLEFT", 50, 50)
+    tab2.content:SetPoint("TOPLEFT", PAMainFrame, "TOPLEFT", 50, 50)
     tab2.content:SetSize(DISPLAY.Constants.minWidth,DISPLAY.Constants.minHeight)
     tab2.content.bg = tab2.content:CreateTexture(nil, "BACKGROUND")
     tab2.content.bg:SetAllPoints(true)
     tab2.content.bg:SetColorTexture(0, .6,0,.1)
     tab2.content:Hide()
     
-    local tab3 = CreateFrame("Button", "WPSMainFrameTab3", mainFrame, "PanelTabButtonTemplate") --"CharacterFrameTabButtonTemplate"
+    local tab3 = CreateFrame("Button", "PAMainFrameTab3", mainFrame, "PanelTabButtonTemplate") --"CharacterFrameTabButtonTemplate"
     tab3:SetID(3)
     tab3:SetText("Loot drops")
     tab3:SetWidth(100)
@@ -212,7 +212,7 @@ function DISPLAY:CreateHostWindow()
     tab3.content.bg:SetColorTexture(0, 0,.6,.1)
     tab3.content:Hide()
     
-    local tab4 = CreateFrame("Button", "WPSMainFrameTab4", mainFrame, "PanelTabButtonTemplate") --"CharacterFrameTabButtonTemplate"
+    local tab4 = CreateFrame("Button", "PAMainFrameTab4", mainFrame, "PanelTabButtonTemplate") --"CharacterFrameTabButtonTemplate"
     tab4:SetID(4)
     tab4:SetText("Random suggestion")
     tab4:SetWidth(120)
@@ -229,13 +229,13 @@ function DISPLAY:CreateHostWindow()
     tab4.content.bg:SetColorTexture(0, 0,.6,.1)
     tab4.content:Hide()
     
-    local tab5 = CreateFrame("Button", "WPSMainFrameTab5", mainFrame, "PanelTabButtonTemplate") --"CharacterFrameTabButtonTemplate"
+    local tab5 = CreateFrame("Button", "PAMainFrameTab5", mainFrame, "PanelTabButtonTemplate") --"CharacterFrameTabButtonTemplate"
     tab5:SetID(5)
     tab5:SetText("Settings")
     tab5:SetWidth(80)
     tab5.Text:SetWidth(80)
     tab5:ClearAllPoints()
-    tab5:SetPoint("TOPRIGHT", WPSMainFrame, "BOTTOMRIGHT", -11, 2)
+    tab5:SetPoint("TOPRIGHT", PAMainFrame, "BOTTOMRIGHT", -11, 2)
     tab5:SetScript("OnClick", Tab_OnClick)
     tab5.content = CreateFrame("Frame", nil, mainFrame)
     tab5.content.contentWidth = DISPLAY.Constants.minWidth
@@ -246,7 +246,7 @@ function DISPLAY:CreateHostWindow()
     tab5.content.bg:SetColorTexture(0, 0,.6,.1)
     tab5.content:Hide()
 
-    local tab6 = CreateFrame("Button", "WPSMainFrameTab6", mainFrame, "PanelTabButtonTemplate") --"CharacterFrameTabButtonTemplate"
+    local tab6 = CreateFrame("Button", "PAMainFrameTab6", mainFrame, "PanelTabButtonTemplate") --"CharacterFrameTabButtonTemplate"
     tab6:SetID(6)
     tab6:SetText("Help")
     tab6:SetWidth(80)
@@ -269,21 +269,18 @@ function DISPLAY:CreateHostWindow()
 end
 
 function DISPLAY.Main:ShowWindow(mode)
-    if (not WPSMainFrame) then 
+    if (not PAMainFrame) then 
         CreateHostWindow()
     end
     
-    WPSMainFrame.mode = mode
+    PAMainFrame.mode = mode
     UpdateHostWindow()
 
     DISPLAY.TodaysEvents:Update()
 
-    if (not WPSMainFrame.SelectedTab) then
-        Tab_OnClick(WPSMainFrameTab1)
+    if (not PAMainFrame.SelectedTab) then
+        Tab_OnClick(PAMainFrameTab1)
     end
 
-    WPSMainFrame:Show()
-
-    --Hack to make it so the window doesn't load empty
-    local currentHeight = WPSMainFrameTab1.content.scrollFrame.child:GetHeight()
+    PAMainFrame:Show()
 end

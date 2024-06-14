@@ -1,10 +1,10 @@
-local WPS = WorldPetScanner
-local UTILITIES = WPS.UTILITIES
+local PETAD = PetAdvisor
+local UTILITIES = PETAD.UTILITIES
 
 Challenge = {}
 Challenge.__index = Challenge;
 
-WPS.CHALLENGE_TYPE = {
+PETAD.CHALLENGE_TYPE = {
     QUEST = "quest",
     RARE_KILL = "rareKill",
     ACHIEVEMENT = "achievement",
@@ -29,7 +29,7 @@ function Challenge:new(challengeData)
     instance.achievementName = challengeData.achievementName
 
     if (type(challengeData.zoneID) == "table") then
-        instance.zoneID = challengeData.zoneID[WPS.faction]
+        instance.zoneID = challengeData.zoneID[PETAD.faction]
     else
         instance.zoneID = challengeData.zoneID
     end
@@ -41,7 +41,7 @@ function Challenge:newWorldQuest(questID, expansionID, zoneID)
     local instance = {}
     setmetatable(instance, Challenge)  
 
-    instance.type = WPS.CHALLENGE_TYPE.QUEST
+    instance.type = PETAD.CHALLENGE_TYPE.QUEST
     instance.expansionID = expansionID
     instance.zoneID = zoneID
     instance.questID = questID
@@ -50,23 +50,23 @@ function Challenge:newWorldQuest(questID, expansionID, zoneID)
 end
 
 function Challenge:IsRareKill()
-    return self.type == WPS.CHALLENGE_TYPE.RARE_KILL
+    return self.type == PETAD.CHALLENGE_TYPE.RARE_KILL
 end
 
 function Challenge:IsAchievement()
-    return self.type == WPS.CHALLENGE_TYPE.ACHIEVEMENT
+    return self.type == PETAD.CHALLENGE_TYPE.ACHIEVEMENT
 end
 
 function Challenge:IsQuest()
-    return self.type == WPS.CHALLENGE_TYPE.QUEST
+    return self.type == PETAD.CHALLENGE_TYPE.QUEST
 end
 
 function Challenge:IsVendor()
-    return self.type == WPS.CHALLENGE_TYPE.VENDOR
+    return self.type == PETAD.CHALLENGE_TYPE.VENDOR
 end
 
 function Challenge:IsPetBattle()
-    return self.type == WPS.CHALLENGE_TYPE.PETBATTLE
+    return self.type == PETAD.CHALLENGE_TYPE.PETBATTLE
 end
 
 function Challenge:HasTooltip()
@@ -79,7 +79,7 @@ function Challenge:Link()
     end
 
     if self._link == nil then
-        local cachedLink = WPS.links[self.questID]
+        local cachedLink = PETAD.links[self.questID]
         if self:IsQuest() then
             self._link = GetQuestLink(self.questID)
             if (not self._link) then

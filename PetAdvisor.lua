@@ -1,9 +1,9 @@
----@class WorldPetScanner
-local WPS = WorldPetScanner
-local DATA = WPS.DATA
-local DISPLAY = WPS.DISPLAY
-local UTILITIES = WPS.UTILITIES
-local TASKFINDER = WPS.TASKFINDER
+---@class PetAdvisor
+local PETAD = PetAdvisor
+local DATA = PETAD.DATA
+local DISPLAY = PETAD.DISPLAY
+local UTILITIES = PETAD.UTILITIES
+local TASKFINDER = PETAD.TASKFINDER
 
 local LibQTip = LibStub("LibQTip-1.0")
 
@@ -13,14 +13,14 @@ local GetQuestTagInfo = C_QuestLog.GetQuestTagInfo
 local GetBountiesForMapID = C_QuestLog.GetBountiesForMapID
 local GetTitleForQuestID = C_QuestLog.GetTitleForQuestID
 local GetCurrencyLink = C_CurrencyInfo.GetCurrencyLink
-local L = WPS.L
+local L = PETAD.L
 
 local ldb = LibStub:GetLibrary("LibDataBroker-1.1")
 local dataobj =
-	ldb:NewDataObject("WorldPetScanner",
+	ldb:NewDataObject("PetAdvisor",
 		{
 			type = "data source",
-			text = "WPS",
+			text = "PetAdvisor",
 			icon = "Interface\\Icons\\Inv_pet_maggot"
 		}
 	)
@@ -38,10 +38,10 @@ local function BuildPetList()
 	end
 end
 
-function WPS:OnInitialize()
+function PETAD:OnInitialize()
 	self.faction = UnitFactionGroup("player")
 
-	self.db = LibStub("AceDB-3.0"):New("WPSDB", defaults, true)
+	self.db = LibStub("AceDB-3.0"):New("PETAD_DB", defaults, true)
 
 	-- Defaults
 	local defaults = {
@@ -53,30 +53,30 @@ function WPS:OnInitialize()
 		global = {
 		}
 	}
-	self.db = LibStub("AceDB-3.0"):New("WPSDB", defaults, true)
+	self.db = LibStub("AceDB-3.0"):New("PETAD_DB", defaults, true)
 
 	-- Minimap Icon
-	icon:Register("WorldPetScanner", dataobj, self.db.profile.options.LibDBIcon)
+	icon:Register("PetAdvisor", dataobj, self.db.profile.options.LibDBIcon)
 end
 
-function WPS:OnEnable()
+function PETAD:OnEnable()
 	BuildPetList()
 	DISPLAY:CreateHostWindow()
 	TASKFINDER:RefreshTodaysEvents(mode)
 end
 
-WPS:RegisterChatCommand("petscan", "ChatCommand")
-WPS:RegisterChatCommand("wps", "ChatCommand")
-function WPS:ChatCommand(input)
+PETAD:RegisterChatCommand("tpa", "ChatCommand")
+PETAD:RegisterChatCommand("pa", "ChatCommand")
+function PETAD:ChatCommand(input)
 	local arg1 = string.lower(input)
 	self:Show(arg1)
 end
 
-function WPS:UpdateMinimapIcon()
+function PETAD:UpdateMinimapIcon()
 	if self.db.profile.options.LibDBIcon.hide then
-		icon:Hide("WorldPetScanner")
+		icon:Hide("PetAdvisor")
 	else
-		icon:Show("WorldPetScanner")
+		icon:Show("PetAdvisor")
 	end
 end
 
@@ -93,17 +93,16 @@ function dataobj:OnClick(button)
 	end
 	
 	TASKFINDER:RefreshTodaysEvents(mode)
-	WPS:Show(mode)
+	PETAD:Show(mode)
 end
 
-function WPS:Show(mode)
+function PETAD:Show(mode)
 	if (DISPLAY.Report.PopUp) then		
 		DISPLAY.Report:CloseWindow()
 		return
 	end
 	
 	local isPartialResult = not UTILITIES:IsEmpty(DATA.questsToRetry)
-	print(mode)
 	if (mode == "report") then
 		DISPLAY.Report:ShowWindow(mode, isPartialResult)
 	else
@@ -111,8 +110,8 @@ function WPS:Show(mode)
 	end
 end
 
-WPS.debug = true
-function WPS:Debug(...)
+PETAD.debug = true
+function PETAD:Debug(...)
 	if self.debug == true then
 		print(...)
 	end

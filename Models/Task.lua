@@ -1,6 +1,6 @@
-local WPS = WorldPetScanner
-local ZONES = WPS.ZONES
-local EXPANSIONS = WPS.EXPANSIONS
+local PETAD = PetAdvisor
+local ZONES = PETAD.ZONES
+local EXPANSIONS = PETAD.EXPANSIONS
 
 Task = {}
 Task.__index = Task
@@ -62,13 +62,13 @@ function Task:ZoneName()
 end
 
 function Task:Time()
-    if self.trigger.type == WPS.TRIGGER_TYPE.AURA then
+    if self.trigger.type == PETAD.TRIGGER_TYPE.AURA then
         return nil
-    elseif self.trigger.type == WPS.TRIGGER_TYPE.PERIODIC_ROTATION then
+    elseif self.trigger.type == PETAD.TRIGGER_TYPE.PERIODIC_ROTATION then
         return self.trigger.timeRemaining / 60
-    elseif self.trigger.type == WPS.TRIGGER_TYPE.WORLD_QUEST or self.trigger.type == WPS.TRIGGER_TYPE.DAILY_QUEST or self.trigger.type == WPS.TRIGGER_TYPE.WORLD_QUEST_REWARD then
+    elseif self.trigger.type == PETAD.TRIGGER_TYPE.WORLD_QUEST or self.trigger.type == PETAD.TRIGGER_TYPE.DAILY_QUEST or self.trigger.type == PETAD.TRIGGER_TYPE.WORLD_QUEST_REWARD then
         return C_TaskQuest.GetQuestTimeLeftMinutes(self.challenge.questID)
-    elseif self.trigger.type == WPS.TRIGGER_TYPE.AREA_POI then
+    elseif self.trigger.type == PETAD.TRIGGER_TYPE.AREA_POI then
         return C_AreaPoiInfo.GetAreaPOISecondsLeft(self.trigger.areaPoiID)/60
     end
 end

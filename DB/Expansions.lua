@@ -1,5 +1,5 @@
-local WPS = WorldPetScanner
-local EXPANSIONS = WPS.EXPANSIONS
+local PETAD = PetAdvisor
+local EXPANSIONS = PETAD.EXPANSIONS
 
 EXPANSIONS.list = {
     [4] = {

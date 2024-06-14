@@ -1,5 +1,5 @@
-local WPS = WorldPetScanner
-local ZONES = WPS.ZONES
+local PETAD = PetAdvisor
+local ZONES = PETAD.ZONES
 
 ZONES.list = {
     [4] = {

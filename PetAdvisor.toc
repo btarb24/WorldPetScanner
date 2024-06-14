@@ -1,8 +1,8 @@
 ## Interface: 100207
-## Title: WorldPetScanner
+## Title: PetAdvisor
 ## Author: Salkari
 ## Version: v10.2.7-1
-## SavedVariables: WPSDB
+## SavedVariables: PETAD_DB
 
 embeds.xml
 Libs\LibQTip-1.0\LibQTip-1.0.lua
@@ -24,5 +24,5 @@ Display\ReportDisplay.lua
 Display\TodaysEvents.lua
 Display\MainDisplay.lua
 TaskFinder.lua
-WorldPetScanner.lua
+PetAdvisor.lua
 Options.lua

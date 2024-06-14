@@ -19,7 +19,6 @@ https://www.townlong-yak.com/framexml/live/Blizzard_APIDocumentation
 TODO
 * falkosaur pet food
 * improve frame stata - same level as char / social / map/etc
-* window sometimes blank after refresh
 *separate data for report?
 
 IDEAS

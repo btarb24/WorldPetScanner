@@ -1,10 +1,10 @@
-local WPS = WorldPetScanner
+local PETAD = PetAdvisor
 
-WPS.PetCharm = 163036
-WPS.Bandage = 86143
-WPS.BlueStone = 98715
+PETAD.PetCharm = 163036
+PETAD.Bandage = 86143
+PETAD.BlueStone = 98715
 
-WPS.BattleStones = {
+PETAD.BattleStones = {
     [137627] = true, -- ultimate - upgrade to epic
     [98715] = true,  -- marked flawless - upgrade to rare
     [92741] = true,  -- flawless - upgrade to rare
@@ -31,7 +31,7 @@ WPS.BattleStones = {
     [92681] = true  -- undead rare
 }
 
-WPS.TrainingStones = {
+PETAD.TrainingStones = {
     [122457] = true, -- ultimate - train to 25
     [127755] = true, -- felTouched - 10k xp
     [116429] = true, -- flawless - 2k xp
@@ -47,14 +47,14 @@ WPS.TrainingStones = {
     [116424] = true  -- aqauatic
 }
 
-WPS.NotableItems = {
+PETAD.NotableItems = {
     [183111] = true, -- Animated Ulna
 }
 
-WPS.Textures = {
-    [WPS.PetCharm] = 2004597, -- charm
-    [WPS.Bandage] = 133675, -- bandage
-    [WPS.BlueStone] = 667492, -- rare upgrade
+PETAD.Textures = {
+    [PETAD.PetCharm] = 2004597, -- charm
+    [PETAD.Bandage] = 133675, -- bandage
+    [PETAD.BlueStone] = 667492, -- rare upgrade
     [122457] = 667491, -- ultimate to 25
     [127755] = 667493, -- feltouched 10k
     [116429] = 1045111, -- flawless 2k
@@ -70,29 +70,29 @@ WPS.Textures = {
     [116424] = 1045115, -- aqua 2k
 }
 
-function WPS:GetItemCategory(itemID)
-    if itemID == WPS.PetCharm then
-        return WPS.REWARD_ITEMCATEGORY.CHARM
-    elseif itemID == WPS.Bandage then
-        return WPS.REWARD_ITEMCATEGORY.BANDAGE
-    elseif WPS.TrainingStones[itemID] then
-        return WPS.REWARD_ITEMCATEGORY.TRAINING_STONE
-    elseif WPS.BattleStones[itemID] then
-        return WPS.REWARD_ITEMCATEGORY.BATTLE_STONE
+function PETAD:GetItemCategory(itemID)
+    if itemID == PETAD.PetCharm then
+        return PETAD.REWARD_ITEMCATEGORY.CHARM
+    elseif itemID == PETAD.Bandage then
+        return PETAD.REWARD_ITEMCATEGORY.BANDAGE
+    elseif PETAD.TrainingStones[itemID] then
+        return PETAD.REWARD_ITEMCATEGORY.TRAINING_STONE
+    elseif PETAD.BattleStones[itemID] then
+        return PETAD.REWARD_ITEMCATEGORY.BATTLE_STONE
     else 
         return nil
     end
 end
 
-WPS.IconColumnWidth = 120
-function WPS:GetIconIndent(itemCategory)
-    if itemCategory == WPS.REWARD_ITEMCATEGORY.CHARM then
+PETAD.IconColumnWidth = 120
+function PETAD:GetIconIndent(itemCategory)
+    if itemCategory == PETAD.REWARD_ITEMCATEGORY.CHARM then
         return 0
-    elseif itemCategory == WPS.REWARD_ITEMCATEGORY.BANDAGE then
+    elseif itemCategory == PETAD.REWARD_ITEMCATEGORY.BANDAGE then
         return 30
-    elseif itemCategory == WPS.REWARD_ITEMCATEGORY.BATTLE_STONE then
+    elseif itemCategory == PETAD.REWARD_ITEMCATEGORY.BATTLE_STONE then
         return 60
-    elseif itemCategory == WPS.REWARD_ITEMCATEGORY.TRAINING_STONE then
+    elseif itemCategory == PETAD.REWARD_ITEMCATEGORY.TRAINING_STONE then
         return 90
     else 
         return -30 -- just to notice it
