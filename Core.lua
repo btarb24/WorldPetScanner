@@ -6,8 +6,9 @@ PetAdvisor = LibStub("AceAddon-3.0"):NewAddon("PetAdvisor", "AceConsole-3.0", "A
 local PETAD = PetAdvisor
 PETAD.UTILITIES = {}
 PETAD.TASKFINDER = {}
-PETAD.DISPLAY = {Report = {}, Main = {}, TodaysEvents = {}}
+PETAD.DISPLAY = {Report = {}, Main = {}, TodaysEvents = {}, TestWindow = {}, PetDataEntryHelper = {}}
 PETAD.DATA = {}
 PETAD.ZONES = {}
 PETAD.EXPANSIONS = {}
+PETAD.PETS = {}
 PETAD.links = {}

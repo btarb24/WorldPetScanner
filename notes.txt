@@ -19,7 +19,12 @@ https://www.townlong-yak.com/framexml/live/Blizzard_APIDocumentation
 TODO
 * falkosaur pet food
 * improve frame stata - same level as char / social / map/etc
-*separate data for report?
+* separate data for report?
+* create Logging window that you turn on via chat command
+* better option to 'show for collected pets'
+
+DATA
+* requiresScan -- for pets that show up Today's Events
 
 IDEAS
 * levelling - https://wago.io/5OWJmTGPp
@@ -31,6 +36,7 @@ IDEAS
 * achievements
 * Shinies for Flip  https://www.warcraftmounts.com/multi_look_companions.php
 
+* seasons: snowy owl
 
 TRADING POST / PRIME / STORE DEPARTURE / Stuff like Snowy Owl etc - Only the starting and ending dates
 

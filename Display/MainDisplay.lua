@@ -24,6 +24,7 @@ local function Tab_OnClick(self)
     if (self:GetParent().content) then
         self:GetParent().content:Hide()
     end
+
     self:GetParent().content = self.content
     self.content:Show()
     PAMainFrame:SetWidth(self.content.contentWidth)
@@ -84,6 +85,30 @@ function DISPLAY:BuildCollapseButton(parent)
     collapseButton.collapsed = false
     collapseButton:SetScript("OnClick", CollapseButton_OnClick)
     return collapseButton
+end
+
+local function CreateTab(idNum, name, tabButtonWidth)
+    if not tabButtonWidth then
+        tabButtonWidth = 100
+    end
+
+    local tab = CreateFrame("Button", "PAMainFrameTab"..idNum, PAMainFrame, "PanelTabButtonTemplate") --"CharacterFrameTabButtonTemplate"
+    tab:SetID(idNum)
+    tab:SetText(name)
+    tab:SetWidth(tabButtonWidth)
+    tab.Text:SetWidth(tabButtonWidth)
+    tab:ClearAllPoints()
+    tab:SetScript("OnClick", Tab_OnClick)
+    tab.content = CreateFrame("Frame", nil, PAMainFrame)
+    tab.content:Hide()
+    tab.content.contentWidth = DISPLAY.Constants.minWidth
+	tab.content:SetPoint("TOPLEFT", PAMainFrame, "TOPLEFT", 4, -25);
+	tab.content:SetPoint("BOTTOMRIGHT", PAMainFrame, "BOTTOMRIGHT", -3, 4);
+    tab.content.bg = tab.content:CreateTexture(nil, "BACKGROUND")
+    tab.content.bg:SetAllPoints(true)
+    tab.content.bg:SetColorTexture(.2, 0,.6,.05)
+
+    return tab
 end
 
 function DISPLAY:CreateHostWindow()
@@ -149,27 +174,13 @@ function DISPLAY:CreateHostWindow()
 
 
     PAMainFrame.numTabs = 6
-    local tab1 = CreateFrame("Button", "PAMainFrameTab1", PAMainFrame, "PanelTabButtonTemplate") --"CharacterFrameTabButtonTemplate"
-    tab1:SetID(1)
-    tab1:SetText("Today's events")
-    tab1:SetWidth(100)
-    tab1.Text:SetWidth(100)
-    tab1:ClearAllPoints()
+    local tab1 = CreateTab(1, "Today's events")
     tab1:SetPoint("TOPLEFT", PAMainFrame, "BOTTOMLEFT", 11, 2)
-    tab1:SetScript("OnClick", Tab_OnClick)
-    tab1.content = CreateFrame("Frame", nil, PAMainFrame)
-    tab1.content:Hide()
-    tab1.content.contentWidth = DISPLAY.Constants.minWidth
-	tab1.content:SetPoint("TOPLEFT", PAMainFrame, "TOPLEFT", 4, -25);
-	tab1.content:SetPoint("BOTTOMRIGHT", PAMainFrame, "BOTTOMRIGHT", -3, 4);
-    tab1.content.bg = tab1.content:CreateTexture(nil, "BACKGROUND")
-    tab1.content.bg:SetAllPoints(true)
-    tab1.content.bg:SetColorTexture(.2, 0,.6,.05)    
-    tab1.content.spinner = CreateFrame("Frame", nil, tab1, "SpinnerTemplate")
+    tab1.content.spinner = CreateFrame("Frame", nil, tab1.content, "SpinnerTemplate")
     tab1.content.spinner:SetPoint("TOPLEFT", tab1.content, "TOPLEFT", 60, -4)
     tab1.content.spinner:SetSize(32,32)
     tab1.content.spinner:Hide()
-    tab1.content.refreshButton = CreateFrame("Button", nil, tab1, "RefreshButtonTemplate")
+    tab1.content.refreshButton = CreateFrame("Button", nil, tab1.content, "RefreshButtonTemplate")
     tab1.content.refreshButton:SetPoint("TOPLEFT", tab1.content, "TOPLEFT", 60, -4)
 	tab1.content.refreshButton:SetScript("OnClick", 
         function() 
@@ -178,90 +189,16 @@ function DISPLAY:CreateHostWindow()
         end
     );
 
-    local tab2 = CreateFrame("Button", "PAMainFrameTab2", PAMainFrame, "PanelTabButtonTemplate") --"CharacterFrameTabButtonTemplate"
-    tab2:SetID(2)
-    tab2:SetText("Capturable")
-    tab2:SetWidth(100)
-    tab2.Text:SetWidth(100)
-    tab2:ClearAllPoints()
+    local tab2 = CreateTab(2, "Capturable")
     tab2:SetPoint("TOPLEFT", tab1, "TOPRIGHT", 3, 0)
-    tab2:SetScript("OnClick", Tab_OnClick)
-    tab2.content = CreateFrame("Frame", nil, PAMainFrame)
-    tab2.content.contentWidth = DISPLAY.Constants.minWidth
-    tab2.content:SetPoint("TOPLEFT", PAMainFrame, "TOPLEFT", 50, 50)
-    tab2.content:SetSize(DISPLAY.Constants.minWidth,DISPLAY.Constants.minHeight)
-    tab2.content.bg = tab2.content:CreateTexture(nil, "BACKGROUND")
-    tab2.content.bg:SetAllPoints(true)
-    tab2.content.bg:SetColorTexture(0, .6,0,.1)
-    tab2.content:Hide()
-    
-    local tab3 = CreateFrame("Button", "PAMainFrameTab3", mainFrame, "PanelTabButtonTemplate") --"CharacterFrameTabButtonTemplate"
-    tab3:SetID(3)
-    tab3:SetText("Loot drops")
-    tab3:SetWidth(100)
-    tab3.Text:SetWidth(100)
-    tab3:ClearAllPoints()
+    local tab3 = CreateTab(3, "Loot drops")
     tab3:SetPoint("TOPLEFT", tab2, "TOPRIGHT", 3, 0)
-    tab3:SetScript("OnClick", Tab_OnClick)
-    tab3.content = CreateFrame("Frame", nil, mainFrame)
-    tab3.content.contentWidth = DISPLAY.Constants.minWidth
-    tab3.content:SetPoint("TOPLEFT", mainFrame, "TOPLEFT", 50, 50)
-    tab3.content:SetSize(DISPLAY.Constants.minWidth,DISPLAY.Constants.minHeight)
-    tab3.content.bg = tab3.content:CreateTexture(nil, "BACKGROUND")
-    tab3.content.bg:SetAllPoints(true)
-    tab3.content.bg:SetColorTexture(0, 0,.6,.1)
-    tab3.content:Hide()
-    
-    local tab4 = CreateFrame("Button", "PAMainFrameTab4", mainFrame, "PanelTabButtonTemplate") --"CharacterFrameTabButtonTemplate"
-    tab4:SetID(4)
-    tab4:SetText("Random suggestion")
-    tab4:SetWidth(120)
-    tab4.Text:SetWidth(120)
-    tab4:ClearAllPoints()
+    local tab4 = CreateTab(4, "Random suggestion", 120)
     tab4:SetPoint("TOPLEFT", tab3, "TOPRIGHT", 3, 0)
-    tab4:SetScript("OnClick", Tab_OnClick)
-    tab4.content = CreateFrame("Frame", nil, mainFrame)
-    tab4.content.contentWidth = DISPLAY.Constants.minWidth
-    tab4.content:SetPoint("TOPLEFT", mainFrame, "TOPLEFT", 50, 50)
-    tab4.content:SetSize(DISPLAY.Constants.minWidth,DISPLAY.Constants.minHeight)
-    tab4.content.bg = tab4.content:CreateTexture(nil, "BACKGROUND")
-    tab4.content.bg:SetAllPoints(true)
-    tab4.content.bg:SetColorTexture(0, 0,.6,.1)
-    tab4.content:Hide()
-    
-    local tab5 = CreateFrame("Button", "PAMainFrameTab5", mainFrame, "PanelTabButtonTemplate") --"CharacterFrameTabButtonTemplate"
-    tab5:SetID(5)
-    tab5:SetText("Settings")
-    tab5:SetWidth(80)
-    tab5.Text:SetWidth(80)
-    tab5:ClearAllPoints()
+    local tab5 = CreateTab(5, "Settings")
     tab5:SetPoint("TOPRIGHT", PAMainFrame, "BOTTOMRIGHT", -11, 2)
-    tab5:SetScript("OnClick", Tab_OnClick)
-    tab5.content = CreateFrame("Frame", nil, mainFrame)
-    tab5.content.contentWidth = DISPLAY.Constants.minWidth
-    tab5.content:SetPoint("TOPLEFT", mainFrame, "TOPLEFT", 50, 50)
-    tab5.content:SetSize(DISPLAY.Constants.minWidth,DISPLAY.Constants.minHeight)
-    tab5.content.bg = tab5.content:CreateTexture(nil, "BACKGROUND")
-    tab5.content.bg:SetAllPoints(true)
-    tab5.content.bg:SetColorTexture(0, 0,.6,.1)
-    tab5.content:Hide()
-
-    local tab6 = CreateFrame("Button", "PAMainFrameTab6", mainFrame, "PanelTabButtonTemplate") --"CharacterFrameTabButtonTemplate"
-    tab6:SetID(6)
-    tab6:SetText("Help")
-    tab6:SetWidth(80)
-    tab6.Text:SetWidth(80)
-    tab6:ClearAllPoints()
+    local tab6 = CreateTab(6, "Help")
     tab6:SetPoint("TOPRIGHT", tab5, "TOPLEFT", -3, 0)
-    tab6:SetScript("OnClick", Tab_OnClick)
-    tab6.content = CreateFrame("Frame", nil, mainFrame)
-    tab6.content.contentWidth = DISPLAY.Constants.minWidth
-    tab6.content:SetPoint("TOPLEFT", mainFrame, "TOPLEFT", 50, 50)
-    tab6.content:SetSize(DISPLAY.Constants.minWidth,DISPLAY.Constants.minHeight)
-    tab6.content.bg = tab6.content:CreateTexture(nil, "BACKGROUND")
-    tab6.content.bg:SetAllPoints(true)
-    tab6.content.bg:SetColorTexture(0, 0,.6,.1)
-    tab6.content:Hide()
 
     mainFrame.content = tab1.content
 

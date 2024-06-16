@@ -69,7 +69,11 @@ PETAD:RegisterChatCommand("tpa", "ChatCommand")
 PETAD:RegisterChatCommand("pa", "ChatCommand")
 function PETAD:ChatCommand(input)
 	local arg1 = string.lower(input)
-	self:Show(arg1)
+	if (arg1 == "petdata") then
+		DISPLAY.PetDataEntryHelper:Show()
+	else
+		self:Show(arg1)
+	end
 end
 
 function PETAD:UpdateMinimapIcon()
@@ -89,6 +93,10 @@ function dataobj:OnClick(button)
 		end
 		
 	elseif button == "RightButton" then
+		if IsShiftKeyDown() then
+			DISPLAY.PetDataEntryHelper:Show()
+			return
+		end
 		mode ="report"
 	end
 	

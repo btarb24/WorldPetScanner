@@ -18,11 +18,15 @@ DB\Zones.lua
 DB\Items.lua
 
 Data\Tasks.lua
+Data\Pets.lua
 
 Utilities.lua
+
 Display\ReportDisplay.lua
 Display\TodaysEvents.lua
 Display\MainDisplay.lua
+Display\PetDataEntryHelper.lua
+
 TaskFinder.lua
 PetAdvisor.lua
 Options.lua
