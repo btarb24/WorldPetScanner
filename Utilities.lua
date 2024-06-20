@@ -142,6 +142,10 @@ end
 function UTILITIES:Sort(a, b)
 	if a.challenge.expansionID > b.challenge.expansionID then return true end
 	if a.challenge.expansionID < b.challenge.expansionID then return false end
+    if a.challenge.zoneID == b.challenge.zoneID then
+        return a.challenge:Display() < b.challenge:Display()
+    end
+    
 	return a.challenge.zoneID < b.challenge.zoneID
 end
 

@@ -44,21 +44,26 @@ end
 
 local function ResetTabContent()
     if (PAMainFrameTab1.content.scrollFrame) then
-        PAMainFrameTab1.content.scrollFrame:Hide()
-        PAMainFrameTab1.content.scrollFrame:ClearAllPoints()
-        PAMainFrameTab1.content.scrollFrame = nil
+        for _,expansionFrame in pairs(PAMainFrameTab1.content.scrollFrame.expansionFramesPool) do
+            expansionFrame:Hide()
+            expansionFrame:ClearAllPoints()
+            expansionFrame.movingAnchor:ClearAllPoints()
+            expansionFrame.childrenHostFrame.standardTextPool:ReleaseAll()
+            expansionFrame.childrenHostFrame.smallerTextPool:ReleaseAll()
+        end
+    else
+        PAMainFrameTab1.content.scrollFrame = CreateFrame("ScrollFrame", nil, PAMainFrameTab1.content, "UIPanelScrollFrameTemplate")
+        PAMainFrameTab1.content.scrollFrame.expansionFramesPool = {}
+        PAMainFrameTab1.content.scrollFrame:SetClipsChildren(true)
+        PAMainFrameTab1.content.scrollFrame:SetPoint("TOPLEFT", PAMainFrameTab1.content, "TOPLEFT", 10, -55);
+        PAMainFrameTab1.content.scrollFrame:SetPoint("BOTTOMRIGHT", PAMainFrameTab1.content, "BOTTOMRIGHT",0,4);
+        PAMainFrameTab1.content.scrollFrame.ScrollBar:ClearAllPoints();
+        PAMainFrameTab1.content.scrollFrame.ScrollBar:SetPoint("TOPLEFT", PAMainFrameTab1.content.scrollFrame, "TOPRIGHT", -12, -18);
+        PAMainFrameTab1.content.scrollFrame.ScrollBar:SetPoint("BOTTOMRIGHT", PAMainFrameTab1.content.scrollFrame, "BOTTOMRIGHT", -7, 24);
+        local scrollFrameChild = CreateFrame("Frame", nil, PAMainFrameTab1.content.scrollFrame)
+        PAMainFrameTab1.content.scrollFrame:SetScrollChild(scrollFrameChild)
+        PAMainFrameTab1.content.scrollFrame.child = scrollFrameChild
     end
-
-    PAMainFrameTab1.content.scrollFrame = CreateFrame("ScrollFrame", nil, PAMainFrameTab1.content, "UIPanelScrollFrameTemplate")
-    PAMainFrameTab1.content.scrollFrame:SetClipsChildren(true)
-	PAMainFrameTab1.content.scrollFrame:SetPoint("TOPLEFT", PAMainFrameTab1.content, "TOPLEFT", 10, -55);
-	PAMainFrameTab1.content.scrollFrame:SetPoint("BOTTOMRIGHT", PAMainFrameTab1.content, "BOTTOMRIGHT",0,4);
-	PAMainFrameTab1.content.scrollFrame.ScrollBar:ClearAllPoints();
-    PAMainFrameTab1.content.scrollFrame.ScrollBar:SetPoint("TOPLEFT", PAMainFrameTab1.content.scrollFrame, "TOPRIGHT", -12, -18);
-    PAMainFrameTab1.content.scrollFrame.ScrollBar:SetPoint("BOTTOMRIGHT", PAMainFrameTab1.content.scrollFrame, "BOTTOMRIGHT", -7, 24);
-    local scrollFrameChild = CreateFrame("Frame", nil, PAMainFrameTab1.content.scrollFrame)
-    PAMainFrameTab1.content.scrollFrame:SetScrollChild(scrollFrameChild)
-    PAMainFrameTab1.content.scrollFrame.child = scrollFrameChild
 end
 
 function DISPLAY.TodaysEvents:ShowLoading()
@@ -70,6 +75,54 @@ function DISPLAY.TodaysEvents:HideLoading()
     PAMainFrameTab1.content.refreshButton:Show()
     PAMainFrameTab1.content.spinner:Hide()
     DISPLAY.TodaysEvents:Update()
+end
+
+local function AcquireStandardText(expansionFrame)
+    local text = expansionFrame.childrenHostFrame.standardTextPool:Acquire()
+    text:Show()
+    return text
+end
+
+local function AcquireSmallerText(expansionFrame)
+    local text = expansionFrame.childrenHostFrame.smallerTextPool:Acquire()
+    if (not text:GetText()) then
+        local fontFile, fontHeight, fontFlags = text:GetFont()
+        text:SetFont(fontFile, fontHeight-2, fontFlags)
+    end
+    text:Show()
+    return text
+end
+
+local function AcquireExpansionFrame(parent, name)
+    local expansionFrame = parent.expansionFramesPool[name]
+    if (not expansionFrame) then
+        expansionFrame = CreateFrame("Frame", nil, parent)
+        parent.expansionFramesPool[name] = expansionFrame
+    end
+
+    if (not expansionFrame.header) then
+        expansionFrame.collapseButton = CreateFrame("Button", nil, expansionFrame)
+        expansionFrame.collapseButton:SetPoint("TOPLEFT", expansionFrame, "TOPLEFT", 0, 0)
+        DISPLAY:BuildCollapseButton(expansionFrame.collapseButton)
+
+        expansionFrame.header = expansionFrame:CreateFontString(nil, "OVERLAY", "GameFontHighlight")
+        expansionFrame.header:SetText(string.format("|cff33ff33%s|r", name))
+        expansionFrame.header:SetPoint("TOPLEFT", expansionFrame.collapseButton, "TOPRIGHT", DISPLAY.Constants.marginAfterButton, -DISPLAY.Constants.vAlignAdjustmentAfterButton);
+        
+        expansionFrame.childrenHostFrame = CreateFrame("Frame", nil, expansionFrame)
+        expansionFrame.childrenHostFrame:SetPoint("TOPLEFT", expansionFrame.header, "BOTTOMLEFT", DISPLAY.Constants.zoneIndent,0);
+        expansionFrame.childrenHostFrame.standardTextPool = CreateFontStringPool(expansionFrame.childrenHostFrame, nil, nil, "GameFontHighlight")
+        expansionFrame.childrenHostFrame.smallerTextPool = CreateFontStringPool(expansionFrame.childrenHostFrame, nil, nil, "GameFontHighlight")
+        
+        expansionFrame.movingAnchor = CreateFrame("Frame", nil, expansionFrame)
+        expansionFrame.movingAnchor:SetSize(1, 1)
+    end
+
+    expansionFrame.childrenHostFrame:SetSize(1,1)
+    expansionFrame.movingAnchor:SetPoint("TOPLEFT", expansionFrame, "BOTTOMLEFT")
+
+    expansionFrame:Show()
+    return expansionFrame
 end
 
 function DISPLAY.TodaysEvents:Update()
@@ -102,11 +155,12 @@ function DISPLAY.TodaysEvents:Update()
     
     if (PAMainFrameTab1.content.totals1) then
         PAMainFrameTab1.content.totals1:SetText()
+    else
+        PAMainFrameTab1.content.totals1 = PAMainFrameTab1.content:CreateFontString(nil, "OVERLAY", "GameFontHighlight");
+        local fontFile, fontHeight, fontFlags = PAMainFrameTab1.content.totals1:GetFont()
+        PAMainFrameTab1.content.totals1:SetFont(fontFile, fontHeight+2, fontFlags)
+        PAMainFrameTab1.content.totals1:SetPoint("TOPRIGHT", -2, -4);
     end
-    PAMainFrameTab1.content.totals1 = PAMainFrameTab1.content:CreateFontString(nil, "OVERLAY", "GameFontHighlight");
-    local fontFile, fontHeight, fontFlags = PAMainFrameTab1.content.totals1:GetFont()
-    PAMainFrameTab1.content.totals1:SetFont(fontFile, fontHeight+2, fontFlags)
-    PAMainFrameTab1.content.totals1:SetPoint("TOPRIGHT", -2, -4);
     PAMainFrameTab1.content.totals1:SetText(header)
 
     --SEPARATOR LINE
@@ -119,49 +173,37 @@ function DISPLAY.TodaysEvents:Update()
     local sumHeight = 0
     local widest = 0
     local currentExpansionID, currentZoneID
-    local priorExpansionIDFrame
+    local priorExpansionFrame = nil
     local totalHeight = 0
     for expansionIdx, expansion in ipairs(DATA.groupedTasks) do
         local expansionHeight = 0
         local expansionLargestWidth = 0
         --EXPANSION HEADER
-        local expansionIDFrame = CreateFrame("Frame", nil, scrollFrame)
-        if (priorExpansionIDFrame) then
-            expansionIDFrame:SetPoint("TOPLEFT", priorExpansionIDFrame.movingAnchor, "BOTTOMLEFT", 0, -DISPLAY.Constants.lineHeight -DISPLAY.Constants.lineSeparation)
+        local expansionFrame = AcquireExpansionFrame(scrollFrame, EXPANSIONS:GetName(expansion.ID))
+        if (priorExpansionFrame) then
+            expansionFrame:SetPoint("TOPLEFT", priorExpansionFrame.movingAnchor, "BOTTOMLEFT", 0, -DISPLAY.Constants.lineHeight -DISPLAY.Constants.lineSeparation)
         else
-            expansionIDFrame:SetPoint("TOPLEFT", scrollFrame.child, "TOPLEFT", expansionIndent, 0)
+            expansionFrame:SetPoint("TOPLEFT", scrollFrame.child, "TOPLEFT", expansionIndent, 0)
         end
-        priorExpansionIDFrame = expansionIDFrame
-        local expansionCollapseButton = DISPLAY:BuildCollapseButton(expansionIDFrame)
-        expansionWidth = expansionCollapseButton:GetWidth()
-        local expansionHeader = expansionIDFrame:CreateFontString(nil, "OVERLAY", "GameFontHighlight");
-        expansionHeader:SetText(string.format("|cff33ff33%s|r", EXPANSIONS:GetName(expansion.ID)))
-        expansionHeader:SetPoint("TOPLEFT", expansionCollapseButton, "TOPRIGHT", DISPLAY.Constants.marginAfterButton, -DISPLAY.Constants.vAlignAdjustmentAfterButton);
-        
-        expansionIDFrame.childrenHostFrame = CreateFrame("Frame", nil, expansionIDFrame)
-        expansionIDFrame.childrenHostFrame:SetPoint("TOPLEFT", expansionHeader, "BOTTOMLEFT", DISPLAY.Constants.zoneIndent,0);
-        
-        expansionIDFrame.movingAnchor = CreateFrame("Frame", nil, expansionIDFrame)
-        expansionIDFrame.movingAnchor:SetSize(1, 1)
-        expansionIDFrame.movingAnchor:SetPoint("TOPLEFT", expansionIDFrame, "BOTTOMLEFT")
-        
-        local zonesFrame = expansionIDFrame.childrenHostFrame
+        priorExpansionFrame = expansionFrame
+                        
+        local zonesFrame = expansionFrame.childrenHostFrame
         --ZONE HEADER
         for zoneIdx, zone in ipairs(expansion.zones) do
             local zoneWidth = 0
             local zoneHeight = 0
-            local zoneHeader = zonesFrame:CreateFontString(nil, "OVERLAY", "GameFontHighlight");
+            local zoneHeader = AcquireStandardText(expansionFrame);
             zoneHeader:SetText(ZONES:GetName(expansion.ID, zone.ID))
             zoneHeader:SetPoint("TOPLEFT", zonesFrame, "TOPLEFT", 0, -expansionHeight -DISPLAY.Constants.lineSeparation);
             
             for taskIdx, task in ipairs(zone.tasks) do
                 --TASK TIME
-                local taskTime = zonesFrame:CreateFontString(nil, "OVERLAY", "GameFontHighlight");
+                local taskTime = AcquireStandardText(expansionFrame);
                 taskTime:SetText(UTILITIES:formatTime(task:Time()))
                 taskTime:SetPoint("TOPRIGHT", zonesFrame, "TOPLEFT", maxZoneWidth + maxTimeWidth -DISPLAY.Constants.zoneIndent, -expansionHeight-zoneHeight -DISPLAY.Constants.lineSeparation);
 
                 --CHALLENGE
-                local challenge = zonesFrame:CreateFontString(nil, "OVERLAY", "GameFontHighlight");
+                local challenge = AcquireStandardText(expansionFrame);
                 challenge:SetText(task.challenge:Display())
                 challenge:SetPoint("TOPLEFT", taskTime, "TOPRIGHT", DISPLAY.Constants.columnSeparation, 0);
                 if task.challenge:HasTooltip() then
@@ -189,9 +231,7 @@ function DISPLAY.TodaysEvents:Update()
                 --REWARD ICON                
                 if (task.iconReward) then
                     local iconIndent = PETAD:GetIconIndent(task.iconReward.itemCategory)
-                    local iconReward = zonesFrame:CreateFontString(nil, "OVERLAY", "GameFontHighlight");
-                    local fontFile, fontHeight, fontFlags = iconReward:GetFont()
-                    iconReward:SetFont(fontFile, fontHeight-2, fontFlags)
+                    local iconReward = AcquireSmallerText(expansionFrame);                    
                     iconReward:SetText(task.iconReward:Display())
                     iconReward:SetPoint("TOPLEFT", taskTime, "TOPRIGHT", DISPLAY.Constants.columnSeparation +maxChallengeWidth +DISPLAY.Constants.columnSeparation +iconIndent, 0);   
                     if task.iconReward:Link() then           
@@ -216,7 +256,7 @@ function DISPLAY.TodaysEvents:Update()
                 --REWARD LINKS
                 local linkAnchor = nil
                 for rewardLinkIdx, reward in ipairs(task.nonIconRewards) do
-                    local iconLink = zonesFrame:CreateFontString(nil, "OVERLAY", "GameFontHighlight");
+                    local iconLink = AcquireStandardText(expansionFrame);
                     iconLink:SetText(reward:Display())
                     if (linkAnchor) then
                         iconLink:SetPoint("TOPLEFT", linkAnchor, "TOPRIGHT", DISPLAY.Constants.columnSeparation, 0);   
@@ -249,8 +289,10 @@ function DISPLAY.TodaysEvents:Update()
                 zonesFrame:SetSize(totalWidth, zoneHeight + zonesFrame:GetHeight())
             end
             expansionHeight = expansionHeight +zoneHeight + DISPLAY.Constants.lineSeparation
-            expansionIDFrame:SetSize(totalWidth, expansionHeight)
         end
+        expansionFrame:SetSize(totalWidth, expansionHeight)
+        expansionFrame.expansionHeight = expansionFrame:GetHeight()
+        expansionFrame.movingAnchor:GetHeight()
         totalHeight = totalHeight + expansionHeight +DISPLAY.Constants.lineHeight +DISPLAY.Constants.lineSeparation
     end
 

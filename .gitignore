@@ -39,3 +39,9 @@ luac.out
 *.i*86
 *.x86_64
 *.hex
+
+#cSharp
+/cSharp/PetAdvisorUtils/packages*
+/cSharp/PetAdvisorUtils/obj/*
+/cSharp/PetAdvisorUtils/bin/*
+/cSharp/PetAdvisorUtils/.vs/*

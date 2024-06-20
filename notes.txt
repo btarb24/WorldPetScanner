@@ -18,13 +18,16 @@ https://www.townlong-yak.com/framexml/live/Blizzard_APIDocumentation
 
 TODO
 * falkosaur pet food
+* etherwyrm  - make sure A Shady Place quest is up as part of the criteria
 * improve frame stata - same level as char / social / map/etc
 * separate data for report?
 * create Logging window that you turn on via chat command
 * better option to 'show for collected pets'
+* make dice icon a bit smaller so it VAligns with non-dice rewards
 
 DATA
 * requiresScan -- for pets that show up Today's Events
+* continent/expansion - or perhaps a more complex Location obj so 1:1 cont:zone
 
 IDEAS
 * levelling - https://wago.io/5OWJmTGPp
@@ -112,6 +115,9 @@ Weekly and semi-weekly content
     Anthea, Bert, Crysa, Darkmoon Faire
 
 
+Zelnithop macro:
+/run WorldMapFrame:SetMapID(1961);for pin in WorldMapFrame.pinPools.BonusObjectivePinTemplate:EnumerateActive() do if tContains({63950,63936,63786,63964,63956},pin.questID) then print("Zelnithop: Yes");return;end;end;print("Zelnithop: No")
+
 Quests once per character
 Mylune - Everbloom Peachick (For The Birds quest)
 Cowled Ranger - Sentinel's Companion (The Huntresses quest)
@@ -148,7 +154,7 @@ Cowled Ranger - Sentinel's Companion (The Huntresses quest)
 5 layers: BACKGROUND, BORDER, ARTWORK, OVERLAY, HIGHLIGHT
     
 --set frame bg to green
-    bla.bg = child:Createtexture(nill, "BACKGROUND")
+    bla.bg = bla:CreateTexture(nill, "BACKGROUND")
     bla.bg:SetAllPoints(true)
     bla.bg:SetColorTexture(.2, .6, 0, .8)
 

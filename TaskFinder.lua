@@ -7,28 +7,32 @@ local ZONES = PETAD.ZONES
 
 local retryTimer
 
-local function UpdateItemTotals(itemID, quantity)
-	if itemID == PETAD.PetCharm then
-		DATA.charmTotal = DATA.charmTotal + quantity
-	end
+local function UpdateItemTotals(rewards)
+    for _,reward in pairs(rewards) do
+        local itemID = reward.itemID
+        local quantity = reward.quantity
+        if itemID == PETAD.PetCharm then
+            DATA.charmTotal = DATA.charmTotal + quantity
+        end
 
-	if itemID == PETAD.Bandage then
-		DATA.bandageTotal = DATA.bandageTotal + quantity
-	end
+        if itemID == PETAD.Bandage then
+            DATA.bandageTotal = DATA.bandageTotal + quantity
+        end
 
-	if itemID == PETAD.BlueStone then
-		DATA.blueStoneTotal = DATA.blueStoneTotal + quantity
-	end
+        if itemID == PETAD.BlueStone then
+            DATA.blueStoneTotal = DATA.blueStoneTotal + quantity
+        end
 
-	if PETAD.TrainingStones[itemID] then
-		local existingTrainingStones = DATA.trainingStoneTotals[itemID]
-		DATA.hasTrainingStones = true
-		if (existingTrainingStones == nil) then
-			table.insert(DATA.trainingStoneTotals, itemID, quantity)
-		else
-			DATA.trainingStoneTotals[itemID] = existingTrainingStones + quantity
-		end
-	end
+        if PETAD.TrainingStones[itemID] then
+            local existingTrainingStones = DATA.trainingStoneTotals[itemID]
+            DATA.hasTrainingStones = true
+            if (existingTrainingStones == nil) then
+                table.insert(DATA.trainingStoneTotals, itemID, quantity)
+            else
+                DATA.trainingStoneTotals[itemID] = existingTrainingStones + quantity
+            end
+        end
+    end
 end
 
 local function CleanRewards(mode, taskData)
@@ -53,6 +57,7 @@ end
 local function AddTask(mode, taskData)
     if mode == "test" or mode == "report" then
         table.insert(DATA.taskList, Task:new(taskData.trigger, taskData.challenge, taskData.rewards))
+        UpdateItemTotals(taskData.rewards)
         return
     end
 
@@ -67,6 +72,7 @@ local function AddTask(mode, taskData)
     local rewards = CleanRewards(mode, taskData)
     if not UTILITIES:IsEmpty(rewards) then
         table.insert(DATA.taskList, Task:new(taskData.trigger, taskData.challenge, rewards))
+        UpdateItemTotals(taskData.rewards)
     end
 end
 
@@ -160,7 +166,6 @@ local function GetDesiredQuestRewards(taskPOI, expansionID, zoneID)
                 PETAD:Debug("missing itemID for quest: "..questID.." idx: ".. rewardIndex)
             elseif PETAD:GetItemCategory(itemID) ~= nil then
                 local reward = Reward:newItem(itemID, quantity, true)
-                UpdateItemTotals(itemID, quantity)
                 table.insert(rewards, reward)
             elseif PETAD.NotableItems[itemID] then
                 table.insert(DATA.questsWithNotableRewards, itemID, taskPOI)
@@ -186,12 +191,14 @@ end
 
 local function PerformRetry()
     retryTimer = nil
-    for questID, questData in pairs(DATA.questsToRetry) do        
-        if HaveQuestData(questID) and not HaveQuestRewardData(questID) then
-            C_TaskQuest.RequestPreloadRewardData(questID)
-        else
-            DATA.questsToRetry[questID] = nil
-            AnalyzeQuestRewards(questData.taskPOI, questData.expansionID, questData.zoneID)
+    if not UTILITIES:IsEmpty(DATA.questsToRetry) then
+        for questID, questData in pairs(DATA.questsToRetry) do
+            if HaveQuestData(questID) and not HaveQuestRewardData(questID) then
+                C_TaskQuest.RequestPreloadRewardData(questID)
+            else
+                DATA.questsToRetry[questID] = nil
+                AnalyzeQuestRewards(questData.taskPOI, questData.expansionID, questData.zoneID)
+            end
         end
     end
 
@@ -267,11 +274,8 @@ function TASKFINDER:RefreshTodaysEvents(mode)
         end
     end
 
-    if UTILITIES:IsEmpty(DATA.questsToRetry) then
-        DISPLAY.TodaysEvents:HideLoading()
-    else
-        retryTimer = PETAD:ScheduleTimer(PerformRetry, 1)
-    end
+    --always trigger the timer, this way we see the spinner for at least 1 second, otherwise feels like it ignored your click
+    retryTimer = PETAD:ScheduleTimer(PerformRetry, 1)
     
 	DATA.sortedTasks = UTILITIES:SortTaskList(DATA.taskList)
 	DATA.groupedTasks = UTILITIES:GroupTasks(DATA.sortedTasks)

@@ -31,22 +31,23 @@ local function Tab_OnClick(self)
     PAMainFrame.SelectedTab = self
 end
 
-local function CollapseButton_OnClick(self, button)
+local function CollapseButton_OnClick(self)
     self.collapsed = not self.collapsed
-    local heightAdjustment = self:GetParent().childrenHostFrame:GetHeight()
+    local expansionFrame = self:GetParent()
+    local heightAdjustment = expansionFrame.childrenHostFrame:GetHeight()
     local currentHeight = PAMainFrameTab1.content.scrollFrame.child:GetHeight()
     if (self.collapsed) then
         self:SetNormalTexture("Interface\\Buttons\\UI-PlusButton-UP");
-        self:GetParent().childrenHostFrame:Hide()
-        self:GetParent().movingAnchor:ClearAllPoints()
-        self:GetParent().movingAnchor:SetPoint("TOPLEFT", self, "BOTTOMLEFT")
+        expansionFrame.childrenHostFrame:Hide()
+        expansionFrame.movingAnchor:ClearAllPoints()
+        expansionFrame.movingAnchor:SetPoint("TOPLEFT", self, "BOTTOMLEFT")
         
         PAMainFrameTab1.content.scrollFrame.child:SetHeight(currentHeight-heightAdjustment)
     else
         self:SetNormalTexture("Interface\\Buttons\\UI-MinusButton-UP");
-        self:GetParent().childrenHostFrame:Show()
-        self:GetParent().movingAnchor:ClearAllPoints()
-        self:GetParent().movingAnchor:SetPoint("TOPLEFT", self:GetParent(), "BOTTOMLEFT")
+        expansionFrame.childrenHostFrame:Show()
+        expansionFrame.movingAnchor:ClearAllPoints()
+        expansionFrame.movingAnchor:SetPoint("TOPLEFT", expansionFrame, "BOTTOMLEFT")
         PAMainFrameTab1.content.scrollFrame.child:SetHeight(currentHeight+heightAdjustment)
     end
 end
@@ -71,10 +72,8 @@ local function UpdateHostWindow()
     end
 end
 
-function DISPLAY:BuildCollapseButton(parent)
-    local collapseButton = CreateFrame("Button", nil, parent)
+function DISPLAY:BuildCollapseButton(collapseButton)
     collapseButton:SetSize(DISPLAY.Constants.collapseButtonWidth, DISPLAY.Constants.collapseButtonHeight)
-    collapseButton:SetPoint("TOPLEFT", parent, "TOPLEFT", 0, 0)
     collapseButton:SetHitRectInsets(1, -4, -2, -2)
     collapseButton:SetNormalTexture("Interface\\Buttons\\UI-MinusButton-UP")
     collapseButton:GetNormalTexture():SetSize(DISPLAY.Constants.collapseButtonWidth, DISPLAY.Constants.collapseButtonHeight)
@@ -119,10 +118,11 @@ function DISPLAY:CreateHostWindow()
 
     local mainFrame = CreateFrame("Frame", "PAMainFrame", UIParent, "ButtonFrameBaseTemplate")
     mainFrame:Hide()
+    mainFrame.collapseButtonPool = CreateFramePool("Button")
     mainFrame:SetFrameStrata("HIGH")
     mainFrame:Lower()
     mainFrame:SetResizable(true)
-    mainFrame:SetResizeBounds(DISPLAY.Constants.minWidth, DISPLAY.Constants.minHeight)
+    mainFrame:SetResizeBounds(DISPLAY.Constants.minWidth, DISPLAY.Constants.minHeight, GetScreenWidth()-100, GetScreenHeight()-100)
     mainFrame:SetSize(DISPLAY.Constants.minWidth,DISPLAY.Constants.minHeight)
     mainFrame:SetPoint("CENTER", UIParent, "CENTER")
     mainFrame:SetMovable(true)
@@ -172,7 +172,7 @@ function DISPLAY:CreateHostWindow()
             PAMainFrame:StopMovingOrSizing()
         end)
 
-
+    --left tabs
     PAMainFrame.numTabs = 6
     local tab1 = CreateTab(1, "Today's events")
     tab1:SetPoint("TOPLEFT", PAMainFrame, "BOTTOMLEFT", 11, 2)
@@ -195,10 +195,11 @@ function DISPLAY:CreateHostWindow()
     tab3:SetPoint("TOPLEFT", tab2, "TOPRIGHT", 3, 0)
     local tab4 = CreateTab(4, "Random suggestion", 120)
     tab4:SetPoint("TOPLEFT", tab3, "TOPRIGHT", 3, 0)
-    local tab5 = CreateTab(5, "Settings")
-    tab5:SetPoint("TOPRIGHT", PAMainFrame, "BOTTOMRIGHT", -11, 2)
-    local tab6 = CreateTab(6, "Help")
-    tab6:SetPoint("TOPRIGHT", tab5, "TOPLEFT", -3, 0)
+    --right tabs
+    local tabSettings = CreateTab(5, "Settings")
+    tabSettings:SetPoint("TOPRIGHT", PAMainFrame, "BOTTOMRIGHT", -11, 2)
+    local tabHelp = CreateTab(6, "Help")
+    tabHelp:SetPoint("TOPRIGHT", tabSettings, "TOPLEFT", -3, 0)
 
     mainFrame.content = tab1.content
 

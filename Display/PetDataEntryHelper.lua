@@ -89,10 +89,10 @@ local function ParseMoreSourceData(tooltipSource)
                "        achievementId = \"\",\n"
     elseif strfind(tooltipSource, "Pet Battle") then
         return "        source = \"Pet Battle\",\n"..
-               "        locations = {"..DeserializeCommaDelim(locations).."},\n"
+               "        locationsRaw = {"..DeserializeCommaDelim(locations).."},\n"
     elseif strfind(tooltipSource, "Fishing") then
         return "        source = \"Fishing\",\n"..
-               "        locations = {"..ExtractZones(tooltipSource).."},\n"
+               "        locationsRaw = {"..ExtractZones(tooltipSource).."},\n"
     elseif strfind(tooltipSource, "Archaeology") then
         return "        source = \"Archaeology\",\n"
     elseif strfind(tooltipSource, "Profession") then
@@ -105,18 +105,18 @@ local function ParseMoreSourceData(tooltipSource)
         return "        source = \"Vendor\",\n"..
                "        currency = \""..GetCurrency(tooltipSource).."\",\n"..
                "        npc = {"..ExtractNPC(tooltipSource).."},\n"..
-               "        locations = {"..ExtractVendorZone(tooltipSource).."},\n"
+               "        locationsRaw = {"..ExtractVendorZone(tooltipSource).."},\n"
     elseif strfind(tooltipSource, "World Drop") then
         return "        source = \"World Drop\",\n"..
-               "        locations = {"..ExtractZones(tooltipSource).."},\n"
+               "        locationsRaw = {"..ExtractZones(tooltipSource).."},\n"
     elseif strfind(tooltipSource, "Drop") then
         return "        source = \"Drop\",\n"..
                "        npc = {"..ExtractNPC(tooltipSource).."},\n"..
-               "        locations = {"..ExtractZones(tooltipSource).."},\n"
+               "        locationsRaw = {"..ExtractZones(tooltipSource).."},\n"
     elseif strfind(tooltipSource, "Quest") then
         return "        source = \"Quest\",\n"..
                "        quest = "..ExtractNPC(tooltipSource)..",\n"..
-               "        locations = {"..ExtractVendorZone(tooltipSource).."},\n"
+               "        locationsRaw = {"..ExtractVendorZone(tooltipSource).."},\n"
     elseif strfind(tooltipSource, "Promotion") then
         return "        source = \"Promotion\",\n"..
                "        promotion = "..ExtractNPC(tooltipSource)..",\n"
@@ -126,7 +126,7 @@ local function ParseMoreSourceData(tooltipSource)
     elseif strfind(tooltipSource, "Treasure") then
         return "        source = \"Treasure\",\n"..
                "        item = "..ExtractNPC(tooltipSource)..",\n"..
-               "        locations = {"..ExtractVendorZone(tooltipSource).."},\n"
+               "        locationsRaw = {"..ExtractVendorZone(tooltipSource).."},\n"
     elseif strfind(tooltipSource, "Game Shop") then
         return "        source = \"In-Game Shop\",\n"
     elseif strfind(tooltipSource, "Trading Post") then
