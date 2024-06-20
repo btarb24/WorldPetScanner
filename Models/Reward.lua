@@ -131,7 +131,7 @@ function Reward:Display()
         end
 
         if (self.chance) then
-            self._display = self._display .. "|TInterface\\Buttons\\UI-GroupLoot-Dice-Up:20|t  "
+            self._display = self._display .. "|TInterface\\Buttons\\UI-GroupLoot-Dice-Up:14|t  "
         end
     end
 
