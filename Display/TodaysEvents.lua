@@ -79,6 +79,8 @@ end
 
 local function AcquireStandardText(expansionFrame)
     local text = expansionFrame.childrenHostFrame.standardTextPool:Acquire()
+    text:SetScript("OnEnter", nil)
+    text:SetScript("OnLeave", nil)
     text:Show()
     return text
 end
@@ -89,6 +91,8 @@ local function AcquireSmallerText(expansionFrame)
         local fontFile, fontHeight, fontFlags = text:GetFont()
         text:SetFont(fontFile, fontHeight-2, fontFlags)
     end
+    text:SetScript("OnEnter", nil)
+    text:SetScript("OnLeave", nil)
     text:Show()
     return text
 end
