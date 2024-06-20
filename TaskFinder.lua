@@ -7,30 +7,32 @@ local ZONES = PETAD.ZONES
 
 local retryTimer
 
-local function UpdateItemTotals(rewards)
-    for _,reward in pairs(rewards) do
-        local itemID = reward.itemID
-        local quantity = reward.quantity
-        if itemID == PETAD.PetCharm then
-            DATA.charmTotal = DATA.charmTotal + quantity
-        end
+local function UpdateItemTotals(task)
+    if not task.iconReward then
+        return
+    end
 
-        if itemID == PETAD.Bandage then
-            DATA.bandageTotal = DATA.bandageTotal + quantity
-        end
+    local itemID = task.iconReward.itemID
+    local quantity = task.iconReward.quantity
+    if itemID == PETAD.PetCharm then
+        DATA.charmTotal = DATA.charmTotal + quantity
+    end
 
-        if itemID == PETAD.BlueStone then
-            DATA.blueStoneTotal = DATA.blueStoneTotal + quantity
-        end
+    if itemID == PETAD.Bandage then
+        DATA.bandageTotal = DATA.bandageTotal + quantity
+    end
 
-        if PETAD.TrainingStones[itemID] then
-            local existingTrainingStones = DATA.trainingStoneTotals[itemID]
-            DATA.hasTrainingStones = true
-            if (existingTrainingStones == nil) then
-                table.insert(DATA.trainingStoneTotals, itemID, quantity)
-            else
-                DATA.trainingStoneTotals[itemID] = existingTrainingStones + quantity
-            end
+    if itemID == PETAD.BlueStone then
+        DATA.blueStoneTotal = DATA.blueStoneTotal + quantity
+    end
+
+    if PETAD.TrainingStones[itemID] then
+        local existingTrainingStones = DATA.trainingStoneTotals[itemID]
+        DATA.hasTrainingStones = true
+        if (existingTrainingStones == nil) then
+            table.insert(DATA.trainingStoneTotals, itemID, quantity)
+        else
+            DATA.trainingStoneTotals[itemID] = existingTrainingStones + quantity
         end
     end
 end
@@ -56,8 +58,9 @@ end
 
 local function AddTask(mode, taskData)
     if mode == "test" or mode == "report" then
-        table.insert(DATA.taskList, Task:new(taskData.trigger, taskData.challenge, taskData.rewards))
-        UpdateItemTotals(taskData.rewards)
+        local task = Task:new(taskData.trigger, taskData.challenge, taskData.rewards)
+        table.insert(DATA.taskList, task)
+        UpdateItemTotals(task)
         return
     end
 
@@ -71,8 +74,9 @@ local function AddTask(mode, taskData)
 
     local rewards = CleanRewards(mode, taskData)
     if not UTILITIES:IsEmpty(rewards) then
-        table.insert(DATA.taskList, Task:new(taskData.trigger, taskData.challenge, rewards))
-        UpdateItemTotals(taskData.rewards)
+        local task = Task:new(taskData.trigger, taskData.challenge, rewards)
+        table.insert(DATA.taskList, task)
+        UpdateItemTotals(task)
     end
 end
 
@@ -185,6 +189,7 @@ local function AnalyzeQuestRewards(taskPOI, expansionID, zoneID)
         local challenge = Challenge:newWorldQuest(questID, expansionID, zoneID)
         local task = Task:new(trigger, challenge, directQuestRewards)
         table.insert(DATA.taskList, task)
+        UpdateItemTotals(task)
         DATA.worldQuestTaskResults[questID] = task
     end
 end
