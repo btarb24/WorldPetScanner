@@ -1,8 +1,8 @@
----@class PetAdvisor
-local PETAD = PetAdvisor
-local DISPLAY = PETAD.DISPLAY
-local UTILITIES = PETAD.UTILITIES
-local TASKFINDER = PETAD.TASKFINDER
+---@class PetCollector
+local PETC = PetCollector
+local DISPLAY = PETC.DISPLAY
+local UTILITIES = PETC.UTILITIES
+local TASKFINDER = PETC.TASKFINDER
 
 
 DISPLAY.Constants = {
@@ -15,7 +15,7 @@ DISPLAY.Constants = {
     marginAfterButton = 5,
     collapseButtonWidth = 16,
     collapseButtonHeight = 16,
-    minWidth = 600,
+    minWidth = 800,
     minHeight = 400
 }
 
@@ -86,6 +86,38 @@ function DISPLAY:BuildCollapseButton(collapseButton)
     return collapseButton
 end
 
+function DISPLAY:AcquireExpansionFrame(parent, name, headerDescription)
+    local expansionFrame = parent.expansionFramesPool[name]
+    if (not expansionFrame) then
+        expansionFrame = CreateFrame("Frame", nil, parent)
+        parent.expansionFramesPool[name] = expansionFrame
+    end
+
+    if (not expansionFrame.header) then
+        expansionFrame.collapseButton = CreateFrame("Button", nil, expansionFrame)
+        expansionFrame.collapseButton:SetPoint("TOPLEFT", expansionFrame, "TOPLEFT", 0, 0)
+        DISPLAY:BuildCollapseButton(expansionFrame.collapseButton)
+
+        expansionFrame.header = expansionFrame:CreateFontString(nil, "OVERLAY", "GameFontHighlight")
+        expansionFrame.header:SetText(string.format("|cff33ff33%s|r", name))
+        expansionFrame.header:SetPoint("TOPLEFT", expansionFrame.collapseButton, "TOPRIGHT", DISPLAY.Constants.marginAfterButton, -DISPLAY.Constants.vAlignAdjustmentAfterButton);
+        
+        expansionFrame.childrenHostFrame = CreateFrame("Frame", nil, expansionFrame)
+        expansionFrame.childrenHostFrame:SetPoint("TOPLEFT", expansionFrame.header, "BOTTOMLEFT", DISPLAY.Constants.zoneIndent,0);
+        expansionFrame.childrenHostFrame.standardTextPool = CreateFontStringPool(expansionFrame.childrenHostFrame, nil, nil, "GameFontHighlight")
+        expansionFrame.childrenHostFrame.smallerTextPool = CreateFontStringPool(expansionFrame.childrenHostFrame, nil, nil, "GameFontHighlight")
+        
+        expansionFrame.movingAnchor = CreateFrame("Frame", nil, expansionFrame)
+        expansionFrame.movingAnchor:SetSize(1, 1)
+    end
+
+    expansionFrame.childrenHostFrame:SetSize(1,1)
+    expansionFrame.movingAnchor:SetPoint("TOPLEFT", expansionFrame, "BOTTOMLEFT")
+
+    expansionFrame:Show()
+    return expansionFrame
+end
+
 local function CreateTab(idNum, name, tabButtonWidth)
     if not tabButtonWidth then
         tabButtonWidth = 100
@@ -146,7 +178,7 @@ function DISPLAY:CreateHostWindow()
     )
 
     PAMainFramePortrait:SetTexture("Interface\\Icons\\Inv_pet_maggot")
-    PAMainFrameTitleText:SetText("Pet Advisor")
+    PAMainFrameTitleText:SetText("Pet Collector")
     mainFrame.TitleNote = mainFrame:CreateFontString(nil, "OVERLAY", "GameFontHighlight");
     mainFrame.TitleNote:SetPoint("TOPLEFT", mainFrame, "TOPLEFT", 40,10);
 
@@ -191,6 +223,7 @@ function DISPLAY:CreateHostWindow()
 
     local tab2 = CreateTab(2, "Capturable")
     tab2:SetPoint("TOPLEFT", tab1, "TOPRIGHT", 3, 0)
+	DISPLAY.Capturable:Update()
     local tab3 = CreateTab(3, "Loot drops")
     tab3:SetPoint("TOPLEFT", tab2, "TOPRIGHT", 3, 0)
     local tab4 = CreateTab(4, "Random suggestion", 120)

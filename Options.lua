@@ -1,5 +1,5 @@
-local PETAD = PetAdvisor
-local L = PETAD.L
+local PETC = PetCollector
+local L = PETC.L
 
 -- Blizzard
 local GetCurrencyInfo = C_CurrencyInfo.GetCurrencyInfo
@@ -11,7 +11,7 @@ local worldQuestType = {
 	["LE_QUEST_TAG_TYPE_PET_BATTLE"] = Enum.QuestTagType.PetBattle
 }
 
-PETAD.EmissaryQuestIDList = {
+PETC.EmissaryQuestIDList = {
 	[7] = {
 		42233, -- Highmountain Tribes
 		42420, -- Court of Farondis
@@ -51,7 +51,7 @@ do
 	end
 end
 
-function PETAD:UpdateOptions()
+function PETC:UpdateOptions()
 	------------------
 	-- 	Options Table
 	------------------
@@ -81,11 +81,11 @@ function PETAD:UpdateOptions()
 								type = "toggle",
 								name = "Gold",
 								set = function(info, val)
-									PETAD.db.profile.options.reward.general.gold = val
+									PETC.db.profile.options.reward.general.gold = val
 								end,
 								descStyle = "inline",
 								get = function()
-									return PETAD.db.profile.options.reward.general.gold
+									return PETC.db.profile.options.reward.general.gold
 								end,
 								order = newOrder()
 							},
@@ -94,10 +94,10 @@ function PETAD:UpdateOptions()
 								type = "input",
 								order = newOrder(),
 								set = function(info, val)
-									PETAD.db.profile.options.reward.general.goldMin = tonumber(val)
+									PETC.db.profile.options.reward.general.goldMin = tonumber(val)
 								end,
 								get = function()
-									return tostring(PETAD.db.profile.options.reward.general.goldMin)
+									return tostring(PETC.db.profile.options.reward.general.goldMin)
 								end
 							}
 						}
@@ -120,11 +120,11 @@ function PETAD:UpdateOptions()
 						name = "Chat",
 						width = "double",
 						set = function(info, val)
-							PETAD.db.profile.options.chat = val
+							PETC.db.profile.options.chat = val
 						end,
 						descStyle = "inline",
 						get = function()
-							return PETAD.db.profile.options.chat
+							return PETC.db.profile.options.chat
 						end,
 						order = newOrder()
 					},
@@ -133,11 +133,11 @@ function PETAD:UpdateOptions()
 						name = "PopUp",
 						width = "double",
 						set = function(info, val)
-							PETAD.db.profile.options.PopUp = val
+							PETC.db.profile.options.PopUp = val
 						end,
 						descStyle = "inline",
 						get = function()
-							return PETAD.db.profile.options.PopUp
+							return PETC.db.profile.options.PopUp
 						end,
 						order = newOrder()
 					},
@@ -146,11 +146,11 @@ function PETAD:UpdateOptions()
 						name = "Remember PopUp position",
 						width = "double",
 						set = function(info, val)
-							PETAD.db.profile.options.popupRememberPosition = val
+							PETC.db.profile.options.popupRememberPosition = val
 						end,
 						descStyle = "inline",
 						get = function()
-							return PETAD.db.profile.options.popupRememberPosition
+							return PETC.db.profile.options.popupRememberPosition
 						end,
 						order = newOrder()
 					},
@@ -159,11 +159,11 @@ function PETAD:UpdateOptions()
 						name = "Sort quests by name",
 						width = "double",
 						set = function(info, val)
-							PETAD.db.profile.options.sortByName = val
+							PETC.db.profile.options.sortByName = val
 						end,
 						descStyle = "inline",
 						get = function()
-							return PETAD.db.profile.options.sortByName
+							return PETC.db.profile.options.sortByName
 						end,
 						order = newOrder()
 					},
@@ -172,11 +172,11 @@ function PETAD:UpdateOptions()
 						name = "Sort quests by zone name",
 						width = "double",
 						set = function(info, val)
-							PETAD.db.profile.options.sortByZoneName = val
+							PETC.db.profile.options.sortByZoneName = val
 						end,
 						descStyle = "inline",
 						get = function()
-							return PETAD.db.profile.options.sortByZoneName
+							return PETC.db.profile.options.sortByZoneName
 						end,
 						order = newOrder()
 					},
@@ -185,11 +185,11 @@ function PETAD:UpdateOptions()
 						name = "Show expansion in chat",
 						width = "double",
 						set = function(info, val)
-							PETAD.db.profile.options.chatShowExpansion = val
+							PETC.db.profile.options.chatShowExpansion = val
 						end,
 						descStyle = "inline",
 						get = function()
-							return PETAD.db.profile.options.chatShowExpansion
+							return PETC.db.profile.options.chatShowExpansion
 						end,
 						order = newOrder()
 					},
@@ -198,11 +198,11 @@ function PETAD:UpdateOptions()
 						name = "Show zone in chat",
 						width = "double",
 						set = function(info, val)
-							PETAD.db.profile.options.chatShowZone = val
+							PETC.db.profile.options.chatShowZone = val
 						end,
 						descStyle = "inline",
 						get = function()
-							return PETAD.db.profile.options.chatShowZone
+							return PETC.db.profile.options.chatShowZone
 						end,
 						order = newOrder()
 					},
@@ -211,11 +211,11 @@ function PETAD:UpdateOptions()
 						name = "Show time left in chat",
 						width = "double",
 						set = function(info, val)
-							PETAD.db.profile.options.chatShowTime = val
+							PETC.db.profile.options.chatShowTime = val
 						end,
 						descStyle = "inline",
 						get = function()
-							return PETAD.db.profile.options.chatShowTime
+							return PETC.db.profile.options.chatShowTime
 						end,
 						order = newOrder()
 					},
@@ -224,11 +224,11 @@ function PETAD:UpdateOptions()
 						name = "Show expansion in popup",
 						width = "double",
 						set = function(info, val)
-							PETAD.db.profile.options.popupShowExpansion = val
+							PETC.db.profile.options.popupShowExpansion = val
 						end,
 						descStyle = "inline",
 						get = function()
-							return PETAD.db.profile.options.popupShowExpansion
+							return PETC.db.profile.options.popupShowExpansion
 						end,
 						order = newOrder()
 					},
@@ -237,11 +237,11 @@ function PETAD:UpdateOptions()
 						name = "Show zone in popup",
 						width = "double",
 						set = function(info, val)
-							PETAD.db.profile.options.popupShowZone = val
+							PETC.db.profile.options.popupShowZone = val
 						end,
 						descStyle = "inline",
 						get = function()
-							return PETAD.db.profile.options.popupShowZone
+							return PETC.db.profile.options.popupShowZone
 						end,
 						order = newOrder()
 					},
@@ -250,11 +250,11 @@ function PETAD:UpdateOptions()
 						name = "Show time left in popup",
 						width = "double",
 						set = function(info, val)
-							PETAD.db.profile.options.popupShowTime = val
+							PETC.db.profile.options.popupShowTime = val
 						end,
 						descStyle = "inline",
 						get = function()
-							return PETAD.db.profile.options.popupShowTime
+							return PETC.db.profile.options.popupShowTime
 						end,
 						order = newOrder()
 					},
@@ -264,10 +264,10 @@ function PETAD:UpdateOptions()
 						order = newOrder(),
 						width = "double",
 						set = function(info, val)
-							PETAD.db.profile.options.delay = tonumber(val)
+							PETC.db.profile.options.delay = tonumber(val)
 						end,
 						get = function()
-							return tostring(PETAD.db.profile.options.delay)
+							return tostring(PETC.db.profile.options.delay)
 						end
 					},
 					delayCombat = {
@@ -276,10 +276,10 @@ function PETAD:UpdateOptions()
 						order = newOrder(),
 						width = "double",
 						set = function(info, val)
-							PETAD.db.profile.options.delayCombat = val
+							PETC.db.profile.options.delayCombat = val
 						end,
 						get = function()
-							return PETAD.db.profile.options.delayCombat
+							return PETC.db.profile.options.delayCombat
 						end
 					},
 					esc = {
@@ -288,11 +288,11 @@ function PETAD:UpdateOptions()
 						desc = "Requires a reload",
 						width = "double",
 						set = function(info, val)
-							PETAD.db.profile.options.esc = val
+							PETC.db.profile.options.esc = val
 						end,
 						descStyle = "inline",
 						get = function()
-							return PETAD.db.profile.options.esc
+							return PETC.db.profile.options.esc
 						end,
 						order = newOrder()
 					},
@@ -301,12 +301,12 @@ function PETAD:UpdateOptions()
 						name = "Show Minimap Icon",
 						width = "double",
 						set = function(info, val)
-							PETAD.db.profile.options.LibDBIcon.hide = not val
-							PETAD:UpdateMinimapIcon()
+							PETC.db.profile.options.LibDBIcon.hide = not val
+							PETC:UpdateMinimapIcon()
 						end,
 						descStyle = "inline",
 						get = function()
-							return not PETAD.db.profile.options.LibDBIcon.hide
+							return not PETC.db.profile.options.LibDBIcon.hide
 						end,
 						order = newOrder()
 					}
@@ -328,11 +328,11 @@ function PETAD:UpdateOptions()
 			type = "toggle",
 			name = L[k],
 			set = function(info, val)
-				PETAD.db.profile.options.reward.general.worldQuestType[v] = val
+				PETC.db.profile.options.reward.general.worldQuestType[v] = val
 			end,
 			descStyle = "inline",
 			get = function()
-				return PETAD.db.profile.options.reward.general.worldQuestType[v] or false
+				return PETC.db.profile.options.reward.general.worldQuestType[v] or false
 			end,
 			order = newOrder()
 		}
@@ -387,11 +387,11 @@ function PETAD:UpdateOptions()
 						type = "toggle",
 						name = name,
 						set = function(info, val)
-							PETAD.db.profile.options.zone[v] = val
+							PETC.db.profile.options.zone[v] = val
 						end,
 						descStyle = "inline",
 						get = function()
-							return PETAD.db.profile.options.zone[v] or false
+							return PETC.db.profile.options.zone[v] or false
 						end,
 						order = newOrder()
 					}
@@ -415,11 +415,11 @@ function PETAD:UpdateOptions()
 							type = "toggle",
 							name = GetTitleForQuestID(v) or tostring(v),
 							set = function(info, val)
-								PETAD.db.profile.options.emissary[v] = val
+								PETC.db.profile.options.emissary[v] = val
 							end,
 							descStyle = "inline",
 							get = function()
-								return PETAD.db.profile.options.emissary[v]
+								return PETC.db.profile.options.emissary[v]
 							end,
 							order = newOrder()
 						}
@@ -443,37 +443,37 @@ function PETAD:UpdateOptions()
 	self:UpdateCustom()
 end
 
-function PETAD:GetOptions()
+function PETC:GetOptions()
 	self:UpdateOptions()
 	self:SortOptions()
 	return self.options
 end
 
-function PETAD:ToggleSet(info, val, ...)
+function PETC:ToggleSet(info, val, ...)
 	-- print(info[#info-2],info[#info-1],info[#info])
 	local expansion = info[#info - 2]
 	local category = info[#info - 1]
 	local option = info[#info]
-	PETAD.db.profile[category][tonumber(option)] = val
+	PETC.db.profile[category][tonumber(option)] = val
 	if val == "exclusive" then
 		local name, server = UnitFullName("player")
-		PETAD.db.profile[category].exclusive[tonumber(option)] = name .. "-" .. server
-	elseif PETAD.db.profile[category].exclusive[tonumber(option)] then
-		PETAD.db.profile[category].exclusive[tonumber(option)] = nil
+		PETC.db.profile[category].exclusive[tonumber(option)] = name .. "-" .. server
+	elseif PETC.db.profile[category].exclusive[tonumber(option)] then
+		PETC.db.profile[category].exclusive[tonumber(option)] = nil
 	end
-	-- if not PETAD.db.profile[expansion] then PETAD.db.profile[expansion] = {} end
-	--[[if not PETAD.db.profile[category] then PETAD.db.profile[category] = {} end
+	-- if not PETC.db.profile[expansion] then PETC.db.profile[expansion] = {} end
+	--[[if not PETC.db.profile[category] then PETC.db.profile[category] = {} end
 if not val == true then
-PETAD.db.profile[category][option] = true
+PETC.db.profile[category][option] = true
 else
-PETAD.db.profile[category][option] = nil
+PETC.db.profile[category][option] = nil
 end-- ]]
 end
 
-function PETAD:ToggleGet()
+function PETC:ToggleGet()
 end
 
-function PETAD:CreateGroup(options, data, groupName)
+function PETC:CreateGroup(options, data, groupName)
 	if data[groupName] then
 		options[groupName] = {
 			order = 1,
@@ -524,13 +524,13 @@ function PETAD:CreateGroup(options, data, groupName)
 				set = "ToggleSet",
 				-- descStyle = "inline",
 				get = function(info)
-					local value = PETAD.db.profile[groupName][id]
+					local value = PETC.db.profile[groupName][id]
 					if value == "exclusive" then
 						local name, server = UnitFullName("player")
 						name = name .. "-" .. server
-						if PETAD.db.profile[info[#info - 1]].exclusive[id] ~= name then
+						if PETC.db.profile[info[#info - 1]].exclusive[id] ~= name then
 							info.option.values.other = string.format(L["tracking_other"],
-								PETAD.db.profile[info[#info - 1]].exclusive[id])
+								PETC.db.profile[info[#info - 1]].exclusive[id])
 							return "other"
 						end
 					end
@@ -544,7 +544,7 @@ function PETAD:CreateGroup(options, data, groupName)
 					optionsTimer =
 						self:ScheduleTimer(
 							function()
-								LibStub("AceConfigRegistry-3.0"):NotifyChange("PetAdvisor")
+								LibStub("AceConfigRegistry-3.0"):NotifyChange("PetCollector")
 							end,
 							2
 						)
@@ -557,7 +557,7 @@ function PETAD:CreateGroup(options, data, groupName)
 	end
 end
 
-function PETAD:CreateCustomQuest()
+function PETC:CreateCustomQuest()
 	if not self.db.global.custom then
 		self.db.global.custom = {}
 	end
@@ -571,7 +571,7 @@ function PETAD:CreateCustomQuest()
 	self:UpdateCustomQuests()
 end
 
-function PETAD:UpdateCustomQuests()
+function PETC:UpdateCustomQuests()
 	local data = self.db.global.custom.worldQuest
 	if type(data) ~= "table" then
 		return false
@@ -582,11 +582,11 @@ function PETAD:UpdateCustomQuests()
 			type = "toggle",
 			name = GetQuestLink(id) or GetTitleForQuestID(id) or tostring(id),
 			set = function(info, val)
-				PETAD.db.profile.custom.worldQuest[id] = val
+				PETC.db.profile.custom.worldQuest[id] = val
 			end,
 			descStyle = "inline",
 			get = function()
-				return PETAD.db.profile.custom.worldQuest[id]
+				return PETC.db.profile.custom.worldQuest[id]
 			end,
 			order = newOrder(),
 			width = 1.2
@@ -676,7 +676,7 @@ function PETAD:UpdateCustomQuests()
 	end
 end
 
-function PETAD:CreateCustomReward()
+function PETC:CreateCustomReward()
 	if not self.db.global.custom then
 		self.db.global.custom = {}
 	end
@@ -687,7 +687,7 @@ function PETAD:CreateCustomReward()
 	self:UpdateCustomRewards()
 end
 
-function PETAD:UpdateCustomRewards()
+function PETC:UpdateCustomRewards()
 	local data = self.db.global.custom.worldQuestReward
 	if type(data) ~= "table" then
 		return false
@@ -700,11 +700,11 @@ function PETAD:UpdateCustomRewards()
 			name = itemLink or tostring(id),
 			--width = "double",
 			set = function(info, val)
-				PETAD.db.profile.custom.worldQuestReward[id] = val
+				PETC.db.profile.custom.worldQuestReward[id] = val
 			end,
 			descStyle = "inline",
 			get = function()
-				return PETAD.db.profile.custom.worldQuestReward[id]
+				return PETC.db.profile.custom.worldQuestReward[id]
 			end,
 			order = newOrder(),
 			width = 1.2
@@ -732,7 +732,7 @@ function PETAD:UpdateCustomRewards()
 	end
 end
 
-function PETAD:CreateCustomMission()
+function PETC:CreateCustomMission()
 	if not self.db.global.custom then
 		self.db.global.custom = {}
 	end
@@ -746,7 +746,7 @@ function PETAD:CreateCustomMission()
 	self:UpdateCustomMissions()
 end
 
-function PETAD:UpdateCustomMissions()
+function PETC:UpdateCustomMissions()
 	local data = self.db.global.custom.mission
 	if type(data) ~= "table" then
 		return false
@@ -757,11 +757,11 @@ function PETAD:UpdateCustomMissions()
 			type = "toggle",
 			name = C_Garrison.GetMissionLink(id) or tostring(id),
 			set = function(info, val)
-				PETAD.db.profile.custom.mission[id] = val
+				PETC.db.profile.custom.mission[id] = val
 			end,
 			descStyle = "inline",
 			get = function()
-				return PETAD.db.profile.custom.mission[id]
+				return PETC.db.profile.custom.mission[id]
 			end,
 			order = newOrder(),
 			width = 1.2
@@ -817,7 +817,7 @@ function PETAD:UpdateCustomMissions()
 	end
 end
 
-function PETAD:CreateCustomMissionReward()
+function PETC:CreateCustomMissionReward()
 	if not self.db.global.custom then
 		self.db.global.custom = {}
 	end
@@ -828,7 +828,7 @@ function PETAD:CreateCustomMissionReward()
 	self:UpdateCustomMissionRewards()
 end
 
-function PETAD:UpdateCustomMissionRewards()
+function PETC:UpdateCustomMissionRewards()
 	local data = self.db.global.custom.missionReward
 	if type(data) ~= "table" then
 		return false
@@ -840,11 +840,11 @@ function PETAD:UpdateCustomMissionRewards()
 			type = "toggle",
 			name = itemLink or tostring(id),
 			set = function(info, val)
-				PETAD.db.profile.custom.missionReward[id] = val
+				PETC.db.profile.custom.missionReward[id] = val
 			end,
 			descStyle = "inline",
 			get = function()
-				return PETAD.db.profile.custom.missionReward[id]
+				return PETC.db.profile.custom.missionReward[id]
 			end,
 			order = newOrder(),
 			width = 1.2
@@ -872,8 +872,8 @@ function PETAD:UpdateCustomMissionRewards()
 	end
 end
 
-function PETAD:SortOptions()
-	for k, v in pairs(PETAD.options.args.general.args) do
+function PETC:SortOptions()
+	for k, v in pairs(PETC.options.args.general.args) do
 		for kk, vv in pairs(v.args) do
 			local t = {}
 			for kkk, vvv in pairs(vv.args) do

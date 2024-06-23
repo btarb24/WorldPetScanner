@@ -1,6 +1,6 @@
-local PETAD = PetAdvisor
+local PETC = PetCollector
 
-PETAD.TRIGGER_TYPE = {
+PETC.TRIGGER_TYPE = {
     WORLD_QUEST = "worldQuest",
     DAILY_QUEST = "dailyQuest",
     AURA = "aura",
@@ -9,23 +9,23 @@ PETAD.TRIGGER_TYPE = {
     WORLD_QUEST_REWARD = "worldQuestReward",
     PERIODIC_ROTATION = 'periodicRotation',
 }
-PETAD.QUEST_EVAL_TYPE = {
+PETC.QUEST_EVAL_TYPE = {
     FLAG = "flaggedCompletion",
     ISACTIVE = "isActive",
     BYMAP = "GetQuestsForPlayerBymapID",
 }
 
-PETAD.TaskData = {
+PETC.TaskData = {
     {
         trigger = {
-            type = PETAD.TRIGGER_TYPE.AURA,
+            type = PETC.TRIGGER_TYPE.AURA,
             auraID = 335150,
             auraName = "Sign of the Destroyer",
             auraDescription = "Cataclysm Timewalking",
             isTimewalking = true,
         },
         challenge = {
-            type = PETAD.CHALLENGE_TYPE.VENDOR,
+            type = PETC.CHALLENGE_TYPE.VENDOR,
             expansionID = 4,
             zoneID = {
                 Alliance = 84,
@@ -37,9 +37,9 @@ PETAD.TaskData = {
         },
         rewards = {
             [1] = {
-                type = PETAD.REWARD_TYPE.PET_VIA_ITEM,
+                type = PETC.REWARD_TYPE.PET_VIA_ITEM,
                 creatureName = "Strand Crawler",
-                creatureID = 33226,
+                speciesID = 211,
                 spellID = 62561,
                 itemID = 67414,
                 itemName = "Bag of Shiny Things",
@@ -50,14 +50,14 @@ PETAD.TaskData = {
     },
     {
         trigger = {
-            type = PETAD.TRIGGER_TYPE.DAILY_QUEST,
+            type = PETC.TRIGGER_TYPE.DAILY_QUEST,
             questID = 37203,
             questName = "Ashlei",
             isTimewalking = true,
-            questEvaluationType = PETAD.QUEST_EVAL_TYPE.FLAG,
+            questEvaluationType = PETC.QUEST_EVAL_TYPE.FLAG,
         },
         challenge = {
-            type = PETAD.CHALLENGE_TYPE.QUEST,
+            type = PETC.CHALLENGE_TYPE.QUEST,
             perAccount = true,
             isTrainer = true,
             expansionID = 6,
@@ -70,8 +70,8 @@ PETAD.TaskData = {
         },
         rewards = {
             [1] = {
-                type = PETAD.REWARD_TYPE.ITEM,
-                itemID = PETAD.PetCharm,
+                type = PETC.REWARD_TYPE.ITEM,
+                itemID = PETC.PetCharm,
                 quantity = 2,
                 itemName = "Polished Pet Charm",
             }
@@ -79,14 +79,14 @@ PETAD.TaskData = {
     },
     {
         trigger = {
-            type = PETAD.TRIGGER_TYPE.DAILY_QUEST,
+            type = PETC.TRIGGER_TYPE.DAILY_QUEST,
             questID = 37207,
             questName = "Vesharr",
             isTimewalking = true,
-            questEvaluationType = PETAD.QUEST_EVAL_TYPE.FLAG,
+            questEvaluationType = PETC.QUEST_EVAL_TYPE.FLAG,
         },
         challenge = {
-            type = PETAD.CHALLENGE_TYPE.QUEST,
+            type = PETC.CHALLENGE_TYPE.QUEST,
             perAccount = true,
             isTrainer = true,
             expansionID = 6,
@@ -99,8 +99,8 @@ PETAD.TaskData = {
         },
         rewards = {
             [1] = {
-                type = PETAD.REWARD_TYPE.ITEM,
-                itemID = PETAD.PetCharm,
+                type = PETC.REWARD_TYPE.ITEM,
+                itemID = PETC.PetCharm,
                 quantity = 2,
                 itemName = "Polished Pet Charm",
             }
@@ -108,14 +108,14 @@ PETAD.TaskData = {
     },
     {
         trigger = {
-            type = PETAD.TRIGGER_TYPE.DAILY_QUEST,
+            type = PETC.TRIGGER_TYPE.DAILY_QUEST,
             questID = 37208,
             questName = "Taralune",
             isTimewalking = true,
-            questEvaluationType = PETAD.QUEST_EVAL_TYPE.FLAG,
+            questEvaluationType = PETC.QUEST_EVAL_TYPE.FLAG,
         },
         challenge = {
-            type = PETAD.CHALLENGE_TYPE.QUEST,
+            type = PETC.CHALLENGE_TYPE.QUEST,
             perAccount = true,
             isTrainer = true,
             expansionID = 6,
@@ -128,8 +128,8 @@ PETAD.TaskData = {
         },
         rewards = {
             [1] = {
-                type = PETAD.REWARD_TYPE.ITEM,
-                itemID = PETAD.PetCharm,
+                type = PETC.REWARD_TYPE.ITEM,
+                itemID = PETC.PetCharm,
                 quantity = 2,
                 itemName = "Polished Pet Charm",
             }
@@ -137,14 +137,14 @@ PETAD.TaskData = {
     },
     {
         trigger = {
-            type = PETAD.TRIGGER_TYPE.DAILY_QUEST,
+            type = PETC.TRIGGER_TYPE.DAILY_QUEST,
             questID = 37206,
             questName = "Tarr the Terrible",
             isTimewalking = true,
-            questEvaluationType = PETAD.QUEST_EVAL_TYPE.FLAG,
+            questEvaluationType = PETC.QUEST_EVAL_TYPE.FLAG,
         },
         challenge = {
-            type = PETAD.CHALLENGE_TYPE.QUEST,
+            type = PETC.CHALLENGE_TYPE.QUEST,
             perAccount = true,
             isTrainer = true,
             expansionID = 6,
@@ -157,8 +157,8 @@ PETAD.TaskData = {
         },
         rewards = {
             [1] = {
-                type = PETAD.REWARD_TYPE.ITEM,
-                itemID = PETAD.PetCharm,
+                type = PETC.REWARD_TYPE.ITEM,
+                itemID = PETC.PetCharm,
                 quantity = 2,
                 itemName = "Polished Pet Charm",
             }
@@ -166,14 +166,14 @@ PETAD.TaskData = {
     },
     {
         trigger = {
-            type = PETAD.TRIGGER_TYPE.DAILY_QUEST,
+            type = PETC.TRIGGER_TYPE.DAILY_QUEST,
             questID = 37205,
             questName = "Gargra",
             isTimewalking = true,
-            questEvaluationType = PETAD.QUEST_EVAL_TYPE.FLAG,
+            questEvaluationType = PETC.QUEST_EVAL_TYPE.FLAG,
         },
         challenge = {
-            type = PETAD.CHALLENGE_TYPE.QUEST,
+            type = PETC.CHALLENGE_TYPE.QUEST,
             perAccount = true,
             isTrainer = true,
             expansionID = 6,
@@ -186,8 +186,8 @@ PETAD.TaskData = {
         },
         rewards = {
             [1] = {
-                type = PETAD.REWARD_TYPE.ITEM,
-                itemID = PETAD.PetCharm,
+                type = PETC.REWARD_TYPE.ITEM,
+                itemID = PETC.PetCharm,
                 quantity = 2,
                 itemName = "Polished Pet Charm",
             }
@@ -195,14 +195,14 @@ PETAD.TaskData = {
     },
     {
         trigger = {
-            type = PETAD.TRIGGER_TYPE.DAILY_QUEST,
+            type = PETC.TRIGGER_TYPE.DAILY_QUEST,
             questID = 37201,
             questName = "Cymre Brightblade",
             isTimewalking = true,
-            questEvaluationType = PETAD.QUEST_EVAL_TYPE.FLAG,
+            questEvaluationType = PETC.QUEST_EVAL_TYPE.FLAG,
         },
         challenge = {
-            type = PETAD.CHALLENGE_TYPE.QUEST,
+            type = PETC.CHALLENGE_TYPE.QUEST,
             perAccount = true,
             isTrainer = true,
             expansionID = 6,
@@ -215,8 +215,8 @@ PETAD.TaskData = {
         },
         rewards = {
             [1] = {
-                type = PETAD.REWARD_TYPE.ITEM,
-                itemID = PETAD.PetCharm,
+                type = PETC.REWARD_TYPE.ITEM,
+                itemID = PETC.PetCharm,
                 quantity = 2,
                 itemName = "Polished Pet Charm",
             }
@@ -224,13 +224,13 @@ PETAD.TaskData = {
     },
     {
         trigger = {
-            type = PETAD.TRIGGER_TYPE.WORLD_QUEST,
+            type = PETC.TRIGGER_TYPE.WORLD_QUEST,
             questID = 63543,
             questName = "Necrolord Assault",
-            questEvaluationType = PETAD.QUEST_EVAL_TYPE.ISACTIVE,
+            questEvaluationType = PETC.QUEST_EVAL_TYPE.ISACTIVE,
         },
         challenge = {
-            type = PETAD.CHALLENGE_TYPE.QUEST,
+            type = PETC.CHALLENGE_TYPE.QUEST,
             expansionID = 9,
             zoneID = 1543,
             questID = 63543,
@@ -238,15 +238,15 @@ PETAD.TaskData = {
         },
         rewards = {
             [1] = {
-                type = PETAD.REWARD_TYPE.PET,
-                creatureID = 179008,
+                type = PETC.REWARD_TYPE.PET,
+                speciesID = 3098,
                 spellID = 353230,
                 creatureName = "Lil' Abom",
                 note = "His 5 body parts are scattered around the questing area. Collect and combine into the pet.\n  -Lil' Abom Head - 32.2 56.0 | 30.3 63.3 | 27.4 56.6\n  -Lil' Abom Spare Arm - 33.3 65.8 | 39.2 66.5\n  -Lil' Abom Torso - 36.4 64.4 | 39.9 62.6 (cave ent:36.9 67.4)\n  -Lil' Abom Legs - 29.4 67.2\n  -Lil' Abom Right Hand - back of cave on left 38.5 58.5"
             },
             [2] = {
-                type = PETAD.REWARD_TYPE.PET_VIA_ITEM,
-                creatureID = 179171,
+                type = PETC.REWARD_TYPE.PET_VIA_ITEM,
+                speciesID = 3114,
                 spellID = 353529,
                 creatureName = "Fodder",
                 itemID = 185992,
@@ -258,13 +258,13 @@ PETAD.TaskData = {
     },
     {
         trigger = {
-            type = PETAD.TRIGGER_TYPE.WORLD_QUEST,
+            type = PETC.TRIGGER_TYPE.WORLD_QUEST,
             questID = 63824,
             questName = "Kyrian Assault",
-            questEvaluationType = PETAD.QUEST_EVAL_TYPE.ISACTIVE,
+            questEvaluationType = PETC.QUEST_EVAL_TYPE.ISACTIVE,
         },
         challenge = {
-            type = PETAD.CHALLENGE_TYPE.QUEST,
+            type = PETC.CHALLENGE_TYPE.QUEST,
             expansionID = 9,
             zoneID = 1543,
             questID = 63824,
@@ -272,15 +272,15 @@ PETAD.TaskData = {
         },
         rewards = {
             [1] = {
-                type = PETAD.REWARD_TYPE.PET,
-                creatureID = 179083,
+                type = PETC.REWARD_TYPE.PET,
+                speciesID = 3101,
                 spellID = 353450,
                 creatureName = "Sly",
                 note = "Find Sly once per 3 different Kyrian Assault events and you'll receive Sly in your mailbox.\nFirst, talk to Orator Kloe (42,44) to get the Sharp Eyed buff\n  1: follow footprints to 40,51 and click Sly\n  2: follow footprints to 38,39 and click Sly\n  3: follow footprints to 32,44 and click Sly (sent to mailbox)"
             },
             [2] = {
-                type = PETAD.REWARD_TYPE.PET_VIA_ITEM,
-                creatureID = 179132,
+                type = PETC.REWARD_TYPE.PET_VIA_ITEM,
+                speciesID = 3103,
                 spellID = 353451,
                 creatureName = "Copperback Etherwyrm",
                 itemID = 185993,
@@ -289,8 +289,8 @@ PETAD.TaskData = {
                 note = "Complete the quest to receive an [Ascended War Chest] reward for an 11% chance at [Copperback Etherwyrm]."
             },
             [3] = {
-                type = PETAD.REWARD_TYPE.PET,
-                creatureID = 173533,
+                type = PETC.REWARD_TYPE.PET,
+                speciesID = 3010,
                 spellID = 339670,
                 creatureName = "Sinfall Screecher",
                 note = "During the Kyrian Assault event there's a cage at 30,43. Pull down the cage to receive [Sinfall Screecher].\n  note: Xandria cannot be offering Quest [No One Floats Down Here]."
@@ -299,13 +299,13 @@ PETAD.TaskData = {
     },
     {
         trigger = {
-            type = PETAD.TRIGGER_TYPE.WORLD_QUEST,
+            type = PETC.TRIGGER_TYPE.WORLD_QUEST,
             questID = 63823,
             questName = "Night Fae Assault",
-            questEvaluationType = PETAD.QUEST_EVAL_TYPE.ISACTIVE,
+            questEvaluationType = PETC.QUEST_EVAL_TYPE.ISACTIVE,
         },
         challenge = {
-            type = PETAD.CHALLENGE_TYPE.QUEST,
+            type = PETC.CHALLENGE_TYPE.QUEST,
             expansionID = 9,
             zoneID = 1543,
             questID = 63823,
@@ -313,15 +313,15 @@ PETAD.TaskData = {
         },
         rewards = {
             [1] = {
-                type = PETAD.REWARD_TYPE.PET,
-                creatureID = 179025,
+                type = PETC.REWARD_TYPE.PET,
+                speciesID = 3099,
                 spellID = 353230,
                 creatureName = "Infused Etherwyrm",
                 note = "Acquire a key from someone in the Rift and then open a cage to receive the pet\n  1: (Rift)Kill an Elusive Keybinder to receive key. rough area of 24,40 | 21,39 | 23,42\n  2: (Normal Phase) go to cave entrance 21,39\n  3: Open cage at 23,42"
             },
             [2] = {
-                type = PETAD.REWARD_TYPE.PET_VIA_ITEM,
-                creatureID = 179180,
+                type = PETC.REWARD_TYPE.PET_VIA_ITEM,
+                speciesID = 3116,
                 spellID = 353569,
                 creatureName = "Invasive Buzzer",
                 itemID = 185991,
@@ -333,13 +333,13 @@ PETAD.TaskData = {
     },
     {
         trigger = {
-            type = PETAD.TRIGGER_TYPE.WORLD_QUEST,
+            type = PETC.TRIGGER_TYPE.WORLD_QUEST,
             questID = 44892,
             questName = "Snowfeather Swarm!",
-            questEvaluationType = PETAD.QUEST_EVAL_TYPE.BYMAP,
+            questEvaluationType = PETC.QUEST_EVAL_TYPE.BYMAP,
         },
         challenge = {
-            type = PETAD.CHALLENGE_TYPE.QUEST,
+            type = PETC.CHALLENGE_TYPE.QUEST,
             expansionID = 7,
             zoneID = 650,
             questID = 44892,
@@ -349,8 +349,8 @@ PETAD.TaskData = {
         },
         rewards = {
             [1] = {
-                type = PETAD.REWARD_TYPE.PET,
-                creatureID = 115784,
+                type = PETC.REWARD_TYPE.PET,
+                speciesID = 1974,
                 spellID = 230073,
                 creatureName = "Snowfeather Hatchling",
                 note = "Kill the Snowfeather Matriarch (48,10) and then click the Orphaned Snowfeather (32,28)"
@@ -359,13 +359,13 @@ PETAD.TaskData = {
     },
     {
         trigger = {
-            type = PETAD.TRIGGER_TYPE.WORLD_QUEST,
+            type = PETC.TRIGGER_TYPE.WORLD_QUEST,
             questID = 44893,
             questName = "Direbeak Swarm!",
-            questEvaluationType = PETAD.QUEST_EVAL_TYPE.BYMAP,
+            questEvaluationType = PETC.QUEST_EVAL_TYPE.BYMAP,
         },
         challenge = {
-            type = PETAD.CHALLENGE_TYPE.QUEST,
+            type = PETC.CHALLENGE_TYPE.QUEST,
             expansionID = 7,
             zoneID = 634,
             questID = 44893,
@@ -375,8 +375,8 @@ PETAD.TaskData = {
         },
         rewards = {
             [1] = {
-                type = PETAD.REWARD_TYPE.PET,
-                creatureID = 115785,
+                type = PETC.REWARD_TYPE.PET,
+                speciesID = 1975,
                 spellID = 230074,
                 creatureName = "Direbeak Hatchling",
                 note = "Kill the Direbeak Matriarch (78,76) and then click the Orphaned Direbeak (80,70)"
@@ -385,13 +385,13 @@ PETAD.TaskData = {
     },
     {
         trigger = {
-            type = PETAD.TRIGGER_TYPE.WORLD_QUEST,
+            type = PETC.TRIGGER_TYPE.WORLD_QUEST,
             questID = 44894,
             questName = "Bloodgazer Swarm!",
-            questEvaluationType = PETAD.QUEST_EVAL_TYPE.BYMAP,
+            questEvaluationType = PETC.QUEST_EVAL_TYPE.BYMAP,
         },
         challenge = {
-            type = PETAD.CHALLENGE_TYPE.QUEST,
+            type = PETC.CHALLENGE_TYPE.QUEST,
             expansionID = 7,
             zoneID = 630,
             questID = 44894,
@@ -401,8 +401,8 @@ PETAD.TaskData = {
         },
         rewards = {
             [1] = {
-                type = PETAD.REWARD_TYPE.PET,
-                creatureID = 115787,
+                type = PETC.REWARD_TYPE.PET,
+                speciesID = 1977,
                 spellID = 230076,
                 creatureName = "Bloodgazer Hatchling",
                 note = "Kill the Bloodgazer Matriarch (35,6) and then click the Bloodgazer Direbeak (35,8)"
@@ -411,13 +411,13 @@ PETAD.TaskData = {
     },
     {
         trigger = {
-            type = PETAD.TRIGGER_TYPE.WORLD_QUEST,
+            type = PETC.TRIGGER_TYPE.WORLD_QUEST,
             questID = 44895,
             questName = "Bloodgazer Swarm!",
-            questEvaluationType = PETAD.QUEST_EVAL_TYPE.BYMAP,
+            questEvaluationType = PETC.QUEST_EVAL_TYPE.BYMAP,
         },
         challenge = {
-            type = PETAD.CHALLENGE_TYPE.QUEST,
+            type = PETC.CHALLENGE_TYPE.QUEST,
             expansionID = 7,
             zoneID = 641,
             questID = 44895,
@@ -427,8 +427,8 @@ PETAD.TaskData = {
         },
         rewards = {
             [1] = {
-                type = PETAD.REWARD_TYPE.PET,
-                creatureID = 115786,
+                type = PETC.REWARD_TYPE.PET,
+                speciesID = 1976,
                 spellID = 230075,
                 creatureName = "Sharptalon Hatchling",
                 note = "Kill the Sharptalon Matriarch (48,10) and then click the Sharptalon Direbeak (47,10)"
@@ -437,13 +437,13 @@ PETAD.TaskData = {
     },
     {
         trigger = {
-            type = PETAD.TRIGGER_TYPE.WORLD_QUEST,
+            type = PETC.TRIGGER_TYPE.WORLD_QUEST,
             questID = 73146,
             questName = "Cutting Wind",
-            questEvaluationType = PETAD.QUEST_EVAL_TYPE.BYMAP,
+            questEvaluationType = PETC.QUEST_EVAL_TYPE.BYMAP,
         },
         challenge = {
-            type = PETAD.CHALLENGE_TYPE.QUEST,
+            type = PETC.CHALLENGE_TYPE.QUEST,
             expansionID = 10,
             zoneID = 2151,
             questID = 73146,
@@ -452,8 +452,8 @@ PETAD.TaskData = {
         },
         rewards = {
             [1] = {
-                type = PETAD.REWARD_TYPE.PET,
-                creatureID = 200769,
+                type = PETC.REWARD_TYPE.PET,
+                speciesID = 3446,
                 spellID = 398870,
                 creatureName = "Vortex",
                 note = "Defeat Vortex when it's in its rare form to receive the pet. No pet rewarded if it is in legendary or epic form."
@@ -462,13 +462,13 @@ PETAD.TaskData = {
     },
     {
         trigger = {
-            type = PETAD.TRIGGER_TYPE.WORLD_QUEST,
+            type = PETC.TRIGGER_TYPE.WORLD_QUEST,
             questID = 73147,
             questName = "Shifting Ground",
-            questEvaluationType = PETAD.QUEST_EVAL_TYPE.BYMAP,
+            questEvaluationType = PETC.QUEST_EVAL_TYPE.BYMAP,
         },
         challenge = {
-            type = PETAD.CHALLENGE_TYPE.QUEST,
+            type = PETC.CHALLENGE_TYPE.QUEST,
             expansionID = 10,
             zoneID = 2151,
             questID = 73147,
@@ -477,8 +477,8 @@ PETAD.TaskData = {
         },
         rewards = {
             [1] = {
-                type = PETAD.REWARD_TYPE.PET,
-                creatureID = 200770,
+                type = PETC.REWARD_TYPE.PET,
+                speciesID = 3447,
                 spellID = 398873,
                 creatureName = "Tremblor",
                 note = "Defeat Tremblor when it's in its rare form to receive the pet. No pet rewarded if it is in legendary or epic form."
@@ -487,13 +487,13 @@ PETAD.TaskData = {
     },
     {
         trigger = {
-            type = PETAD.TRIGGER_TYPE.WORLD_QUEST,
+            type = PETC.TRIGGER_TYPE.WORLD_QUEST,
             questID = 73148,
             questName = "Combustible Vegetation",
-            questEvaluationType = PETAD.QUEST_EVAL_TYPE.BYMAP,
+            questEvaluationType = PETC.QUEST_EVAL_TYPE.BYMAP,
         },
         challenge = {
-            type = PETAD.CHALLENGE_TYPE.QUEST,
+            type = PETC.CHALLENGE_TYPE.QUEST,
             expansionID = 10,
             zoneID = 2151,
             questID = 73148,
@@ -502,8 +502,8 @@ PETAD.TaskData = {
         },
         rewards = {
             [1] = {
-                type = PETAD.REWARD_TYPE.PET,
-                creatureID = 200771,
+                type = PETC.REWARD_TYPE.PET,
+                speciesID = 3448,
                 spellID = 398872,
                 creatureName = "Wildfire",
                 note = "Defeat Wildfire when it's in its rare form to receive the pet. No pet rewarded if it is in legendary or epic form."
@@ -512,13 +512,13 @@ PETAD.TaskData = {
     },
     {
         trigger = {
-            type = PETAD.TRIGGER_TYPE.WORLD_QUEST,
+            type = PETC.TRIGGER_TYPE.WORLD_QUEST,
             questID = 73149,
             questName = "Flood Warning",
-            questEvaluationType = PETAD.QUEST_EVAL_TYPE.BYMAP,
+            questEvaluationType = PETC.QUEST_EVAL_TYPE.BYMAP,
         },
         challenge = {
-            type = PETAD.CHALLENGE_TYPE.QUEST,
+            type = PETC.CHALLENGE_TYPE.QUEST,
             expansionID = 10,
             zoneID = 2151,
             questID = 73149,
@@ -527,8 +527,8 @@ PETAD.TaskData = {
         },
         rewards = {
             [1] = {
-                type = PETAD.REWARD_TYPE.PET,
-                creatureID = 200772,
+                type = PETC.REWARD_TYPE.PET,
+                speciesID = 3449,
                 spellID = 398871,
                 creatureName = "Flow",
                 note = "Defeat Flow when it's in its rare form to receive the pet. No pet rewarded if it is in legendary or epic form."
@@ -538,20 +538,20 @@ PETAD.TaskData = {
     {
         -- this quest is only detectible if you're standing in the emerald dream
         --trigger = {
-        --    type = PETAD.TRIGGER_TYPE.WORLD_QUEST,
+        --    type = PETC.TRIGGER_TYPE.WORLD_QUEST,
         --    questID = 78370,
         --    questName = "Claws for Concern",
-        --    questEvaluationType = PETAD.QUEST_EVAL_TYPE.ISACTIVE,
+        --    questEvaluationType = PETC.QUEST_EVAL_TYPE.ISACTIVE,
         --},
         trigger = {
-            type = PETAD.TRIGGER_TYPE.PERIODIC_ROTATION,
+            type = PETC.TRIGGER_TYPE.PERIODIC_ROTATION,
             startDayOfYear = 146,
             startYear = 2024,
             daysInCycle = 16,
             daysDuration = 3
         },
         challenge = {
-            type = PETAD.CHALLENGE_TYPE.QUEST,
+            type = PETC.CHALLENGE_TYPE.QUEST,
             expansionID = 10,
             zoneID = 2200,
             questID = 78370,
@@ -560,8 +560,8 @@ PETAD.TaskData = {
         },
         rewards = {
             [1] = {
-                type = PETAD.REWARD_TYPE.PET,
-                creatureID = 212206,
+                type = PETC.REWARD_TYPE.PET,
+                speciesID = 4288,
                 spellID = 426060,
                 creatureName = "Blueloo",
                 note = "Find all 18 birds for the Fiends in Feathers achievement. Best to do it in a raid so you can get them all in one event."
@@ -570,14 +570,14 @@ PETAD.TaskData = {
     },
     {
         trigger = {
-            type = PETAD.TRIGGER_TYPE.PERIODIC_ROTATION, --ZaralekCavern | Loamm
+            type = PETC.TRIGGER_TYPE.PERIODIC_ROTATION, --ZaralekCavern | Loamm
             startDayOfYear = 160,
             startYear = 2024,
             daysInCycle = 4,
             daysDuration = 3
         },
         challenge = {
-            type = PETAD.CHALLENGE_TYPE.RARE_KILL,
+            type = PETC.CHALLENGE_TYPE.RARE_KILL,
             expansionID = 10,
             zoneID = 2133,
             npcID = 203618,
@@ -586,8 +586,8 @@ PETAD.TaskData = {
         },
         rewards = {
             [1] = {
-                type = PETAD.REWARD_TYPE.PET,
-                creatureID = 204263,
+                type = PETC.REWARD_TYPE.PET,
+                speciesID = 3521,
                 spellID = 408027,
                 creatureName = "Lord Stantley",
                 chance = true,
@@ -597,14 +597,14 @@ PETAD.TaskData = {
     },
     {
         trigger = {
-            type = PETAD.TRIGGER_TYPE.PERIODIC_ROTATION, --ZaralekCavern | Loamm
+            type = PETC.TRIGGER_TYPE.PERIODIC_ROTATION, --ZaralekCavern | Loamm
             startDayOfYear = 160,
             startYear = 2024,
             daysInCycle = 4,
             daysDuration = 3
         },
         challenge = {
-            type = PETAD.CHALLENGE_TYPE.RARE_KILL,
+            type = PETC.CHALLENGE_TYPE.RARE_KILL,
             expansionID = 10,
             zoneID = 2133,
             npcID = 203462,
@@ -612,16 +612,16 @@ PETAD.TaskData = {
         },
         rewards = {
             [1] = {
-                type = PETAD.REWARD_TYPE.PET,
-                creatureID = 204345,
+                type = PETC.REWARD_TYPE.PET,
+                speciesID = 3546,
                 spellID = 408264,
                 creatureName = "Skaarn",
                 chance = true,
                 note = "5% drop chance"
             },
             [2] = {
-                type = PETAD.REWARD_TYPE.PET_VIA_ITEM,
-                creatureID = 204343,
+                type = PETC.REWARD_TYPE.PET_VIA_ITEM,
+                speciesID = 3545,
                 spellID = 408257,
                 creatureName = "Salverun",
                 itemID = 206021,
@@ -633,14 +633,14 @@ PETAD.TaskData = {
     },
     {
         trigger = {
-            type = PETAD.TRIGGER_TYPE.PERIODIC_ROTATION, --ZaralekCavern | Loamm
+            type = PETC.TRIGGER_TYPE.PERIODIC_ROTATION, --ZaralekCavern | Loamm
             startDayOfYear = 160,
             startYear = 2024,
             daysInCycle = 4,
             daysDuration = 3
         },
         challenge = {
-            type = PETAD.CHALLENGE_TYPE.RARE_KILL,
+            type = PETC.CHALLENGE_TYPE.RARE_KILL,
             expansionID = 10,
             zoneID = 2133,
             npcID = 203593,
@@ -649,8 +649,8 @@ PETAD.TaskData = {
         },
         rewards = {
             [1] = {
-                type = PETAD.REWARD_TYPE.PET,
-                creatureID = 204363,
+                type = PETC.REWARD_TYPE.PET,
+                speciesID = 3551,
                 spellID = 408317,
                 creatureName = "Teardrop Moth",
                 chance = true,
@@ -660,14 +660,14 @@ PETAD.TaskData = {
     },
     {
         trigger = {
-            type = PETAD.TRIGGER_TYPE.PERIODIC_ROTATION, --ZaralekCavern | Glimmerogg
+            type = PETC.TRIGGER_TYPE.PERIODIC_ROTATION, --ZaralekCavern | Glimmerogg
             startDayOfYear = 162,
             startYear = 2024,
             daysInCycle = 4,
             daysDuration = 3
         },
         challenge = {
-            type = PETAD.CHALLENGE_TYPE.RARE_KILL,
+            type = PETC.CHALLENGE_TYPE.RARE_KILL,
             expansionID = 10,
             zoneID = 2133,
             npcID = 203468,
@@ -676,8 +676,8 @@ PETAD.TaskData = {
         },
         rewards = {
             [1] = {
-                type = PETAD.REWARD_TYPE.PET,
-                creatureID = 204359,
+                type = PETC.REWARD_TYPE.PET,
+                speciesID = 3548,
                 spellID = 408308,
                 creatureName = "Aquapo",
                 chance = true,
@@ -687,14 +687,14 @@ PETAD.TaskData = {
     },
     {
         trigger = {
-            type = PETAD.TRIGGER_TYPE.PERIODIC_ROTATION, --ZaralekCavern | Glimmerogg
+            type = PETC.TRIGGER_TYPE.PERIODIC_ROTATION, --ZaralekCavern | Glimmerogg
             startDayOfYear = 162,
             startYear = 2024,
             daysInCycle = 4,
             daysDuration = 3
         },
         challenge = {
-            type = PETAD.CHALLENGE_TYPE.RARE_KILL,
+            type = PETC.CHALLENGE_TYPE.RARE_KILL,
             expansionID = 10,
             zoneID = 2133,
             npcID = 203621,
@@ -703,8 +703,8 @@ PETAD.TaskData = {
         },
         rewards = {
             [1] = {
-                type = PETAD.REWARD_TYPE.PET,
-                creatureID = 204303,
+                type = PETC.REWARD_TYPE.PET,
+                speciesID = 3533,
                 spellID = 408110,
                 creatureName = "Brul",
                 chance = true,
@@ -714,14 +714,14 @@ PETAD.TaskData = {
     },
     {
         trigger = {
-            type = PETAD.TRIGGER_TYPE.PERIODIC_ROTATION, --ZaralekCavern | Glimmerogg
+            type = PETC.TRIGGER_TYPE.PERIODIC_ROTATION, --ZaralekCavern | Glimmerogg
             startDayOfYear = 162,
             startYear = 2024,
             daysInCycle = 4,
             daysDuration = 3
         },
         challenge = {
-            type = PETAD.CHALLENGE_TYPE.RARE_KILL,
+            type = PETC.CHALLENGE_TYPE.RARE_KILL,
             expansionID = 10,
             zoneID = 2133,
             npcID = 203625,
@@ -730,8 +730,8 @@ PETAD.TaskData = {
         },
         rewards = {
             [1] = {
-                type = PETAD.REWARD_TYPE.PET,
-                creatureID = 204339,
+                type = PETC.REWARD_TYPE.PET,
+                speciesID = 3541,
                 spellID = 408251,
                 creatureName = "Ridged Shalewing",
                 chance = true,
@@ -741,13 +741,13 @@ PETAD.TaskData = {
     },
     {
         trigger = {
-            type = PETAD.TRIGGER_TYPE.WORLD_QUEST,
+            type = PETC.TRIGGER_TYPE.WORLD_QUEST,
             questID = 65256,
             questName = "Cluck, Cluck, Boom",
-            questEvaluationType = PETAD.QUEST_EVAL_TYPE.ISACTIVE,
+            questEvaluationType = PETC.QUEST_EVAL_TYPE.ISACTIVE,
         },
         challenge = {
-            type = PETAD.CHALLENGE_TYPE.QUEST,
+            type = PETC.CHALLENGE_TYPE.QUEST,
             expansionID = 9,
             zoneID = 1970,
             questID = 65256,
@@ -756,8 +756,8 @@ PETAD.TaskData = {
         },
         rewards = {
             [1] = {
-                type = PETAD.REWARD_TYPE.PET,
-                creatureID = 184189,
+                type = PETC.REWARD_TYPE.PET,
+                speciesID = 3225,
                 spellID = 364178,
                 creatureName = "Violent Poultrid",
                 note = "Complete the quest for a chance at receiving [Schematic: Violent Poultrid]. Protoform synthesis costs:\n  200x Genesis Mote\n  1x Glimmer of Malice\n  1x Poultrid Lattice",
@@ -766,13 +766,13 @@ PETAD.TaskData = {
     },
     {
         trigger = {
-            type = PETAD.TRIGGER_TYPE.WORLD_QUEST,
+            type = PETC.TRIGGER_TYPE.WORLD_QUEST,
             questID = 65102,
             questName = "Fish Eyes",
-            questEvaluationType = PETAD.QUEST_EVAL_TYPE.ISACTIVE,
+            questEvaluationType = PETC.QUEST_EVAL_TYPE.ISACTIVE,
         },
         challenge = {
-            type = PETAD.CHALLENGE_TYPE.QUEST,
+            type = PETC.CHALLENGE_TYPE.QUEST,
             expansionID = 9,
             zoneID = 1970,
             questID = 65102,
@@ -781,22 +781,22 @@ PETAD.TaskData = {
         },
         rewards = {
             [1] = {
-                type = PETAD.REWARD_TYPE.PET,
-                creatureID = 184192,
+                type = PETC.REWARD_TYPE.PET,
+                speciesID = 3230,
                 spellID = 364184,
                 creatureName = "Terror Jelly",
                 chance = true
             },
             [2] = {
-                type = PETAD.REWARD_TYPE.PET,
-                creatureID = 184193,
+                type = PETC.REWARD_TYPE.PET,
+                speciesID = 3231,
                 spellID = 364193,
                 creatureName = "Prototickles",
                 chance = true
             },
             [3] = {
-                type = PETAD.REWARD_TYPE.PET,
-                creatureID = 184186, 
+                type = PETC.REWARD_TYPE.PET,
+                speciesID = 3229, 
                 spellID = 364259,
                 creatureName = "Archetype of Renewal",
                 chance = true
@@ -805,13 +805,13 @@ PETAD.TaskData = {
     },
     {
         trigger = {
-            type = PETAD.TRIGGER_TYPE.WORLD_QUEST,
+            type = PETC.TRIGGER_TYPE.WORLD_QUEST,
             questID = 66070,
             questName = "Brightblade's Bones",
-            questEvaluationType = PETAD.QUEST_EVAL_TYPE.ISACTIVE,
+            questEvaluationType = PETC.QUEST_EVAL_TYPE.ISACTIVE,
         },
         challenge = {
-            type = PETAD.CHALLENGE_TYPE.QUEST,
+            type = PETC.CHALLENGE_TYPE.QUEST,
             expansionID = 10,
             zoneID = 2022,
             questID = 66070,
@@ -820,8 +820,8 @@ PETAD.TaskData = {
         },
         rewards = {
             [1] = {
-                type = PETAD.REWARD_TYPE.PET,
-                creatureID = 192350,
+                type = PETC.REWARD_TYPE.PET,
+                speciesID = 3360,
                 spellID = 377392,
                 creatureName = "Bugbiter Tortoise",
             },
@@ -829,13 +829,13 @@ PETAD.TaskData = {
     },
     {
         trigger = {
-            type = PETAD.TRIGGER_TYPE.WORLD_QUEST,
+            type = PETC.TRIGGER_TYPE.WORLD_QUEST,
             questID = 51212,
             questName = "Waycrest Manor: Witchy Kitchen",
-            questEvaluationType = PETAD.QUEST_EVAL_TYPE.ISACTIVE,
+            questEvaluationType = PETC.QUEST_EVAL_TYPE.ISACTIVE,
         },
         challenge = {
-            type = PETAD.CHALLENGE_TYPE.QUEST,
+            type = PETC.CHALLENGE_TYPE.QUEST,
             expansionID = 8,
             zoneID = 896,
             questID = 51212,
@@ -844,8 +844,8 @@ PETAD.TaskData = {
         },
         rewards = {
             [1] = {
-                type = PETAD.REWARD_TYPE.PET,
-                creatureID = 139372,
+                type = PETC.REWARD_TYPE.PET,
+                speciesID = 2192,
                 spellID = 273869,
                 creatureName = "Vengeful Chicken",
             },
@@ -853,13 +853,13 @@ PETAD.TaskData = {
     },
     {
         trigger = {
-            type = PETAD.TRIGGER_TYPE.WORLD_QUEST,
+            type = PETC.TRIGGER_TYPE.WORLD_QUEST,
             questID = 56308,
             questName = "Assault: Aqir Unearthed",
-            questEvaluationType = PETAD.QUEST_EVAL_TYPE.ISACTIVE,
+            questEvaluationType = PETC.QUEST_EVAL_TYPE.ISACTIVE,
         },
         challenge = {
-            type = PETAD.CHALLENGE_TYPE.RARE_KILL,
+            type = PETC.CHALLENGE_TYPE.RARE_KILL,
             expansionID = 8,
             zoneID = 1527, --uldum
             questID = 56308,
@@ -870,8 +870,8 @@ PETAD.TaskData = {
         },
         rewards = {
             [1] = {
-                type = PETAD.REWARD_TYPE.PET_VIA_ITEM,
-                creatureID = 162004,
+                type = PETC.REWARD_TYPE.PET_VIA_ITEM,
+                speciesID = 2848,
                 spellID = 315360,
                 creatureName = "Aqir Tunneler",
                 itemID = 174476,
@@ -883,13 +883,13 @@ PETAD.TaskData = {
     },
     {
         trigger = {
-            type = PETAD.TRIGGER_TYPE.WORLD_QUEST,
+            type = PETC.TRIGGER_TYPE.WORLD_QUEST,
             questID = 56308,
             questName = "Assault: Aqir Unearthed",
-            questEvaluationType = PETAD.QUEST_EVAL_TYPE.ISACTIVE,
+            questEvaluationType = PETC.QUEST_EVAL_TYPE.ISACTIVE,
         },
         challenge = {
-            type = PETAD.CHALLENGE_TYPE.RARE_KILL,
+            type = PETC.CHALLENGE_TYPE.RARE_KILL,
             expansionID = 8,
             zoneID = 1527, --uldum
             questID = 56308,
@@ -900,8 +900,8 @@ PETAD.TaskData = {
         },
         rewards = {
             [1] = {
-                type = PETAD.REWARD_TYPE.PET_VIA_ITEM,
-                creatureID = 161997,
+                type = PETC.REWARD_TYPE.PET_VIA_ITEM,
+                speciesID = 2847,
                 spellID = 315355,
                 creatureName = "Rotbreath",
                 itemID = 174475,
@@ -913,13 +913,13 @@ PETAD.TaskData = {
     },
     {
         trigger = {
-            type = PETAD.TRIGGER_TYPE.WORLD_QUEST,
+            type = PETC.TRIGGER_TYPE.WORLD_QUEST,
             questID = 57157,
             questName = "Assault: The Black Empire",
-            questEvaluationType = PETAD.QUEST_EVAL_TYPE.ISACTIVE,
+            questEvaluationType = PETC.QUEST_EVAL_TYPE.ISACTIVE,
         },
         challenge = {
-            type = PETAD.CHALLENGE_TYPE.RARE_KILL,
+            type = PETC.CHALLENGE_TYPE.RARE_KILL,
             expansionID = 8,
             zoneID = 1527, --uldum
             questID = 57157,
@@ -930,8 +930,8 @@ PETAD.TaskData = {
         },
         rewards = {
             [1] = {
-                type = PETAD.REWARD_TYPE.PET_VIA_ITEM,
-                creatureID = 162012,
+                type = PETC.REWARD_TYPE.PET_VIA_ITEM,
+                speciesID = 2851,
                 spellID = 315370,
                 creatureName = "Wicked Lurker",
                 itemID = 174478,
@@ -943,12 +943,12 @@ PETAD.TaskData = {
     },
     {
         trigger = {
-            type = PETAD.TRIGGER_TYPE.ACHIEVEMENT,
+            type = PETC.TRIGGER_TYPE.ACHIEVEMENT,
             achievementID = 18384,
             achievementName = "Whelp, There It Is",
         },
         challenge = {
-            type = PETAD.CHALLENGE_TYPE.ACHIEVEMENT,
+            type = PETC.CHALLENGE_TYPE.ACHIEVEMENT,
             expansionID = 10,
             zoneID = 2112,
             achievementID = 18384,
@@ -956,8 +956,8 @@ PETAD.TaskData = {
         },
         rewards = {
             [1] = {
-                type = PETAD.REWARD_TYPE.PET,
-                creatureID = 204369,
+                type = PETC.REWARD_TYPE.PET,
+                speciesID = 3555,
                 spellID = 408330,
                 creatureName = "Axel",
                 note = "Complete the quest lines at Valdrakken's Little Scales Daycare to satisfy the achievement. \nYou'll be given a handful of pets througout the sequence.\nit will take roughly a week or two to complete."
@@ -966,13 +966,13 @@ PETAD.TaskData = {
     },
     {
         trigger = {
-            type = PETAD.TRIGGER_TYPE.WORLD_QUEST,
+            type = PETC.TRIGGER_TYPE.WORLD_QUEST,
             questID = 59808,
             questName = "Muck It Up",
-            questEvaluationType = PETAD.QUEST_EVAL_TYPE.ISACTIVE,
+            questEvaluationType = PETC.QUEST_EVAL_TYPE.ISACTIVE,
         },
         challenge = {
-            type = PETAD.CHALLENGE_TYPE.RARE_KILL,
+            type = PETC.CHALLENGE_TYPE.RARE_KILL,
             expansionID = 9,
             zoneID = 1525,
             questID = 59808,
@@ -983,8 +983,8 @@ PETAD.TaskData = {
         },
         rewards = {
             [1] = {
-                type = PETAD.REWARD_TYPE.PET_VIA_ITEM,
-                creatureID = 171121,
+                type = PETC.REWARD_TYPE.PET_VIA_ITEM,
+                speciesID = 2896,
                 spellID = 333799,
                 creatureName = "Primordial Bogling",
                 itemID = 180588,
@@ -996,13 +996,13 @@ PETAD.TaskData = {
     },
     {
         trigger = {
-            type = PETAD.TRIGGER_TYPE.WORLD_QUEST,
+            type = PETC.TRIGGER_TYPE.WORLD_QUEST,
             questID = 60655,
             questName = "A Stolen Stone Fiend",
-            questEvaluationType = PETAD.QUEST_EVAL_TYPE.ISACTIVE,
+            questEvaluationType = PETC.QUEST_EVAL_TYPE.ISACTIVE,
         },
         challenge = {
-            type = PETAD.CHALLENGE_TYPE.QUEST,
+            type = PETC.CHALLENGE_TYPE.QUEST,
             expansionID = 9,
             zoneID = 1525,
             questID = 60655,
@@ -1011,8 +1011,8 @@ PETAD.TaskData = {
         },
         rewards = {
             [1] = {
-                type = PETAD.REWARD_TYPE.PET_VIA_ITEM,
-                creatureID = 171136,
+                type = PETC.REWARD_TYPE.PET_VIA_ITEM,
+                speciesID = 2900,
                 spellID = 333819,
                 creatureName = "Dal",
                 itemID = 183859,
@@ -1022,13 +1022,13 @@ PETAD.TaskData = {
     },
     {
         trigger = {
-            type = PETAD.TRIGGER_TYPE.WORLD_QUEST,
+            type = PETC.TRIGGER_TYPE.WORLD_QUEST,
             questID = 60654,
             questName = "Swarming Souls",
-            questEvaluationType = PETAD.QUEST_EVAL_TYPE.ISACTIVE,
+            questEvaluationType = PETC.QUEST_EVAL_TYPE.ISACTIVE,
         },
         challenge = {
-            type = PETAD.CHALLENGE_TYPE.RARE_KILL,
+            type = PETC.CHALLENGE_TYPE.RARE_KILL,
             expansionID = 9,
             zoneID = 1525,
             questID = 60654,
@@ -1039,8 +1039,8 @@ PETAD.TaskData = {
         },
         rewards = {
             [1] = {
-                type = PETAD.REWARD_TYPE.PET_VIA_ITEM,
-                creatureID = 171118,
+                type = PETC.REWARD_TYPE.PET_VIA_ITEM,
+                speciesID = 2897,
                 spellID = 333795,
                 creatureName = "Wrathling",
                 itemID = 183859,
@@ -1053,7 +1053,7 @@ PETAD.TaskData = {
     {
         excludeFromReport = true,
         trigger = {
-            type = PETAD.TRIGGER_TYPE.AREA_POI,
+            type = PETC.TRIGGER_TYPE.AREA_POI,
             areaPOIList = {
                 { areaPoiID = 7251, mapID = 2022 },
                 { areaPoiID = 7255, mapID = 2022 },
@@ -1070,7 +1070,7 @@ PETAD.TaskData = {
             }
         },
         challenge = {
-            type = PETAD.CHALLENGE_TYPE.PETBATTLE,
+            type = PETC.CHALLENGE_TYPE.PETBATTLE,
             expansionID = 10,
             zoneID = 2022,
             npcID = 192029,
@@ -1078,8 +1078,8 @@ PETAD.TaskData = {
         },
         rewards = {
             [1] = {
-                type = PETAD.REWARD_TYPE.PET,
-                creatureID = 192029,
+                type = PETC.REWARD_TYPE.PET,
+                speciesID = 3385,
                 creatureName = "Storm-Touched Stomper",
                 note = "Battle one and capture it during any storm event in The Waking Shores"
             },
@@ -1088,7 +1088,7 @@ PETAD.TaskData = {
     {
         excludeFromReport = true,
         trigger = {
-            type = PETAD.TRIGGER_TYPE.AREA_POI,
+            type = PETC.TRIGGER_TYPE.AREA_POI,
             areaPOIList = {
                 { areaPoiID = 7221, mapID = 2023 },
                 { areaPoiID = 7225, mapID = 2023 },
@@ -1101,7 +1101,7 @@ PETAD.TaskData = {
             }
         },
         challenge = {
-            type = PETAD.CHALLENGE_TYPE.PETBATTLE,
+            type = PETC.CHALLENGE_TYPE.PETBATTLE,
             expansionID = 10,
             zoneID = 2023,
             npcID = 189660,
@@ -1109,8 +1109,8 @@ PETAD.TaskData = {
         },
         rewards = {
             [1] = {
-                type = PETAD.REWARD_TYPE.PET,
-                creatureID = 189660,
+                type = PETC.REWARD_TYPE.PET,
+                speciesID = 3329,
                 creatureName = "Storm-Touched Timbertooth",
                 note = "Battle one and capture it during any storm event in Ohn'ahran Plains"
             },
@@ -1119,7 +1119,7 @@ PETAD.TaskData = {
     {
         excludeFromReport = true,
         trigger = {
-            type = PETAD.TRIGGER_TYPE.AREA_POI,
+            type = PETC.TRIGGER_TYPE.AREA_POI,
             areaPOIList = {
                 { areaPoiID = 7237, mapID = 2024 },
                 { areaPoiID = 7233, mapID = 2024 },
@@ -1136,7 +1136,7 @@ PETAD.TaskData = {
             }
         },
         challenge = {
-            type = PETAD.CHALLENGE_TYPE.PETBATTLE,
+            type = PETC.CHALLENGE_TYPE.PETBATTLE,
             expansionID = 10,
             zoneID = 2024,
             npcID = 192256,
@@ -1144,8 +1144,8 @@ PETAD.TaskData = {
         },
         rewards = {
             [1] = {
-                type = PETAD.REWARD_TYPE.PET,
-                creatureID = 192256,
+                type = PETC.REWARD_TYPE.PET,
+                speciesID = 3354,
                 creatureName = "Storm-Touched Ottuk",
                 note = "Battle one and capture it during any storm event in The Azure Span"
             },
@@ -1154,7 +1154,7 @@ PETAD.TaskData = {
     {
         excludeFromReport = true,
         trigger = {
-            type = PETAD.TRIGGER_TYPE.AREA_POI,
+            type = PETC.TRIGGER_TYPE.AREA_POI,
             areaPOIList = {
                 { areaPoiID = 7298, mapID = 2025 },
                 { areaPoiID = 7245, mapID = 2025 },
@@ -1167,7 +1167,7 @@ PETAD.TaskData = {
             }
         },
         challenge = {
-            type = PETAD.CHALLENGE_TYPE.PETBATTLE,
+            type = PETC.CHALLENGE_TYPE.PETBATTLE,
             expansionID = 10,
             zoneID = 2025,
             npcID = 192259,
@@ -1175,8 +1175,8 @@ PETAD.TaskData = {
         },
         rewards = {
             [1] = {
-                type = PETAD.REWARD_TYPE.PET,
-                creatureID = 192259,
+                type = PETC.REWARD_TYPE.PET,
+                speciesID = 3384,
                 creatureName = "Storm-Touched Bluefeather",
                 note = "Battle one and capture it during any storm event in Thaldraszus"
             },
@@ -1184,14 +1184,14 @@ PETAD.TaskData = {
     },
     {
         trigger = {
-            type = PETAD.TRIGGER_TYPE.AURA,
+            type = PETC.TRIGGER_TYPE.AURA,
             auraID = 335150,
             auraName = "Sign of the Destroyer",
             auraDescription = "Cataclysm Timewalking",
             isTimewalking = true,
         },
         challenge = {
-            type = PETAD.CHALLENGE_TYPE.RARE_KILL,
+            type = PETC.CHALLENGE_TYPE.RARE_KILL,
             expansionID = 4,
             zoneID = 198,
             npcID = 52530,
@@ -1200,8 +1200,8 @@ PETAD.TaskData = {
         },
         rewards = {
             [1] = {
-                type = PETAD.REWARD_TYPE.PET_VIA_ITEM,
-                creatureID = 189117,
+                type = PETC.REWARD_TYPE.PET_VIA_ITEM,
+                speciesID = 3292,
                 spellID = 375084,
                 creatureName = "Phoenix Wishwing",
                 itemID = 199099,
@@ -1212,7 +1212,7 @@ PETAD.TaskData = {
     },
     {
         trigger = {
-            type = PETAD.TRIGGER_TYPE.WORLD_QUEST_REWARD,
+            type = PETC.TRIGGER_TYPE.WORLD_QUEST_REWARD,
             itemID = 183111,
             itemName = "Animated Ulna",
             questNotCompleted = 62318
@@ -1223,15 +1223,15 @@ PETAD.TaskData = {
             }
         },
         challenge = {
-            type = PETAD.CHALLENGE_TYPE.QUEST,
+            type = PETC.CHALLENGE_TYPE.QUEST,
             expansionID = 9,
             zoneID = 1536,
             note = "1. Complete the pet battle to receive [Animated Ulna]\n2. Purchase [Animated Radius] from Nalcorn Talsen (50,34) for 250 charms\n3. Travel to 47.39,62.11 and click the Skeletal Hand Fragments to receive [Flexing Phalanges]\n    -Once per character. Only available if you have both of the Animated items\n5. Combine the items to receive the [Carpal] pet"
         },
         rewards = {
             [1] = {
-                type = PETAD.REWARD_TYPE.PET_VIA_ITEM,
-                creatureID = 173847,
+                type = PETC.REWARD_TYPE.PET_VIA_ITEM,
+                speciesID = 3025,
                 spellID = 340717,
                 creatureName = "Carpal",
                 itemID = 183111,

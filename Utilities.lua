@@ -1,6 +1,7 @@
----@class PetAdvisor
-local PETAD = PetAdvisor
-local UTILITIES = PETAD.UTILITIES
+---@class PetCollector
+local PETC = PetCollector
+local UTILITIES = PETC.UTILITIES
+local CONTINENTS = PETC.CONTINENTS
 
 local GetTitleForQuestID = C_QuestLog.GetTitleForQuestID
 
@@ -135,18 +136,38 @@ end
 
 
 function UTILITIES:SortTaskList(list)
-	table.sort(list, function(a, b) return UTILITIES:Sort(a, b) end)
+	table.sort(list, function(a, b) return UTILITIES:SortTasks(a, b) end)
 	return list
 end
 
-function UTILITIES:Sort(a, b)
+function UTILITIES:SortTasks(a, b)
 	if a.challenge.expansionID > b.challenge.expansionID then return true end
 	if a.challenge.expansionID < b.challenge.expansionID then return false end
     if a.challenge.zoneID == b.challenge.zoneID then
         return a.challenge:Display() < b.challenge:Display()
     end
-    
+
 	return a.challenge.zoneID < b.challenge.zoneID
+end
+
+function UTILITIES:SortRegionList(list)
+	table.sort(list, function(a, b) return UTILITIES:SortRegions(a, b) end)
+	return list
+end
+
+function UTILITIES:SortRegions(a, b)
+    aContinentInt = CONTINENTS:GetSortOrder(a.continent)
+    bContinentInt = CONTINENTS:GetSortOrder(b.continent)
+	if aContinentInt > bContinentInt then return true end
+	if aContinentInt < bContinentInt then return false end
+	if a.zone > b.zone then return true end
+	if a.zone < b.zone then return false end
+    
+    if (a.area == nil and b.area == nil) then return false end
+    if (a.area == nil) then return false end
+    if (b.area == nil) then return true end
+
+    return a.area < b.area
 end
 
 function UTILITIES:GroupTasks(list)

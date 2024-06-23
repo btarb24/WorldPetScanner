@@ -1,16 +1,16 @@
----@class PetAdvisor
-local PETAD = PetAdvisor
-local DISPLAY = PETAD.DISPLAY
-local UTILITIES = PETAD.UTILITIES
-local DATA = PETAD.DATA
-local EXPANSIONS = PETAD.EXPANSIONS
+---@class PetCollector
+local PETC = PetCollector
+local DISPLAY = PETC.DISPLAY
+local UTILITIES = PETC.UTILITIES
+local DATA = PETC.DATA
+local EXPANSIONS = PETC.EXPANSIONS
 
-local L = PETAD.L
+local L = PETC.L
 local LibQTip = LibStub("LibQTip-1.0")
 
 local function CreateQTip(mode, isPartialResult)
-    if not LibQTip:IsAcquired("PetAdvisor") and not DISPLAY.Report.tooltip then
-        local tooltip = LibQTip:Acquire("PetAdvisor", 2, "LEFT", "LEFT")
+    if not LibQTip:IsAcquired("PetCollector") and not DISPLAY.Report.tooltip then
+        local tooltip = LibQTip:Acquire("PetCollector", 2, "LEFT", "LEFT")
         DISPLAY.Report.tooltip = tooltip
 
  --title icon
@@ -46,14 +46,14 @@ local function CreateQTip(mode, isPartialResult)
         end
         tooltip.date:SetText(UTILITIES:GetRegionName() .. "   " .. date("%b %d, %Y  %H:%M") .. modeDisplay .. partialDisplay)
  -- item totals
-        local charms = DATA.charmTotal.."x".."|T"..PETAD.Textures[PETAD.PetCharm]..":20:20:0:0:32:32:2:30:2:30|t"        
-        local bandages  = DATA.bandageTotal.."x".."|T"..PETAD.Textures[PETAD.Bandage]..":20:20:0:0:32:32:2:30:2:30|t"
-        local blueStones  = DATA.blueStoneTotal.."x".."|T"..PETAD.Textures[PETAD.BlueStone]..":20:20:0:0:32:32:2:30:2:30|t"
+        local charms = DATA.charmTotal.."x".."|T"..PETC.Textures[PETC.PetCharm]..":20:20:0:0:32:32:2:30:2:30|t"        
+        local bandages  = DATA.bandageTotal.."x".."|T"..PETC.Textures[PETC.Bandage]..":20:20:0:0:32:32:2:30:2:30|t"
+        local blueStones  = DATA.blueStoneTotal.."x".."|T"..PETC.Textures[PETC.BlueStone]..":20:20:0:0:32:32:2:30:2:30|t"
         local trainingStones = ""
-        for tStone, _ in pairs(PETAD.TrainingStones) do
+        for tStone, _ in pairs(PETC.TrainingStones) do
             local tStoneTotal = DATA.trainingStoneTotals[tStone]
             if tStoneTotal ~= nil then
-                trainingStones = trainingStones .. tStoneTotal.."x".."|T"..PETAD.Textures[tStone]..":20:20:0:0:32:32:2:30:2:30|t   "
+                trainingStones = trainingStones .. tStoneTotal.."x".."|T"..PETC.Textures[tStone]..":20:20:0:0:32:32:2:30:2:30|t   "
             end
         end
         local header = charms .. "    " .. bandages .. "    " .. blueStones .. "    " .. trainingStones
@@ -80,8 +80,8 @@ local function CreateQTip(mode, isPartialResult)
         tooltip.totals2:SetText(header)
 
         tooltip:SetScript("OnHide", function()
-            if PETAD.PopUp then
-                PETAD.PopUp:Hide()
+            if PETC.PopUp then
+                PETC.PopUp:Hide()
             end
         end)
 
@@ -113,7 +113,7 @@ local function UpdateReportQTip(mode, isPartialResult)
                     function()
                         EXPANSIONS.list[task.challenge.expansionID].Collapsed = not EXPANSIONS.list[task.challenge.expansionID].Collapsed
                         DISPLAY.Report:CloseWindow()
-                        PETAD:ShowReportWindow(DATA.sortedTasks, mode, isPartialResult, tooltip:GetLeft(), tooltip:GetTop())
+                        PETC:ShowReportWindow(DATA.sortedTasks, mode, isPartialResult, tooltip:GetLeft(), tooltip:GetTop())
                     end
                 )
                 lineNum = lineNum + 1
@@ -187,7 +187,7 @@ local function UpdateReportQTip(mode, isPartialResult)
                     local fontFile, fontHeight, fontFlags = oldFont:GetFont()
                     newFont:SetFont(fontFile, fontHeight-2, fontFlags)
                     
-                    local indent = PETAD:GetIconIndent(task.iconReward.itemCategory)
+                    local indent = PETC:GetIconIndent(task.iconReward.itemCategory)
                     tooltip:SetCell(lineNum, colNum, display, newFont, "LEFT", 1, LibQTip.LabelProvider, indent, 0, 170, 55)         
                     if task.iconReward:Link() then           
                         tooltip:SetCellScript(
@@ -257,7 +257,7 @@ end
 
 function DISPLAY.Report:ShowWindow(mode, isPartialResult, left, top)
     if not DISPLAY.Report.PopUp then
-        local PopUp = CreateFrame("Frame", "PetAdvisorPopUp", UIParent)
+        local PopUp = CreateFrame("Frame", "PetCollectorPopUp", UIParent)
 
         DISPLAY.Report.PopUp = PopUp
         PopUp:SetMovable(true)
@@ -274,9 +274,9 @@ function DISPLAY.Report:ShowWindow(mode, isPartialResult, left, top)
             function(self)
                 self.moving = nil
                 self:StopMovingOrSizing()
-                if PETAD.db.profile.options.popupRememberPosition then
-                    PETAD.db.profile.options.popupX = self:GetLeft()
-                    PETAD.db.profile.options.popupY = self:GetTop()
+                if PETC.db.profile.options.popupRememberPosition then
+                    PETC.db.profile.options.popupX = self:GetLeft()
+                    PETC.db.profile.options.popupY = self:GetTop()
                 end
             end
         )

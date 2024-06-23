@@ -1,15 +1,15 @@
-local PETAD = PetAdvisor
-local DISPLAY = PETAD.DISPLAY
-local UTILITIES = PETAD.UTILITIES
-local DATA = PETAD.DATA
-local ZONES = PETAD.ZONES
-local EXPANSIONS = PETAD.EXPANSIONS
+local PETC = PetCollector
+local DISPLAY = PETC.DISPLAY
+local UTILITIES = PETC.UTILITIES
+local DATA = PETC.DATA
+local ZONES = PETC.ZONES
+local EXPANSIONS = PETC.EXPANSIONS
 
 local function DetermineTab1Width(fontString)
     local maxZoneWidth = 0
     local maxTimeWidth = 0
     local maxChallengeWidth = 0
-    local maxRewardIconWidth = PETAD.IconColumnWidth
+    local maxRewardIconWidth = PETC.IconColumnWidth
     local maxRewardLinkWidth = 0
 
     for _, expansion in pairs(DATA.groupedTasks) do
@@ -97,38 +97,6 @@ local function AcquireSmallerText(expansionFrame)
     return text
 end
 
-local function AcquireExpansionFrame(parent, name)
-    local expansionFrame = parent.expansionFramesPool[name]
-    if (not expansionFrame) then
-        expansionFrame = CreateFrame("Frame", nil, parent)
-        parent.expansionFramesPool[name] = expansionFrame
-    end
-
-    if (not expansionFrame.header) then
-        expansionFrame.collapseButton = CreateFrame("Button", nil, expansionFrame)
-        expansionFrame.collapseButton:SetPoint("TOPLEFT", expansionFrame, "TOPLEFT", 0, 0)
-        DISPLAY:BuildCollapseButton(expansionFrame.collapseButton)
-
-        expansionFrame.header = expansionFrame:CreateFontString(nil, "OVERLAY", "GameFontHighlight")
-        expansionFrame.header:SetText(string.format("|cff33ff33%s|r", name))
-        expansionFrame.header:SetPoint("TOPLEFT", expansionFrame.collapseButton, "TOPRIGHT", DISPLAY.Constants.marginAfterButton, -DISPLAY.Constants.vAlignAdjustmentAfterButton);
-        
-        expansionFrame.childrenHostFrame = CreateFrame("Frame", nil, expansionFrame)
-        expansionFrame.childrenHostFrame:SetPoint("TOPLEFT", expansionFrame.header, "BOTTOMLEFT", DISPLAY.Constants.zoneIndent,0);
-        expansionFrame.childrenHostFrame.standardTextPool = CreateFontStringPool(expansionFrame.childrenHostFrame, nil, nil, "GameFontHighlight")
-        expansionFrame.childrenHostFrame.smallerTextPool = CreateFontStringPool(expansionFrame.childrenHostFrame, nil, nil, "GameFontHighlight")
-        
-        expansionFrame.movingAnchor = CreateFrame("Frame", nil, expansionFrame)
-        expansionFrame.movingAnchor:SetSize(1, 1)
-    end
-
-    expansionFrame.childrenHostFrame:SetSize(1,1)
-    expansionFrame.movingAnchor:SetPoint("TOPLEFT", expansionFrame, "BOTTOMLEFT")
-
-    expansionFrame:Show()
-    return expansionFrame
-end
-
 function DISPLAY.TodaysEvents:Update()
     ResetTabContent()
     local tab1Content = PAMainFrameTab1.content
@@ -145,14 +113,14 @@ function DISPLAY.TodaysEvents:Update()
 
     --ITEM TOTALS AT TOP
     
-    local charms = DATA.charmTotal.."x".."|T"..PETAD.Textures[PETAD.PetCharm]..":26:26:0:0:32:32:2:30:2:30|t"        
-    local bandages  = DATA.bandageTotal.."x".."|T"..PETAD.Textures[PETAD.Bandage]..":26:26:0:0:32:32:2:30:2:30|t"
-    local blueStones  = DATA.blueStoneTotal.."x".."|T"..PETAD.Textures[PETAD.BlueStone]..":26:26:0:0:32:32:2:30:2:30|t"
+    local charms = DATA.charmTotal.."x".."|T"..PETC.Textures[PETC.PetCharm]..":26:26:0:0:32:32:2:30:2:30|t"        
+    local bandages  = DATA.bandageTotal.."x".."|T"..PETC.Textures[PETC.Bandage]..":26:26:0:0:32:32:2:30:2:30|t"
+    local blueStones  = DATA.blueStoneTotal.."x".."|T"..PETC.Textures[PETC.BlueStone]..":26:26:0:0:32:32:2:30:2:30|t"
     local trainingStones = ""
-    for tStone, _ in pairs(PETAD.TrainingStones) do
+    for tStone, _ in pairs(PETC.TrainingStones) do
         local tStoneTotal = DATA.trainingStoneTotals[tStone]
         if tStoneTotal ~= nil then
-            trainingStones = trainingStones .. tStoneTotal.."x".."|T"..PETAD.Textures[tStone]..":26:26:0:0:32:32:2:30:2:30|t   "
+            trainingStones = trainingStones .. tStoneTotal.."x".."|T"..PETC.Textures[tStone]..":26:26:0:0:32:32:2:30:2:30|t   "
         end
     end
     local header = charms .. "    " .. bandages .. "    " .. blueStones .. "    " .. trainingStones
@@ -183,7 +151,7 @@ function DISPLAY.TodaysEvents:Update()
         local expansionHeight = 0
         local expansionLargestWidth = 0
         --EXPANSION HEADER
-        local expansionFrame = AcquireExpansionFrame(scrollFrame, EXPANSIONS:GetName(expansion.ID))
+        local expansionFrame = DISPLAY:AcquireExpansionFrame(scrollFrame, EXPANSIONS:GetName(expansion.ID))
         if (priorExpansionFrame) then
             expansionFrame:SetPoint("TOPLEFT", priorExpansionFrame.movingAnchor, "BOTTOMLEFT", 0, -DISPLAY.Constants.lineHeight -DISPLAY.Constants.lineSeparation)
         else
@@ -234,7 +202,7 @@ function DISPLAY.TodaysEvents:Update()
 
                 --REWARD ICON                
                 if (task.iconReward) then
-                    local iconIndent = PETAD:GetIconIndent(task.iconReward.itemCategory)
+                    local iconIndent = PETC:GetIconIndent(task.iconReward.itemCategory)
                     local iconReward = AcquireSmallerText(expansionFrame);                    
                     iconReward:SetText(task.iconReward:Display())
                     iconReward:SetPoint("TOPLEFT", taskTime, "TOPRIGHT", DISPLAY.Constants.columnSeparation +maxChallengeWidth +DISPLAY.Constants.columnSeparation +iconIndent, 0);   
@@ -265,7 +233,7 @@ function DISPLAY.TodaysEvents:Update()
                     if (linkAnchor) then
                         iconLink:SetPoint("TOPLEFT", linkAnchor, "TOPRIGHT", DISPLAY.Constants.columnSeparation, 0);   
                     else
-                        iconLink:SetPoint("TOPLEFT", taskTime, "TOPRIGHT", maxChallengeWidth +PETAD.IconColumnWidth +(DISPLAY.Constants.columnSeparation*4), 0);
+                        iconLink:SetPoint("TOPLEFT", taskTime, "TOPRIGHT", maxChallengeWidth +PETC.IconColumnWidth +(DISPLAY.Constants.columnSeparation*4), 0);
                     end
                     linkAnchor = iconLink
                     iconLink:SetScript("OnEnter",

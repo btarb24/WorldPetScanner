@@ -1,9 +1,10 @@
-local PETAD = PetAdvisor
-local TASKFINDER = PETAD.TASKFINDER
-local DISPLAY = PETAD.DISPLAY
-local DATA = PETAD.DATA
-local UTILITIES = PETAD.UTILITIES
-local ZONES = PETAD.ZONES
+local PETC = PetCollector
+local TASKFINDER = PETC.TASKFINDER
+local DISPLAY = PETC.DISPLAY
+local DATA = PETC.DATA
+local PETS = PETC.PETS
+local UTILITIES = PETC.UTILITIES
+local ZONES = PETC.ZONES
 
 local retryTimer
 
@@ -14,19 +15,19 @@ local function UpdateItemTotals(task)
 
     local itemID = task.iconReward.itemID
     local quantity = task.iconReward.quantity
-    if itemID == PETAD.PetCharm then
+    if itemID == PETC.PetCharm then
         DATA.charmTotal = DATA.charmTotal + quantity
     end
 
-    if itemID == PETAD.Bandage then
+    if itemID == PETC.Bandage then
         DATA.bandageTotal = DATA.bandageTotal + quantity
     end
 
-    if itemID == PETAD.BlueStone then
+    if itemID == PETC.BlueStone then
         DATA.blueStoneTotal = DATA.blueStoneTotal + quantity
     end
 
-    if PETAD.TrainingStones[itemID] then
+    if PETC.TrainingStones[itemID] then
         local existingTrainingStones = DATA.trainingStoneTotals[itemID]
         DATA.hasTrainingStones = true
         if (existingTrainingStones == nil) then
@@ -44,8 +45,8 @@ local function CleanRewards(mode, taskData)
 
     local keptRewards = {}
     for i, reward in pairs(taskData.rewards) do        
-        if reward.type == PETAD.REWARD_TYPE.PET or reward.type == PETAD.REWARD_TYPE.PET_VIA_ITEM then
-            if not DATA.petList[reward.creatureID] then
+        if reward.type == PETC.REWARD_TYPE.PET or reward.type == PETC.REWARD_TYPE.PET_VIA_ITEM then
+            if not PETS.all[reward.speciesID].collected then
                 table.insert(keptRewards, reward)
             end
         else
@@ -89,11 +90,11 @@ end
 
 local function ProcessQuestTrigger(mode, taskData)
     local satisfied = false
-    if (taskData.trigger.questEvaluationType == PETAD.QUEST_EVAL_TYPE.FLAG) then
+    if (taskData.trigger.questEvaluationType == PETC.QUEST_EVAL_TYPE.FLAG) then
         satisfied = not C_QuestLog.IsQuestFlaggedCompleted(taskData.trigger.questID)
-    elseif taskData.trigger.questEvaluationType == PETAD.QUEST_EVAL_TYPE.ISACTIVE then
+    elseif taskData.trigger.questEvaluationType == PETC.QUEST_EVAL_TYPE.ISACTIVE then
         satisfied = C_TaskQuest.IsActive(taskData.trigger.questID)
-    elseif taskData.trigger.questEvaluationType == PETAD.QUEST_EVAL_TYPE.BYMAP then
+    elseif taskData.trigger.questEvaluationType == PETC.QUEST_EVAL_TYPE.BYMAP then
         local questFound = DATA.scannedQuestList[taskData.trigger.questID]
         if (questFound) then
             local existingTask = DATA.worldQuestTaskResults[taskData.trigger.questID]
@@ -167,11 +168,11 @@ local function GetDesiredQuestRewards(taskPOI, expansionID, zoneID)
 		for rewardIndex = 1, numQuestRewards do
 			local itemName, itemTexture, quantity, quality, isUsable, itemID = GetQuestLogRewardInfo(rewardIndex, questID)
             if (not itemID) then
-                PETAD:Debug("missing itemID for quest: "..questID.." idx: ".. rewardIndex)
-            elseif PETAD:GetItemCategory(itemID) ~= nil then
+                PETC:Debug("missing itemID for quest: "..questID.." idx: ".. rewardIndex)
+            elseif PETC:GetItemCategory(itemID) ~= nil then
                 local reward = Reward:newItem(itemID, quantity, true)
                 table.insert(rewards, reward)
-            elseif PETAD.NotableItems[itemID] then
+            elseif PETC.NotableItems[itemID] then
                 table.insert(DATA.questsWithNotableRewards, itemID, taskPOI)
             end
 		end			
@@ -185,7 +186,7 @@ local function AnalyzeQuestRewards(taskPOI, expansionID, zoneID)
     
     if (not UTILITIES:IsEmpty(directQuestRewards)) then
         local questID = taskPOI.questId
-        local trigger = {type = PETAD.TRIGGER_TYPE.WORLD_QUEST, questID = questID}
+        local trigger = {type = PETC.TRIGGER_TYPE.WORLD_QUEST, questID = questID}
         local challenge = Challenge:newWorldQuest(questID, expansionID, zoneID)
         local task = Task:new(trigger, challenge, directQuestRewards)
         table.insert(DATA.taskList, task)
@@ -212,13 +213,13 @@ local function PerformRetry()
         DATA.groupedTasks = UTILITIES:GroupTasks(DATA.sortedTasks)
         DISPLAY.TodaysEvents:HideLoading()
     else
-        retryTimer = PETAD:ScheduleTimer(PerformRetry, 1)
+        retryTimer = PETC:ScheduleTimer(PerformRetry, 1)
     end
 end
 
 function TASKFINDER:RefreshTodaysEvents(mode)
     if (retryTimer) then
-        PETAD:CancelTimer(retryTimer)
+        PETC:CancelTimer(retryTimer)
     end
     
     DISPLAY.TodaysEvents:ShowLoading()
@@ -259,28 +260,28 @@ function TASKFINDER:RefreshTodaysEvents(mode)
 		end
 	end
 
-    for _,taskData in pairs(PETAD.TaskData) do
+    for _,taskData in pairs(PETC.TaskData) do
         local triggerType = taskData.trigger.type
 
         if (mode == "report" and taskData.excludeFromReport) then
             --skip
-        elseif triggerType == PETAD.TRIGGER_TYPE.AURA then
+        elseif triggerType == PETC.TRIGGER_TYPE.AURA then
             ProcessAuraTrigger(mode, taskData)
-        elseif triggerType == PETAD.TRIGGER_TYPE.WORLD_QUEST or triggerType == PETAD.TRIGGER_TYPE.DAILY_QUEST then
+        elseif triggerType == PETC.TRIGGER_TYPE.WORLD_QUEST or triggerType == PETC.TRIGGER_TYPE.DAILY_QUEST then
             ProcessQuestTrigger(mode, taskData)
-        elseif triggerType == PETAD.TRIGGER_TYPE.ACHIEVEMENT then
+        elseif triggerType == PETC.TRIGGER_TYPE.ACHIEVEMENT then
             ProcessAchievementTrigger(mode, taskData)
-        elseif triggerType == PETAD.TRIGGER_TYPE.AREA_POI then
+        elseif triggerType == PETC.TRIGGER_TYPE.AREA_POI then
             ProcessAreaPoiTrigger(mode, taskData)
-        elseif triggerType == PETAD.TRIGGER_TYPE.WORLD_QUEST_REWARD then
+        elseif triggerType == PETC.TRIGGER_TYPE.WORLD_QUEST_REWARD then
             ProcessWorldQuestRewardTrigger(mode, taskData)
-        elseif triggerType == PETAD.TRIGGER_TYPE.PERIODIC_ROTATION then
+        elseif triggerType == PETC.TRIGGER_TYPE.PERIODIC_ROTATION then
             ProcessPeriodicRotationTrigger(mode, taskData)
         end
     end
 
     --always trigger the timer, this way we see the spinner for at least 1 second, otherwise feels like it ignored your click
-    retryTimer = PETAD:ScheduleTimer(PerformRetry, 1)
+    retryTimer = PETC:ScheduleTimer(PerformRetry, 1)
     
 	DATA.sortedTasks = UTILITIES:SortTaskList(DATA.taskList)
 	DATA.groupedTasks = UTILITIES:GroupTasks(DATA.sortedTasks)

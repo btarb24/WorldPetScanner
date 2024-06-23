@@ -1,8 +1,8 @@
----@class PetAdvisor
-local PETAD = PetAdvisor
-local DISPLAY = PETAD.DISPLAY
-local UTILITIES = PETAD.UTILITIES
-local PETS = PETAD.PETS
+---@class PetCollector
+local PETC = PetCollector
+local DISPLAY = PETC.DISPLAY
+local UTILITIES = PETC.UTILITIES
+local PETS = PETC.PETS
 
 local function EnsureBPBIDLoaded()
     --must have BattlePetBreedID addon loaded
@@ -45,6 +45,10 @@ end
 
 local function GetPossibleBreedsBySpeciesID(speciesID)
     local breedIds = BPBID_Arrays.BreedsPerSpecies[tonumber(speciesID)]
+    if not breedIds then
+        return "unknown"
+    end
+
     local result = ""
     for i = 1, #breedIds do
         result = result..tostring(breedIds[i])
@@ -58,6 +62,10 @@ end
 
 local function GetBaseStatsBySpeciesID(speciesID)
     local baseStats = BPBID_Arrays.BasePetStats[tonumber(speciesID)]
+    if not baseStats then
+        return "unknown"
+    end
+
     local result = ""
     for i = 1, #baseStats do
         result = result..tostring(baseStats[i])
@@ -206,6 +214,17 @@ local function GetNextPet(raw)
     end
 end
 
+local function GetThisPet(raw)
+    local curSpeciesIDTxt = PAPetDataEntryHelper.SpeciesEntry:GetText()
+    local curSpeciesID = tonumber(curSpeciesIDTxt)
+
+    local isCollectable = FindPetBySpeciesID(curSpeciesID, raw)
+    if (isCollectable) then
+        PAPetDataEntryHelper.SpeciesEntry:SetText(curSpeciesID)
+        return
+    end
+end
+
 local function CreateWindow()
     local f = CreateFrame("Frame", "PAPetDataEntryHelper", UIParent, "UIPanelDialogTemplate", "TitleDragAreaTemplate")
     f:SetResizable(true)
@@ -282,8 +301,24 @@ local function CreateWindow()
     f.SpeciesEntry:SetScript("OnEnterPressed", function(self) FindPetBySpeciesID(self:GetText()); self:SetText(""); end) 
     f.SpeciesEntry:SetScript("OnEscapePressed", function(self) self:ClearFocus() end) 
 
+    f.ThisButton = CreateFrame("Button", nil, f, "UIPanelButtonTemplate")
+    f.ThisButton:SetPoint("LEFT", f.SpeciesEntry, "RIGHT", 20,0)
+    f.ThisButton:SetSize(80, 24)
+    f.ThisButton:SetText("this")
+    f.ThisButton:SetScript("OnClick", function(self)
+        GetThisPet()
+    end)
+
+    f.RawButton = CreateFrame("Button", nil, f, "UIPanelButtonTemplate")
+    f.RawButton:SetPoint("LEFT", f.ThisButton, "RIGHT", 10,0)
+    f.RawButton:SetSize(80, 24)
+    f.RawButton:SetText("raw")
+    f.RawButton:SetScript("OnClick", function(self)
+        GetThisPet(true)
+    end)
+
     f.NextButton = CreateFrame("Button", nil, f, "UIPanelButtonTemplate")
-    f.NextButton:SetPoint("LEFT", f.SpeciesEntry, "RIGHT", 20,0)
+    f.NextButton:SetPoint("LEFT", f.SpeciesEntry, "RIGHT", 20,-28)
     f.NextButton:SetSize(80, 24)
     f.NextButton:SetText("next")
     f.NextButton:SetScript("OnClick", function(self)
@@ -291,7 +326,7 @@ local function CreateWindow()
     end)
 
     f.RawButton = CreateFrame("Button", nil, f, "UIPanelButtonTemplate")
-    f.RawButton:SetPoint("LEFT", f.NextButton, "RIGHT", 20,0)
+    f.RawButton:SetPoint("LEFT", f.NextButton, "RIGHT", 10,0)
     f.RawButton:SetSize(80, 24)
     f.RawButton:SetText("raw")
     f.RawButton:SetScript("OnClick", function(self)
@@ -299,7 +334,7 @@ local function CreateWindow()
     end)
     
     f.SF = CreateFrame("ScrollFrame", "$parent_DF", f, "UIPanelScrollFrameTemplate")
-    f.SF:SetPoint("TOPLEFT", f, 12, -80)
+    f.SF:SetPoint("TOPLEFT", f, 12, -120)
     f.SF:SetPoint("BOTTOMRIGHT", f, -30, 30)
     f.SF.bg = f.SF:CreateTexture(nil, "BACKGROUND")
     f.SF.bg:SetAllPoints(true)

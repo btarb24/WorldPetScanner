@@ -41,7 +41,7 @@ luac.out
 *.hex
 
 #cSharp
-/cSharp/PetAdvisorUtils/packages*
-/cSharp/PetAdvisorUtils/obj/*
-/cSharp/PetAdvisorUtils/bin/*
-/cSharp/PetAdvisorUtils/.vs/*
+/cSharp/PetCollectorUtils/packages*
+/cSharp/PetCollectorUtils/obj/*
+/cSharp/PetCollectorUtils/bin/*
+/cSharp/PetCollectorUtils/.vs/*

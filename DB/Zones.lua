@@ -1,5 +1,5 @@
-local PETAD = PetAdvisor
-local ZONES = PETAD.ZONES
+local PETC = PetCollector
+local ZONES = PETC.ZONES
 
 ZONES.list = {
     [4] = {

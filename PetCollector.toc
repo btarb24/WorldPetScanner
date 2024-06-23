@@ -1,0 +1,35 @@
+## Interface: 100207
+## Title: PetCollector
+## Author: Salkari
+## Version: v10.2.7-1
+## SavedVariables: PETC_DB
+
+embeds.xml
+Libs\LibQTip-1.0\LibQTip-1.0.lua
+
+Core.lua
+
+Models\Challenge.lua
+Models\Reward.lua
+Models\Task.lua
+
+DB\Expansions.lua
+DB\Zones.lua
+DB\Items.lua
+
+Data\Tasks.lua
+Data\Pets.lua
+Data\Continents.lua
+
+Utilities.lua
+
+Display\PetCard.lua
+Display\ReportDisplay.lua
+Display\TodaysEvents.lua
+Display\Capturable.lua
+Display\MainDisplay.lua
+Display\PetDataEntryHelper.lua
+
+TaskFinder.lua
+PetCollector.lua
+Options.lua

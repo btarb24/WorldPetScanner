@@ -1,5 +1,5 @@
-local PETAD = PetAdvisor
-local EXPANSIONS = PETAD.EXPANSIONS
+local PETC = PetCollector
+local EXPANSIONS = PETC.EXPANSIONS
 
 EXPANSIONS.list = {
     [4] = {

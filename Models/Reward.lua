@@ -1,16 +1,16 @@
-local PETAD = PetAdvisor
+local PETC = PetCollector
 
 Reward = {}
 Reward.__index = Reward;
 
-PETAD.REWARD_TYPE = {
+PETC.REWARD_TYPE = {
     ITEM = "item",
     PET = "pet",
     ACHIEVEMENT = "achiev",
     PET_VIA_ITEM = "petViaItem",
 }
 
-PETAD.REWARD_ITEMCATEGORY = {
+PETC.REWARD_ITEMCATEGORY = {
     CHARM = "charm",
     BATTLE_STONE = "battleStone",
     TRAINING_STONE = "trainingStone",
@@ -22,13 +22,13 @@ function Reward:new(rewardData)
     setmetatable(instance, Reward)
     
     instance.type = rewardData.type
-    instance.creatureID = rewardData.creatureID
+    instance.speciesID = rewardData.speciesID
     instance.creatureName = rewardData.creatureName
     instance.spellID = rewardData.spellID
     instance.itemID = rewardData.itemID
     instance.itemName = rewardData.itemName
-    instance.itemIcon = PETAD.Textures[rewardData.itemID]
-    instance.itemCategory = PETAD:GetItemCategory(rewardData.itemID)
+    instance.itemIcon = PETC.Textures[rewardData.itemID]
+    instance.itemCategory = PETC:GetItemCategory(rewardData.itemID)
     instance.chance = rewardData.chance
     instance.note = rewardData.note
     instance.achievementID = rewardData.achievementID
@@ -47,10 +47,10 @@ function Reward:newItem(itemID, quantity)
     local instance = {}
     setmetatable(instance, Reward)  
     
-    instance.type = PETAD.REWARD_TYPE.ITEM
+    instance.type = PETC.REWARD_TYPE.ITEM
     instance.itemID = itemID
-    instance.itemCategory = PETAD:GetItemCategory(itemID)
-    instance.itemIcon = PETAD.Textures[itemID]
+    instance.itemCategory = PETC:GetItemCategory(itemID)
+    instance.itemIcon = PETC.Textures[itemID]
 
     if quantity ~= nil then 
         instance.quantity = quantity
@@ -62,19 +62,19 @@ function Reward:newItem(itemID, quantity)
 end
 
 function Reward:IsItem()
-    return self.type == PETAD.REWARD_TYPE.ITEM
+    return self.type == PETC.REWARD_TYPE.ITEM
 end
 
 function Reward:IsPet()
-    return self.type == PETAD.REWARD_TYPE.PET
+    return self.type == PETC.REWARD_TYPE.PET
 end
 
 function Reward:IsPetViaItem()
-    return self.type == PETAD.REWARD_TYPE.PET_VIA_ITEM
+    return self.type == PETC.REWARD_TYPE.PET_VIA_ITEM
 end
 
 function Reward:IsAchievement()
-    return self.type == PETAD.REWARD_TYPE.ACHIEVEMENT
+    return self.type == PETC.REWARD_TYPE.ACHIEVEMENT
 end
 
 function Reward:HasIcon()

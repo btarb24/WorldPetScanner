@@ -1,14 +1,15 @@
----@class PetAdvisor : AceAddon
+---@class PetCollector : AceAddon
 ---@field tooltip LibQTip.Tooltip
-PetAdvisor = LibStub("AceAddon-3.0"):NewAddon("PetAdvisor", "AceConsole-3.0", "AceTimer-3.0")
+PetCollector = LibStub("AceAddon-3.0"):NewAddon("PetCollector", "AceConsole-3.0", "AceTimer-3.0")
 
----@class PetAdvisor
-local PETAD = PetAdvisor
-PETAD.UTILITIES = {}
-PETAD.TASKFINDER = {}
-PETAD.DISPLAY = {Report = {}, Main = {}, TodaysEvents = {}, TestWindow = {}, PetDataEntryHelper = {}}
-PETAD.DATA = {}
-PETAD.ZONES = {}
-PETAD.EXPANSIONS = {}
-PETAD.PETS = {}
-PETAD.links = {}
+---@class PetCollector
+local PETC = PetCollector
+PETC.UTILITIES = {}
+PETC.TASKFINDER = {}
+PETC.DISPLAY = {Report = {}, Main = {}, TodaysEvents = {}, Capturable = {}, TestWindow = {}, PetDataEntryHelper = {}, PetCard = {}}
+PETC.DATA = {}
+PETC.ZONES = {}
+PETC.EXPANSIONS = {}
+PETC.CONTINENTS = {}
+PETC.PETS = {}
+PETC.links = {}

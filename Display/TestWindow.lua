@@ -1,6 +1,6 @@
----@class PetAdvisor
-local PETAD = PetAdvisor
-local DISPLAY = PETAD.DISPLAY
+---@class PetCollector
+local PETC = PetCollector
+local DISPLAY = PETC.DISPLAY
 
 local function CreateWindow()
     local f = CreateFrame("Frame", "PATestWindow", UIParent)
