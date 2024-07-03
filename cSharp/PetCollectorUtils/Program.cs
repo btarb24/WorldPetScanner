@@ -121,7 +121,16 @@ namespace PetCollectorUtils
     static int TryGetMapID(JToken jtoken, string line)
     {
       if (line.Contains("uiMapId"))
-        return jtoken[0]["uiMapId"].Value<int>();
+      {
+        var mapID = jtoken[0]["uiMapId"].Value<int>();
+
+        if (mapID == 5861) //darkmoon island
+          mapID = 407;
+        else if (mapID == 7502) //dalaran
+          mapID = 51;
+
+        return mapID;
+      }
       else
         return -1;
     }

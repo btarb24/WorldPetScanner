@@ -155,6 +155,89 @@ function UTILITIES:SortRegionList(list)
 	return list
 end
 
+local function GetRarityMultiplier(quality)
+    if (quality == 1) then --poor
+        return 1
+    elseif (quality == 2) then --common
+        return 1.1
+    elseif (quality == 3) then --uncommon
+        return 1.2
+    elseif (quality == 4) then --rare
+        return 1.3
+    elseif (quality == 5) then --epic
+        return 1.4
+    elseif (quality == 6) then --lego
+        return 1.5
+    end
+end
+
+local function round(num)
+    return math.floor(num + .5)
+end
+
+function UTILITIES:GetBreed(baseStats, health, power, speed, rarity, level)
+    local rarityMultiplier = GetRarityMultiplier(rarity)
+
+    if health == round((baseStats[1] + 2) * 5 * level * rarityMultiplier  + 100) then 
+        return "H/H"
+    elseif power == round((baseStats[2] + 2) * level * rarityMultiplier) then
+        return "P/P"
+    elseif speed == round((baseStats[3] + 2) * level * rarityMultiplier) then
+        return "S/S"
+    elseif power == round((baseStats[2] + .5) * level * rarityMultiplier) then 
+        return "B/B"
+    elseif health == round((baseStats[1] + .9) * 5 * level * rarityMultiplier + 100) then 
+        if power == round((baseStats[2] + .4) * level * rarityMultiplier) then 
+            return "H/B"
+        elseif power == round((baseStats[2] + .9) * level * rarityMultiplier) then 
+            return "H/P"
+        else
+            return "H/S"
+        end
+    elseif power == round((baseStats[2] + .9) * level * rarityMultiplier) then 
+        if speed == round((baseStats[3] + .4) * level * rarityMultiplier) then 
+            return "P/B"
+        else
+            return "P/S"
+        end
+    else
+        return "S/B"
+    end
+end
+
+local function GetMultipliersForBreed(breed)
+    if (breed == "H/H") then
+        return {2, 0, 0}
+    elseif (breed == "P/P") then
+        return {0, 2, 0}
+    elseif (breed == "S/S") then
+        return {0, 0, 2}
+    elseif (breed == "B/B") then
+        return {.5, .5, .5}
+    elseif (breed == "H/P") then
+        return {.9, .9, 0}
+    elseif (breed == "H/S") then
+        return {.9, 0, .9}
+    elseif (breed == "H/B") then
+        return {.9, .4, .4}
+    elseif (breed == "P/S") then
+        return {0, .9, .9}
+    elseif (breed == "P/B") then
+        return {.4, .9, .4}
+    elseif (breed == "S/B") then
+        return {.4, .4, .9}
+    end
+end
+
+function UTILITIES:GetMaxStatsForBreed(breed, baseStats)
+    local breedMultiplier = GetMultipliersForBreed(breed)
+    local rarityMultiplier = GetRarityMultiplier(4) --rare
+    local health = round((baseStats[1] + breedMultiplier[1]) * 5 * 25 * rarityMultiplier  + 100)
+    local power = round((baseStats[2] + breedMultiplier[2]) * 25 * rarityMultiplier)
+    local speed = round((baseStats[3] + breedMultiplier[3]) * 25 * rarityMultiplier)
+    return {health, power, speed}
+end
+
 function UTILITIES:SortRegions(a, b)
     aContinentInt = CONTINENTS:GetSortOrder(a.continent)
     bContinentInt = CONTINENTS:GetSortOrder(b.continent)

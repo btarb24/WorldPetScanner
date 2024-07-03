@@ -24,6 +24,7 @@ TODO
 * create Logging window that you turn on via chat command
 * better option to 'show for collected pets'
 * make dice icon a bit smaller so it VAligns with non-dice rewards
+* font scaler option
 
 DATA
 * requiresScan -- for pets that show up Today's Events
@@ -152,11 +153,20 @@ Cowled Ranger - Sentinel's Companion (The Huntresses quest)
 
 
 5 layers: BACKGROUND, BORDER, ARTWORK, OVERLAY, HIGHLIGHT
+font flags: OUTLINE, THICK, MONOCHROME
+fonts: FRIZQT__ , skurri , 
+SetFont("Fonts\\FRIZQT__.TTF", 11, "OUTLINE, MONOCHROME")   
     
 --set frame bg to green
     bla.bg = bla:CreateTexture(nill, "BACKGROUND")
     bla.bg:SetAllPoints(true)
     bla.bg:SetColorTexture(.2, .6, 0, .8)
+
+
+BORDERS
+    GlowBorderTemplate - bright yellow diffuesed glow ~ 10 px
+    InsetFrameTemplate2 - simple gray border ~ 10px - stone-like
+
 
 Exporting builtin content:
     create shortcut of wow.exe and append " -console" to the target
@@ -164,3 +174,160 @@ Exporting builtin content:
         exportInterfaceFiles colored
         exportInterfaceFiles art
     2 new folders created in the _retail folder.  BlizzardInterfaceCode, BlizzardInterfaceArt
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    f.testArea = CreateFrame("Frame", "bla", f, "InsetFrameTemplate")
+    f.testArea:ClearAllPoints()
+    f.testArea:SetPoint("BOTTOMLEFT", f, "BOTTOMLEFT", 30, 30)
+    f.testArea:SetPoint("BOTTOMRIGHT", f, "BOTTOMRIGHT", -30, 30)
+   f.testArea:SetHeight("150")
+--    bla.MaxMinButtonFrame.MinimizeButton:Show()
+--    f.testArea:ShowButtonBar(self)
+    -- f.testArea:SetSize(12, 150)
+
+--    f.testArea.white = f.testArea:CreateTexture(nil, "BACKGROUND")
+--    f.testArea.white:ClearAllPoints()
+--    f.testArea.white:SetAllPoints(true)
+--    f.testArea.white:SetColorTexture(1,1,1)
+
+  f.testArea.btn = CreateFrame("Button", nil, f.testArea, "WowTokenButtonTemplate")
+--   f.testArea.btn:SetNormalAtlas("GarrMission_PortraitRing_Darkener")
+  f.testArea.btn:ClearAllPoints()
+--   f.testArea.btn.FillAnim:Play()
+    --   f.testArea.btn:SetSize(140,17)
+    --  f.testArea.btn.Slider:SetValue(50)
+    --  f.testArea.btn.Slider:SetMinMaxValues(20,120)
+    --  f.testArea.btn.Slider:Enable()
+  f.testArea.btn:SetPoint("BOTTOMLEFT", f.testArea, "BOTTOMLEFT", 40, 0)
+
+--    f.testArea.bg = f.testArea:CreateTexture(nil, "BACKGROUND", "RarityPipTemplate")
+--    f.testArea.bg:SetAllPoints(true)
+--    f.testArea.bg:ClearAllPoints()
+--       f.testArea.bg:SetSize(36,10)
+--    f.testArea.bg:SetPoint("BOTTOMLEFT", f.testArea, "BOTTOMLEFT")
+
+  --3 piece
+    -- f.testArea.L = f.testArea:CreateTexture(nil, "BACKGROUND", "Interface\\Buttons\\UI-SilverButtonLG-Left-Up")
+    -- f.testArea.L:ClearAllPoints()
+    -- f.testArea.L:SetSize(32,64)
+    -- f.testArea.L:SetPoint("BOTTOMLEFT", f.testArea, "BOTTOMLEFT")
+
+    -- f.testArea.R = f.testArea:CreateTexture(nil, "BACKGROUND", "Interface\\Buttons\\UI-SilverButtonLG-Right-Up")
+    -- f.testArea.R:ClearAllPoints()
+    -- f.testArea.R:SetSize(32,64)
+    -- f.testArea.R:SetPoint("BOTTOMRIGHT", f.testArea, "BOTTOMRIGHT")
+
+    -- f.testArea.C = f.testArea:CreateTexture(nil, "BACKGROUND", "Interface\\Buttons\\UI-SilverButtonLG-Mid-Up")
+    -- f.testArea.C:ClearAllPoints()
+    -- f.testArea.C:SetSize(32,64)
+    -- f.testArea.C:SetPoint("BOTTOMLEFT", f.testArea.L, "BOTTOMRIGHT")
+    -- f.testArea.C:SetPoint("BOTTOMRIGHT", f.testArea.R, "BOTTOMLEFT")
+
+  --3 piece manual
+    -- f.testArea.L = f.testArea:CreateTexture(nil, "BACKGROUND")
+    -- f.testArea.L:ClearAllPoints()
+    -- f.testArea.L:SetSize(7,20)
+    -- f.testArea.L:SetTexture("Interface\\Common\\Moneyframe")
+    -- f.testArea.L:SetTexCoord(0.953125, 0.9921875, 0, 0.296875)
+    -- f.testArea.L:SetPoint("BOTTOMLEFT", f.testArea, "BOTTOMLEFT")
+
+    -- f.testArea.R = f.testArea:CreateTexture(nil, "BACKGROUND")
+    -- f.testArea.R:ClearAllPoints()
+    -- f.testArea.R:SetSize(7,20)
+    -- f.testArea.R:SetTexture("Interface\\Common\\Moneyframe")
+    -- f.testArea.R:SetTexCoord(0, 0.0546875, 0, 0.296875)
+    -- f.testArea.R:SetPoint("BOTTOMRIGHT", f.testArea, "BOTTOMRIGHT")
+
+    -- f.testArea.C = f.testArea:CreateTexture(nil, "BACKGROUND")
+    -- f.testArea.C:ClearAllPoints()
+    -- f.testArea.C:SetSize(80,20)
+    -- f.testArea.C:SetTexture("Interface\\Common\\Moneyframe")
+    -- f.testArea.C:SetTexCoord(0, 0.9921875, 0.3125, 0.609375)
+    -- f.testArea.C:SetPoint("BOTTOMLEFT", f.testArea.L, "BOTTOMRIGHT")
+    -- f.testArea.C:SetPoint("BOTTOMRIGHT", f.testArea.R, "BOTTOMLEFT")
+
+  --8 piece
+    -- f.testArea.TL = f.testArea:CreateTexture(nil, "BACKGROUND", "Talent-Inner-TopLEFT")
+    -- f.testArea.TL:ClearAllPoints()
+    -- f.testArea.TL:SetPoint("TOPLEFT", f.testArea, "TOPLEFT")
+    -- f.testArea.TL:SetSize(14,14)
+
+    -- f.testArea.TR = f.testArea:CreateTexture(nil, "BACKGROUND", "Talent-Inner-TopRight")
+    -- f.testArea.TR:ClearAllPoints()
+    -- f.testArea.TR:SetSize(14,14)
+    -- f.testArea.TR:SetPoint("TOPRIGHT", f.testArea, "TOPRIGHT")
+
+    -- f.testArea.BR = f.testArea:CreateTexture(nil, "BACKGROUND", "Talent-Inner-BotRight")
+    -- f.testArea.BR:ClearAllPoints()
+    -- f.testArea.BR:SetSize(14,14)
+    -- f.testArea.BR:SetPoint("BOTTOMRIGHT", f.testArea, "BOTTOMRIGHT")
+    
+    -- f.testArea.BL = f.testArea:CreateTexture(nil, "BACKGROUND", "Talent-Inner-BotLeft")
+    -- f.testArea.BL:ClearAllPoints()
+    -- f.testArea.BL:SetSize(14,14)
+    -- f.testArea.BL:SetPoint("BOTTOMLEFT", f.testArea, "BOTTOMLEFT")
+
+    -- f.testArea.T = f.testArea:CreateTexture(nil, "BACKGROUND", "_Talent-Inner-TopTile")
+    -- f.testArea.T:ClearAllPoints()
+    -- f.testArea.T:SetHeight(8)
+    -- f.testArea.T:SetPoint("TOPLEFT", f.testArea.TL, "TOPRIGHT")
+    -- f.testArea.T:SetPoint("TOPRIGHT", f.testArea.TR, "TOPLEFT")
+    -- f.testArea.T:SetPoint("BOTTOM", f.testArea.TR, "BOTTOM")
+
+    -- f.testArea.B = f.testArea:CreateTexture(nil, "BACKGROUND", "_Talent-Inner-BotTile")
+    -- f.testArea.B:ClearAllPoints()
+    -- f.testArea.B:SetHeight(8)
+    -- f.testArea.B:SetPoint("BOTTOMLEFT", f.testArea.BL, "BOTTOMRIGHT")
+    -- f.testArea.B:SetPoint("BOTTOMRIGHT", f.testArea.BR, "BOTTOMLEFT")
+    -- f.testArea.B:SetPoint("TOP", f.testArea.BR, "TOP")
+
+    -- f.testArea.L = f.testArea:CreateTexture(nil, "BACKGROUND", "!Talent-Inner-LeftTile")
+    -- f.testArea.L:ClearAllPoints()
+    -- f.testArea.L:SetWidth(7)
+    -- f.testArea.L:SetPoint("TOPLEFT", f.testArea.TL, "BOTTOMLEFT")
+    -- f.testArea.L:SetPoint("BOTTOMLEFT", f.testArea.BL, "TOPLEFT")
+    -- f.testArea.L:SetPoint("RIGHT", f.testArea.BL, "RIGHT")
+    
+    -- f.testArea.R = f.testArea:CreateTexture(nil, "BACKGROUND", "!Talent-Inner-RightTile")
+    -- f.testArea.R:ClearAllPoints()
+    -- f.testArea.R:SetWidth(7)
+    -- f.testArea.R:SetPoint("TOPRIGHT", f.testArea.TR, "BOTTOMRIGHT")
+    -- f.testArea.R:SetPoint("BOTTOMRIGHT", f.testArea.BR, "TOPRIGHT")
+    -- f.testArea.R:SetPoint("LEFT", f.testArea.BR, "LEFT")

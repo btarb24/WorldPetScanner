@@ -78,12 +78,21 @@ local function BuildPetList()
 			if (not pet.collected) then
 				pet.collected = {}
 			end
+
+			local health, maxhealth, power, speed, rarity = C_PetJournal.GetPetStats(petID)
 	
 			local collectedPet = { 
 				customName = customName,
 				level = level,
-				petID = petID
+				petID = petID,
+				rarity = rarity,
 			}
+
+			if (pet.baseStats) then
+				collectedPet.breed = UTILITIES:GetBreed(pet.baseStats, maxhealth, power, speed, rarity, level)
+			else
+				print("missing base stats for " .. speciesID .. "  " .. name)
+			end
 	
 			table.insert(pet.collected, collectedPet)
 		end
