@@ -207,9 +207,35 @@ local function CreateWindow()
     tab1.content.modelFrame.bg = tab1.content.modelFrame:CreateTexture(nil, "BACKGROUND")
     tab1.content.modelFrame.bg:SetAllPoints(true)
     tab1.content.modelFrame.bg:SetColorTexture(0,0,0)
-    tab1.content.model = CreateFrame("PlayerModel", nil, tab1.content.modelFrame)
+    tab1.content.model = CreateFrame("ModelScene", nil, tab1.content.modelFrame, "WrappedAndUnwrappedModelScene")
     tab1.content.model:SetPoint("TOPLEFT", tab1.content.modelFrame, "TOPLEFT", 15, -15)
     tab1.content.model:SetPoint("BOTTOMRIGHT", tab1.content.modelFrame, "BOTTOMRIGHT", -15, 15)
+    tab1.content.modelFrame.PopOut = CreateFrame("BUTTON", nil, tab1.content.modelFrame)
+    tab1.content.modelFrame.PopOut:SetNormalAtlas("RedButton-Expand")
+    tab1.content.modelFrame.PopOut:SetPushedAtlas("RedButton-Expand-Pressed")
+    tab1.content.modelFrame.PopOut:SetHighlightAtlas("RedButton-Highlight")
+    tab1.content.modelFrame.PopOut:SetPoint("TOPRIGHT", tab1.content.modelFrame, "TOPRIGHT")
+    tab1.content.modelFrame.PopOut:SetSize(24,24)
+    tab1.content.modelFrame.PopOut:SetScript("OnClick", function(self)
+        tab1.content.model:SetParent(UIParent)
+        tab1.content.model:ClearAllPoints()
+        tab1.content.model:SetPoint("TOPLEFT", UIParent, "TOPLEFT")
+        tab1.content.model:SetPoint("BOTTOMRIGHT", UIParent, "BOTTOMRIGHT")
+        tab1.content.model:SetFrameStrata("FULLSCREEN")
+        tab1.content.modelFrame.PopOutClose:Show()
+    end)
+    tab1.content.modelFrame.PopOutClose = CreateFrame("BUTTON", nill, UIParent, "BigRedExitButtonTemplate")
+    tab1.content.modelFrame.PopOutClose:SetFrameStrata("FULLSCREEN_DIALOG")
+    tab1.content.modelFrame.PopOutClose:SetPoint("TOPLEFT", UIParent, "TOPLEFT")
+    tab1.content.modelFrame.PopOutClose:Hide()
+    tab1.content.modelFrame.PopOutClose:SetScript("OnClick", function(self)
+        tab1.content.model:SetParent(tab1.content.modelFrame)
+        tab1.content.model:ClearAllPoints()
+        tab1.content.model:SetPoint("TOPLEFT", tab1.content.modelFrame, "TOPLEFT", 15, -15)
+        tab1.content.model:SetPoint("BOTTOMRIGHT", tab1.content.modelFrame, "BOTTOMRIGHT", -15, 15)
+        tab1.content.model:SetFrameStrata("DIALOG")
+        tab1.content.modelFrame.PopOutClose:Hide()
+    end)
 
     tab1.content.flavor = tab1.content:CreateFontString(nil, "ARTWORK", nil)
     tab1.content.flavor:SetPoint("TOPLEFT", tab1.content.modelFrame, "BOTTOMLEFT", 0, -20)
@@ -410,9 +436,16 @@ local function UpdateWindow(pet, locationIdx)
         f.tab1.content.tradeableLine:Show()
         f.tab1.content.tradeableCheck:Hide()
     end
+  
+  --model
+    local sceneID = C_PetJournal.GetPetModelSceneInfoBySpeciesID(pet.speciesID)
+    f.tab1.content.model:TransitionToModelSceneID(sceneID)
+    local actor = f.tab1.content.model:GetActorByTag("unwrapped")
+    if actor then
+        actor:SetModelByCreatureDisplayID(pet.displayID)
+    end
 
   --collected
-    f.tab1.content.model:SetDisplayInfo(pet.displayID)
     local collectedCount = 0
     if (pet.collected) then
         collectedCount = #pet.collected
@@ -457,7 +490,7 @@ local function UpdateWindow(pet, locationIdx)
             local breedName = AcquireLabelFont(f.tab1.content)
             breedName:SetText(breed)
             if (breedIdx == 1) then
-                breedName:SetPoint("TOPRIGHT", f.tab1.content.possibleBreedsLbl, "BOTTOMLEFT", 40, -30)
+                breedName:SetPoint("TOPRIGHT", f.tab1.content.possibleBreedsLbl, "BOTTOMLEFT", 40, -31)
             else
                 breedName:SetPoint("TOPRIGHT", f.tab1.content.possibleBreedsLbl, "BOTTOMLEFT", 40, breedIdx * -20 - 10)
             end
@@ -620,7 +653,6 @@ local function UpdateWindow(pet, locationIdx)
                     end
                 end
             end
-            print ((line+1) * locationLbl:GetHeight())
             locationsFrame:SetSize(DISPLAY.PetCard.winWidth, (line+1) * locationLbl:GetHeight())
             locationsFrame:Show()
         end
