@@ -92,6 +92,7 @@ function DISPLAY:AcquireExpansionFrame(parent, name, headerDescription)
         expansionFrame = CreateFrame("Frame", nil, parent)
         parent.expansionFramesPool[name] = expansionFrame
     end
+    expansionFrame:ClearAllPoints()
 
     if (not expansionFrame.header) then
         expansionFrame.collapseButton = CreateFrame("Button", nil, expansionFrame)
@@ -112,6 +113,7 @@ function DISPLAY:AcquireExpansionFrame(parent, name, headerDescription)
     end
 
     expansionFrame.childrenHostFrame:SetSize(1,1)
+    expansionFrame.movingAnchor:ClearAllPoints()
     expansionFrame.movingAnchor:SetPoint("TOPLEFT", expansionFrame, "BOTTOMLEFT")
 
     expansionFrame:Show()

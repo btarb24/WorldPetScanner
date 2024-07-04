@@ -55,7 +55,7 @@ local function ResetTabContent()
         PAMainFrameTab1.content.scrollFrame = CreateFrame("ScrollFrame", nil, PAMainFrameTab1.content, "UIPanelScrollFrameTemplate")
         PAMainFrameTab1.content.scrollFrame.expansionFramesPool = {}
         PAMainFrameTab1.content.scrollFrame:SetClipsChildren(true)
-        PAMainFrameTab1.content.scrollFrame:SetPoint("TOPLEFT", PAMainFrameTab1.content, "TOPLEFT", 10, -55);
+        PAMainFrameTab1.content.scrollFrame:SetPoint("TOPLEFT", PAMainFrameTab1.content, "TOPLEFT", 10, -45);
         PAMainFrameTab1.content.scrollFrame:SetPoint("BOTTOMRIGHT", PAMainFrameTab1.content, "BOTTOMRIGHT",0,4);
         PAMainFrameTab1.content.scrollFrame.ScrollBar:ClearAllPoints();
         PAMainFrameTab1.content.scrollFrame.ScrollBar:SetPoint("TOPLEFT", PAMainFrameTab1.content.scrollFrame, "TOPRIGHT", -12, -18);
@@ -142,6 +142,60 @@ function DISPLAY.TodaysEvents:Update()
     line:SetEndPoint("TOPRIGHT", -10, -40)
     line:SetThickness(1)
     
+    if not scrollFrame.child.tradingPostBox then
+        scrollFrame.child.tradingPostBox = CreateFrame("Frame", nil, scrollFrame.child, "ThinGoldEdgeTemplate")
+        scrollFrame.child.tradingPostBox:SetPoint("TOPLEFT", scrollFrame.child, "TOPLEFT", 0, 0)
+        scrollFrame.child.tradingPostBox:SetWidth(675)
+        scrollFrame.child.tradingPostBox:SetAlpha(.4)
+        scrollFrame.child.tradingPostOverlay = CreateFrame("Frame", nil, scrollFrame.child)
+        scrollFrame.child.tradingPostOverlay:SetPoint("TOPLEFT", scrollFrame.child, "TOPLEFT", 0, 0)
+        scrollFrame.child.tradingPostOverlay:SetWidth(scrollFrame.child.tradingPostBox:GetWidth())
+        scrollFrame.child.tradingPostOverlay:Raise()
+        scrollFrame.child.tradingPostOverlay:SetHeight(30)
+        scrollFrame.child.tradingPostBoxHeader = scrollFrame.child.tradingPostOverlay:CreateFontString(nil, "OVERLAY", "GameFontNormal")
+        scrollFrame.child.tradingPostBoxHeader:SetText("Trading Post: ")
+        scrollFrame.child.tradingPostBoxHeader:SetPoint("TOPLEFT", scrollFrame.child.tradingPostOverlay, "TOPLEFT", 12, -10)
+    end    
+    if not UTILITIES:IsEmpty(DATA.tradingPost) then
+        scrollFrame.child.tradingPostBox:SetHeight(30)
+        scrollFrame.child.tradingPostBox:Show()
+        local tradingPostPetAnchor = scrollFrame.child.tradingPostBoxHeader
+        for _, tradingPostPet in pairs(DATA.tradingPost) do
+            local tradingPostPetDisplay = scrollFrame.child.tradingPostOverlay:CreateFontString(nil, "OVERLAY", "GameFontHighlight")
+            if (tradingPostPet.tier) then
+                tradingPostPetDisplay:SetFormattedText("[%s] |cffffffFF(tier %d reward)|r", tradingPostPet.name, tradingPostPet.tier)
+            else
+                tradingPostPetDisplay:SetFormattedText("[%s] |cffffffFF(%d|T4696085:14:14:0:0:32:32:2:30:2:30|t)|r", tradingPostPet.name, tradingPostPet.price)
+            end
+            tradingPostPetDisplay.pet = tradingPostPet.pet
+            tradingPostPetDisplay:SetTextColor(.4, .74, 1)
+            tradingPostPetDisplay:SetPoint("TOPLEFT", tradingPostPetAnchor, "TOPRIGHT", 20, 0);
+            if tradingPostPet.pet then
+                tradingPostPetDisplay:SetScript("OnEnter",
+                    function(self)
+                        self:SetTextColor(.5, .85, 1)
+                        self:SetShadowColor(1,1,1, .4)
+                    end
+                )
+                tradingPostPetDisplay:SetScript("OnLeave",
+                    function(self)
+                        self:SetTextColor(.4, .74, 1)
+                        self:SetShadowColor(0,0,0,0)
+                    end
+                )
+                tradingPostPetDisplay:SetScript("OnMouseDown",
+                    function(self)
+                        DISPLAY.PetCard:Show(self.pet)
+                    end
+                )
+            end
+            tradingPostPetAnchor = tradingPostPetDisplay
+        end
+    else
+        scrollFrame.child.tradingPostBox:SetHeight(0)
+        scrollFrame.child.tradingPostBox:Hide()
+    end
+
     local sumHeight = 0
     local widest = 0
     local currentExpansionID, currentZoneID
@@ -155,7 +209,8 @@ function DISPLAY.TodaysEvents:Update()
         if (priorExpansionFrame) then
             expansionFrame:SetPoint("TOPLEFT", priorExpansionFrame.movingAnchor, "BOTTOMLEFT", 0, -DISPLAY.Constants.lineHeight -DISPLAY.Constants.lineSeparation)
         else
-            expansionFrame:SetPoint("TOPLEFT", scrollFrame.child, "TOPLEFT", expansionIndent, 0)
+            expansionFrame:SetPoint("TOP", scrollFrame.child.tradingPostBox, "BOTTOM", 0, -5)
+            expansionFrame:SetPoint("LEFT", scrollFrame.child.tradingPostBox, "LEFT", expansionIndent, 0)
         end
         priorExpansionFrame = expansionFrame
                         

@@ -208,12 +208,89 @@ local function PerformRetry()
         end
     end
 
-    if (UTILITIES:IsEmpty(DATA.questsToRetry)) then
+    if not UTILITIES:IsEmpty(DATA.tradingPostRetry) then
+        for num, tradingPostPet in ipairs(DATA.tradingPostRetry) do
+            if tradingPostPet.confirmedPet ~= true then
+                local itemType = select(7, GetItemInfo(tradingPostPet.itemID))
+                if itemType then
+                    if itemType == "Companion Pets" then
+                        tradingPostPet.confirmedPet = true
+                    else
+                        --remove since it's not a pet
+                        DATA.tradingPostRetry[num] = nil
+                    end
+                end
+            end
+
+            if (tradingPostPet.confirmedPet) then
+                local name, icon, petType, creatureID, sourceText, description, isWild, canBattle, tradeable, unique, obtainable, displayID, speciesID = C_PetJournal.GetPetInfoByItemID(tradingPostPet.itemID)
+                if speciesID then
+                    tradingPostPet.speciesID = speciesID
+                    tradingPostPet.name = name
+                    tradingPostPet.pet = PETS.all[speciesID]
+                    table.insert(DATA.tradingPost, tradingPostPet)
+                    DATA.tradingPostRetry[num] = nil
+                end
+            end
+        end
+    end
+
+    if (UTILITIES:IsEmpty(DATA.questsToRetry) and UTILITIES:IsEmpty(DATA.tradingPostRetry)) then
         DATA.sortedTasks = UTILITIES:SortTaskList(DATA.taskList)
         DATA.groupedTasks = UTILITIES:GroupTasks(DATA.sortedTasks)
         DISPLAY.TodaysEvents:HideLoading()
     else
         retryTimer = PETC:ScheduleTimer(PerformRetry, 1)
+    end
+end
+
+local function GetTradingPostPets()
+    local items = C_PerksProgram.GetAvailableVendorItemIDs()
+    for _, itemID in pairs(items) do
+        local itemData = C_PerksProgram.GetVendorItemInfo(itemID)
+        if (itemData.perksVendorCategoryID == 3 and not itemData.purchased) then
+            local unknownPet = PETS.all[itemData.speciesID] == nil
+            if (unknownPet or not PETS.all[itemData.speciesID].collected) then
+               local tradingPostPet = {
+                speciesID = itemData.speciesID,
+                name = itemData.Name,
+                price = itemData.price,
+                timeRemaining = itemData.timeRemaining,
+                pet = PETS.all[itemData.speciesID]
+               }
+
+               local speciesName, speciesIcon, petType, companionID, tooltipSource, tooltipDescription, isWild, canBattle, isTradeable, isUnique, obtainable, creatureDisplayID = C_PetJournal.GetPetInfoBySpeciesID(itemData.speciesID)
+               tradingPostPet.name = speciesName
+               table.insert(DATA.tradingPost, tradingPostPet)
+            end
+        end
+    end
+
+    local autoPerks = C_PerksActivities.GetPerksActivitiesInfo()
+    for tier, tierInfo in ipairs(autoPerks.thresholds) do
+        if tierInfo.itemReward then
+            local itemType = select(7, GetItemInfo(tierInfo.itemReward))
+            local tradingPostPet = {
+                tier = tier,
+                timeRemaining = autoPerks.secondsRemaining,
+                itemID = tierInfo.itemReward
+            }
+            if itemType == "Companion Pets" then
+                tradingPostPet.confirmedPet = true
+                local name, icon, petType, creatureID, sourceText, description, isWild, canBattle, tradeable, unique, obtainable, displayID, speciesID = C_PetJournal.GetPetInfoByItemID(tierInfo.itemReward)
+                if speciesID then
+                    tradingPostPet.speciesID = speciesID
+                    tradingPostPet.name = name
+                    tradingPostPet.pet = PETS.all[speciesID]
+                    table.insert(DATA.tradingPost, tradingPostPet)
+                else
+                    table.insert(DATA.tradingPostRetry, tradingPostPet)
+                end
+            end
+            if itemType == nil then
+                table.insert(DATA.tradingPostRetry, tradingPostPet)
+            end
+        end
     end
 end
 
@@ -236,6 +313,8 @@ function TASKFINDER:RefreshTodaysEvents(mode)
 	DATA.blueStoneTotal = 0;
 	DATA.hasTrainingStones = false
 	DATA.trainingStoneTotals = {}
+    DATA.tradingPost = {}
+    DATA.tradingPostRetry = {}
 	for expansionID in pairs(ZONES.list) do
 		for mapID, mapDetails in pairs(ZONES.list[expansionID]) do
 			if mapDetails.scanWorldQuests then
@@ -279,6 +358,8 @@ function TASKFINDER:RefreshTodaysEvents(mode)
             ProcessPeriodicRotationTrigger(mode, taskData)
         end
     end
+
+    GetTradingPostPets()
 
     --always trigger the timer, this way we see the spinner for at least 1 second, otherwise feels like it ignored your click
     retryTimer = PETC:ScheduleTimer(PerformRetry, 1)
