@@ -1,5 +1,6 @@
 local PETC = PetCollector
 local DISPLAY = PETC.DISPLAY
+local DISPLAY_UTIL = DISPLAY.Util
 local UTILITIES = PETC.UTILITIES
 local DATA = PETC.DATA
 local ZONES = PETC.ZONES
@@ -14,12 +15,12 @@ local function DetermineTab1Width(fontString)
 
     for _, expansion in pairs(DATA.groupedTasks) do
         fontString:SetText(EXPANSIONS:GetName(expansion.ID))
-        maxZoneWidth = math.max(maxZoneWidth, fontString:GetStringWidth() + DISPLAY.Constants.collapseButtonWidth + DISPLAY.Constants.marginAfterButton)
+        maxZoneWidth = math.max(maxZoneWidth, fontString:GetStringWidth() + DISPLAY_UTIL.Constants.collapseButtonWidth + DISPLAY.Constants.marginAfterButton)
         
 
         for _, zone in pairs(expansion.zones) do            
             fontString:SetText(ZONES:GetName(expansion.ID, zone.ID))
-            maxZoneWidth = math.max(maxZoneWidth, fontString:GetStringWidth() + DISPLAY.Constants.collapseButtonWidth + DISPLAY.Constants.marginAfterButton + DISPLAY.Constants.zoneIndent)
+            maxZoneWidth = math.max(maxZoneWidth, fontString:GetStringWidth() + DISPLAY_UTIL.Constants.collapseButtonWidth + DISPLAY.Constants.marginAfterButton + DISPLAY.Constants.zoneIndent)
 
             for _, task in pairs(zone.tasks) do
                 fontString:SetText(UTILITIES:formatTime(task:Time()))
@@ -44,16 +45,9 @@ end
 
 local function ResetTabContent()
     if (PAMainFrameTab1.content.scrollFrame) then
-        for _,expansionFrame in pairs(PAMainFrameTab1.content.scrollFrame.expansionFramesPool) do
-            expansionFrame:Hide()
-            expansionFrame:ClearAllPoints()
-            expansionFrame.movingAnchor:ClearAllPoints()
-            expansionFrame.childrenHostFrame.standardTextPool:ReleaseAll()
-            expansionFrame.childrenHostFrame.smallerTextPool:ReleaseAll()
-        end
+        DISPLAY_UTIL:Reset(PAMainFrameTab1)
     else
         PAMainFrameTab1.content.scrollFrame = CreateFrame("ScrollFrame", nil, PAMainFrameTab1.content, "UIPanelScrollFrameTemplate")
-        PAMainFrameTab1.content.scrollFrame.expansionFramesPool = {}
         PAMainFrameTab1.content.scrollFrame:SetClipsChildren(true)
         PAMainFrameTab1.content.scrollFrame:SetPoint("TOPLEFT", PAMainFrameTab1.content, "TOPLEFT", 10, -45);
         PAMainFrameTab1.content.scrollFrame:SetPoint("BOTTOMRIGHT", PAMainFrameTab1.content, "BOTTOMRIGHT",0,4);
@@ -77,26 +71,6 @@ function DISPLAY.TodaysEvents:HideLoading()
     DISPLAY.TodaysEvents:Update()
 end
 
-local function AcquireStandardText(expansionFrame)
-    local text = expansionFrame.childrenHostFrame.standardTextPool:Acquire()
-    text:SetScript("OnEnter", nil)
-    text:SetScript("OnLeave", nil)
-    text:Show()
-    return text
-end
-
-local function AcquireSmallerText(expansionFrame)
-    local text = expansionFrame.childrenHostFrame.smallerTextPool:Acquire()
-    if (not text:GetText()) then
-        local fontFile, fontHeight, fontFlags = text:GetFont()
-        text:SetFont(fontFile, fontHeight-2, fontFlags)
-    end
-    text:SetScript("OnEnter", nil)
-    text:SetScript("OnLeave", nil)
-    text:Show()
-    return text
-end
-
 function DISPLAY.TodaysEvents:Update()
     ResetTabContent()
     local tab1Content = PAMainFrameTab1.content
@@ -111,7 +85,7 @@ function DISPLAY.TodaysEvents:Update()
     local totalWidth, maxZoneWidth, maxTimeWidth, maxChallengeWidth, maxRewardLinkWidth = DetermineTab1Width(tab1Content:CreateFontString(nil, "OVERLAY", "GameFontHighlight"))
     tab1Content.contentWidth = totalWidth + 100 --arbitrary
 
-    --ITEM TOTALS AT TOP
+   --ITEM TOTALS AT TOP
     
     local charms = DATA.charmTotal.."x".."|T"..PETC.Textures[PETC.PetCharm]..":26:26:0:0:32:32:2:30:2:30|t"        
     local bandages  = DATA.bandageTotal.."x".."|T"..PETC.Textures[PETC.Bandage]..":26:26:0:0:32:32:2:30:2:30|t"
@@ -135,13 +109,14 @@ function DISPLAY.TodaysEvents:Update()
     end
     PAMainFrameTab1.content.totals1:SetText(header)
 
-    --SEPARATOR LINE
+   --SEPARATOR LINE
     local line = PAMainFrameTab1.content:CreateLine()
     line:SetColorTexture(.3, .3, 0)
     line:SetStartPoint("TOPLEFT", 10, -40)
     line:SetEndPoint("TOPRIGHT", -10, -40)
     line:SetThickness(1)
     
+   --TRADING POST
     if not scrollFrame.child.tradingPostBox then
         scrollFrame.child.tradingPostBox = CreateFrame("Frame", nil, scrollFrame.child, "ThinGoldEdgeTemplate")
         scrollFrame.child.tradingPostBox:SetPoint("TOPLEFT", scrollFrame.child, "TOPLEFT", 0, 0)
@@ -152,43 +127,24 @@ function DISPLAY.TodaysEvents:Update()
         scrollFrame.child.tradingPostOverlay:SetWidth(scrollFrame.child.tradingPostBox:GetWidth())
         scrollFrame.child.tradingPostOverlay:Raise()
         scrollFrame.child.tradingPostOverlay:SetHeight(30)
-        scrollFrame.child.tradingPostBoxHeader = scrollFrame.child.tradingPostOverlay:CreateFontString(nil, "OVERLAY", "GameFontNormal")
-        scrollFrame.child.tradingPostBoxHeader:SetText("Trading Post: ")
-        scrollFrame.child.tradingPostBoxHeader:SetPoint("TOPLEFT", scrollFrame.child.tradingPostOverlay, "TOPLEFT", 12, -10)
-    end    
+    end
+    
     if not UTILITIES:IsEmpty(DATA.tradingPost) then
         scrollFrame.child.tradingPostBox:SetHeight(30)
         scrollFrame.child.tradingPostBox:Show()
+        scrollFrame.child.tradingPostBoxHeader = DISPLAY_UTIL:AcquireLabelFont(PAMainFrameTab1, scrollFrame.child.tradingPostOverlay)
+        scrollFrame.child.tradingPostBoxHeader:SetText("Trading Post: ")
+        scrollFrame.child.tradingPostBoxHeader:SetPoint("TOPLEFT", scrollFrame.child.tradingPostOverlay, "TOPLEFT", 12, -10)
         local tradingPostPetAnchor = scrollFrame.child.tradingPostBoxHeader
         for _, tradingPostPet in pairs(DATA.tradingPost) do
-            local tradingPostPetDisplay = scrollFrame.child.tradingPostOverlay:CreateFontString(nil, "OVERLAY", "GameFontHighlight")
+            local tradingPostPetDisplay = DISPLAY_UTIL:AcquirePetLinkFont(PAMainFrameTab1, scrollFrame.child.tradingPostOverlay, tradingPostPet.pet)
             if (tradingPostPet.tier) then
                 tradingPostPetDisplay:SetFormattedText("[%s] |cffffffFF(tier %d reward)|r", tradingPostPet.name, tradingPostPet.tier)
             else
                 tradingPostPetDisplay:SetFormattedText("[%s] |cffffffFF(%d|T4696085:14:14:0:0:32:32:2:30:2:30|t)|r", tradingPostPet.name, tradingPostPet.price)
             end
             tradingPostPetDisplay.pet = tradingPostPet.pet
-            tradingPostPetDisplay:SetTextColor(.4, .74, 1)
             tradingPostPetDisplay:SetPoint("TOPLEFT", tradingPostPetAnchor, "TOPRIGHT", 20, 0);
-            if tradingPostPet.pet then
-                tradingPostPetDisplay:SetScript("OnEnter",
-                    function(self)
-                        self:SetTextColor(.5, .85, 1)
-                        self:SetShadowColor(1,1,1, .4)
-                    end
-                )
-                tradingPostPetDisplay:SetScript("OnLeave",
-                    function(self)
-                        self:SetTextColor(.4, .74, 1)
-                        self:SetShadowColor(0,0,0,0)
-                    end
-                )
-                tradingPostPetDisplay:SetScript("OnMouseDown",
-                    function(self)
-                        DISPLAY.PetCard:Show(self.pet)
-                    end
-                )
-            end
             tradingPostPetAnchor = tradingPostPetDisplay
         end
     else
@@ -196,6 +152,7 @@ function DISPLAY.TodaysEvents:Update()
         scrollFrame.child.tradingPostBox:Hide()
     end
 
+   --EXPANSION BOX
     local sumHeight = 0
     local widest = 0
     local currentExpansionID, currentZoneID
@@ -204,8 +161,8 @@ function DISPLAY.TodaysEvents:Update()
     for expansionIdx, expansion in ipairs(DATA.groupedTasks) do
         local expansionHeight = 0
         local expansionLargestWidth = 0
-        --EXPANSION HEADER
-        local expansionFrame = DISPLAY:AcquireExpansionFrame(scrollFrame, EXPANSIONS:GetName(expansion.ID))
+       --EXPANSION HEADER
+        local expansionFrame = DISPLAY_UTIL:AcquireExpansionFrame(PAMainFrameTab1, scrollFrame, EXPANSIONS:GetName(expansion.ID))
         if (priorExpansionFrame) then
             expansionFrame:SetPoint("TOPLEFT", priorExpansionFrame.movingAnchor, "BOTTOMLEFT", 0, -DISPLAY.Constants.lineHeight -DISPLAY.Constants.lineSeparation)
         else
@@ -215,22 +172,22 @@ function DISPLAY.TodaysEvents:Update()
         priorExpansionFrame = expansionFrame
                         
         local zonesFrame = expansionFrame.childrenHostFrame
-        --ZONE HEADER
+       --ZONE HEADER
         for zoneIdx, zone in ipairs(expansion.zones) do
             local zoneWidth = 0
             local zoneHeight = 0
-            local zoneHeader = AcquireStandardText(expansionFrame);
+            local zoneHeader = DISPLAY_UTIL:AcquireHighlightFont(PAMainFrameTab1, expansionFrame.childrenHostFrame);
             zoneHeader:SetText(ZONES:GetName(expansion.ID, zone.ID))
             zoneHeader:SetPoint("TOPLEFT", zonesFrame, "TOPLEFT", 0, -expansionHeight -DISPLAY.Constants.lineSeparation);
             
             for taskIdx, task in ipairs(zone.tasks) do
                 --TASK TIME
-                local taskTime = AcquireStandardText(expansionFrame);
+                local taskTime = DISPLAY_UTIL:AcquireHighlightFont(PAMainFrameTab1, expansionFrame.childrenHostFrame);
                 taskTime:SetText(UTILITIES:formatTime(task:Time()))
                 taskTime:SetPoint("TOPRIGHT", zonesFrame, "TOPLEFT", maxZoneWidth + maxTimeWidth -DISPLAY.Constants.zoneIndent, -expansionHeight-zoneHeight -DISPLAY.Constants.lineSeparation);
 
                 --CHALLENGE
-                local challenge = AcquireStandardText(expansionFrame);
+                local challenge = DISPLAY_UTIL:AcquireHighlightFont(PAMainFrameTab1, expansionFrame.childrenHostFrame);
                 challenge:SetText(task.challenge:Display())
                 challenge:SetPoint("TOPLEFT", taskTime, "TOPRIGHT", DISPLAY.Constants.columnSeparation, 0);
                 if task.challenge:HasTooltip() then
@@ -258,10 +215,10 @@ function DISPLAY.TodaysEvents:Update()
                 --REWARD ICON                
                 if (task.iconReward) then
                     local iconIndent = PETC:GetIconIndent(task.iconReward.itemCategory)
-                    local iconReward = AcquireSmallerText(expansionFrame);                    
+                    local iconReward = DISPLAY_UTIL:AcquireSmallerHighlightFont(PAMainFrameTab1, expansionFrame.childrenHostFrame)                    
                     iconReward:SetText(task.iconReward:Display())
                     iconReward:SetPoint("TOPLEFT", taskTime, "TOPRIGHT", DISPLAY.Constants.columnSeparation +maxChallengeWidth +DISPLAY.Constants.columnSeparation +iconIndent, 0);   
-                    if task.iconReward:Link() then           
+                    if task.iconReward:Link() then
                         iconReward:SetScript("OnEnter",
                             function(self)
                                 GameTooltip:SetOwner(self, "ANCHOR_NONE")
@@ -283,7 +240,7 @@ function DISPLAY.TodaysEvents:Update()
                 --REWARD LINKS
                 local linkAnchor = nil
                 for rewardLinkIdx, reward in ipairs(task.nonIconRewards) do
-                    local iconLink = AcquireStandardText(expansionFrame);
+                    local iconLink = DISPLAY_UTIL:AcquireHighlightFont(PAMainFrameTab1, expansionFrame.childrenHostFrame)
                     iconLink:SetText(reward:Display())
                     if (linkAnchor) then
                         iconLink:SetPoint("TOPLEFT", linkAnchor, "TOPRIGHT", DISPLAY.Constants.columnSeparation, 0);   

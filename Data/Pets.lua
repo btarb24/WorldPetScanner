@@ -43,7 +43,7 @@ PETS.all = {
         speciesID=39,
         companionID=2671,
         displayID=7937,
-        petType="Mechanical",
+        petType=10,
         isWild=false,
         isTradeable=true,
         isUnique=false,
@@ -54,6 +54,12 @@ PETS.all = {
         profession="Engineering",
         possbileBreeds={"S/B"},
         baseStats={8.5, 7.5, 8},
+        acquisition = {
+            [1] = {"Crafting requires 75 Classic Engineering."},
+            [2] = {"Acquire %s from the auction house or by killing low level mobs in a wide variety of areas. Only a .1%% to .5%% drop chance.", "i4408"},
+            [3] = {"Craft a %s with 1x%s, 1x%s, 2x%s.", "i4401", "i4359", "i2840", "i774"},
+            [4] = {"Use the item to receive the pet."}
+        }
     }, 
     [40]={
         name="Bombay Cat",
@@ -25140,24 +25146,6 @@ PETS.all = {
         locations={{continent="Shadowlands", zone="Revendreth"}},
         possbileBreeds={"H/H"},
         baseStats={8.5, 8.25, 7.25},
-    }, 
-    [2968]={
-        name="Jawbone",
-        speciesID=2968,
-        companionID=173133,
-        displayID=47799,
-        petType="Water",
-        isWild=true,
-        isTradeable=true,
-        isUnique=false,
-        isPassive=false,
-        source="",
-        tooltip= "",
-        icon= "1339043",
-        covenant="Venthyr",
-        locations={{continent="Shadowlands", zone="Revendreth", mapID=1533, coords={{36.4,31.8},{36.6,31.8},}}},
-        possbileBreeds={"H/P"},
-        baseStats={15.5, 6.875, 4.25},
     }, 
     [3006]={
         name="Stoneskin Dredwing Pup",

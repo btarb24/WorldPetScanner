@@ -131,14 +131,16 @@ function PETC:Initialize()
 	TASKFINDER:RefreshTodaysEvents(mode)
 end
 
-PETC:RegisterChatCommand("tpa", "ChatCommand")
-PETC:RegisterChatCommand("pa", "ChatCommand")
+PETC:RegisterChatCommand("petcollector", "ChatCommand")
+PETC:RegisterChatCommand("pc", "ChatCommand")
 function PETC:ChatCommand(input)
 	local arg1 = string.lower(input)
 	if (arg1 == "petdata") then
 		DISPLAY.PetDataEntryHelper:Show()
-	else
+	elseif not input or input == "report" or mode == "test" then
 		self:Show(arg1)
+	elseif (tonumber(input))then
+		DISPLAY.PetCard:Show(PETS.all[tonumber(input)])
 	end
 end
 

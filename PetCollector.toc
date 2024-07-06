@@ -23,6 +23,8 @@ Data\Continents.lua
 
 Utilities.lua
 
+Display\DisplayUtil.lua
+Display\LinkDisplay.lua
 Display\PetCard.lua
 Display\ReportDisplay.lua
 Display\TodaysEvents.lua

@@ -13,8 +13,6 @@ DISPLAY.Constants = {
     expansionIndent = 20,
     columnSeparation = 10,
     marginAfterButton = 5,
-    collapseButtonWidth = 16,
-    collapseButtonHeight = 16,
     minWidth = 800,
     minHeight = 400
 }
@@ -29,27 +27,6 @@ local function Tab_OnClick(self)
     self.content:Show()
     PAMainFrame:SetWidth(self.content.contentWidth)
     PAMainFrame.SelectedTab = self
-end
-
-local function CollapseButton_OnClick(self)
-    self.collapsed = not self.collapsed
-    local expansionFrame = self:GetParent()
-    local heightAdjustment = expansionFrame.childrenHostFrame:GetHeight()
-    local currentHeight = PAMainFrameTab1.content.scrollFrame.child:GetHeight()
-    if (self.collapsed) then
-        self:SetNormalTexture("Interface\\Buttons\\UI-PlusButton-UP");
-        expansionFrame.childrenHostFrame:Hide()
-        expansionFrame.movingAnchor:ClearAllPoints()
-        expansionFrame.movingAnchor:SetPoint("TOPLEFT", self, "BOTTOMLEFT")
-        
-        PAMainFrameTab1.content.scrollFrame.child:SetHeight(currentHeight-heightAdjustment)
-    else
-        self:SetNormalTexture("Interface\\Buttons\\UI-MinusButton-UP");
-        expansionFrame.childrenHostFrame:Show()
-        expansionFrame.movingAnchor:ClearAllPoints()
-        expansionFrame.movingAnchor:SetPoint("TOPLEFT", expansionFrame, "BOTTOMLEFT")
-        PAMainFrameTab1.content.scrollFrame.child:SetHeight(currentHeight+heightAdjustment)
-    end
 end
 
 local function ScrollFrame_OnMouseWheel(self, delta)
@@ -70,54 +47,6 @@ local function UpdateHostWindow()
     else
         PAMainFrame.TitleNote:SetText("")
     end
-end
-
-function DISPLAY:BuildCollapseButton(collapseButton)
-    collapseButton:SetSize(DISPLAY.Constants.collapseButtonWidth, DISPLAY.Constants.collapseButtonHeight)
-    collapseButton:SetHitRectInsets(1, -4, -2, -2)
-    collapseButton:SetNormalTexture("Interface\\Buttons\\UI-MinusButton-UP")
-    collapseButton:GetNormalTexture():SetSize(DISPLAY.Constants.collapseButtonWidth, DISPLAY.Constants.collapseButtonHeight)
-    collapseButton:GetNormalTexture():SetPoint("LEFT", 3, 0)
-    collapseButton:SetHighlightTexture("Interface\\Buttons\\UI-PlusButton-Hilight")
-    collapseButton:GetHighlightTexture():SetSize(DISPLAY.Constants.collapseButtonWidth, DISPLAY.Constants.collapseButtonHeight)
-    collapseButton:GetHighlightTexture():SetPoint("LEFT", 3, 0)
-    collapseButton.collapsed = false
-    collapseButton:SetScript("OnClick", CollapseButton_OnClick)
-    return collapseButton
-end
-
-function DISPLAY:AcquireExpansionFrame(parent, name, headerDescription)
-    local expansionFrame = parent.expansionFramesPool[name]
-    if (not expansionFrame) then
-        expansionFrame = CreateFrame("Frame", nil, parent)
-        parent.expansionFramesPool[name] = expansionFrame
-    end
-    expansionFrame:ClearAllPoints()
-
-    if (not expansionFrame.header) then
-        expansionFrame.collapseButton = CreateFrame("Button", nil, expansionFrame)
-        expansionFrame.collapseButton:SetPoint("TOPLEFT", expansionFrame, "TOPLEFT", 0, 0)
-        DISPLAY:BuildCollapseButton(expansionFrame.collapseButton)
-
-        expansionFrame.header = expansionFrame:CreateFontString(nil, "OVERLAY", "GameFontHighlight")
-        expansionFrame.header:SetText(string.format("|cff33ff33%s|r", name))
-        expansionFrame.header:SetPoint("TOPLEFT", expansionFrame.collapseButton, "TOPRIGHT", DISPLAY.Constants.marginAfterButton, -DISPLAY.Constants.vAlignAdjustmentAfterButton);
-        
-        expansionFrame.childrenHostFrame = CreateFrame("Frame", nil, expansionFrame)
-        expansionFrame.childrenHostFrame:SetPoint("TOPLEFT", expansionFrame.header, "BOTTOMLEFT", DISPLAY.Constants.zoneIndent,0);
-        expansionFrame.childrenHostFrame.standardTextPool = CreateFontStringPool(expansionFrame.childrenHostFrame, nil, nil, "GameFontHighlight")
-        expansionFrame.childrenHostFrame.smallerTextPool = CreateFontStringPool(expansionFrame.childrenHostFrame, nil, nil, "GameFontHighlight")
-        
-        expansionFrame.movingAnchor = CreateFrame("Frame", nil, expansionFrame)
-        expansionFrame.movingAnchor:SetSize(1, 1)
-    end
-
-    expansionFrame.childrenHostFrame:SetSize(1,1)
-    expansionFrame.movingAnchor:ClearAllPoints()
-    expansionFrame.movingAnchor:SetPoint("TOPLEFT", expansionFrame, "BOTTOMLEFT")
-
-    expansionFrame:Show()
-    return expansionFrame
 end
 
 local function CreateTab(idNum, name, tabButtonWidth)
@@ -152,7 +81,6 @@ function DISPLAY:CreateHostWindow()
 
     local mainFrame = CreateFrame("Frame", "PAMainFrame", UIParent, "ButtonFrameBaseTemplate")
     mainFrame:Hide()
-    mainFrame.collapseButtonPool = CreateFramePool("Button")
     mainFrame:SetFrameStrata("HIGH")
     mainFrame:Lower()
     mainFrame:SetResizable(true)
@@ -164,15 +92,15 @@ function DISPLAY:CreateHostWindow()
 	mainFrame:SetScript("OnMouseWheel", ScrollFrame_OnMouseWheel);
     ButtonFrameTemplate_HideButtonBar(PAMainFrame) -- maybe show the button bar with some toggle options in it??
     --only enable drag on the titlebar
-    mainFrame.TitleContainer:GetParent():EnableMouse(true)
-    mainFrame.TitleContainer:GetParent():RegisterForDrag("LeftButton")
-    mainFrame.TitleContainer:GetParent():SetScript("OnDragStart",
+    mainFrame.TitleContainer:EnableMouse(true)
+    mainFrame.TitleContainer:RegisterForDrag("LeftButton")
+    mainFrame.TitleContainer:SetScript("OnDragStart",
         function(self)
             PAMainFrame.moving = true
             PAMainFrame:StartMoving()
         end
     )
-    mainFrame.TitleContainer:GetParent():SetScript("OnDragStop",
+    mainFrame.TitleContainer:SetScript("OnDragStop",
         function(self)
             PAMainFrame.moving = nil
             PAMainFrame:StopMovingOrSizing()
@@ -223,7 +151,7 @@ function DISPLAY:CreateHostWindow()
         end
     );
 
-    local tab2 = CreateTab(2, "Capturable")
+    local tab2 = CreateTab(2, "Wild")
     tab2:SetPoint("TOPLEFT", tab1, "TOPRIGHT", 3, 0)
 	DISPLAY.Capturable:Update()
     local tab3 = CreateTab(3, "Loot drops")

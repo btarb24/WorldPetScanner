@@ -20,7 +20,7 @@ namespace PetCollectorUtils
     public string currency;
     public string iconPath;
     public string tooltipDescription;
-    public string petType;
+    public int petType;
     public string eventName;
     public string missionSource;
     public string note;
@@ -45,6 +45,29 @@ namespace PetCollectorUtils
     public double[] baseStats;
     public Entity[] items;
 
+    private int MapPetType(string typeStr){
+      if (typeStr == "Humanoid")
+        return 1;
+      else if (typeStr == "Dragon")
+        return 2;
+      else if (typeStr == "Flying")
+        return 3;
+      else if (typeStr == "Undead")
+        return 4;
+      else if (typeStr == "Critter")
+        return 5;
+      else if (typeStr == "Magical")
+        return 6;
+      else if (typeStr == "Elemental")
+        return 7;
+      else if (typeStr == "Beast")
+        return 8;
+      else if (typeStr == "Water")
+        return 9;
+      else if (typeStr == "Mechanical")
+        return 10;
+    }
+
     public Pet(LuaTable table)
     {
       foreach(var key in table.Keys)
@@ -65,7 +88,7 @@ namespace PetCollectorUtils
             iconPath = value.ToString();
             break;
           case "petType":
-            petType = value.ToString();
+            petType = MapPetType(value.ToString());
             break;
           case "tooltipDescription":
             tooltipDescription = value.ToString().Replace("\"", "\\\"").Replace("\n", "\\n");
@@ -178,7 +201,7 @@ namespace PetCollectorUtils
       sb.AppendLine($"        speciesID={speciesID},");
       sb.AppendLine($"        companionID={companionID},");
       sb.AppendLine($"        displayID={displayID},");
-      sb.AppendLine($"        petType=\"{petType}\",");
+      sb.AppendLine($"        petType={petType},");
       sb.AppendLine($"        isWild={(isWild ? "true" : "false")},");
       sb.AppendLine($"        isTradeable={(isTradeable ? "true" : "false")},");
       sb.AppendLine($"        isUnique={(isUnique ? "true" : "false")},");

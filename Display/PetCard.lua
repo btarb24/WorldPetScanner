@@ -1,6 +1,7 @@
 ---@class PetCollector
 local PETC = PetCollector
 local DISPLAY = PETC.DISPLAY
+local DISPLAY_UTIL = DISPLAY.Util
 local UTILITIES = PETC.UTILITIES
 local PETS = PETC.PETS
 
@@ -38,40 +39,6 @@ local function AcquireMapPinTexture(parent)
 
     local t = parent.mapPinPool:Acquire()
     t:Show()
-    return t
-end
-local function AcquireLabelFont(parent)    
-    if (not parent.labelFontPool) then
-        parent.labelFontPool = CreateFontStringPool(parent, "OVERLAY", nil, "GameFontNormal")
-        table.insert(PAPetCard.pools, parent.labelFontPool)
-    end
-
-    local t = parent.labelFontPool:Acquire()
-    t:Show()
-    return t
-end
-local function AcquireMultiValueFont(parent)    
-    if (not parent.multiValueFontPool) then
-        parent.multiValueFontPool = CreateFontStringPool(parent, "OVERLAY", nil, "GameFontHighlight")
-        table.insert(PAPetCard.pools, parent.multiValueFontPool)
-    end
-
-    local t = parent.multiValueFontPool:Acquire()
-    t:SetTextColor(.7, .7, .7)
-    t:SetScript("OnEnter", nil)
-    t:SetScript("OnLeave", nil)
-    t:SetScript("OnMouseDown", nil)
-    t:Show()    
-    return t
-end
-local function AcquireValueFont(parent)    
-    if (not parent.valueFontPool) then
-        parent.valueFontPool = CreateFontStringPool(parent, "OVERLAY", nil, "GameFontHighlight")
-        table.insert(PAPetCard.pools, parent.valueFontPool)
-    end
-
-    local t = parent.valueFontPool:Acquire()
-    t:Show()    
     return t
 end
 
@@ -370,12 +337,9 @@ local function CreateWindow()
     tab1.content.ability6Border:SetPoint("TOPLEFT", tab1.content.abilitiesCol3, "TOPLEFT", 8, -57)
     tab1.content.ability6Border:SetSize(41,40)
 
---PetJournal_GetPetAbilityHyperlink(self.abilityID, self.petID)
---PetJournal_ShowAbilityTooltip(self, self.abilityID, self.speciesID, self.petID, self.additionalText);
---PetJournal_HideAbilityTooltip(self);
     tab2.content.mapFrame = CreateFrame("Frame", nil, tab2.content)
     tab2.content.mapFrame:SetSize(350, 240)
-    tab2.content.mapFrame:SetPoint("TOPLEFT",20,-40)
+    tab2.content.mapFrame:SetPoint("TOPLEFT",20,-22)
     
     tab2.content.mapLbl = tab2.content:CreateFontString(nil, "ARTWORK", "GameFontHighlight")
     tab2.content.mapLbl:SetPoint("BOTTOM", tab2.content.mapFrame, "TOP", 0, 0)
@@ -385,7 +349,6 @@ local function CreateWindow()
     tab2.content.locationsFrame:SetPoint("TOPLEFT", tab2.content.mapFrame, "BOTTOMLEFT")
     
     tab2.content.scrollFrame = CreateFrame("ScrollFrame", nil, tab2.content, "UIPanelScrollFrameTemplate")
-    tab2.content.scrollFrame.expansionFramesPool = {}
     tab2.content.scrollFrame:SetClipsChildren(true)
     tab2.content.scrollFrame:SetPoint("TOPLEFT", tab2.content.locationsFrame, "BOTTOMLEFT", 0, -10);
     tab2.content.scrollFrame:SetPoint("BOTTOMRIGHT", tab2.content, "BOTTOMRIGHT",0,4);
@@ -394,9 +357,34 @@ local function CreateWindow()
     tab2.content.scrollFrame.ScrollBar:SetPoint("BOTTOMRIGHT", tab2.content.scrollFrame, "BOTTOMRIGHT", 0, 24);
     tab2.content.scrollFrame.child = CreateFrame("Frame", nil, tab2.content.scrollFrame)
     tab2.content.scrollFrame:SetScrollChild(tab2.content.scrollFrame.child)
+
+    tab2.content.sourceTypeLbl = tab2.content.scrollFrame:CreateFontString(nil, "ARTWORK", "GameFontNormal")
+    tab2.content.sourceTypeLbl:SetPoint("TOPLEFT", tab2.content.scrollFrame, "TOPLEFT")
+    tab2.content.sourceTypeLbl:SetText("SourceType:")
+
+    tab2.content.sourceTypeVal = tab2.content.scrollFrame:CreateFontString(nil, "ARTWORK", "GameFontHighlight")
+    tab2.content.sourceTypeVal:SetPoint("TOPLEFT", tab2.content.sourceTypeLbl, "TOPRIGHT", 10, 0)
+
+    tab2.content.scrollFrame:SetHyperlinksEnabled(true)
+    tab2.content.scrollFrame:SetScript("OnHyperlinkClick", ChatFrame_OnHyperlinkShow)
+    tab2.content.scrollFrame:SetScript("OnHyperlinkEnter", function(frame, link, text)
+        GameTooltip:SetOwner(frame, "ANCHOR_NONE")
+        GameTooltip:ClearLines()
+        GameTooltip:SetPoint("BOTTOM",frame,"TOP",0,6)
+
+        GameTooltip:SetHyperlink(link)
+        GameTooltip:Show()
+    end)
+    tab2.content.scrollFrame:SetScript("OnHyperlinkLeave", function()
+        GameTooltip_HideResetCursor()
+    end)
 end
 
 local function GetFirstMapWithCoords(pet)
+    if not pet.locations then
+        return
+    end
+
     for idx, loc in ipairs(pet.locations) do
         if (loc.mapID and loc.coords) then
             return idx
@@ -416,6 +404,61 @@ local function SetPetColor(fontString, rarity)
     end
 end
 
+local function GetLineText(lineContent)
+    if (#lineContent == 1) then
+        return lineContent[1]
+    end
+    
+    local links = {}
+    for idx, entry in ipairs(lineContent) do
+        if (idx > 1) then
+            local type = strsub(entry, 1, 1)
+            local id = tonumber(strsub(entry, 2))
+            if (type == "i") then
+                local link = select(2, GetItemInfo(id))
+                print (link)
+                table.insert(links, link)
+            end
+        end
+    end
+
+    return lineContent[1], links
+end
+
+local function UpdateAbility(texture, abilityID, stats, petType)
+    local _, icon = C_PetJournal.GetPetAbilityInfo(abilityID)
+    texture:SetTexture(icon)
+    texture:SetScript("OnEnter",
+        function(self)
+            local abilityInfo = {}
+            abilityInfo.petOwner = Enum.BattlePetOwner.Ally;
+            abilityInfo.petIndex = nil;
+            abilityInfo.GetAbilityID = function() return abilityID end
+            abilityInfo.abilityIndex = nil;
+            abilityInfo.GetMaxHealth = function()return stats[1] end
+            abilityInfo.GetHealth = function()return stats[1] end
+            abilityInfo.GetAttackStat = function()return stats[2] end
+            abilityInfo.GetSpeedStat = function()return stats[3] end
+            abilityInfo.GetCooldown = function() return 0 end
+            abilityInfo.IsInBattle = function() return false end
+            abilityInfo.HasAura = function() return false end
+            abilityInfo.GetPadState = function() return 0 end
+            abilityInfo.GetState = function() return 0 end
+            abilityInfo.GetPetType = function() return petType end
+            abilityInfo.GetWeatherState = function() return 0 end
+            SharedPetBattleAbilityTooltip_SetAbility(PetBattlePrimaryAbilityTooltip, abilityInfo);
+            PetBattlePrimaryAbilityTooltip:ClearAllPoints()
+            PetBattlePrimaryAbilityTooltip:SetPoint("BOTTOM",self,"TOP",0,6)
+            PetBattlePrimaryAbilityTooltip:Show()
+        end
+    )
+    texture:SetScript("OnLeave",
+        function()
+            PetBattlePrimaryAbilityTooltip:Hide()
+        end
+    )
+end
+
 local function UpdateWindow(pet, locationIdx)
     for _, pool in pairs(PAPetCard.pools) do
         pool:ReleaseAll()
@@ -427,7 +470,7 @@ local function UpdateWindow(pet, locationIdx)
  --TAB 1
     f.tab1.content.flavor:SetText(pet.tooltip)
   --tradeable
-    if (pet.tradeable == true) then
+    if (pet.isTradeable == true) then
         f.tab1.content.tradeable:SetAlpha(1)
         f.tab1.content.tradeableLine:Hide()
         f.tab1.content.tradeableCheck:Show()
@@ -484,10 +527,11 @@ local function UpdateWindow(pet, locationIdx)
     end
 
   --posible breeds
+    local statsForAbilities
     if (pet.possbileBreeds) then
         for breedIdx, breed in pairs(pet.possbileBreeds) do
             local stats = UTILITIES:GetMaxStatsForBreed(breed, pet.baseStats)
-            local breedName = AcquireLabelFont(f.tab1.content)
+            local breedName = DISPLAY_UTIL:AcquireLabelFont(PAPetCard, f.tab1.content)
             breedName:SetText(breed)
             if (breedIdx == 1) then
                 breedName:SetPoint("TOPRIGHT", f.tab1.content.possibleBreedsLbl, "BOTTOMLEFT", 40, -31)
@@ -495,23 +539,24 @@ local function UpdateWindow(pet, locationIdx)
                 breedName:SetPoint("TOPRIGHT", f.tab1.content.possibleBreedsLbl, "BOTTOMLEFT", 40, breedIdx * -20 - 10)
             end
 
-            local health = AcquireValueFont(f.tab1.content)
+            local health = DISPLAY_UTIL:AcquireHighlightFont(PAPetCard, f.tab1.content)
             health:SetText(stats[1])
             health:SetWidth(40)
             health:SetJustifyH("CENTER")
             health:SetPoint("TOPLEFT", breedName, "TOPRIGHT", 5, 0)
-            local power = AcquireValueFont(f.tab1.content)
+            local power = DISPLAY_UTIL:AcquireHighlightFont(PAPetCard, f.tab1.content)
             power:SetText(stats[2])
             power:SetWidth(35)
             power:SetJustifyH("CENTER")
             power:SetPoint("TOPLEFT", health, "TOPRIGHT", 5, 0)
-            local speed = AcquireValueFont(f.tab1.content)
+            local speed = DISPLAY_UTIL:AcquireHighlightFont(PAPetCard, f.tab1.content)
             speed:SetText(stats[3])
             speed:SetWidth(35)
             speed:SetJustifyH("CENTER")
             speed:SetPoint("TOPLEFT", power, "TOPRIGHT", 5, 0)
             
             f.tab1.content.possibleBreedsTable:SetPoint("BOTTOMLEFT", breedName, "BOTTOMLEFT", 0, -10)
+            statsForAbilities = stats
         end
     else
         f.tab1.content.possibleBreedsTable:SetPoint("BOTTOMLEFT", f.tab1.content.possibleBreedsLbl, "BOTTOMLEFT", 0, -40)
@@ -521,18 +566,12 @@ local function UpdateWindow(pet, locationIdx)
         f.tab1.content.cannotBattleLbl:Hide()
         f.tab1.content.abilitiesFrame:Show()
         local abilities = C_PetJournal.GetPetAbilityListTable(pet.speciesID)
-        local _, icon = C_PetJournal.GetPetAbilityInfo(abilities[1].abilityID)
-        f.tab1.content.ability1:SetTexture(icon)
-        local _, icon = C_PetJournal.GetPetAbilityInfo(abilities[2].abilityID)
-        f.tab1.content.ability2:SetTexture(icon)
-        local _, icon = C_PetJournal.GetPetAbilityInfo(abilities[3].abilityID)
-        f.tab1.content.ability3:SetTexture(icon)
-        local _, icon = C_PetJournal.GetPetAbilityInfo(abilities[4].abilityID)
-        f.tab1.content.ability4:SetTexture(icon)
-        local _, icon = C_PetJournal.GetPetAbilityInfo(abilities[5].abilityID)
-        f.tab1.content.ability5:SetTexture(icon)
-        local _, icon = C_PetJournal.GetPetAbilityInfo(abilities[6].abilityID)
-        f.tab1.content.ability6:SetTexture(icon)
+        UpdateAbility(f.tab1.content.ability1, abilities[1].abilityID, statsForAbilities, pet.petType)
+        UpdateAbility(f.tab1.content.ability2, abilities[2].abilityID, statsForAbilities, pet.petType)
+        UpdateAbility(f.tab1.content.ability3, abilities[3].abilityID, statsForAbilities, pet.petType)
+        UpdateAbility(f.tab1.content.ability4, abilities[4].abilityID, statsForAbilities, pet.petType)
+        UpdateAbility(f.tab1.content.ability5, abilities[5].abilityID, statsForAbilities, pet.petType)
+        UpdateAbility(f.tab1.content.ability6, abilities[6].abilityID, statsForAbilities, pet.petType)
     else
         f.tab1.content.cannotBattleLbl:Show()
         f.tab1.content.abilitiesFrame:Hide()
@@ -542,14 +581,22 @@ local function UpdateWindow(pet, locationIdx)
         f:SetHeight(f.tab1.content.possibleBreedsTable:GetBottom() - f.tab1.content:GetTop() - 75)
     end
 
-   --TAB 2
+ --TAB 2
     if not locationIdx then 
         locationIdx = GetFirstMapWithCoords(pet)
     end
 
+    f.tab2.content.scrollFrame.pet = pet
     local mapFrame = f.tab2.content.mapFrame
     local lastElement
     local showLocations = pet.locations and pet.locations[locationIdx] and pet.locations[locationIdx].mapID and pet.locations[locationIdx].coords
+
+    if (showLocations) then
+        f.tab2.content.scrollFrame:SetPoint("TOPLEFT", f.tab2.content.locationsFrame, "BOTTOMLEFT", 0, -10);
+    else
+        f.tab2.content.scrollFrame:SetPoint("TOPLEFT", f.tab2.content, "TOPLEFT", 20, -10);
+    end
+
     if (showLocations) then
         local mapID = pet.locations[locationIdx].mapID
         local layers = C_Map.GetMapArtLayers(mapID)
@@ -598,7 +645,7 @@ local function UpdateWindow(pet, locationIdx)
 
         if (pet.locations) then
             local locationsFrame = f.tab2.content.locationsFrame
-            local locationLbl = AcquireLabelFont(locationsFrame)
+            local locationLbl = DISPLAY_UTIL:AcquireLabelFont(PAPetCard, locationsFrame)
             locationLbl:SetText("Locations:  ")
             locationLbl:SetPoint("TOPLEFT", locationsFrame, "TOPLEFT")
             local locationLineWidth = locationLbl:GetWidth()
@@ -608,9 +655,9 @@ local function UpdateWindow(pet, locationIdx)
                 if (location.mapID and location.coords) then
                     local loc
                     if (locIdx == locationIdx) then
-                        loc = AcquireValueFont(locationsFrame)
+                        loc = DISPLAY_UTIL:AcquireHighlightFont(PAPetCard, locationsFrame)
                     else
-                        loc = AcquireMultiValueFont(locationsFrame)
+                        loc = DISPLAY_UTIL:AcquireMultiValueFont(PAPetCard, locationsFrame)
                     end
                     loc.locationIndex = locIdx
                     loc.pet = pet
@@ -624,7 +671,7 @@ local function UpdateWindow(pet, locationIdx)
                         loc:SetPoint("LEFT", locationLbl, "RIGHT")
                         loc:SetPoint("TOP", locationLbl, "TOP", 0, line * locationLbl:GetHeight()*-1)
                     else
-                        local comma = AcquireValueFont(locationsFrame)
+                        local comma = DISPLAY_UTIL:AcquireHighlightFont(PAPetCard, locationsFrame)
                         comma:SetText(", ")
                         comma:SetPoint("TOPLEFT", priorLoc, "TOPRIGHT")
                         loc:SetPoint("TOPLEFT", comma, "TOPRIGHT")
@@ -633,18 +680,6 @@ local function UpdateWindow(pet, locationIdx)
                     priorLoc = loc
                     lastElement = loc
                     if (locIdx ~= locationIdx) then
-                        loc:SetScript("OnEnter",
-                            function(self)
-                                self:SetTextColor(1,1,1)
-                                self:SetShadowColor(1,1,1, .4)
-                            end
-                        )
-                        loc:SetScript("OnLeave",
-                            function(self)
-                                self:SetTextColor(.7, .7, .7)
-                                self:SetShadowColor(0,0,0,0)
-                            end
-                        )
                         loc:SetScript("OnMouseDown",
                             function(self)
                                 DISPLAY.PetCard:Show(self.pet, self.locationIndex)
@@ -657,6 +692,81 @@ local function UpdateWindow(pet, locationIdx)
             locationsFrame:Show()
         end
     end
+
+    if (pet.source == "Profession") then
+        f.tab2.content.sourceTypeVal:SetText(pet.profession)
+    else
+        f.tab2.content.sourceTypeVal:SetText(pet.source)
+    end
+
+    local priorBottom = f.tab2.content.sourceTypeLbl
+   -- INSTRUCTIONS
+    if (pet.acquisition) then
+        f.tab2.content.instructionLbl = DISPLAY_UTIL:AcquireLabelFont(PAPetCard, f.tab2.content.scrollFrame)
+        f.tab2.content.instructionLbl:SetPoint("TOPLEFT", f.tab2.content.sourceTypeLbl, "BOTTOMLEFT", 0, -10)
+        f.tab2.content.instructionLbl:SetText("Instructions:")
+        priorBottom = f.tab2.content.instructionLbl
+
+        for lineNum, lineContent in ipairs(pet.acquisition) do
+            local numText = DISPLAY_UTIL:AcquireLabelFont(PAPetCard, f.tab2.content.scrollFrame)
+            numText:SetText(tostring(lineNum))
+            numText:SetPoint("LEFT", f.tab2.content.instructionLbl, "LEFT", 10, 0)
+            numText:SetPoint("TOP", priorBottom, "BOTTOM", 0, -10)
+
+            local lineText = DISPLAY_UTIL:AcquireHighlightFont(PAPetCard, f.tab2.content.scrollFrame)
+            local lineFormat, lineArgs = GetLineText(lineContent)
+            if (lineArgs) then
+                lineText:SetFormattedText(lineFormat, unpack(lineArgs))
+            else
+                lineText:SetText(lineFormat)
+            end
+            lineText:SetPoint("TOPLEFT", numText, "TOPLEFT", 20, 0)
+            lineText:SetPoint("RIGHT", f.tab2.content.scrollFrame, "RIGHT", -25, 0)
+            lineText:SetJustifyH("LEFT")
+            lineText:SetWordWrap(true)
+            priorBottom = lineText
+        end
+    end
+
+   --SEPARATOR LINE 
+    local lineFrame = DISPLAY_UTIL:AcquireFrame(PAPetCard, f.tab2.content.scrollFrame)
+    lineFrame:SetPoint("LEFT", f.tab2.content.scrollFrame, "LEFT", 5,0)
+    lineFrame:SetPoint("RIGHT", f.tab2.content.scrollFrame, "RIGHT", -35,0)
+    lineFrame:SetPoint("TOP", priorBottom, "BOTTOM", 0, -10)
+    lineFrame:SetHeight(1)
+
+    local line = lineFrame:CreateLine()
+    line:SetColorTexture(.3, .3, .3)
+    line:SetThickness(1)
+    line:SetStartPoint("TOPLEFT")
+    line:SetEndPoint("TOPRIGHT")
+
+   --EXTERNAL LINKS
+    local externalLinksLbl = DISPLAY_UTIL:AcquireLabelFont(PAPetCard, f.tab2.content.scrollFrame)
+    externalLinksLbl:SetPoint("TOP", line, "BOTTOM", 0, -10)
+    externalLinksLbl:SetPoint("LEFT", f.tab2.content.sourceTypeLbl, "LEFT")
+    externalLinksLbl:SetText("External links:")
+    local wowhead = DISPLAY_UTIL:AcquireMultiValueFont(PAPetCard, f.tab2.content.scrollFrame)    
+    wowhead:SetPoint("TOPLEFT", externalLinksLbl, "TOPRIGHT", 10, 0)
+    wowhead:SetText("|Hwh|hWowHead|h")
+    wowhead:SetScript("OnMouseDown",
+        function(self)
+            DISPLAY.LinkWindow:Show("WowHead link", "https://www.wowhead.com/npc=" .. self:GetParent().pet.companionID)
+        end)
+    local warcraftPets = DISPLAY_UTIL:AcquireMultiValueFont(PAPetCard, f.tab2.content.scrollFrame)    
+    warcraftPets:SetPoint("TOPLEFT", wowhead, "TOPRIGHT", 10, 0)
+    warcraftPets:SetText("|Hwp|hWarcraft Pets|h")
+    warcraftPets:SetScript("OnMouseDown",
+        function(self)
+            DISPLAY.LinkWindow:Show("Warcraft Pets link", "https://www.warcraftpets.com/wow-pets/pet/pet/" .. self:GetParent().pet.name:gsub("%s+", "-"))
+        end)
+    local xufu = DISPLAY_UTIL:AcquireMultiValueFont(PAPetCard, f.tab2.content.scrollFrame)    
+    xufu:SetPoint("TOPLEFT", warcraftPets, "TOPRIGHT", 10, 0)
+    xufu:SetText("|Hxf|hXu-Fu|h")
+    xufu:SetScript("OnMouseDown",
+        function(self)
+            DISPLAY.LinkWindow:Show("Xu-Fu Pet Guides link", "https://www.wow-petguide.com/Pet/" .. self:GetParent().pet.companionID)
+        end)
 
     f.tab2.content.scrollFrame:GetHeight()
 end
