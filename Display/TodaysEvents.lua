@@ -138,7 +138,6 @@ function DISPLAY.TodaysEvents:Update()
         scrollFrame.child.tradingPostBoxHeader:SetPoint("TOPLEFT", scrollFrame.child.tradingPostOverlay, "TOPLEFT", 12, -10)
         local tradingPostPetAnchor = scrollFrame.child.tradingPostBoxHeader
         for _, tradingPostPet in pairs(DATA.tradingPost) do
-            print(tradingPostPet.pet)
             local tradingPostPetDisplay = DISPLAY_UTIL:AcquirePetLinkFont(PAMainFrameTab1, scrollFrame.child.tradingPostOverlay, tradingPostPet.pet)
             if (tradingPostPet.tier) then
                 tradingPostPetDisplay:SetFormattedText("[%s] |cffffffFF(tier %d reward)|r", tradingPostPet.name, tradingPostPet.tier)

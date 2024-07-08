@@ -488,10 +488,15 @@ local function UpdateWindow(pet, locationIdx)
   --model
     local sceneID = C_PetJournal.GetPetModelSceneInfoBySpeciesID(pet.speciesID)
     f.tab1.content.model:TransitionToModelSceneID(sceneID)
+
     local actor = f.tab1.content.model:GetActorByTag("unwrapped")
     if actor then
         actor:SetModelByCreatureDisplayID(pet.displayID)
     end
+    print( f.tab1.content.model.activeCamera:GetZoomDistance())
+    f.tab1.content.model.activeCamera:SetMaxZoomDistance(50)
+    f.tab1.content.model.activeCamera:SetZoomDistance(14)
+    
 
   --collected
     local collectedCount = 0
@@ -799,8 +804,6 @@ function DISPLAY.PetCard:Show(pet, locationIdx)
 
     if (not PAPetCard.SelectedTab) then
         Tab_OnClick(PAPetCardTab1)
-    else
-        Tab_OnClick(PAPetCard.SelectedTab)
     end
 
     PAPetCard:Show()
