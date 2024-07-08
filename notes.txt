@@ -32,17 +32,14 @@ DATA
 
 IDEAS
 * levelling - https://wago.io/5OWJmTGPp
-* all capturable pets by zone
 * listen to events to remove completed Items
-* click to popout a Card
 * alert when specifics are IsActive
-* constantly available pets via rares/boss/worldItem/etc
 * achievements
 * Shinies for Flip  https://www.warcraftmounts.com/multi_look_companions.php
 
 * seasons: snowy owl
 
-TRADING POST / PRIME / STORE DEPARTURE / Stuff like Snowy Owl etc - Only the starting and ending dates
+PRIME / TWITCH / STORE DEPARTURE / Stuff like Snowy Owl etc - Only the starting and ending dates
 
 WORLD EVENTS & TWITCH DROPS 
 If there's more than 1 world event then the ones ending sooner come first

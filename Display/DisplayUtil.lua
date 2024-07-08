@@ -178,18 +178,19 @@ function DISPLAY_UTIL:AcquireFrame(poolOwner, controlParent)
     return t
 end
 
-function DISPLAY_UTIL:AcquireBreedFrame(poolOwner, controlParent)    
+function DISPLAY_UTIL:AcquireListItemFrame(poolOwner, controlParent, selectable)
     if (not controlParent.framePool) then
         controlParent.framePool = CreateFramePool("BUTTON", controlParent)
         AddToPoolOwner(poolOwner, controlParent.framePool)
     end
 
     local t = controlParent.framePool:Acquire()
-    t:SetNormalAtlas("perks-list-active")
-    t:SetHeight(19)
     t:Enable()
+    local texture = t:CreateTexture(nil, "BACKGROUND")
+    texture:SetColorTexture(1, .82, 0) --gameFontNormal Color
+    texture:SetGradient("HORIZONTAL", CreateColor(1, 1, 1, .3), CreateColor(1, 1, 1, .01))
+    t:SetNormalTexture(texture)
     t:GetNormalTexture():Hide()
-    t:EnableMouse()
     t:Show()
 
     t:SetScript("OnEnter", function(self)
@@ -202,12 +203,17 @@ function DISPLAY_UTIL:AcquireBreedFrame(poolOwner, controlParent)
             self:GetNormalTexture():Hide()
         end
     end)
-    t:SetScript("OnClick", function(self)
-        self:GetParent().SelectedBreed:GetNormalTexture():Hide()
-        self:GetParent().SelectedBreed = self
-        self:GetNormalTexture():Show()
-        self:GetNormalTexture():SetDesaturated(false)
-    end)
+
+    if selectable then
+        t:SetScript("OnClick", function(self)
+            self:GetParent().SelectedBreed:GetNormalTexture():Hide()
+            self:GetParent().SelectedBreed = self
+            self:GetNormalTexture():Show()
+            self:GetNormalTexture():SetDesaturated(false)
+        end)
+    else
+        t:SetScript("OnClick", nil)
+    end
     return t
 end
 

@@ -420,7 +420,6 @@ local function GetLineText(lineContent)
             local id = tonumber(strsub(entry, 2))
             if (type == "i") then
                 local link = select(2, GetItemInfo(id))
-                print (link)
                 table.insert(links, link)
             end
         end
@@ -535,7 +534,7 @@ local function UpdateWindow(pet, locationIdx)
     local statsForAbilities
     if (pet.possbileBreeds) then
         for breedIdx, breed in pairs(pet.possbileBreeds) do
-            local breedFrame = DISPLAY_UTIL:AcquireBreedFrame(PAPetCard, f.tab1.content)
+            local breedFrame = DISPLAY_UTIL:AcquireListItemFrame(PAPetCard, f.tab1.content, true)
             breedFrame:SetPoint("LEFT", f.tab1.content.possibleBreedsLbl, "LEFT", 2, 0)
             breedFrame:SetPoint("RIGHT", f.tab1.content.possibleBreedsTable, "RIGHT")
 

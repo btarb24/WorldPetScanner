@@ -182,6 +182,7 @@ function DISPLAY.TodaysEvents:Update()
             zoneHeader:SetPoint("TOPLEFT", zonesFrame, "TOPLEFT", 0, -expansionHeight -DISPLAY.Constants.lineSeparation);
             
             for taskIdx, task in ipairs(zone.tasks) do
+                local lineHighlight = DISPLAY_UTIL:AcquireListItemFrame(PAMainFrameTab1, expansionFrame.childrenHostFrame, false)
                 --TASK TIME
                 local taskTime = DISPLAY_UTIL:AcquireHighlightFont(PAMainFrameTab1, expansionFrame.childrenHostFrame);
                 taskTime:SetText(UTILITIES:formatTime(task:Time()))
@@ -213,7 +214,7 @@ function DISPLAY.TodaysEvents:Update()
                     )
                 end
 
-                --REWARD ICON                
+                --REWARD ICON
                 if (task.iconReward) then
                     local iconIndent = PETC:GetIconIndent(task.iconReward.itemCategory)
                     local iconReward = DISPLAY_UTIL:AcquireSmallerHighlightFont(PAMainFrameTab1, expansionFrame.childrenHostFrame)                    
@@ -235,7 +236,7 @@ function DISPLAY.TodaysEvents:Update()
                             end
                         )
                     end
-                    
+                    lineHighlight:SetPoint("BOTTOM", iconReward, "BOTTOM")
                 end
 
                 --REWARD LINKS
@@ -268,7 +269,11 @@ function DISPLAY.TodaysEvents:Update()
                             GameTooltip_HideResetCursor()
                         end
                     )
+                    lineHighlight:SetPoint("BOTTOM", iconLink, "BOTTOM")
                 end
+                lineHighlight:SetPoint("LEFT", expansionFrame, "LEFT")
+                lineHighlight:SetPoint("RIGHT", scrollFrame, "RIGHT")
+                lineHighlight:SetPoint("TOP", taskTime, "TOP")
 
                 zoneHeight = zoneHeight +DISPLAY.Constants.lineHeight +DISPLAY.Constants.lineSeparation
                 zonesFrame:SetSize(totalWidth, zoneHeight + zonesFrame:GetHeight())
