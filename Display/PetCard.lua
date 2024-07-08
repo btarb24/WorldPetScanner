@@ -128,6 +128,7 @@ local function CreateWindow()
     f:SetFrameStrata("DIALOG")
     f:SetMovable(true)
     f:EnableMouse(true)
+    f:SetClampedToScreen(true)
 
     f.TitleArea = CreateFrame("Frame", nil, f)
     f.TitleArea:SetPoint("TOPLEFT", f, "TOPLEFT", 0, -40)
@@ -592,9 +593,7 @@ local function UpdateWindow(pet, locationIdx)
         f.tab1.content.abilitiesFrame:Hide()
     end
 
-    if (f.SelectedTab == f.tab1 or not f.SelectedTab) then
-        f:SetHeight(f.tab1.content.possibleBreedsTable:GetBottom() - f.tab1.content:GetTop() - 75)
-    end
+    f:SetHeight(f.tab1.content.possibleBreedsTable:GetBottom() - f.tab1.content:GetTop() - 75)
 
  --TAB 2
     if not locationIdx then 
@@ -800,6 +799,8 @@ function DISPLAY.PetCard:Show(pet, locationIdx)
 
     if (not PAPetCard.SelectedTab) then
         Tab_OnClick(PAPetCardTab1)
+    else
+        Tab_OnClick(PAPetCard.SelectedTab)
     end
 
     PAPetCard:Show()
