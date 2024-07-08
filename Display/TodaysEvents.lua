@@ -3,6 +3,7 @@ local DISPLAY = PETC.DISPLAY
 local DISPLAY_UTIL = DISPLAY.Util
 local UTILITIES = PETC.UTILITIES
 local DATA = PETC.DATA
+local PETS = PETC.PETS
 local ZONES = PETC.ZONES
 local EXPANSIONS = PETC.EXPANSIONS
 
@@ -126,7 +127,6 @@ function DISPLAY.TodaysEvents:Update()
         scrollFrame.child.tradingPostOverlay = CreateFrame("Frame", nil, scrollFrame.child)
         scrollFrame.child.tradingPostOverlay:SetPoint("TOPLEFT", scrollFrame.child, "TOPLEFT", 0, 0)
         scrollFrame.child.tradingPostOverlay:SetWidth(scrollFrame.child.tradingPostBox:GetWidth())
-        scrollFrame.child.tradingPostOverlay:Raise()
         scrollFrame.child.tradingPostOverlay:SetHeight(30)
     end
     
@@ -138,6 +138,7 @@ function DISPLAY.TodaysEvents:Update()
         scrollFrame.child.tradingPostBoxHeader:SetPoint("TOPLEFT", scrollFrame.child.tradingPostOverlay, "TOPLEFT", 12, -10)
         local tradingPostPetAnchor = scrollFrame.child.tradingPostBoxHeader
         for _, tradingPostPet in pairs(DATA.tradingPost) do
+            print(tradingPostPet.pet)
             local tradingPostPetDisplay = DISPLAY_UTIL:AcquirePetLinkFont(PAMainFrameTab1, scrollFrame.child.tradingPostOverlay, tradingPostPet.pet)
             if (tradingPostPet.tier) then
                 tradingPostPetDisplay:SetFormattedText("[%s] |cffffffFF(tier %d reward)|r", tradingPostPet.name, tradingPostPet.tier)
@@ -242,15 +243,15 @@ function DISPLAY.TodaysEvents:Update()
                 --REWARD LINKS
                 local linkAnchor = nil
                 for rewardLinkIdx, reward in ipairs(task.nonIconRewards) do
-                    local iconLink = DISPLAY_UTIL:AcquireHighlightFont(PAMainFrameTab1, expansionFrame.childrenHostFrame)
-                    iconLink:SetText(reward:Display())
+                    local rewardLink = DISPLAY_UTIL:AcquirePetLinkFont(PAMainFrameTab1, expansionFrame.childrenHostFrame, PETS.all[reward.speciesID])
+                    rewardLink:SetText(reward:Display())
                     if (linkAnchor) then
-                        iconLink:SetPoint("TOPLEFT", linkAnchor, "TOPRIGHT", DISPLAY.Constants.columnSeparation, 0);   
+                        rewardLink:SetPoint("TOPLEFT", linkAnchor, "TOPRIGHT", DISPLAY.Constants.columnSeparation, 0);   
                     else
-                        iconLink:SetPoint("TOPLEFT", taskTime, "TOPRIGHT", maxChallengeWidth +PETC.IconColumnWidth +(DISPLAY.Constants.columnSeparation*4), 0);
+                        rewardLink:SetPoint("TOPLEFT", taskTime, "TOPRIGHT", maxChallengeWidth +PETC.IconColumnWidth +(DISPLAY.Constants.columnSeparation*4), 0);
                     end
-                    linkAnchor = iconLink
-                    iconLink:SetScript("OnEnter",
+                    linkAnchor = rewardLink
+                    rewardLink:HookScript("OnEnter",
                         function(self)
                             GameTooltip:SetOwner(self, "ANCHOR_NONE")
                             GameTooltip:ClearLines()
@@ -264,12 +265,12 @@ function DISPLAY.TodaysEvents:Update()
                             GameTooltip:Show()
                         end
                     )
-                    iconLink:SetScript("OnLeave",
+                    rewardLink:HookScript("OnLeave",
                         function()
                             GameTooltip_HideResetCursor()
                         end
                     )
-                    lineHighlight:SetPoint("BOTTOM", iconLink, "BOTTOM")
+                    lineHighlight:SetPoint("BOTTOM", rewardLink, "BOTTOM")
                 end
                 lineHighlight:SetPoint("LEFT", expansionFrame, "LEFT")
                 lineHighlight:SetPoint("RIGHT", scrollFrame, "RIGHT")

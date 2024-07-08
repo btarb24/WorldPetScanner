@@ -535,6 +535,7 @@ local function UpdateWindow(pet, locationIdx)
     if (pet.possbileBreeds) then
         for breedIdx, breed in pairs(pet.possbileBreeds) do
             local breedFrame = DISPLAY_UTIL:AcquireListItemFrame(PAPetCard, f.tab1.content, true)
+            breedFrame:SetFrameStrata("DIALOG")
             breedFrame:SetPoint("LEFT", f.tab1.content.possibleBreedsLbl, "LEFT", 2, 0)
             breedFrame:SetPoint("RIGHT", f.tab1.content.possibleBreedsTable, "RIGHT")
 

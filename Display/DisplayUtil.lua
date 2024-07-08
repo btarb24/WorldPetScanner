@@ -192,6 +192,7 @@ function DISPLAY_UTIL:AcquireListItemFrame(poolOwner, controlParent, selectable)
     t:SetNormalTexture(texture)
     t:GetNormalTexture():Hide()
     t:Show()
+    t:SetFrameStrata("LOW")
 
     t:SetScript("OnEnter", function(self)
          self:GetNormalTexture():SetDesaturated(true)

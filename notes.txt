@@ -28,7 +28,6 @@ TODO
 
 DATA
 * requiresScan -- for pets that show up Today's Events
-* continent/expansion - or perhaps a more complex Location obj so 1:1 cont:zone
 
 IDEAS
 * levelling - https://wago.io/5OWJmTGPp
@@ -38,6 +37,8 @@ IDEAS
 * Shinies for Flip  https://www.warcraftmounts.com/multi_look_companions.php
 
 * seasons: snowy owl
+
+TWW mouse event chaining: https://warcraft.wiki.gg/wiki/Patch_11.0.0/API_changes#Mouse_input_propagation -- wanted this for line item highlight + tooltip
 
 PRIME / TWITCH / STORE DEPARTURE / Stuff like Snowy Owl etc - Only the starting and ending dates
 
