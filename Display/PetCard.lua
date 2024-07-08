@@ -42,6 +42,156 @@ local function AcquireMapPinTexture(parent)
     return t
 end
 
+local function SetPetColor(fontString, rarity)
+    if rarity == 0 then
+        fontString:SetTextColor(.5, .1, .57) -- poor
+    elseif rarity == 1 then
+        fontString:SetTextColor(1, 1, 1) -- common
+    elseif rarity == 2 then
+        fontString:SetTextColor(.32, 1, .52) -- uncommon
+    elseif rarity == 3 then
+        fontString:SetTextColor(.59, 1, .5) -- rare
+    end
+end
+
+local function GetLineText(lineContent)
+    if (#lineContent == 1) then
+        return lineContent[1]
+    end
+    
+    local links = {}
+    for idx, entry in ipairs(lineContent) do
+        if (idx > 1) then
+            local type = strsub(entry, 1, 1)
+            local id = tonumber(strsub(entry, 2))
+            if (type == "i") then
+                local link = select(2, GetItemInfo(id))
+                if not link then
+                    link = select(2, GetItemInfo(id))
+                end
+                table.insert(links, link)
+            end
+        end
+    end
+
+    return lineContent[1], links
+end
+
+local function GetVendorText(vendors, selectedVendorIdx)
+    if (not selectedVendorIdx) then
+        selectedVendorIdx = 1
+    end
+
+    local leftDock = PAPetCardTab2.content.sourceTypeLbl
+    local topDock = PAPetCardTab2.content.sourceTypeLbl
+    for idx, vendor in ipairs(vendors) do
+        if idx == selectedVendorIdx then
+            PAPetCardTab2.content.sourceTypeVal = DISPLAY_UTIL:AcquireHighlightFont(PAPetCard, PAPetCardTab2.content)
+        else
+            PAPetCardTab2.content.sourceTypeVal = DISPLAY_UTIL:AcquireMultiValueFont(PAPetCard, PAPetCardTab2.content)
+            PAPetCardTab2.content.sourceTypeVal.locationIndex = idx    
+            PAPetCardTab2.content.sourceTypeVal:SetScript("OnMouseDown",
+                function(self)
+                    DISPLAY.PetCard:Show(PAPetCard.pet, self.locationIndex)
+                end
+            )
+        end
+        PAPetCardTab2.content.sourceTypeVal:SetText(vendor.name)
+
+        PAPetCardTab2.content.sourceTypeVal:SetPoint("LEFT", leftDock, "RIGHT", 10, 0)
+        if idx == 1 then
+            PAPetCardTab2.content.sourceTypeVal:SetPoint("TOP", leftDock, "TOP", 0, 0)
+        else
+            PAPetCardTab2.content.sourceTypeVal:SetPoint("TOP", leftDock, "BOTTOM", 0, -5)
+        end
+        topDock = PAPetCardTab2.content.sourceTypeVal
+
+        local formerItem
+        for currencyIdx, currency in ipairs(vendor.currencies) do
+            local currencyVal
+            if currency[1] == "gold" then
+                local money = DISPLAY_UTIL:AcquireHighlightFont(PAPetCard, PAPetCardTab2.content)
+                money:SetPoint("TOPLEFT", PAPetCardTab2.content.sourceTypeVal, "TOPRIGHT", 3, 0)
+                local moneyText = string.format("(%s)",GetCoinTextureString(currency[2]*10000))
+                money:SetText(moneyText)
+            else
+                local item = DISPLAY_UTIL:AcquireHighlightFont(PAPetCard, PAPetCardTab2.content)
+                local itemLink = select(2, GetItemInfo(currency[1]))
+                local currencyVal = string.format("%dx%s",currency[2], itemLink)
+                item:SetText(currencyVal)
+                if formerItem then
+                    item:SetPoint("TOPLEFT", PAPetCardTab2.content.sourceTypeVal, "BOTTOMLEFT", 0, -3)
+                    
+                else
+                    item:SetPoint("LEFT", PAPetCardTab2.content.sourceTypeVal, "LEFT", 15, 0)
+                    item:SetPoint("TOP", PAPetCardTab2.content.sourceTypeVal, "BOTTOM", 15, -3)
+                end
+                formerItem = item
+            end
+        end
+    end
+
+    return result;
+end
+
+local function GetLocation(pet, locationIdx) --location, showLocList
+    if not locationIdx then
+        locationIdx = 1
+    end
+
+    --specific npc source locations
+    if (pet.source == "Vendor") then
+        return pet.npcs[locationIdx].locations[1], false
+    end
+
+    --no location map
+    if (not pet.locations) then
+        return nil
+    end
+
+    --standard map locations
+    for idx, loc in ipairs(pet.locations) do
+        if (loc.mapID and loc.coords) then
+            return loc, true
+        end
+    end
+end
+
+local function UpdateAbility(texture, abilityID, petType)
+    local _, icon = C_PetJournal.GetPetAbilityInfo(abilityID)
+    texture:SetTexture(icon)
+    texture:SetScript("OnEnter",
+        function(self)
+            local stats = PAPetCardTab1.content.SelectedBreed.stats
+            local abilityInfo = {}
+            abilityInfo.petOwner = Enum.BattlePetOwner.Ally;
+            abilityInfo.petIndex = nil;
+            abilityInfo.GetAbilityID = function() return abilityID end
+            abilityInfo.abilityIndex = nil;
+            abilityInfo.GetMaxHealth = function()return stats[1] end
+            abilityInfo.GetHealth = function()return stats[1] end
+            abilityInfo.GetAttackStat = function()return stats[2] end
+            abilityInfo.GetSpeedStat = function()return stats[3] end
+            abilityInfo.GetCooldown = function() return 0 end
+            abilityInfo.IsInBattle = function() return false end
+            abilityInfo.HasAura = function() return false end
+            abilityInfo.GetPadState = function() return 0 end
+            abilityInfo.GetState = function() return 0 end
+            abilityInfo.GetPetType = function() return petType end
+            abilityInfo.GetWeatherState = function() return 0 end
+            SharedPetBattleAbilityTooltip_SetAbility(PetBattlePrimaryAbilityTooltip, abilityInfo);
+            PetBattlePrimaryAbilityTooltip:ClearAllPoints()
+            PetBattlePrimaryAbilityTooltip:SetPoint("BOTTOM",self,"TOP",0,6)
+            PetBattlePrimaryAbilityTooltip:Show()
+        end
+    )
+    texture:SetScript("OnLeave",
+        function()
+            PetBattlePrimaryAbilityTooltip:Hide()
+        end
+    )
+end
+
 local function CreateTab(idNum, name, tabButtonWidth)
     tabButtonWidth = 96
 
@@ -367,9 +517,6 @@ local function CreateWindow()
     tab2.content.sourceTypeLbl:SetPoint("TOPLEFT", tab2.content.scrollFrame, "TOPLEFT")
     tab2.content.sourceTypeLbl:SetText("SourceType:")
 
-    tab2.content.sourceTypeVal = tab2.content.scrollFrame:CreateFontString(nil, "ARTWORK", "GameFontHighlight")
-    tab2.content.sourceTypeVal:SetPoint("TOPLEFT", tab2.content.sourceTypeLbl, "TOPRIGHT", 10, 0)
-
     tab2.content.scrollFrame:SetHyperlinksEnabled(true)
     tab2.content.scrollFrame:SetScript("OnHyperlinkClick", ChatFrame_OnHyperlinkShow)
     tab2.content.scrollFrame:SetScript("OnHyperlinkEnter", function(frame, link, text)
@@ -383,85 +530,6 @@ local function CreateWindow()
     tab2.content.scrollFrame:SetScript("OnHyperlinkLeave", function()
         GameTooltip_HideResetCursor()
     end)
-end
-
-local function GetFirstMapWithCoords(pet)
-    if not pet.locations then
-        return
-    end
-
-    for idx, loc in ipairs(pet.locations) do
-        if (loc.mapID and loc.coords) then
-            return idx
-        end
-    end
-end
-
-local function SetPetColor(fontString, rarity)
-    if rarity == 0 then
-        fontString:SetTextColor(.5, .1, .57) -- poor
-    elseif rarity == 1 then
-        fontString:SetTextColor(1, 1, 1) -- common
-    elseif rarity == 2 then
-        fontString:SetTextColor(.32, 1, .52) -- uncommon
-    elseif rarity == 3 then
-        fontString:SetTextColor(.59, 1, .5) -- rare
-    end
-end
-
-local function GetLineText(lineContent)
-    if (#lineContent == 1) then
-        return lineContent[1]
-    end
-    
-    local links = {}
-    for idx, entry in ipairs(lineContent) do
-        if (idx > 1) then
-            local type = strsub(entry, 1, 1)
-            local id = tonumber(strsub(entry, 2))
-            if (type == "i") then
-                local link = select(2, GetItemInfo(id))
-                table.insert(links, link)
-            end
-        end
-    end
-
-    return lineContent[1], links
-end
-
-local function UpdateAbility(texture, abilityID, petType)
-    local _, icon = C_PetJournal.GetPetAbilityInfo(abilityID)
-    texture:SetTexture(icon)
-    texture:SetScript("OnEnter",
-        function(self)
-            local stats = PAPetCardTab1.content.SelectedBreed.stats
-            local abilityInfo = {}
-            abilityInfo.petOwner = Enum.BattlePetOwner.Ally;
-            abilityInfo.petIndex = nil;
-            abilityInfo.GetAbilityID = function() return abilityID end
-            abilityInfo.abilityIndex = nil;
-            abilityInfo.GetMaxHealth = function()return stats[1] end
-            abilityInfo.GetHealth = function()return stats[1] end
-            abilityInfo.GetAttackStat = function()return stats[2] end
-            abilityInfo.GetSpeedStat = function()return stats[3] end
-            abilityInfo.GetCooldown = function() return 0 end
-            abilityInfo.IsInBattle = function() return false end
-            abilityInfo.HasAura = function() return false end
-            abilityInfo.GetPadState = function() return 0 end
-            abilityInfo.GetState = function() return 0 end
-            abilityInfo.GetPetType = function() return petType end
-            abilityInfo.GetWeatherState = function() return 0 end
-            SharedPetBattleAbilityTooltip_SetAbility(PetBattlePrimaryAbilityTooltip, abilityInfo);
-            PetBattlePrimaryAbilityTooltip:ClearAllPoints()
-            PetBattlePrimaryAbilityTooltip:SetPoint("BOTTOM",self,"TOP",0,6)
-            PetBattlePrimaryAbilityTooltip:Show()
-        end
-    )
-    texture:SetScript("OnLeave",
-        function()
-            PetBattlePrimaryAbilityTooltip:Hide()
-        end
-    )
 end
 
 local function UpdateWindow(pet, locationIdx)
@@ -493,11 +561,10 @@ local function UpdateWindow(pet, locationIdx)
     if actor then
         actor:SetModelByCreatureDisplayID(pet.displayID)
     end
-    print( f.tab1.content.model.activeCamera:GetZoomDistance())
+
     f.tab1.content.model.activeCamera:SetMaxZoomDistance(50)
     f.tab1.content.model.activeCamera:SetZoomDistance(14)
     
-
   --collected
     local collectedCount = 0
     if (pet.collected) then
@@ -601,25 +668,25 @@ local function UpdateWindow(pet, locationIdx)
     f:SetHeight(f.tab1.content.possibleBreedsTable:GetBottom() - f.tab1.content:GetTop() - 75)
 
  --TAB 2
-    if not locationIdx then 
-        locationIdx = GetFirstMapWithCoords(pet)
-    end
+    local requestedLocation, showLocationList = GetLocation(pet, locationIdx)
 
     f.tab2.content.scrollFrame.pet = pet
     local mapFrame = f.tab2.content.mapFrame
     local lastElement
-    local showLocations = pet.locations and pet.locations[locationIdx] and pet.locations[locationIdx].mapID and pet.locations[locationIdx].coords
 
-    if (showLocations) then
+    if (showLocationList) then
         f.tab2.content.scrollFrame:SetPoint("TOPLEFT", f.tab2.content.locationsFrame, "BOTTOMLEFT", 0, -10);
+        f.tab2.content.mapFrame:Show()
+    elseif (requestedLocation) then
+        f.tab2.content.scrollFrame:SetPoint("TOPLEFT", f.tab2.content.mapFrame, "BOTTOMLEFT", 0, -10);
         f.tab2.content.mapFrame:Show()
     else
         f.tab2.content.scrollFrame:SetPoint("TOPLEFT", f.tab2.content, "TOPLEFT", 20, -10);
         f.tab2.content.mapFrame:Hide()
     end
 
-    if (showLocations) then
-        local mapID = pet.locations[locationIdx].mapID
+    if (requestedLocation) then
+        local mapID = requestedLocation.mapID
         local layers = C_Map.GetMapArtLayers(mapID)
 
         if layers and layers[1] then
@@ -654,17 +721,17 @@ local function UpdateWindow(pet, locationIdx)
                 end
             end
 
-            for _, coord in pairs(pet.locations[locationIdx].coords) do
+            for _, coord in pairs(requestedLocation.coords) do
                 local dot = AcquireMapPinTexture(mapFrame)
                 dot:SetSize(6,6)
                 dot:SetPoint("TOPLEFT", mapFrame:GetWidth() * (coord[1]/100), (mapFrame:GetHeight() * (coord[2]/100))*-1)
                 dot:SetTexture("Interface\\Icons\\Tracking_WildPet")
             end
 
-            f.tab2.content.mapLbl:SetText(C_Map.GetMapInfo(pet.locations[locationIdx].mapID).name)
+            f.tab2.content.mapLbl:SetText(C_Map.GetMapInfo(requestedLocation.mapID).name)
         end
 
-        if (pet.locations) then
+        if (showLocationList) then
             local locationsFrame = f.tab2.content.locationsFrame
             local locationLbl = DISPLAY_UTIL:AcquireLabelFont(PAPetCard, locationsFrame)
             locationLbl:SetText("Locations:  ")
@@ -675,7 +742,7 @@ local function UpdateWindow(pet, locationIdx)
             for locIdx, location in ipairs(pet.locations) do        
                 if (location.mapID and location.coords) then
                     local loc
-                    if (locIdx == locationIdx) then
+                    if (location == requestedLocation) then
                         loc = DISPLAY_UTIL:AcquireHighlightFont(PAPetCard, locationsFrame)
                     else
                         loc = DISPLAY_UTIL:AcquireMultiValueFont(PAPetCard, locationsFrame)
@@ -700,7 +767,7 @@ local function UpdateWindow(pet, locationIdx)
                     end
                     priorLoc = loc
                     lastElement = loc
-                    if (locIdx ~= locationIdx) then
+                    if (location ~= requestedLocation) then
                         loc:SetScript("OnMouseDown",
                             function(self)
                                 DISPLAY.PetCard:Show(self.pet, self.locationIndex)
@@ -711,12 +778,25 @@ local function UpdateWindow(pet, locationIdx)
             end
             locationsFrame:SetSize(DISPLAY.PetCard.winWidth, (line+1) * locationLbl:GetHeight())
             locationsFrame:Show()
+        else
+            
         end
     end
 
     if (pet.source == "Profession") then
-        f.tab2.content.sourceTypeVal:SetText(pet.profession)
+        f.tab2.content.sourceTypeLbl:SetText("Profession: ")
+        f.tab2.content.sourceTypeVal = DISPLAY_UTIL:AcquireHighlightFont(PAPetCard, f.tab2.content.scrollFrame)
+        f.tab2.content.sourceTypeVal:SetPoint("TOPLEFT", f.tab2.content.sourceTypeLbl, "TOPRIGHT", 10, 0)
+        local professionText = string.format("%s |cFFb3b3b3(%s)|r",pet.profession, pet.professionDetail)
+        f.tab2.content.sourceTypeVal:SetText(professionText)
+    elseif(pet.source == "Vendor") then
+        f.tab2.content.sourceTypeLbl:SetText("Vendors: ")
+        GetVendorText(pet.npcs, locationIdx)
     else
+        f.tab2.content.sourceTypeLbl:SetText("Source: ")
+        f.tab2.content.sourceTypeVal = DISPLAY_UTIL:AcquireHighlightFont(PAPetCard, f.tab2.content.scrollFrame)
+        f.tab2.content.sourceTypeVal:SetPoint("TOPLEFT", f.tab2.content.sourceTypeLbl, "TOPRIGHT", 10, 0)
+        f.tab2.content.sourceTypeVal:SetWordWrap(true)
         f.tab2.content.sourceTypeVal:SetText(pet.source)
     end
 
@@ -724,7 +804,8 @@ local function UpdateWindow(pet, locationIdx)
    -- INSTRUCTIONS
     if (pet.acquisition) then
         f.tab2.content.instructionLbl = DISPLAY_UTIL:AcquireLabelFont(PAPetCard, f.tab2.content.scrollFrame)
-        f.tab2.content.instructionLbl:SetPoint("TOPLEFT", f.tab2.content.sourceTypeLbl, "BOTTOMLEFT", 0, -10)
+        f.tab2.content.instructionLbl:SetPoint("LEFT", f.tab2.content.sourceTypeLbl, "LEFT")
+        f.tab2.content.instructionLbl:SetPoint("TOP", f.tab2.content.sourceTypeVal, "BOTTOM", 0, -10)
         f.tab2.content.instructionLbl:SetText("Instructions:")
         priorBottom = f.tab2.content.instructionLbl
 
@@ -805,6 +886,8 @@ function DISPLAY.PetCard:Show(pet, locationIdx)
     if (not PAPetCard.SelectedTab) then
         Tab_OnClick(PAPetCardTab1)
     end
+    
+    PAPetCard.pet = pet;
 
     PAPetCard:Show()
 end

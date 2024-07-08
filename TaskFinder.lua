@@ -195,6 +195,16 @@ local function AnalyzeQuestRewards(taskPOI, expansionID, zoneID)
     end
 end
 
+local function AddTradingPostPet(tradingPostPet)
+    local unknownPet = tradingPostPet.pet == nil
+    if unknownPet or not tradingPostPet.pet.collected then
+        table.insert(DATA.tradingPost, tradingPostPet)
+    end
+    if unknownPet then
+        print("Unknown pet: ".. tradingPostPet.name .. "  id: " .. tradingPostPet.speciesID)
+    end
+end
+
 local function PerformRetry()
     retryTimer = nil
     if not UTILITIES:IsEmpty(DATA.questsToRetry) then
@@ -228,7 +238,7 @@ local function PerformRetry()
                     tradingPostPet.speciesID = speciesID
                     tradingPostPet.name = name
                     tradingPostPet.pet = PETS.all[speciesID]
-                    table.insert(DATA.tradingPost, tradingPostPet)
+                    AddTradingPostPet(tradingPostPet)
                     DATA.tradingPostRetry[num] = nil
                 end
             end
@@ -248,21 +258,18 @@ local function GetTradingPostPets()
     local items = C_PerksProgram.GetAvailableVendorItemIDs()
     for _, itemID in pairs(items) do
         local itemData = C_PerksProgram.GetVendorItemInfo(itemID)
-        if (itemData.perksVendorCategoryID == 3 and not itemData.purchased) then
-            local unknownPet = PETS.all[itemData.speciesID] == nil
-            if (unknownPet or not PETS.all[itemData.speciesID].collected) then
-               local tradingPostPet = {
+        if (itemData.perksVendorCategoryID == 3) then
+            local tradingPostPet = {
                 speciesID = itemData.speciesID,
                 name = itemData.Name,
                 price = itemData.price,
                 timeRemaining = itemData.timeRemaining,
                 pet = PETS.all[itemData.speciesID]
-               }
-
-               local speciesName, speciesIcon, petType, companionID, tooltipSource, flavor, isWild, canBattle, isTradeable, isUnique, obtainable, creatureDisplayID = C_PetJournal.GetPetInfoBySpeciesID(itemData.speciesID)
-               tradingPostPet.name = speciesName
-               table.insert(DATA.tradingPost, tradingPostPet)
-            end
+            }
+            
+            local speciesName, speciesIcon, petType, companionID, tooltipSource, flavor, isWild, canBattle, isTradeable, isUnique, obtainable, creatureDisplayID = C_PetJournal.GetPetInfoBySpeciesID(itemData.speciesID)
+            tradingPostPet.name = speciesName
+            AddTradingPostPet(tradingPostPet)
         end
     end
 
@@ -282,7 +289,7 @@ local function GetTradingPostPets()
                     tradingPostPet.speciesID = speciesID
                     tradingPostPet.name = name
                     tradingPostPet.pet = PETS.all[speciesID]
-                    table.insert(DATA.tradingPost, tradingPostPet)
+                    AddTradingPostPet(tradingPostPet)
                 else
                     table.insert(DATA.tradingPostRetry, tradingPostPet)
                 end

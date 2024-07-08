@@ -44,6 +44,7 @@ namespace PetCollectorUtils
     public string[] possbileBreeds;
     public double[] baseStats;
     public Entity[] items;
+    public AcquisitionLine[] acquisition;
 
     private int MapPetType(string typeStr){
       if (typeStr == "Humanoid")
@@ -66,6 +67,8 @@ namespace PetCollectorUtils
         return 9;
       else if (typeStr == "Mechanical")
         return 10;
+
+      throw new ArgumentOutOfRangeException();
     }
 
     public Pet(LuaTable table)
@@ -180,6 +183,9 @@ namespace PetCollectorUtils
             if (questId != null)
               quest.ID = Convert.ToInt32(questId);
             break;
+          case "acquisition":
+            acquisition = ParseAcquistion((LuaTable)value);
+            break;
           case "questID":
           case "achievementID":
             break; //skip
@@ -249,6 +255,17 @@ namespace PetCollectorUtils
       if (baseStats != null && baseStats.Length > 0)
       {
         sb.AppendLine($"        baseStats={{{string.Join(", ", baseStats)}}},");
+      }
+
+      if (acquisition != null && acquisition.Length > 0)
+      {
+        sb.AppendLine("        acquisition= {");
+        for (var i = 0; i < acquisition.Length; i++)
+        {
+          var acq = acquisition[i];
+          sb.AppendLine($"            [{i+1}] = {{\"{string.Join("\", \"", acq.contents)}\"}},");
+        }
+        sb.AppendLine("        }");
       }
 
       sb.Append("    }");
@@ -339,6 +356,22 @@ namespace PetCollectorUtils
       }
 
       return list.ToArray();
+    }
+
+    public static AcquisitionLine[] ParseAcquistion(LuaTable acquistions)
+    {
+      var lines = new List<AcquisitionLine>();
+      foreach (var subTable in acquistions.Values)
+      {
+        var acquisitionLine = new AcquisitionLine();
+        foreach (var item in ((LuaTable)subTable).Values)
+        {
+          acquisitionLine.contents.Add((string)item);
+        }
+        lines.Add(acquisitionLine);
+      }
+
+      return lines.ToArray();
     }
   }
 }
