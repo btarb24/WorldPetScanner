@@ -178,6 +178,39 @@ function DISPLAY_UTIL:AcquireFrame(poolOwner, controlParent)
     return t
 end
 
+function DISPLAY_UTIL:AcquireBreedFrame(poolOwner, controlParent)    
+    if (not controlParent.framePool) then
+        controlParent.framePool = CreateFramePool("BUTTON", controlParent)
+        AddToPoolOwner(poolOwner, controlParent.framePool)
+    end
+
+    local t = controlParent.framePool:Acquire()
+    t:SetNormalAtlas("perks-list-active")
+    t:SetHeight(19)
+    t:Enable()
+    t:GetNormalTexture():Hide()
+    t:EnableMouse()
+    t:Show()
+
+    t:SetScript("OnEnter", function(self)
+         self:GetNormalTexture():SetDesaturated(true)
+         self:GetNormalTexture():Show()
+    end)
+    t:SetScript("OnLeave", function(self)
+        self:GetNormalTexture():SetDesaturated(false)
+        if self:GetParent().SelectedBreed ~= self then
+            self:GetNormalTexture():Hide()
+        end
+    end)
+    t:SetScript("OnClick", function(self)
+        self:GetParent().SelectedBreed:GetNormalTexture():Hide()
+        self:GetParent().SelectedBreed = self
+        self:GetNormalTexture():Show()
+        self:GetNormalTexture():SetDesaturated(false)
+    end)
+    return t
+end
+
 function DISPLAY_UTIL:AcquireExpansionFrame(poolOwner, controlParent, name, headerDescription)
     if (not controlParent.expansionFramesPool) then
         controlParent.expansionFramesPool = CreateFramePool("FRAME", controlParent)

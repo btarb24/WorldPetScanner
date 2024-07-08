@@ -82,7 +82,6 @@ function DISPLAY:CreateHostWindow()
     local mainFrame = CreateFrame("Frame", "PAMainFrame", UIParent, "ButtonFrameBaseTemplate")
     mainFrame:Hide()
     mainFrame:SetFrameStrata("HIGH")
-    mainFrame:Lower()
     mainFrame:SetResizable(true)
     mainFrame:SetResizeBounds(DISPLAY.Constants.minWidth, DISPLAY.Constants.minHeight, GetScreenWidth()-100, GetScreenHeight()-100)
     mainFrame:SetSize(DISPLAY.Constants.minWidth,DISPLAY.Constants.minHeight)
@@ -173,7 +172,6 @@ function DISPLAY.Main:ShowWindow(mode)
     if (not PAMainFrame) then 
         CreateHostWindow()
     end
-    
     PAMainFrame.mode = mode
     UpdateHostWindow()
 

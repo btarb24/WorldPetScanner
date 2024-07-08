@@ -210,7 +210,7 @@ local function CreateWindow()
     tab1.content.flavor = tab1.content:CreateFontString(nil, "ARTWORK", nil)
     tab1.content.flavor:SetPoint("TOPLEFT", tab1.content.modelFrame, "BOTTOMLEFT", 0, -20)
     tab1.content.flavor:SetPoint("RIGHT", tab1.content.modelFrame, "RIGHT")
-    tab1.content.flavor:SetFont("Fonts\\skurri.ttf", 15, nil)
+    tab1.content.flavor:SetFont("Fonts\\skurri.ttf", 15, "OUTLINE, MONOCRHOME")
     tab1.content.flavor:SetWordWrap(true)
     --bastion-zone-ability-2
 
@@ -344,7 +344,7 @@ local function CreateWindow()
     tab2.content.mapFrame:SetSize(350, 240)
     tab2.content.mapFrame:SetPoint("TOPLEFT",20,-22)
     
-    tab2.content.mapLbl = tab2.content:CreateFontString(nil, "ARTWORK", "GameFontHighlight")
+    tab2.content.mapLbl = tab2.content.mapFrame:CreateFontString(nil, "ARTWORK", "GameFontHighlight")
     tab2.content.mapLbl:SetPoint("BOTTOM", tab2.content.mapFrame, "TOP", 0, 0)
     tab2.content.mapLbl:SetPoint("CENTER", tab2.content.mapFrame)
     
@@ -354,10 +354,11 @@ local function CreateWindow()
     tab2.content.scrollFrame = CreateFrame("ScrollFrame", nil, tab2.content, "UIPanelScrollFrameTemplate")
     tab2.content.scrollFrame:SetClipsChildren(true)
     tab2.content.scrollFrame:SetPoint("TOPLEFT", tab2.content.locationsFrame, "BOTTOMLEFT", 0, -10);
-    tab2.content.scrollFrame:SetPoint("BOTTOMRIGHT", tab2.content, "BOTTOMRIGHT",0,4);
+    tab2.content.scrollFrame:SetPoint("BOTTOMRIGHT", tab2.content, "BOTTOMRIGHT",-4,4);
     tab2.content.scrollFrame.ScrollBar:ClearAllPoints();
-    tab2.content.scrollFrame.ScrollBar:SetPoint("TOPLEFT", tab2.content.scrollFrame, "TOPRIGHT", -30, -18);
+    tab2.content.scrollFrame.ScrollBar:SetPoint("TOPLEFT", tab2.content.scrollFrame, "TOPRIGHT", -20, -18);
     tab2.content.scrollFrame.ScrollBar:SetPoint("BOTTOMRIGHT", tab2.content.scrollFrame, "BOTTOMRIGHT", 0, 24);
+    tab2.content.scrollFrame.ScrollBar:Raise()
     tab2.content.scrollFrame.child = CreateFrame("Frame", nil, tab2.content.scrollFrame)
     tab2.content.scrollFrame:SetScrollChild(tab2.content.scrollFrame.child)
 
@@ -428,11 +429,12 @@ local function GetLineText(lineContent)
     return lineContent[1], links
 end
 
-local function UpdateAbility(texture, abilityID, stats, petType)
+local function UpdateAbility(texture, abilityID, petType)
     local _, icon = C_PetJournal.GetPetAbilityInfo(abilityID)
     texture:SetTexture(icon)
     texture:SetScript("OnEnter",
         function(self)
+            local stats = PAPetCardTab1.content.SelectedBreed.stats
             local abilityInfo = {}
             abilityInfo.petOwner = Enum.BattlePetOwner.Ally;
             abilityInfo.petIndex = nil;
@@ -471,7 +473,7 @@ local function UpdateWindow(pet, locationIdx)
     f.Title:SetText(pet.name)
     
  --TAB 1
-    f.tab1.content.flavor:SetText(pet.tooltip)
+    f.tab1.content.flavor:SetText(pet.flavor)
   --tradeable
     if (pet.isTradeable == true) then
         f.tab1.content.tradeable:SetAlpha(1)
@@ -533,11 +535,19 @@ local function UpdateWindow(pet, locationIdx)
     local statsForAbilities
     if (pet.possbileBreeds) then
         for breedIdx, breed in pairs(pet.possbileBreeds) do
+            local breedFrame = DISPLAY_UTIL:AcquireBreedFrame(PAPetCard, f.tab1.content)
+            breedFrame:SetPoint("LEFT", f.tab1.content.possibleBreedsLbl, "LEFT", 2, 0)
+            breedFrame:SetPoint("RIGHT", f.tab1.content.possibleBreedsTable, "RIGHT")
+
             local stats = UTILITIES:GetMaxStatsForBreed(breed, pet.baseStats)
+            breedFrame.stats = stats
+
             local breedName = DISPLAY_UTIL:AcquireLabelFont(PAPetCard, f.tab1.content)
             breedName:SetText(breed)
             if (breedIdx == 1) then
                 breedName:SetPoint("TOPRIGHT", f.tab1.content.possibleBreedsLbl, "BOTTOMLEFT", 40, -31)
+                f.tab1.content.SelectedBreed = breedFrame
+                breedFrame:Click()
             else
                 breedName:SetPoint("TOPRIGHT", f.tab1.content.possibleBreedsLbl, "BOTTOMLEFT", 40, breedIdx * -20 - 10)
             end
@@ -558,8 +568,10 @@ local function UpdateWindow(pet, locationIdx)
             speed:SetJustifyH("CENTER")
             speed:SetPoint("TOPLEFT", power, "TOPRIGHT", 5, 0)
             
+            breedFrame:SetPoint("TOP", breedName, "TOP")
+            breedFrame:SetPoint("BOTTOM", breedName, "BOTTOM")
+            
             f.tab1.content.possibleBreedsTable:SetPoint("BOTTOMLEFT", breedName, "BOTTOMLEFT", 0, -10)
-            statsForAbilities = stats
         end
     else
         f.tab1.content.possibleBreedsTable:SetPoint("BOTTOMLEFT", f.tab1.content.possibleBreedsLbl, "BOTTOMLEFT", 0, -40)
@@ -569,12 +581,12 @@ local function UpdateWindow(pet, locationIdx)
         f.tab1.content.cannotBattleLbl:Hide()
         f.tab1.content.abilitiesFrame:Show()
         local abilities = C_PetJournal.GetPetAbilityListTable(pet.speciesID)
-        UpdateAbility(f.tab1.content.ability1, abilities[1].abilityID, statsForAbilities, pet.petType)
-        UpdateAbility(f.tab1.content.ability2, abilities[2].abilityID, statsForAbilities, pet.petType)
-        UpdateAbility(f.tab1.content.ability3, abilities[3].abilityID, statsForAbilities, pet.petType)
-        UpdateAbility(f.tab1.content.ability4, abilities[4].abilityID, statsForAbilities, pet.petType)
-        UpdateAbility(f.tab1.content.ability5, abilities[5].abilityID, statsForAbilities, pet.petType)
-        UpdateAbility(f.tab1.content.ability6, abilities[6].abilityID, statsForAbilities, pet.petType)
+        UpdateAbility(f.tab1.content.ability1, abilities[1].abilityID, pet.petType)
+        UpdateAbility(f.tab1.content.ability2, abilities[2].abilityID, pet.petType)
+        UpdateAbility(f.tab1.content.ability3, abilities[3].abilityID, pet.petType)
+        UpdateAbility(f.tab1.content.ability4, abilities[4].abilityID, pet.petType)
+        UpdateAbility(f.tab1.content.ability5, abilities[5].abilityID, pet.petType)
+        UpdateAbility(f.tab1.content.ability6, abilities[6].abilityID, pet.petType)
     else
         f.tab1.content.cannotBattleLbl:Show()
         f.tab1.content.abilitiesFrame:Hide()
@@ -596,8 +608,10 @@ local function UpdateWindow(pet, locationIdx)
 
     if (showLocations) then
         f.tab2.content.scrollFrame:SetPoint("TOPLEFT", f.tab2.content.locationsFrame, "BOTTOMLEFT", 0, -10);
+        f.tab2.content.mapFrame:Show()
     else
         f.tab2.content.scrollFrame:SetPoint("TOPLEFT", f.tab2.content, "TOPLEFT", 20, -10);
+        f.tab2.content.mapFrame:Hide()
     end
 
     if (showLocations) then

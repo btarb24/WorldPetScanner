@@ -259,7 +259,7 @@ local function GetTradingPostPets()
                 pet = PETS.all[itemData.speciesID]
                }
 
-               local speciesName, speciesIcon, petType, companionID, tooltipSource, tooltipDescription, isWild, canBattle, isTradeable, isUnique, obtainable, creatureDisplayID = C_PetJournal.GetPetInfoBySpeciesID(itemData.speciesID)
+               local speciesName, speciesIcon, petType, companionID, tooltipSource, flavor, isWild, canBattle, isTradeable, isUnique, obtainable, creatureDisplayID = C_PetJournal.GetPetInfoBySpeciesID(itemData.speciesID)
                tradingPostPet.name = speciesName
                table.insert(DATA.tradingPost, tradingPostPet)
             end

@@ -13,8 +13,8 @@ local function ResetTabContent()
         PAMainFrameTab2.content.scrollFrame:SetPoint("TOPLEFT", PAMainFrameTab2.content, "TOPLEFT", 10, -55);
         PAMainFrameTab2.content.scrollFrame:SetPoint("BOTTOMRIGHT", PAMainFrameTab2.content, "BOTTOMRIGHT",0,4);
         PAMainFrameTab2.content.scrollFrame.ScrollBar:ClearAllPoints();
-        PAMainFrameTab2.content.scrollFrame.ScrollBar:SetPoint("TOPLEFT", PAMainFrameTab2.content.scrollFrame, "TOPRIGHT", -12, -18);
-        PAMainFrameTab2.content.scrollFrame.ScrollBar:SetPoint("BOTTOMRIGHT", PAMainFrameTab2.content.scrollFrame, "BOTTOMRIGHT", -7, 24);
+        PAMainFrameTab2.content.scrollFrame.ScrollBar:SetPoint("TOPLEFT", PAMainFrameTab2.content.scrollFrame, "TOPRIGHT", -20, -18);
+        PAMainFrameTab2.content.scrollFrame.ScrollBar:SetPoint("BOTTOMRIGHT", PAMainFrameTab2.content.scrollFrame, "BOTTOMRIGHT", 0, 24);
         local scrollFrameChild = CreateFrame("Frame", nil, PAMainFrameTab2.content.scrollFrame)
         PAMainFrameTab2.content.scrollFrame:SetScrollChild(scrollFrameChild)
         PAMainFrameTab2.content.scrollFrame.child = scrollFrameChild

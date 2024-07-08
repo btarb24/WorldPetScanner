@@ -19,7 +19,7 @@ namespace PetCollectorUtils
     public string source;
     public string currency;
     public string iconPath;
-    public string tooltipDescription;
+    public string flavor;
     public int petType;
     public string eventName;
     public string missionSource;
@@ -90,8 +90,8 @@ namespace PetCollectorUtils
           case "petType":
             petType = MapPetType(value.ToString());
             break;
-          case "tooltipDescription":
-            tooltipDescription = value.ToString().Replace("\"", "\\\"").Replace("\n", "\\n");
+          case "flavor":
+            flavor = value.ToString().Replace("\"", "\\\"").Replace("\n", "\\n");
             break;
           case "promotion":
             promotion = value.ToString();
@@ -207,7 +207,7 @@ namespace PetCollectorUtils
       sb.AppendLine($"        isUnique={(isUnique ? "true" : "false")},");
       sb.AppendLine($"        isPassive={(isPassive ? "true" : "false")},");
       sb.AppendLine($"        source=\"{source}\",");
-      sb.AppendLine($"        tooltip= \"{tooltipDescription}\",");
+      sb.AppendLine($"        tooltip= \"{flavor}\",");
       sb.AppendLine($"        icon= \"{iconPath}\",");
       if (currency != null) sb.AppendLine($"        currency=\"{currency}\",");
       if (cost != 0) sb.AppendLine($"        cost={cost},");

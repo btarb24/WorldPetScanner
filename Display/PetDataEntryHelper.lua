@@ -144,7 +144,7 @@ local function ParseMoreSourceData(tooltipSource)
 end
 
 local function FindPetBySpeciesID(speciesID, raw)
-    local speciesName, speciesIcon, petType, companionID, tooltipSource, tooltipDescription, isWild, canBattle, isTradeable, isUnique, obtainable, creatureDisplayID
+    local speciesName, speciesIcon, petType, companionID, tooltipSource, flavor, isWild, canBattle, isTradeable, isUnique, obtainable, creatureDisplayID
            = C_PetJournal.GetPetInfoBySpeciesID(speciesID)
 
     if not tooltipSource or tooltipSource == "" then
@@ -174,9 +174,9 @@ local function FindPetBySpeciesID(speciesID, raw)
             end
         end
     
-    if tooltipDescription then
+    if flavor then
         result = result..
-    "        tooltipDescription = \""..tooltipDescription.."\",\n"
+    "        flavor = \""..flavor.."\",\n"
     end
     if speciesIcon then
         result = result..
