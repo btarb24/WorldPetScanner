@@ -15,10 +15,10 @@ local function Tab_OnClick(self)
     self.content:Show()
 
     if (PAPetCard.SelectedTab) then
-        PAPetCard.SelectedTab.Text:SetPoint("LEFT", PAPetCard.SelectedTab, "LEFT", -30, 2)
+        PAPetCard.SelectedTab.Text:SetPoint("LEFT", PAPetCard.SelectedTab, "LEFT", -32, 3)
     end
     PAPetCard.SelectedTab = self    
-    self.Text:SetPoint("LEFT", self, "LEFT", -36, 2)
+    self.Text:SetPoint("LEFT", self, "LEFT", -38, 3)
 end
 
 local function AcquireMapTileTexture(parent)
@@ -53,6 +53,7 @@ local function CreateTab(idNum, name, tabButtonWidth)
     tab.Text:SetWidth(tabButtonWidth)
     tab:ClearAllPoints()
     tab:SetScript("OnClick", Tab_OnClick)
+    tab:SetScript("OnShow", nil)
     tab.content = CreateFrame("Frame", nil, PAPetCard)
     tab.content:Hide()
     tab.content.contentWidth = DISPLAY.Constants.minWidth
@@ -105,12 +106,12 @@ local function CreateTab(idNum, name, tabButtonWidth)
     tab.MiddleHighlight:SetWidth(tab.Middle:GetHeight())
 
     tab.Text:ClearAllPoints()
-    tab.Text:SetPoint("LEFT", tab, "LEFT", -30, 3)
+    tab.Text:SetPoint("LEFT", tab, "LEFT", -32, 3)
     local AnimationGroup = tab.Text:CreateAnimationGroup();
     local Rotation = AnimationGroup:CreateAnimation("Rotation");
     Rotation:SetDegrees(90);
     Rotation:SetDuration(0);
-    Rotation:SetEndDelay(604800);
+    Rotation:SetEndDelay(1604800);
     AnimationGroup:Play();
 
     return tab
@@ -160,11 +161,13 @@ local function CreateWindow()
     PAPetCard.numTabs = 2
     local tab1 = CreateTab(1, "Pet Info")
     f.tab1 = tab1
-    tab1:SetPoint("TOPRIGHT", PAPetCard, "TOPLEFT", 4, -45)
+    tab1:SetPoint("TOPRIGHT", PAPetCardTopLeft, "TOPLEFT", 4, -45)
+    tab1:SetPoint("TOPLEFT", PAPetCardTopLeft, "TOPLEFT", -28, -45)
 
     local tab2 = CreateTab(2, "Acquisition")
     f.tab2 = tab2
     tab2:SetPoint("TOPRIGHT", tab1, "BOTTOMRIGHT", 0, -10)
+    tab2:SetPoint("TOPLEFT", tab1, "BOTTOMRIGHT", -32, -10)
 
     tab1.content.modelFrame = CreateFrame("FRAME", nil, tab1.content, "InsetFrameTemplate4")
     tab1.content.modelFrame:SetPoint("TOP", tab1.content, "TOP", 0, -25)
@@ -466,7 +469,7 @@ local function UpdateWindow(pet, locationIdx)
 
     local f = PAPetCard
     f.Title:SetText(pet.name)
-
+    
  --TAB 1
     f.tab1.content.flavor:SetText(pet.tooltip)
   --tradeable
