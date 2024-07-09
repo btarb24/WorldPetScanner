@@ -77,6 +77,39 @@ local function GetLineText(lineContent)
     return lineContent[1], links
 end
 
+local function GetNPCDropText(npcs, selectedNpcIdx)
+    if (not selectedNpcIdx) then
+        selectedNpcIdx = 1
+    end
+
+    local leftDock = PAPetCardTab2.content.sourceTypeLbl
+    local topDock = PAPetCardTab2.content.sourceTypeLbl
+    for idx, npc in ipairs(npcs) do
+        if idx == selectedNpcIdx then
+            PAPetCardTab2.content.sourceTypeVal = DISPLAY_UTIL:AcquireHighlightFont(PAPetCard, PAPetCardTab2.content)
+        else
+            PAPetCardTab2.content.sourceTypeVal = DISPLAY_UTIL:AcquireMultiValueFont(PAPetCard, PAPetCardTab2.content)
+            PAPetCardTab2.content.sourceTypeVal.locationIndex = idx    
+            PAPetCardTab2.content.sourceTypeVal:SetScript("OnMouseDown",
+                function(self)
+                    DISPLAY.PetCard:Show(PAPetCard.pet, self.locationIndex)
+                end
+            )
+        end
+        PAPetCardTab2.content.sourceTypeVal:SetText(npc.name)
+
+        PAPetCardTab2.content.sourceTypeVal:SetPoint("LEFT", leftDock, "RIGHT", 10, 0)
+        if idx == 1 then
+            PAPetCardTab2.content.sourceTypeVal:SetPoint("TOP", leftDock, "TOP", 0, 0)
+        else
+            PAPetCardTab2.content.sourceTypeVal:SetPoint("TOP", leftDock, "BOTTOM", 0, -5)
+        end
+        topDock = PAPetCardTab2.content.sourceTypeVal
+    end
+
+    return result;
+end
+
 local function GetVendorText(vendors, selectedVendorIdx)
     if (not selectedVendorIdx) then
         selectedVendorIdx = 1
@@ -144,17 +177,24 @@ local function GetLocation(pet, locationIdx) --location, showLocList
         return pet.npcs[locationIdx].locations[1], false
     end
 
+    --specific npc source locations
+    if (pet.source == "Drop") then
+        return pet.npcs[locationIdx].locations[1], false
+    end
+
     --no location map
     if (not pet.locations) then
         return nil
     end
 
-    --standard map locations
-    for idx, loc in ipairs(pet.locations) do
-        if (loc.mapID and loc.coords) then
+    --standard map locations    
+    for _, loc in ipairs(pet.locations) do
+        if loc.mapID == locationIdx then
             return loc, true
         end
     end
+
+    return pet.locations[1], true
 end
 
 local function UpdateAbility(texture, abilityID, petType)
@@ -721,11 +761,13 @@ local function UpdateWindow(pet, locationIdx)
                 end
             end
 
-            for _, coord in pairs(requestedLocation.coords) do
-                local dot = AcquireMapPinTexture(mapFrame)
-                dot:SetSize(6,6)
-                dot:SetPoint("TOPLEFT", mapFrame:GetWidth() * (coord[1]/100), (mapFrame:GetHeight() * (coord[2]/100))*-1)
-                dot:SetTexture("Interface\\Icons\\Tracking_WildPet")
+            if (requestedLocation.coords) then
+                for _, coord in pairs(requestedLocation.coords) do
+                    local dot = AcquireMapPinTexture(mapFrame)
+                    dot:SetSize(6,6)
+                    dot:SetPoint("TOPLEFT", mapFrame:GetWidth() * (coord[1]/100), (mapFrame:GetHeight() * (coord[2]/100))*-1)
+                    dot:SetTexture("Interface\\Icons\\Tracking_WildPet")
+                end
             end
 
             f.tab2.content.mapLbl:SetText(C_Map.GetMapInfo(requestedLocation.mapID).name)
@@ -740,14 +782,14 @@ local function UpdateWindow(pet, locationIdx)
             local priorLoc
             local line = 0
             for locIdx, location in ipairs(pet.locations) do        
-                if (location.mapID and location.coords) then
+                if location.mapID then
                     local loc
                     if (location == requestedLocation) then
                         loc = DISPLAY_UTIL:AcquireHighlightFont(PAPetCard, locationsFrame)
                     else
                         loc = DISPLAY_UTIL:AcquireMultiValueFont(PAPetCard, locationsFrame)
                     end
-                    loc.locationIndex = locIdx
+                    loc.locationIndex = location.mapID
                     loc.pet = pet
                     loc:SetText(C_Map.GetMapInfo(location.mapID).name)
                     locationLineWidth = locationLineWidth + loc:GetWidth()
@@ -792,6 +834,9 @@ local function UpdateWindow(pet, locationIdx)
     elseif(pet.source == "Vendor") then
         f.tab2.content.sourceTypeLbl:SetText("Vendors: ")
         GetVendorText(pet.npcs, locationIdx)
+    elseif(pet.source == "Drop") then
+        f.tab2.content.sourceTypeLbl:SetText("NPC drop: ")
+        GetNPCDropText(pet.npcs, locationIdx)
     else
         f.tab2.content.sourceTypeLbl:SetText("Source: ")
         f.tab2.content.sourceTypeVal = DISPLAY_UTIL:AcquireHighlightFont(PAPetCard, f.tab2.content.scrollFrame)
