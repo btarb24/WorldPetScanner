@@ -479,11 +479,18 @@ PETS.all ={
         source="Vendor",
         flavor="Vendors at the Darkmoon Faire offer strange and exotic wonders. They also sell wood frogs.",
         icon="237579",
-        currency="gold",
-        npcs={{name="Flik"}},
-        locations={{continent="The Maelstrom", zone="Darkmoon Island", mapID=407, coords={{54,62.4},}}},
+        npcs={
+            {name="Flik", id=14860, currencies={{"gold", 1}}, locations={{continent="The Maelstrom", zone="Darkmoon Island", mapID=407, coords={{52.4,62.2},{52.4,62.6},{52.4,63.8},{52.6,62.4},{52.6,63.4},{52.6,63.6},{53.2,69},{53.4,66.4},{53.4,66.6},{53.4,68.4},{53.6,62.6},{53.6,65.4},{53.6,66.2},{53.6,67.4},{53.8,68.2},{54,62.4},{54.2,70.2},{54.4,64.4},{54.4,69.2},{54.4,70.6},{54.6,69.4},{54.6,69.6},{54.8,64},{54.8,70.6},{55.4,63},{55.4,71.6},{55.6,70.2},{55.8,70.6},{55.8,71.6},{56,76},{56,76.6},{56.2,63.4},{56.2,72.6},{56.4,63.6},{56.4,73.8},{56.6,74.4},{56.8,69.6},{56.8,71.6},{56.8,76},{57,62.4},{57,63},{57,69},{57,71.4},{57.2,64.4},{57.2,64.6},{57.2,68.4},{57.2,74.8},{57.4,65.8},{57.4,72.6},{57.6,64.4},{57.6,66.4},{57.6,70.4},{57.6,71},{57.8,69.2},{57.8,73.4},{57.8,75.2},{58.2,62.6},{58.2,65.2},{58.4,67},{58.4,68.2},{58.6,62.6},{58.6,64},{58.6,66.8},{58.8,66.4},{58.8,68.6},{59.2,68.4},{59.6,68},{59.8,67},}}}},
+        },
         possbileBreeds={"H/S"},
         baseStats={8.5, 7.5, 8},
+        acquisition={
+            {"The vendor is constantly running but will slow down if you talk to him."},
+            {"If you talk to the frog he's chasing then both will stop for a few seconds."},
+            {"Vendor has limited inventory that refreshes every 15-30 minutes."},
+            {"Use the %s to receive the pet.", "i11027"},
+            {"There's also a 6%% chance that %s will drop this. He's a rare spawn in Razorfen Kraul", "n75590:Enormous Bullfrog"}
+        }
     }, 
     [65]={
         name="Tree Frog",
@@ -498,11 +505,19 @@ PETS.all ={
         source="Vendor",
         flavor="Known for their powerful legs and keen eyesight.",
         icon="237579",
-        currency="gold",
-        npcs={{name="Flik"}},
+        npcs={
+            {name="Flik", id=14860, currencies={{"gold", 1}}, locations={{continent="The Maelstrom", zone="Darkmoon Island", mapID=407, coords={{52.4,62.2},{52.4,62.6},{52.4,63.8},{52.6,62.4},{52.6,63.4},{52.6,63.6},{53.2,69},{53.4,66.4},{53.4,66.6},{53.4,68.4},{53.6,62.6},{53.6,65.4},{53.6,66.2},{53.6,67.4},{53.8,68.2},{54,62.4},{54.2,70.2},{54.4,64.4},{54.4,69.2},{54.4,70.6},{54.6,69.4},{54.6,69.6},{54.8,64},{54.8,70.6},{55.4,63},{55.4,71.6},{55.6,70.2},{55.8,70.6},{55.8,71.6},{56,76},{56,76.6},{56.2,63.4},{56.2,72.6},{56.4,63.6},{56.4,73.8},{56.6,74.4},{56.8,69.6},{56.8,71.6},{56.8,76},{57,62.4},{57,63},{57,69},{57,71.4},{57.2,64.4},{57.2,64.6},{57.2,68.4},{57.2,74.8},{57.4,65.8},{57.4,72.6},{57.6,64.4},{57.6,66.4},{57.6,70.4},{57.6,71},{57.8,69.2},{57.8,73.4},{57.8,75.2},{58.2,62.6},{58.2,65.2},{58.4,67},{58.4,68.2},{58.6,62.6},{58.6,64},{58.6,66.8},{58.8,66.4},{58.8,68.6},{59.2,68.4},{59.6,68},{59.8,67},}}}},
+        },
         locations={{continent="The Maelstrom", zone="Darkmoon Island", mapID=407, coords={{54,62.4},}}},
         possbileBreeds={"H/B"},
         baseStats={8.5, 7.5, 8},
+        acquisition={
+            {"The vendor is constantly running but will slow down if you talk to him."},
+            {"If you talk to the frog he's chasing then both will stop for a few seconds."},
+            {"Vendor has limited inventory that refreshes every 15-30 minutes."},
+            {"Use the %s to receive the pet.", "i11026"},
+            {"There's also an 8%% chance that %s will drop this. He's a rare spawn in Razorfen Kraul", "n75590:Enormous Bullfrog"}
+        }
     }, 
     [67]={
         name="Hawk Owl",
@@ -517,11 +532,16 @@ PETS.all ={
         source="Vendor",
         flavor="This dark-feathered bird of prey is often seen as a harbinger of doom amongst the druids of Teldrassil.",
         icon="132150",
-        currency="gold",
-        npcs={{name="Shylenai"}},
-        locations={{continent="Kalimdor", zone="Teldrassil"}},
+        npcs={
+            {name="Shylenai", id=8665, currencies={{"gold", .5}}, locations={{continent="Kalimdor", zone="Darnassus", mapID=89, coords={{64,53.2}}}}},
+            {name="Shylenai", id=8665, currencies={{"gold", .5}}, locations={{continent="Eastern Kingdoms", zone="Stormwind City", mapID=84, coords={{55.8,3.6}}}}},
+        },
         possbileBreeds={"B/B", "P/S", "P/B"},
         baseStats={8, 8, 8},
+        acquisition={
+            [1]={"Purchase a %s from a vendor.", "i8501"},
+            [2]={"Use the item to receive the pet."}
+        }
     }, 
     [68]={
         name="Great Horned Owl",
@@ -536,11 +556,16 @@ PETS.all ={
         source="Vendor",
         flavor="Night elf children are given an owl feather on their first birthday as a token of good luck.",
         icon="132150",
-        currency="gold",
-        npcs={{name="Shylenai"}},
-        locations={{continent="Kalimdor", zone="Teldrassil"}},
+        npcs={
+            {name="Shylenai", id=8665, currencies={{"gold", .5}}, locations={{continent="Kalimdor", zone="Darnassus", mapID=89, coords={{64,53.2}}}}},
+            {name="Shylenai", id=8665, currencies={{"gold", .5}}, locations={{continent="Eastern Kingdoms", zone="Stormwind City", mapID=84, coords={{55.8,3.6}}}}},
+        },
         possbileBreeds={"B/B", "H/H", "H/P"},
         baseStats={8, 8, 8},
+        acquisition={
+            [1]={"Purchase a %s from a vendor.", "i8500"},
+            [2]={"Use the item to receive the pet."}
+        }
     }, 
     [69]={
         name="Snowy Owl",
@@ -555,10 +580,13 @@ PETS.all ={
         source="Pet Battle",
         flavor="Winterspring's furbolg prize the brilliant white feathers of these majestic creatures for ritual purposes.",
         icon="132150",
-        note="Must be Winter.  Between December22 and March 19",
         locations={{continent="Kalimdor", zone="Winterspring", mapID=83, coords={{22.4,46.6},{22.6,46.4},{22.6,46.6},{23.2,60},{24.4,54.4},{24.6,54.2},{26.4,56.8},{27.4,49.4},{27.6,49.2},{30.4,57},{30.6,57},{34.4,49},{34.4,56.6},{34.6,56.4},{34.6,56.6},{40.8,56.8},{41.2,49.4},{41.2,49.6},{44,49.4},{45.2,54},{45.4,14.4},{45.4,14.6},{45.6,14.4},{45.6,14.8},{46.4,28.4},{46.4,28.6},{46.6,28.4},{46.6,28.6},{46.8,48},{46.8,59.2},{48.2,36.8},{48.4,17.4},{48.4,17.6},{48.6,17.4},{48.6,17.6},{49.6,50.2},{50,23.2},{50.2,42},{51.4,32.4},{51.4,32.6},{51.6,32.4},{51.6,32.6},{52,49},{52.6,26.4},{52.6,26.6},{52.8,61.8},{54.4,40.8},{55,67.4},{55.8,62.8},{55.8,73.8},{56,22},{56.2,38.2},{56.2,86.4},{56.2,86.6},{56.6,29.8},{56.8,78.8},{57,78.4},{57.4,46},{57.6,58.8},{58,89.2},{58.2,84},{58.4,55.2},{58.6,55},{59,70.4},{59.2,22.8},{60,65.8},{60.4,40.8},{60.4,90.8},{60.6,40.8},{60.6,90.8},{60.8,72.4},{60.8,72.6},{61,31.4},{61,31.6},{61,79},{61.4,70.2},{61.4,83.2},{61.6,70.2},{61.8,61.4},{62,86.2},{62.4,25},{62.6,25},{63.4,49.2},{63.4,49.6},{63.6,49.4},{64.4,76.4},{64.4,76.6},{64.4,89.4},{64.6,89.4},{64.6,89.6},{64.8,37.2},{64.8,55.6},{65.4,30.8},{65.6,31},{66.2,63.4},{66.2,63.8},{67.2,43.8},}}},
         possbileBreeds={"B/B", "P/B", "S/B"},
         baseStats={7.5, 7.5, 9},
+        acquisition={
+            [1]={"Capture via standard pet battle."},
+            [2]={"It only spawns during Winter. (December 22 through March 19)"}
+        }
     }, 
     [70]={
         name="Brown Prairie Dog",
@@ -573,14 +601,15 @@ PETS.all ={
         source="Vendor",
         flavor="A complex system of burrows protects the prairie dog from its neighbors' massive hooves.",
         icon="2126349",
-        currency="gold",
         npcs={
-            {name="Halpa"},
-            {name="Naleen"}
+            {name="Halpa", id=8401, currencies={{"gold", .4}}, locations={{continent="Kalimdor", zone="Thunder Bluff", mapID=88, coords={{62.8,58.4}}}}},
         },
-        locations={{continent="Kalimdor", zone="Mulgore", mapID=88, coords={{62.8,58.4},}}},
         possbileBreeds={"B/B", "S/S", "H/B"},
         baseStats={8, 7.5, 8.5},
+        acquisition={
+            [1]={"Purchase a %s from a vendor.", "i10394"},
+            [2]={"Use the item to receive the pet."}
+        }
     }, 
     [72]={
         name="Snowshoe Rabbit",
@@ -595,11 +624,15 @@ PETS.all ={
         source="Vendor",
         flavor="If you go chasing snowshoe rabbits, you know you're going to fall.",
         icon="132762",
-        currency="gold",
-        npcs={{name="Yarlyn Amberstill"}},
-        locations={{continent="Eastern Kingdoms", zone="Dun Morogh", mapID=27, coords={{70.6,49},}}},
+        npcs={
+            {name="Yarlyn Amberstill", id=1263, currencies={{"gold", .2}}, locations={{continent="Eastern Kingdoms", zone="Dun Morogh", mapID=27, coords={{70.6,49}}}}},
+        },
         possbileBreeds={"B/B", "S/S", "S/B"},
         baseStats={8, 7, 9},
+        acquisition={
+            [1]={"Purchase a %s from a vendor.", "i8497"},
+            [2]={"Use the item to receive the pet."}
+        }
     }, 
     [74]={
         name="Albino Snake",
@@ -614,14 +647,16 @@ PETS.all ={
         source="Vendor",
         flavor="A favored companion of Kirin Tor magi, this reptile makes one wonder whether it's truly a snake or something else altogether.",
         icon="136040",
-        currency="gold",
-        npcs={{name="Breanni"}},
-        locations={
-            {continent="Northrend", zone="Dalaran (Northrend)", mapID=4395, mapFloor=1, coords={{58.6,39.6},}},
-            {continent="Broken Isles", zone="Dalaran (Broken Isles)"}
+        npcs={
+            {name="Breanni", id=96479, currencies={{"gold", 40}}, locations={{continent="Northrend", zone="Dalaran", mapID=41, mapFloor=1, coords={{58.6,39.6}}}}},
         },
         possbileBreeds={"S/B"},
         baseStats={7.5, 7.5, 9},
+        acquisition={
+            {"Purchase a %s from a vendor.", "i44822"},
+            {"Use the item to receive the pet."},
+            {"Breanni is located in both Northrend and Broken Isles Dalaran timelines."}
+        }
     }, 
     [75]={
         name="Black Kingsnake",
@@ -636,11 +671,15 @@ PETS.all ={
         source="Vendor",
         flavor="Xan'tish fearlessly tracks, captures, and trains these noble snakes so they will aid their comrades in battle.",
         icon="136040",
-        currency="gold",
-        npcs={{name="Xan'tish"}},
-        locations={{continent="Kalimdor", zone="Orgrimmar", mapID=85, coords={{32,66},{32.4,63.2},{32.4,65.2},{32.6,67},{33.6,63.8},{33.8,68},{34.2,64.6},{34.2,66.6},}}},
+        npcs={
+            {name="Xan'tish", id=8404, currencies={{"gold", .4750}}, locations={{continent="Kalimdor", zone="Orgrimmar", mapID=85, coords={{32,66},{32.4,63.2},{32.4,65.2},{32.6,67},{33.6,63.8},{33.8,68},{34.2,64.6},{34.2,66.6}}}}},
+        },
         possbileBreeds={"S/S"},
         baseStats={7.5, 8.5, 8},
+        acquisition={
+            [1]={"Purchase a %s from a vendor.", "i10360"},
+            [2]={"Use the item to receive the pet."}
+        }
     }, 
     [77]={
         name="Brown Snake",
@@ -655,11 +694,15 @@ PETS.all ={
         source="Vendor",
         flavor="The brown snake is native to Horde-controlled territories. It seems unremarkable until its victims are within range.",
         icon="136040",
-        currency="gold",
-        npcs={{name="Xan'tish"}},
-        locations={{continent="Kalimdor", zone="Orgrimmar", mapID=85, coords={{32.2,63.6},{32.2,66.2},{32.4,65.4},{32.4,66.8},{32.8,67.8},{33.6,63.8},{33.6,67.6},{34.2,67.4},{34.4,65.2},{34.4,66},}}},
+        npcs={
+            {name="Xan'tish", id=8404, currencies={{"gold", .5}}, locations={{continent="Kalimdor", zone="Orgrimmar", mapID=85, coords={{32,66},{32.4,63.2},{32.4,65.2},{32.6,67},{33.6,63.8},{33.8,68},{34.2,64.6},{34.2,66.6}}}}},
+        },
         possbileBreeds={"B/B"},
         baseStats={8, 8, 8},
+        acquisition={
+            [1]={"Purchase a %s from a vendor.", "i10361"},
+            [2]={"Use the item to receive the pet."}
+        }
     }, 
     [78]={
         name="Crimson Snake",
@@ -674,11 +717,15 @@ PETS.all ={
         source="Vendor",
         flavor="The crimson snake is favored among the Darkspear trolls for not only its vicious nature, but also its steadfast loyalty.",
         icon="136040",
-        currency="gold",
-        npcs={{name="Xan'tish"}},
-        locations={{continent="Kalimdor", zone="Orgrimmar", mapID=85, coords={{31.8,65.2},{32.2,63.6},{32.2,66.2},{32.4,66.8},{32.8,67.4},{33.2,63.8},{33.2,67.8},{34,64.4},{34,64.6},{34,66.8},{34,67.8},{34.4,66},{34.6,65.2},}}},
+        npcs={
+            {name="Xan'tish", id=8404, currencies={{"gold", .5}}, locations={{continent="Kalimdor", zone="Orgrimmar", mapID=85, coords={{32,66},{32.4,63.2},{32.4,65.2},{32.6,67},{33.6,63.8},{33.8,68},{34.2,64.6},{34.2,66.6}}}}},
+        },
         possbileBreeds={"H/B"},
         baseStats={7.5, 8.5, 8},
+        acquisition={
+            [1]={"Purchase a %s from a vendor.", "i10392"},
+            [2]={"Use the item to receive the pet."}
+        }
     }, 
     [83]={
         name="Mechanical Chicken",

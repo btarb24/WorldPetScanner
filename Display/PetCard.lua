@@ -63,12 +63,17 @@ local function GetLineText(lineContent)
     for idx, entry in ipairs(lineContent) do
         if (idx > 1) then
             local type = strsub(entry, 1, 1)
-            local id = tonumber(strsub(entry, 2))
             if (type == "i") then
+                local id = tonumber(strsub(entry, 2))
                 local link = select(2, GetItemInfo(id))
                 if not link then
                     link = select(2, GetItemInfo(id))
                 end
+                table.insert(links, link)
+            elseif(type == "n") then
+                local detail = strsub(entry, 2)
+                local id, name = strsplit(":", detail)
+                local link = string.format("|Hnpc:%s|h|cffb3b3b3%s|r|h", id, name)
                 table.insert(links, link)
             end
         end
@@ -249,6 +254,7 @@ local function UpdateAbility(texture, abilityID, petType)
         end
     )
 end
+
 
 local function CreateTab(idNum, name, tabButtonWidth)
     tabButtonWidth = 96
@@ -576,23 +582,42 @@ local function CreateWindow()
     tab2.content.sourceLbl:SetPoint("TOPLEFT", tab2.content.scrollFrame.child, "TOPLEFT")
     tab2.content.sourceLbl:SetText("SourceType:")
 
-    local hyperlinkEnter = function(frame, link, text)
+    local hyperlinkEnter = function(frame, link, text, region)
         GameTooltip:SetOwner(frame, "ANCHOR_NONE")
         GameTooltip:ClearLines()
-        GameTooltip:SetPoint("BOTTOM",frame,"TOP",0,6)
+        GameTooltip:SetPoint("BOTTOM",region,"TOP",0,6)
 
-        GameTooltip:SetHyperlink(link)
+        local linkType = strsplit(":", link)
+
+        if (linkType == "npc") then
+            GameTooltip:SetText("Click for WowHead link")
+        else
+            GameTooltip:SetHyperlink(link)
+        end
+
         GameTooltip:Show()
     end
+    local hyperlinkClick = function(self, link, text, button, region, left, bottom, width, height)
+        local type, id = strsplit(":", link)
+        if (type== "item") then
+            DISPLAY.LinkWindow:Show(text, "https://www.wowhead.com/item=" .. id)
+        elseif (type == "npc") then
+            DISPLAY.LinkWindow:Show(text, "https://www.wowhead.com/npc=" .. id)
+        else
+            ChatFrame_OnHyperlinkShow(self, link, text, button, region, left, bottom, width, height)
+        end
+    end
+
     tab2.content.scrollFrame:SetHyperlinksEnabled(true)
-    tab2.content.scrollFrame:SetScript("OnHyperlinkClick", ChatFrame_OnHyperlinkShow)
     tab2.content.scrollFrame:SetScript("OnHyperlinkEnter", hyperlinkEnter)
     tab2.content.scrollFrame:SetScript("OnHyperlinkLeave", GameTooltip_HideResetCursor)
+    tab2.content.scrollFrame:SetScript("OnHyperlinkClick", hyperlinkClick)
     
     tab2.content.scrollFrame.child:SetHyperlinksEnabled(true)
-    tab2.content.scrollFrame.child:SetScript("OnHyperlinkClick", ChatFrame_OnHyperlinkShow)
+    tab2.content.scrollFrame.child.propagateHyperlinksToParent = true
     tab2.content.scrollFrame.child:SetScript("OnHyperlinkEnter", hyperlinkEnter)
     tab2.content.scrollFrame.child:SetScript("OnHyperlinkLeave", GameTooltip_HideResetCursor)
+    tab2.content.scrollFrame.child:SetScript("OnHyperlinkClick", hyperlinkClick)
 end
 
 local function UpdateWindow(pet, locationIdx)
@@ -737,7 +762,6 @@ local function UpdateWindow(pet, locationIdx)
  --TAB 2
     local requestedLocation, showLocationList = GetLocation(pet, locationIdx)
 
-    f.tab2.content.scrollFrame.pet = pet
     local mapFrame = f.tab2.content.mapFrame
     local lastElement
 
@@ -797,7 +821,15 @@ local function UpdateWindow(pet, locationIdx)
                 end
             end
 
-            f.tab2.content.mapLbl:SetText(C_Map.GetMapInfo(requestedLocation.mapID).name)
+            local mapName = string.format("%s > %s", requestedLocation.continent, requestedLocation.zone)
+            if (requestedLocation.area) then
+                mapName = string.format("%s > %s", mapName, requestedLocation.area)
+            end
+            if (requestedLocation.mapFloor) then
+                mapName = string.format("%s [f. %d]", mapName, requestedLocation.mapFloor)
+            end
+
+            f.tab2.content.mapLbl:SetText(mapName)
         end
 
         if (showLocationList) then
@@ -905,7 +937,7 @@ local function UpdateWindow(pet, locationIdx)
    --SEPARATOR LINE 
     local lineFrame = DISPLAY_UTIL:AcquireFrame(PAPetCard, f.tab2.content.scrollFrame.child)
     lineFrame:SetPoint("LEFT", f.tab2.content.scrollFrame.child, "LEFT", 5,0)
-    lineFrame:SetPoint("RIGHT", f.tab2.content.scrollFrame.child, "RIGHT", -35,0)
+    lineFrame:SetPoint("RIGHT", f.tab2.content.scrollFrame.child, "RIGHT", -5,0)
     lineFrame:SetPoint("TOP", priorBottom, "BOTTOM", 0, -10)
     lineFrame:SetHeight(1)
 

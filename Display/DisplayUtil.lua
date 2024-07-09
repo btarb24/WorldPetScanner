@@ -179,16 +179,16 @@ function DISPLAY_UTIL:AcquireMultiValueFont(poolOwner, controlParent)
     end
 
     local t = controlParent.multiValueFontPool:Acquire()
-    t:SetTextColor(.7, .7, .7)
+    t:SetAlpha(.7)
     t:SetScript("OnEnter",
         function(self)
-            self:SetTextColor(1,1,1)
+            self:SetAlpha(1)
             self:SetShadowColor(1,1,1, .4)
         end
     )
     t:SetScript("OnLeave",
         function(self)
-            self:SetTextColor(.7, .7, .7)
+            self:SetAlpha(.7)
             self:SetShadowColor(0,0,0, 0)
         end
     )
