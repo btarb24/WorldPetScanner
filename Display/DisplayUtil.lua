@@ -123,13 +123,45 @@ function DISPLAY_UTIL:AcquireHighlightFont(poolOwner, controlParent)
     return t
 end
 
+function DISPLAY_UTIL:AcquireSubduedFont(poolOwner, controlParent)
+    if (not controlParent.subduedFontPool) then
+        controlParent.subduedFontPool = CreateFontStringPool(controlParent, "OVERLAY", nil, "GameFontHighlight")
+        AddToPoolOwner(poolOwner, controlParent.subduedFontPool)
+    end
+
+    local t = controlParent.subduedFontPool:Acquire()
+    t:SetTextColor(.7, .7, .7)
+    t:SetScript("OnEnter", nil)
+    t:SetScript("OnLeave", nil)
+    t:Show()
+    return t
+end
+
+function DISPLAY_UTIL:AcquireSmallerSubduedFont(poolOwner, controlParent)
+    if (not controlParent.smallerSubduedFontPool) then
+        controlParent.smallerSubduedFontPool = CreateFontStringPool(controlParent, "OVERLAY", nil, "GameFontHighlight")
+        AddToPoolOwner(poolOwner, controlParent.smallerSubduedFontPool)
+    end
+
+    local t = controlParent.smallerSubduedFontPool:Acquire()
+    if (not t:GetText()) then
+        local fontFile, fontHeight, fontFlags = t:GetFont()
+        t:SetFont(fontFile, fontHeight-2, fontFlags)
+    end
+    t:SetTextColor(.7, .7, .7)
+    t:SetScript("OnEnter", nil)
+    t:SetScript("OnLeave", nil)
+    t:Show()
+    return t
+end
+
 function DISPLAY_UTIL:AcquireSmallerHighlightFont(poolOwner, controlParent)
     if (not controlParent.smallerHighlightFontPool) then
         controlParent.smallerHighlightFontPool = CreateFontStringPool(controlParent, "OVERLAY", nil, "GameFontHighlight")
         AddToPoolOwner(poolOwner, controlParent.smallerHighlightFontPool)
     end
 
-    local t = controlParent.smallerHighlightFontPool:Acquire()    
+    local t = controlParent.smallerHighlightFontPool:Acquire()
     if (not t:GetText()) then
         local fontFile, fontHeight, fontFlags = t:GetFont()
         t:SetFont(fontFile, fontHeight-2, fontFlags)

@@ -285,8 +285,7 @@ PETS.all ={
         source="Drop",
         flavor="Favored pet of the Defias pirates, this colorful bird is handy for remembering passwords, grocery lists, and cracker recipes.",
         icon="132925",
-        chance=2,
-        npcs={{name="Defias Pirate", id=48522, locations={{continent="Eastern Kingdoms", zone="Westfall", area="The Deadmines", mapID=292, mapFloor=2, coords={{52.2,46.4},{52.2,47},{52.2,47.6},{52.4,45.2},{52.6,44.6},{53.2,41.8},{53.4,43},{53.4,43.6},{53.6,43},{53.6,43.6},{53.6,44.2},{53.6,44.6},{53.6,44.8},{53.8,45.6},{54,33.6},{54,55.4},{54.2,32.6},{54.2,33},{54.2,54.4},{54.4,31.2},{54.4,32},{54.6,31.4},{54.8,31.6},{54.8,38.4},{54.8,39},{55,39.6},{55,52.6},{55.2,34.4},{55.2,35},{55.2,42.4},{55.2,42.6},{55.4,33.2},{55.4,33.8},{55.4,43.2},{55.6,33.2},{55.6,33.6},{55.6,43.2},{55.6,43.8},{55.8,26.4},{56,26.4},{56,27},{56,28.2},{56,28.8},{56.2,26.6},{56.2,27.6},{56.6,27.8}}}},}},        
+        npcs={{name="Defias Pirate", id=48522, chance=2, locations={{continent="Eastern Kingdoms", zone="Westfall", area="The Deadmines", mapID=292, mapFloor=2, coords={{52.2,46.4},{52.2,47},{52.2,47.6},{52.4,45.2},{52.6,44.6},{53.2,41.8},{53.4,43},{53.4,43.6},{53.6,43},{53.6,43.6},{53.6,44.2},{53.6,44.6},{53.6,44.8},{53.8,45.6},{54,33.6},{54,55.4},{54.2,32.6},{54.2,33},{54.2,54.4},{54.4,31.2},{54.4,32},{54.6,31.4},{54.8,31.6},{54.8,38.4},{54.8,39},{55,39.6},{55,52.6},{55.2,34.4},{55.2,35},{55.2,42.4},{55.2,42.6},{55.4,33.2},{55.4,33.8},{55.4,43.2},{55.6,33.2},{55.6,33.6},{55.6,43.2},{55.6,43.8},{55.8,26.4},{56,26.4},{56,27},{56,28.2},{56,28.8},{56.2,26.6},{56.2,27.6},{56.6,27.8}}}},}},        
         possbileBreeds={"S/B"},
         baseStats={9, 8, 7},
         acquisition={
@@ -308,14 +307,17 @@ PETS.all ={
         source="Vendor",
         flavor="Favored pet of the goblins of Booty Bay, this colorful bird is renowned for its ability to count coins, tally budgets, and lie about contracts.",
         icon="132924",
-        currency="gold",
         npcs={
-            {name="Narkk"},
-            {name="Harry No-Hooks"}
+            {name="Harry No-Hooks", id=44179, currencies={{"gold", .36}}, locations={{continent="Eastern Kingdoms", zone="The Cape of Stranglethorn", mapID=210, coords={{46.6,93.6}}}}},
+            {name="Narkk", id=2663, currencies={{"gold", .38}}, locations={{continent="Eastern Kingdoms", zone="The Cape of Stranglethorn", mapID=210, coords={{42.6,69.2}}}}},
+            {name="Dealer Rashaad", id=20980, currencies={{"gold", .4}}, locations={{continent="Outland", zone="Netherstorm", mapID=109, coords={{43.4,29.2},}}}},
         },
-        locations={{continent="Eastern Kingdoms", zone="The Cape of Stranglethorn", mapID=210, coords={{42.6,69},}}},
         possbileBreeds={"B/B", "S/S"},
         baseStats={8.5, 8, 7.5},
+        acquisition={
+            [1]={"Purchase a %s from a vendor.", "i8495"},
+            [2]={"Use the item to receive the pet."}
+        }
     }, 
     [52]={
         name="Ancona Chicken",
@@ -330,11 +332,16 @@ PETS.all ={
         source="Vendor",
         flavor="It thinks you taste like chicken too.",
         icon="135996",
-        currency="gold",
-        npcs={{name="Plucky Johnson"}},
-        locations={{continent="Kalimdor", zone="Thousand Needles", mapID=64, coords={{85.6,91.6},}}},
+        npcs={
+            {name="Plucky Johnson", id=44135, currencies={{"gold", 1}}, locations={{continent="Kalimdor", zone="Thousand Needles", mapID=64, coords={{84.4,91.4},{85.2,91.6},{85.4,91.4},{85.6,91.2},{85.6,91.6}}}}},
+            {name="Col. Tenders", id=141009, currencies={{"gold", .85}}, locations={{continent="Kul Tiras", zone="Boralus", mapID=1161, coords={{60,22.4}}}}},
+        },
         possbileBreeds={"B/B", "P/B", "S/B", "H/B"},
         baseStats={8, 8, 8},
+        acquisition={
+            [1]={"Purchase a %s from a vendor.", "i11023"},
+            [2]={"Use the item to receive the pet."}
+        }
     }, 
     [55]={
         name="Undercity Cockroach",
@@ -349,11 +356,19 @@ PETS.all ={
         source="Vendor",
         flavor="The cockroach is usually an impulse buy. Its owners have a hard time parting with it even after numerous attempts.",
         icon="294474",
-        currency="gold",
-        npcs={{name="Dealer Rashaad"}},
-        locations={{continent="Outland", zone="Netherstorm"}},
+        npcs={
+            {name="Dealer Rashaad", id=20980, currencies={{"gold", .5}}, locations={{continent="Outland", zone="Netherstorm", mapID=862, coords={{43.4,29.2},}}}},
+            {name="Bugcatcher Cal'yoon", id=140137, currencies={{"gold", .5}}, locations={{continent="Zandalar", zone="Zuldazar", mapID=210, coords={{77,15.8}}}}},
+            {name="Jeremiah Payson", id=130975, currencies={{"gold", .5}}, locations={{continent="Eastern Kingdoms", zone="Undercity", mapID=90, coords={{67,47},{67.4,44.4},{67.4,44.6}}}}},
+            {name="Jeremiah Payson", id=186073, currencies={{"gold", .5}}, locations={{continent="Eastern Kingdoms", zone="Tirisfal Glades", mapID=2070, coords={{65.2,66.8}}}}},
+            {name="Jeremiah Payson", id=186073, currencies={{"gold", .4}}, locations={{continent="Kalimdor", zone="Orgrimmar ", mapID=85, coords={{54.4,89.4},{54.4,89.6},{54.6,89.4},{54.6,89.6},{54.6,90.6}}}}},
+        },
         possbileBreeds={"B/B", "S/S", "H/H", "H/S"},
         baseStats={8.5, 7, 8.5},
+        acquisition={
+            [1]={"Purchase a %s from a vendor.", "i10393"},
+            [2]={"Use the item to receive the pet."}
+        }
     }, 
     [56]={
         name="Dark Whelpling",
@@ -368,15 +383,21 @@ PETS.all ={
         source="Drop",
         flavor="Hopes that someday it can grow up to destroy villages, just like mommy.",
         icon="134154",
-        npcs={{name="Whelplings"}},
-        locations={
-            {continent="Eastern Kingdoms", zone="Wetlands", mapID=56, coords={{64.6,50.6},}},
-            {continent="Kalimdor", zone="Dustwallow Marsh", mapID=70, coords={{47.6,69.8},}},
-            {continent="Eastern Kingdoms", zone="Badlands", mapID=15, coords={{73.8,47.6},}},
-            {continent="Eastern Kingdoms", zone="Burning Steppes"}
+        npcs={
+            {name="Searing Whelp", id=4324, chance=.16, locations={{continent="Kalimdor", zone="Dustwallow Marsh", mapID=70, coords={{42,66.6},{42.2,65.8},{42.4,65.4},{42.8,68.4},{43,69.2},{43.4,64.8},{43.4,66},{43.6,66.6},{43.8,64.4},{43.8,64.6},{43.8,66.4},{43.8,78.6},{44,78},{44.4,69.2},{44.4,69.6},{44.4,74.8},{44.6,64.8},{44.6,68.8},{44.8,64.2},{44.8,75.4},{45,67.4},{45,67.8},{45,71.4},{45,71.8},{45,78.8},{45.2,75.8},{45.6,65},{45.6,73.6},{45.8,68.8},{45.8,73.2},{46,67.4},{46,67.6},{46,72.4},{46.2,80.4},{46.6,66},{46.6,68},{46.6,71.4},{46.6,80.4},{46.8,77},{47.4,66.6},{47.4,69.8},{47.6,70.4},{47.8,81.8},{48,81},{48.4,78.4},{48.4,78.8},{48.6,70},{48.6,78.6},{48.8,66.6},{48.8,78.4},{49,70.6},{49.2,66.4},{49.2,67.6},{49.8,69.4},{50,69.6},{50.4,74.6},{50.6,74.4},{50.6,74.6},{51.4,71.2},{51.8,67.8},{52.4,70},{52.6,70},{55,83.4},{55,84}}}}},
+            {name="Searing Hatchling", id=4323, chance=.12, locations={{continent="Kalimdor", zone="Dustwallow Marsh", mapID=70, coords={{42.2,65.4},{42.2,65.8},{43,69},{43.2,64.4},{43.4,64.8},{43.4,67},{43.4,80.6},{43.6,64.6},{43.6,66.6},{43.6,79.8},{43.8,64.4},{43.8,66.2},{44,69.8},{44,78},{44.2,69},{44.4,76.8},{44.8,75.4},{45,64.6},{45,66},{45,67.4},{45,68.6},{45,78.4},{45,78.6},{45.2,67.6},{45.2,72},{45.2,75.8},{45.4,64.4},{45.6,64.8},{45.6,71.6},{45.8,67.2},{45.8,69},{45.8,73.6},{46,73.4},{46.2,80.2},{46.4,67.6},{46.6,66},{46.6,67.6},{46.6,77.2},{46.8,71.4},{46.8,71.6},{46.8,80.4},{47.2,69.4},{47.4,66.6},{47.4,69.8},{47.4,81.6},{47.6,82.2},{47.8,66.2},{48,80.6},{48.2,78.4},{48.4,78.6},{48.6,70.8},{48.6,78.6},{48.8,66.2},{48.8,70},{48.8,78.2},{49,66.8},{49.2,67.6},{49.8,69.4},{50.6,74.4},{50.6,74.6},{51.2,71.4},{51.6,67.8},{53.8,82.2},{54,70.6},{54.8,72.8}}}}},
+            {name="Ebon Whelp", id=130975, chance=.09, locations={{continent="Eastern Kingdoms", zone="Wetlands", mapID=56, coords={{60.4,41.2},{60.4,47},{60.4,48.4},{60.4,48.6},{60.6,41.2},{61,47.2},{61,48.4},{61.2,40},{61.2,48.6},{61.4,51.8},{61.8,41.2},{61.8,47.4},{62,50},{62.4,48.4},{62.4,48.6},{62.6,48.4},{62.6,48.6},{63.2,51.4},{63.2,51.6},{63.4,41.2},{63.4,49.8},{63.6,41.2},{63.6,49.6},{63.8,48.4},{63.8,48.6},{64.2,41.8},{64.4,50.6},{64.4,53},{64.6,50.4},{64.6,50.6},{65,42.4},{65,42.6},{65.2,52},{65.2,54.2},{65.2,54.6},{65.8,55.2},{66,53.4},{66,53.6},{66.4,51.8},{66.6,51.8},{66.8,49.8},{67.6,52.8},{67.8,45.2},{70.6,48.4}}}}},
+            {name="Scalding Whelp", id=2725, chance=.09, locations={{continent="Eastern Kingdoms", zone="Badlands", mapID=15, coords={{65.4,50.4},{65.4,50.6},{65.6,50.4},{65.8,50.6},{66.2,47.4},{66.4,48.4},{66.4,49},{66.4,52.2},{66.4,52.6},{66.6,48.8},{66.6,52.4},{66.6,52.6},{66.8,48.4},{66.8,53.8},{67.4,47},{67.4,50.4},{67.4,50.6},{67.6,47.4},{67.6,47.6},{67.6,50.4},{67.6,50.6},{67.6,53.4},{67.8,53.6},{68.4,45.4},{68.4,45.6},{68.4,48.8},{68.4,52},{68.6,45.4},{68.6,45.6},{68.6,48.4},{68.6,48.8},{68.6,52.2},{68.6,52.8},{68.8,51.4},{69.4,40.6},{69.4,43},{69.4,43.8},{69.4,47},{69.4,49.8},{69.6,40.4},{69.6,43.8},{69.8,40.8},{69.8,46.4},{69.8,47},{69.8,50.2},{69.8,50.6},{70,43.4},{70.4,47.8},{70.8,38.4},{70.8,39},{70.8,42.6},{70.8,49},{71,48.4},{71.2,41.8},{71.2,45},{71.2,45.6},{71.4,39.8},{71.4,49.6},{71.6,45.4},{71.6,46.2},{71.8,38.6},{71.8,40.2},{71.8,47.4},{71.8,47.6},{71.8,49.4},{72.2,40.8},{72.2,43.4},{72.2,43.6},{72.6,40.6},{73,42.2},{73,45.4},{73,48.4},{73,48.8},{73.2,42.6},{73.2,45.6},{73.8,46.4},{73.8,47},{73.8,47.6}}}}},
+            {name="Nyxondra's Broodling", id=46916, chance=.08, locations={{continent="Eastern Kingdoms", zone="Badlands", mapID=15, coords={{8,40.8},{8.2,41.8},{8.4,40.2},{8.4,43},{8.8,41.8},{8.8,42.8},{9,38.2},{9,38.6},{9.2,44.4},{9.4,36.4},{9.4,37.4},{9.4,39.8},{9.4,41.4},{9.6,36.2},{9.6,40.2},{9.6,41.4},{9.6,46},{9.8,46.6},{10,34.8},{10,42},{10,42.6},{10,43.8},{10.2,37.6},{10.2,38.6},{10.4,37.2},{10.6,38.6},{10.6,43.8},{10.8,37},{10.8,40},{10.8,41.6},{11,38.2},{11.2,41},{11.6,38.4},{11.6,39.4},{11.6,41.2},{11.8,39.8},{12,36.8},{12.6,39.4},{12.6,39.8},{12.8,37.4},{12.8,37.6}}}}},
+            {name="Raging Whelp", id=46914, chance=.07, locations={{continent="Eastern Kingdoms", zone="Badlands", mapID=15, coords={{22.8,42.2},{23,43.4},{23,48.4},{23.2,46.6},{23.4,40.4},{23.4,40.6},{23.4,44},{23.4,45.4},{23.4,46},{23.4,48.8},{23.6,40.4},{23.6,43.4},{23.6,43.6},{23.6,47},{23.6,48.4},{23.6,48.6},{23.8,40.6},{24,45.6},{24.2,45.4},{24.6,40.4},{24.6,45},{24.6,45.6},{24.6,47.8},{24.8,40.6},{25.2,42.4},{25.2,43.4},{25.2,43.6},{25.4,47.2},{25.4,49.2},{25.6,48},{25.6,49.2},{25.8,42.2},{25.8,42.8},{26,45.6},{26.2,38.8},{26.2,41},{26.2,45.4},{26.2,46.8},{26.4,38.4},{26.4,39.6},{26.4,44.4},{26.4,49.8},{26.6,39.2},{26.6,40.4},{26.8,44.2},{27,46.8},{27,50},{27.2,41.6},{27.2,49.2},{27.4,41.4},{27.4,44.6},{27.4,45.8},{27.6,41.2},{27.6,42.4},{27.6,44.2},{27.6,45.6},{27.8,40.4},{28,45.2},{28.2,42.8},{28.4,38.4},{28.4,46.6},{28.6,40.4},{28.6,44.6},{28.6,45.6},{28.8,46.8},{29,39},{29.2,38.4},{29.2,41.6},{29.2,43.4},{29.2,44.4},{29.4,40.8},{29.6,43.2},{29.6,43.6},{29.8,41},{30,47},{30.2,39.6},{30.2,45.6},{30.2,48},{30.4,41.8},{30.4,45},{30.6,38.6},{30.6,41.2},{30.6,42.2},{30.6,45.4},{30.8,40},{30.8,45.6},{31,43.6},{31.2,43.4},{32,41.8},{32.2,38.8},{32.2,39.6},{32.2,41.4},{32.2,43.2},{32.4,44.2},{32.4,44.6},{32.6,39},{32.6,39.8},{32.6,44.4},{33.2,41.4},{33.4,41.6},{33.4,45.2},{33.6,41},{33.6,45.6},{34,43.8},{34.4,39.4},{34.4,39.6},{34.4,41.8},{34.4,43.2},{34.6,39.4},{34.6,39.8},{34.6,42.4},{34.6,43},{36,42.8},{36.2,42.4}}}}},
+            {name="Flamescale Broodling", id=7049, chance=.08, locations={{continent="Eastern Kingdoms", zone="Burning Steppes", mapID=36, coords={{14.2,66.6},{14.4,65.4},{14.4,65.6},{14.4,67.6},{14.6,67.6},{14.8,64.8},{15,67},{15,69.4},{15,69.6},{15.4,66.2},{15.6,66.4},{15.6,69.4},{16.4,64.4},{16.4,64.8},{16.4,68.2},{16.6,64.4},{16.6,64.8},{16.8,62.2},{16.8,67.8},{17.2,62.8},{17.4,66},{18.4,59.4},{18.4,59.6},{18.6,59.6},{19.4,57.2},{19.4,57.6},{19.6,57},{19.6,57.6},{20,60.6},{20.4,60.4},{20.6,60.6},{20.8,59.4},{20.8,60.2},{23.2,63},{23.4,60},{23.6,64.4},{23.6,68},{23.8,63},{23.8,64.6},{23.8,68.6},{24.2,59.4},{24.2,59.8},{24.4,62.4},{24.6,59.6},{24.6,62},{24.8,66.4},{25.4,65.2},{25.6,65.2},{25.6,65.6}}}}},
         },
         possbileBreeds={"P/S"},
         baseStats={8.5, 9, 6.5},
+        acquisition={
+            [1]={"Kill whelps in various zones for a .07% to .16% chance."},
+            [2]={"Use the %s to receive the pet.", "i10822"}
+        }
     }, 
     [57]={
         name="Azure Whelpling",
@@ -391,9 +412,14 @@ PETS.all ={
         source="World Drop",
         flavor="Like other members of the blue dragonflight, these whimsical little critters display an affinity to arcane magic.",
         icon="134155",
-        locations={{continent="Kalimdor", zone="Winterspring", mapID=83, coords={{68.6,50.2},}}},
+        locations={{continent="Kalimdor", zone="Winterspring", mapID=83}},
         possbileBreeds={"P/P"},
         baseStats={8.5, 7.5, 8},
+        chance = .01,
+        acquisition={
+            [1]={"Drops from any in Winterspring. Has a .01% chance."},
+            [2]={"Use the %s to receive the pet.", "i34535"}
+        }
     }, 
     [58]={
         name="Crimson Whelpling",
@@ -408,9 +434,14 @@ PETS.all ={
         source="World Drop",
         flavor="Hailing from the Wetlands, this young dragon is just learning how to hunt, breathe fire, and go on cute destructive rampages.",
         icon="134158",
-        locations={{continent="Eastern Kingdoms", zone="Wetlands", mapID=56, coords={{33.2,51.6},{33.6,23},{64.6,50.6},}}},
+        locations={{continent="Eastern Kingdoms", zone="Wetlands", mapID=56}},
         possbileBreeds={"P/S"},
         baseStats={7, 9, 8},
+        chance = .01,
+        acquisition={
+            [1]={"Drops from any in the Wetlands. Has a .01% chance."},
+            [2]={"Use the %s to receive the pet.", "i8499"}
+        }
     }, 
     [59]={
         name="Emerald Whelpling",
@@ -425,10 +456,15 @@ PETS.all ={
         source="Drop",
         flavor="Once bred and raised by the green dragon Itharius, this unique breed of dragon has settled in the jungles of Feralas.",
         icon="134157",
-        npcs={{name="Noxious Whelp"}},
-        locations={{continent="Kalimdor", zone="Feralas", mapID=69, coords={{48.8,11.2},}}},
+        npcs={
+            {name="Noxious Whelp", id=39384, chance=.09, locations={{continent="Kalimdor", zone="Feralas", mapID=69, coords={{46.2,7.8},{46.4,9},{46.4,10.8},{46.8,7.6},{46.8,9.8},{47,6.8},{47.4,9},{47.4,10.8},{47.6,9.8},{47.8,6.4},{47.8,7.6},{47.8,11.6},{48.2,8.6},{48.2,10.6},{48.4,7.2},{48.6,7.2},{48.8,9},{48.8,11.2},{49.4,8.4},{49.6,8.4},{49.6,8.6},{50.4,5},{50.6,5},{51.8,5.4},{52.4,5.8},{52.6,5.8},{53.8,6.4},{53.8,11.8},{53.8,13},{54,7.4},{54,7.6},{54,10},{54,11.4},{54.4,9.4},{54.6,5.4},{54.6,6.2},{54.6,7.2}}}}},
+        },
         possbileBreeds={"H/S"},
         baseStats={8.5, 8, 7.5},
+        acquisition={
+            [1]={"Has a .09% chance to drop from Noxious Whelps."},
+            [2]={"Use the %s to receive the pet.", "i8498"}
+        }
     }, 
     [64]={
         name="Wood Frog",

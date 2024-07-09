@@ -82,29 +82,35 @@ local function GetNPCDropText(npcs, selectedNpcIdx)
         selectedNpcIdx = 1
     end
 
-    local leftDock = PAPetCardTab2.content.sourceTypeLbl
-    local topDock = PAPetCardTab2.content.sourceTypeLbl
+    local leftDock = PAPetCardTab2.content.sourceLbl
+    local topDock = PAPetCardTab2.content.sourceLbl
     for idx, npc in ipairs(npcs) do
+        local npcName
         if idx == selectedNpcIdx then
-            PAPetCardTab2.content.sourceTypeVal = DISPLAY_UTIL:AcquireHighlightFont(PAPetCard, PAPetCardTab2.content)
+            npcName = DISPLAY_UTIL:AcquireHighlightFont(PAPetCard, PAPetCardTab2.content.scrollFrame.child)
         else
-            PAPetCardTab2.content.sourceTypeVal = DISPLAY_UTIL:AcquireMultiValueFont(PAPetCard, PAPetCardTab2.content)
-            PAPetCardTab2.content.sourceTypeVal.locationIndex = idx    
-            PAPetCardTab2.content.sourceTypeVal:SetScript("OnMouseDown",
+            npcName = DISPLAY_UTIL:AcquireMultiValueFont(PAPetCard, PAPetCardTab2.content.scrollFrame.child)
+            npcName.locationIndex = idx    
+            npcName:SetScript("OnMouseDown",
                 function(self)
                     DISPLAY.PetCard:Show(PAPetCard.pet, self.locationIndex)
                 end
             )
         end
-        PAPetCardTab2.content.sourceTypeVal:SetText(npc.name)
+        npcName:SetText(npc.name)
 
-        PAPetCardTab2.content.sourceTypeVal:SetPoint("LEFT", leftDock, "RIGHT", 10, 0)
+        npcName:SetPoint("LEFT", leftDock, "RIGHT", 5, 0)
         if idx == 1 then
-            PAPetCardTab2.content.sourceTypeVal:SetPoint("TOP", leftDock, "TOP", 0, 0)
+            npcName:SetPoint("TOP", leftDock, "TOP", 0, 0)
         else
-            PAPetCardTab2.content.sourceTypeVal:SetPoint("TOP", leftDock, "BOTTOM", 0, -5)
+            npcName:SetPoint("TOP", topDock, "BOTTOM", 0, -5)
         end
-        topDock = PAPetCardTab2.content.sourceTypeVal
+
+        local detail = DISPLAY_UTIL:AcquireSmallerSubduedFont(PAPetCard, PAPetCardTab2.content.scrollFrame.child)
+        detail:SetText(string.format(" %s%% %s", npc.chance, npc.locations[1].zone))
+        detail:SetPoint("TOPLEFT", npcName, "TOPRIGHT", 0, -1)
+        topDock = npcName
+        PAPetCardTab2.content.sourceVal = npcName -- for docking of lower sections
     end
 
     return result;
@@ -115,53 +121,65 @@ local function GetVendorText(vendors, selectedVendorIdx)
         selectedVendorIdx = 1
     end
 
-    local leftDock = PAPetCardTab2.content.sourceTypeLbl
-    local topDock = PAPetCardTab2.content.sourceTypeLbl
+    local leftDock = PAPetCardTab2.content.sourceLbl
+    local topDock = PAPetCardTab2.content.sourceLbl
     for idx, vendor in ipairs(vendors) do
+        local vendorName
         if idx == selectedVendorIdx then
-            PAPetCardTab2.content.sourceTypeVal = DISPLAY_UTIL:AcquireHighlightFont(PAPetCard, PAPetCardTab2.content)
+            vendorName = DISPLAY_UTIL:AcquireHighlightFont(PAPetCard, PAPetCardTab2.content.scrollFrame.child)
         else
-            PAPetCardTab2.content.sourceTypeVal = DISPLAY_UTIL:AcquireMultiValueFont(PAPetCard, PAPetCardTab2.content)
-            PAPetCardTab2.content.sourceTypeVal.locationIndex = idx    
-            PAPetCardTab2.content.sourceTypeVal:SetScript("OnMouseDown",
+            vendorName = DISPLAY_UTIL:AcquireMultiValueFont(PAPetCard, PAPetCardTab2.content.scrollFrame.child)
+            vendorName.locationIndex = idx    
+            vendorName:SetScript("OnMouseDown",
                 function(self)
                     DISPLAY.PetCard:Show(PAPetCard.pet, self.locationIndex)
                 end
             )
         end
-        PAPetCardTab2.content.sourceTypeVal:SetText(vendor.name)
+        vendorName:SetText(vendor.name)
 
-        PAPetCardTab2.content.sourceTypeVal:SetPoint("LEFT", leftDock, "RIGHT", 10, 0)
+        vendorName:SetPoint("LEFT", leftDock, "RIGHT", 5, 0)
         if idx == 1 then
-            PAPetCardTab2.content.sourceTypeVal:SetPoint("TOP", leftDock, "TOP", 0, 0)
+            vendorName:SetPoint("TOP", leftDock, "TOP", 0, 0)
         else
-            PAPetCardTab2.content.sourceTypeVal:SetPoint("TOP", leftDock, "BOTTOM", 0, -5)
+            vendorName:SetPoint("TOP", topDock, "BOTTOM", 0, -5)
         end
-        topDock = PAPetCardTab2.content.sourceTypeVal
+        topDock = vendorName
 
         local formerItem
+        local money
         for currencyIdx, currency in ipairs(vendor.currencies) do
             local currencyVal
             if currency[1] == "gold" then
-                local money = DISPLAY_UTIL:AcquireHighlightFont(PAPetCard, PAPetCardTab2.content)
-                money:SetPoint("TOPLEFT", PAPetCardTab2.content.sourceTypeVal, "TOPRIGHT", 3, 0)
-                local moneyText = string.format("(%s)",GetCoinTextureString(currency[2]*10000))
+                money = DISPLAY_UTIL:AcquireHighlightFont(PAPetCard, PAPetCardTab2.content.scrollFrame.child)
+                money:SetPoint("TOPLEFT", vendorName, "TOPRIGHT", 3, 0)
+                local moneyText = string.format("(%s)", C_CurrencyInfo.GetCoinTextureString(currency[2]*10000), 10)
                 money:SetText(moneyText)
             else
-                local item = DISPLAY_UTIL:AcquireHighlightFont(PAPetCard, PAPetCardTab2.content)
+                local item = DISPLAY_UTIL:AcquireHighlightFont(PAPetCard, PAPetCardTab2.content.scrollFrame.child)
                 local itemLink = select(2, GetItemInfo(currency[1]))
                 local currencyVal = string.format("%dx%s",currency[2], itemLink)
                 item:SetText(currencyVal)
                 if formerItem then
-                    item:SetPoint("TOPLEFT", PAPetCardTab2.content.sourceTypeVal, "BOTTOMLEFT", 0, -3)
+                    item:SetPoint("TOPLEFT", vendorName, "BOTTOMLEFT", 0, -3)
                     
                 else
-                    item:SetPoint("LEFT", PAPetCardTab2.content.sourceTypeVal, "LEFT", 15, 0)
-                    item:SetPoint("TOP", PAPetCardTab2.content.sourceTypeVal, "BOTTOM", 15, -3)
+                    item:SetPoint("LEFT", vendorName, "LEFT", 15, 0)
+                    item:SetPoint("TOP", vendorName, "BOTTOM", 15, -3)
                 end
                 formerItem = item
             end
         end
+
+        local location = DISPLAY_UTIL:AcquireSmallerSubduedFont(PAPetCard, PAPetCardTab2.content.scrollFrame.child)
+        location:SetText(vendor.locations[1].zone)
+        if (money) then
+            location:SetPoint("TOPLEFT", money, "TOPRIGHT", 3, -1)
+        else
+            location:SetPoint("TOPLEFT", vendorName, "TOPRIGHT", 3, -1)
+        end
+
+        PAPetCardTab2.content.sourceVal = vendorName -- for docking of lower sections
     end
 
     return result;
@@ -552,24 +570,29 @@ local function CreateWindow()
     tab2.content.scrollFrame.ScrollBar:Raise()
     tab2.content.scrollFrame.child = CreateFrame("Frame", nil, tab2.content.scrollFrame)
     tab2.content.scrollFrame:SetScrollChild(tab2.content.scrollFrame.child)
+    tab2.content.scrollFrame.child:SetWidth(DISPLAY.PetCard.winWidth - 50)
 
-    tab2.content.sourceTypeLbl = tab2.content.scrollFrame:CreateFontString(nil, "ARTWORK", "GameFontNormal")
-    tab2.content.sourceTypeLbl:SetPoint("TOPLEFT", tab2.content.scrollFrame, "TOPLEFT")
-    tab2.content.sourceTypeLbl:SetText("SourceType:")
+    tab2.content.sourceLbl = tab2.content.scrollFrame.child:CreateFontString(nil, "ARTWORK", "GameFontNormal")
+    tab2.content.sourceLbl:SetPoint("TOPLEFT", tab2.content.scrollFrame.child, "TOPLEFT")
+    tab2.content.sourceLbl:SetText("SourceType:")
 
-    tab2.content.scrollFrame:SetHyperlinksEnabled(true)
-    tab2.content.scrollFrame:SetScript("OnHyperlinkClick", ChatFrame_OnHyperlinkShow)
-    tab2.content.scrollFrame:SetScript("OnHyperlinkEnter", function(frame, link, text)
+    local hyperlinkEnter = function(frame, link, text)
         GameTooltip:SetOwner(frame, "ANCHOR_NONE")
         GameTooltip:ClearLines()
         GameTooltip:SetPoint("BOTTOM",frame,"TOP",0,6)
 
         GameTooltip:SetHyperlink(link)
         GameTooltip:Show()
-    end)
-    tab2.content.scrollFrame:SetScript("OnHyperlinkLeave", function()
-        GameTooltip_HideResetCursor()
-    end)
+    end
+    tab2.content.scrollFrame:SetHyperlinksEnabled(true)
+    tab2.content.scrollFrame:SetScript("OnHyperlinkClick", ChatFrame_OnHyperlinkShow)
+    tab2.content.scrollFrame:SetScript("OnHyperlinkEnter", hyperlinkEnter)
+    tab2.content.scrollFrame:SetScript("OnHyperlinkLeave", GameTooltip_HideResetCursor)
+    
+    tab2.content.scrollFrame.child:SetHyperlinksEnabled(true)
+    tab2.content.scrollFrame.child:SetScript("OnHyperlinkClick", ChatFrame_OnHyperlinkShow)
+    tab2.content.scrollFrame.child:SetScript("OnHyperlinkEnter", hyperlinkEnter)
+    tab2.content.scrollFrame.child:SetScript("OnHyperlinkLeave", GameTooltip_HideResetCursor)
 end
 
 local function UpdateWindow(pet, locationIdx)
@@ -705,7 +728,11 @@ local function UpdateWindow(pet, locationIdx)
         f.tab1.content.abilitiesFrame:Hide()
     end
 
-    f:SetHeight(f.tab1.content.possibleBreedsTable:GetBottom() - f.tab1.content:GetTop() - 75)
+    local actualContentHeight = f.tab1.content.possibleBreedsTable:GetBottom() - f.tab1.content:GetTop() - 75
+    if (actualContentHeight < 550) then
+        actualContentHeight = 550
+    end
+    f:SetHeight(actualContentHeight)
 
  --TAB 2
     local requestedLocation, showLocationList = GetLocation(pet, locationIdx)
@@ -826,41 +853,41 @@ local function UpdateWindow(pet, locationIdx)
     end
 
     if (pet.source == "Profession") then
-        f.tab2.content.sourceTypeLbl:SetText("Profession: ")
-        f.tab2.content.sourceTypeVal = DISPLAY_UTIL:AcquireHighlightFont(PAPetCard, f.tab2.content.scrollFrame)
-        f.tab2.content.sourceTypeVal:SetPoint("TOPLEFT", f.tab2.content.sourceTypeLbl, "TOPRIGHT", 10, 0)
+        f.tab2.content.sourceLbl:SetText("Profession: ")
+        f.tab2.content.sourceVal = DISPLAY_UTIL:AcquireHighlightFont(PAPetCard, f.tab2.content.scrollFrame.child)
+        f.tab2.content.sourceVal:SetPoint("TOPLEFT", f.tab2.content.sourceLbl, "TOPRIGHT", 5, 0)
         local professionText = string.format("%s |cFFb3b3b3(%s)|r",pet.profession, pet.professionDetail)
-        f.tab2.content.sourceTypeVal:SetText(professionText)
+        f.tab2.content.sourceVal:SetText(professionText)
     elseif(pet.source == "Vendor") then
-        f.tab2.content.sourceTypeLbl:SetText("Vendors: ")
+        f.tab2.content.sourceLbl:SetText("Vendors: ")
         GetVendorText(pet.npcs, locationIdx)
     elseif(pet.source == "Drop") then
-        f.tab2.content.sourceTypeLbl:SetText("NPC drop: ")
+        f.tab2.content.sourceLbl:SetText("NPC drop: ")
         GetNPCDropText(pet.npcs, locationIdx)
     else
-        f.tab2.content.sourceTypeLbl:SetText("Source: ")
-        f.tab2.content.sourceTypeVal = DISPLAY_UTIL:AcquireHighlightFont(PAPetCard, f.tab2.content.scrollFrame)
-        f.tab2.content.sourceTypeVal:SetPoint("TOPLEFT", f.tab2.content.sourceTypeLbl, "TOPRIGHT", 10, 0)
-        f.tab2.content.sourceTypeVal:SetWordWrap(true)
-        f.tab2.content.sourceTypeVal:SetText(pet.source)
+        f.tab2.content.sourceLbl:SetText("Source: ")
+        f.tab2.content.sourceVal = DISPLAY_UTIL:AcquireHighlightFont(PAPetCard, f.tab2.content.scrollFrame.child)
+        f.tab2.content.sourceVal:SetPoint("TOPLEFT", f.tab2.content.sourceLbl, "TOPRIGHT", 5, 0)
+        f.tab2.content.sourceVal:SetWordWrap(true)
+        f.tab2.content.sourceVal:SetText(pet.source)
     end
 
-    local priorBottom = f.tab2.content.sourceTypeLbl
+    local priorBottom = f.tab2.content.sourceLbl
    -- INSTRUCTIONS
     if (pet.acquisition) then
-        f.tab2.content.instructionLbl = DISPLAY_UTIL:AcquireLabelFont(PAPetCard, f.tab2.content.scrollFrame)
-        f.tab2.content.instructionLbl:SetPoint("LEFT", f.tab2.content.sourceTypeLbl, "LEFT")
-        f.tab2.content.instructionLbl:SetPoint("TOP", f.tab2.content.sourceTypeVal, "BOTTOM", 0, -10)
+        f.tab2.content.instructionLbl = DISPLAY_UTIL:AcquireLabelFont(PAPetCard, f.tab2.content.scrollFrame.child)
+        f.tab2.content.instructionLbl:SetPoint("LEFT", f.tab2.content.sourceLbl, "LEFT")
+        f.tab2.content.instructionLbl:SetPoint("TOP", f.tab2.content.sourceVal, "BOTTOM", 0, -10)
         f.tab2.content.instructionLbl:SetText("Instructions:")
         priorBottom = f.tab2.content.instructionLbl
 
         for lineNum, lineContent in ipairs(pet.acquisition) do
-            local numText = DISPLAY_UTIL:AcquireLabelFont(PAPetCard, f.tab2.content.scrollFrame)
+            local numText = DISPLAY_UTIL:AcquireLabelFont(PAPetCard, f.tab2.content.scrollFrame.child)
             numText:SetText(tostring(lineNum))
             numText:SetPoint("LEFT", f.tab2.content.instructionLbl, "LEFT", 10, 0)
             numText:SetPoint("TOP", priorBottom, "BOTTOM", 0, -10)
 
-            local lineText = DISPLAY_UTIL:AcquireHighlightFont(PAPetCard, f.tab2.content.scrollFrame)
+            local lineText = DISPLAY_UTIL:AcquireHighlightFont(PAPetCard, f.tab2.content.scrollFrame.child)
             local lineFormat, lineArgs = GetLineText(lineContent)
             if (lineArgs) then
                 lineText:SetFormattedText(lineFormat, unpack(lineArgs))
@@ -868,7 +895,7 @@ local function UpdateWindow(pet, locationIdx)
                 lineText:SetText(lineFormat)
             end
             lineText:SetPoint("TOPLEFT", numText, "TOPLEFT", 20, 0)
-            lineText:SetPoint("RIGHT", f.tab2.content.scrollFrame, "RIGHT", -25, 0)
+            lineText:SetPoint("RIGHT", f.tab2.content.scrollFrame.child, "RIGHT", -5, 0)
             lineText:SetJustifyH("LEFT")
             lineText:SetWordWrap(true)
             priorBottom = lineText
@@ -876,9 +903,9 @@ local function UpdateWindow(pet, locationIdx)
     end
 
    --SEPARATOR LINE 
-    local lineFrame = DISPLAY_UTIL:AcquireFrame(PAPetCard, f.tab2.content.scrollFrame)
-    lineFrame:SetPoint("LEFT", f.tab2.content.scrollFrame, "LEFT", 5,0)
-    lineFrame:SetPoint("RIGHT", f.tab2.content.scrollFrame, "RIGHT", -35,0)
+    local lineFrame = DISPLAY_UTIL:AcquireFrame(PAPetCard, f.tab2.content.scrollFrame.child)
+    lineFrame:SetPoint("LEFT", f.tab2.content.scrollFrame.child, "LEFT", 5,0)
+    lineFrame:SetPoint("RIGHT", f.tab2.content.scrollFrame.child, "RIGHT", -35,0)
     lineFrame:SetPoint("TOP", priorBottom, "BOTTOM", 0, -10)
     lineFrame:SetHeight(1)
 
@@ -889,32 +916,34 @@ local function UpdateWindow(pet, locationIdx)
     line:SetEndPoint("TOPRIGHT")
 
    --EXTERNAL LINKS
-    local externalLinksLbl = DISPLAY_UTIL:AcquireLabelFont(PAPetCard, f.tab2.content.scrollFrame)
+    local externalLinksLbl = DISPLAY_UTIL:AcquireLabelFont(PAPetCard, f.tab2.content.scrollFrame.child)
     externalLinksLbl:SetPoint("TOP", line, "BOTTOM", 0, -10)
-    externalLinksLbl:SetPoint("LEFT", f.tab2.content.sourceTypeLbl, "LEFT")
+    externalLinksLbl:SetPoint("LEFT", f.tab2.content.sourceLbl, "LEFT")
     externalLinksLbl:SetText("External links:")
-    local wowhead = DISPLAY_UTIL:AcquireMultiValueFont(PAPetCard, f.tab2.content.scrollFrame)    
+    local wowhead = DISPLAY_UTIL:AcquireMultiValueFont(PAPetCard, f.tab2.content.scrollFrame.child)    
     wowhead:SetPoint("TOPLEFT", externalLinksLbl, "TOPRIGHT", 10, 0)
     wowhead:SetText("|Hwh|hWowHead|h")
     wowhead:SetScript("OnMouseDown",
         function(self)
-            DISPLAY.LinkWindow:Show("WowHead link", "https://www.wowhead.com/npc=" .. self:GetParent().pet.companionID)
+            DISPLAY.LinkWindow:Show("WowHead link", "https://www.wowhead.com/npc=" .. PAPetCard.pet.companionID)
         end)
-    local warcraftPets = DISPLAY_UTIL:AcquireMultiValueFont(PAPetCard, f.tab2.content.scrollFrame)    
+    local warcraftPets = DISPLAY_UTIL:AcquireMultiValueFont(PAPetCard, f.tab2.content.scrollFrame.child)    
     warcraftPets:SetPoint("TOPLEFT", wowhead, "TOPRIGHT", 10, 0)
     warcraftPets:SetText("|Hwp|hWarcraft Pets|h")
     warcraftPets:SetScript("OnMouseDown",
         function(self)
-            DISPLAY.LinkWindow:Show("Warcraft Pets link", "https://www.warcraftpets.com/wow-pets/pet/pet/" .. self:GetParent().pet.name:gsub("%s+", "-"))
+            DISPLAY.LinkWindow:Show("Warcraft Pets link", "https://www.warcraftpets.com/wow-pets/pet/pet/" .. PAPetCard.pet.name:gsub("%s+", "-"))
         end)
-    local xufu = DISPLAY_UTIL:AcquireMultiValueFont(PAPetCard, f.tab2.content.scrollFrame)    
+    local xufu = DISPLAY_UTIL:AcquireMultiValueFont(PAPetCard, f.tab2.content.scrollFrame.child)    
     xufu:SetPoint("TOPLEFT", warcraftPets, "TOPRIGHT", 10, 0)
     xufu:SetText("|Hxf|hXu-Fu|h")
     xufu:SetScript("OnMouseDown",
         function(self)
-            DISPLAY.LinkWindow:Show("Xu-Fu Pet Guides link", "https://www.wow-petguide.com/Pet/" .. self:GetParent().pet.companionID)
+            DISPLAY.LinkWindow:Show("Xu-Fu Pet Guides link", "https://www.wow-petguide.com/Pet/" .. PAPetCard.pet.companionID)
         end)
-
+    
+    f.tab2.content.scrollFrame.child:SetHeight(1000)
+    f.tab2.content.scrollFrame.child:SetHeight(f.tab2.content.scrollFrame.child:GetTop() - xufu:GetBottom() + 20)
     f.tab2.content.scrollFrame:GetHeight()
 end
 
@@ -933,6 +962,5 @@ function DISPLAY.PetCard:Show(pet, locationIdx)
     end
     
     PAPetCard.pet = pet;
-
     PAPetCard:Show()
 end
