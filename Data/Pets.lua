@@ -56,10 +56,10 @@ PETS.all ={
         possbileBreeds={"S/B"},
         baseStats={8.5, 7.5, 8},
         acquisition={
-            [1] ={"Crafting requires 75 Classic Engineering."},
-            [2] ={"Acquire %s from the auction house or by killing low level mobs in a wide variety of areas. Only a .1%% to .5%% drop chance.", "i4408"},
-            [3] ={"Craft a %s with 1x%s, 1x%s, 2x%s.", "i4401", "i4359", "i2840", "i774"},
-            [4] ={"Use the item to receive the pet."},
+            {"Crafting requires 75 Classic Engineering."},
+            {"Acquire %s from the auction house or by killing low level mobs in a wide variety of areas. Only a .1%% to .5%% drop chance.", "i4408"},
+            {"Craft a %s with 1x%s, 1x%s, 2x%s.", "i4401", "i4359", "i2840", "i774"},
+            {"Use the item to receive the pet."},
         }
     }, 
     [40]={
@@ -81,8 +81,8 @@ PETS.all ={
         possbileBreeds={"P/S"},
         baseStats={7, 8.5, 8.5},
         acquisition={
-            [1]={"Purchase a %s from a vendor.", "i8485"},
-            [2]={"Use the item to receive the pet."}
+            {"Purchase a %s from a vendor.", "i8485"},
+            {"Use the item to receive the pet."}
         }
     }, 
     [41]={
@@ -104,8 +104,8 @@ PETS.all ={
         possbileBreeds={"P/P"},
         baseStats={7, 8.5, 8.5},
         acquisition={
-            [1]={"Purchase a %s from a vendor.", "i8486"},
-            [2]={"Use the item to receive the pet."}
+            {"Purchase a %s from a vendor.", "i8486"},
+            {"Use the item to receive the pet."}
         }
     }, 
     [42]={
@@ -126,8 +126,8 @@ PETS.all ={
         baseStats={6.5, 9, 8.5},
         chance=.05,
         acquisition={
-            [1]={"Kill mobs in Hillsbrad Foothills for a .05% drop chance"},
-            [2]={"Use the %s to receive the pet.", "i8491"}
+            {"Kill mobs in Hillsbrad Foothills for a .05% drop chance"},
+            {"Use the %s to receive the pet.", "i8491"}
         }
     }, 
     [43]={
@@ -149,8 +149,8 @@ PETS.all ={
         possbileBreeds={"B/B"},
         baseStats={7, 9, 8},
         acquisition={
-            [1]={"Purchase a %s from a vendor.", "i8487"},
-            [2]={"Use the item to receive the pet."}
+            {"Purchase a %s from a vendor.", "i8487"},
+            {"Use the item to receive the pet."}
         }
     }, 
     [44]={
@@ -172,8 +172,8 @@ PETS.all ={
         possbileBreeds={"S/S"},
         baseStats={7, 8.5, 8.5},
         acquisition={
-            [1]={"Purchase a %s from a vendor.", "i8490"},
-            [2]={"Use the item to receive the pet."}
+            {"Purchase a %s from a vendor.", "i8490"},
+            {"Use the item to receive the pet."}
         }
     }, 
     [45]={
@@ -195,8 +195,8 @@ PETS.all ={
         possbileBreeds={"B/B"},
         baseStats={7, 8.5, 8.5},
         acquisition={
-            [1]={"Purchase a %s from a vendor.", "i8488"},
-            [2]={"Use the item to receive the pet."}
+            {"Purchase a %s from a vendor.", "i8488"},
+            {"Use the item to receive the pet."}
         }
     }, 
     [46]={
@@ -218,9 +218,9 @@ PETS.all ={
         possbileBreeds={"H/B"},
         baseStats={7.5, 7.5, 9},
         acquisition={
-            [1]={"The vendor paths in a loop."},
-            [2]={"Purchase a %s from a vendor.", "i8489"},
-            [3]={"Use the item to receive the pet."}
+            {"The vendor paths in a loop."},
+            {"Purchase a %s from a vendor.", "i8489"},
+            {"Use the item to receive the pet."}
         }
     }, 
     [47]={
@@ -243,8 +243,8 @@ PETS.all ={
         possbileBreeds={"B/B", "S/S"},
         baseStats={8, 7.5, 8.5},
         acquisition={
-            [1]={"Purchase a %s from a vendor.", "i8496"},
-            [2]={"Use the item to receive the pet."}
+            {"Purchase a %s from a vendor.", "i8496"},
+            {"Use the item to receive the pet."}
         }
     }, 
     [49]={
@@ -268,8 +268,8 @@ PETS.all ={
         possbileBreeds={"B/B"},
         baseStats={9, 7, 8},
         acquisition={
-            [1]={"Kill mobs in either Stranglethorn zone for a .01 to .2% drop chance"},
-            [2]={"Use the %s to receive the pet.", "i8494"}
+            {"Kill mobs in either Stranglethorn zone for a .01 to .2% drop chance"},
+            {"Use the %s to receive the pet.", "i8494"}
         }
     }, 
     [50]={
@@ -289,9 +289,9 @@ PETS.all ={
         possbileBreeds={"S/B"},
         baseStats={9, 8, 7},
         acquisition={
-            [1]={"Kill Defias Pirates in The Deadmines for a 2% drop chance."},
-            [2]={"There are reports that the cage only drops in Normal mode (not heroic)"},
-            [3]={"Use the %s to receive the pet.", "i8492"}
+            {"Kill Defias Pirates in The Deadmines for a 2% drop chance."},
+            {"There are reports that the cage only drops in Normal mode (not heroic)"},
+            {"Use the %s to receive the pet.", "i8492"}
         }
     }, 
     [51]={
@@ -315,8 +315,8 @@ PETS.all ={
         possbileBreeds={"B/B", "S/S"},
         baseStats={8.5, 8, 7.5},
         acquisition={
-            [1]={"Purchase a %s from a vendor.", "i8495"},
-            [2]={"Use the item to receive the pet."}
+            {"Purchase a %s from a vendor.", "i8495"},
+            {"Use the item to receive the pet."}
         }
     }, 
     [52]={
@@ -339,8 +339,8 @@ PETS.all ={
         possbileBreeds={"B/B", "P/B", "S/B", "H/B"},
         baseStats={8, 8, 8},
         acquisition={
-            [1]={"Purchase a %s from a vendor.", "i11023"},
-            [2]={"Use the item to receive the pet."}
+            {"Purchase a %s from a vendor.", "i11023"},
+            {"Use the item to receive the pet."}
         }
     }, 
     [55]={
@@ -366,8 +366,8 @@ PETS.all ={
         possbileBreeds={"B/B", "S/S", "H/H", "H/S"},
         baseStats={8.5, 7, 8.5},
         acquisition={
-            [1]={"Purchase a %s from a vendor.", "i10393"},
-            [2]={"Use the item to receive the pet."}
+            {"Purchase a %s from a vendor.", "i10393"},
+            {"Use the item to receive the pet."}
         }
     }, 
     [56]={
@@ -395,8 +395,8 @@ PETS.all ={
         possbileBreeds={"P/S"},
         baseStats={8.5, 9, 6.5},
         acquisition={
-            [1]={"Kill whelps in various zones for a .07% to .16% chance."},
-            [2]={"Use the %s to receive the pet.", "i10822"}
+            {"Kill whelps in various zones for a .07% to .16% chance."},
+            {"Use the %s to receive the pet.", "i10822"}
         }
     }, 
     [57]={
@@ -417,8 +417,8 @@ PETS.all ={
         baseStats={8.5, 7.5, 8},
         chance = .01,
         acquisition={
-            [1]={"Drops from any in Winterspring. Has a .01% chance."},
-            [2]={"Use the %s to receive the pet.", "i34535"}
+            {"Drops from any in Winterspring. Has a .01% chance."},
+            {"Use the %s to receive the pet.", "i34535"}
         }
     }, 
     [58]={
@@ -439,8 +439,8 @@ PETS.all ={
         baseStats={7, 9, 8},
         chance = .01,
         acquisition={
-            [1]={"Drops from any in the Wetlands. Has a .01% chance."},
-            [2]={"Use the %s to receive the pet.", "i8499"}
+            {"Drops from any in the Wetlands. Has a .01% chance."},
+            {"Use the %s to receive the pet.", "i8499"}
         }
     }, 
     [59]={
@@ -462,8 +462,8 @@ PETS.all ={
         possbileBreeds={"H/S"},
         baseStats={8.5, 8, 7.5},
         acquisition={
-            [1]={"Has a .09% chance to drop from Noxious Whelps."},
-            [2]={"Use the %s to receive the pet.", "i8498"}
+            {"Has a .09% chance to drop from Noxious Whelps."},
+            {"Use the %s to receive the pet.", "i8498"}
         }
     }, 
     [64]={
@@ -539,8 +539,8 @@ PETS.all ={
         possbileBreeds={"B/B", "P/S", "P/B"},
         baseStats={8, 8, 8},
         acquisition={
-            [1]={"Purchase a %s from a vendor.", "i8501"},
-            [2]={"Use the item to receive the pet."}
+            {"Purchase a %s from a vendor.", "i8501"},
+            {"Use the item to receive the pet."}
         }
     }, 
     [68]={
@@ -563,8 +563,8 @@ PETS.all ={
         possbileBreeds={"B/B", "H/H", "H/P"},
         baseStats={8, 8, 8},
         acquisition={
-            [1]={"Purchase a %s from a vendor.", "i8500"},
-            [2]={"Use the item to receive the pet."}
+            {"Purchase a %s from a vendor.", "i8500"},
+            {"Use the item to receive the pet."}
         }
     }, 
     [69]={
@@ -584,8 +584,8 @@ PETS.all ={
         possbileBreeds={"B/B", "P/B", "S/B"},
         baseStats={7.5, 7.5, 9},
         acquisition={
-            [1]={"Capture via standard pet battle."},
-            [2]={"It only spawns during Winter. (December 22 through March 19)"}
+            {"Capture via standard pet battle."},
+            {"It only spawns during Winter. (December 22 through March 19)"}
         }
     }, 
     [70]={
@@ -607,8 +607,8 @@ PETS.all ={
         possbileBreeds={"B/B", "S/S", "H/B"},
         baseStats={8, 7.5, 8.5},
         acquisition={
-            [1]={"Purchase a %s from a vendor.", "i10394"},
-            [2]={"Use the item to receive the pet."}
+            {"Purchase a %s from a vendor.", "i10394"},
+            {"Use the item to receive the pet."}
         }
     }, 
     [72]={
@@ -630,8 +630,8 @@ PETS.all ={
         possbileBreeds={"B/B", "S/S", "S/B"},
         baseStats={8, 7, 9},
         acquisition={
-            [1]={"Purchase a %s from a vendor.", "i8497"},
-            [2]={"Use the item to receive the pet."}
+            {"Purchase a %s from a vendor.", "i8497"},
+            {"Use the item to receive the pet."}
         }
     }, 
     [74]={
@@ -677,8 +677,8 @@ PETS.all ={
         possbileBreeds={"S/S"},
         baseStats={7.5, 8.5, 8},
         acquisition={
-            [1]={"Purchase a %s from a vendor.", "i10360"},
-            [2]={"Use the item to receive the pet."}
+            {"Purchase a %s from a vendor.", "i10360"},
+            {"Use the item to receive the pet."}
         }
     }, 
     [77]={
@@ -700,8 +700,8 @@ PETS.all ={
         possbileBreeds={"B/B"},
         baseStats={8, 8, 8},
         acquisition={
-            [1]={"Purchase a %s from a vendor.", "i10361"},
-            [2]={"Use the item to receive the pet."}
+            {"Purchase a %s from a vendor.", "i10361"},
+            {"Use the item to receive the pet."}
         }
     }, 
     [78]={
@@ -723,8 +723,8 @@ PETS.all ={
         possbileBreeds={"H/B"},
         baseStats={7.5, 8.5, 8},
         acquisition={
-            [1]={"Purchase a %s from a vendor.", "i10392"},
-            [2]={"Use the item to receive the pet."}
+           {"Purchase a %s from a vendor.", "i10392"},
+           {"Use the item to receive the pet."}
         }
     }, 
     [83]={
@@ -740,10 +740,38 @@ PETS.all ={
         source="Quest",
         flavor="Not to worry; the combat mechanisms and homing logic have been disabled on this unit, I think. --Oglethorpe Obnoticus",
         icon="656513",
-        quest={name="An OOX of Your Own"},
-        locations={{continent="Eastern Kingdoms", zone="The Cape of Stranglethorn", area="Booty Bay", mapID=210, coords={{43,72},}}},
+        quests={
+            {id=485, maps={
+                {mapID=26, zone="The Hinterlands", desc="OOX-09/HL Distress Beacon", type="start"},
+                {mapID=26, zone="The Hinterlands", desc="Homing Robot OOX-09/HL", type="end", coords={{49.4,37.8}}},
+            }},
+            {id=836},
+            {id=25475, maps={
+                {mapID=69, zone="Feralas", desc="OOX-22/FE Distress Beacon", type="start"},
+                {mapID=69, zone="Feralas", desc="Homing Robot OOX-22/FE", type="end", coords={{53.4,55.6}}},
+            }},
+            {id=25476},
+            {id=351, maps={
+                {mapID=219, zone="Zul'Farrak", desc="OOX-17/TN Distress Beacon", type="start"},
+                {mapID=71, zone="Tanaris", desc="Homing Robot OOX-17/TN", type="end", coords={{59.8,64}}},
+            }},
+            {id=648},
+            {id=3721, name="An OOX of Your Own", maps={
+                {mapID=210, zone="The Cape of Stranglethorn", desc="Oglethorpe Obnoticus", type="start", coords={{43,72}}},
+            }}
+        },
         possbileBreeds={"P/S"},
         baseStats={8.5, 7.5, 8},
+        acquisition={
+            {"Find a %s by farming any mobs in The Hinterlands. Take the beacon to %s.", "i8704", "n7806:Homing Robot OOX-09/HL"},
+            {"Escort the x09, killing a few mob ambushes along the way"},
+            {"Find a %s by farming any mobs in Feralas. Take the beacon to %s.", "i8705", "n7807:Homing Robot OOX-22/FE"},
+            {"Escort the x22, killing a few mob ambushes along the way"},
+            {"Find a %s by farming any mobs in Zul'Farrak. Take the beacon to %s.", "i8623", "n7784:Homing Robot OOX-17/TN"},
+            {"Escort the x17, killing a few mob ambushes along the way"},
+            {"After completing the above 6 quests you should be able to go to see %s in The Cape of Stranglethorn to complete one final quest and receive your %s.", "n7406:Oglethorpe Obnoticus", "i10398"},
+            {"Use the item to receive the pet.  Or, note that the item is not BOP, so it can be bought/sold on the auction house. But, beware, you can only do the quest line once per character."}
+        }
     }, 
     [84]={
         name="Westfall Chicken",

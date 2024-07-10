@@ -210,6 +210,20 @@ function DISPLAY_UTIL:AcquireFrame(poolOwner, controlParent)
     return t
 end
 
+function DISPLAY_UTIL:AcquireButton(poolOwner, controlParent)    
+    if (not controlParent.buttonPool) then
+        controlParent.buttonPool = CreateFramePool("BUTTON", controlParent)
+        AddToPoolOwner(poolOwner, controlParent.buttonPool)
+    end
+
+    local t = controlParent.buttonPool:Acquire()
+    t:SetScript("OnEnter", nil)
+    t:SetScript("OnLeave", nil)
+    t:SetScript("OnMouseDown", nil)
+    t:Show()    
+    return t
+end
+
 function DISPLAY_UTIL:AcquireListItemFrame(poolOwner, controlParent, selectable)
     if (not controlParent.framePool) then
         controlParent.framePool = CreateFramePool("BUTTON", controlParent)

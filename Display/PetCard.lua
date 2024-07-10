@@ -82,6 +82,82 @@ local function GetLineText(lineContent)
     return lineContent[1], links
 end
 
+local function GetQuestText(quests, selectedQuest)
+    if (not selectedQuest) then
+        selectedQuest = "1:1"
+    end
+
+    local selectedQuestIdx, questMapIdx = strsplit(":", selectedQuest)
+    if (not questMapIdx) then
+        questMapIdx = 1
+    end
+
+    local leftDock = PAPetCardTab2.content.sourceLbl
+    local topDock = PAPetCardTab2.content.sourceLbl
+    for idx, quest in ipairs(quests) do
+        local completed = C_QuestLog.IsComplete(quest.id)
+
+        local questState = DISPLAY_UTIL:AcquireButton(PAPetCard, PAPetCardTab2.content.scrollFrame.child)
+        if completed or idx == 1 or idx ==2 then
+            questState:SetNormalAtlas("auctionhouse-icon-checkmark")
+            questState:SetSize(12,12)
+            questState:SetPoint("TOP", topDock, "BOTTOM", 0, -5)
+            questState:SetPoint("LEFT", leftDock, "LEFT", 6, 0)
+        else
+            questState:SetNormalAtlas("jailerstower-wayfinder-rewardcircle")
+            questState:SetSize(14,14)
+            questState:SetPoint("TOP", topDock, "BOTTOM", 0, -3)
+            questState:SetPoint("LEFT", leftDock, "LEFT", 5, 0)
+        end
+
+        local questName = quest.name and quest.name or C_QuestLog.GetTitleForQuestID(quest.id)
+        local questNameLbl = DISPLAY_UTIL:AcquireSubduedFont(PAPetCard, PAPetCardTab2.content.scrollFrame.child)
+        questNameLbl:SetText(string.format("|cffffff00|Hquest:%d:-1:-1:-1:-1|h[%s]|h|r",quest.id, questName))
+        questNameLbl:SetPoint("TOP", topDock, "BOTTOM", 0, -4)
+        questNameLbl:SetPoint("LEFT", leftDock, "LEFT", 20, 0)
+        topDock = questNameLbl
+
+        if quest.maps then
+            for mapIdx, map in ipairs(quest.maps) do
+                local mapTipIcon = DISPLAY_UTIL:AcquireButton(PAPetCard, PAPetCardTab2.content.scrollFrame.child)
+                if (map.type == "start") then
+                    mapTipIcon:SetNormalAtlas("Islands-QuestBang")
+                elseif (map.type == "end") then
+                    mapTipIcon:SetNormalAtlas("Islands-QuestTurnin")
+                end
+                mapTipIcon:SetSize(16,16)
+                mapTipIcon:SetPoint("TOP", topDock, "BOTTOM")
+                mapTipIcon:SetPoint("LEFT", questState, "LEFT", 10, 0)
+
+                local mapDescLbl
+                if idx == tonumber(selectedQuestIdx) and mapIdx == tonumber(questMapIdx) then
+                    mapDescLbl = DISPLAY_UTIL:AcquireHighlightFont(PAPetCard, PAPetCardTab2.content.scrollFrame.child)
+                else
+                    mapDescLbl = DISPLAY_UTIL:AcquireMultiValueFont(PAPetCard, PAPetCardTab2.content.scrollFrame.child)
+                    mapDescLbl.locationIndex = string.format("%d:%d", idx, mapIdx)
+                    mapDescLbl:SetScript("OnMouseDown",
+                        function(self)
+                            DISPLAY.PetCard:Show(PAPetCard.pet, self.locationIndex)
+                        end
+                    )
+                end
+                mapDescLbl:SetText(map.desc)
+                mapDescLbl:SetPoint("TOPLEFT", mapTipIcon, "TOPRIGHT", 2, -2)
+
+                local zoneName = DISPLAY_UTIL:AcquireSmallerSubduedFont(PAPetCard, PAPetCardTab2.content.scrollFrame.child)
+                zoneName:SetText(map.zone)
+                zoneName:SetPoint("TOPLEFT", mapDescLbl, "TOPRIGHT", 3, -1)
+                
+                topDock = mapDescLbl
+            end
+        end
+
+        PAPetCardTab2.content.sourceVal = topDock -- for docking of lower sections
+    end
+
+    return result;
+end
+
 local function GetNPCDropText(npcs, selectedNpcIdx)
     if (not selectedNpcIdx) then
         selectedNpcIdx = 1
@@ -190,11 +266,47 @@ local function GetVendorText(vendors, selectedVendorIdx)
     return result;
 end
 
+local function BuildMapTitle(location)    
+    --quest
+    if location.desc then
+        return string.format("%s - %s", location.desc, location.zone)
+    end
+
+    local mapName = string.format("%s > %s", location.continent, location.zone)
+    if (location.area) then
+        mapName = string.format("%s > %s", mapName, location.area)
+    end
+    if (location.mapFloor) then
+        mapName = string.format("%s [f. %d]", mapName, location.mapFloor)
+    end
+
+    return mapName
+end
+
 local function GetLocation(pet, locationIdx) --location, showLocList
+    if (pet.source == "Quest") then
+        if not locationIdx then
+            locationIdx = "1:1"
+        end
+
+        local questIdx, mapTipIdx = strsplit(":", locationIdx)
+        if not mapTipIdx then
+            mapTipIdx = "1"
+        end
+
+        local quest = pet.quests[tonumber(questIdx)]
+        if not quest.maps then
+            return nil
+        end
+
+        local mapTip = quest.maps[tonumber(mapTipIdx)]
+        return mapTip, false
+    end
+
     if not locationIdx then
         locationIdx = 1
     end
-
+    
     --specific npc source locations
     if (pet.source == "Vendor") then
         return pet.npcs[locationIdx].locations[1], false
@@ -569,10 +681,10 @@ local function CreateWindow()
     tab2.content.scrollFrame = CreateFrame("ScrollFrame", nil, tab2.content, "UIPanelScrollFrameTemplate")
     tab2.content.scrollFrame:SetClipsChildren(true)
     tab2.content.scrollFrame:SetPoint("TOPLEFT", tab2.content.locationsFrame, "BOTTOMLEFT", 0, -10);
-    tab2.content.scrollFrame:SetPoint("BOTTOMRIGHT", tab2.content, "BOTTOMRIGHT",-4,4);
+    tab2.content.scrollFrame:SetPoint("BOTTOMRIGHT", tab2.content, "BOTTOMRIGHT",-4,5);
     tab2.content.scrollFrame.ScrollBar:ClearAllPoints();
     tab2.content.scrollFrame.ScrollBar:SetPoint("TOPLEFT", tab2.content.scrollFrame, "TOPRIGHT", -20, -18);
-    tab2.content.scrollFrame.ScrollBar:SetPoint("BOTTOMRIGHT", tab2.content.scrollFrame, "BOTTOMRIGHT", 0, 24);
+    tab2.content.scrollFrame.ScrollBar:SetPoint("BOTTOMRIGHT", tab2.content.scrollFrame, "BOTTOMRIGHT", 0, 17);
     tab2.content.scrollFrame.ScrollBar:Raise()
     tab2.content.scrollFrame.child = CreateFrame("Frame", nil, tab2.content.scrollFrame)
     tab2.content.scrollFrame:SetScrollChild(tab2.content.scrollFrame.child)
@@ -588,11 +700,10 @@ local function CreateWindow()
         GameTooltip:SetPoint("BOTTOM",region,"TOP",0,6)
 
         local linkType = strsplit(":", link)
+        GameTooltip:SetHyperlink(link)
 
-        if (linkType == "npc") then
+        if GameTooltip:NumLines() == 0 then
             GameTooltip:SetText("Click for WowHead link")
-        else
-            GameTooltip:SetHyperlink(link)
         end
 
         GameTooltip:Show()
@@ -603,6 +714,8 @@ local function CreateWindow()
             DISPLAY.LinkWindow:Show(text, "https://www.wowhead.com/item=" .. id)
         elseif (type == "npc") then
             DISPLAY.LinkWindow:Show(text, "https://www.wowhead.com/npc=" .. id)
+        elseif (type == "quest") then
+            DISPLAY.LinkWindow:Show(text, "https://www.wowhead.com/quest=" .. id)
         else
             ChatFrame_OnHyperlinkShow(self, link, text, button, region, left, bottom, width, height)
         end
@@ -790,7 +903,7 @@ local function UpdateWindow(pet, locationIdx)
 
             local xScale = mapFrame:GetWidth() / layerInfo.layerWidth
             local yScale = mapFrame:GetHeight() / layerInfo.layerHeight
-            scale = math.min(xScale, yScale)
+            local scale = math.min(xScale, yScale)
 
             local adjustX = mapFrame:GetWidth() / 2 - layerInfo.layerWidth * (centerX or 0.5) * scale
             local adjustY = mapFrame:GetHeight() / 2 - layerInfo.layerHeight * (centerY or 0.5) * scale
@@ -815,20 +928,21 @@ local function UpdateWindow(pet, locationIdx)
             if (requestedLocation.coords) then
                 for _, coord in pairs(requestedLocation.coords) do
                     local dot = AcquireMapPinTexture(mapFrame)
-                    dot:SetSize(6,6)
                     dot:SetPoint("TOPLEFT", mapFrame:GetWidth() * (coord[1]/100), (mapFrame:GetHeight() * (coord[2]/100))*-1)
-                    dot:SetTexture("Interface\\Icons\\Tracking_WildPet")
+                    if requestedLocation.type == "start" then
+                        dot:SetAtlas("Islands-QuestBang")           
+                        dot:SetSize(20,20)             
+                    elseif requestedLocation.type == "end" then
+                        dot:SetAtlas("Islands-QuestTurnin")
+                        dot:SetSize(20,20)
+                    else
+                        dot:SetTexture("Interface\\Icons\\Tracking_WildPet")
+                        dot:SetSize(6,6)
+                    end
                 end
             end
 
-            local mapName = string.format("%s > %s", requestedLocation.continent, requestedLocation.zone)
-            if (requestedLocation.area) then
-                mapName = string.format("%s > %s", mapName, requestedLocation.area)
-            end
-            if (requestedLocation.mapFloor) then
-                mapName = string.format("%s [f. %d]", mapName, requestedLocation.mapFloor)
-            end
-
+            local mapName = BuildMapTitle(requestedLocation)
             f.tab2.content.mapLbl:SetText(mapName)
         end
 
@@ -896,6 +1010,9 @@ local function UpdateWindow(pet, locationIdx)
     elseif(pet.source == "Drop") then
         f.tab2.content.sourceLbl:SetText("NPC drop: ")
         GetNPCDropText(pet.npcs, locationIdx)
+    elseif(pet.source == "Quest") then
+        f.tab2.content.sourceLbl:SetText("Quests: ")
+        GetQuestText(pet.quests, locationIdx)
     else
         f.tab2.content.sourceLbl:SetText("Source: ")
         f.tab2.content.sourceVal = DISPLAY_UTIL:AcquireHighlightFont(PAPetCard, f.tab2.content.scrollFrame.child)
