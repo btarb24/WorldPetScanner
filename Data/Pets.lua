@@ -66,7 +66,6 @@ PETS.all ={
         acquisition={
             {"Acquire %s from the auction house or by killing low level mobs in a wide variety of areas. Only a .1%% to .5%% drop chance.", "i4408"},
             {"Craft a %s.", "i4401"},
-            {"Use the item to receive the pet."},
         }
     }, 
     [40]={
@@ -93,7 +92,6 @@ PETS.all ={
         baseStats={7, 8.5, 8.5},
         acquisition={
             {"Purchase a %s from a vendor.", "i8485"},
-            {"Use the item to receive the pet."}
         }
     }, 
     [41]={
@@ -120,7 +118,6 @@ PETS.all ={
         baseStats={7, 8.5, 8.5},
         acquisition={
             {"Purchase a %s from a vendor.", "i8486"},
-            {"Use the item to receive the pet."}
         }
     }, 
     [42]={
@@ -141,8 +138,7 @@ PETS.all ={
         baseStats={6.5, 9, 8.5},
         chance=.05,
         acquisition={
-            {"Kill mobs in Hillsbrad Foothills for a .05% drop chance"},
-            {"Use the %s to receive the pet.", "i8491"}
+            {"Kill mobs in Hillsbrad Foothills for a .05% chance of receiving a %s.", "i8491"},
         }
     }, 
     [43]={
@@ -169,7 +165,6 @@ PETS.all ={
         baseStats={7, 9, 8},
         acquisition={
             {"Purchase a %s from a vendor.", "i8487"},
-            {"Use the item to receive the pet."}
         }
     }, 
     [44]={
@@ -196,7 +191,6 @@ PETS.all ={
         baseStats={7, 8.5, 8.5},
         acquisition={
             {"Purchase a %s from a vendor.", "i8490"},
-            {"Use the item to receive the pet."}
         }
     }, 
     [45]={
@@ -223,7 +217,6 @@ PETS.all ={
         baseStats={7, 8.5, 8.5},
         acquisition={
             {"Purchase a %s from a vendor.", "i8488"},
-            {"Use the item to receive the pet."}
         }
     }, 
     [46]={
@@ -251,7 +244,6 @@ PETS.all ={
         acquisition={
             {"The vendor paths in a loop."},
             {"Purchase a %s from a vendor.", "i8489"},
-            {"Use the item to receive the pet."}
         }
     }, 
     [47]={
@@ -279,7 +271,6 @@ PETS.all ={
         baseStats={8, 7.5, 8.5},
         acquisition={
             {"Purchase a %s from a vendor.", "i8496"},
-            {"Use the item to receive the pet."}
         }
     }, 
     [49]={
@@ -358,7 +349,6 @@ PETS.all ={
         baseStats={8.5, 8, 7.5},
         acquisition={
             {"Purchase a %s from a vendor.", "i8495"},
-            {"Use the item to receive the pet."}
         }
     }, 
     [52]={
@@ -386,7 +376,6 @@ PETS.all ={
         baseStats={8, 8, 8},
         acquisition={
             {"Purchase a %s from a vendor.", "i11023"},
-            {"Use the item to receive the pet."}
         }
     }, 
     [55]={
@@ -416,8 +405,7 @@ PETS.all ={
         possbileBreeds={"B/B", "S/S", "H/H", "H/S"},
         baseStats={8.5, 7, 8.5},
         acquisition={
-            {"Purchase a %s from a vendor.", "i10393"},
-            {"Use the item to receive the pet."}
+            {"Purchase a %s from a vendor.", "i10393"}
         }
     }, 
     [56]={
@@ -609,7 +597,6 @@ PETS.all ={
         baseStats={8, 8, 8},
         acquisition={
             {"Purchase a %s from a vendor.", "i8501"},
-            {"Use the item to receive the pet."}
         }
     }, 
     [68]={
@@ -637,7 +624,6 @@ PETS.all ={
         baseStats={8, 8, 8},
         acquisition={
             {"Purchase a %s from a vendor.", "i8500"},
-            {"Use the item to receive the pet."}
         }
     }, 
     [69]={
@@ -686,7 +672,6 @@ PETS.all ={
         baseStats={8, 7.5, 8.5},
         acquisition={
             {"Purchase a %s from a vendor.", "i10394"},
-            {"Use the item to receive the pet."}
         }
     }, 
     [72]={
@@ -713,7 +698,6 @@ PETS.all ={
         baseStats={8, 7, 9},
         acquisition={
             {"Purchase a %s from a vendor.", "i8497"},
-            {"Use the item to receive the pet."}
         }
     }, 
     [74]={
@@ -739,9 +723,8 @@ PETS.all ={
         possbileBreeds={"S/B"},
         baseStats={7.5, 7.5, 9},
         acquisition={
-            {"Purchase a %s from a vendor.", "i44822"},
-            {"Use the item to receive the pet."},
-            {"Breanni is located in both Northrend and Broken Isles Dalaran timelines."}
+            {"Breanni is located in both Northrend and Broken Isles Dalaran timelines."},
+            {"Purchase a %s from a vendor.", "i44822"}
         }
     }, 
     [75]={
@@ -768,7 +751,6 @@ PETS.all ={
         baseStats={7.5, 8.5, 8},
         acquisition={
             {"Purchase a %s from a vendor.", "i10360"},
-            {"Use the item to receive the pet."}
         }
     }, 
     [77]={
@@ -795,7 +777,6 @@ PETS.all ={
         baseStats={8, 8, 8},
         acquisition={
             {"Purchase a %s from a vendor.", "i10361"},
-            {"Use the item to receive the pet."}
         }
     }, 
     [78]={
@@ -822,7 +803,6 @@ PETS.all ={
         baseStats={7.5, 8.5, 8},
         acquisition={
            {"Purchase a %s from a vendor.", "i10392"},
-           {"Use the item to receive the pet."}
         }
     }, 
     [83]={
@@ -870,7 +850,7 @@ PETS.all ={
             {"Find a %s by farming any mobs in Zul'Farrak. Take the beacon to %s.", "i8623", "n7784:Homing Robot OOX-17/TN"},
             {"Escort the x17, killing a few mob ambushes along the way"},
             {"After completing the above 6 quests you should be able to go to see %s in The Cape of Stranglethorn to complete one final quest and receive your %s.", "n7406:Oglethorpe Obnoticus", "i10398"},
-            {"Use the item to receive the pet.  Or, note that the item is not BOP, so it can be bought/sold on the auction house. But, beware, you can only do the quest line once per character."}
+            {"Note that the item is not BOP, so it can be bought/sold on the auction house. But, beware, you can only do the quest line once per character."}
         }
     }, 
     [84]={
@@ -944,7 +924,6 @@ PETS.all ={
         acquisition={
             {"The recipe %s is BindOnPickup. It has a 12%% chance to drop from %s, which is the last boss in Gnomeregan.", "i11828", "n7800:Mekgineer Thermaplugg"},
             {"Craft a %s.", "i11825"},
-            {"Use the item to receive the pet."},
         }
     }, 
     [86]={
@@ -987,7 +966,6 @@ PETS.all ={
         acquisition={
             {"The recipe %s is BindOnPickup. It has roughly a 3%% chance to drop from a few mobs in Gnomeregan.", "i11827"},
             {"Craft a %s.", "i11826"},
-            {"Use the item to receive the pet."},
         }
     }, 
     [87]={
@@ -1008,7 +986,6 @@ PETS.all ={
         baseStats={8, 8.5, 7.5},
         acquisition={
             {"There is a .01%% chance for %s to drop from any mob in Feralas", "i11474"},
-            {"Use the item to receive the pet."},
             {"You may want to target the %s since they also drop %s.", "n39384:Noxious Whelp", "i8498"}
         }
     }, 
@@ -2623,7 +2600,6 @@ PETS.all ={
         acquisition={
             {"Complete fishing dailies to recieve one of %s, %s, %s", "i67414", "i112623", "i46007"},
             {"The bags have a 1%% chance to drop a %s.", "i44983"},
-            {"Use the item to receive the pet."},
             {"You can also purchase a bag from Kiatke during a timewalking week for %s.", "c1166:150"},
         }
     }, 
@@ -16818,13 +16794,27 @@ PETS.all ={
         isTradeable=false,
         isUnique=true,
         isPassive=false,
-        source="Drop",
+        intermittent=true,
+        source="Treasure",
         flavor="Snowfeather falcosaur hatchlings instinctively flee to nearby adults when threatened. The species is particularly fond of large prey.",
         icon="1332549",
-        npcs={{name="Orphaned Snowfeather"}},
-        locations={{continent="Broken Isles", zone="Highmountain"}},
         possbileBreeds={"S/S"},
         baseStats={8, 8, 8},
+        pois={
+            {name="Points of interest:", entries={
+                {id="", maps={
+                    {id="n108504:Marius Felbane", mapID=650, type="npc", coords={{29.8,40.0}}},
+                    {id="n115673:Snowfeather Matriarch", mapID=650, type="kill", coords={{35.0,22.6}}},
+                    {id="n115737:Orphaned Snowfeather", mapID=650, type="treasure", coords={{32.6,28.2}}},
+                }}
+            }}
+        },
+        acquisition={
+            {"Only available when world quest %s is active.", "q44892:Snowfeather Swarm!"},
+            {"Purchase a %s. %s sells some nearby.", "i128839", "n108504:Marius Felbane"},
+            {"Kill the %s.", "n115673:Snowfeather Matriarch"},
+            {"Go to the %s and feed it to recieve the pet.", "n115737:Orphaned Snowfeather"},
+        }
     }, 
     [1975]={
         name="Direbeak Hatchling",
@@ -16836,13 +16826,27 @@ PETS.all ={
         isTradeable=false,
         isUnique=true,
         isPassive=false,
-        source="Drop",
+        intermittent=true,
+        source="Treasure",
         flavor="Direbeak falcosaurs are heartier than other falcosaur species, but cannot smell as well. They prefer pungent meals and will often eat carrion that has been sitting in the sun for days.",
         icon="1332548",
-        npcs={{name="Orphaned Direbeak"}},
-        locations={{continent="Broken Isles", zone="Stormheim"}},
         possbileBreeds={"H/P"},
         baseStats={8, 8, 8},
+        pois={
+            {name="Points of interest:", entries={
+                {id="", maps={
+                    {id="n98112:Steward Dayton", mapID=634, type="npc", coords={{71.6,60.6}}},
+                    {id="n115671:Direbeak Matriarch", mapID=634, type="kill", coords={{78.2,76.4},{78.2,76.6},{78.6,73.4},{78.6,76.6},{78.8,74.4},{78.8,75.2},{78.8,75.8}}},
+                    {id="n115742:Orphaned Direbeak", mapID=634, type="treasure", coords={{79.6,69.6}}},
+                }}
+            }}
+        },
+        acquisition={
+            {"Only available when world quest %s is active.", "q44893:Direbeak Swarm!"},
+            {"Purchase a %s. %s sells some nearby.", "i128763", "n98112:Steward Dayton"},
+            {"Kill the %s.", "n115671:Direbeak Matriarch"},
+            {"Go to the %s and feed it to recieve the pet.", "n115742:Orphaned Direbeak"},
+        }
     }, 
     [1976]={
         name="Sharptalon Hatchling",
@@ -16854,13 +16858,27 @@ PETS.all ={
         isTradeable=false,
         isUnique=true,
         isPassive=false,
-        source="Drop",
+        intermittent=true,
+        source="Treasure",
         flavor="Sharptalon falcosaurs can subsist entirely on a diet of small nuts and berries, and use their talons mostly for defense.",
         icon="1332547",
-        npcs={{name="Orphaned Sharptalon"}},
-        locations={{continent="Broken Isles", zone="Val'sharah"}},
         possbileBreeds={"P/P"},
         baseStats={8, 8, 8},
+        pois={
+            {name="Points of interest:", entries={
+                {id="", maps={
+                    {id="n96784:Fialla Sweetberry", mapID=501, type="npc", coords={{52.8,35.6}}},
+                    {id="n115672:Sharptalon Matriarch", mapID=641, type="kill", coords={{48.6,9.4}}},
+                    {id="n115740:Orphaned Sharptalon", mapID=641, type="treasure", coords={{47.0,10.4}}},
+                }}
+            }}
+        },
+        acquisition={
+            {"Only available when world quest %s is active.", "q44895:Sharptalon Swarm!"},
+            {"Purchase a %s. %s sells some nearby.", "i128837", "n96784:Fialla Sweetberry"},
+            {"Kill the %s.", "n115672:Sharptalon Matriarch"},
+            {"Go to the %s and feed it to recieve the pet.", "n115740:Orphaned Sharptalon"},
+        }
     }, 
     [1977]={
         name="Bloodgazer Hatchling",
@@ -16871,14 +16889,27 @@ PETS.all ={
         isWild=false,
         isTradeable=false,
         isUnique=true,
-        isPassive=false,
-        source="Drop",
+        intermittent=true,
+        source="Treasure",
         flavor="Though they may look fierce, the bloodgazer species of falcosaur has a beak that makes it predisposed to consuming fruits.",
         icon="1332546",
-        npcs={{name="Orphaned Bloodgazer"}},
-        locations={{continent="Broken Isles", zone="Azsuna"}},
         possbileBreeds={"P/S"},
         baseStats={8, 8, 8},
+        pois={
+            {name="Points of interest:", entries={
+                {id="", maps={
+                    {id="n109372:Nalysse Dawnsorrow", mapID=630, type="npc", coords={{47.2,41.2}}},
+                    {id="n115674:Bloodgazer Matriarch", mapID=630, type="kill", coords={{35.6,5.6}}},
+                    {id="n115741:Orphaned Bloodgazer", mapID=630, type="treasure", coords={{35.6,7.4}}},
+                }}
+            }}
+        },
+        acquisition={
+            {"Only available when world quest %s is active.", "q44894:Bloodgazer Swarm!"},
+            {"Purchase a %s. %s sells some nearby.", "i128843", "n109372:Nalysse Dawnsorrow"},
+            {"Kill the %s.", "n115674:Bloodgazer Matriarch"},
+            {"Go to the %s and feed it to recieve the pet.", "n115741:Orphaned Bloodgazer"},
+        }
     }, 
     [1978]={
         name="Dutiful Squire",
@@ -25623,13 +25654,31 @@ PETS.all ={
         isTradeable=true,
         isUnique=false,
         isPassive=false,
-        source="Drop",
+        intermittent=true,
+        source="Treasure",
         flavor="Joining with their new residents in Sinfall a few of these juvenile dredbats accompanied Renathal's forces into the maw.",
         icon="3860424",
-        npcs={{name="Bastion Maw Assault"}},
-        locations={{continent="Shadowlands", zone="The Maw"}},
         possbileBreeds={"B/B"},
         baseStats={7.5, 8, 8.5},
+        pois={
+            {name="Quest cannot be available:", entries={
+                {id="q63829:No One Floats Down Here", maps={
+                    {id="n177900:Xandria", mapID=1543, type="start", coords={{42.8,44.8}}},
+                }}
+            }},
+            {name="Treasure:", entries={
+                {id="i186544", maps={
+                    {id="o368935:Sinfall Screecher Cage", mapID=1543, type="treasure", coords={{30.0,43.2}}},
+                }}
+            }},
+        },
+        acquisition={
+            {"Only available when %s is active in The Maw. The assault will rotate between the 4 covenants twice per week. So, this assault will be available every 2 weeks.", "q63824"},
+            {"You can be a member of any covenant and still receive the pet."},
+            {"The pet will be unavailable if %s is offering the quest %s.", "n177900:Xandria", "q63829:No One Floats Down Here"},
+            {"Attack the Chain of Domination holding the %s.", "o368935:Sinfall Screecher Cage"},
+            {"The cage will then fall to the ground and you can pick up the %s.", "i186544"},
+        }
     }, 
     [3011]={
         name="Battie",
@@ -26677,29 +26726,28 @@ PETS.all ={
         pois={
             {name="Lil'Abom components:", entries={
                 {id="i186183", maps={
-                    {id="o368666:Lil'Abom's Head", mapID=1543, type="poi", coords={{27.5,56.7},{32.1,56.1},{30.3,63.5}}},
+                    {id="o368666:Lil'Abom's Head", mapID=1543, type="treasure", coords={{27.5,56.7},{32.1,56.1},{30.3,63.5}}},
                 }},
                 {id="i186184", maps={
-                    {id="o368667:Lil'Abom's Torso", mapID=1543, type="poi", coords={{36.5,67.4},{39.9,62.6,"cave entrance"}}},
+                    {id="o368667:Lil'Abom's Torso", mapID=1543, type="poi", coords={{36.5,67.4, type="treasure"},{39.9,62.6, type="cave"}}},
                 }},
                 {id="i186187", maps={
-                    {id="o368665:Lil'Abom's Spare Arm", mapID=1543, type="poi", coords={{33.5,65.8},{39.3,66.4}}},
+                    {id="o368665:Lil'Abom's Spare Arm", mapID=1543, type="treasure", coords={{33.5,65.8},{39.3,66.4}}},
                 }},
                 {id="i186186", maps={
-                    {id= "o368663:Lil'Abom's Right Hand", mapID=1543, type="poi", coords={{37.8,62.5},{38.6,58.6,"cave entrance"}}},
+                    {id= "o368663:Lil'Abom's Right Hand", mapID=1543, coords={{37.8,62.5, type="treasure"},{38.6,58.6,type="cave"}}},
                 }},
                 {id="i186185", maps={
-                    {id="o368668:Lil'Abom's Trunk", mapID=1543, type="poi", coords={{29.5,67.2}}},
+                    {id="o368668:Lil'Abom's Trunk", mapID=1543, type="treasure", coords={{29.5,67.2}}},
                 }}
             }}
         },
         acquisition={
-            {"Only available when %s is active in The Maw.  The assualt will rotate between the 4 covenants twice per week. So, this assault will be available every 2 weeks.", "q63543"},
+            {"Only available when %s is active in The Maw. The assault will rotate between the 4 covenants twice per week. So, this assault will be available every 2 weeks.", "q63543"},
             {"You can be a member of any covenant and still complete the treasure trail to receive a %s.", "i186188"},
             {"Collect the 5 pieces of Abom scattered across the map to be able to combine them by right-clicking one in your inventory. %s", "s353204"},
-            {"The Torso is in a cave (entrance is the rightmost dot on map)"},
-            {"The Right hand is also in a cave (entrance is the rightmost dot on the map). It's at the back on the left."},
-            {"Use the item to receive the pet"},
+            {"The Torso is in a cave"},
+            {"The Right hand is also in a cave. It's at the back of the cave on the left."},
         }
     }, 
     [3099]={
@@ -26712,12 +26760,28 @@ PETS.all ={
         isTradeable=true,
         isUnique=false,
         isPassive=false,
+        intermittent=true,
         source="Treasure",
         flavor="Infused etherwyrms can be used as portable anima batteries, but they must be trained not to flee at the sight of combat.",
         icon="3046536",
-        locations={{continent="Shadowlands", zone="The Maw"}},
         possbileBreeds={"P/P"},
         baseStats={7.5, 8.325, 8.175},
+        pois={
+            {name="Points of interest:", entries={
+                {id="", maps={
+                    {id="n178890:Margrave Sin'dane", mapID=1543, type="start", coords={{22.6,43.2}}},
+                    {id="n179030:Elusive Keybinder", mapID=1543, type="kill", coords={{20.0,32.4},{23.6,40.6},{19.6,43.6}}},
+                    {id="o368653:Etherwyrm Cage", mapID=1543, type="treasure", coords={{23.1,42.5}}},
+                }}
+            }}
+        },
+        acquisition={
+            {"Only available when %s is active in The Maw. The assault will rotate between the 4 covenants twice per week. So, this assault will be available every 2 weeks.", "q63823"},
+            {"You can be a member of any covenant and still complete the quests to receive a %s.", "i186191"},
+            {"Start the quest %s offered by %s to receive a %s.", "q63951:A Shady Place", "n178890:Margrave Sin'dane", "i187012"},
+            {"Use the item to enter the rift. Kill %s until you receive a %s", "n179030:Elusive Keybinder", "i186190"},
+            {"Use the key on the %s", "o368653:Etherwyrm Cage"},
+        }
     }, 
     [3100]={
         name="Timeless Mechanical Dragonling",
@@ -26759,7 +26823,7 @@ PETS.all ={
         pois={
             {name="Sly locations and progress:", entries={
                 {id="", maps={
-                    {id="n179068:Orator Kloe", mapID=1543, type="poi", coords={{42.2,44.6}}},
+                    {id="n179068:Orator Kloe", mapID=1543, type="start", coords={{42.2,44.6}}},
                 }},
                 {id="q64024:Sly 1", maps={
                     {id="n179096:Sly 1 location", mapID=1543, type="poi", coords={{40.6,51.6}}},
@@ -26773,13 +26837,13 @@ PETS.all ={
             }}
         },
         acquisition={
-            {"Only available when %s is active in The Maw.  The assualt will rotate between the 4 covenants twice per week. So, this assault will be available every 2 weeks.", "q63824"},
+            {"Only available when %s is active in The Maw. The assault will rotate between the 4 covenants twice per week. So, this assault will be available every 2 weeks.", "q63824"},
             {"You can be a member of any covenant and still complete the treasure trail to receive a %s.", "i186539"},
             {"There are 3 different Sly npcs to find. You can only find one per each assault event.  It will take a minimum of 6 weeks to complete this achievement."},
             {"You start each event by talking to %s to receive the %s buff.", "n179068:Orator Kloe", "s353322"},
             {"The buff will allow you to see and follow Sly's footprints."},
             {"If you speed run over to the waypoint without following the steps then you may need to backtrack a slight bit until the footprints are visible again before Sly becomes active."},
-            {"The pet will be mailed to you after you've found him the 3rd time. Use the item to receive the pet"},
+            {"The pet will be mailed to you after you've found him the 3rd time."},
         }
     }, 
     [3102]={
@@ -26809,13 +26873,26 @@ PETS.all ={
         isTradeable=true,
         isUnique=false,
         isPassive=false,
-        source="Drop",
+        intermittent=true,
+        source="Quest",
         flavor="The brilliant scales of the etherwyrm reflect the bright skies of Bastion.",
         icon="3046536",
-        items={{name="Ascended War Chest"}},
-        locations={{continent="Shadowlands", zone="The Maw"}},
         possbileBreeds={"S/S", "P/S"},
         baseStats={7.5, 8.325, 8.175},
+        pois={
+            {name="Quests", entries={
+                {id="q63824", maps={
+                    {mapID=1543, desc="General quest area", type="start", coords={{43,43}}},
+                }}
+            }}
+        },
+        chance=11,
+        acquisition={
+            {"Only available when %s is active in The Maw. The assault will rotate between the 4 covenants twice per week. So, this assault will be available every 2 weeks.", "q63824"},
+            {"You can be a member of any covenant and still complete the quests to receive a %s.", "i185993"},
+            {"The quest can only be completed once per assault. But, it can be completed on multiple characters."},
+            {"The chest has an 11%% chance to drop %s.", "i186546"},
+        }
     }, 
     [3104]={
         name="Ruby Baubleworm",
@@ -27011,6 +27088,8 @@ PETS.all ={
         source="Quest",
         flavor="When you're a Maldraxxian stitchcrafter and you have to name a lot of abominations, sometimes you just go with the obvious choice.",
         icon="3622122",
+        possbileBreeds={"B/B", "P/B", "H/B"},
+        baseStats={8.625, 8.375, 7},
         pois={
             {name="Quests", entries={
                 {id="q63543", maps={
@@ -27018,15 +27097,12 @@ PETS.all ={
                 }}
             }}
         },
-        possbileBreeds={"B/B", "P/B", "H/B"},
-        baseStats={8.625, 8.375, 7},
         chance=11,
         acquisition={
-            {"Only available when %s is active in The Maw.  The assualt will rotate between the 4 covenants twice per week. So, this assault will be available every 2 weeks.", "q63543"},
+            {"Only available when %s is active in The Maw. The assault will rotate between the 4 covenants twice per week. So, this assault will be available every 2 weeks.", "q63543"},
             {"You can be a member of any covenant and still complete the quests to receive a %s.", "i185992"},
             {"The quest can only be completed once per assault. But, it can be completed on multiple characters."},
             {"The chest has an 11%% chance to drop %s.", "i186557"},
-            {"Use the item to receive the pet"},
         }
     }, 
     [3115]={
@@ -27056,13 +27132,26 @@ PETS.all ={
         isTradeable=true,
         isUnique=false,
         isPassive=false,
-        source="Drop",
+        intermittent=true,
+        source="Quest",
         flavor="Gorm find a way to invade just about anywhere, and the Maw is no exception.",
         icon="3084138",
-        items={{name="War Chest of the Wild Hunt"}},
-        locations={{continent="Shadowlands", zone="The Maw"}},
         possbileBreeds={"P/S"},
         baseStats={7.5, 8.375, 8.125},
+        pois={
+            {name="Quests", entries={
+                {id="q63823", maps={
+                    {mapID=1543, desc="General quest area", type="start", coords={{22,50}}},
+                }}
+            }}
+        },
+        chance=11,
+        acquisition={
+            {"Only available when %s is active in The Maw. The assault will rotate between the 4 covenants twice per week. So, this assault will be available every 2 weeks.", "q63823"},
+            {"You can be a member of any covenant and still complete the quests to receive a %s.", "i185991"},
+            {"The quest can only be completed once per assault. But, it can be completed on multiple characters."},
+            {"The chest has an 11%% chance to drop %s.", "i186547"},
+        }
     }, 
     [3117]={
         name="Amaranthine Stinger",

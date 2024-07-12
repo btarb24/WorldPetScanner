@@ -263,19 +263,10 @@ PETC.TaskData = {
             [2] = {
                 type = PETC.REWARD_TYPE.PET_VIA_ITEM,
                 speciesID = 3103,
-                spellID = 353451,
-                creatureName = "Copperback Etherwyrm",
-                itemID = 185993,
-                itemName = "Ascended War Chest",
-                chance = true,
-                note = "Complete the quest to receive an [Ascended War Chest] reward for an 11% chance at [Copperback Etherwyrm]."
             },
             [3] = {
                 type = PETC.REWARD_TYPE.PET,
                 speciesID = 3010,
-                spellID = 339670,
-                creatureName = "Sinfall Screecher",
-                note = "During the Kyrian Assault event there's a cage at 30,43. Pull down the cage to receive [Sinfall Screecher].\n  note: Xandria cannot be offering Quest [No One Floats Down Here]."
             },
         }
     },
@@ -297,19 +288,10 @@ PETC.TaskData = {
             [1] = {
                 type = PETC.REWARD_TYPE.PET,
                 speciesID = 3099,
-                spellID = 353230,
-                creatureName = "Infused Etherwyrm",
-                note = "Acquire a key from someone in the Rift and then open a cage to receive the pet\n  1: (Rift)Kill an Elusive Keybinder to receive key. rough area of 24,40 | 21,39 | 23,42\n  2: (Normal Phase) go to cave entrance 21,39\n  3: Open cage at 23,42"
             },
             [2] = {
                 type = PETC.REWARD_TYPE.PET_VIA_ITEM,
                 speciesID = 3116,
-                spellID = 353569,
-                creatureName = "Invasive Buzzer",
-                itemID = 185991,
-                itemName = "Ascended War Chest",
-                chance = true,
-                note = "Complete the quest to receive an [War Chest of the Wild Hunt] reward for an 11% chance at [Invasive Buzzer]."
             },
         }
     },
@@ -333,9 +315,6 @@ PETC.TaskData = {
             [1] = {
                 type = PETC.REWARD_TYPE.PET,
                 speciesID = 1974,
-                spellID = 230073,
-                creatureName = "Snowfeather Hatchling",
-                note = "Kill the Snowfeather Matriarch (48,10) and then click the Orphaned Snowfeather (32,28)"
             },
         }
     },
@@ -359,9 +338,6 @@ PETC.TaskData = {
             [1] = {
                 type = PETC.REWARD_TYPE.PET,
                 speciesID = 1975,
-                spellID = 230074,
-                creatureName = "Direbeak Hatchling",
-                note = "Kill the Direbeak Matriarch (78,76) and then click the Orphaned Direbeak (80,70)"
             },
         }
     },
@@ -385,9 +361,6 @@ PETC.TaskData = {
             [1] = {
                 type = PETC.REWARD_TYPE.PET,
                 speciesID = 1977,
-                spellID = 230076,
-                creatureName = "Bloodgazer Hatchling",
-                note = "Kill the Bloodgazer Matriarch (35,6) and then click the Bloodgazer Direbeak (35,8)"
             },
         }
     },
@@ -395,7 +368,7 @@ PETC.TaskData = {
         trigger = {
             type = PETC.TRIGGER_TYPE.WORLD_QUEST,
             questID = 44895,
-            questName = "Bloodgazer Swarm!",
+            questName = "Sharptalon Swarm!",
             questEvaluationType = PETC.QUEST_EVAL_TYPE.BYMAP,
         },
         challenge = {
@@ -411,9 +384,6 @@ PETC.TaskData = {
             [1] = {
                 type = PETC.REWARD_TYPE.PET,
                 speciesID = 1976,
-                spellID = 230075,
-                creatureName = "Sharptalon Hatchling",
-                note = "Kill the Sharptalon Matriarch (48,10) and then click the Sharptalon Direbeak (47,10)"
             },
         }
     },

@@ -112,6 +112,7 @@ local function GetLink(idStr, color)
         local detail = strsub(idStr, 2)
         id, name = strsplit(":", detail)
         name = name and name or C_QuestLog.GetTitleForQuestID(id)
+        if not name then print("missing quest name for " .. tostring(id)) end
         if not color then
             color = "ffff00"
         end
@@ -1011,16 +1012,23 @@ local function UpdateWindow(pet, locationIdx)
             if (requestedLocation.coords) then
                 for _, coord in pairs(requestedLocation.coords) do
                     local dot = AcquireMapPinTexture(mapFrame)
-                    if requestedLocation.type == "start" then
+                    local type = coord.type and coord.type or requestedLocation.type
+                    if type == "start" then
                         dot:SetAtlas("Islands-QuestBang")
                         dot:SetSize(20,20)
-                    elseif requestedLocation.type == "end" then
+                    elseif type == "end" then
                         dot:SetAtlas("Islands-QuestTurnin")
                         dot:SetSize(20,20)
-                    elseif requestedLocation.type == "poi" then
+                    elseif type == "poi" then
                         dot:SetAtlas("VignetteKill")
                         dot:SetSize(12,12)
-                    elseif requestedLocation.type == "kill" then
+                    elseif type == "treasure" then
+                        dot:SetAtlas("VignetteLoot")
+                        dot:SetSize(14,14)
+                    elseif type == "cave" then
+                        dot:SetAtlas("CaveUnderground-Down")
+                        dot:SetSize(14,14)
+                    elseif type == "kill" then
                         if(#requestedLocation.coords == 1) then
                             dot:SetAtlas("ShipMission_DangerousSkull")
                             dot:SetSize(14,16)
@@ -1028,7 +1036,7 @@ local function UpdateWindow(pet, locationIdx)
                             dot:SetAtlas("ComboPoints-ComboPoint")
                             dot:SetSize(10,10)
                         end
-                    elseif pet.source == "Vendor" or requestedLocation.type == "npc" then                        
+                    elseif pet.source == "Vendor" or type == "npc" then                        
                         dot:SetAtlas("GM-icon-headCount")
                         dot:SetSize(16,16)
                     else
