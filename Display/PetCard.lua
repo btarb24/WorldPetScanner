@@ -4,6 +4,7 @@ local DISPLAY = PETC.DISPLAY
 local DISPLAY_UTIL = DISPLAY.Util
 local UTILITIES = PETC.UTILITIES
 local PETS = PETC.PETS
+local MAPS = PETC.MAPS
 
 local function Tab_OnClick(self)
     PanelTemplates_SetTab(self:GetParent(), self:GetID())
@@ -19,6 +20,25 @@ local function Tab_OnClick(self)
     end
     PAPetCard.SelectedTab = self    
     self.Text:SetPoint("LEFT", self, "LEFT", -38, 3)
+end
+
+local function ParseLocation(location)
+    local depth1 = 1
+    local depth2 = 1
+    local depth3 = 1
+    if (location and type(location == "string")) then        
+        local depth1Str, depth2Str, depth3Str  = strsplit(":", location)
+        depth1 = tonumber(depth1Str)
+        if (depth2Str) then
+            depth2 = tonumber(depth2Str)
+        end
+        if (depth3Str) then
+            depth3 = tonumber(depth3Str)
+        end
+    elseif location then
+        depth1 = location
+    end
+    return depth1, depth2, depth3
 end
 
 local function AcquireMapTileTexture(parent)
@@ -54,6 +74,62 @@ local function SetPetColor(fontString, rarity)
     end
 end
 
+local function GetLink(idStr, color)
+    local type = strsub(idStr, 1, 1)
+    local link
+    local id
+    local name
+    if (type == "i") then
+        id = tonumber(strsub(idStr, 2))
+        name, link = GetItemInfo(id)
+    elseif (type == "s") then
+        id = tonumber(strsub(idStr, 2))
+        link = GetSpellLink(id)
+    elseif(type == "n") then
+        local detail = strsub(idStr, 2)
+        id, name = strsplit(":", detail)
+        if not color then
+            color = "b3b3b3"
+        end
+        link = string.format("|Hnpc:%s|h|cFF%s%s|r|h", id, color, name)
+    elseif(type == "q") then
+        local detail = strsub(idStr, 2)
+        id, name = strsplit(":", detail)
+        name = name and name or C_QuestLog.GetTitleForQuestID(id)
+        if not color then
+            color = "ffff00"
+        end
+        link = string.format("|cFF%s|Hquest:%d:-1:-1:-1:-1|h[%s]|h|r", color, id, name)
+    elseif(type == "o") then
+        local detail = strsub(idStr, 2)
+        id, name = strsplit(":", detail)
+        if not color then
+            color = "b3b3b3"
+        end
+        link = string.format("|cFF%s|Hobject:%d|h%s|h|r", color, id, name)
+    elseif(type == "c") then
+        id = tonumber(strsub(idStr, 2))
+        link = C_CurrencyInfo.GetCurrencyLink(id)
+    end
+    return link, id, name, type
+end
+
+local function GetCurrencyText(currencies)
+    local result = {}
+    for _, currency in ipairs(currencies) do
+        local currencyVal
+        if currency[1] == "gold" then
+            local moneyText = C_CurrencyInfo.GetCoinTextureString(currency[2]*10000, 10)
+            table.insert(result, moneyText)
+        else
+            local itemLink = select(2, GetItemInfo(currency[1]))
+            local currencyVal = string.format("%dx%s",currency[2], itemLink)
+            table.insert(result, currencyVal)
+        end
+    end
+    return result;
+end
+
 local function GetLineText(lineContent)
     if (#lineContent == 1) then
         return lineContent[1]
@@ -62,20 +138,8 @@ local function GetLineText(lineContent)
     local links = {}
     for idx, entry in ipairs(lineContent) do
         if (idx > 1) then
-            local type = strsub(entry, 1, 1)
-            if (type == "i") then
-                local id = tonumber(strsub(entry, 2))
-                local link = select(2, GetItemInfo(id))
-                if not link then
-                    link = select(2, GetItemInfo(id))
-                end
-                table.insert(links, link)
-            elseif(type == "n") then
-                local detail = strsub(entry, 2)
-                local id, name = strsplit(":", detail)
-                local link = string.format("|Hnpc:%s|h|cffb3b3b3%s|r|h", id, name)
-                table.insert(links, link)
-            end
+            local link = GetLink(entry)
+            table.insert(links, link)
         end
     end
 
@@ -202,46 +266,119 @@ local function GetNPCDropText(npcs, selectedNpcIdx)
     return topDock;
 end
 
-local function GetProfessionText(professionDetail, selectedIdx)
-    if (not selectedIdx) then
-        selectedIdx = 1
-    end
-
+local function GetPois(pois, selectedIdx)
+    local selectedDepth1, selectedDepth2, selectedDepth3 = ParseLocation(selectedIdx)
+    
     local topDock 
-
-    if (professionDetail.maps) then        
-        local mapTipsLbl = DISPLAY_UTIL:AcquireLabelFont(PAPetCard, PAPetCardTab2.content.scrollFrame.child)   
-        mapTipsLbl:SetPoint("TOPLEFT", PAPetCardTab2.content.scrollFrame.child, "TOPLEFT")
-        mapTipsLbl:SetText("Map tips: ")
-        topDock = mapTipsLbl
+    for poiTypeIdx, poiType in ipairs(pois) do
+        local mainPoiLbl = DISPLAY_UTIL:AcquireLabelFont(PAPetCard, PAPetCardTab2.content.scrollFrame.child)
+        mainPoiLbl:SetText(poiType.name)
+        if (poiTypeIdx == 1) then            
+            mainPoiLbl:SetPoint("TOPLEFT", PAPetCardTab2.content.scrollFrame.child, "TOPLEFT")
+        else
+            mainPoiLbl:SetPoint("LEFT", PAPetCardTab2.content.scrollFrame.child, "LEFT")
+            mainPoiLbl:SetPoint("TOP", topDock, "BOTTOM", 0, -3)
+        end
         
-        local leftDock = mapTipsLbl
-        for mapIdx, map in ipairs(professionDetail.maps) do
-            local mapDescLbl
-            if mapIdx == selectedIdx then
-                mapDescLbl = DISPLAY_UTIL:AcquireHighlightFont(PAPetCard, PAPetCardTab2.content.scrollFrame.child)
-            else
-                mapDescLbl = DISPLAY_UTIL:AcquireMultiValueFont(PAPetCard, PAPetCardTab2.content.scrollFrame.child)
-                mapDescLbl.locationIndex = mapIdx
-                mapDescLbl:SetScript("OnMouseDown",
-                    function(self)
-                        DISPLAY.PetCard:Show(PAPetCard.pet, self.locationIndex)
-                    end
-                )
-            end
-            mapDescLbl:SetText(map.desc)
-            mapDescLbl:SetPoint("TOP", topDock, "BOTTOM", 0, -3)
-            mapDescLbl:SetPoint("LEFT", leftDock, "LEFT", 15, 0)
+        topDock = mainPoiLbl
+        local leftDock = mainPoiLbl
+        for entryIdx, entry in ipairs(poiType.entries) do
+            local poiLbl = DISPLAY_UTIL:AcquireHighlightFont(PAPetCard, PAPetCardTab2.content.scrollFrame.child)
+            local poiLink, poiID, _, poiType = GetLink(entry.id);
+            poiLbl:SetText(poiLink)
+            poiLbl:SetPoint("TOP", topDock, "BOTTOM", 0, -5)
 
-            local zoneName = DISPLAY_UTIL:AcquireSmallerSubduedFont(PAPetCard, PAPetCardTab2.content.scrollFrame.child)
-            zoneName:SetText(map.zone)
-            zoneName:SetPoint("TOPLEFT", mapDescLbl, "TOPRIGHT", 3, -1)
-            
-            topDock = mapDescLbl
+            if (poiType == "q") then                
+                local completed = C_QuestLog.IsComplete(poiID)
+
+                local questState = DISPLAY_UTIL:AcquireTexture(PAPetCard, PAPetCardTab2.content.scrollFrame.child)
+                if completed then
+                    questState:SetAtlas("auctionhouse-icon-checkmark")
+                    questState:SetSize(12,12)
+                    questState:SetPoint("TOP", poiLbl, "TOP", 0, -1)
+                    questState:SetPoint("LEFT", PAPetCardTab2.content.scrollFrame.child, "LEFT", 10, 0)
+                else
+                    questState:SetAtlas("jailerstower-wayfinder-rewardcircle")
+                    questState:SetSize(13,13)
+                    questState:SetPoint("TOP", poiLbl, "TOP", 0, 0)
+                    questState:SetPoint("LEFT", PAPetCardTab2.content.scrollFrame.child, "LEFT", 9, 0)
+                end
+                poiLbl:SetPoint("LEFT", mainPoiLbl, "LEFT", 25, 0)
+                leftDock = questState
+            else
+                leftDock = poiLbl
+                poiLbl:SetPoint("LEFT", mainPoiLbl, "LEFT", 15, 0)
+            end
+            topDock = poiLbl
+
+            if (entry.maps) then
+                for mapIdx, map in ipairs(entry.maps) do
+                    local mapDescLbl
+                    local isSelected = poiTypeIdx == selectedDepth1 and entryIdx == selectedDepth2 and mapIdx == selectedDepth3
+                    if isSelected then
+                        mapDescLbl = DISPLAY_UTIL:AcquireHighlightFont(PAPetCard, PAPetCardTab2.content.scrollFrame.child)
+                        if (map.desc) then
+                            mapDescLbl:SetText(map.desc)
+                        else
+                            mapDescLbl:SetText(select(1, GetLink(map.id, "ffffff")))
+                        end
+                    else
+                        mapDescLbl = DISPLAY_UTIL:AcquireMultiValueFont(PAPetCard, PAPetCardTab2.content.scrollFrame.child)
+                        if (map.desc) then
+                            mapDescLbl:SetText(map.desc)
+                        else
+                            mapDescLbl:SetText(select(3, GetLink(map.id, "ffffff")))
+                        end
+                        mapDescLbl.locationIndex = string.format("%d:%d:%d", poiTypeIdx, entryIdx, mapIdx)
+                        mapDescLbl:SetScript("OnMouseDown",
+                            function(self)
+                                DISPLAY.PetCard:Show(PAPetCard.pet, self.locationIndex)
+                            end
+                        )
+                    end
+                    mapDescLbl:SetPoint("TOP", topDock, "BOTTOM", 0, -2)
+                    mapDescLbl:SetPoint("LEFT", leftDock, "LEFT", 15, 0)
+
+                    local details = ""
+                    if (map.chance) then
+                        details = string.format(" %s%%", map.chance)
+                    end
+                    if (map.currencies) then
+                        local currencies = GetCurrencyText(map.currencies)
+                        local currencyStr = table.concat(currencies, ", ")
+                        details = string.format("%s (%s)", details, currencyStr)
+                    end
+                    if (map.mapID) then
+                        local zone = MAPS.GetZone(map.mapID)
+                        details = string.format("%s %s", details, zone)
+                    end
+                    local mapDetails = DISPLAY_UTIL:AcquireSmallerSubduedFont(PAPetCard, PAPetCardTab2.content.scrollFrame.child)
+                    mapDetails:SetText(details)
+                    mapDetails:SetPoint("TOPLEFT", mapDescLbl, "TOPRIGHT", 3, -1)
+                    
+                    if (poiType == "q" and map.type) then
+                        local mapTipIcon = DISPLAY_UTIL:AcquireButton(PAPetCard, PAPetCardTab2.content.scrollFrame.child)
+                        if (map.type == "start") then
+                            mapTipIcon:SetNormalAtlas("Islands-QuestBang")
+                        elseif (map.type == "end") then
+                            mapTipIcon:SetNormalAtlas("Islands-QuestTurnin")
+                        end
+                        mapTipIcon:SetSize(16,16)
+                        mapTipIcon:SetPoint("TOP", topDock, "BOTTOM")
+                        mapTipIcon:SetPoint("LEFT", leftDock, "LEFT", 15, 0)
+                        mapDescLbl:SetPoint("LEFT", mapTipIcon, "RIGHT", 0, 0)
+                    end
+
+                    topDock = mapDescLbl
+                end
+            end
         end
     end
-
     
+    return topDock
+end
+
+local function GetProfessionText(professionDetail, topDock)
     local professionLbl = DISPLAY_UTIL:AcquireLabelFont(PAPetCard, PAPetCardTab2.content.scrollFrame.child)
     if (topDock) then
         professionLbl:SetPoint("LEFT", PAPetCardTab2.content.scrollFrame.child, "LEFT")
@@ -251,30 +388,41 @@ local function GetProfessionText(professionDetail, selectedIdx)
     end
     professionLbl:SetText("Profession: ")
     local professionVal = DISPLAY_UTIL:AcquireHighlightFont(PAPetCard, PAPetCardTab2.content.scrollFrame.child)
-    local professionText = string.format("%s |cFFb3b3b3(%s)|r", professionDetail.profession, professionDetail.desc)
+    local professionText
+    if professionDetail.desc then
+        professionText = string.format("%s |cFFb3b3b3(%s)|r", professionDetail.profession, professionDetail.desc) 
+    else
+        professionText = string.format("%s |cFFb3b3b3|r", professionDetail.profession)
+    end
     professionVal:SetText(professionText)
     professionVal:SetPoint("TOPLEFT", professionLbl, "TOPRIGHT")
+    topDock = professionLbl
 
-    local recipeLbl = DISPLAY_UTIL:AcquireLabelFont(PAPetCard, PAPetCardTab2.content.scrollFrame.child)
-    recipeLbl:SetText("Recipe: ")
-    recipeLbl:SetPoint("TOPLEFT", professionLbl, "BOTTOMLEFT", 0, -10)
-    local recipeVal = DISPLAY_UTIL:AcquireHighlightFont(PAPetCard, PAPetCardTab2.content.scrollFrame.child)
-    recipeVal:SetText(GetSpellLink(professionDetail.recipe))
-    recipeVal:SetPoint("TOPLEFT", recipeLbl, "TOPRIGHT")
+    if (professionDetail.recipe) then
+        local recipeLbl = DISPLAY_UTIL:AcquireLabelFont(PAPetCard, PAPetCardTab2.content.scrollFrame.child)
+        recipeLbl:SetText("Recipe: ")
+        recipeLbl:SetPoint("TOPLEFT", professionLbl, "BOTTOMLEFT", 0, -10)
+        local recipeVal = DISPLAY_UTIL:AcquireHighlightFont(PAPetCard, PAPetCardTab2.content.scrollFrame.child)
+        recipeVal:SetText(GetSpellLink(professionDetail.recipe))
+        recipeVal:SetPoint("TOPLEFT", recipeLbl, "TOPRIGHT")
+        topDock = recipeLbl
+    end
     
-    local materialsLbl = DISPLAY_UTIL:AcquireLabelFont(PAPetCard, PAPetCardTab2.content.scrollFrame.child)
-    materialsLbl:SetText("Materials: ")
-    materialsLbl:SetPoint("TOPLEFT", recipeLbl, "BOTTOMLEFT", 0, -10)
-    local topDock = materialsLbl
-    for _, mat in pairs(professionDetail.materials) do
-        local materialVal = DISPLAY_UTIL:AcquireHighlightFont(PAPetCard, PAPetCardTab2.content.scrollFrame.child)
-        local itemLink = select(2, GetItemInfo(mat.id))
-        
-        local matStr = string.format("%dx%s", mat.qty, itemLink)  
-        materialVal:SetText(matStr)
-        materialVal:SetPoint("LEFT", materialsLbl, "LEFT", 10, 0)
-        materialVal:SetPoint("TOP", topDock, "BOTTOM", 0, -3)
-        topDock = materialVal
+    if (professionDetail.materials) then
+        local materialsLbl = DISPLAY_UTIL:AcquireLabelFont(PAPetCard, PAPetCardTab2.content.scrollFrame.child)
+        materialsLbl:SetText("Materials: ")
+        materialsLbl:SetPoint("TOPLEFT", topDock, "BOTTOMLEFT", 0, -10)
+        topDock = materialsLbl
+        for _, mat in pairs(professionDetail.materials) do
+            local materialVal = DISPLAY_UTIL:AcquireHighlightFont(PAPetCard, PAPetCardTab2.content.scrollFrame.child)
+            local itemLink = select(2, GetItemInfo(mat.id))
+            
+            local matStr = string.format("%dx%s", mat.qty, itemLink)
+            materialVal:SetText(matStr)
+            materialVal:SetPoint("LEFT", materialsLbl, "LEFT", 10, 0)
+            materialVal:SetPoint("TOP", topDock, "BOTTOM", 0, -3)
+            topDock = materialVal
+        end
     end
 
     return topDock
@@ -353,62 +501,29 @@ local function GetVendorText(vendors, selectedVendorIdx)
     return topDock
 end
 
-local function BuildMapTitle(location)    
-    --quest
-    if location.desc then
-        return string.format("%s - %s", location.desc, location.zone)
-    end
+local function BuildMapTitle(location)
+    local continent, zone, area, floor = MAPS.GetMapInfo(location.mapID)
 
-    local mapName = string.format("%s > %s", location.continent, location.zone)
-    if (location.area) then
-        mapName = string.format("%s > %s", mapName, location.area)
+    local mapName = string.format("%s > %s", continent, zone)
+    if (area) then
+        mapName = string.format("%s > %s", mapName, area)
     end
-    if (location.mapFloor) then
-        mapName = string.format("%s [f. %d]", mapName, location.mapFloor)
+    if (floor) then
+        mapName = string.format("%s > %s", mapName, floor)
     end
 
     return mapName
 end
 
-local function GetLocation(pet, locationIdx) --location, showLocList
-    if (pet.source == "Quest") then
-        if not locationIdx then
-            locationIdx = "1:1"
-        end
-
-        local questIdx, mapTipIdx = strsplit(":", locationIdx)
-        if not mapTipIdx then
-            mapTipIdx = "1"
-        end
-
-        local quest = pet.quests[tonumber(questIdx)]
-        if not quest.maps then
+local function GetLocation(pet, location) --location, showLocList
+    local depth1, depth2, depth3 = ParseLocation(location)
+    if (pet.pois) then
+        local poi = pet.pois[depth1]
+        if not poi.entries then
             return nil
         end
-
-        local mapTip = quest.maps[tonumber(mapTipIdx)]
-        return mapTip, false
-    end
-
-    if not locationIdx then
-        locationIdx = 1
-    end
-
-    if (pet.source == "Profession") then
-        if (not pet.professionDetail.maps) then
-            return nil
-        end
-        return pet.professionDetail.maps[locationIdx], false
-    end
-    
-    --specific npc source locations
-    if (pet.source == "Vendor") then
-        return pet.npcs[locationIdx].locations[1], false
-    end
-
-    --specific npc source locations
-    if (pet.source == "Drop") then
-        return pet.npcs[locationIdx].locations[1], false
+        local entry = poi.entries[depth2]
+        return entry.maps[depth3], false
     end
 
     --no location map
@@ -791,13 +906,17 @@ local function CreateWindow()
     tab1.content.ability6Border:SetPoint("TOPLEFT", tab1.content.abilitiesCol3, "TOPLEFT", 8, -57)
     tab1.content.ability6Border:SetSize(41,40)
 
+    tab2.content.mapLbl = tab2.content:CreateFontString(nil, "ARTWORK", "GameFontHighlight")
+    tab2.content.mapLbl:SetPoint("TOP", tab2.content, "TOP", 0, -10)
+    tab2.content.mapLbl:SetPoint("CENTER", tab2.content)
+    tab2.content.mapLbl:SetWidth(tab2.content:GetWidth() - 30)
+    tab2.content.mapLbl:SetHeight(30)
+
     tab2.content.mapFrame = CreateFrame("Frame", nil, tab2.content)
     tab2.content.mapFrame:SetSize(350, 240)
-    tab2.content.mapFrame:SetPoint("TOPLEFT",20,-22)
+    tab2.content.mapFrame:SetPoint("TOP", tab2.content.mapLbl, "BOTTOM",0, 0)
+    tab2.content.mapFrame:SetPoint("LEFT", tab2.content, 20, 0)
     
-    tab2.content.mapLbl = tab2.content.mapFrame:CreateFontString(nil, "ARTWORK", "GameFontHighlight")
-    tab2.content.mapLbl:SetPoint("BOTTOM", tab2.content.mapFrame, "TOP", 0, 0)
-    tab2.content.mapLbl:SetPoint("CENTER", tab2.content.mapFrame)
     
     tab2.content.locationsFrame = CreateFrame("Frame", nil, tab2.content)
     tab2.content.locationsFrame:SetPoint("TOPLEFT", tab2.content.mapFrame, "BOTTOMLEFT")
@@ -820,12 +939,12 @@ local function CreateWindow()
         GameTooltip:SetPoint("BOTTOM",region,"TOP",0,6)
 
         local linkType = strsplit(":", link)
-        if (linkType == "npc") then
+        if (linkType == "npc" or linkType == "object") then
             GameTooltip:SetText("Click for WowHead link")
         else
             GameTooltip:SetHyperlink(link)
         end
-        
+
         GameTooltip:Show()
     end
     local hyperlinkClick = function(self, link, text, button, region, left, bottom, width, height)
@@ -836,6 +955,8 @@ local function CreateWindow()
             DISPLAY.LinkWindow:Show(text, "https://www.wowhead.com/npc=" .. id)
         elseif (type == "quest") then
             DISPLAY.LinkWindow:Show(text, "https://www.wowhead.com/quest=" .. id)
+        elseif (type == "object") then
+            DISPLAY.LinkWindow:Show(text, "https://www.wowhead.com/object=" .. id)
         else
             ChatFrame_OnHyperlinkShow(self, link, text, button, region, left, bottom, width, height)
         end
@@ -1048,11 +1169,14 @@ local function UpdateWindow(pet, locationIdx)
                 for _, coord in pairs(requestedLocation.coords) do
                     local dot = AcquireMapPinTexture(mapFrame)
                     if requestedLocation.type == "start" then
-                        dot:SetAtlas("Islands-QuestBang")           
-                        dot:SetSize(20,20)             
+                        dot:SetAtlas("Islands-QuestBang")
+                        dot:SetSize(20,20)
                     elseif requestedLocation.type == "end" then
                         dot:SetAtlas("Islands-QuestTurnin")
                         dot:SetSize(20,20)
+                    elseif requestedLocation.type == "poi" then
+                        dot:SetAtlas("VignetteKill")
+                        dot:SetSize(12,12)
                     elseif requestedLocation.type == "kill" then
                         if(#requestedLocation.coords == 1) then
                             dot:SetAtlas("ShipMission_DangerousSkull")
@@ -1061,7 +1185,7 @@ local function UpdateWindow(pet, locationIdx)
                             dot:SetAtlas("ComboPoints-ComboPoint")
                             dot:SetSize(10,10)
                         end
-                    elseif pet.source == "Vendor" then                        
+                    elseif pet.source == "Vendor" or requestedLocation.type == "npc" then                        
                         dot:SetAtlas("GM-icon-headCount")
                         dot:SetSize(16,16)
                     else
@@ -1129,15 +1253,13 @@ local function UpdateWindow(pet, locationIdx)
     end
 
     local bottomOfSourceSection
+    if (pet.pois) then
+        bottomOfSourceSection = GetPois(pet.pois, locationIdx)
+    end
+
     if (pet.source == "Profession") then
-        bottomOfSourceSection = GetProfessionText(pet.professionDetail, locationIdx)
-    elseif(pet.source == "Vendor") then
-        bottomOfSourceSection = GetVendorText(pet.npcs, locationIdx)
-    elseif(pet.source == "Drop") then
-        bottomOfSourceSection = GetNPCDropText(pet.npcs, locationIdx)
-    elseif(pet.source == "Quest") then
-        bottomOfSourceSection = GetQuestText(pet.quests, locationIdx)
-    else
+        bottomOfSourceSection = GetProfessionText(pet.professionDetail, bottomOfSourceSection)    
+    elseif not pet.pois then
         local sourceLbl = DISPLAY_UTIL:AcquireLabelFont(PAPetCard, f.tab2.content.scrollFrame.child)
         sourceLbl:SetText("Source: ")
         sourceLbl:SetPoint("TOPLEFT", f.tab2.content.scrollFrame.child, "TOPLEFT")
@@ -1147,6 +1269,12 @@ local function UpdateWindow(pet, locationIdx)
         sourceVal:SetText(pet.source)
         bottomOfSourceSection = sourceVal
     end
+    -- elseif(pet.source == "Vendor") then
+    --     bottomOfSourceSection = GetVendorText(pet.npcs, locationIdx)
+    -- elseif(pet.source == "Drop") then
+    --     bottomOfSourceSection = GetNPCDropText(pet.npcs, locationIdx)
+    -- elseif(pet.source == "Quest") then
+    --     bottomOfSourceSection = GetQuestText(pet.quests, locationIdx)
 
    -- INSTRUCTIONS
     local priorBottom = bottomOfSourceSection

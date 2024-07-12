@@ -12,4 +12,5 @@ PETC.ZONES = {}
 PETC.EXPANSIONS = {}
 PETC.CONTINENTS = {}
 PETC.PETS = {}
+PETC.MAPS = {}
 PETC.links = {}

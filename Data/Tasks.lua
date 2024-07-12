@@ -36,15 +36,9 @@ PETC.TaskData = {
             note = "Located in Stormwind City (76, 17) and Orgrimmar (52,42) during Cataclysm Timewalking",
         },
         rewards = {
-            [1] = {
+            {
                 type = PETC.REWARD_TYPE.PET_VIA_ITEM,
-                creatureName = "Strand Crawler",
                 speciesID = 211,
-                spellID = 62561,
-                itemID = 67414,
-                itemName = "Bag of Shiny Things",
-                chance = true,
-                note = "Purchase a [Bag of Shiny Things] from Kiatke for 150 [Timewarped Badge]\nIt has roughly 1% chance of yielding a [Strand Crawler]."
             }
         }
     },
@@ -237,22 +231,16 @@ PETC.TaskData = {
             questName = "Necrolord Assault",
         },
         rewards = {
-            [1] = {
+            {
                 type = PETC.REWARD_TYPE.PET,
                 speciesID = 3098,
                 spellID = 353230,
                 creatureName = "Lil' Abom",
                 note = "His 5 body parts are scattered around the questing area. Collect and combine into the pet.\n  -Lil' Abom Head - 32.2 56.0 | 30.3 63.3 | 27.4 56.6\n  -Lil' Abom Spare Arm - 33.3 65.8 | 39.2 66.5\n  -Lil' Abom Torso - 36.4 64.4 | 39.9 62.6 (cave ent:36.9 67.4)\n  -Lil' Abom Legs - 29.4 67.2\n  -Lil' Abom Right Hand - back of cave on left 38.5 58.5"
             },
-            [2] = {
+            {
                 type = PETC.REWARD_TYPE.PET_VIA_ITEM,
                 speciesID = 3114,
-                spellID = 353529,
-                creatureName = "Fodder",
-                itemID = 185992,
-                itemName = "War Chest of the Undying Army",
-                chance = true,
-                note = "Complete the quest to receive an [War Chest of the Undying Army] reward for an 11% chance at [Fodder]."
             },
         }
     },

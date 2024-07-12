@@ -17,6 +17,7 @@ DB\Expansions.lua
 DB\Zones.lua
 DB\Items.lua
 
+Data\Maps.lua
 Data\Tasks.lua
 Data\Pets.lua
 Data\Continents.lua

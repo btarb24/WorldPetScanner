@@ -5,6 +5,7 @@ local PETS = PETC.PETS
 local DISPLAY = PETC.DISPLAY
 local UTILITIES = PETC.UTILITIES
 local TASKFINDER = PETC.TASKFINDER
+local MAPS = PETC.MAPS
 
 local LibQTip = LibStub("LibQTip-1.0")
 
@@ -37,20 +38,27 @@ local function CreatePetSortLists()
 				print("wild pet without location:" .. pet.name)
 			end
 			for _, loc in pairs(pet.locations) do
-				if (not list[loc.continent]) then
-					list[loc.continent] = {}
+				local continent = loc.continent
+				local zone = loc.zone
+				local area = loc.area
+				if (not continent) then
+					continent, zone, area = MAPS.GetMapInfo(loc.mapID)
 				end
-				if (not list[loc.continent][loc.zone]) then
-					list[loc.continent][loc.zone] = {pets = {}}
+
+				if (not list[continent]) then
+					list[continent] = {}
+				end
+				if (not list[continent][zone]) then
+					list[continent][zone] = {pets = {}}
 				end
 
 				if (loc.area) then
-					if (not list[loc.continent][loc.zone][loc.area]) then
-						list[loc.continent][loc.zone][loc.area] = {pets = {}}
+					if (not list[continent][zone][area]) then
+						list[continent][zone][area] = {pets = {}}
 					end
-					table.insert(list[loc.continent][loc.zone][loc.area].pets, pet)
+					table.insert(list[continent][zone][area].pets, pet)
 				else
-					table.insert(list[loc.continent][loc.zone].pets, pet)
+					table.insert(list[continent][zone].pets, pet)
 				end
 			end
 		end

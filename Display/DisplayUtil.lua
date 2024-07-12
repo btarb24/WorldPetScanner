@@ -57,6 +57,19 @@ function DISPLAY_UTIL:ReleasePools(poolOwner)
     end
 end
 
+function DISPLAY_UTIL:AcquireTexture(poolOwner, controlParent)
+    if (not controlParent.texturePool) then
+        controlParent.texturePool = CreateTexturePool(controlParent, "OVERLAY")
+        AddToPoolOwner(poolOwner, controlParent.texturePool)
+    end
+
+    local t = controlParent.texturePool:Acquire()
+    t:SetScript("OnEnter", nil)
+    t:SetScript("OnLeave", nil)
+    t:Show()
+    return t
+end
+
 function DISPLAY_UTIL:AcquireLabelFont(poolOwner, controlParent)
     if (not controlParent.labelFontPool) then
         controlParent.labelFontPool = CreateFontStringPool(controlParent, "OVERLAY", nil, "GameFontNormal")
