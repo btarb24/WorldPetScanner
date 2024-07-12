@@ -267,8 +267,10 @@ local function GetProfessionText(professionDetail, selectedIdx)
     materialsLbl:SetPoint("TOPLEFT", recipeLbl, "BOTTOMLEFT", 0, -10)
     local topDock = materialsLbl
     for _, mat in pairs(professionDetail.materials) do
-        local materialVal = DISPLAY_UTIL:AcquireHighlightFont(PAPetCard, PAPetCardTab2.content.scrollFrame.child)  
-        local matStr = string.format("%dx%s", mat.qty, select(2, GetItemInfo(mat.id)))  
+        local materialVal = DISPLAY_UTIL:AcquireHighlightFont(PAPetCard, PAPetCardTab2.content.scrollFrame.child)
+        local itemLink = select(2, GetItemInfo(mat.id))
+        
+        local matStr = string.format("%dx%s", mat.qty, itemLink)  
         materialVal:SetText(matStr)
         materialVal:SetPoint("LEFT", materialsLbl, "LEFT", 10, 0)
         materialVal:SetPoint("TOP", topDock, "BOTTOM", 0, -3)
@@ -626,16 +628,46 @@ local function CreateWindow()
         tab1.content.modelFrame.PopOutClose:Hide()
     end)
 
-    tab1.content.flavor = tab1.content:CreateFontString(nil, "ARTWORK", nil)
+    tab1.content.flavor = tab1.content:CreateFontString(nil, "ARTWORK", "NumberFont_Outline_Huge")
     tab1.content.flavor:SetPoint("TOPLEFT", tab1.content.modelFrame, "BOTTOMLEFT", 0, -20)
     tab1.content.flavor:SetPoint("RIGHT", tab1.content.modelFrame, "RIGHT")
-    tab1.content.flavor:SetFont("Fonts\\skurri.ttf", 15, "OUTLINE, MONOCRHOME")
+    local fontFile, fontHeight, fontFlags = tab1.content.flavor:GetFont()
+    tab1.content.flavor:SetFont(fontFile, 15, nil)
+    tab1.content.flavor:SetTextColor(.920, 0.858, 0.761)
     tab1.content.flavor:SetWordWrap(true)
     --bastion-zone-ability-2
 
+    tab1.content.flavorbg = tab1.content:CreateTexture(nil, "BACKGROUND")
+    tab1.content.flavorbg:SetAtlas("bonusobjectives-title-bg")
+   -- tab1.content.flavorbg:SetDesaturated(true)
+    tab1.content.flavorbg:SetPoint("TOPLEFT", tab1.content.flavor, "TOPLEFT", -10, 10)
+    tab1.content.flavorbg:SetPoint("BOTTOMRIGHT", tab1.content.flavor, "BOTTOMRIGHT", 10, -15)
+
+    tab1.content.flavorbgColor = tab1.content:CreateTexture(nil, "BACKGROUND")
+    tab1.content.flavorbgColor:SetColorTexture(0,0,0)
+    tab1.content.flavorbgColor:SetPoint("TOP", tab1.content.flavorbg, "TOP",0, -1)
+    tab1.content.flavorbgColor:SetPoint("BOTTOM", tab1.content.flavorbg, "BOTTOM",0, 8)
+    tab1.content.flavorbgColor:SetPoint("LEFT", tab1.content, "LEFT", 6,0)
+    tab1.content.flavorbgColor:SetPoint("RIGHT", tab1.content, "RIGHT",-3, 0)
+    tab1.content.flavorbgColorL = tab1.content:CreateTexture(nil, "BACKGROUND")
+    tab1.content.flavorbgColorL:SetColorTexture(1,1,1)
+    tab1.content.flavorbgColorL:SetGradient("HORIZONTAL", CreateColor(1, 1, 1, 0), CreateColor(1, 1, 1, .5))
+    tab1.content.flavorbgColorL:SetPoint("TOP", tab1.content.flavorbg, "TOP",0, -1)
+    tab1.content.flavorbgColorL:SetPoint("BOTTOM", tab1.content.flavorbg, "BOTTOM",0, 8)
+    tab1.content.flavorbgColorL:SetPoint("LEFT", tab1.content, "LEFT", 20,0)
+    tab1.content.flavorbgColorL:SetPoint("RIGHT", tab1.content, "CENTER")
+    tab1.content.flavorbgColorR = tab1.content:CreateTexture(nil, "BACKGROUND")
+    tab1.content.flavorbgColorR:SetColorTexture(1,1,1)
+    tab1.content.flavorbgColorR:SetGradient("HORIZONTAL", CreateColor(1, 1, 1, .5), CreateColor(1, 1, 1, 0))
+    tab1.content.flavorbgColorR:SetPoint("TOP", tab1.content.flavorbg, "TOP",0, -1)
+    tab1.content.flavorbgColorR:SetPoint("BOTTOM", tab1.content.flavorbg, "BOTTOM",0, 8)
+    tab1.content.flavorbgColorR:SetPoint("LEFT", tab1.content, "CENTER")
+    tab1.content.flavorbgColorR:SetPoint("RIGHT", tab1.content, "RIGHT", -20, 0)
+
+
     tab1.content.tradeable = tab1.content:CreateFontString(nil, "ARTWORK", "GameFontNormal")
     tab1.content.tradeable:SetText("Tradeable")
-    tab1.content.tradeable:SetPoint("TOPRIGHT", tab1.content.flavor, "BOTTOMRIGHT", -10, -15)
+    tab1.content.tradeable:SetPoint("TOPRIGHT", tab1.content.flavorbg, "BOTTOMRIGHT", -10, -5)
     tab1.content.tradeable:SetAlpha(.5)
     tab1.content.tradeableCheck = CreateFrame("Button", nil, tab1.content)
     tab1.content.tradeableCheck:SetNormalAtlas("auctionhouse-icon-checkmark")
@@ -648,7 +680,7 @@ local function CreateWindow()
     tab1.content.tradeableLine:SetThickness(1)
     
     tab1.content.collectedLbl = tab1.content:CreateFontString(nil, "ARTWORK", "GameFontNormal")
-    tab1.content.collectedLbl:SetPoint("TOPLEFT", tab1.content.flavor, "BOTTOMLEFT", 0, -15)
+    tab1.content.collectedLbl:SetPoint("TOPLEFT", tab1.content.flavorbg, "BOTTOMLEFT", 0, -5)
     tab1.content.collectedLbl:SetText("Collected ")
     tab1.content.collectedCount = tab1.content:CreateFontString(nil, "ARTWORK", "GameFontNormal")
     tab1.content.collectedCount:SetPoint("TOPLEFT", tab1.content.collectedLbl, "TOPRIGHT")
@@ -702,7 +734,7 @@ local function CreateWindow()
     tab1.content.cannotBattleLbl:SetJustifyH("CENTER")
     
     tab1.content.abilitiesFrame = CreateFrame("FRAME", nil, tab1.content)
-    tab1.content.abilitiesFrame:SetPoint("TOPLEFT", tab1.content.possibleBreedsTable, "TOPRIGHT", 10, 8)
+    tab1.content.abilitiesFrame:SetPoint("TOPLEFT", tab1.content.possibleBreedsTable, "TOPRIGHT", 15, 8)
     tab1.content.abilitiesFrame:SetSize(191, 105)
     tab1.content.abilitiesCol1 = CreateFrame("BUTTON", nil, tab1.content.abilitiesFrame)
     tab1.content.abilitiesCol1:SetNormalAtlas("PetJournal-PetCard-Abilities")
@@ -788,12 +820,12 @@ local function CreateWindow()
         GameTooltip:SetPoint("BOTTOM",region,"TOP",0,6)
 
         local linkType = strsplit(":", link)
-        GameTooltip:SetHyperlink(link)
-
-        if GameTooltip:NumLines() == 0 then
+        if (linkType == "npc") then
             GameTooltip:SetText("Click for WowHead link")
+        else
+            GameTooltip:SetHyperlink(link)
         end
-
+        
         GameTooltip:Show()
     end
     local hyperlinkClick = function(self, link, text, button, region, left, bottom, width, height)
@@ -815,7 +847,6 @@ local function CreateWindow()
     tab2.content.scrollFrame:SetScript("OnHyperlinkClick", hyperlinkClick)
     
     tab2.content.scrollFrame.child:SetHyperlinksEnabled(true)
-    tab2.content.scrollFrame.child.propagateHyperlinksToParent = true
     tab2.content.scrollFrame.child:SetScript("OnHyperlinkEnter", hyperlinkEnter)
     tab2.content.scrollFrame.child:SetScript("OnHyperlinkLeave", GameTooltip_HideResetCursor)
     tab2.content.scrollFrame.child:SetScript("OnHyperlinkClick", hyperlinkClick)
@@ -896,7 +927,7 @@ local function UpdateWindow(pet, locationIdx)
     local statsForAbilities
     if (pet.possbileBreeds) then
         for breedIdx, breed in pairs(pet.possbileBreeds) do
-            local breedFrame = DISPLAY_UTIL:AcquireListItemFrame(PAPetCard, f.tab1.content, true)
+            local breedFrame = DISPLAY_UTIL:AcquireListItemFrame(PAPetCard, f.tab1.content, true, breedIdx == 1)
             breedFrame:SetFrameStrata("DIALOG")
             breedFrame:SetPoint("LEFT", f.tab1.content.possibleBreedsLbl, "LEFT", 2, 0)
             breedFrame:SetPoint("RIGHT", f.tab1.content.possibleBreedsTable, "RIGHT")

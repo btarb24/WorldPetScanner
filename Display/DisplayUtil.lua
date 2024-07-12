@@ -224,7 +224,7 @@ function DISPLAY_UTIL:AcquireButton(poolOwner, controlParent)
     return t
 end
 
-function DISPLAY_UTIL:AcquireListItemFrame(poolOwner, controlParent, selectable)
+function DISPLAY_UTIL:AcquireListItemFrame(poolOwner, controlParent, selectable, selected)
     if (not controlParent.framePool) then
         controlParent.framePool = CreateFramePool("BUTTON", controlParent)
         AddToPoolOwner(poolOwner, controlParent.framePool)
@@ -236,13 +236,17 @@ function DISPLAY_UTIL:AcquireListItemFrame(poolOwner, controlParent, selectable)
     texture:SetColorTexture(1, .82, 0) --gameFontNormal Color
     texture:SetGradient("HORIZONTAL", CreateColor(1, 1, 1, .3), CreateColor(1, 1, 1, .01))
     t:SetNormalTexture(texture)
-    t:GetNormalTexture():Hide()
+    if not selected then
+        t:GetNormalTexture():Hide()
+    end
     t:Show()
     t:SetFrameStrata("LOW")
 
     t:SetScript("OnEnter", function(self)
-         self:GetNormalTexture():SetDesaturated(true)
-         self:GetNormalTexture():Show()
+        if (self:GetParent().SelectedBreed ~= self) then
+            self:GetNormalTexture():SetDesaturated(true)
+            self:GetNormalTexture():Show()
+        end
     end)
     t:SetScript("OnLeave", function(self)
         self:GetNormalTexture():SetDesaturated(false)
@@ -253,6 +257,9 @@ function DISPLAY_UTIL:AcquireListItemFrame(poolOwner, controlParent, selectable)
 
     if selectable then
         t:SetScript("OnClick", function(self)
+            if (self:GetParent().SelectedBreed == self) then
+                return
+            end
             self:GetParent().SelectedBreed:GetNormalTexture():Hide()
             self:GetParent().SelectedBreed = self
             self:GetNormalTexture():Show()

@@ -824,7 +824,6 @@ PETS.all ={
         isUnique=false,
         isPassive=false,
         source="Profession",
-        profession="Engineering",
         professionDetail ={
             profession="Engineering",
             desc="Classic 205",
@@ -844,8 +843,8 @@ PETS.all ={
         possbileBreeds={"H/S"},
         baseStats={8.5, 7.5, 8},
         acquisition={
-            {"The recipe is BindOnPickup. It has a 12%% chance to drop from %s, which is the last boss in Gnomeregan ", "n7800:Mekgineer Thermaplugg"},
-            {"Craft a %s."},
+            {"The recipe %s is BindOnPickup. It has a 12%% chance to drop from %s, which is the last boss in Gnomeregan.", "i11828", "n7800:Mekgineer Thermaplugg"},
+            {"Craft a %s.", "i11825"},
             {"Use the item to receive the pet."},
         }
     }, 
@@ -860,11 +859,33 @@ PETS.all ={
         isUnique=false,
         isPassive=false,
         source="Profession",
+        professionDetail ={
+            profession="Engineering",
+            desc="Classic 205",
+            recipe=15633,
+            materials = {
+                {qty=1, id=7075},
+                {qty=1, id=7191},
+                {qty=1, id=6037},
+                {qty=2, id=4389},
+                {qty=2, id=3860},
+            },
+            maps={
+                {mapID=227, zone="Gnomeregan", desc="Peacekeeper Security Suit", type="kill", coords={{24.3,68.4}}},
+                {mapID=228, zone="Gnomeregan", desc="Arcane Nullifier X-21"},
+                {mapID=228, zone="Gnomeregan", desc="Crowd Pummeler 9-60", type="kill", coords={{43.1,88.3}}},
+            }
+        },
         flavor="This tiny peacekeeper security bot is often outfitted with the latest arcane nullifiers and crowd pummelers. Not for the environmentally minded.",
         icon="294476",
         profession="Engineering",
         possbileBreeds={"H/P"},
         baseStats={8.5, 7.5, 8},
+        acquisition={
+            {"The recipe %s is BindOnPickup. It has roughly a 3%% chance to drop from a few mobs in Gnomeregan.", "i11827"},
+            {"Craft a %s.", "i11826"},
+            {"Use the item to receive the pet."},
+        }
     }, 
     [87]={
         name="Sprite Darter Hatchling",
@@ -879,9 +900,14 @@ PETS.all ={
         source="World Drop",
         flavor="These adorable critters love snuggling with their owners after a long day of brutal, bloody battle.",
         icon="657499",
-        locations={{continent="Kalimdor", zone="Feralas", mapID=69, coords={{72.6,45.2},}}},
+        locations={{continent="Kalimdor", zone="Feralas", mapID=69}},
         possbileBreeds={"S/S"},
         baseStats={8, 8.5, 7.5},
+        acquisition={
+            {"There is a .01%% chance for %s to drop from any mob in Feralas", "i11474"},
+            {"Use the item to receive the pet."},
+            {"You may want to target the %s since they also drop %s.", "n39384:Noxious Whelp", "i8498"}
+        }
     }, 
     [89]={
         name="Worg Pup",
