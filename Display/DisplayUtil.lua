@@ -66,6 +66,7 @@ function DISPLAY_UTIL:AcquireTexture(poolOwner, controlParent)
     local t = controlParent.texturePool:Acquire()
     t:SetScript("OnEnter", nil)
     t:SetScript("OnLeave", nil)
+    t:SetTexture(nil)
     t:Show()
     return t
 end
@@ -79,6 +80,7 @@ function DISPLAY_UTIL:AcquireLabelFont(poolOwner, controlParent)
     local t = controlParent.labelFontPool:Acquire()
     t:SetScript("OnEnter", nil)
     t:SetScript("OnLeave", nil)
+    t:SetText(nil)
     t:Show()
     return t
 end
@@ -132,6 +134,7 @@ function DISPLAY_UTIL:AcquireHighlightFont(poolOwner, controlParent)
     local t = controlParent.highlightFontPool:Acquire()
     t:SetScript("OnEnter", nil)
     t:SetScript("OnLeave", nil)
+    t:SetText(nil)
     t:Show()
     return t
 end
@@ -146,6 +149,7 @@ function DISPLAY_UTIL:AcquireSubduedFont(poolOwner, controlParent)
     t:SetTextColor(.7, .7, .7)
     t:SetScript("OnEnter", nil)
     t:SetScript("OnLeave", nil)
+    t:SetText(nil)
     t:Show()
     return t
 end
@@ -164,6 +168,7 @@ function DISPLAY_UTIL:AcquireSmallerSubduedFont(poolOwner, controlParent)
     t:SetTextColor(.7, .7, .7)
     t:SetScript("OnEnter", nil)
     t:SetScript("OnLeave", nil)
+    t:SetText(nil)
     t:Show()
     return t
 end
@@ -181,6 +186,7 @@ function DISPLAY_UTIL:AcquireSmallerHighlightFont(poolOwner, controlParent)
     end
     t:SetScript("OnEnter", nil)
     t:SetScript("OnLeave", nil)
+    t:SetText(nil)
     t:Show()
     return t
 end
@@ -205,6 +211,7 @@ function DISPLAY_UTIL:AcquireMultiValueFont(poolOwner, controlParent)
             self:SetShadowColor(0,0,0, 0)
         end
     )
+    t:SetText(nil)
     t:Show()    
     return t
 end

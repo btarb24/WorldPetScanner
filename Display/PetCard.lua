@@ -26,7 +26,7 @@ local function ParseLocation(location)
     local depth1 = 1
     local depth2 = 1
     local depth3 = 1
-    if (location and type(location == "string")) then        
+    if (location and type(location) == "string") then        
         local depth1Str, depth2Str, depth3Str  = strsplit(":", location)
         depth1 = tonumber(depth1Str)
         if (depth2Str) then
@@ -74,6 +74,19 @@ local function SetPetColor(fontString, rarity)
     end
 end
 
+local function GetCurrency(currencyIdStr, fontHeight)
+    local stripCNotation =  strsub(currencyIdStr, 2)
+    local currencyID, qty = strsplit(":", stripCNotation)
+
+    if currencyID == "gold" then
+        return C_CurrencyInfo.GetCoinTextureString(qty * 10000, fontHeight)
+    else
+        local currencyInfo = C_CurrencyInfo.GetCurrencyInfo(currencyID)
+        local icon = currencyInfo.iconFileID
+        return string.format("|Hcurrency:%d|h%dx|T%s:%d|t|h", currencyID, qty, icon, fontHeight)
+    end
+end
+
 local function GetLink(idStr, color)
     local type = strsub(idStr, 1, 1)
     local link
@@ -85,6 +98,9 @@ local function GetLink(idStr, color)
     elseif (type == "s") then
         id = tonumber(strsub(idStr, 2))
         link = GetSpellLink(id)
+    elseif (type == "a") then
+        id = tonumber(strsub(idStr, 2))
+        link = GetAchievementLink(id)
     elseif(type == "n") then
         local detail = strsub(idStr, 2)
         id, name = strsplit(":", detail)
@@ -108,24 +124,17 @@ local function GetLink(idStr, color)
         end
         link = string.format("|cFF%s|Hobject:%d|h%s|h|r", color, id, name)
     elseif(type == "c") then
-        id = tonumber(strsub(idStr, 2))
-        link = C_CurrencyInfo.GetCurrencyLink(id)
+        link = GetCurrency(idStr)
     end
     return link, id, name, type
 end
 
-local function GetCurrencyText(currencies)
+local function GetCurrencyText(currencies, fontHeight)
+    if not fontHeight then fontHeight = 20 end
     local result = {}
     for _, currency in ipairs(currencies) do
-        local currencyVal
-        if currency[1] == "gold" then
-            local moneyText = C_CurrencyInfo.GetCoinTextureString(currency[2]*10000, 10)
-            table.insert(result, moneyText)
-        else
-            local itemLink = select(2, GetItemInfo(currency[1]))
-            local currencyVal = string.format("%dx%s",currency[2], itemLink)
-            table.insert(result, currencyVal)
-        end
+        local currencyVal = GetCurrency(currency, fontHeight)
+        table.insert(result, currencyVal)
     end
     return result;
 end
@@ -266,13 +275,22 @@ local function GetNPCDropText(npcs, selectedNpcIdx)
     return topDock;
 end
 
+local function GetPoiIconAtlas(mapType)
+    if (mapType =="start") then 
+        return "Islands-QuestBang"
+    elseif (mapType == "end") then
+        return "Islands-QuestTurnin"
+    end
+    return nil
+end
+
 local function GetPois(pois, selectedIdx)
     local selectedDepth1, selectedDepth2, selectedDepth3 = ParseLocation(selectedIdx)
     
     local topDock 
-    for poiTypeIdx, poiType in ipairs(pois) do
+    for poiTypeIdx, poiRoot in ipairs(pois) do
         local mainPoiLbl = DISPLAY_UTIL:AcquireLabelFont(PAPetCard, PAPetCardTab2.content.scrollFrame.child)
-        mainPoiLbl:SetText(poiType.name)
+        mainPoiLbl:SetText(poiRoot.name)
         if (poiTypeIdx == 1) then            
             mainPoiLbl:SetPoint("TOPLEFT", PAPetCardTab2.content.scrollFrame.child, "TOPLEFT")
         else
@@ -282,34 +300,37 @@ local function GetPois(pois, selectedIdx)
         
         topDock = mainPoiLbl
         local leftDock = mainPoiLbl
-        for entryIdx, entry in ipairs(poiType.entries) do
+        for entryIdx, entry in ipairs(poiRoot.entries) do
             local poiLbl = DISPLAY_UTIL:AcquireHighlightFont(PAPetCard, PAPetCardTab2.content.scrollFrame.child)
-            local poiLink, poiID, _, poiType = GetLink(entry.id);
-            poiLbl:SetText(poiLink)
-            poiLbl:SetPoint("TOP", topDock, "BOTTOM", 0, -5)
+            local poiLink, poiID, _, poiType
+            if (entry.id and entry.id ~= "") then
+                poiLink, poiID, _, poiType = GetLink(entry.id);
+                poiLbl:SetText(poiLink)
+                poiLbl:SetPoint("TOP", topDock, "BOTTOM", 0, -5)
 
-            if (poiType == "q") then                
-                local completed = C_QuestLog.IsComplete(poiID)
+                if (poiType == "q") then                
+                    local completed = C_QuestLog.IsComplete(poiID)
 
-                local questState = DISPLAY_UTIL:AcquireTexture(PAPetCard, PAPetCardTab2.content.scrollFrame.child)
-                if completed then
-                    questState:SetAtlas("auctionhouse-icon-checkmark")
-                    questState:SetSize(12,12)
-                    questState:SetPoint("TOP", poiLbl, "TOP", 0, -1)
-                    questState:SetPoint("LEFT", PAPetCardTab2.content.scrollFrame.child, "LEFT", 10, 0)
+                    local questState = DISPLAY_UTIL:AcquireTexture(PAPetCard, PAPetCardTab2.content.scrollFrame.child)
+                    if completed or entryIdx == 2 then
+                        questState:SetAtlas("auctionhouse-icon-checkmark")
+                        questState:SetSize(12,12)
+                        questState:SetPoint("TOP", poiLbl, "TOP", 0, -1)
+                        questState:SetPoint("LEFT", PAPetCardTab2.content.scrollFrame.child, "LEFT", 14, 0)
+                    else
+                        questState:SetAtlas("jailerstower-wayfinder-rewardcircle")
+                        questState:SetSize(13,13)
+                        questState:SetPoint("TOP", poiLbl, "TOP", 0, 0)
+                        questState:SetPoint("LEFT", PAPetCardTab2.content.scrollFrame.child, "LEFT", 13, 0)
+                    end
+                    poiLbl:SetPoint("LEFT", mainPoiLbl, "LEFT", 27, 0)
+                    leftDock = questState
                 else
-                    questState:SetAtlas("jailerstower-wayfinder-rewardcircle")
-                    questState:SetSize(13,13)
-                    questState:SetPoint("TOP", poiLbl, "TOP", 0, 0)
-                    questState:SetPoint("LEFT", PAPetCardTab2.content.scrollFrame.child, "LEFT", 9, 0)
+                    leftDock = poiLbl
+                    poiLbl:SetPoint("LEFT", mainPoiLbl, "LEFT", 15, 0)
                 end
-                poiLbl:SetPoint("LEFT", mainPoiLbl, "LEFT", 25, 0)
-                leftDock = questState
-            else
-                leftDock = poiLbl
-                poiLbl:SetPoint("LEFT", mainPoiLbl, "LEFT", 15, 0)
+                topDock = poiLbl
             end
-            topDock = poiLbl
 
             if (entry.maps) then
                 for mapIdx, map in ipairs(entry.maps) do
@@ -344,7 +365,7 @@ local function GetPois(pois, selectedIdx)
                         details = string.format(" %s%%", map.chance)
                     end
                     if (map.currencies) then
-                        local currencies = GetCurrencyText(map.currencies)
+                        local currencies = GetCurrencyText(map.currencies, 14)
                         local currencyStr = table.concat(currencies, ", ")
                         details = string.format("%s (%s)", details, currencyStr)
                     end
@@ -356,13 +377,10 @@ local function GetPois(pois, selectedIdx)
                     mapDetails:SetText(details)
                     mapDetails:SetPoint("TOPLEFT", mapDescLbl, "TOPRIGHT", 3, -1)
                     
-                    if (poiType == "q" and map.type) then
-                        local mapTipIcon = DISPLAY_UTIL:AcquireButton(PAPetCard, PAPetCardTab2.content.scrollFrame.child)
-                        if (map.type == "start") then
-                            mapTipIcon:SetNormalAtlas("Islands-QuestBang")
-                        elseif (map.type == "end") then
-                            mapTipIcon:SetNormalAtlas("Islands-QuestTurnin")
-                        end
+                    local poiIconAtlas = GetPoiIconAtlas(map.type)
+                    if (poiIconAtlas) then
+                        local mapTipIcon = DISPLAY_UTIL:AcquireTexture(PAPetCard, PAPetCardTab2.content.scrollFrame.child)
+                        mapTipIcon:SetAtlas(poiIconAtlas)
                         mapTipIcon:SetSize(16,16)
                         mapTipIcon:SetPoint("TOP", topDock, "BOTTOM")
                         mapTipIcon:SetPoint("LEFT", leftDock, "LEFT", 15, 0)
@@ -424,6 +442,24 @@ local function GetProfessionText(professionDetail, topDock)
             topDock = materialVal
         end
     end
+
+    return topDock
+end
+
+local function GetAchievementText(achievement, topDock)
+    local achievementLbl = DISPLAY_UTIL:AcquireLabelFont(PAPetCard, PAPetCardTab2.content.scrollFrame.child)
+    if (topDock) then
+        achievementLbl:SetPoint("LEFT", PAPetCardTab2.content.scrollFrame.child, "LEFT")
+        achievementLbl:SetPoint("TOP", topDock, "BOTTOM", 0, -10)
+    else
+        achievementLbl:SetPoint("TOPLEFT", PAPetCardTab2.content.scrollFrame.child, "TOPLEFT")        
+    end
+    achievementLbl:SetText("Achievement: ")
+
+    local achievementVal = DISPLAY_UTIL:AcquireHighlightFont(PAPetCard, PAPetCardTab2.content.scrollFrame.child)
+    achievementVal:SetText(GetLink(achievement.id))
+    achievementVal:SetPoint("TOPLEFT", achievementLbl, "TOPRIGHT")
+    topDock = achievementLbl
 
     return topDock
 end
@@ -1259,6 +1295,8 @@ local function UpdateWindow(pet, locationIdx)
 
     if (pet.source == "Profession") then
         bottomOfSourceSection = GetProfessionText(pet.professionDetail, bottomOfSourceSection)    
+    elseif (pet.source == "Achievement") then
+        bottomOfSourceSection = GetAchievementText(pet.achievement, bottomOfSourceSection)    
     elseif not pet.pois then
         local sourceLbl = DISPLAY_UTIL:AcquireLabelFont(PAPetCard, f.tab2.content.scrollFrame.child)
         sourceLbl:SetText("Source: ")

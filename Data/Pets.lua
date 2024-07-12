@@ -85,7 +85,7 @@ PETS.all ={
         pois={
             {name="Vendors:", entries={
                 {id="", maps={
-                    {id="n6367:Donni Anthania", currencies={{"gold", .4}}, mapID=37, coords={{44.2,53.2},}}
+                    {id="n6367:Donni Anthania", currencies={"cgold:.4"}, mapID=37, coords={{44.2,53.2},}}
                 }}
             }}
         },
@@ -112,7 +112,7 @@ PETS.all ={
         pois={
             {name="Vendors:", entries={
                 {id="", maps={
-                    {id="n6367:Donni Anthania", currencies={{"gold", .4}}, mapID=37, coords={{44.2,53.2},}}
+                    {id="n6367:Donni Anthania", currencies={"cgold:.4"}, mapID=37, coords={{44.2,53.2},}}
                 }}
             }}
         },
@@ -161,7 +161,7 @@ PETS.all ={
         pois={
             {name="Vendors:", entries={
                 {id="", maps={
-                    {id="n6367:Donni Anthania", currencies={{"gold", .4}}, mapID=37, coords={{44.2,53.2},}}
+                    {id="n6367:Donni Anthania", currencies={"cgold:.4"}, mapID=37, coords={{44.2,53.2},}}
                 }}
             }}
         },
@@ -188,7 +188,7 @@ PETS.all ={
         pois={
             {name="Vendors:", entries={
                 {id="", maps={
-                    {id="n20980:Dealer Rashaad", currencies={{"gold", .6}}, mapID=109, coords={{43.4,29.2},}}
+                    {id="n20980:Dealer Rashaad", currencies={"cgold:.6"}, mapID=109, coords={{43.4,29.2},}}
                 }}
             }}
         },
@@ -215,7 +215,7 @@ PETS.all ={
         pois={
             {name="Vendors:", entries={
                 {id="", maps={
-                    {id="n6367:Donni Anthania", currencies={{"gold", .4}}, mapID=37, coords={{44.2,53.2},}}
+                    {id="n6367:Donni Anthania", currencies={"cgold:.4"}, mapID=37, coords={{44.2,53.2},}}
                 }}
             }}
         },
@@ -242,7 +242,7 @@ PETS.all ={
         pois={
             {name="Vendors:", entries={
                 {id="", maps={
-                    {id="n8666:Lil Timmy", currencies={{"gold", .6}}, mapID=84, coords={{46.8,56},{47.4,57.2},{47.4,57.6},{47.6,57.4},{47.8,57.8},{48.4,58.8},{48.6,59.2},{48.8,59.6},{49.2,60.6},{49.4,58.4},{49.6,61.4},{49.8,57.8},{49.8,61.6},{50.4,56.8},{50.6,62.4},{51,56.4},{51,56.6},{51.2,63},{52,55.4},{52,55.6},{52,63.2},{53,55.2},{53,62.6},{53.4,62.4},{53.6,55.2},{53.6,62.4},{53.8,62.6},{54.4,56.2},{54.6,56.4},{54.8,63.6},{55.2,63.2},{55.4,57},{55.8,56.8},{56.2,62.6},{56.4,56},{56.4,62.4},{56.6,56},{57,55},{57,62.4},{57.4,54.4},{57.4,63.2},{57.6,63.2},{58.2,52.4},{58.2,53.2},{58.2,53.6},{58.2,64.2},{58.4,51.2},{58.6,64.2},{58.8,50.8},{59,50.4},{59.4,63.2},{59.6,46.2},{59.6,49.8},{59.8,47.2},{60,48},{60,62.8},{60.2,48.6},{60.4,45.4},{60.4,62.4},{60.6,62.6},{60.8,62.2},{61.2,44.8},{61.6,61.6},{61.8,45},{62.2,61.4},{62.4,46.2},{62.6,46.4},{62.8,46.8},{63.2,47.8},{63.4,61},{63.6,48.4},{63.6,48.6},{63.6,61.2},{64,49.6},{64.6,61.2},{64.8,50.4},{64.8,61.6},{65.2,50.6},{65.4,62.8},{65.6,51},{65.8,63.2},{66.4,64.4},{66.4,64.6},{67,64.6},{67.2,50.6},{67.4,50.4},{67.4,56.4},{67.4,56.6},{67.4,58.2},{67.4,58.6},{67.4,63.2},{67.4,64.2},{67.6,56.2},{67.6,57.6},{67.6,59},{67.6,64},{68,50.4},{68,63.4},{68.2,51},{68.2,55.2},{68.2,60.2},{68.4,51.6},{68.4,54.2},{68.6,51.4},{68.6,54.6},{68.6,60.8},{68.6,62.6},{69,52.4},{69,54},{69.2,52.6},{69.2,62},{69.6,53.2}}}
+                    {id="n8666:Lil Timmy", currencies={"cgold:.6"}, mapID=84, coords={{46.8,56},{47.4,57.2},{47.4,57.6},{47.6,57.4},{47.8,57.8},{48.4,58.8},{48.6,59.2},{48.8,59.6},{49.2,60.6},{49.4,58.4},{49.6,61.4},{49.8,57.8},{49.8,61.6},{50.4,56.8},{50.6,62.4},{51,56.4},{51,56.6},{51.2,63},{52,55.4},{52,55.6},{52,63.2},{53,55.2},{53,62.6},{53.4,62.4},{53.6,55.2},{53.6,62.4},{53.8,62.6},{54.4,56.2},{54.6,56.4},{54.8,63.6},{55.2,63.2},{55.4,57},{55.8,56.8},{56.2,62.6},{56.4,56},{56.4,62.4},{56.6,56},{57,55},{57,62.4},{57.4,54.4},{57.4,63.2},{57.6,63.2},{58.2,52.4},{58.2,53.2},{58.2,53.6},{58.2,64.2},{58.4,51.2},{58.6,64.2},{58.8,50.8},{59,50.4},{59.4,63.2},{59.6,46.2},{59.6,49.8},{59.8,47.2},{60,48},{60,62.8},{60.2,48.6},{60.4,45.4},{60.4,62.4},{60.6,62.6},{60.8,62.2},{61.2,44.8},{61.6,61.6},{61.8,45},{62.2,61.4},{62.4,46.2},{62.6,46.4},{62.8,46.8},{63.2,47.8},{63.4,61},{63.6,48.4},{63.6,48.6},{63.6,61.2},{64,49.6},{64.6,61.2},{64.8,50.4},{64.8,61.6},{65.2,50.6},{65.4,62.8},{65.6,51},{65.8,63.2},{66.4,64.4},{66.4,64.6},{67,64.6},{67.2,50.6},{67.4,50.4},{67.4,56.4},{67.4,56.6},{67.4,58.2},{67.4,58.6},{67.4,63.2},{67.4,64.2},{67.6,56.2},{67.6,57.6},{67.6,59},{67.6,64},{68,50.4},{68,63.4},{68.2,51},{68.2,55.2},{68.2,60.2},{68.4,51.6},{68.4,54.2},{68.6,51.4},{68.6,54.6},{68.6,60.8},{68.6,62.6},{69,52.4},{69,54},{69.2,52.6},{69.2,62},{69.6,53.2}}}
                 }}
             }}
         },
@@ -270,8 +270,8 @@ PETS.all ={
         pois={
             {name="Vendors:", entries={
                 {id="", maps={
-                    {id="n44179:Harry No-Hooks", currencies={{"gold", .36}}, mapID=210, coords={{46.6,93.6}}},
-                    {id="n2663:Narkk", currencies={{"gold", .38}}, mapID=210, coords={{42.6,69.2}}}    
+                    {id="n44179:Harry No-Hooks", currencies={"cgold:.36"}, mapID=210, coords={{46.6,93.6}}},
+                    {id="n2663:Narkk", currencies={"cgold:.38"}, mapID=210, coords={{42.6,69.2}}}    
                 }}
             }}
         },
@@ -348,9 +348,9 @@ PETS.all ={
         pois={
             {name="Vendors:", entries = {
                 {id="", maps={
-                    {id="n44179:Harry No-Hooks", currencies={{"gold", .36}}, mapID=210, coords={{46.6,93.6}}},
-                    {id="n2663:Narkk", currencies={{"gold", .38}}, mapID=210, coords={{42.6,69.2}}},
-                    {id="n20980:Dealer Rashaad", currencies={{"gold", .4}}, mapID=109, coords={{43.4,29.2}}}
+                    {id="n44179:Harry No-Hooks", currencies={"cgold:.36"}, mapID=210, coords={{46.6,93.6}}},
+                    {id="n2663:Narkk", currencies={"cgold:.38"}, mapID=210, coords={{42.6,69.2}}},
+                    {id="n20980:Dealer Rashaad", currencies={"cgold:.4"}, mapID=109, coords={{43.4,29.2}}}
                 }}
             }}
         },
@@ -377,8 +377,8 @@ PETS.all ={
         pois={
             {name="Vendors:", entries = {
                 {id="", maps={
-                    {id="n44135:Plucky Johnson", currencies={{"gold", 1}}, mapID=64, coords={{84.4,91.4},{85.2,91.6},{85.4,91.4},{85.6,91.2},{85.6,91.6}}},
-                    {id="n141009:Col. Tenders", currencies={{"gold", .85}}, mapID=1161, coords={{60,22.4}}}
+                    {id="n44135:Plucky Johnson", currencies={"cgold:1"}, mapID=64, coords={{84.4,91.4},{85.2,91.6},{85.4,91.4},{85.6,91.2},{85.6,91.6}}},
+                    {id="n141009:Col. Tenders", currencies={"cgold:.85"}, mapID=1161, coords={{60,22.4}}}
                 }}
             }}
         },
@@ -405,11 +405,11 @@ PETS.all ={
         pois={
             {name="Vendors:", entries = {
                 {id="", maps={
-                    {id="n20980:Dealer Rashaad", currencies={{"gold", .5}}, mapID=109, coords={{43.4,29.2}}},
-                    {id="n140137:Bugcatcher Cal'yoon", currencies={{"gold", .5}}, mapID=862, coords={{77,15.8}}},
-                    {id="n130975:Jeremiah Payson", currencies={{"gold", .5}}, mapID=90, coords={{67,47},{67.4,44.4},{67.4,44.6}}},
-                    {id="n186073:Jeremiah Payson", currencies={{"gold", .5}}, mapID=2070, coords={{65.2,66.8}}},
-                    {id="n141702:Jeremiah Payson", currencies={{"gold", .4}}, mapID=85, coords={{54.4,89.4},{54.4,89.6},{54.6,89.4},{54.6,89.6},{54.6,90.6}}},
+                    {id="n20980:Dealer Rashaad", currencies={"cgold:.5"}, mapID=109, coords={{43.4,29.2}}},
+                    {id="n140137:Bugcatcher Cal'yoon", currencies={"cgold:.5"}, mapID=862, coords={{77,15.8}}},
+                    {id="n130975:Jeremiah Payson", currencies={"cgold:.5"}, mapID=90, coords={{67,47},{67.4,44.4},{67.4,44.6}}},
+                    {id="n186073:Jeremiah Payson", currencies={"cgold:.5"}, mapID=2070, coords={{65.2,66.8}}},
+                    {id="n141702:Jeremiah Payson", currencies={"cgold:.4"}, mapID=85, coords={{54.4,89.4},{54.4,89.6},{54.6,89.4},{54.6,89.6},{54.6,90.6}}},
                 }}
             }}
         },
@@ -540,7 +540,7 @@ PETS.all ={
         pois={
             {name="Vendors:", entries={
                 {id="", maps={
-                    {id="n14860:Flik", currencies={{"gold", 1}}, mapID=407, coords={{52.4,62.2},{52.4,62.6},{52.4,63.8},{52.6,62.4},{52.6,63.4},{52.6,63.6},{53.2,69},{53.4,66.4},{53.4,66.6},{53.4,68.4},{53.6,62.6},{53.6,65.4},{53.6,66.2},{53.6,67.4},{53.8,68.2},{54,62.4},{54.2,70.2},{54.4,64.4},{54.4,69.2},{54.4,70.6},{54.6,69.4},{54.6,69.6},{54.8,64},{54.8,70.6},{55.4,63},{55.4,71.6},{55.6,70.2},{55.8,70.6},{55.8,71.6},{56,76},{56,76.6},{56.2,63.4},{56.2,72.6},{56.4,63.6},{56.4,73.8},{56.6,74.4},{56.8,69.6},{56.8,71.6},{56.8,76},{57,62.4},{57,63},{57,69},{57,71.4},{57.2,64.4},{57.2,64.6},{57.2,68.4},{57.2,74.8},{57.4,65.8},{57.4,72.6},{57.6,64.4},{57.6,66.4},{57.6,70.4},{57.6,71},{57.8,69.2},{57.8,73.4},{57.8,75.2},{58.2,62.6},{58.2,65.2},{58.4,67},{58.4,68.2},{58.6,62.6},{58.6,64},{58.6,66.8},{58.8,66.4},{58.8,68.6},{59.2,68.4},{59.6,68},{59.8,67}}},
+                    {id="n14860:Flik", currencies={"cgold:1"}, mapID=407, coords={{52.4,62.2},{52.4,62.6},{52.4,63.8},{52.6,62.4},{52.6,63.4},{52.6,63.6},{53.2,69},{53.4,66.4},{53.4,66.6},{53.4,68.4},{53.6,62.6},{53.6,65.4},{53.6,66.2},{53.6,67.4},{53.8,68.2},{54,62.4},{54.2,70.2},{54.4,64.4},{54.4,69.2},{54.4,70.6},{54.6,69.4},{54.6,69.6},{54.8,64},{54.8,70.6},{55.4,63},{55.4,71.6},{55.6,70.2},{55.8,70.6},{55.8,71.6},{56,76},{56,76.6},{56.2,63.4},{56.2,72.6},{56.4,63.6},{56.4,73.8},{56.6,74.4},{56.8,69.6},{56.8,71.6},{56.8,76},{57,62.4},{57,63},{57,69},{57,71.4},{57.2,64.4},{57.2,64.6},{57.2,68.4},{57.2,74.8},{57.4,65.8},{57.4,72.6},{57.6,64.4},{57.6,66.4},{57.6,70.4},{57.6,71},{57.8,69.2},{57.8,73.4},{57.8,75.2},{58.2,62.6},{58.2,65.2},{58.4,67},{58.4,68.2},{58.6,62.6},{58.6,64},{58.6,66.8},{58.8,66.4},{58.8,68.6},{59.2,68.4},{59.6,68},{59.8,67}}},
                 }}
             }}
         },
@@ -570,7 +570,7 @@ PETS.all ={
         pois={
             {name="Vendors:", entries={
                 {id="", maps={
-                    {id="n14860:Flik", currencies={{"gold", 1}}, mapID=407, coords={{52.4,62.2},{52.4,62.6},{52.4,63.8},{52.6,62.4},{52.6,63.4},{52.6,63.6},{53.2,69},{53.4,66.4},{53.4,66.6},{53.4,68.4},{53.6,62.6},{53.6,65.4},{53.6,66.2},{53.6,67.4},{53.8,68.2},{54,62.4},{54.2,70.2},{54.4,64.4},{54.4,69.2},{54.4,70.6},{54.6,69.4},{54.6,69.6},{54.8,64},{54.8,70.6},{55.4,63},{55.4,71.6},{55.6,70.2},{55.8,70.6},{55.8,71.6},{56,76},{56,76.6},{56.2,63.4},{56.2,72.6},{56.4,63.6},{56.4,73.8},{56.6,74.4},{56.8,69.6},{56.8,71.6},{56.8,76},{57,62.4},{57,63},{57,69},{57,71.4},{57.2,64.4},{57.2,64.6},{57.2,68.4},{57.2,74.8},{57.4,65.8},{57.4,72.6},{57.6,64.4},{57.6,66.4},{57.6,70.4},{57.6,71},{57.8,69.2},{57.8,73.4},{57.8,75.2},{58.2,62.6},{58.2,65.2},{58.4,67},{58.4,68.2},{58.6,62.6},{58.6,64},{58.6,66.8},{58.8,66.4},{58.8,68.6},{59.2,68.4},{59.6,68},{59.8,67}}},
+                    {id="n14860:Flik", currencies={"cgold:1"}, mapID=407, coords={{52.4,62.2},{52.4,62.6},{52.4,63.8},{52.6,62.4},{52.6,63.4},{52.6,63.6},{53.2,69},{53.4,66.4},{53.4,66.6},{53.4,68.4},{53.6,62.6},{53.6,65.4},{53.6,66.2},{53.6,67.4},{53.8,68.2},{54,62.4},{54.2,70.2},{54.4,64.4},{54.4,69.2},{54.4,70.6},{54.6,69.4},{54.6,69.6},{54.8,64},{54.8,70.6},{55.4,63},{55.4,71.6},{55.6,70.2},{55.8,70.6},{55.8,71.6},{56,76},{56,76.6},{56.2,63.4},{56.2,72.6},{56.4,63.6},{56.4,73.8},{56.6,74.4},{56.8,69.6},{56.8,71.6},{56.8,76},{57,62.4},{57,63},{57,69},{57,71.4},{57.2,64.4},{57.2,64.6},{57.2,68.4},{57.2,74.8},{57.4,65.8},{57.4,72.6},{57.6,64.4},{57.6,66.4},{57.6,70.4},{57.6,71},{57.8,69.2},{57.8,73.4},{57.8,75.2},{58.2,62.6},{58.2,65.2},{58.4,67},{58.4,68.2},{58.6,62.6},{58.6,64},{58.6,66.8},{58.8,66.4},{58.8,68.6},{59.2,68.4},{59.6,68},{59.8,67}}},
                 }}
             }}
         },
@@ -600,8 +600,8 @@ PETS.all ={
         pois={
             {name="Vendors:", entries={
                 {id="", maps={
-                    {id="n8665:Shylenai", currencies={{"gold", .5}}, mapID=89, coords={{64,53.2}}},
-                    {id="n8665:Shylenai", currencies={{"gold", .5}}, mapID=84, coords={{55.8,3.6}}},
+                    {id="n8665:Shylenai", currencies={"cgold:.5"}, mapID=89, coords={{64,53.2}}},
+                    {id="n8665:Shylenai", currencies={"cgold:.5"}, mapID=84, coords={{55.8,3.6}}},
                 }}
             }}
         },
@@ -628,8 +628,8 @@ PETS.all ={
         pois={
             {name="Vendors:", entries={
                 {id="", maps={
-                    {id="n8665:Shylenai", currencies={{"gold", .5}}, mapID=89, coords={{64,53.2}}},
-                    {id="n8665:Shylenai", currencies={{"gold", .5}}, mapID=84, coords={{55.8,3.6}}},
+                    {id="n8665:Shylenai", currencies={"cgold:.5"}, mapID=89, coords={{64,53.2}}},
+                    {id="n8665:Shylenai", currencies={"cgold:.5"}, mapID=84, coords={{55.8,3.6}}},
                 }}
             }}
         },
@@ -678,7 +678,7 @@ PETS.all ={
         pois={
             {name="Vendors:", entries={
                 {id="", maps={
-                    {id="n8401:Halpa", currencies={{"gold", .4}}, mapID=88, coords={{62.8,58.4}}},
+                    {id="n8401:Halpa", currencies={"cgold:.4"}, mapID=88, coords={{62.8,58.4}}},
                 }}
             }}
         },
@@ -705,7 +705,7 @@ PETS.all ={
         pois={
             {name="Vendors:", entries={
                 {id="", maps={
-                    {id="n1263:Yarlyn Amberstill", currencies={{"gold", .2}}, mapID=27, coords={{70.6,49}}},
+                    {id="n1263:Yarlyn Amberstill", currencies={"cgold:.2"}, mapID=27, coords={{70.6,49}}},
                 }}
             }}
         },
@@ -732,7 +732,7 @@ PETS.all ={
         pois={
             {name="Vendors:", entries={
                 {id="", maps={
-                    {id="n96479:Breanni", currencies={{"gold", 40}}, mapID=41, coords={{58.6,39.6}}},
+                    {id="n96479:Breanni", currencies={"cgold:40"}, mapID=41, coords={{58.6,39.6}}},
                 }}
             }}
         },
@@ -760,7 +760,7 @@ PETS.all ={
         pois={
             {name="Vendors:", entries={
                 {id="", maps={
-                    {id="n8404:Xan'tish", currencies={{"gold", .475}}, mapID=85, coords={{32,66},{32.4,63.2},{32.4,65.2},{32.6,67},{33.6,63.8},{33.8,68},{34.2,64.6},{34.2,66.6}}},
+                    {id="n8404:Xan'tish", currencies={"cgold:.475"}, mapID=85, coords={{32,66},{32.4,63.2},{32.4,65.2},{32.6,67},{33.6,63.8},{33.8,68},{34.2,64.6},{34.2,66.6}}},
                 }}
             }}
         },
@@ -787,7 +787,7 @@ PETS.all ={
         pois={
             {name="Vendors:", entries={
                 {id="", maps={
-                    {id="n8404:Xan'tish", currencies={{"gold", .5}}, mapID=85, coords={{32,66},{32.4,63.2},{32.4,65.2},{32.6,67},{33.6,63.8},{33.8,68},{34.2,64.6},{34.2,66.6}}},
+                    {id="n8404:Xan'tish", currencies={"cgold:.5"}, mapID=85, coords={{32,66},{32.4,63.2},{32.4,65.2},{32.6,67},{33.6,63.8},{33.8,68},{34.2,64.6},{34.2,66.6}}},
                 }}
             }}
         },
@@ -814,7 +814,7 @@ PETS.all ={
         pois={
             {name="Vendors:", entries={
                 {id="", maps={
-                    {id="n8404:Xan'tish", currencies={{"gold", .5}}, mapID=85, coords={{32,66},{32.4,63.2},{32.4,65.2},{32.6,67},{33.6,63.8},{33.8,68},{34.2,64.6},{34.2,66.6}}},
+                    {id="n8404:Xan'tish", currencies={"cgold:.5"}, mapID=85, coords={{32,66},{32.4,63.2},{32.4,65.2},{32.6,67},{33.6,63.8},{33.8,68},{34.2,64.6},{34.2,66.6}}},
                 }}
             }}
         },
@@ -2598,20 +2598,20 @@ PETS.all ={
         pois={
             {name="Daily fishing quests", entries={
                 {id="", maps={
-                    {mapID=582, desc="Ron Ashton (alliance garrison)", type="start", chance=1, coords={{54,15}}},
-                    {mapID=87, desc="Grimnur Stonebrand (alliance)", type="start", chance=1, coords={{47.6,7.2}}},
-                    {mapID=84, desc="Catherine Leland (alliance)", type="start", chance=1, coords={{55,69.6}}},
-                    {mapID=89, desc="Astaia (alliance)", type="start", chance=1, coords={{49,61}}},
-                    {mapID=590, desc="Mak'jin (horde garrison)", type="start", chance=1, coords={{38,73}}},
-                    {mapID=90, desc="Armand Cromwell (horde)", type="start", chance=1, coords={{81,31.6}}},
-                    {mapID=85, desc="Razgar (horde)", type="start", chance=1, coords={{66,40.4}}},
-                    {mapID=88, desc="Kah Mistrunner (horde)", type="start", chance=1, coords={{56,47}}},
+                    {id="n77733:Ron Ashton (alliance garrison)", mapID=582, type="start", chance=1, coords={{54,15}}},
+                    {id="n5161:Grimnur Stonebrand (alliance)", mapID=87, type="start", chance=1, coords={{47.6,7.2}}},
+                    {id="n5494:Catherine Leland (alliance)", mapID=84, type="start", chance=1, coords={{55,69.6}}},
+                    {id="n4156:Astaia (alliance)", mapID=89, type="start", chance=1, coords={{49,61}}},
+                    {id="n79892:Mak'jin (horde garrison)", mapID=590, type="start", chance=1, coords={{38,73}}},
+                    {id="n4573:Armand Cromwell (horde)", mapID=90, type="start", chance=1, coords={{81,31.6}}},
+                    {id="n43239:Razgar (horde)", mapID=85, type="start", chance=1, coords={{66,40.4}}},
+                    {id="n3028:Kah Mistrunner (horde)", mapID=88, type="start", chance=1, coords={{56,47}}},
                 }}}
             },
             {name="Timewalking vendors", entries={
                 {id="", maps={
-                    {mapID=84, zone="Stormwind City", desc="Kiatke (alliance timewalking)", type="npc", chance=1, coords={{76.6,16.6}}},
-                    {mapID=85, zone="Orgrimmar", desc="Kiatke (horde timewalking)", type="npc", chance=1, coords={{52,41.6}}},
+                    {id="n101759:Kiatke (alliance)", currencies={"c1166:150"},  mapID=84, type="npc", chance=1, coords={{76.6,16.6}}},
+                    {id="n101759:Kiatke (horde)", currencies={"c1166:150"}, mapID=85, type="npc", chance=1, coords={{52,41.6}}},
                 }}}
             }
         },
@@ -2624,7 +2624,7 @@ PETS.all ={
             {"Complete fishing dailies to recieve one of %s, %s, %s", "i67414", "i112623", "i46007"},
             {"The bags have a 1%% chance to drop a %s.", "i44983"},
             {"Use the item to receive the pet."},
-            {"You can also purchase a bag from Kiatke during a timewalking week for 150x%s.", "c1166"},
+            {"You can also purchase a bag from Kiatke during a timewalking week for %s.", "c1166:150"},
         }
     }, 
     [212]={
@@ -26752,10 +26752,35 @@ PETS.all ={
         source="Achievement",
         flavor="Sly snuck aboard for a trip into the Maw. He's not scared, he just really wants to stay in your backpack for a while.",
         icon="3072461",
-        achievement={name="A Sly Fox", ID=15004},
-        locations={{continent="Shadowlands", zone="The Maw"}},
+        intermittent=true,
+        achievement={name="A Sly Fox", id="a15004"},
         possbileBreeds={"P/S"},
         baseStats={7.375, 8.25, 8.375},
+        pois={
+            {name="Sly locations and progress:", entries={
+                {id="", maps={
+                    {id="n179068:Orator Kloe", mapID=1543, type="poi", coords={{42.2,44.6}}},
+                }},
+                {id="q64024:Sly 1", maps={
+                    {id="n179096:Sly 1 location", mapID=1543, type="poi", coords={{40.6,51.6}}},
+                }},
+                {id="q64022:Sly 2", maps={
+                    {id="n179130:Sly 2 location", mapID=1543, type="poi", coords={{38.0,39.6}}},
+                }},
+                {id="q64023:Sly 3", maps={
+                    {id= "n179173:Sly 3 location", mapID=1543, type="poi", coords={{32.8,44.2}}},
+                }}
+            }}
+        },
+        acquisition={
+            {"Only available when %s is active in The Maw.  The assualt will rotate between the 4 covenants twice per week. So, this assault will be available every 2 weeks.", "q63824"},
+            {"You can be a member of any covenant and still complete the treasure trail to receive a %s.", "i186539"},
+            {"There are 3 different Sly npcs to find. You can only find one per each assault event.  It will take a minimum of 6 weeks to complete this achievement."},
+            {"You start each event by talking to %s to receive the %s buff.", "n179068:Orator Kloe", "s353322"},
+            {"The buff will allow you to see and follow Sly's footprints."},
+            {"If you speed run over to the waypoint without following the steps then you may need to backtrack a slight bit until the footprints are visible again before Sly becomes active."},
+            {"The pet will be mailed to you after you've found him the 3rd time. Use the item to receive the pet"},
+        }
     }, 
     [3102]={
         name="Animite Broodling",
