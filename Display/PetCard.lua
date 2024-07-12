@@ -155,126 +155,6 @@ local function GetLineText(lineContent)
     return lineContent[1], links
 end
 
-local function GetQuestText(quests, selectedQuest)
-    if (not selectedQuest) then
-        selectedQuest = "1:1"
-    end
-
-    local selectedQuestIdx, questMapIdx = strsplit(":", selectedQuest)
-    if (not questMapIdx) then
-        questMapIdx = 1
-    end
-
-    local questsLbl = DISPLAY_UTIL:AcquireLabelFont(PAPetCard, PAPetCardTab2.content.scrollFrame.child)
-    questsLbl:SetText("Quests: ")
-    questsLbl:SetPoint("TOPLEFT", PAPetCardTab2.content.scrollFrame.child, "TOPLEFT")
-
-    local leftDock = questsLbl
-    local topDock = questsLbl
-    for idx, quest in ipairs(quests) do
-        local completed = C_QuestLog.IsComplete(quest.id)
-
-        local questState = DISPLAY_UTIL:AcquireButton(PAPetCard, PAPetCardTab2.content.scrollFrame.child)
-        if completed then
-            questState:SetNormalAtlas("auctionhouse-icon-checkmark")
-            questState:SetSize(12,12)
-            questState:SetPoint("TOP", topDock, "BOTTOM", 0, -5)
-            questState:SetPoint("LEFT", leftDock, "LEFT", 6, 0)
-        else
-            questState:SetNormalAtlas("jailerstower-wayfinder-rewardcircle")
-            questState:SetSize(14,14)
-            questState:SetPoint("TOP", topDock, "BOTTOM", 0, -3)
-            questState:SetPoint("LEFT", leftDock, "LEFT", 5, 0)
-        end
-
-        local questName = quest.name and quest.name or C_QuestLog.GetTitleForQuestID(quest.id)
-        local questNameLbl = DISPLAY_UTIL:AcquireSubduedFont(PAPetCard, PAPetCardTab2.content.scrollFrame.child)
-        questNameLbl:SetText(string.format("|cffffff00|Hquest:%d:-1:-1:-1:-1|h[%s]|h|r",quest.id, questName))
-        questNameLbl:SetPoint("TOP", topDock, "BOTTOM", 0, -4)
-        questNameLbl:SetPoint("LEFT", leftDock, "LEFT", 20, 0)
-        topDock = questNameLbl
-
-        if quest.maps then
-            for mapIdx, map in ipairs(quest.maps) do
-                local mapTipIcon = DISPLAY_UTIL:AcquireButton(PAPetCard, PAPetCardTab2.content.scrollFrame.child)
-                if (map.type == "start") then
-                    mapTipIcon:SetNormalAtlas("Islands-QuestBang")
-                elseif (map.type == "end") then
-                    mapTipIcon:SetNormalAtlas("Islands-QuestTurnin")
-                end
-                mapTipIcon:SetSize(16,16)
-                mapTipIcon:SetPoint("TOP", topDock, "BOTTOM")
-                mapTipIcon:SetPoint("LEFT", questState, "LEFT", 10, 0)
-
-                local mapDescLbl
-                if idx == tonumber(selectedQuestIdx) and mapIdx == tonumber(questMapIdx) then
-                    mapDescLbl = DISPLAY_UTIL:AcquireHighlightFont(PAPetCard, PAPetCardTab2.content.scrollFrame.child)
-                else
-                    mapDescLbl = DISPLAY_UTIL:AcquireMultiValueFont(PAPetCard, PAPetCardTab2.content.scrollFrame.child)
-                    mapDescLbl.locationIndex = string.format("%d:%d", idx, mapIdx)
-                    mapDescLbl:SetScript("OnMouseDown",
-                        function(self)
-                            DISPLAY.PetCard:Show(PAPetCard.pet, self.locationIndex)
-                        end
-                    )
-                end
-                mapDescLbl:SetText(map.desc)
-                mapDescLbl:SetPoint("TOPLEFT", mapTipIcon, "TOPRIGHT", 2, -2)
-
-                local zoneName = DISPLAY_UTIL:AcquireSmallerSubduedFont(PAPetCard, PAPetCardTab2.content.scrollFrame.child)
-                zoneName:SetText(map.zone)
-                zoneName:SetPoint("TOPLEFT", mapDescLbl, "TOPRIGHT", 3, -1)
-                
-                topDock = mapDescLbl
-            end
-        end
-    end
-
-    return topDock;
-end
-
-local function GetNPCDropText(npcs, selectedNpcIdx)
-    if (not selectedNpcIdx) then
-        selectedNpcIdx = 1
-    end
-
-    local npcDropLbl = DISPLAY_UTIL:AcquireLabelFont(PAPetCard, PAPetCardTab2.content.scrollFrame.child)
-    npcDropLbl:SetText("NPC drop: ")
-    npcDropLbl:SetPoint("TOPLEFT", PAPetCardTab2.content.scrollFrame.child, "TOPLEFT")
-
-    local leftDock = npcDropLbl
-    local topDock = npcDropLbl
-    for idx, npc in ipairs(npcs) do
-        local npcName
-        if idx == selectedNpcIdx then
-            npcName = DISPLAY_UTIL:AcquireHighlightFont(PAPetCard, PAPetCardTab2.content.scrollFrame.child)
-        else
-            npcName = DISPLAY_UTIL:AcquireMultiValueFont(PAPetCard, PAPetCardTab2.content.scrollFrame.child)
-            npcName.locationIndex = idx    
-            npcName:SetScript("OnMouseDown",
-                function(self)
-                    DISPLAY.PetCard:Show(PAPetCard.pet, self.locationIndex)
-                end
-            )
-        end
-        npcName:SetText(npc.name)
-
-        npcName:SetPoint("LEFT", leftDock, "RIGHT", 5, 0)
-        if idx == 1 then
-            npcName:SetPoint("TOP", leftDock, "TOP", 0, 0)
-        else
-            npcName:SetPoint("TOP", topDock, "BOTTOM", 0, -5)
-        end
-
-        local detail = DISPLAY_UTIL:AcquireSmallerSubduedFont(PAPetCard, PAPetCardTab2.content.scrollFrame.child)
-        detail:SetText(string.format(" %s%% %s", npc.chance, npc.locations[1].zone))
-        detail:SetPoint("TOPLEFT", npcName, "TOPRIGHT", 0, -1)
-        topDock = npcName
-    end
-
-    return topDock;
-end
-
 local function GetPoiIconAtlas(mapType)
     if (mapType =="start") then 
         return "Islands-QuestBang"
@@ -295,7 +175,7 @@ local function GetPois(pois, selectedIdx)
             mainPoiLbl:SetPoint("TOPLEFT", PAPetCardTab2.content.scrollFrame.child, "TOPLEFT")
         else
             mainPoiLbl:SetPoint("LEFT", PAPetCardTab2.content.scrollFrame.child, "LEFT")
-            mainPoiLbl:SetPoint("TOP", topDock, "BOTTOM", 0, -3)
+            mainPoiLbl:SetPoint("TOP", topDock, "BOTTOM", 0, -10)
         end
         
         topDock = mainPoiLbl
@@ -460,79 +340,6 @@ local function GetAchievementText(achievement, topDock)
     achievementVal:SetText(GetLink(achievement.id))
     achievementVal:SetPoint("TOPLEFT", achievementLbl, "TOPRIGHT")
     topDock = achievementLbl
-
-    return topDock
-end
-
-local function GetVendorText(vendors, selectedVendorIdx)
-    if (not selectedVendorIdx) then
-        selectedVendorIdx = 1
-    end
-
-    local vendorLbl = DISPLAY_UTIL:AcquireLabelFont(PAPetCard, PAPetCardTab2.content.scrollFrame.child)
-    vendorLbl:SetText("Vendors: ")
-    vendorLbl:SetPoint("TOPLEFT", PAPetCardTab2.content.scrollFrame.child, "TOPLEFT")
-
-    local leftDock = vendorLbl
-    local topDock = vendorLbl
-    for idx, vendor in ipairs(vendors) do
-        local vendorName
-        if idx == selectedVendorIdx then
-            vendorName = DISPLAY_UTIL:AcquireHighlightFont(PAPetCard, PAPetCardTab2.content.scrollFrame.child)
-        else
-            vendorName = DISPLAY_UTIL:AcquireMultiValueFont(PAPetCard, PAPetCardTab2.content.scrollFrame.child)
-            vendorName.locationIndex = idx    
-            vendorName:SetScript("OnMouseDown",
-                function(self)
-                    DISPLAY.PetCard:Show(PAPetCard.pet, self.locationIndex)
-                end
-            )
-        end
-        vendorName:SetText(vendor.name)
-
-        vendorName:SetPoint("LEFT", leftDock, "RIGHT", 5, 0)
-        if idx == 1 then
-            vendorName:SetPoint("TOP", leftDock, "TOP", 0, 0)
-        else
-            vendorName:SetPoint("TOP", topDock, "BOTTOM", 0, -5)
-        end
-        topDock = vendorName
-
-        local formerItem
-        local money
-        for currencyIdx, currency in ipairs(vendor.currencies) do
-            local currencyVal
-            if currency[1] == "gold" then
-                money = DISPLAY_UTIL:AcquireHighlightFont(PAPetCard, PAPetCardTab2.content.scrollFrame.child)
-                money:SetPoint("TOPLEFT", vendorName, "TOPRIGHT", 3, 0)
-                local moneyText = string.format("(%s)", C_CurrencyInfo.GetCoinTextureString(currency[2]*10000), 10)
-                money:SetText(moneyText)
-            else
-                local item = DISPLAY_UTIL:AcquireHighlightFont(PAPetCard, PAPetCardTab2.content.scrollFrame.child)
-                local itemLink = select(2, GetItemInfo(currency[1]))
-                local currencyVal = string.format("%dx%s",currency[2], itemLink)
-                item:SetText(currencyVal)
-                if formerItem then
-                    item:SetPoint("TOPLEFT", vendorName, "BOTTOMLEFT", 0, -3)
-                    
-                else
-                    item:SetPoint("LEFT", vendorName, "LEFT", 15, 0)
-                    item:SetPoint("TOP", vendorName, "BOTTOM", 15, -3)
-                end
-                formerItem = item
-            end
-        end
-
-        local location = DISPLAY_UTIL:AcquireSmallerSubduedFont(PAPetCard, PAPetCardTab2.content.scrollFrame.child)
-        location:SetText(vendor.locations[1].zone)
-        if (money) then
-            location:SetPoint("TOPLEFT", money, "TOPRIGHT", 3, -1)
-        else
-            location:SetPoint("TOPLEFT", vendorName, "TOPRIGHT", 3, -1)
-        end
-
-        topDock = vendorName -- for docking of lower sections
-    end
 
     return topDock
 end
