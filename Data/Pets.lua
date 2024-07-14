@@ -1,5 +1,6 @@
 local PETC =PetCollector
 local PETS =PETC.PETS
+local SHARED =PETC.SHARED
 
 PETS.SOURCES ={
     BATTLE ="Pet Battle",
@@ -308,15 +309,15 @@ PETS.all ={
         source="Drop",
         flavor="Favored pet of the Defias pirates, this colorful bird is handy for remembering passwords, grocery lists, and cracker recipes.",
         icon="132925",
+        possbileBreeds={"S/B"},
+        baseStats={9, 8, 7},
         pois={
             {name="NPC drop:", entries={
                 {id="", maps={
-                    {id="n48522:Defias Pirate", chance=2, mapID=292, floor=2, type="kill", coords={{52.2,46.4},{52.2,47},{52.2,47.6},{52.4,45.2},{52.6,44.6},{53.2,41.8},{53.4,43},{53.4,43.6},{53.6,43},{53.6,43.6},{53.6,44.2},{53.6,44.6},{53.6,44.8},{53.8,45.6},{54,33.6},{54,55.4},{54.2,32.6},{54.2,33},{54.2,54.4},{54.4,31.2},{54.4,32},{54.6,31.4},{54.8,31.6},{54.8,38.4},{54.8,39},{55,39.6},{55,52.6},{55.2,34.4},{55.2,35},{55.2,42.4},{55.2,42.6},{55.4,33.2},{55.4,33.8},{55.4,43.2},{55.6,33.2},{55.6,33.6},{55.6,43.2},{55.6,43.8},{55.8,26.4},{56,26.4},{56,27},{56,28.2},{56,28.8},{56.2,26.6},{56.2,27.6},{56.6,27.8}},}
+                    {id="n48522:Defias Pirate", chance=2, mapID=292, type="kill", coords={{52.2,46.4},{52.2,47},{52.2,47.6},{52.4,45.2},{52.6,44.6},{53.2,41.8},{53.4,43},{53.4,43.6},{53.6,43},{53.6,43.6},{53.6,44.2},{53.6,44.6},{53.6,44.8},{53.8,45.6},{54,33.6},{54,55.4},{54.2,32.6},{54.2,33},{54.2,54.4},{54.4,31.2},{54.4,32},{54.6,31.4},{54.8,31.6},{54.8,38.4},{54.8,39},{55,39.6},{55,52.6},{55.2,34.4},{55.2,35},{55.2,42.4},{55.2,42.6},{55.4,33.2},{55.4,33.8},{55.4,43.2},{55.6,33.2},{55.6,33.6},{55.6,43.2},{55.6,43.8},{55.8,26.4},{56,26.4},{56,27},{56,28.2},{56,28.8},{56.2,26.6},{56.2,27.6},{56.6,27.8}},}
                 }}
             }}
         },
-        possbileBreeds={"S/B"},
-        baseStats={9, 8, 7},
         acquisition={
             {"Kill Defias Pirates in The Deadmines for a 2% drop chance."},
             {"There are reports that the cage only drops in Normal mode (not heroic)"},
@@ -364,6 +365,8 @@ PETS.all ={
         source="Vendor",
         flavor="It thinks you taste like chicken too.",
         icon="135996",
+        possbileBreeds={"B/B", "P/B", "S/B", "H/B"},
+        baseStats={8, 8, 8},
         pois={
             {name="Vendors:", entries = {
                 {id="", maps={
@@ -372,8 +375,6 @@ PETS.all ={
                 }}
             }}
         },
-        possbileBreeds={"B/B", "P/B", "S/B", "H/B"},
-        baseStats={8, 8, 8},
         acquisition={
             {"Purchase a %s from a vendor.", "i11023"},
         }
@@ -555,6 +556,8 @@ PETS.all ={
         source="Vendor",
         flavor="Known for their powerful legs and keen eyesight.",
         icon="237579",
+        possbileBreeds={"H/B"},
+        baseStats={8.5, 7.5, 8},
         pois={
             {name="Vendors:", entries={
                 {id="", maps={
@@ -562,8 +565,6 @@ PETS.all ={
                 }}
             }}
         },
-        possbileBreeds={"H/B"},
-        baseStats={8.5, 7.5, 8},
         acquisition={
             {"The vendor is constantly running but will slow down if you talk to him."},
             {"If you talk to the frog he's chasing then both will stop for a few seconds."},
@@ -18455,13 +18456,26 @@ PETS.all ={
         isTradeable=true,
         isUnique=false,
         isPassive=false,
+        intermittent=true,
         source="Quest",
         flavor="The wisest engineers of Azeroth all know that the only thing more dangerous than a living evil chicken, is the mind of an evil chicken transplanted into the body of a mechanical chicken.",
         icon="656513",
-        quest={name="Cutting Edge Poultry Science"},
-        locations={{continent="Kul Tiras", zone="Drustvar", area="Waycrest Manor"}},
         possbileBreeds={"B/B"},
         baseStats={8, 8, 8},
+        pois={
+            {name="Points of interest:", entries = {
+                {id="", maps={
+                    {id="n131607:Sauciere Samuel", mapID=1015, type="kill", coords={{65,30}}},
+                    {id="n7406:Oglethorpe Obnoticus", mapID=210, type="end", coords={{43.0,72.0}}}
+                }},
+            }},
+        },
+        acquisition={
+            {"World quest %s must be available in Drustvar", "q51212"},
+            {"Enter the Waycrest Manor dungeon and head to the kitchen on the 1st floor."},
+            {"Unequip any passive attacking gear. Enter the kitchen to let Sauciere Samuel and Roast Chef Rhonda continue to attack you until a chicken shows up and offers you a quest %s.", "q50990"},
+            {"Turn the quest item in to %s. Note you must be at least neutral standing with Booty Bay to turn in the quest.", "n7406:Oglethorpe Obnoticus"},
+        }
     }, 
     [2196]={
         name="Lil' Tika",
@@ -23872,10 +23886,19 @@ PETS.all ={
         source="Drop",
         flavor="Dragonbreath Chili is nothing compared to the stench coming from the mouth of this thing.",
         icon="2141737",
-        npcs={{name="Lord Aj'qirai"}},
-        locations={{continent="Kalimdor", zone="Uldum"}},
         possbileBreeds={"P/P"},
         baseStats={7.5, 8.575, 7.925},
+        pois={
+            {name="Points of interest:", entries = {
+                {id="", maps={
+                    {id="n154604:Lord Aj'qirai", mapID=1527, chance=2, type="boss", coords={{34.6,18.8}}},
+                }},
+            }},
+        },
+        acquisition={
+            {"Only available when world event Uldum's Assault: Aqir is active"},
+            {"Kill %s for a 2%% chance of receiving %s", "n154604:Lord Aj'qirai", "i174475"},
+        }
     }, 
     [2848]={
         name="Aqir Tunneler",
@@ -23887,13 +23910,23 @@ PETS.all ={
         isTradeable=true,
         isUnique=false,
         isPassive=false,
+        intermittent=true,
         source="Drop",
         flavor="These Aqir Scarabs are masters at tunneling through any terrain.",
         icon="1418495",
-        npcs={{name="Skikx'traz"}},
-        locations={{continent="Kalimdor", zone="Uldum"}},
         possbileBreeds={"H/P"},
         baseStats={7.125, 9.625, 7.25},
+        pois={
+            {name="Points of interest:", entries = {
+                {id="", maps={
+                    {id="n162140:Skikx'traz", mapID=1527, chance=2, type="boss", coords={{21.6,61.4},{22.4,61.6},{23.4,62.2},{23.4,62.6},{23.8,62.6},{24,62.2}}},
+                }},
+            }},
+        },
+        acquisition={
+            {"Only available when world event Uldum's Assault: Aqir is active"},
+            {"Kill %s for a 2%% chance of receiving %s", "n162140:Skikx'traz", "i174476"},
+        }
     }, 
     [2849]={
         name="Pygmy Camel",
@@ -23944,13 +23977,27 @@ PETS.all ={
         isTradeable=true,
         isUnique=false,
         isPassive=false,
+        intermittent=true,
         source="Drop",
         flavor="Three legs, two arms, three eyeballs, the extras are for emergency situations only.",
         icon="237299",
-        npcs={{name="Amalgamation of Flesh"}},
-        locations={{continent="Kalimdor", zone="Uldum"}},
         possbileBreeds={"P/S"},
         baseStats={8, 9.125, 6.875},
+        pois={
+            {name="Points of interest:", entries = {
+                {id="", maps={
+                    {id="q57429", mapID=1527, type="start", coords={{59.8,72.6}}},
+                    {id="n157593:Amalgamation of Flesh", mapID=1527, chance=2, type="boss", coords={{59.8,72.6}}},
+                }},
+            }},
+        },
+        acquisition={
+            {"Only available when world event Uldum's Assault: The Black Empire is active"},
+            {"Furthermore, the quest %s must also be active.", "q57429"},
+            {"To start the event you must click on the pyre. It looks like a podium with a flaming ball on top, all sitting on a blue circular carpet. If the quest is active but the pyre is not visible then wait for a respawn"},
+            {"Kill 4 waves of basic mobs.  The 5th wave will consist of %s for a 2%% chance of receiving %s.", "n157593:Amalgamation of Flesh", "i174478"},
+            {"Only lootable once per day per character."},
+        }
     }, 
     [2852]={
         name="Jade Defender",
@@ -24321,13 +24368,26 @@ PETS.all ={
         isTradeable=true,
         isUnique=false,
         isPassive=false,
+        intermittent=true,
         source="Drop",
         flavor="The sludge that can give rise to the dredgers has been known to coalesce and run a muck.",
         icon="1500930",
-        npcs={{name="Bog Beast"}},
-        locations={{continent="Shadowlands", zone="Revendreth"}},
         possbileBreeds={"H/H", "H/P", "H/S"},
         baseStats={8.75, 8, 7.25},
+        pois={
+            {name="Points of interest:", entries = {
+                {id="", maps={
+                    {id="n166206:Primordial Sludge", mapID=1525, type="kill", coords={{32.2,32},{32.8,32},{33.4,33.2},{33.4,33.6},{33.6,31.8},{33.6,33.4},{33.6,33.6},{34.6,33.4},{34.6,33.6},{35.2,32.2},{35.8,33},{36,31.4},{36,32.2},{36.6,31},{36.8,32.4},{36.8,32.6},{37,30.4},{37.6,31.2},{37.6,31.6},{38.4,29.8}}},
+                }},
+            }},
+        },
+        acquisition={
+            {"World quest %s must be available.", "q59808"},
+            {"Kill %s for a chance to receive %s.", "n166206:Primordial Sludge", "i177880"},
+            {"Use the item to toss it back into the mud, causing a %s to spawn.", "n166292:Bog Beast"},
+            {"Kill the spawn for a 9%% chance to receive %s.", "i180588"},
+            {"Tip: You can complete 3 spawns and then delete your remaining muck to abandon the quest. You'll be able to pick the quest back up again after a short delay. This allows you to complete it in one day if you have bad luck."},
+        }
     }, 
     [2897]={
         name="Wrathling",
@@ -24342,13 +24402,20 @@ PETS.all ={
         source="Drop",
         flavor="Drawn from an overabundance of pride and wrath these manifestations seek even more to sustain themselves.",
         icon="1391769",
-        npcs={
-            {name="Manifestation of Wrath"},
-            {name="Leeched Soul"}
-        },
-        locations={{continent="Shadowlands", zone="Revendreth"}},
         possbileBreeds={"H/H", "H/P", "P/S"},
         baseStats={7.675, 8.65, 7.675},
+        pois={
+            {name="Points of interest:", entries = {
+                {id="", maps={
+                    {id="n165175:Prideful Hulk", mapID=1525, chance=5, type="kill", coords={{67.8, 82.0},{67.5,82.3, type="cave"}}},
+                    {id="n170048:Manifestation of Wrath", mapID=1525, chance=8, type="kill", coords={{49.0,34.8}}},
+                }},
+            }},
+        },
+        acquisition={
+            {"%s is available on a 10-15 minute respawn timer. It is part of the Leeched Soul rare spawn event, which is down inside of a crypt.", "n165175:Prideful Hulk"},
+            {"%s is only available when the World quest %s is active.", "n170048:Manifestation of Wrath","q59808"},
+        }
     }, 
     [2898]={
         name="Raw Emotion",
@@ -24400,13 +24467,25 @@ PETS.all ={
         isTradeable=true,
         isUnique=false,
         isPassive=false,
+        intermittent=true,
         source="Quest",
         flavor="A fellow message courier to Chip, Dal was always on time until one day when he did not return from his appointed round.",
         icon="2103878",
-        quest={name="A Stolen Stonefiend"},
-        locations={{continent="Shadowlands", zone="Revendreth"}},
         possbileBreeds={"S/S"},
         baseStats={7.625, 7.75, 8.625},
+        pois={
+            {name="Points of interest:", entries = {
+                {id="", maps={
+                    {id="n170189:Penkle", mapID=1525, type="npc", coords={{45.2,47.8}}},
+                }},
+            }},
+        },
+        acquisition={
+            {"World quest %s must be available.", "q60655"},
+            {"Complete the quest but do not leave the area."},
+            {"Speak to %s to receive a %s.", "n170189:Penkle", "i180270"},
+            {"Unlock the cage next to you to receive %s.", "i183859"}
+        }
     }, 
     [2901]={
         name="Trapped Stonefiend",
@@ -25958,13 +26037,26 @@ PETS.all ={
         isTradeable=true,
         isUnique=false,
         isPassive=false,
+        intermittent=true,
         source="Treasure",
         flavor="Nobody knows why all of these skeletal hands are from the left hand. Where did the right hands go?",
         icon="3386322",
-        items={{name="Skeletal Hand Fragments"}},
-        locations={{continent="Shadowlands", zone="Maldraxxus"}},
         possbileBreeds={"S/S"},
         baseStats={8, 8.375, 7.625},
+        pois={
+            {name="Points of interest:", entries={
+                {id="", maps={
+                    {id="n183111:Rotgut", mapID=1536, type="pet", coords={{34.0,55.2}}},
+                    {id="o358315:Skeletal Hand Fragments", mapID=1536, type="treasure", coords={{47.4,62.2}}},
+                    {id="n173003:Nalcorn Talsen ", mapID=1536, type="npc", coords={{50.6,53.4}}},
+                }}
+            }}
+        },
+        acquisition={
+            {"Defeat %s in a pet battle while %s world quest is up to receive an %s.","n183111:Rotgut", "q61867", "i183111"},
+            {"Locate %s to receive a %s.  It is a small bony arm at the base of a larger skeleton.", "o358315:Skeletal Hand Fragments", "i183113"},
+            {"Purchase a %s from %s for %s", "i183112", "n173003:Nalcorn Talsen", "ci:250:163036"},
+        }
     }, 
     [3026]={
         name="Tower Deathroach",
@@ -28379,13 +28471,40 @@ PETS.all ={
         isTradeable=true,
         isUnique=false,
         isPassive=false,
+        intermittent=true,
         source="Profession",
         flavor="These poultrids are hostile, but never angry. They love every moment of every battle.",
         icon="4096554",
-        profession="Protoform Synthesis",
-        locations={{continent="Shadowlands", zone="Zereth Mortis"}},
         possbileBreeds={"S/S"},
         baseStats={8, 8, 8},
+        professionDetail ={
+            profession="Protoform Synthesis",
+            recipe=364687,
+            materials = {
+                {qty=200, id=188957},
+                {qty=1, id=189161},
+                {qty=1, id=189148},
+            }
+        },
+        pois={
+            {name="Points of interest:", entries = {
+                {id="", maps={
+                    SHARED.synthForge,
+                    {id="n177958:Firim", mapID=1970, type="start", coords={{34.2,48.6}}},
+                    {id="n183813:Malfunctioned Poultrid", mapID=1970, type="dot", coords={{36.4,56.8},{36.6,62},{37,59.4},{37,59.6},{37.4,64.8},{38,51.4},{38,51.6},{38.4,55},{38.4,57.4},{38.4,57.6},{39,49.6},{39,59.2},{39.2,47.4},{39.2,47.6},{39.2,49.2},{39.4,51.4},{39.4,51.6},{39.4,55},{39.4,56},{39.6,49},{39.6,51.2},{39.6,55},{39.8,47},{40.4,62.4},{40.4,62.6},{40.6,62.4},{40.6,62.6},{41.4,64},{41.6,64.2},{41.6,69},{42.4,67.2},{42.6,67.2},{43.4,66.2},{43.6,66.4},{44.2,76.4},{44.2,76.6},{44.8,66.4},{44.8,66.6},{44.8,68.2},{44.8,73.2},{45.4,70.4},{45.4,70.6},{45.6,70.4},{45.6,70.6},{46,73.2},{46.2,67.8},{46.2,75.4},{46.2,75.6}}},
+                }},
+                SHARED.glimmerOfMalice,
+                SHARED.poultridLattice,
+            }},
+        },
+        acquisition={
+            SHARED.Instr.synthForge,
+            {"World quest %s must be up for a chance at the recipe. Get the quest from %s", "q65256", "n177958:Firim"},
+            {"Complete the quest for a chance to receive %s.", "i189436"},
+            {"Bring it to the forge to learn the crafting ability: %s.", "s364687"},
+            {"Farm a %s. It drops from many mobs, but most are in the NW quadrant of the center circle.", "i189161"},
+            {"Farm a %s. They're a low drop rate in %s.", "i189148", "o375362:Avian Nest"},
+        }
     }, 
     [3226]={
         name="Multichicken",
@@ -28433,13 +28552,35 @@ PETS.all ={
         isTradeable=true,
         isUnique=false,
         isPassive=false,
+        intermittent=true,
         source="Profession",
         flavor="Just one part jelly, but refreshed over and over and over again.",
         icon="4227094",
-        profession="Protoform Synthesis",
-        locations={{continent="Shadowlands", zone="Zereth Mortis"}},
         possbileBreeds={"B/B"},
         baseStats={7.75, 8.5, 7.75},
+        professionDetail ={
+            profession="Protoform Synthesis",
+            recipe=364573,
+            materials = {
+                {qty=300, id=188957},
+                {qty=1, id=189166},
+                {qty=1, id=187636},
+            }
+        },
+        pois={
+            {name="Points of interest:", entries = {
+                {id="", maps={
+                    SHARED.synthForge,
+                }},
+                SHARED.glimmerOfRenewal,
+                SHARED.aurelidLattice,
+            }},
+        },
+        acquisition={
+            SHARED.Instr.synthForge,
+            {"This recipe is given automatically once unlocking the synth forge."},
+            SHARED.Instr.aurelidLattice
+        }
     }, 
     [3230]={
         name="Terror Jelly",
@@ -28451,13 +28592,37 @@ PETS.all ={
         isTradeable=true,
         isUnique=false,
         isPassive=false,
+        intermittent=true,
         source="Profession",
         flavor="It feeds on fear, but is generally too cute to inspire terror on its own.",
         icon="4227092",
-        profession="Protoform Synthesis",
-        locations={{continent="Shadowlands", zone="Zereth Mortis"}},
         possbileBreeds={"B/B"},
         baseStats={7.75, 8.5, 7.75},
+        professionDetail ={
+            profession="Protoform Synthesis",
+            recipe=364695,
+            materials = {
+                {qty=400, id=188957},
+                {qty=1, id=189165},
+                {qty=1, id=187636},
+            }
+        },
+        pois={
+            {name="Points of interest:", entries = {
+                {id="", maps={
+                    SHARED.synthForge,
+                    {id="i189443", mapID=1970, type="poi", coords={{67.2,32.6}}},
+                }},
+                SHARED.glimmerOfPredation,
+                SHARED.aurelidLattice,
+            }},
+        },
+        acquisition={
+            SHARED.Instr.synthForge,
+            {"Acquire the recipe %s from inside the ring on top of a pillar", "i189443"},
+            {"Bring it to the forge to learn the crafting ability: %s.", "s364695"},
+            SHARED.Instr.aurelidLattice
+        }
     }, 
     [3231]={
         name="Prototickles",
@@ -28469,13 +28634,37 @@ PETS.all ={
         isTradeable=true,
         isUnique=false,
         isPassive=false,
+        intermittent=true,
         source="Profession",
         flavor="This creature's existence strongly implies the existence of other, more advanced tickle-based aurelids out there.",
         icon="4227093",
-        profession="Protoform Synthesis",
-        locations={{continent="Shadowlands", zone="Zereth Mortis"}},
         possbileBreeds={"B/B"},
         baseStats={7.75, 8.5, 7.75},
+        professionDetail ={
+            profession="Protoform Synthesis",
+            recipe=364691,
+            materials = {
+                {qty=400, id=188957},
+                {qty=1, id=189159},
+                {qty=1, id=187636},
+            }
+        },
+        pois={
+            {name="Points of interest:", entries = {
+                {id="", maps={
+                    SHARED.synthForge,
+                    {id="i189442", mapID=1970, type="poi", coords={{52.32,75.41}}},
+                }},
+                SHARED.glimmerOfDiscovery,
+                SHARED.aurelidLattice,
+            }},
+        },
+        acquisition={
+            SHARED.Instr.synthForge,
+            {"Acquire the recipe %s. It is on a chain hanging above the Hirukon rare.", "i189442"},
+            {"Bring it to the forge to learn the crafting ability: %s.", "s364691"},
+            SHARED.Instr.aurelidLattice
+        }
     }, 
     [3232]={
         name="Leaping Leporid",
@@ -29300,13 +29489,41 @@ PETS.all ={
         isTradeable=true,
         isUnique=false,
         isPassive=false,
+        intermittent=true,
         source="Quest",
         flavor="Some think this creature is smoldering because it is on fire. In truth it's because of its burning gaze.",
         icon="4007139",
-        quest={name="Tale of the Phoenix"},
-        locations={{continent="Dragon Isles", zone="The Waking Shores"}},
         possbileBreeds={"B/B"},
         baseStats={7.65, 7.85, 8.5},
+        pois={
+            {name="Points of interest:", entries={
+                {id="", maps={
+                    {id="n52530:Alysrazor", chance=100, mapID=367, type="boss", coords={{64.3,38.0}}},
+                    {id="n6520:Scorching Elemental", mapID=78, type="kill", coords={{45.2,48.4},{45.2,48.6},{45.4,51.6},{45.6,52},{45.8,55.8},{46,46.6},{46.4,53.8},{46.6,53.6},{46.8,45.2},{46.8,45.6},{47.2,53},{47.4,50.4},{47.4,50.8},{47.6,53.2},{47.8,43.8},{48,51.4},{48.4,48.2},{48.6,55.4},{48.6,55.6},{49.4,47.4},{49.4,47.8},{49.6,46.4},{49.6,46.6},{49.8,53.6},{50,44},{50,53},{50.4,47.8},{50.8,49.2},{51,47.2},{51.2,45.2},{51.4,51.6},{51.6,49},{52,51.8},{52,55.2},{52.6,42.6},{52.8,42.4},{52.8,45.4},{52.8,45.6},{53.4,51.2},{53.6,44.4},{53.6,50.8},{53.8,54.4},{54,55.2},{54.2,46.8},{55,44.6},{55,48.6},{55.4,57.4},{55.4,57.8},{55.6,57.4},{55.6,57.6}}},
+                    {id="i199097", mapID=542, type="treasure", coords={{37.90,17.92},{42.08,15.86},{44.00,13.72},{44.55,23.34},{45.10,15.00},{52.06,31.35},{52.17,49.97},{52.20,49.82},{61.90,42.30},{68.72,44.49},{68.76,44.50}}},
+                    {id="n88045:Zektar", mapID=542, type="npc", coords={{52.0,50.4}}},
+                    {id="n189207:Griftah ", mapID=2022, type="npc", coords={{25.6,54.2}}},
+                    {id="n196214:Tarjin the Blind", mapID=2022, type="npc", coords={{16.0,62.6}}},
+                }},
+                {id="i199080", maps={
+                    {id="n186684:Lava Phoenix", chance=4, mapID=2022, type="kill", coords={{55.8,23.4},{56.2,22},{64.4,31},{64.4,32},{64.6,29.4},{64.6,29.8},{64.8,28.2},{65,25.4},{65,25.6},{65.4,30.6},{65.8,27.2},{66,31},{67.4,31.2},{31.2,53.4},{31.4,53.6},{31.6,53.8},{32,55.4},{32,55.6},{22.8,52.8},{28.2,48},{32.6,65.2},{33,64.2},{33.2,62.6},{33.6,63.2},{33.8,64.4},{34,61.2},{34,64.8},{34.8,63},{34.8,64.8},{35.4,65.8},{35.8,64.8},{35.8,68.6},{36.2,64.2},{36.2,67.2},{36.2,67.6},{36.4,51.8},{36.8,60.8},{36.8,64.4},{36.8,66},{37.4,62},{37.4,63},{37.6,63},{37.8,65.6},{38,60.6},{38,65.4},{41.4,55.4},{41.4,55.8},{41.6,55.2},{41.8,55.8},{42.4,56.8},{42.4,57.8},{42.6,58.6},{42.8,56.4},{42.8,58.2},{43,53.8},{43.2,57.4},{43.4,50.4},{43.6,50.4},{43.6,57},{43.8,50.8},{43.8,55.2},{44,57.8},{44.2,55.6},{44.4,52.6},{44.4,54.2},{44.6,53.4},{44.6,56.6},{44.8,54.6},{44.8,58.4},{45,56},{45.2,53.8},{45.6,54},{45.6,56.8},{46,54.8}}},
+                    {id="n187923:Lava Hatchling",chance=4, mapID=2022, type="kill", coords={{31,55},{32,54.4},{32,56.6},{32.2,52.4},{32.2,55.4},{32.2,55.6},{32.6,55.4},{32.8,55.6}}},
+                    {id="n195448:Blazing Firesquall",chance=4, mapID=2022, type="kill", coords={{23.4,69.6},{23.4,70.6},{23.6,69.6},{25.2,70.4},{27,70.8},{28.2,69.2},{28.4,70.2},{28.4,70.8},{28.4,71.8},{28.6,70.2},{28.6,70.8},{28.8,71.8}}},
+                    {id="n189581:Lava Fledgling",chance=4, mapID=2022, type="kill", coords={{36.2,64.2},{36.8,66},{37.2,60.4},{38.4,65.4},{38.4,65.6},{38.6,65.4},{38.6,65.6}}},
+                }}
+            }}
+        },
+        acquisition={
+            {"Join a Firelands raid during %s", "e587:Cataclysm Timewalking Dungeon Event"},
+            {"Kill %s for a 100%% chance to receive a %s.", "n52530:Alysrazor", "i199099"},
+            {"Collect 20x%s from %s. Also kill %s since they share spawns.", "i199092", "n6520:Scorching Elemental", "n6521:Living Blaze"},
+            {"Collect 10x%s. They are located inside of the cookpots/cauldrons and are on a 15 minute spawn timer. If none spawn then you may need to complete some story quests in the zone to get into the standard phasing.", "i199097"},
+            {"Use the items collected so far to purchase a %s from %s.", "i199203", "n88045:Zektar"},
+            {"Collect 15x%s.", "i199080"},
+            {"Buy a %s from %s.", "i199177","n189207:Griftah"},
+            {"Use the item anywhere you like and %s will start spawning around you.  Collect 20 of them.", "i202062"},
+            {"Finally head to %s to turn in the items and receive your %s.", "n196214:Tarjin the Blind", "i193373"},
+        }
     }, 
     [3293]={
         name="Ashenwing",
@@ -29844,12 +30061,16 @@ PETS.all ={
         isTradeable=false,
         isUnique=false,
         isPassive=false,
+        intermittent=true,
         source="Pet Battle",
         flavor="A timbertooth with lighting inside? Shocking!",
         icon="4227790",
-        locations={{continent="Dragon Isles", zone="Ohn'ahran Plains", mapID=2023, coords={{32.6,39.4},{32.6,39.6},{33.8,35.4},{33.8,35.6},{34.4,33.4},{34.4,33.6},{34.4,44.4},{34.4,44.6},{34.6,44.4},{34.6,44.6},{35,42.4},{35,42.6},{35.2,33.8},{35.4,35},{35.6,34.8},{35.8,42.8},{36.4,34.2},{36.4,38.8},{36.6,34.2},{36.6,35},{36.6,38.6},}}},
+        locations={{mapID=2023, coords={{32.6,39.4},{32.6,39.6},{33.8,35.4},{33.8,35.6},{34.4,33.4},{34.4,33.6},{34.4,44.4},{34.4,44.6},{34.6,44.4},{34.6,44.6},{35,42.4},{35,42.6},{35.2,33.8},{35.4,35},{35.6,34.8},{35.8,42.8},{36.4,34.2},{36.4,38.8},{36.6,34.2},{36.6,35},{36.6,38.6},}}},
         possbileBreeds={"B/B", "H/P", "H/S"},
         baseStats={8.375, 7.625, 8},
+        acquisition={
+            {"The pet is only available while there's an active elemental storm in Ohn'ahran Plains"},
+        }
     }, 
     [3330]={
         name="Buckie",
@@ -30188,12 +30409,16 @@ PETS.all ={
         isTradeable=false,
         isUnique=false,
         isPassive=false,
+        intermittent=true,
         source="Pet Battle",
         flavor="A playful splash from this otter will give you quite a shock.",
         icon="3751921",
-        locations={{continent="Dragon Isles", zone="The Azure Span", mapID=2024, coords={{11.4,34.8},{11.6,35},{12.8,34.4},{13.2,35},{13.4,35.8},{14.4,32.6},{14.8,34.4},{15,34.6},{15,35.6},{15.2,31.4},{15.2,31.6},{15.6,34.8},{15.8,35.8},{42.8,31.4},{43.2,31.6},{43.4,29.8},{43.6,29.4},{43.8,29.6},{44,32.4},{44,32.6},{57.8,64.2},{58.4,64.6},{58.6,64.4},{59,65.4},{59,65.6},{59.4,68.4},{59.6,64.4},{59.6,64.6},{59.8,65.8},}}},
+        locations={{mapID=2024, coords={{11.4,34.8},{11.6,35},{12.8,34.4},{13.2,35},{13.4,35.8},{14.4,32.6},{14.8,34.4},{15,34.6},{15,35.6},{15.2,31.4},{15.2,31.6},{15.6,34.8},{15.8,35.8},{42.8,31.4},{43.2,31.6},{43.4,29.8},{43.6,29.4},{43.8,29.6},{44,32.4},{44,32.6},{57.8,64.2},{58.4,64.6},{58.6,64.4},{59,65.4},{59,65.6},{59.4,68.4},{59.6,64.4},{59.6,64.6},{59.8,65.8},}}},
         possbileBreeds={"B/B", "H/S"},
         baseStats={8.75, 8, 7.25},
+        acquisition={
+            {"The pet is only available while there's an active elemental storm in The Azure Span"},
+        }
     }, 
     [3355]={
         name="Echo of the Cave",
@@ -30297,14 +30522,26 @@ PETS.all ={
         isTradeable=true,
         isUnique=false,
         isPassive=false,
+        intermittent=true,
         source="Treasure",
         flavor="This turtle eats bugs, as you'd expect from its name, but you wouldn't believe how large the bugs are.",
         icon="1738683",
-        eventName="A Small Favor for Cymre Brightblade",
-        locations={{continent="Dragon Isles", zone="The Waking Shores"}},
         possbileBreeds={"B/B"},
         baseStats={8.375, 8.375, 7.25},
-    }, 
+        pois={
+            {name="Points of interest:", entries = {
+                {id="", maps={
+                    {id="o385021:Petrified Dragon Egg", mapID=2022, type="treasure", coords={{21.7,97.3},{23,88.8},{25.8,96.2},{33.3,87.2},{33.4,77.1},{34.4,89.2},{35.8,91.9},{40.8,95.4}},},
+                    {id="o385022:Eroded Fossil", mapID=2022, type="treasure", coords={{21.6,92.1},{21.8,94.4},{21.8,94.5},{22.1,95.5},{23.1,95.4},{23.1,95.5},{23.3,94.2},{23.4,96.7},{23.5,96.7},{24.8,91.2},{26.1,94.6}},},
+                    {id="n187077:Cymre Brightblade", mapID=2022, type="npc", coords={{22.8,95.0}},},
+                }},
+            }},
+        },
+        acquisition={
+            {"Find a %s and a %s.", "i202082","i202084"},
+            {"Give %s the items and she will give you the pet in return.  She is only available when world quest %s is active.", "n187077:Cymre Brightblade", "q66070"},
+        }
+    },
     [3365]={
         name="Roseate Hopper",
         speciesID=3365,
@@ -30506,12 +30743,16 @@ PETS.all ={
         isTradeable=false,
         isUnique=false,
         isPassive=false,
+        intermittent=true,
         source="Pet Battle",
         flavor="Peck. Peck. Zap!",
         icon="3998671",
-        locations={{continent="Dragon Isles", zone="Thaldraszus", mapID=13992, coords={{58,57.8},{58.2,55.8},{58.2,59.6},{59,56.8},{59.8,56.6},{60.8,60.8},{61,56.2},{61,56.6},{61.2,62},{61.6,57.2},{61.6,60.4},{62,59.2},{62.2,61.2},{52,52.4},{53,40.6},{58.6,28.8},}}},
+        locations={{mapID=2025, coords={{58,57.8},{58.2,55.8},{58.2,59.6},{59,56.8},{59.8,56.6},{60.8,60.8},{61,56.2},{61,56.6},{61.2,62},{61.6,57.2},{61.6,60.4},{62,59.2},{62.2,61.2},{52,52.4},{53,40.6},{58.6,28.8},}}},
         possbileBreeds={"S/S", "P/S", "H/S", "S/B"},
         baseStats={7.625, 8, 8.375},
+        acquisition={
+            {"The pet is only available while there's an active elemental storm in Thaldraszus"},
+        }
     }, 
     [3385]={
         name="Storm-Touched Stomper",
@@ -30523,12 +30764,16 @@ PETS.all ={
         isTradeable=false,
         isUnique=false,
         isPassive=false,
+        intermittent=true,
         source="Pet Battle",
         flavor="This what your mother always warned you would happen if you ate grass that was struck by lightning.",
         icon="4033839",
-        locations={{continent="Dragon Isles", zone="The Waking Shores", mapID=2022, coords={{26.2,72.2},{26.4,69.8},{26.6,70},{26.6,74.2},{27.8,73.8},{28.4,68.8},{28.8,70.4},{28.8,74.4},{29.2,72.4},{29.4,55.4},{29.4,71.2},{29.4,72.6},{29.6,52.8},{29.6,55.4},{29.8,70.2},{30.2,57.2},{30.2,70.8},{30.4,68.4},{30.4,69.4},{30.8,66.8},{31.2,52.4},{31.2,52.6},{31.2,56.4},{31.2,56.6},{32,51.4},{63.4,27.6},{63.4,28.8},{63.6,27.8},{63.8,30},{66,27.2},{66.4,24.4},{66.6,24.4},{67,26.6},}}},
+        locations={{mapID=2022, coords={{26.2,72.2},{26.4,69.8},{26.6,70},{26.6,74.2},{27.8,73.8},{28.4,68.8},{28.8,70.4},{28.8,74.4},{29.2,72.4},{29.4,55.4},{29.4,71.2},{29.4,72.6},{29.6,52.8},{29.6,55.4},{29.8,70.2},{30.2,57.2},{30.2,70.8},{30.4,68.4},{30.4,69.4},{30.8,66.8},{31.2,52.4},{31.2,52.6},{31.2,56.4},{31.2,56.6},{32,51.4},{63.4,27.6},{63.4,28.8},{63.6,27.8},{63.8,30},{66,27.2},{66.4,24.4},{66.6,24.4},{67,26.6},}}},
         possbileBreeds={"P/P", "S/S", "P/S", "S/B"},
         baseStats={8.375, 7.875, 7.75},
+        acquisition={
+            {"The pet is only available while there's an active elemental storm in The Waking Shores"},
+        }
     }, 
     [3389]={
         name="The Quackcestor",
@@ -30848,13 +31093,26 @@ PETS.all ={
         isTradeable=false,
         isUnique=false,
         isPassive=false,
-        source="Quest",
+        intermittent=true,
+        source="Pet Battle",
         flavor="Arrogant from a past life in the stormy Forbidden Reach, pines after the good old days when the elements controlled the land. Bit of a blow hard really.",
         icon="237007",
-        quest={name="Cutting Wind"},
-        locations={{continent="Dragon Isles", zone="The Forbidden Reach"}},
         possbileBreeds={"H/H"},
         baseStats={6, 9, 9},
+        pois={
+            {name="Pet battles:", entries={
+                {id="", maps={
+                    {id="n200682:Vortex", mapID=2151, coords={{18.2,13.4}}},
+                    {id="n200677:Storm-Touched Swoglet", mapID=2151, coords={{15.2,14.8},{17.6,13.4},{17.6,15.8},{18,11.8},{18.2,14},{19,11.8}}},
+                }}
+            }}
+        },
+        acquisition={
+            {"Only available when world quest %s is active.", "q73146"},
+            {"If you defeat %s in a pet battle while he is in Rare quality then you'll receive %s.", "n200682:Vortex", "i202413"},
+            {"You will not receive the pet reward if you win the battle while it's still in Legendary or Epic quality."},
+            {"Defeating the nearby %s in pet battles will reduce the quality of %s and inherently weaken him", "n200677:Storm-Touched Swoglet", "n200682:Vortex"},
+        }
     }, 
     [3447]={
         name="Tremblor",
@@ -30866,13 +31124,26 @@ PETS.all ={
         isTradeable=false,
         isUnique=false,
         isPassive=false,
-        source="Quest",
+        intermittent=true,
+        source="Pet Battle",
         flavor="Claims to be from a long lost land from the remnants of a massive volcano, but that story seems a little shaky.",
         icon="237008",
-        quest={name="Shifting Ground"},
-        locations={{continent="Dragon Isles", zone="The Forbidden Reach"}},
         possbileBreeds={"H/H"},
         baseStats={9.25, 8.25, 6.5},
+        pois={
+            {name="Pet battles:", entries={
+                {id="", maps={
+                    {id="n200693:Tremblor", mapID=2151, coords={{67.2,12.2}}},
+                    {id="n200678:Storm-Touched Slyvern", mapID=2151, coords={{67.6,10.8},{68,10.2},{68.2,11.8},{68.6,10.8}}},
+                }}
+            }}
+        },
+        acquisition={
+            {"Only available when world quest %s is active.", "q73147"},
+            {"If you defeat %s in a pet battle while he is in Rare quality then you'll receive %s.", "n200693:Tremblor", "i202411"},
+            {"You will not receive the pet reward if you win the battle while it's still in Legendary or Epic quality."},
+            {"Defeating the nearby %s in pet battles will reduce the quality of %s and inherently weaken him", "n200678:Storm-Touched Slyvern", "n200693:Tremblor"},
+        }
     }, 
     [3448]={
         name="Wildfire",
@@ -30884,13 +31155,26 @@ PETS.all ={
         isTradeable=false,
         isUnique=false,
         isPassive=false,
-        source="Quest",
+        intermittent=true,
+        source="Pet Battle",
         flavor="The flames surrounding it burn more intensely during combat. Could even say that pet battles get it stoked.",
         icon="237009",
-        quest={name="Combustible Vegetation"},
-        locations={{continent="Dragon Isles", zone="The Forbidden Reach"}},
         possbileBreeds={"H/H"},
         baseStats={7, 8.5, 8.5},
+        pois={
+            {name="Pet battles:", entries={
+                {id="", maps={
+                    {id="n200689:Wildfire", mapID=2151, coords={{13.2,53.6}}},
+                    {id="n200679:Storm-Touched Skitterer", mapID=2151, coords={{13.4,53},{13.4,55.2},{13.6,53},{13.6,54.8},{13.8,54.2}}},
+                }}
+            }}
+        },
+        acquisition={
+            {"Only available when world quest %s is active.", "q73148"},
+            {"If you defeat %s in a pet battle while he is in Rare quality then you'll receive %s.", "n200689:Wildfire", "i202412"},
+            {"You will not receive the pet reward if you win the battle while it's still in Legendary or Epic quality."},
+            {"Defeating the nearby %s in pet battles will reduce the quality of %s and inherently weaken him", "n200679:Storm-Touched Skitterer", "n200689:Wildfire"},
+        }
     }, 
     [3449]={
         name="Flow",
@@ -30902,13 +31186,26 @@ PETS.all ={
         isTradeable=false,
         isUnique=false,
         isPassive=false,
-        source="Quest",
+        intermittent=true,
+        source="Pet Battle",
         flavor="Perks its head up when hearing conversation as it likes to stay current on world affairs.",
         icon="237012",
-        quest={name="Flood Warning"},
-        locations={{continent="Dragon Isles", zone="The Forbidden Reach"}},
         possbileBreeds={"H/H"},
         baseStats={8.5, 8.25, 7.25},
+        pois={
+            {name="Pet battles:", entries={
+                {id="", maps={
+                    {id="n200697:Flow", mapID=2151, coords={{89.2,60.4}}},
+                    {id="n200680:Storm-Touched Ohuna", mapID=2151, coords={{86.4,64.2},{86.6,62.2},{87,60.2},{87.6,63.4},{88.8,60.2},{89,63.2},{89.4,62.2},{89.6,62.2}}},
+                }}
+            }}
+        },
+        acquisition={
+            {"Only available when world quest %s is active.", "q73149"},
+            {"If you defeat %s in a pet battle while he is in Rare quality then you'll receive %s.", "n200697:Flow", "i202407"},
+            {"You will not receive the pet reward if you win the battle while it's still in Legendary or Epic quality."},
+            {"Defeating the nearby %s in pet battles will reduce the quality of %s and inherently weaken him", "n200680:Storm-Touched Ohuna", "n200697:Flow"},
+        }
     }, 
     [3475]={
         name="Volatile Self-Driving Toolbox",
@@ -31322,13 +31619,27 @@ PETS.all ={
         isTradeable=true,
         isUnique=false,
         isPassive=false,
+        intermittent=true,
         source="Treasure",
         flavor="Lord Stantley will arrive fashionably early to any party that serves shrimp.",
         icon="5008076",
-        items={{name="Curious Top Hat"}},
-        locations={{continent="Dragon Isles", zone="Zaralek Cavern"}},
         possbileBreeds={"B/B"},
         baseStats={8.625, 8.375, 7},
+        pois={
+            {name="Points of interest:", entries={
+                {id="", maps={
+                    {id="n203618:Klakatak", mapID=2133, type="kill", coords={{54.0,41.6}},},
+                    {id="n205010:Curious Top Hat", mapID=2133, type="treasure", coords={{38.6,64.4},{44,77.6},{51.6,66.8},{61.6,69.6},{63.2,55.6}},},
+                }}
+            }}
+        },
+        acquisition={
+            {"You'll need a %s or a %s from the %s achievement.", "i205686", "i205904", "a18100"},
+            {"%s can be acquired by killing %s. He is available 3 of every 4 days and has a high 53%% drop rate.", "i205686", "n203618:Klakatak"},
+            {"The items give a buff that transforms you into a lobster for 10 mintues.  However, it also has a 1 hour cooldown, so use wisely!"},
+            {"Find a %s. Though, before you get close to it, use one of the items to gain the transformation buff.", "n205010:Curious Top Hat"},
+            {"Interact with the %s to gain a %s", "n205010:Curious Top Hat", "i205021"}
+        }
     }, 
     [3523]={
         name="Cheddar",
@@ -31446,13 +31757,27 @@ PETS.all ={
         isTradeable=true,
         isUnique=false,
         isPassive=false,
+        intermittent=true,
         source="Drop",
         flavor="Sure it's just a rock, but how much can it lift?",
         icon="1322283",
-        npcs={{name="Brullo the Strong"}},
-        locations={{continent="Dragon Isles", zone="Zaralek Cavern"}},
         possbileBreeds={"B/B"},
         baseStats={8.5, 9, 6.5},
+        pois={
+            {name="NPC drop:", entries = {
+                {id="", maps={
+                    {id="n203621:Brullo the Strong", chance="?", mapID=2133, type="kill", coords={{41.6,86.0}}}
+                }}
+            }}
+        },
+        acquisition={
+            {"Kill %s for an unknown chance to receive a %s.", "n203621:Brullo the Strong", "i205114"},
+            {"After killing him and Before looting the resulting chest, eat a %s to get the transformation buff.", "i204845"},
+            {"Try to keep him in the ring while fighting him."},
+            {"Sometimes the chest bugs out and doesn't spawn when he dies."},
+            {"He is available 3 out of every 4 days."},
+            {"The wowhead information on this one is a bit messy. It seems best to just keep trying until you get it."},
+        }
     }, 
     [3535]={
         name="Diamondshell",
@@ -31556,13 +31881,23 @@ PETS.all ={
         isTradeable=true,
         isUnique=false,
         isPassive=false,
+        intermittent=true,
         source="Drop",
         flavor="For a creature made of rocks it hovers quite effortlessly.",
         icon="5009625",
-        npcs={{name="Kob'rok"}},
-        locations={{continent="Dragon Isles", zone="Zaralek Cavern"}},
         possbileBreeds={"B/B"},
         baseStats={9, 7.5, 7.5},
+        pois={
+            {name="NPC drop:", entries = {
+                {id="", maps={
+                    {id="n203625:Karokta", chance=5, mapID=2133, type="kill", coords={{42.2,65.6}}}
+                }}
+            }}
+        },
+        acquisition={
+            {"Kill %s for a 5%% chance to receive a %s.", "n203625:Karokta", "i205147"},
+            {"He is available 3 out of every 4 days."},
+        }
     }, 
     [3545]={
         name="Salverun",
@@ -31574,13 +31909,33 @@ PETS.all ={
         isTradeable=false,
         isUnique=true,
         isPassive=false,
-        source="Treasure",
+        intermittent=true,
+        source="Achievement",
         flavor="Perhaps you'd like to see how snakelike it can be!",
         icon="5045822",
-        items={{name="Ouroboros Tablet and Kob'rok's Luminescent Scale"}},
-        locations={{continent="Dragon Isles", zone="Zaralek Cavern"}},
         possbileBreeds={"B/B"},
         baseStats={7.5, 8, 8.5},
+        achievement={id="a18271"},
+        pois={
+            {name="Points of interest:", entries = {
+                {id="", maps={
+                    {id="n201426:Myrrit", mapID=2133, type="npc", coords={{55.6,57.4}}},
+                    {id="n203462:Kob'rok", mapID=2133, type="kill", coords={{65.2,55.8}}}
+                }}
+            }}
+        },
+        acquisition={
+            {"Perform digs with %s until you receive both %s and %s.", "n201426:Myrrit", "i206009", "i206010"},
+            {"Combine them to create a %s.", "i206014"},
+            {"Perform more digs with %s until you receive a %s.", "n201426:Myrrit", "i206011"},
+            {"Combine them to create a %s.", "i206015"},
+            {"Perform more digs with %s until you receive a %s.", "n201426:Myrrit", "i206012"},
+            {"Combine them to create a %s.", "i206016"},
+            {"Perform more digs with %s until you receive a %s.", "n201426:Myrrit", "i206013"},
+            {"Combine them to create a %s.", "i206017"},
+            {"Next you'll need to kill %s for an 11%% chance to receive a %s.  He is available 3 of every 4 days.", "n203462:Kob'rok", "i206021"},
+            {"Perform the final ritual to complete the achievement and receive a %s.", "i205151"},
+        }
     }, 
     [3546]={
         name="Skaarn",
@@ -31592,13 +31947,24 @@ PETS.all ={
         isTradeable=true,
         isUnique=false,
         isPassive=false,
+        intermittent=true,
         source="Drop",
         flavor="Skaarn likes to coil up inside of your backpack.",
         icon="5015299",
-        npcs={{name="Kob'rok"}},
-        locations={{continent="Dragon Isles", zone="Zaralek Cavern"}},
         possbileBreeds={"B/B"},
         baseStats={7.5, 8, 8.5},
+        chance=5,
+        pois={
+            {name="NPC drop:", entries={
+                {id="", maps={
+                    {id="n203462:Kob'rok", mapID=2133, chance=5, type="kill", coords={{65.2,55.8}}},
+                }}
+            }}
+        },
+        acquisition={
+            {"%s is available 3 of every 4 days", "n203462:Kob'rok"},
+            {"Kill him for a 5%% chance at receiveing a %s.", "i205152"}
+        }
     }, 
     [3548]={
         name="Aquapo",
@@ -31610,13 +31976,23 @@ PETS.all ={
         isTradeable=true,
         isUnique=false,
         isPassive=false,
+        intermittent=true,
         source="Drop",
         flavor="The fury of the sea in the packge of a puddle.",
         icon="5041294",
-        npcs={{name="Aquifon"}},
-        locations={{continent="Dragon Isles", zone="Zaralek Cavern"}},
         possbileBreeds={"H/P"},
         baseStats={8.5, 9, 6.5},
+        pois={
+            {name="NPC drop:", entries = {
+                {id="", maps={
+                    {id="n203468:Aquifon", chance=5, mapID=2133, type="kill", coords={{48.4,75.0}}}
+                }}
+            }}
+        },
+        acquisition={
+            {"Kill %s for a 5%% chance to receive a %s.", "n203468:Aquifon", "i205154"},
+            {"He is available 3 of every 4 days"}
+        }
     }, 
     [3549]={
         name="Heartseeker Moth",
@@ -31645,13 +32021,23 @@ PETS.all ={
         isTradeable=true,
         isUnique=false,
         isPassive=false,
+        intermittent=true,
         source="Drop",
         flavor="Contrary to their name, these moths are actually quite happy.",
         icon="5015307",
-        npcs={{name="Underlight Queen"}},
-        locations={{continent="Dragon Isles", zone="Zaralek Cavern"}},
         possbileBreeds={"B/B"},
         baseStats={9, 7.5, 7.5},
+        pois={
+            {name="NPC drop:", entries = {
+                {id="", maps={
+                    {id="n203593:Underlight Queen", chance=5, mapID=2133, type="kill", coords={{58.0,69.2}}}
+                }}
+            }}
+        },
+        acquisition={
+            {"Kill %s for a 5%% chance to receive a %s.", "n203593:Underlight Queen", "i205159"},
+            {"She is available 3 of every 4 days"}
+        }
     }, 
     [3552]={
         name="Rithro",
@@ -31698,13 +32084,23 @@ PETS.all ={
         isTradeable=false,
         isUnique=true,
         isPassive=false,
+        intermittent=true,
         source="Achievement",
         flavor="Axel likes to chase bees. No one knows why.",
         icon="4719556",
-        achievement={name="Whelp, There It Is", ID=18384},
-        locations={{continent="Dragon Isles", zone="Valdrakken"}},
+        achievement={id="a18384"},
         possbileBreeds={"B/B"},
         baseStats={9, 7.5, 7.5},
+        pois={
+            {name="Points of interest:", entries = {
+                {id="", maps={
+                    {id="zLittle Scales Daycare", mapID=2112, type="poi", coords={{12.5,58}}}
+                }},
+            }},
+        },
+        acquisition={
+            {"Every day there are a few daily quests available at the daycare. Keep going back until you've done all the daily quests required by the achievement."},
+        }
     }, 
     [3557]={
         name="Roggy",
@@ -32349,12 +32745,43 @@ PETS.all ={
         isTradeable=false,
         isUnique=true,
         isPassive=false,
+        intermittent=true,
         source="Achievement",
         flavor="If you ever have an outdoor feast in the Emerald Dream, look out for wild blueloos. A blueloo won't steal your picinic basket, but it will politely ask for some snacks.",
         icon="2103797",
-        achievement={name="Friends in Feathers", ID=19293},
         possbileBreeds={"P/P"},
         baseStats={8, 8.5, 7.5},
+        pois={
+            {name="Achievement:", entries={
+                {id="a19293", maps={
+                    {id="n212047:Squawkle", mapID=2200, type="poi", coords={{36.4,71.6},{36.17,70.95,type="cave"}},},
+                    {id="n212033:Giblet", mapID=2200, type="poi", coords={{35.6,67.0},{36.14,67.16,type="cave"}},},
+                    {id="n212044:Peanut", mapID=2200, type="poi", coords={{37.8,69.2},{37.57,68.59,type="cave"}},},
+                    {id="n212046:Fruffles", mapID=2200, type="poi", coords={{39.2,71.8},{38.84,71.57,type="cave"}},},
+                    {id="n212050:Owlington", mapID=2200, type="poi", coords={{37.4,72.2}},},
+                    {id="n212052:Hops", mapID=2200, type="poi", coords={{37.8,73.2}},},
+                    {id="n212054:Squeaky", mapID=2200, type="poi", coords={{38.4,69.4}},},
+                    {id="n212055:Moonbeam", mapID=2200, type="poi", coords={{35.6,69.4}},},
+                    {id="n212057:Fuzz", mapID=2200, type="poi", coords={{38.6,63.6}},},
+                    {id="n212039:Feets", mapID=2200, type="poi", coords={{38.4,69.6}},},
+                    {id="n212042:Bumbletweet", mapID=2200, type="poi", coords={{39.0,66.0}},},
+                    {id="n212045:Snoozle", mapID=2200, type="poi", coords={{40.2,71.6},{38.84,71.57,type="cave"}},},
+                    {id="n212049:Wingnut", mapID=2200, type="poi", coords={{37.8,70.2},{36.91,62.4,type="cave"}},},
+                    {id="n212051:Meep", mapID=2200, type="poi", coords={{35.6,69.6},{36.07,69.49,type="cave"}},},
+                    {id="n212053:Beaks", mapID=2200, type="poi", coords={{37.0,66.0}},},
+                    {id="n212058:Eugene", mapID=2200, type="poi", coords={{36.4,62.8},{36.91,62.4,type="cave"}},},
+                    {id="n212056:Chickle", mapID=2200, type="poi", coords={{36.4,71.2},{36.17,70.95,type="cave"}},},
+                    {id="n212060:Tickles", mapID=2200, type="poi", coords={{38.6,70.4},{36.91,62.4,type="cave"}},}
+                }}
+            }}
+        },
+        acquisition={
+            {"World quest %s must be active to make progress on this achievement.  It is on a 16 day cycle and lasts for 3 days.", "q78370:Claws for Concern"},
+            {"If you're part of a raid group then you can complete the achievement in one sitting since that will block quest progress."},
+            {"Another option is to do 6 per then switch to alts to do the remaining ones until you've completed the achievement in one day."},
+            {"Or just do 6 and wait for the quest to come back around to do the rest at a normal pace."},
+            {"Simply go around and rescue each of the hatchlings listed on the achievement and you'll be awarded a %s.", "i210522"}
+        }
     }, 
     [4289]={
         name="Dreamborne Scarab",

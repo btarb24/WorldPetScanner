@@ -242,8 +242,8 @@ function DISPLAY.TodaysEvents:Update()
                 --REWARD LINKS
                 local linkAnchor = nil
                 for rewardLinkIdx, reward in ipairs(task.nonIconRewards) do
-                    local rewardLink = DISPLAY_UTIL:AcquirePetLinkFont(PAMainFrameTab1, expansionFrame.childrenHostFrame, PETS.all[reward.speciesID])
-                    rewardLink:SetText(reward:Display())
+                    local rewardLink = DISPLAY_UTIL:AcquirePetLinkFont(PAMainFrameTab1, expansionFrame.childrenHostFrame, reward.pet)
+                    rewardLink:SetFormattedText("[%s]", reward.pet.name)
                     if (linkAnchor) then
                         rewardLink:SetPoint("TOPLEFT", linkAnchor, "TOPRIGHT", DISPLAY.Constants.columnSeparation, 0);   
                     else

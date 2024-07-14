@@ -1,14 +1,8 @@
 local PETC = PetCollector
+local PETS = PETC.PETS
 
 Reward = {}
 Reward.__index = Reward;
-
-PETC.REWARD_TYPE = {
-    ITEM = "item",
-    PET = "pet",
-    ACHIEVEMENT = "achiev",
-    PET_VIA_ITEM = "petViaItem",
-}
 
 PETC.REWARD_ITEMCATEGORY = {
     CHARM = "charm",
@@ -21,18 +15,11 @@ function Reward:new(rewardData)
     local instance = {}
     setmetatable(instance, Reward)
     
-    instance.type = rewardData.type
-    instance.speciesID = rewardData.speciesID
-    instance.creatureName = rewardData.creatureName
-    instance.spellID = rewardData.spellID
+    instance.pet = rewardData.pet
     instance.itemID = rewardData.itemID
     instance.itemName = rewardData.itemName
     instance.itemIcon = PETC.Textures[rewardData.itemID]
     instance.itemCategory = PETC:GetItemCategory(rewardData.itemID)
-    instance.chance = rewardData.chance
-    instance.note = rewardData.note
-    instance.achievementID = rewardData.achievementID
-    instance.achievementName = rewardData.achievementName
     
     if rewardData.quantity ~= nil then 
         instance.quantity = rewardData.quantity
@@ -47,7 +34,6 @@ function Reward:newItem(itemID, quantity)
     local instance = {}
     setmetatable(instance, Reward)  
     
-    instance.type = PETC.REWARD_TYPE.ITEM
     instance.itemID = itemID
     instance.itemCategory = PETC:GetItemCategory(itemID)
     instance.itemIcon = PETC.Textures[itemID]
@@ -62,42 +48,23 @@ function Reward:newItem(itemID, quantity)
 end
 
 function Reward:IsItem()
-    return self.type == PETC.REWARD_TYPE.ITEM
+    return self.itemID ~= nil
 end
 
 function Reward:IsPet()
-    return self.type == PETC.REWARD_TYPE.PET
-end
-
-function Reward:IsPetViaItem()
-    return self.type == PETC.REWARD_TYPE.PET_VIA_ITEM
-end
-
-function Reward:IsAchievement()
-    return self.type == PETC.REWARD_TYPE.ACHIEVEMENT
+    return self.pet ~= nil
 end
 
 function Reward:HasIcon()
     return self.itemIcon ~= nil
 end
 
-
-local function BuildPetSpellLink(spellID, name)
-    if (spellID) then
-        return "|cff67BCFF|Hspell:".. spellID .. "|h[" .. name .."]|h|r"
-    else
-        return "|cff67BCFF[" .. name .."]|r"
-    end
-end
-
 function Reward:Link()
     if self._link == nil then
-        if self:IsPet() or self:IsPetViaItem() then
-            self._link = BuildPetSpellLink(self.spellID, self.creatureName)
+        if self:IsPet() then
+            self._link = nil
         elseif self:IsItem() then
             self._link = select(2, GetItemInfo(self.itemID))
-        elseif self:IsAchievement() then
-            self._link = GetAchievementLink(self.achievementID)
         else
             self._link = "unknown reward type"
         end
@@ -116,7 +83,7 @@ end
 
 function Reward:Display()
     if self._display == nil then
-        if self:IsPet() or self:IsPetViaItem() then 
+        if self:IsPet() then 
             self._display = self:Link()
         elseif self:IsItem() then
             if self:HasIcon() then
@@ -124,14 +91,8 @@ function Reward:Display()
             else
                 self._display = self.quantity.."x"..self:Link()
             end
-        elseif self:IsAchievement() then
-            self._display = self:Link()
         else
             self._display = "unknown reward type"
-        end
-
-        if (self.chance) then
-            self._display = self._display .. "|TInterface\\Buttons\\UI-GroupLoot-Dice-Up:14|t  "
         end
     end
 

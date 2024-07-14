@@ -9,19 +9,21 @@ Libs\LibQTip-1.0\LibQTip-1.0.lua
 
 Core.lua
 
-Models\Challenge.lua
-Models\Reward.lua
-Models\Task.lua
 
 DB\Expansions.lua
 DB\Zones.lua
 DB\Items.lua
 
+Data\Shared.lua
 Data\Maps.lua
-Data\Tasks.lua
 Data\Pets.lua
 Data\Continents.lua
 
+Models\Challenge.lua
+Models\Reward.lua
+Models\Task.lua
+
+Data\Tasks.lua
 Utilities.lua
 
 Display\DisplayUtil.lua

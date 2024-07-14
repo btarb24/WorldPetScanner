@@ -1,4 +1,5 @@
 local PETC = PetCollector
+local PETS = PETC.PETS
 
 PETC.TRIGGER_TYPE = {
     WORLD_QUEST = "worldQuest",
@@ -37,8 +38,7 @@ PETC.TaskData = {
         },
         rewards = {
             {
-                type = PETC.REWARD_TYPE.PET_VIA_ITEM,
-                speciesID = 211,
+                pet = PETS.all[211]
             }
         }
     },
@@ -63,8 +63,7 @@ PETC.TaskData = {
             note = "Defeat Ashlei in a pet battle at 50,31. High pet xp."
         },
         rewards = {
-            [1] = {
-                type = PETC.REWARD_TYPE.ITEM,
+            {
                 itemID = PETC.PetCharm,
                 quantity = 2,
                 itemName = "Polished Pet Charm",
@@ -92,8 +91,7 @@ PETC.TaskData = {
             note = "Defeat Vesharr in a pet battle at 46,45. High pet xp."
         },
         rewards = {
-            [1] = {
-                type = PETC.REWARD_TYPE.ITEM,
+            {
                 itemID = PETC.PetCharm,
                 quantity = 2,
                 itemName = "Polished Pet Charm",
@@ -121,8 +119,7 @@ PETC.TaskData = {
             note = "Defeat Taralune in a pet battle at 49,80. High pet xp."
         },
         rewards = {
-            [1] = {
-                type = PETC.REWARD_TYPE.ITEM,
+            {
                 itemID = PETC.PetCharm,
                 quantity = 2,
                 itemName = "Polished Pet Charm",
@@ -150,8 +147,7 @@ PETC.TaskData = {
             note = "Defeat Tarr the Terrible in a pet battle at 56,10. High pet xp."
         },
         rewards = {
-            [1] = {
-                type = PETC.REWARD_TYPE.ITEM,
+            {
                 itemID = PETC.PetCharm,
                 quantity = 2,
                 itemName = "Polished Pet Charm",
@@ -179,8 +175,7 @@ PETC.TaskData = {
             note = "Defeat Gargra in a pet battle at 69,65. High pet xp."
         },
         rewards = {
-            [1] = {
-                type = PETC.REWARD_TYPE.ITEM,
+            {
                 itemID = PETC.PetCharm,
                 quantity = 2,
                 itemName = "Polished Pet Charm",
@@ -208,8 +203,7 @@ PETC.TaskData = {
             note = "Defeat Cymre Brightblade in a pet battle at 51,71. High pet xp."
         },
         rewards = {
-            [1] = {
-                type = PETC.REWARD_TYPE.ITEM,
+            {
                 itemID = PETC.PetCharm,
                 quantity = 2,
                 itemName = "Polished Pet Charm",
@@ -232,12 +226,10 @@ PETC.TaskData = {
         },
         rewards = {
             {
-                type = PETC.REWARD_TYPE.PET,
-                speciesID = 3098,
+                pet = PETS.all[3098]
             },
             {
-                type = PETC.REWARD_TYPE.PET_VIA_ITEM,
-                speciesID = 3114,
+                pet = PETS.all[3114]
             },
         }
     },
@@ -256,17 +248,14 @@ PETC.TaskData = {
             questName = "Kyrian Assault",
         },
         rewards = {
-            [1] = {
-                type = PETC.REWARD_TYPE.PET,
-                speciesID = 3101,
+            {
+                pet = PETS.all[3101]
             },
-            [2] = {
-                type = PETC.REWARD_TYPE.PET_VIA_ITEM,
-                speciesID = 3103,
+            {
+                pet = PETS.all[3103]
             },
-            [3] = {
-                type = PETC.REWARD_TYPE.PET,
-                speciesID = 3010,
+            {
+                pet = PETS.all[3010]
             },
         }
     },
@@ -285,13 +274,11 @@ PETC.TaskData = {
             questName = "Night Fae Assault",
         },
         rewards = {
-            [1] = {
-                type = PETC.REWARD_TYPE.PET,
-                speciesID = 3099,
+            {
+                pet = PETS.all[3099]
             },
-            [2] = {
-                type = PETC.REWARD_TYPE.PET_VIA_ITEM,
-                speciesID = 3116,
+            {
+                pet = PETS.all[3116]
             },
         }
     },
@@ -312,9 +299,8 @@ PETC.TaskData = {
             note = "Kill the Snowfeather Matriarch (48,10) and then click the Orphaned Snowfeather (32,28)"
         },
         rewards = {
-            [1] = {
-                type = PETC.REWARD_TYPE.PET,
-                speciesID = 1974,
+            {
+                pet = PETS.all[1974]
             },
         }
     },
@@ -335,9 +321,8 @@ PETC.TaskData = {
             note = "Kill the Direbeak Matriarch (78,76) and then click the Orphaned Direbeak (80,70)"
         },
         rewards = {
-            [1] = {
-                type = PETC.REWARD_TYPE.PET,
-                speciesID = 1975,
+            {
+                pet = PETS.all[1975]
             },
         }
     },
@@ -358,9 +343,8 @@ PETC.TaskData = {
             note = "Kill the Bloodgazer Matriarch (35,6) and then click the Bloodgazer Direbeak (35,8)"
         },
         rewards = {
-            [1] = {
-                type = PETC.REWARD_TYPE.PET,
-                speciesID = 1977,
+            {
+                pet = PETS.all[1977]
             },
         }
     },
@@ -381,9 +365,8 @@ PETC.TaskData = {
             note = "Kill the Sharptalon Matriarch (48,10) and then click the Sharptalon Direbeak (47,10)"
         },
         rewards = {
-            [1] = {
-                type = PETC.REWARD_TYPE.PET,
-                speciesID = 1976,
+            {
+                pet = PETS.all[1976]
             },
         }
     },
@@ -403,12 +386,8 @@ PETC.TaskData = {
             checkForExistingTask = true,
         },
         rewards = {
-            [1] = {
-                type = PETC.REWARD_TYPE.PET,
-                speciesID = 3446,
-                spellID = 398870,
-                creatureName = "Vortex",
-                note = "Defeat Vortex when it's in its rare form to receive the pet. No pet rewarded if it is in legendary or epic form."
+            {
+                pet = PETS.all[3446]
             },
         }
     },
@@ -428,12 +407,8 @@ PETC.TaskData = {
             checkForExistingTask = true,
         },
         rewards = {
-            [1] = {
-                type = PETC.REWARD_TYPE.PET,
-                speciesID = 3447,
-                spellID = 398873,
-                creatureName = "Tremblor",
-                note = "Defeat Tremblor when it's in its rare form to receive the pet. No pet rewarded if it is in legendary or epic form."
+            {
+                pet = PETS.all[3447]
             },
         }
     },
@@ -453,12 +428,8 @@ PETC.TaskData = {
             checkForExistingTask = true,
         },
         rewards = {
-            [1] = {
-                type = PETC.REWARD_TYPE.PET,
-                speciesID = 3448,
-                spellID = 398872,
-                creatureName = "Wildfire",
-                note = "Defeat Wildfire when it's in its rare form to receive the pet. No pet rewarded if it is in legendary or epic form."
+            {
+                pet = PETS.all[3448]
             },
         }
     },
@@ -478,12 +449,8 @@ PETC.TaskData = {
             checkForExistingTask = true,
         },
         rewards = {
-            [1] = {
-                type = PETC.REWARD_TYPE.PET,
-                speciesID = 3449,
-                spellID = 398871,
-                creatureName = "Flow",
-                note = "Defeat Flow when it's in its rare form to receive the pet. No pet rewarded if it is in legendary or epic form."
+            {
+                pet = PETS.all[3449]
             },
         }
     },
@@ -511,12 +478,8 @@ PETC.TaskData = {
             note = "Find all 18 birds for the Fiends in Feathers achievement. Best to do it in a raid so you can get them all in one event."
         },
         rewards = {
-            [1] = {
-                type = PETC.REWARD_TYPE.PET,
-                speciesID = 4288,
-                spellID = 426060,
-                creatureName = "Blueloo",
-                note = "Find all 18 birds for the Fiends in Feathers achievement. Best to do it in a raid so you can get them all in one event."
+            {
+                pet = PETS.all[4288]
             },
         }
     },
@@ -537,13 +500,8 @@ PETC.TaskData = {
             note = "1. kill Klakatak for a 52% chance to drop [Clacking Claw]\n2. Use the Clacking Claw to gain a transformation buff for 10 minutes.\n3. Locate a Curious Top Hat critter and interact with it to gain the Lord Stantley pet.\n   -Some top hat locations: 39,64 | 44,78 | 52,67 | 62,70 | 63,56"
         },
         rewards = {
-            [1] = {
-                type = PETC.REWARD_TYPE.PET,
-                speciesID = 3521,
-                spellID = 408027,
-                creatureName = "Lord Stantley",
-                chance = true,
-                note = "1. kill Klakatak for a 52% chance to drop [Clacking Claw]\n2. Use the Clacking Claw to gain a transformation buff for 10 minutes.\n3. Locate a Curious Top Hat critter and interact with it to gain the Lord Stantley pet.\n   -Some top hat locations: 39,64 | 44,78 | 52,67 | 62,70 | 63,56"
+            {
+                pet = PETS.all[3521]
             },
         }
     },
@@ -563,23 +521,11 @@ PETC.TaskData = {
             npcName = "Kob'rok",
         },
         rewards = {
-            [1] = {
-                type = PETC.REWARD_TYPE.PET,
-                speciesID = 3546,
-                spellID = 408264,
-                creatureName = "Skaarn",
-                chance = true,
-                note = "5% drop chance"
+            {
+                pet = PETS.all[3546]
             },
-            [2] = {
-                type = PETC.REWARD_TYPE.PET_VIA_ITEM,
-                speciesID = 3545,
-                spellID = 408257,
-                creatureName = "Salverun",
-                itemID = 206021,
-                itemName = "Kob'rok's Luminescent Scale",
-                chance = false,
-                note = "1. Complete nifflin digs to receive [Ouroboros Tablet].\n2. Keep completing digs and using tablets until your tablet says to Combine with the Luminescent Scale.\n3. Kill Kob'rok for an 100% chance at the [Kob'rok's Luminescent Scale]\n4. Combine the scale with a [Ouroboros Tablet] and you'll receive Salverun"
+            {
+                pet = PETS.all[3545]
             },
         }
     },
@@ -600,13 +546,8 @@ PETC.TaskData = {
             note = "Kill for a 5% drop chance of the Teardrop Moth pet"
         },
         rewards = {
-            [1] = {
-                type = PETC.REWARD_TYPE.PET,
-                speciesID = 3551,
-                spellID = 408317,
-                creatureName = "Teardrop Moth",
-                chance = true,
-                note = "5% drop chance"
+            {
+                pet = PETS.all[3551]
             },
         }
     },
@@ -627,13 +568,8 @@ PETC.TaskData = {
             note = "Kill for a 5% drop chance of the Aquapo pet"
         },
         rewards = {
-            [1] = {
-                type = PETC.REWARD_TYPE.PET,
-                speciesID = 3548,
-                spellID = 408308,
-                creatureName = "Aquapo",
-                chance = true,
-                note = "5% drop chance"
+            {
+                pet = PETS.all[3548]
             },
         }
     },
@@ -654,13 +590,8 @@ PETC.TaskData = {
             note = "Kill for a 3% drop chance of the Brul pet"
         },
         rewards = {
-            [1] = {
-                type = PETC.REWARD_TYPE.PET,
-                speciesID = 3533,
-                spellID = 408110,
-                creatureName = "Brul",
-                chance = true,
-                note = "3% drop chance"
+            {
+                pet = PETS.all[3533]
             },
         }
     },
@@ -681,13 +612,8 @@ PETC.TaskData = {
             note = "Kill for a 5% drop chance of the Ridged Shalewing pet"
         },
         rewards = {
-            [1] = {
-                type = PETC.REWARD_TYPE.PET,
-                speciesID = 3541,
-                spellID = 408251,
-                creatureName = "Ridged Shalewing",
-                chance = true,
-                note = "5% drop chance"
+            {
+                pet = PETS.all[3541]
             },
         }
     },
@@ -707,12 +633,8 @@ PETC.TaskData = {
             note = "Complete the quest for a chance at receiving [Schematic: Violent Poultrid]."
         },
         rewards = {
-            [1] = {
-                type = PETC.REWARD_TYPE.PET,
-                speciesID = 3225,
-                spellID = 364178,
-                creatureName = "Violent Poultrid",
-                note = "Complete the quest for a chance at receiving [Schematic: Violent Poultrid]. Protoform synthesis costs:\n  200x Genesis Mote\n  1x Glimmer of Malice\n  1x Poultrid Lattice",
+            {
+                pet = PETS.all[3225]
             },
         }
     },
@@ -732,26 +654,14 @@ PETC.TaskData = {
             note = "Complete the quest for a chance at receiving [Aurelid Lattice], which can be used to craft a few pets."
         },
         rewards = {
-            [1] = {
-                type = PETC.REWARD_TYPE.PET,
-                speciesID = 3230,
-                spellID = 364184,
-                creatureName = "Terror Jelly",
-                chance = true
+            {
+                pet = PETS.all[3230]
             },
-            [2] = {
-                type = PETC.REWARD_TYPE.PET,
-                speciesID = 3231,
-                spellID = 364193,
-                creatureName = "Prototickles",
-                chance = true
+            {
+                pet = PETS.all[3231]
             },
-            [3] = {
-                type = PETC.REWARD_TYPE.PET,
-                speciesID = 3229, 
-                spellID = 364259,
-                creatureName = "Archetype of Renewal",
-                chance = true
+            {
+                pet = PETS.all[3229]
             },
         }
     },
@@ -771,11 +681,8 @@ PETC.TaskData = {
             note = "Bring an [Eroded Fossil] and [Petrified Dragon Egg] to Cymre Brightblade to receive the pet."
         },
         rewards = {
-            [1] = {
-                type = PETC.REWARD_TYPE.PET,
-                speciesID = 3360,
-                spellID = 377392,
-                creatureName = "Bugbiter Tortoise",
+            {
+                pet = PETS.all[3360]
             },
         }
     },
@@ -795,11 +702,8 @@ PETC.TaskData = {
             note = "Don't kill Roast Chef Rhondo or Sauciere Samuel. Keep them alive until a chicken\noffers you the quest [Cutting Edge Poultry Science]. Turn in at booty bay."
         },
         rewards = {
-            [1] = {
-                type = PETC.REWARD_TYPE.PET,
-                speciesID = 2192,
-                spellID = 273869,
-                creatureName = "Vengeful Chicken",
+            {
+                pet = PETS.all[2192]
             },
         }
     },
@@ -821,15 +725,8 @@ PETC.TaskData = {
             note = "Kill for a 2% chance to drop [Black Chitinous Plate], which yields the pet.\n  Located at 23,62 during Assault: Aqir Unearthed\nBurning the wastelander corpses can speed up the spawn time"
         },
         rewards = {
-            [1] = {
-                type = PETC.REWARD_TYPE.PET_VIA_ITEM,
-                speciesID = 2848,
-                spellID = 315360,
-                creatureName = "Aqir Tunneler",
-                itemID = 174476,
-                itemName = "Black Chitinous Plate",
-                chance = true,
-                note = "2% drop chance",
+           {
+            pet = PETS.all[2848]
             },
         }
     },
@@ -851,15 +748,8 @@ PETC.TaskData = {
             note = "Kill for a 2% chance to drop [Stinky Sack], which yields the pet.\n  Located at 34,18 inside the Chamber of the Moon during Assault: Aqir Unearthed\nSpawn time reported as 1-2 hours"
         },
         rewards = {
-            [1] = {
-                type = PETC.REWARD_TYPE.PET_VIA_ITEM,
-                speciesID = 2847,
-                spellID = 315355,
-                creatureName = "Rotbreath",
-                itemID = 174475,
-                itemName = "Stinky Sack",
-                chance = true,
-                note = "2% drop chance",
+            {
+                pet = PETS.all[2847]
             },
         }
     },
@@ -881,15 +771,8 @@ PETC.TaskData = {
             note = "Kill for a 2% chance to drop [Wicked Lurker].\nTravel to 59.8, 72.4 and click on the Pyre.  The rare will spawn during the 5th wave\nThe pyre respawns 1 minute after the rare was last killed\nOnly lootable once per day"
         },
         rewards = {
-            [1] = {
-                type = PETC.REWARD_TYPE.PET_VIA_ITEM,
-                speciesID = 2851,
-                spellID = 315370,
-                creatureName = "Wicked Lurker",
-                itemID = 174478,
-                itemName = "Wicked Lurker",
-                chance = true,
-                note = "2% drop chance",
+            {
+                pet = PETS.all[2851]
             },
         }
     },
@@ -907,12 +790,8 @@ PETC.TaskData = {
             achievementName = "Whelp, There It Is",
         },
         rewards = {
-            [1] = {
-                type = PETC.REWARD_TYPE.PET,
-                speciesID = 3555,
-                spellID = 408330,
-                creatureName = "Axel",
-                note = "Complete the quest lines at Valdrakken's Little Scales Daycare to satisfy the achievement. \nYou'll be given a handful of pets througout the sequence.\nit will take roughly a week or two to complete."
+            {
+                pet = PETS.all[3555]
             },
         }
     },
@@ -934,15 +813,8 @@ PETC.TaskData = {
             note = "1. Collect [Primordial Muck] from mobs in the area of the Muck It Up world quest\n2. Join a raid group (otherwise you're limited to 4 spawn chances)\n\n3. Use the [Primordial Muck] for a chance to spawn the Bog Beast rare\n4. Leave the raid to collect more muck, repeat until the rare spawns\n  note: you can only loot him once per day and it has a 9% chance to drop the [Bucket of Primordial Sludge]"
         },
         rewards = {
-            [1] = {
-                type = PETC.REWARD_TYPE.PET_VIA_ITEM,
-                speciesID = 2896,
-                spellID = 333799,
-                creatureName = "Primordial Bogling",
-                itemID = 180588,
-                itemName = "Bucket of Primordial Sludge",
-                note = "9% drop chance",
-                chance = true
+            {
+                pet = PETS.all[2896]
             },
         }
     },
@@ -962,13 +834,8 @@ PETC.TaskData = {
             note = "1. Use the quest's [Stone Fiend Tracker] to find/free him several times\n2. defeat Edgar the Collector\n3. Speak to Penkle behind the building to receive a [Cage Key]\n4. Use the key to unlock the nearby cage to receive the pet"
         },
         rewards = {
-            [1] = {
-                type = PETC.REWARD_TYPE.PET_VIA_ITEM,
-                speciesID = 2900,
-                spellID = 333819,
-                creatureName = "Dal",
-                itemID = 183859,
-                itemName = "Dal's Courier Badge",
+            {
+                pet = PETS.all[2900]
             },
         }
     },
@@ -990,15 +857,8 @@ PETC.TaskData = {
             note = "Option1: Deliver souls to the Avowed Ritualist for a chance to spawn the Manifestation of Wrath\n  for 9% loot drop of the [Bottled Up Rage]\nOption2: kill the Prideful Hulk rare at 68,82 for a 5% loot drop chance.\n  Kill Leeched Souls to spawn the rare."
         },
         rewards = {
-            [1] = {
-                type = PETC.REWARD_TYPE.PET_VIA_ITEM,
-                speciesID = 2897,
-                spellID = 333795,
-                creatureName = "Wrathling",
-                itemID = 183859,
-                itemName = "Bottled Up Rage",
-                chance = true,
-                note = "9% drop from Manifestation of Wrath\n5% drop from Prideful Hulk",
+            {
+                pet = PETS.all[2897]
             },
         }
     },
@@ -1029,11 +889,8 @@ PETC.TaskData = {
             npcName = "Storm-Touched Stomper",
         },
         rewards = {
-            [1] = {
-                type = PETC.REWARD_TYPE.PET,
-                speciesID = 3385,
-                creatureName = "Storm-Touched Stomper",
-                note = "Battle one and capture it during any storm event in The Waking Shores"
+            {
+                pet = PETS.all[3385]
             },
         }
     },
@@ -1060,11 +917,8 @@ PETC.TaskData = {
             npcName = "Storm-Touched Timbertooth",
         },
         rewards = {
-            [1] = {
-                type = PETC.REWARD_TYPE.PET,
-                speciesID = 3329,
-                creatureName = "Storm-Touched Timbertooth",
-                note = "Battle one and capture it during any storm event in Ohn'ahran Plains"
+            {
+                pet = PETS.all[3329]
             },
         }
     },
@@ -1095,11 +949,8 @@ PETC.TaskData = {
             npcName = "Storm-Touched Ottuk",
         },
         rewards = {
-            [1] = {
-                type = PETC.REWARD_TYPE.PET,
-                speciesID = 3354,
-                creatureName = "Storm-Touched Ottuk",
-                note = "Battle one and capture it during any storm event in The Azure Span"
+            {
+                pet = PETS.all[3354]
             },
         }
     },
@@ -1126,11 +977,8 @@ PETC.TaskData = {
             npcName = "Storm-Touched Bluefeather",
         },
         rewards = {
-            [1] = {
-                type = PETC.REWARD_TYPE.PET,
-                speciesID = 3384,
-                creatureName = "Storm-Touched Bluefeather",
-                note = "Battle one and capture it during any storm event in Thaldraszus"
+            {
+                pet = PETS.all[3384]
             },
         }
     },
@@ -1151,14 +999,8 @@ PETC.TaskData = {
             note = "1. Kill Alysrazor during a Firelands Timewalking raid (must be timewalking)\n2. Loot 20x[Inert Phoenix Ash] from fire elementals in Un'Goro Crater\n3. Find 10x [Sacred Phoenix Ash] in Spires of Arak\n4. Purchase [Phoneix Ash Talisman] from Zektar in Spires of Arak (52,50)\n5. Turn in the talisman to Tarjin the Blind in Waking Shores(16,63)"
         },
         rewards = {
-            [1] = {
-                type = PETC.REWARD_TYPE.PET_VIA_ITEM,
-                speciesID = 3292,
-                spellID = 375084,
-                creatureName = "Phoenix Wishwing",
-                itemID = 199099,
-                itemName = "Glittering Phoenix Ember",
-                note = "1. Kill Alysrazor during a Firelands Timewalking raid (must be timewalking)\n2. Loot 20x[Inert Phoenix Ash] from fire elementals in Un'Goro Crater\n3. Find 10x [Sacred Phoenix Ash] in Spires of Arak\n4. Purchase [Phoneix Ash Talisman] from Zektar in Spires of Arak (52,50)\n5. Turn in the talisman to Tarjin the Blind in Waking Shores(16,63)"
+            {
+                pet = PETS.all[3292]
             },
         }
     },
@@ -1181,14 +1023,8 @@ PETC.TaskData = {
             note = "1. Complete the pet battle to receive [Animated Ulna]\n2. Purchase [Animated Radius] from Nalcorn Talsen (50,34) for 250 charms\n3. Travel to 47.39,62.11 and click the Skeletal Hand Fragments to receive [Flexing Phalanges]\n    -Once per character. Only available if you have both of the Animated items\n5. Combine the items to receive the [Carpal] pet"
         },
         rewards = {
-            [1] = {
-                type = PETC.REWARD_TYPE.PET_VIA_ITEM,
-                speciesID = 3025,
-                spellID = 340717,
-                creatureName = "Carpal",
-                itemID = 183111,
-                itemName = "Animated Ulna",
-                note = "1. Complete the pet battle to receive [Animated Ulna]\n2. Purchase [Animated Radius] from an Undying Army Quartermaster for 250 charms\n3. Travel to 47.39,62.11 and click the Skeletal Hand Fragments to receive [Flexing Phalanges]\n    -Once per character. Only available if you have both of the Animated items\n5. Combine the items to receive the [Carpal] pet"
+            {
+                pet = PETS.all[3025]
             },
         }
     },

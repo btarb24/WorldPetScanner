@@ -76,10 +76,13 @@ end
 
 local function GetCurrency(currencyIdStr, fontHeight)
     local stripCNotation =  strsub(currencyIdStr, 2)
-    local currencyID, qty = strsplit(":", stripCNotation)
+    local currencyID, qty, itemID = strsplit(":", stripCNotation)
 
     if currencyID == "gold" then
         return C_CurrencyInfo.GetCoinTextureString(qty * 10000, fontHeight)
+    elseif currencyID == "i" then
+        local textureID = select(10, GetItemInfo(itemID))
+        return string.format("|Hitem:%d|h%dx|T%s:%d|t|h", itemID, qty, textureID, fontHeight)
     else
         local currencyInfo = C_CurrencyInfo.GetCurrencyInfo(currencyID)
         local icon = currencyInfo.iconFileID
@@ -126,6 +129,16 @@ local function GetLink(idStr, color)
         link = string.format("|cFF%s|Hobject:%d|h%s|h|r", color, id, name)
     elseif(type == "c") then
         link = GetCurrency(idStr)
+    elseif(type == "e") then
+        local detail = strsub(idStr, 2)
+        id, name = strsplit(":", detail)
+        if not color then
+            color = "b3b3b3"
+        end
+        link = string.format("|cFF%s|Hevent:%d|h%s|h|r", color, id, name)
+    elseif(type == "z") then
+        link = strsub(idStr, 2)
+        name = link
     end
     return link, id, name, type
 end
@@ -611,15 +624,15 @@ local function CreateWindow()
     tab1.content.flavorbgColorL = tab1.content:CreateTexture(nil, "BACKGROUND")
     tab1.content.flavorbgColorL:SetColorTexture(1,1,1)
     tab1.content.flavorbgColorL:SetGradient("HORIZONTAL", CreateColor(1, 1, 1, 0), CreateColor(1, 1, 1, .5))
-    tab1.content.flavorbgColorL:SetPoint("TOP", tab1.content.flavorbg, "TOP",0, -1)
-    tab1.content.flavorbgColorL:SetPoint("BOTTOM", tab1.content.flavorbg, "BOTTOM",0, 8)
+    tab1.content.flavorbgColorL:SetPoint("TOP", tab1.content.flavorbgColor, "TOP")
+    tab1.content.flavorbgColorL:SetPoint("BOTTOM", tab1.content.flavorbgColor, "BOTTOM")
     tab1.content.flavorbgColorL:SetPoint("LEFT", tab1.content, "LEFT", 20,0)
     tab1.content.flavorbgColorL:SetPoint("RIGHT", tab1.content, "CENTER")
     tab1.content.flavorbgColorR = tab1.content:CreateTexture(nil, "BACKGROUND")
     tab1.content.flavorbgColorR:SetColorTexture(1,1,1)
     tab1.content.flavorbgColorR:SetGradient("HORIZONTAL", CreateColor(1, 1, 1, .5), CreateColor(1, 1, 1, 0))
-    tab1.content.flavorbgColorR:SetPoint("TOP", tab1.content.flavorbg, "TOP",0, -1)
-    tab1.content.flavorbgColorR:SetPoint("BOTTOM", tab1.content.flavorbg, "BOTTOM",0, 8)
+    tab1.content.flavorbgColorR:SetPoint("TOP", tab1.content.flavorbgColor, "TOP")
+    tab1.content.flavorbgColorR:SetPoint("BOTTOM", tab1.content.flavorbgColor, "BOTTOM")
     tab1.content.flavorbgColorR:SetPoint("LEFT", tab1.content, "CENTER")
     tab1.content.flavorbgColorR:SetPoint("RIGHT", tab1.content, "RIGHT", -20, 0)
 
@@ -783,7 +796,7 @@ local function CreateWindow()
         GameTooltip:SetPoint("BOTTOM",region,"TOP",0,6)
 
         local linkType = strsplit(":", link)
-        if (linkType == "npc" or linkType == "object") then
+        if (linkType == "npc" or linkType == "object" or linkType == "event") then
             GameTooltip:SetText("Click for WowHead link")
         else
             GameTooltip:SetHyperlink(link)
@@ -801,6 +814,8 @@ local function CreateWindow()
             DISPLAY.LinkWindow:Show(text, "https://www.wowhead.com/quest=" .. id)
         elseif (type == "object") then
             DISPLAY.LinkWindow:Show(text, "https://www.wowhead.com/object=" .. id)
+        elseif (type == "event") then
+            DISPLAY.LinkWindow:Show(text, "https://www.wowhead.com/event=" .. id)
         else
             ChatFrame_OnHyperlinkShow(self, link, text, button, region, left, bottom, width, height)
         end
@@ -827,6 +842,15 @@ local function UpdateWindow(pet, locationIdx)
     
  --TAB 1
     f.tab1.content.flavor:SetText(pet.flavor)
+    if (f.tab1.content.flavor:GetHeight() <= 20) then --1line (3546)
+        f.tab1.content.flavorbgColor:SetPoint("BOTTOM", f.tab1.content.flavorbg, "BOTTOM",0, 5)
+    elseif (f.tab1.content.flavor:GetHeight() <= 40) then --2lines (39)
+        f.tab1.content.flavorbgColor:SetPoint("BOTTOM", f.tab1.content.flavorbg, "BOTTOM",0, 8)
+    elseif (f.tab1.content.flavor:GetHeight() <= 50) then  --3lines (40)
+        f.tab1.content.flavorbgColor:SetPoint("BOTTOM", f.tab1.content.flavorbg, "BOTTOM",0, 10)
+    else --4+lines (4288)
+        f.tab1.content.flavorbgColor:SetPoint("BOTTOM", f.tab1.content.flavorbg, "BOTTOM",0, 12)
+    end
   --tradeable
     if (pet.isTradeable == true) then
         f.tab1.content.tradeable:SetAlpha(1)
@@ -969,7 +993,7 @@ local function UpdateWindow(pet, locationIdx)
         f.tab2.content.scrollFrame:SetPoint("TOPLEFT", f.tab2.content.mapFrame, "BOTTOMLEFT", 0, -10);
         f.tab2.content.mapFrame:Show()
     else
-        f.tab2.content.scrollFrame:SetPoint("TOPLEFT", f.tab2.content, "TOPLEFT", 20, -10);
+        f.tab2.content.scrollFrame:SetPoint("TOPLEFT", f.tab2.content, "TOPLEFT", 20, -20);
         f.tab2.content.mapFrame:Hide()
     end
 
@@ -1028,10 +1052,13 @@ local function UpdateWindow(pet, locationIdx)
                     elseif type == "cave" then
                         dot:SetAtlas("CaveUnderground-Down")
                         dot:SetSize(14,14)
+                    elseif type == "boss" then
+                        dot:SetAtlas("ShipMission_DangerousSkull")
+                        dot:SetSize(12,14)
                     elseif type == "kill" then
                         if(#requestedLocation.coords == 1) then
                             dot:SetAtlas("ShipMission_DangerousSkull")
-                            dot:SetSize(14,16)
+                            dot:SetSize(12,14)
                         else
                             dot:SetAtlas("ComboPoints-ComboPoint")
                             dot:SetSize(10,10)
@@ -1101,6 +1128,8 @@ local function UpdateWindow(pet, locationIdx)
         else
             
         end
+    else
+        f.tab2.content.mapLbl:SetText(nil)
     end
 
     local bottomOfSourceSection
@@ -1110,7 +1139,7 @@ local function UpdateWindow(pet, locationIdx)
 
     if (pet.source == "Profession") then
         bottomOfSourceSection = GetProfessionText(pet.professionDetail, bottomOfSourceSection)    
-    elseif (pet.source == "Achievement") then
+    elseif (pet.source == "Achievement" and pet.achievement) then
         bottomOfSourceSection = GetAchievementText(pet.achievement, bottomOfSourceSection)    
     elseif not pet.pois then
         local sourceLbl = DISPLAY_UTIL:AcquireLabelFont(PAPetCard, f.tab2.content.scrollFrame.child)
@@ -1130,6 +1159,7 @@ local function UpdateWindow(pet, locationIdx)
     --     bottomOfSourceSection = GetQuestText(pet.quests, locationIdx)
 
    -- INSTRUCTIONS
+   local bla = PETC.SHARED.Instr.synthForge
     local priorBottom = bottomOfSourceSection
     if (pet.acquisition) then
         f.tab2.content.instructionLbl = DISPLAY_UTIL:AcquireLabelFont(PAPetCard, f.tab2.content.scrollFrame.child)
@@ -1163,7 +1193,7 @@ local function UpdateWindow(pet, locationIdx)
     local lineFrame = DISPLAY_UTIL:AcquireFrame(PAPetCard, f.tab2.content.scrollFrame.child)
     lineFrame:SetPoint("LEFT", f.tab2.content.scrollFrame.child, "LEFT", 5,0)
     lineFrame:SetPoint("RIGHT", f.tab2.content.scrollFrame.child, "RIGHT", -5,0)
-    lineFrame:SetPoint("TOP", priorBottom, "BOTTOM", 0, -10)
+    lineFrame:SetPoint("TOP", priorBottom, "BOTTOM", 0, -13)
     lineFrame:SetHeight(1)
 
     local line = lineFrame:CreateLine()

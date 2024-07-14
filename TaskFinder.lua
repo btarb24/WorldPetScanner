@@ -45,8 +45,8 @@ local function CleanRewards(mode, taskData)
 
     local keptRewards = {}
     for i, reward in pairs(taskData.rewards) do        
-        if reward.type == PETC.REWARD_TYPE.PET or reward.type == PETC.REWARD_TYPE.PET_VIA_ITEM then
-            if not PETS.all[reward.speciesID].collected then
+        if reward.pet then
+            if not reward.pet.collected then
                 table.insert(keptRewards, reward)
             end
         else
