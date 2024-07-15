@@ -36,29 +36,30 @@ local function CreatePetSortLists()
 		if (pet.isWild and not pet.collected) then
 			if (not pet.locations) then
 				print("wild pet without location:" .. pet.name)
-			end
-			for _, loc in pairs(pet.locations) do
-				local continent = loc.continent
-				local zone = loc.zone
-				local area = loc.area
-				if (not continent) then
-					continent, zone, area = MAPS.GetMapInfo(loc.mapID)
-				end
-
-				if (not list[continent]) then
-					list[continent] = {}
-				end
-				if (not list[continent][zone]) then
-					list[continent][zone] = {pets = {}}
-				end
-
-				if (loc.area) then
-					if (not list[continent][zone][area]) then
-						list[continent][zone][area] = {pets = {}}
+			else
+				for _, loc in pairs(pet.locations) do
+					local continent = loc.continent
+					local zone = loc.zone
+					local area = loc.area
+					if (not continent) then
+						continent, zone, area = MAPS.GetMapInfo(loc.mapID)
 					end
-					table.insert(list[continent][zone][area].pets, pet)
-				else
-					table.insert(list[continent][zone].pets, pet)
+
+					if (not list[continent]) then
+						list[continent] = {}
+					end
+					if (not list[continent][zone]) then
+						list[continent][zone] = {pets = {}}
+					end
+
+					if (loc.area) then
+						if (not list[continent][zone][area]) then
+							list[continent][zone][area] = {pets = {}}
+						end
+						table.insert(list[continent][zone][area].pets, pet)
+					else
+						table.insert(list[continent][zone].pets, pet)
+					end
 				end
 			end
 		end

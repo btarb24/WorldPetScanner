@@ -250,25 +250,27 @@ function DISPLAY.TodaysEvents:Update()
                         rewardLink:SetPoint("TOPLEFT", taskTime, "TOPRIGHT", maxChallengeWidth +PETC.IconColumnWidth +(DISPLAY.Constants.columnSeparation*4), 0);
                     end
                     linkAnchor = rewardLink
-                    rewardLink:HookScript("OnEnter",
-                        function(self)
-                            GameTooltip:SetOwner(self, "ANCHOR_NONE")
-                            GameTooltip:ClearLines()
-                            ContainerFrameItemButton_CalculateItemTooltipAnchors(self, GameTooltip)
+                    if (reward:IsItem()) then
+                        rewardLink:HookScript("OnEnter",
+                            function(self)
+                                GameTooltip:SetOwner(self, "ANCHOR_NONE")
+                                GameTooltip:ClearLines()
+                                ContainerFrameItemButton_CalculateItemTooltipAnchors(self, GameTooltip)
 
-                            if reward.note then
-                                GameTooltip:SetText(reward.note)    
-                            else
-                                GameTooltip:SetHyperlink(reward:Link())
+                                if reward.note then
+                                    GameTooltip:SetText(reward.note)    
+                                else
+                                    GameTooltip:SetHyperlink(reward:Link())
+                                end
+                                GameTooltip:Show()
                             end
-                            GameTooltip:Show()
-                        end
-                    )
-                    rewardLink:HookScript("OnLeave",
-                        function()
-                            GameTooltip_HideResetCursor()
-                        end
-                    )
+                        )
+                        rewardLink:HookScript("OnLeave",
+                            function()
+                                GameTooltip_HideResetCursor()
+                            end
+                        )
+                    end
                     lineHighlight:SetPoint("BOTTOM", rewardLink, "BOTTOM")
                 end
                 lineHighlight:SetPoint("LEFT", expansionFrame, "LEFT")

@@ -69,7 +69,8 @@ namespace PetCollectorUtils
       sb.AppendLine("PETS.all = {");
       foreach (var pet in sorted)
       {
-        sb.AppendLine($"{pet.Serialize()}, ");
+        if (pet.isWild)
+          sb.AppendLine($"{pet.Serialize()}, ");
       }
       sb.Append("}");
       var result = sb.ToString();
@@ -124,6 +125,14 @@ namespace PetCollectorUtils
           if (location == null && jlocations.Count == 1 && pet.locations.Length == 1)
             location = pet.locations.Single();
 
+          if (location == null)
+          {
+            location = new Location() { mapID = mapID, zone = $"unknown-{locationName}" };
+            var list = new List<Location>(pet.locations);
+            list.Add(location);
+            pet.locations = list.ToArray();
+          }
+
           if (location != null)
           {
             location.mapID = mapID;
@@ -152,27 +161,46 @@ namespace PetCollectorUtils
 
     static string TryGetLocationName(JToken jtoken, string line)
     {
-      if (line.Contains("uiMapName"))
-        return jtoken[0]["uiMapName"].Value<string>();
-      else
-        return null;
+      try
+      {
+        if (line.Contains("uiMapName"))
+          return jtoken[0]["uiMapName"].Value<string>();
+        else
+          return null;
+      }
+      catch { return "oddFormat"; }
     }
 
     static int TryGetMapID(JToken jtoken, string line)
     {
-      if (line.Contains("uiMapId"))
+      try
       {
-        var mapID = jtoken[0]["uiMapId"].Value<int>();
+        if (line.Contains("uiMapId"))
+        {
+          var mapID = jtoken[0]["uiMapId"].Value<int>();
 
-        if (mapID == 5861) //darkmoon island
-          mapID = 407;
-        else if (mapID == 7502) //dalaran
-          mapID = 51;
+          if (mapID == 5861) //darkmoon island
+            mapID = 407;
+          else if (mapID == 7502) //dalaran
+            mapID = 51;
 
-        return mapID;
+          return mapID;
+        }
+        else
+          return -1;
+      }
+      catch { return 99999; }
+    }
+    static string TryGetUiMapName(JToken jtoken, string line)
+    {
+      if (line.Contains("uiMapName"))
+      {
+        var name = jtoken[0]["uiMapName"].Value<string>();
+
+        return name;
       }
       else
-        return -1;
+        return null;
     }
 
     static string TryGetMapFloor(JToken jtoken)

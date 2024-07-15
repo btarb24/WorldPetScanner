@@ -224,6 +224,8 @@ local function GetPois(pois, selectedIdx)
                     poiLbl:SetPoint("LEFT", mainPoiLbl, "LEFT", 15, 0)
                 end
                 topDock = poiLbl
+            else
+                leftDock = mainPoiLbl
             end
 
             if (entry.maps) then
@@ -390,7 +392,7 @@ local function GetLocation(pet, location) --location, showLocList
 
     --standard map locations    
     for _, loc in ipairs(pet.locations) do
-        if loc.mapID == locationIdx then
+        if loc.mapID == location then
             return loc, true
         end
     end
@@ -837,6 +839,9 @@ local function UpdateWindow(pet, locationIdx)
         pool:ReleaseAll()
     end
 
+    PAPetCard.pendingPet = nil
+    PAPetCard.pendingLocationIdx = nil
+
     local f = PAPetCard
     f.Title:SetText(pet.name)
     
@@ -1232,22 +1237,110 @@ local function UpdateWindow(pet, locationIdx)
     f.tab2.content.scrollFrame.child:SetHeight(1000)
     f.tab2.content.scrollFrame.child:SetHeight(f.tab2.content.scrollFrame.child:GetTop() - xufu:GetBottom() + 20)
     f.tab2.content.scrollFrame:GetHeight()
-end
-
-function DISPLAY.PetCard:Show(pet, locationIdx)
-    if (not PAPetCard) then
-        CreateWindow()
-    else
-        PAPetCard.tab2.content.locationsFrame:SetSize(0,0)
-        PAPetCard.tab2.content.locationsFrame:Hide()
-    end
-
-    UpdateWindow(pet, locationIdx)
-
+    
     if (not PAPetCard.SelectedTab) then
         Tab_OnClick(PAPetCardTab1)
     end
     
     PAPetCard.pet = pet;
     PAPetCard:Show()
+end
+
+local function PrefetchItemInfo(itemIDStr)
+    local id = tonumber(strsub(itemIDStr, 2))
+    if (not PAPetCard.itemsRequiredForCache[id]) then
+        local response = GetItemInfo(id)
+        PAPetCard.itemsRequiredForCache[id] = "bla" -- to avoid requesting the same item multiple times
+        if response == nil then
+            PAPetCard.itemsNotYetCached[id] = "bla" -- to know we have events coming
+        end
+    end
+end
+
+local function PrefetchCurrencyInfo(currencyIDStr)
+    local type = strsub(currencyIDStr, 2, 2)
+    if type == "i" then
+        local _,_,id = strsplit(":", currencyIDStr)
+        PrefetchItemInfo("i"..id)
+    end
+end
+
+local function PrefetchInfo(infoStr)
+    local type = strsub(infoStr, 1, 1)
+    if (type == "c") then
+        return PrefetchCurrencyInfo(infoStr)
+    elseif (type == "i") then
+        return PrefetchItemInfo(infoStr)
+    else
+        return false
+    end
+end
+
+local function EnsureCacheThenUpdateWindow(pet, locationIdx)
+    PAPetCard.pendingPet = pet
+    PAPetCard.pendingLocationIdx = locationIdx
+    PAPetCard.allItemsRequested = false
+    PAPetCard.itemsNotYetCached = {}
+    PAPetCard.itemsRequiredForCache = {}
+    if (pet.pois) then
+        for _, depth1 in pairs(pet.pois) do
+            for _, depth2 in pairs(depth1.entries) do
+                PrefetchInfo(depth2.id)
+                
+                if (depth2.maps) then
+                    for _, depth3 in pairs(depth2.maps) do
+                        if (depth3.id) then
+                            PrefetchInfo(depth3.id)
+                        end
+
+                        if (depth3.currencies) then
+                            for _, currency in pairs(depth3.currencies) do
+                                PrefetchCurrencyInfo(currency)
+                            end
+                        end
+                    end
+                end
+            end
+        end
+    end
+
+    if (pet.acquisition) then
+        for _, line in pairs(pet.acquisition) do
+            for idx, piece in ipairs(line) do
+                if (idx > 1) then
+                    PrefetchInfo(piece)
+                end
+            end
+        end
+    end
+
+    PAPetCard.allItemsRequested = true
+    if (UTILITIES:Count(PAPetCard.itemsNotYetCached) > 0) then
+        --we have to wait for GET_ITEM_INFO_RECEIVED to flow in
+    else
+        UpdateWindow(pet, locationIdx)
+    end
+end
+
+function DISPLAY.PetCard:Show(pet, locationIdx)
+    if (not PAPetCard) then
+        CreateWindow()
+
+        PAPetCard:RegisterEvent('GET_ITEM_INFO_RECEIVED')
+        PAPetCard:SetScript('OnEvent', function(self, event, itemID)
+            if event == 'GET_ITEM_INFO_RECEIVED' then
+                if PAPetCard.itemsNotYetCached[itemID] then
+                    PAPetCard.itemsNotYetCached[itemID] = nil
+                    if (UTILITIES:Count(PAPetCard.itemsNotYetCached) == 0 and PAPetCard.allItemsRequested) then
+                        UpdateWindow(PAPetCard.pendingPet, PAPetCard.pendingLocationIdx)
+                    end
+                end
+            end
+        end)
+    else
+        PAPetCard.tab2.content.locationsFrame:SetSize(0,0)
+        PAPetCard.tab2.content.locationsFrame:Hide()
+    end
+
+    EnsureCacheThenUpdateWindow(pet, locationIdx)
 end

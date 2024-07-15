@@ -35,6 +35,14 @@ function UTILITIES:IsEmpty(table)
 
     return next(table) == nil
 end
+function UTILITIES:Count(table)
+    if table == nil then
+        return 0
+    end
+    local count = 0
+    for _ in pairs(table) do count = count + 1 end
+    return count
+end
 
 function UTILITIES:GetDaysSince(startYear, startDayOfYear)
     local currentYear = date("%Y")

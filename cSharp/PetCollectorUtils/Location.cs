@@ -15,6 +15,7 @@ namespace PetCollectorUtils
     public int mapFloor;
     public List<Coord> coords = new List<Coord>();
 
+    public Location() { }
     public Location(string location)
     {
       zone = location;

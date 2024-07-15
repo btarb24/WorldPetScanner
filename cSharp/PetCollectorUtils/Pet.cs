@@ -191,7 +191,7 @@ namespace PetCollectorUtils
             break; //skip
           default:
             Console.WriteLine(key);
-            throw new Exception();
+            break;
         }
       }
 
