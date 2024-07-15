@@ -25,7 +25,7 @@ local function Tab_OnClick(self)
 
     self:GetParent().content = self.content
     self.content:Show()
-    PAMainFrame:SetWidth(self.content.contentWidth)
+    PAMainFrame:SetWidth(math.max(self.content.contentWidth, DISPLAY.Constants.minWidth))
     PAMainFrame.SelectedTab = self
 end
 

@@ -56,7 +56,7 @@ PETS.all ={
             profession="Engineering",
             desc="Classic 75",
             recipe=3928,
-            materials = {
+            materials={
                 {qty=1, id=4359},
                 {qty=1, id=2840},
                 {qty=2, id=774},

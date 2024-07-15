@@ -775,6 +775,18 @@ local function CreateWindow()
     tab2.content.mapFrame:SetSize(350, 240)
     tab2.content.mapFrame:SetPoint("TOP", tab2.content.mapLbl, "BOTTOM",0, 0)
     tab2.content.mapFrame:SetPoint("LEFT", tab2.content, 20, 0)
+	tab2.content.mapFrame:SetScript("OnMouseWheel", function(self, delta)
+        local curScale = self:GetScale()
+        if (delta>0) then
+            if (curScale <4) then
+                self:SetScale(curScale +1)
+            end
+        else
+            if (curScale > 1) then
+                self:SetScale(curScale - 1)
+            end
+        end
+    end);
     
     
     tab2.content.locationsFrame = CreateFrame("Frame", nil, tab2.content)
@@ -1051,9 +1063,12 @@ local function UpdateWindow(pet, locationIdx)
                     elseif type == "poi" then
                         dot:SetAtlas("VignetteKill")
                         dot:SetSize(12,12)
+                    elseif type == "dot" then
+                        dot:SetAtlas("Object")
+                        dot:SetSize(12,12)
                     elseif type == "treasure" then
                         dot:SetAtlas("VignetteLoot")
-                        dot:SetSize(14,14)
+                        dot:SetSize(12,12)
                     elseif type == "cave" then
                         dot:SetAtlas("CaveUnderground-Down")
                         dot:SetSize(14,14)
@@ -1247,7 +1262,12 @@ local function UpdateWindow(pet, locationIdx)
 end
 
 local function PrefetchItemInfo(itemIDStr)
-    local id = tonumber(strsub(itemIDStr, 2))
+    local id
+    if (type(itemIDStr) == "number") then
+        id = itemIDStr
+    else
+        id = tonumber(strsub(itemIDStr, 2))
+    end
     if (not PAPetCard.itemsRequiredForCache[id]) then
         local response = GetItemInfo(id)
         PAPetCard.itemsRequiredForCache[id] = "bla" -- to avoid requesting the same item multiple times
@@ -1300,6 +1320,13 @@ local function EnsureCacheThenUpdateWindow(pet, locationIdx)
                         end
                     end
                 end
+            end
+        end
+    end
+    if (pet.professionDetail) then
+        if (pet.professionDetail.materials) then
+            for _, material in pairs(pet.professionDetail.materials) do
+                PrefetchItemInfo(material.id)
             end
         end
     end

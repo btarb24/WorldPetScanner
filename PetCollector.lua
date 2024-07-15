@@ -34,9 +34,7 @@ local function CreatePetSortLists()
 	local list = {}
 	for _, pet in pairs(PETS.all) do
 		if (pet.isWild and not pet.collected) then
-			if (not pet.locations) then
-				print("wild pet without location:" .. pet.name)
-			else
+			if (pet.locations) then
 				for _, loc in pairs(pet.locations) do
 					local continent = loc.continent
 					local zone = loc.zone
