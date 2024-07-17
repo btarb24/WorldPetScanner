@@ -19,6 +19,7 @@ PETC.QUEST_EVAL_TYPE = {
 PETC.TaskData = {
     {
         trigger = {
+            id=1,
             type = PETC.TRIGGER_TYPE.AURA,
             auraID = 335150,
             auraName = "Sign of the Destroyer",
@@ -44,6 +45,7 @@ PETC.TaskData = {
     },
     {
         trigger = {
+            id=2,
             type = PETC.TRIGGER_TYPE.DAILY_QUEST,
             questID = 37203,
             questName = "Ashlei",
@@ -72,6 +74,7 @@ PETC.TaskData = {
     },
     {
         trigger = {
+            id=3,
             type = PETC.TRIGGER_TYPE.DAILY_QUEST,
             questID = 37207,
             questName = "Vesharr",
@@ -100,6 +103,7 @@ PETC.TaskData = {
     },
     {
         trigger = {
+            id=4,
             type = PETC.TRIGGER_TYPE.DAILY_QUEST,
             questID = 37208,
             questName = "Taralune",
@@ -128,6 +132,7 @@ PETC.TaskData = {
     },
     {
         trigger = {
+            id=5,
             type = PETC.TRIGGER_TYPE.DAILY_QUEST,
             questID = 37206,
             questName = "Tarr the Terrible",
@@ -156,6 +161,7 @@ PETC.TaskData = {
     },
     {
         trigger = {
+            id=6,
             type = PETC.TRIGGER_TYPE.DAILY_QUEST,
             questID = 37205,
             questName = "Gargra",
@@ -184,6 +190,7 @@ PETC.TaskData = {
     },
     {
         trigger = {
+            id=7,
             type = PETC.TRIGGER_TYPE.DAILY_QUEST,
             questID = 37201,
             questName = "Cymre Brightblade",
@@ -212,6 +219,7 @@ PETC.TaskData = {
     },
     {
         trigger = {
+            id=8,
             type = PETC.TRIGGER_TYPE.WORLD_QUEST,
             questID = 63543,
             questName = "Necrolord Assault",
@@ -235,6 +243,7 @@ PETC.TaskData = {
     },
     {
         trigger = {
+            id=9,
             type = PETC.TRIGGER_TYPE.WORLD_QUEST,
             questID = 63824,
             questName = "Kyrian Assault",
@@ -261,6 +270,7 @@ PETC.TaskData = {
     },
     {
         trigger = {
+            id=10,
             type = PETC.TRIGGER_TYPE.WORLD_QUEST,
             questID = 63823,
             questName = "Night Fae Assault",
@@ -284,6 +294,7 @@ PETC.TaskData = {
     },
     {
         trigger = {
+            id=11,
             type = PETC.TRIGGER_TYPE.WORLD_QUEST,
             questID = 44892,
             questName = "Snowfeather Swarm!",
@@ -306,6 +317,7 @@ PETC.TaskData = {
     },
     {
         trigger = {
+            id=12,
             type = PETC.TRIGGER_TYPE.WORLD_QUEST,
             questID = 44893,
             questName = "Direbeak Swarm!",
@@ -328,6 +340,7 @@ PETC.TaskData = {
     },
     {
         trigger = {
+            id=13,
             type = PETC.TRIGGER_TYPE.WORLD_QUEST,
             questID = 44894,
             questName = "Bloodgazer Swarm!",
@@ -350,6 +363,7 @@ PETC.TaskData = {
     },
     {
         trigger = {
+            id=14,
             type = PETC.TRIGGER_TYPE.WORLD_QUEST,
             questID = 44895,
             questName = "Sharptalon Swarm!",
@@ -372,6 +386,7 @@ PETC.TaskData = {
     },
     {
         trigger = {
+            id=15,
             type = PETC.TRIGGER_TYPE.WORLD_QUEST,
             questID = 73146,
             questName = "Cutting Wind",
@@ -393,6 +408,7 @@ PETC.TaskData = {
     },
     {
         trigger = {
+            id=16,
             type = PETC.TRIGGER_TYPE.WORLD_QUEST,
             questID = 73147,
             questName = "Shifting Ground",
@@ -414,6 +430,7 @@ PETC.TaskData = {
     },
     {
         trigger = {
+            id=17,
             type = PETC.TRIGGER_TYPE.WORLD_QUEST,
             questID = 73148,
             questName = "Combustible Vegetation",
@@ -435,6 +452,7 @@ PETC.TaskData = {
     },
     {
         trigger = {
+            id=18,
             type = PETC.TRIGGER_TYPE.WORLD_QUEST,
             questID = 73149,
             questName = "Flood Warning",
@@ -463,6 +481,7 @@ PETC.TaskData = {
         --    questEvaluationType = PETC.QUEST_EVAL_TYPE.ISACTIVE,
         --},
         trigger = {
+            id=19,
             type = PETC.TRIGGER_TYPE.PERIODIC_ROTATION,
             startDayOfYear = 146,
             startYear = 2024,
@@ -485,6 +504,7 @@ PETC.TaskData = {
     },
     {
         trigger = {
+            id=20,
             type = PETC.TRIGGER_TYPE.PERIODIC_ROTATION, --ZaralekCavern | Loamm
             startDayOfYear = 160,
             startYear = 2024,
@@ -507,6 +527,7 @@ PETC.TaskData = {
     },
     {
         trigger = {
+            id=21,
             type = PETC.TRIGGER_TYPE.PERIODIC_ROTATION, --ZaralekCavern | Loamm
             startDayOfYear = 160,
             startYear = 2024,
@@ -531,6 +552,7 @@ PETC.TaskData = {
     },
     {
         trigger = {
+            id=22,
             type = PETC.TRIGGER_TYPE.PERIODIC_ROTATION, --ZaralekCavern | Loamm
             startDayOfYear = 160,
             startYear = 2024,
@@ -553,6 +575,7 @@ PETC.TaskData = {
     },
     {
         trigger = {
+            id=23,
             type = PETC.TRIGGER_TYPE.PERIODIC_ROTATION, --ZaralekCavern | Glimmerogg
             startDayOfYear = 162,
             startYear = 2024,
@@ -575,6 +598,7 @@ PETC.TaskData = {
     },
     {
         trigger = {
+            id=24,
             type = PETC.TRIGGER_TYPE.PERIODIC_ROTATION, --ZaralekCavern | Glimmerogg
             startDayOfYear = 162,
             startYear = 2024,
@@ -597,6 +621,7 @@ PETC.TaskData = {
     },
     {
         trigger = {
+            id=25,
             type = PETC.TRIGGER_TYPE.PERIODIC_ROTATION, --ZaralekCavern | Glimmerogg
             startDayOfYear = 162,
             startYear = 2024,
@@ -619,6 +644,7 @@ PETC.TaskData = {
     },
     {
         trigger = {
+            id=26,
             type = PETC.TRIGGER_TYPE.WORLD_QUEST,
             questID = 65256,
             questName = "Cluck, Cluck, Boom",
@@ -640,6 +666,7 @@ PETC.TaskData = {
     },
     {
         trigger = {
+            id=27,
             type = PETC.TRIGGER_TYPE.WORLD_QUEST,
             questID = 65102,
             questName = "Fish Eyes",
@@ -667,6 +694,7 @@ PETC.TaskData = {
     },
     {
         trigger = {
+            id=28,
             type = PETC.TRIGGER_TYPE.WORLD_QUEST,
             questID = 66070,
             questName = "Brightblade's Bones",
@@ -688,6 +716,7 @@ PETC.TaskData = {
     },
     {
         trigger = {
+            id=29,
             type = PETC.TRIGGER_TYPE.WORLD_QUEST,
             questID = 51212,
             questName = "Waycrest Manor: Witchy Kitchen",
@@ -709,6 +738,7 @@ PETC.TaskData = {
     },
     {
         trigger = {
+            id=30,
             type = PETC.TRIGGER_TYPE.WORLD_QUEST,
             questID = 56308,
             questName = "Assault: Aqir Unearthed",
@@ -732,6 +762,7 @@ PETC.TaskData = {
     },
     {
         trigger = {
+            id=31,
             type = PETC.TRIGGER_TYPE.WORLD_QUEST,
             questID = 56308,
             questName = "Assault: Aqir Unearthed",
@@ -755,6 +786,7 @@ PETC.TaskData = {
     },
     {
         trigger = {
+            id=32,
             type = PETC.TRIGGER_TYPE.WORLD_QUEST,
             questID = 57157,
             questName = "Assault: The Black Empire",
@@ -778,6 +810,7 @@ PETC.TaskData = {
     },
     {
         trigger = {
+            id=33,
             type = PETC.TRIGGER_TYPE.ACHIEVEMENT,
             achievementID = 18384,
             achievementName = "Whelp, There It Is",
@@ -797,6 +830,7 @@ PETC.TaskData = {
     },
     {
         trigger = {
+            id=34,
             type = PETC.TRIGGER_TYPE.WORLD_QUEST,
             questID = 59808,
             questName = "Muck It Up",
@@ -820,6 +854,7 @@ PETC.TaskData = {
     },
     {
         trigger = {
+            id=35,
             type = PETC.TRIGGER_TYPE.WORLD_QUEST,
             questID = 60655,
             questName = "A Stolen Stone Fiend",
@@ -841,6 +876,7 @@ PETC.TaskData = {
     },
     {
         trigger = {
+            id=36,
             type = PETC.TRIGGER_TYPE.WORLD_QUEST,
             questID = 60654,
             questName = "Swarming Souls",
@@ -865,6 +901,7 @@ PETC.TaskData = {
     {
         excludeFromReport = true,
         trigger = {
+            id=37,
             type = PETC.TRIGGER_TYPE.AREA_POI,
             areaPOIList = {
                 { areaPoiID = 7251, mapID = 2022 },
@@ -897,6 +934,7 @@ PETC.TaskData = {
     {
         excludeFromReport = true,
         trigger = {
+            id=38,
             type = PETC.TRIGGER_TYPE.AREA_POI,
             areaPOIList = {
                 { areaPoiID = 7221, mapID = 2023 },
@@ -925,6 +963,7 @@ PETC.TaskData = {
     {
         excludeFromReport = true,
         trigger = {
+            id=39,
             type = PETC.TRIGGER_TYPE.AREA_POI,
             areaPOIList = {
                 { areaPoiID = 7237, mapID = 2024 },
@@ -957,6 +996,7 @@ PETC.TaskData = {
     {
         excludeFromReport = true,
         trigger = {
+            id=40,
             type = PETC.TRIGGER_TYPE.AREA_POI,
             areaPOIList = {
                 { areaPoiID = 7298, mapID = 2025 },
@@ -984,6 +1024,7 @@ PETC.TaskData = {
     },
     {
         trigger = {
+            id=41,
             type = PETC.TRIGGER_TYPE.AURA,
             auraID = 335150,
             auraName = "Sign of the Destroyer",
@@ -1006,6 +1047,7 @@ PETC.TaskData = {
     },
     {
         trigger = {
+            id=42,
             type = PETC.TRIGGER_TYPE.WORLD_QUEST_REWARD,
             itemID = 183111,
             itemName = "Animated Ulna",

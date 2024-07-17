@@ -39,6 +39,7 @@ function UTILITIES:Count(table)
     if table == nil then
         return 0
     end
+    
     local count = 0
     for _ in pairs(table) do count = count + 1 end
     return count
@@ -167,13 +168,13 @@ local function GetRarityMultiplier(quality)
     if (quality == 1) then --poor
         return 1
     elseif (quality == 2) then --common
-        return 1.1
+        return 1.10000002384
     elseif (quality == 3) then --uncommon
-        return 1.2
+        return 1.20000004768
     elseif (quality == 4) then --rare
-        return 1.3
+        return 1.29999995232
     elseif (quality == 5) then --epic
-        return 1.4
+        return 1.39999997616
     elseif (quality == 6) then --lego
         return 1.5
     end

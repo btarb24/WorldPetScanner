@@ -149,7 +149,7 @@ function DISPLAY.TodaysEvents:Update()
             tradingPostPetAnchor = tradingPostPetDisplay
         end
     else
-        scrollFrame.child.tradingPostBox:SetHeight(0)
+        scrollFrame.child.tradingPostBox:SetHeight(1)
         scrollFrame.child.tradingPostBox:Hide()
     end
 

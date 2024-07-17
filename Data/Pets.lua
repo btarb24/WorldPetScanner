@@ -15640,7 +15640,7 @@ PETS.all ={
         acquisition={
             {"First you must find a Dusty rug. It is a bright blue and gold circular rug about 2 meters in diameter."},
             {"Respawn timer on the rug has been reported as possibly 15 minutes."},
-            {"Once you click the rug there will then the pet will start spawning around the city for awhile."},
+            {"Once you click the rug there will then the pet will start spawning around the city. You'll have 15 minutes to capture them."},
             {"Multiple players can click the rug, so fly around rather than camping one to speed click."}
         }
     }, 

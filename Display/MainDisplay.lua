@@ -182,4 +182,5 @@ function DISPLAY.Main:ShowWindow(mode)
     end
 
     PAMainFrame:Show()
+    tinsert(UISpecialFrames, "PAMainFrame")
 end

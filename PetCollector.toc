@@ -27,6 +27,7 @@ Data\Tasks.lua
 Utilities.lua
 
 Display\DisplayUtil.lua
+Display\DebugWindow.lua
 Display\LinkDisplay.lua
 Display\PetCard.lua
 Display\ReportDisplay.lua

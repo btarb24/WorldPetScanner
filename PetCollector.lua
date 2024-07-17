@@ -144,8 +144,10 @@ function PETC:ChatCommand(input)
 	local arg1 = string.lower(input)
 	if (arg1 == "petdata") then
 		DISPLAY.PetDataEntryHelper:Show()
-	elseif not input or input == "report" or mode == "test" then
+	elseif not input or arg1 == "report" or arg1 == "test" then
 		self:Show(arg1)
+	elseif input == "debug" then
+		DISPLAY.Debug:Show()
 	elseif (tonumber(input))then
 		DISPLAY.PetCard:Show(PETS.all[tonumber(input)])
 	end
@@ -176,7 +178,7 @@ function dataobj:OnClick(button)
 			DISPLAY.PetCard:Show(PETS.all[417])
 			return
 		end
-		mode ="report"
+		--mode ="report"
 	end
 	
 	TASKFINDER:RefreshTodaysEvents(mode)

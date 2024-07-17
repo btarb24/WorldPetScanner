@@ -5,10 +5,13 @@ local DATA = PETC.DATA
 local PETS = PETC.PETS
 local UTILITIES = PETC.UTILITIES
 local ZONES = PETC.ZONES
+local DEBUG = PETC.DISPLAY.Debug
 
+local file="TaskFinder"
 local retryTimer
 
 local function UpdateItemTotals(task)
+    local method = "CleanRewards"
     if not task.iconReward then
         return
     end
@@ -16,14 +19,17 @@ local function UpdateItemTotals(task)
     local itemID = task.iconReward.itemID
     local quantity = task.iconReward.quantity
     if itemID == PETC.PetCharm then
+        DEBUG:AddLine(file, method, "task: ", task.trigger.id, " charms ", DATA.charmTotal, "+", quantity, "=", DATA.charmTotal+quantity)
         DATA.charmTotal = DATA.charmTotal + quantity
     end
 
     if itemID == PETC.Bandage then
+        DEBUG:AddLine(file, method, "task: ", task.trigger.id, " bandages ", DATA.bandageTotal, "+", quantity, "=", DATA.bandageTotal+quantity)
         DATA.bandageTotal = DATA.bandageTotal + quantity
     end
 
     if itemID == PETC.BlueStone then
+        DEBUG:AddLine(file, method, "task: ", task.trigger.id, " blueStones ", DATA.blueStoneTotal, "+", quantity, "=", DATA.blueStoneTotal+quantity)
         DATA.blueStoneTotal = DATA.blueStoneTotal + quantity
     end
 
@@ -35,10 +41,12 @@ local function UpdateItemTotals(task)
         else
             DATA.trainingStoneTotals[itemID] = existingTrainingStones + quantity
         end
+        DEBUG:AddLine(file, method, "task: ", task.trigger.id, " trainingStoneID ", itemID, " qty: ", quantity, " newTotal: ", DATA.trainingStoneTotals[itemID])
     end
 end
 
 local function CleanRewards(mode, taskData)
+    local method = "CleanRewards"
     if mode == "test" or mode == "report" then
         return taskData.rewards
     end
@@ -46,19 +54,26 @@ local function CleanRewards(mode, taskData)
     local keptRewards = {}
     for i, reward in pairs(taskData.rewards) do        
         if reward.pet then
+            DEBUG:AddLine(file, method, "task: ", taskData.trigger.id, " speciesID: ", reward.pet.speciesID, " collected: ", reward.pet.collected, " ADDING")
             if not reward.pet.collected then
                 table.insert(keptRewards, reward)
+            else
+                DEBUG:AddLine(file, method, "task: ", taskData.trigger.id, " speciesID: ", reward.pet.speciesID, " collected: ", reward.pet.collected, " SKIPPING")
             end
         else
+            DEBUG:AddLine(file, method, "task: ", taskData.trigger.id, " itemID: ", reward.itemID, " qty: ", reward.quantity, " ADDING")
             table.insert(keptRewards, reward)
         end
     end
 
+    DEBUG:AddLine(file, method, "task: ", taskData.trigger.id, " total: ", UTILITIES:Count(keptRewards))
     return keptRewards
 end
 
 local function AddTask(mode, taskData)
+    local method = "AddTask"
     if mode == "test" or mode == "report" then
+        DEBUG:AddLine(file, method, "task: ", taskData.trigger.id, " adding due to test/report")
         local task = Task:new(taskData.trigger, taskData.challenge, taskData.rewards)
         table.insert(DATA.taskList, task)
         UpdateItemTotals(task)
@@ -68,6 +83,7 @@ local function AddTask(mode, taskData)
     if (taskData.additionalCriteria) then
         for questId, necessaryCompletionState in taskData.additionalCriteria do
             if not C_QuestLog.IsQuestFlaggedCompleted(questId) == necessaryCompletionState then
+                DEBUG:AddLine(file, method, "task: ", taskData.trigger.id, " NOT adding due to quest completion state")
                 return
             end
         end
@@ -75,6 +91,7 @@ local function AddTask(mode, taskData)
 
     local rewards = CleanRewards(mode, taskData)
     if not UTILITIES:IsEmpty(rewards) then
+        DEBUG:AddLine(file, method, "task: ", taskData.trigger.id, " adding due to having rewards")
         local task = Task:new(taskData.trigger, taskData.challenge, rewards)
         table.insert(DATA.taskList, task)
         UpdateItemTotals(task)
@@ -82,20 +99,26 @@ local function AddTask(mode, taskData)
 end
 
 local function ProcessAuraTrigger(mode, taskData)
+    local method = "ProcessAuraTrigger"
     local playerAura = C_UnitAuras.GetPlayerAuraBySpellID(taskData.trigger.auraID)
+    DEBUG:AddLine(file, method, "task: ", taskData.trigger.id, " playerAura: ", playerAura)
     if (playerAura) then
         AddTask(mode, taskData)
     end
 end
 
 local function ProcessQuestTrigger(mode, taskData)
+    local method = "ProcessQuestTrigger"
     local satisfied = false
     if (taskData.trigger.questEvaluationType == PETC.QUEST_EVAL_TYPE.FLAG) then
         satisfied = not C_QuestLog.IsQuestFlaggedCompleted(taskData.trigger.questID)
+        DEBUG:AddLine(file, method, "task: ", taskData.trigger.id, " IsQuestFlaggedCompleted: ", satisfied)
     elseif taskData.trigger.questEvaluationType == PETC.QUEST_EVAL_TYPE.ISACTIVE then
         satisfied = C_TaskQuest.IsActive(taskData.trigger.questID)
+        DEBUG:AddLine(file, method, "task: ", taskData.trigger.id, " IsActive: ", satisfied)
     elseif taskData.trigger.questEvaluationType == PETC.QUEST_EVAL_TYPE.BYMAP then
         local questFound = DATA.scannedQuestList[taskData.trigger.questID]
+        DEBUG:AddLine(file, method, "task: ", taskData.trigger.id, " questFound: ", questFound)
         if (questFound) then
             local existingTask = DATA.worldQuestTaskResults[taskData.trigger.questID]
             if (taskData.challenge.checkForExistingTask and existingTask) then
@@ -106,6 +129,7 @@ local function ProcessQuestTrigger(mode, taskData)
                     end
                 end
             else
+                DEBUG:AddLine(file, method, "task: ", taskData.trigger.id, " no existing task")
                 satisfied = true
             end
         end
@@ -117,16 +141,24 @@ local function ProcessQuestTrigger(mode, taskData)
 end
 
 local function ProcessAchievementTrigger(mode, taskData)
+    local method = "ProcessAchievementTrigger"
+
     local completed = select(4, GetAchievementInfo(taskData.trigger.achievementID))
+    DEBUG:AddLine(file, method, "task: ", taskData.trigger.id, " completed: ", completed)
+
     if not completed then
         AddTask(mode, taskData)
     end
 end
 
 local function ProcessAreaPoiTrigger(mode, taskData)
+    local method = "ProcessAreaPoiTrigger"
+    DEBUG:AddLine(file, method, "task: ", taskData.trigger.id)
+
     for _, entry in pairs(taskData.trigger.areaPOIList) do
         if C_AreaPoiInfo.GetAreaPOISecondsLeft(entry.areaPoiID) then
             taskData.trigger.areaPoiID = entry.areaPoiID
+            DEBUG:AddLine(file, method, "task: ", taskData.trigger.id, " areaPoidID with remaining time: ", entry.areaPoiID)
             AddTask(mode, taskData)
             return
         end
@@ -134,7 +166,10 @@ local function ProcessAreaPoiTrigger(mode, taskData)
 end
 
 local function ProcessWorldQuestRewardTrigger(mode, taskData)
+    local method = "ProcessWorldQuestRewardTrigger"
     local questMatch = DATA.questsWithNotableRewards[taskData.trigger.itemID]
+    DEBUG:AddLine(file, method, "task: ", taskData.trigger.id, " questMatch: ", questMatch)
+
     if questMatch then
         taskData.challenge.questID = questMatch.questId
         AddTask(mode, taskData)
@@ -143,8 +178,10 @@ local function ProcessWorldQuestRewardTrigger(mode, taskData)
 end
 
 local function ProcessPeriodicRotationTrigger(mode, taskData)
+    local method = "ProcessPeriodicRotationTrigger"
     local daysSinceStartDay = UTILITIES:GetDaysSince(taskData.trigger.startYear, taskData.trigger.startDayOfYear)
     local secondsInADay = 86400
+    DEBUG:AddLine(file, method, "task: ", taskData.trigger.id, " daysSinceStartDay: ", daysSinceStartDay)
 
     for i = 0, taskData.trigger.daysDuration-1 do
         if (daysSinceStartDay - i) % taskData.trigger.daysInCycle == 0 then
@@ -153,6 +190,7 @@ local function ProcessPeriodicRotationTrigger(mode, taskData)
             else
                 taskData.trigger.timeRemaining = GetQuestResetTime() + ((taskData.trigger.daysDuration -1 - i)*secondsInADay)
             end
+
             AddTask(mode, taskData)
             return
         end
@@ -160,20 +198,24 @@ local function ProcessPeriodicRotationTrigger(mode, taskData)
 end
 
 local function GetDesiredQuestRewards(taskPOI, expansionID, zoneID)
+    local method = "GetDesiredQuestRewards"
 	local rewards = {}
     local questID = taskPOI.questId
 	local numQuestRewards = GetNumQuestLogRewards(questID)
 
+    DEBUG:AddLine(file, method, "questID: ", questID, " numQuestRewards: ", numQuestRewards)
 	if numQuestRewards > 0 then		
 		for rewardIndex = 1, numQuestRewards do
 			local itemName, itemTexture, quantity, quality, isUsable, itemID = GetQuestLogRewardInfo(rewardIndex, questID)
             if (not itemID) then
-                PETC:Debug("missing itemID for quest: "..questID.." idx: ".. rewardIndex)
+                DEBUG:AddLine(file, method, "missing itemID for quest: ", questID, " idx: ", rewardIndex)
             elseif PETC:GetItemCategory(itemID) ~= nil then
                 local reward = Reward:newItem(itemID, quantity, true)
                 table.insert(rewards, reward)
+                DEBUG:AddLine(file, method, "added reward. itemID: ", itemID, " qty: ", quantity)
             elseif PETC.NotableItems[itemID] then
                 table.insert(DATA.questsWithNotableRewards, itemID, taskPOI)
+                DEBUG:AddLine(file, method, "added questsWithNotableRewards. itemID: ", itemID)
             end
 		end			
 	end
@@ -182,7 +224,9 @@ local function GetDesiredQuestRewards(taskPOI, expansionID, zoneID)
 end
 
 local function AnalyzeQuestRewards(taskPOI, expansionID, zoneID)
+    local method = "AnalyzeQuestRewards"
     local directQuestRewards = GetDesiredQuestRewards(taskPOI, expansionID, zoneID)
+    DEBUG:AddLine(file, method, "questID: ", taskPOI.questId, " exp:", expansionID, " z: ", zoneID, " desired reward count: ", UTILITIES:Count(directQuestRewards))
     
     if (not UTILITIES:IsEmpty(directQuestRewards)) then
         local questID = taskPOI.questId
@@ -195,22 +239,38 @@ local function AnalyzeQuestRewards(taskPOI, expansionID, zoneID)
     end
 end
 
-local function AddTradingPostPet(tradingPostPet)
+local function AddTradingPostPet(tradingPostPet, mode)
+    local method = "AddTradingPostPet"
     local unknownPet = tradingPostPet.pet == nil
-    if unknownPet or not tradingPostPet.pet.collected then
+    local collected = false
+    if mode ~= "test" and tradingPostPet.petand then
+        collected = tradingPostPet.pet.collected
+    end
+
+    DEBUG:AddLine(file, method, " speciesID:", tradingPostPet.speciesID, " collected: ", collected, "unknownPet: ", unknownPet)
+
+    if unknownPet or not collected then
+        DEBUG:AddLine(file, method, "added to tradingPost speciesID: ", tradingPostPet.speciesID)
         table.insert(DATA.tradingPost, tradingPostPet)
     end
+
     if unknownPet then
-        print("Unknown pet: ".. tradingPostPet.name .. "  id: " .. tradingPostPet.speciesID)
+        local msg = string.format("Unknown pet: %s speciesID: %s", tradingPostPet.name, tradingPostPet.speciesID)
+        DEBUG:AddLine(file, method, msg)
+        print(msg)
     end
 end
 
-local function PerformRetry()
+local function PerformRetry(mode)
+    local method = "PerformRetry"
     retryTimer = nil
+    DEBUG:AddLine(file, method, mode)
     if not UTILITIES:IsEmpty(DATA.questsToRetry) then
+        DEBUG:AddLine(file, method, "questsToRetry: ", UTILITIES:Count(DATA.questsToRetry))
         for questID, questData in pairs(DATA.questsToRetry) do
             if HaveQuestData(questID) and not HaveQuestRewardData(questID) then
                 C_TaskQuest.RequestPreloadRewardData(questID)
+                DEBUG:AddLine(file, method, "requestPreload: ", questID)
             else
                 DATA.questsToRetry[questID] = nil
                 AnalyzeQuestRewards(questData.taskPOI, questData.expansionID, questData.zoneID)
@@ -219,15 +279,18 @@ local function PerformRetry()
     end
 
     if not UTILITIES:IsEmpty(DATA.tradingPostRetry) then
+        DEBUG:AddLine(file, method, "tradingPostRetry: ", UTILITIES:Count(DATA.tradingPostRetry))
         for num, tradingPostPet in ipairs(DATA.tradingPostRetry) do
             if tradingPostPet.confirmedPet ~= true then
                 local itemType = select(7, GetItemInfo(tradingPostPet.itemID))
                 if itemType then
                     if itemType == "Companion Pets" then
                         tradingPostPet.confirmedPet = true
+                        DEBUG:AddLine(file, method, "confirmedPet  iID: ", tradingPostPet.itemID)
                     else
                         --remove since it's not a pet
                         DATA.tradingPostRetry[num] = nil
+                        DEBUG:AddLine(file, method, "confirmed not a Pet  iID: ", tradingPostPet.itemID)
                     end
                 end
             end
@@ -238,26 +301,33 @@ local function PerformRetry()
                     tradingPostPet.speciesID = speciesID
                     tradingPostPet.name = name
                     tradingPostPet.pet = PETS.all[speciesID]
-                    AddTradingPostPet(tradingPostPet)
+                    AddTradingPostPet(tradingPostPet, mode)
                     DATA.tradingPostRetry[num] = nil
+                else
+                    DEBUG:AddLine(file, method, "still no speciesID  iID: ", tradingPostPet.itemID)
                 end
             end
         end
     end
 
     if (UTILITIES:IsEmpty(DATA.questsToRetry) and UTILITIES:IsEmpty(DATA.tradingPostRetry)) then
+        DEBUG:AddLine(file, method, "got all our data. done with retries")
         DATA.sortedTasks = UTILITIES:SortTaskList(DATA.taskList)
         DATA.groupedTasks = UTILITIES:GroupTasks(DATA.sortedTasks)
         DISPLAY.TodaysEvents:HideLoading()
     else
-        retryTimer = PETC:ScheduleTimer(PerformRetry, 1)
+        retryTimer = PETC:ScheduleTimer(PerformRetry, 1, mode)
+        DEBUG:AddLine(file, method, "scheduling retry")
     end
 end
 
-local function GetTradingPostPets()
+local function GetTradingPostPets(mode)
+    local method="GetTradingPostPets"
     local items = C_PerksProgram.GetAvailableVendorItemIDs()
+    DEBUG:AddLine(file, method, "vendor item count: ", UTILITIES:Count(items))
     for _, itemID in pairs(items) do
-        local itemData = C_PerksProgram.GetVendorItemInfo(itemID)
+        local itemData = C_PerksProgram.GetVendorItemInfo(itemID)        
+        DEBUG:AddLine(file, method, "id: ", itemID, " cat: ", itemData.perksVendorCategoryID)
         if (itemData.perksVendorCategoryID == 3) then
             local tradingPostPet = {
                 speciesID = itemData.speciesID,
@@ -269,7 +339,8 @@ local function GetTradingPostPets()
             
             local speciesName, speciesIcon, petType, companionID, tooltipSource, flavor, isWild, canBattle, isTradeable, isUnique, obtainable, creatureDisplayID = C_PetJournal.GetPetInfoBySpeciesID(itemData.speciesID)
             tradingPostPet.name = speciesName
-            AddTradingPostPet(tradingPostPet)
+            DEBUG:AddLine(file, method, "speciesID: ", itemData.speciesID, " name: ", speciesName)
+            AddTradingPostPet(tradingPostPet, mode)
         end
     end
 
@@ -282,6 +353,7 @@ local function GetTradingPostPets()
                 timeRemaining = autoPerks.secondsRemaining,
                 itemID = tierInfo.itemReward
             }
+            DEBUG:AddLine(file, method, "itemType: ", itemType, " itemReward: ", tierInfo.itemReward)
             if itemType == "Companion Pets" then
                 tradingPostPet.confirmedPet = true
                 local name, icon, petType, creatureID, sourceText, description, isWild, canBattle, tradeable, unique, obtainable, displayID, speciesID = C_PetJournal.GetPetInfoByItemID(tierInfo.itemReward)
@@ -289,12 +361,14 @@ local function GetTradingPostPets()
                     tradingPostPet.speciesID = speciesID
                     tradingPostPet.name = name
                     tradingPostPet.pet = PETS.all[speciesID]
-                    AddTradingPostPet(tradingPostPet)
+                    AddTradingPostPet(tradingPostPet, mode)
                 else
+                    DEBUG:AddLine(file, method, "adding to tradingPostRetry")
                     table.insert(DATA.tradingPostRetry, tradingPostPet)
                 end
             end
             if itemType == nil then
+                DEBUG:AddLine(file, method, "adding to tradingPostRetry")
                 table.insert(DATA.tradingPostRetry, tradingPostPet)
             end
         end
@@ -302,7 +376,10 @@ local function GetTradingPostPets()
 end
 
 function TASKFINDER:RefreshTodaysEvents(mode)
+    local method="RefreshTodaysEvents"
+    DEBUG:AddLine(file, method, mode)
     if (retryTimer) then
+        DEBUG:AddLine(file, method, "clearing retry timer")
         PETC:CancelTimer(retryTimer)
     end
     
@@ -326,6 +403,7 @@ function TASKFINDER:RefreshTodaysEvents(mode)
 		for mapID, mapDetails in pairs(ZONES.list[expansionID]) do
 			if mapDetails.scanWorldQuests then
 				local taskPOIs = C_TaskQuest.GetQuestsForPlayerByMapID(mapID)
+                DEBUG:AddLine(file, method, "scanned ", mapID, " received ", taskPOIs, " with amt of ", UTILITIES:Count(taskPOIs))
 				if taskPOIs then
 					for i = 1, #taskPOIs do
                         local questID = taskPOIs[i].questId
@@ -333,8 +411,10 @@ function TASKFINDER:RefreshTodaysEvents(mode)
                         if (not DATA.scannedQuestList[questID]) then
                             local zoneID = taskPOIs[i].mapID
                             table.insert(DATA.scannedQuestList, questID, {taskPOI = taskPOIs[i], expansionID = expansionID, zoneID = zoneID})
+                            DEBUG:AddLine(file, method, "added to scannedQuestList q:", questID, " exp: ", expansionID, " z:", zoneID)
                             if HaveQuestData(questID) and not HaveQuestRewardData(questID) then
                                 C_TaskQuest.RequestPreloadRewardData(questID)
+                                DEBUG:AddLine(file, method, "added to questsToRetry q:", questID, " exp: ", expansionID, " z:", zoneID)
                                 table.insert(DATA.questsToRetry, questID, {taskPOI = taskPOIs[i], expansionID = expansionID , zoneID = zoneID})
                             else
                                 AnalyzeQuestRewards(taskPOIs[i], expansionID, zoneID)
@@ -366,10 +446,10 @@ function TASKFINDER:RefreshTodaysEvents(mode)
         end
     end
 
-    GetTradingPostPets()
+    GetTradingPostPets(mode)
 
     --always trigger the timer, this way we see the spinner for at least 1 second, otherwise feels like it ignored your click
-    retryTimer = PETC:ScheduleTimer(PerformRetry, 1)
+    retryTimer = PETC:ScheduleTimer(PerformRetry, 1, mode)
     
 	DATA.sortedTasks = UTILITIES:SortTaskList(DATA.taskList)
 	DATA.groupedTasks = UTILITIES:GroupTasks(DATA.sortedTasks)
