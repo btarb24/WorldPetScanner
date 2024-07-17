@@ -30,6 +30,53 @@ local dataobj =
 
 local icon = LibStub("LibDBIcon-1.0")
 
+local function TieInBliz()
+	local journalButton = CreateFrame("Button", nil, PetJournalPetCard)
+	journalButton:SetNormalAtlas("RedButton-Expand")
+	journalButton:SetPushedAtlas("RedButton-Expand-Pressed")
+	journalButton:SetHighlightAtlas("RedButton-Highlight")
+	journalButton:SetPoint("TOPRIGHT", PetJournalPetCard, "TOPRIGHT", 2, 0)
+    journalButton:SetSize(19,19)
+    journalButton:SetScript("OnClick", function(self)
+		local speciesID = PetJournalPetCard.speciesID
+		DISPLAY.PetCard:Show(PETS.all[speciesID])
+    end)
+end
+
+local function TieInRematch()
+	local journalButton = CreateFrame("Button", nil, RematchPetCard)
+	journalButton:SetNormalAtlas("RedButton-Expand")
+	journalButton:SetPushedAtlas("RedButton-Expand-Pressed")
+	journalButton:SetHighlightAtlas("RedButton-Highlight")
+	journalButton:SetPoint("TOPRIGHT", RematchPetCard.MinimizeButton, "TOPLEFT", 0, 0)
+    journalButton:SetSize(RematchPetCard.MinimizeButton:GetSize())
+    journalButton:SetScript("OnClick", function(self)
+		local speciesID = C_PetJournal.GetPetInfoByPetID(RematchPetCard.petID)
+		DISPLAY.PetCard:Show(PETS.all[speciesID])
+    end)
+end
+
+local function Event_OnEvent(self, event, name, ...)
+	if (event == "ADDON_LOADED") then
+		if (name == "Blizzard_Collections") then
+			TieInBliz()
+		elseif (name == "Rematch") then
+			TieInRematch()
+		end
+	end
+end
+
+local function TieIn()
+	PETC.event:RegisterEvent("ADDON_LOADED")
+	if IsAddOnLoaded("Blizzard_Collections") then
+		TieInBliz()
+	end
+
+	if IsAddOnLoaded("Rematch") then
+		TieInRematch()
+	end
+end
+
 local function CreatePetSortLists()
 	local list = {}
 	for _, pet in pairs(PETS.all) do
@@ -107,6 +154,8 @@ local function BuildPetList()
 end
 
 function PETC:OnInitialize()
+	self.event = CreateFrame("Frame")
+	self.event:SetScript("OnEvent", Event_OnEvent)
 	self.faction = UnitFactionGroup("player")
 
 	self.db = LibStub("AceDB-3.0"):New("PETC_DB", defaults, true)
@@ -125,6 +174,7 @@ function PETC:OnInitialize()
 
 	-- Minimap Icon
 	icon:Register("PetCollector", dataobj, self.db.profile.options.LibDBIcon)
+	TieIn()
 end
 
 function PETC:OnEnable()
