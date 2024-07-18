@@ -243,7 +243,7 @@ local function AddTradingPostPet(tradingPostPet, mode)
     local method = "AddTradingPostPet"
     local unknownPet = tradingPostPet.pet == nil
     local collected = false
-    if mode ~= "test" and tradingPostPet.petand then
+    if mode ~= "test" and tradingPostPet.pet then
         collected = tradingPostPet.pet.collected
     end
 
@@ -321,12 +321,56 @@ local function PerformRetry(mode)
     end
 end
 
+function TASKFINDER:UpdateTradingPostCache()
+    local method="UpdateTradingPostCache"
+
+    local autoPerks = C_PerksActivities.GetPerksActivitiesInfo()
+    local items = C_PerksProgram.GetAvailableVendorItemIDs()
+
+    if (not PETC_tradingPostVendor) then
+        PETC_tradingPostVendor = {}
+    end
+
+    if (autoPerks.activePerksMonth ~= PETC_tradingPostVendor.month) then
+        DEBUG:AddLine(file, method, "new month detected, clearing cache")
+        PETC_tradingPostVendor = {}
+    end
+
+    if UTILITIES:Count(items) == 0 then
+        if (PETC_tradingPostVendor and PETC_tradingPostVendor.expiration > GetTime()) then
+            items = PETC_tradingPostVendor.items
+            DEBUG:AddLine(file, method, "no response from server.  Used our cache")
+        else
+            DEBUG:AddLine(file, method, "no response from server and cache is invalid")
+        end
+    else
+        DEBUG:AddLine(file, method, "good response from server. updated cache")
+        local timeRemaining = C_PerksProgram.GetTimeRemaining(items[1])
+        local expiration = GetTime() + timeRemaining
+        PETC_tradingPostVendor.expiration = expiration
+        PETC_tradingPostVendor.items = items
+        PETC_tradingPostVendor.month = autoPerks.activePerksMonth
+        PETC_tradingPostVendor.itemDetails = {}
+    end
+
+    return autoPerks, items
+end
+
 local function GetTradingPostPets(mode)
     local method="GetTradingPostPets"
-    local items = C_PerksProgram.GetAvailableVendorItemIDs()
+
+    local autoPerks, items = TASKFINDER:UpdateTradingPostCache()
+
     DEBUG:AddLine(file, method, "vendor item count: ", UTILITIES:Count(items))
     for _, itemID in pairs(items) do
-        local itemData = C_PerksProgram.GetVendorItemInfo(itemID)        
+        local itemData = C_PerksProgram.GetVendorItemInfo(itemID)
+        if (not itemData or itemData.perksVendorItemID == 0) then
+            itemData = PETC_tradingPostVendor.itemDetails[itemID]
+            itemData.timeRemaining = PETC_tradingPostVendor.expiration - GetTime()
+        else
+            PETC_tradingPostVendor.itemDetails[itemID] = itemData
+        end
+
         DEBUG:AddLine(file, method, "id: ", itemID, " cat: ", itemData.perksVendorCategoryID)
         if (itemData.perksVendorCategoryID == 3) then
             local tradingPostPet = {
@@ -344,7 +388,6 @@ local function GetTradingPostPets(mode)
         end
     end
 
-    local autoPerks = C_PerksActivities.GetPerksActivitiesInfo()
     for tier, tierInfo in ipairs(autoPerks.thresholds) do
         if tierInfo.itemReward then
             local itemType = select(7, GetItemInfo(tierInfo.itemReward))

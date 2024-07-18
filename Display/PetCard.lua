@@ -91,6 +91,10 @@ local function GetCurrency(currencyIdStr, fontHeight)
 end
 
 local function GetLink(idStr, color)
+    if idStr == nil then --hack
+        return nil
+    end
+
     local type = strsub(idStr, 1, 1)
     local link
     local id
@@ -231,27 +235,34 @@ local function GetPois(pois, selectedIdx)
             if (entry.maps) then
                 for mapIdx, map in ipairs(entry.maps) do
                     local mapDescLbl
-                    local isSelected = poiTypeIdx == selectedDepth1 and entryIdx == selectedDepth2 and mapIdx == selectedDepth3
-                    if isSelected then
-                        mapDescLbl = DISPLAY_UTIL:AcquireHighlightFont(PAPetCard, PAPetCardTab2.content.scrollFrame.child)
-                        if (map.desc) then
-                            mapDescLbl:SetText(map.desc)
+                    if map.coords then
+                        local isSelected = poiTypeIdx == selectedDepth1 and entryIdx == selectedDepth2 and mapIdx == selectedDepth3
+                        if isSelected then
+                            mapDescLbl = DISPLAY_UTIL:AcquireHighlightFont(PAPetCard, PAPetCardTab2.content.scrollFrame.child)
+                            if (map.desc) then
+                                mapDescLbl:SetText(map.desc)
+                            else
+                                mapDescLbl:SetText(select(1, GetLink(map.id, "ffffff")))
+                            end
                         else
-                            mapDescLbl:SetText(select(1, GetLink(map.id, "ffffff")))
+                            mapDescLbl = DISPLAY_UTIL:AcquireMultiValueFont(PAPetCard, PAPetCardTab2.content.scrollFrame.child)
+                            if (map.desc) then
+                                mapDescLbl:SetText(map.desc)
+                            else
+                                mapDescLbl:SetText(select(3, GetLink(map.id, "ffffff")))
+                            end
+                            if (map.coords) then
+                                mapDescLbl.locationIndex = string.format("%d:%d:%d", poiTypeIdx, entryIdx, mapIdx)
+                                mapDescLbl:SetScript("OnMouseDown",
+                                    function(self)
+                                        DISPLAY.PetCard:Show(PAPetCard.pet, self.locationIndex)
+                                    end
+                                )
+                            end
                         end
                     else
-                        mapDescLbl = DISPLAY_UTIL:AcquireMultiValueFont(PAPetCard, PAPetCardTab2.content.scrollFrame.child)
-                        if (map.desc) then
-                            mapDescLbl:SetText(map.desc)
-                        else
-                            mapDescLbl:SetText(select(3, GetLink(map.id, "ffffff")))
-                        end
-                        mapDescLbl.locationIndex = string.format("%d:%d:%d", poiTypeIdx, entryIdx, mapIdx)
-                        mapDescLbl:SetScript("OnMouseDown",
-                            function(self)
-                                DISPLAY.PetCard:Show(PAPetCard.pet, self.locationIndex)
-                            end
-                        )
+                        mapDescLbl = DISPLAY_UTIL:AcquireHighlightFont(PAPetCard, PAPetCardTab2.content.scrollFrame.child)
+                        mapDescLbl:SetText(GetLink(map.id))
                     end
                     mapDescLbl:SetPoint("TOP", topDock, "BOTTOM", 0, -2)
                     mapDescLbl:SetPoint("LEFT", leftDock, "LEFT", 15, 0)
@@ -292,7 +303,7 @@ local function GetPois(pois, selectedIdx)
     return topDock
 end
 
-local function GetProfessionText(professionDetail, topDock)
+local function GetProfessionText(professionDetail, topDock)    
     local professionLbl = DISPLAY_UTIL:AcquireLabelFont(PAPetCard, PAPetCardTab2.content.scrollFrame.child)
     if (topDock) then
         professionLbl:SetPoint("LEFT", PAPetCardTab2.content.scrollFrame.child, "LEFT")
@@ -301,6 +312,10 @@ local function GetProfessionText(professionDetail, topDock)
         professionLbl:SetPoint("TOPLEFT", PAPetCardTab2.content.scrollFrame.child, "TOPLEFT")        
     end
     professionLbl:SetText("Profession: ")
+    
+    if professionDetail == nil then --hack
+        return professionLbl
+    end
     local professionVal = DISPLAY_UTIL:AcquireHighlightFont(PAPetCard, PAPetCardTab2.content.scrollFrame.child)
     local professionText
     if professionDetail.desc then
@@ -381,8 +396,13 @@ local function GetLocation(pet, location) --location, showLocList
         if not poi.entries then
             return nil
         end
+
         local entry = poi.entries[depth2]
         return entry.maps[depth3], false
+    end
+
+    if (not pet.isWild) then
+        return nil
     end
 
     --no location map
@@ -434,7 +454,6 @@ local function UpdateAbility(texture, abilityID, petType)
         end
     )
 end
-
 
 local function CreateTab(idNum, name, tabButtonWidth)
     tabButtonWidth = 96
@@ -575,6 +594,15 @@ local function CreateWindow()
     tab1.content.model = CreateFrame("ModelScene", nil, tab1.content.modelFrame, "WrappedAndUnwrappedModelScene")
     tab1.content.model:SetPoint("TOPLEFT", tab1.content.modelFrame, "TOPLEFT", 15, -15)
     tab1.content.model:SetPoint("BOTTOMRIGHT", tab1.content.modelFrame, "BOTTOMRIGHT", -15, 15)
+    tab1.content.modelPopoutFullScreenFrame = CreateFrame("FRAME", nill, UIParent, BackdropTemplateMixin and "BackdropTemplate")
+    tab1.content.modelPopoutFullScreenFrame:Hide()
+    tab1.content.modelPopoutFullScreenFrame:SetFrameStrata("FULLSCREEN")
+    tab1.content.modelPopoutFullScreenFrame:SetAllPoints()
+    tab1.content.modelPopoutFullScreenFrame.bg = tab1.content.modelPopoutFullScreenFrame:CreateTexture(nil, "BACKGROUND")
+    tab1.content.modelPopoutFullScreenFrame.bg:Hide()
+    tab1.content.modelPopoutFullScreenFrame.bg:SetAllPoints(true)
+    tab1.content.modelPopoutFullScreenFrame.bg:SetColorTexture(0,0,0)
+
     tab1.content.modelFrame.PopOut = CreateFrame("BUTTON", nil, tab1.content.modelFrame)
     tab1.content.modelFrame.PopOut:SetNormalAtlas("RedButton-Expand")
     tab1.content.modelFrame.PopOut:SetPushedAtlas("RedButton-Expand-Pressed")
@@ -582,25 +610,36 @@ local function CreateWindow()
     tab1.content.modelFrame.PopOut:SetPoint("TOPRIGHT", tab1.content.modelFrame, "TOPRIGHT")
     tab1.content.modelFrame.PopOut:SetSize(24,24)
     tab1.content.modelFrame.PopOut:SetScript("OnClick", function(self)
-        tab1.content.model:SetParent(UIParent)
+        tab1.content.model:SetParent(popoutFullScreenFrame)
         tab1.content.model:ClearAllPoints()
-        tab1.content.model:SetPoint("TOPLEFT", UIParent, "TOPLEFT")
-        tab1.content.model:SetPoint("BOTTOMRIGHT", UIParent, "BOTTOMRIGHT")
-        tab1.content.model:SetFrameStrata("FULLSCREEN")
-        tab1.content.modelFrame.PopOutClose:Show()
+        tab1.content.model:SetAllPoints()
+        tab1.content.model:SetFrameStrata("FULLSCREEN_DIALOG")
+        tab1.content.modelPopoutFullScreenFrame:Show()
+        if (PETC.flipIsHere) then
+            tab1.content.modelPopoutFullScreenFrame.bg:Show()
+            if (PETC.flipR) then
+                tab1.content.modelPopoutFullScreenFrame.bg:SetColorTexture(tonumber(PETC.flipR), tonumber(PETC.flipG), tonumber(PETC.flipB))
+            end
+        end
     end)
-    tab1.content.modelFrame.PopOutClose = CreateFrame("BUTTON", nill, UIParent, "BigRedExitButtonTemplate")
-    tab1.content.modelFrame.PopOutClose:SetFrameStrata("FULLSCREEN_DIALOG")
-    tab1.content.modelFrame.PopOutClose:SetPoint("TOPLEFT", UIParent, "TOPLEFT")
-    tab1.content.modelFrame.PopOutClose:Hide()
-    tab1.content.modelFrame.PopOutClose:SetScript("OnClick", function(self)
+    tab1.content.modelPopoutFullScreenFrame.PopOutClose = CreateFrame("BUTTON", nill, tab1.content.modelPopoutFullScreenFrame, "BigRedExitButtonTemplate")
+    tab1.content.modelPopoutFullScreenFrame.PopOutClose:SetPoint("TOPLEFT", UIParent, "TOPLEFT")
+    tab1.content.modelPopoutFullScreenFrame.PopOutClose:SetFrameStrata("FULLSCREEN_DIALOG")
+    tab1.content.modelPopoutFullScreenFrame.PopOutClose:SetFrameLevel(1000)
+    tab1.content.modelPopoutFullScreenFrame.PopOutClose:SetScript("OnClick", function(self)
         tab1.content.model:SetParent(tab1.content.modelFrame)
         tab1.content.model:ClearAllPoints()
         tab1.content.model:SetPoint("TOPLEFT", tab1.content.modelFrame, "TOPLEFT", 15, -15)
         tab1.content.model:SetPoint("BOTTOMRIGHT", tab1.content.modelFrame, "BOTTOMRIGHT", -15, 15)
-        tab1.content.model:SetFrameStrata("DIALOG")
-        tab1.content.modelFrame.PopOutClose:Hide()
+        tab1.content.modelPopoutFullScreenFrame:Hide()
     end)
+
+    tab1.content.unobtainable = tab1.content.modelFrame:CreateFontString(nil, "OVERLAY", "NumberFont_Outline_Large")
+    tab1.content.unobtainable:SetPoint("LEFT", tab1.content.modelFrame, "LEFT", -12, 0)
+    tab1.content.unobtainable:SetPoint("TOP", tab1.content.modelFrame, "CENTER", 0, 52)
+    tab1.content.unobtainable:SetText("*UNOBTAINABLE*")
+    tab1.content.unobtainable:SetRotation(math.pi/4 )
+    tab1.content.unobtainable:SetTextColor(.7, .4, .4)
 
     tab1.content.flavor = tab1.content:CreateFontString(nil, "ARTWORK", "NumberFont_Outline_Huge")
     tab1.content.flavor:SetPoint("TOPLEFT", tab1.content.modelFrame, "BOTTOMLEFT", 0, -20)
@@ -859,6 +898,12 @@ local function UpdateWindow(pet, locationIdx)
     
  --TAB 1
     f.tab1.content.flavor:SetText(pet.flavor)
+    if (pet.unobtainable == true) then
+        f.tab1.content.unobtainable:Show()
+    else
+        f.tab1.content.unobtainable:Hide()
+    end
+
     if (f.tab1.content.flavor:GetHeight() <= 20) then --1line (3546)
         f.tab1.content.flavorbgColor:SetPoint("BOTTOM", f.tab1.content.flavorbg, "BOTTOM",0, 5)
     elseif (f.tab1.content.flavor:GetHeight() <= 40) then --2lines (39)
@@ -1158,25 +1203,38 @@ local function UpdateWindow(pet, locationIdx)
     end
 
     if (pet.source == "Profession") then
-        bottomOfSourceSection = GetProfessionText(pet.professionDetail, bottomOfSourceSection)    
+        bottomOfSourceSection = GetProfessionText(pet.professionDetail, bottomOfSourceSection)
     elseif (pet.source == "Achievement" and pet.achievement) then
-        bottomOfSourceSection = GetAchievementText(pet.achievement, bottomOfSourceSection)    
-    elseif not pet.pois then
+        bottomOfSourceSection = GetAchievementText(pet.achievement, bottomOfSourceSection)
+    elseif pet.source == "World Event" or pet.source == "Promotion" or pet.source == "Trading Card Game" or pet.source == "Quest" or not bottomOfSourceSection then
         local sourceLbl = DISPLAY_UTIL:AcquireLabelFont(PAPetCard, f.tab2.content.scrollFrame.child)
-        sourceLbl:SetText("Source: ")
-        sourceLbl:SetPoint("TOPLEFT", f.tab2.content.scrollFrame.child, "TOPLEFT")
+        if (pet.source == "Quest" and pet.quest) then
+            sourceLbl:SetText("Quest: ")
+        else
+            sourceLbl:SetText("Source: ")
+        end
+        
+        if (bottomOfSourceSection) then
+            sourceLbl:SetPoint("TOP", bottomOfSourceSection, "BOTTOM", 0, -10)
+        else
+            sourceLbl:SetPoint("TOP", f.tab2.content.scrollFrame.child, "TOP")
+        end
+
+        sourceLbl:SetPoint("LEFT", f.tab2.content.scrollFrame.child, "LEFT")
         local sourceVal = DISPLAY_UTIL:AcquireHighlightFont(PAPetCard, f.tab2.content.scrollFrame.child)
         sourceVal:SetPoint("TOPLEFT", sourceLbl, "TOPRIGHT", 5, 0)
         sourceVal:SetWordWrap(true)
-        sourceVal:SetText(pet.source)
+        local source = pet.source
+        if (pet.source == "World Event") then
+            source = string.format("%s |cFFb3b3b3(%s)|r", pet.source, pet.eventName)
+        elseif (pet.source == "Trading Card Game") then
+            source = string.format("%s |cFFb3b3b3(%s)|r", pet.source, pet.tcg)
+        elseif (pet.source == "Quest" and pet.quest) then
+            source = GetLink(pet.quest)
+        end
+        sourceVal:SetText(source)
         bottomOfSourceSection = sourceVal
     end
-    -- elseif(pet.source == "Vendor") then
-    --     bottomOfSourceSection = GetVendorText(pet.npcs, locationIdx)
-    -- elseif(pet.source == "Drop") then
-    --     bottomOfSourceSection = GetNPCDropText(pet.npcs, locationIdx)
-    -- elseif(pet.source == "Quest") then
-    --     bottomOfSourceSection = GetQuestText(pet.quests, locationIdx)
 
    -- INSTRUCTIONS
    local bla = PETC.SHARED.Instr.synthForge

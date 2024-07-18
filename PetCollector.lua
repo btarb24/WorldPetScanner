@@ -63,6 +63,9 @@ local function Event_OnEvent(self, event, name, ...)
 		elseif (name == "Rematch") then
 			TieInRematch()
 		end
+	elseif event == "PERKS_PROGRAM_DATA_REFRESH" then
+		print("PetCollector - updating perks cache")
+		TASKFINDER:UpdateTradingPostCache()
 	end
 end
 
@@ -156,6 +159,8 @@ end
 function PETC:OnInitialize()
 	self.event = CreateFrame("Frame")
 	self.event:SetScript("OnEvent", Event_OnEvent)
+	self.event:RegisterEvent("PERKS_PROGRAM_DATA_REFRESH")
+
 	self.faction = UnitFactionGroup("player")
 
 	self.db = LibStub("AceDB-3.0"):New("PETC_DB", defaults, true)
@@ -191,8 +196,17 @@ end
 PETC:RegisterChatCommand("petcollector", "ChatCommand")
 PETC:RegisterChatCommand("pc", "ChatCommand")
 function PETC:ChatCommand(input)
-	local arg1 = string.lower(input)
-	if (arg1 == "petdata") then
+	local cmds = strsplittable(" ", input)
+	local arg1 = string.lower(cmds[1])
+	if (arg1 == "flip") then
+		print("FlipMode engaged!")
+		PETC.flipIsHere = true
+		if (#cmds == 4) then
+			PETC.flipR = cmds[2]
+			PETC.flipG = cmds[3]
+			PETC.flipB = cmds[4]
+		end
+	elseif (arg1 == "petdata") then
 		DISPLAY.PetDataEntryHelper:Show()
 	elseif not input or arg1 == "report" or arg1 == "test" then
 		self:Show(arg1)
