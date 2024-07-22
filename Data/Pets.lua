@@ -822,22 +822,22 @@ PETS.all ={
         pois={
             {name="Quests:", entries={
                 {id="q485", maps={
-                    {mapID=26, desc="OOX-09/HL Distress Beacon", type="start"},
-                    {mapID=26, desc="Homing Robot OOX-09/HL", type="end", coords={{49.4,37.8}}},
+                    {mapID=26, display="OOX-09/HL Distress Beacon", type="start"},
+                    {mapID=26, display="Homing Robot OOX-09/HL", type="end", coords={{49.4,37.8}}},
                 }},
                 {id="q836"},
                 {id="q25475", maps={
-                    {mapID=69, desc="OOX-22/FE Distress Beacon", type="start"},
-                    {mapID=69, desc="Homing Robot OOX-22/FE", type="end", coords={{53.4,55.6}}},
+                    {mapID=69, display="OOX-22/FE Distress Beacon", type="start"},
+                    {mapID=69, display="Homing Robot OOX-22/FE", type="end", coords={{53.4,55.6}}},
                 }},
                 {id="q25476"},
                 {id="q351", maps={
-                    {mapID=219, desc="OOX-17/TN Distress Beacon", type="start"},
-                    {mapID=71, desc="Homing Robot OOX-17/TN", type="end", coords={{59.8,64}}},
+                    {mapID=219, display="OOX-17/TN Distress Beacon", type="start"},
+                    {mapID=71, display="Homing Robot OOX-17/TN", type="end", coords={{59.8,64}}},
                 }},
                 {id="q648"},
                 {id="q3721", name="An OOX of Your Own", maps={
-                    {mapID=210, desc="Oglethorpe Obnoticus", type="start", coords={{43,72}}},
+                    {mapID=210, display="Oglethorpe Obnoticus", type="start", coords={{43,72}}},
                 }}
             }}
         },
@@ -870,9 +870,9 @@ PETS.all ={
         pois={
             {name="Quests:", entries={
                 {id="q3861", maps={
-                    {mapID=52, desc="Farmer Saldean (alliance)", type="start", coords={{56,31.2}}},
-                    {mapID=18, desc="William Saldean (horde)", type="start", coords={{61.2,52}}},
-                    {mapID=18, desc="Chicken (horde)", type="end", coords={{61.8,57.5}}},
+                    {mapID=52, display="Farmer Saldean (alliance)", type="start", coords={{56,31.2}}},
+                    {mapID=18, display="William Saldean (horde)", type="start", coords={{61.2,52}}},
+                    {mapID=18, display="Chicken (horde)", type="end", coords={{61.8,57.5}}},
                 }},
             }}
         },
@@ -914,7 +914,7 @@ PETS.all ={
         pois={
             {name="Recipe drop:", entries={
                 {id="i11828", maps={
-                    {mapID=229, desc="Mekgineer Thermaplugg", chance=12, type="boss", coords={{31,30}}},
+                    {mapID=229, display="Mekgineer Thermaplugg", chance=12, type="boss", coords={{31,30}}},
                 }}
             }}
         },
@@ -957,9 +957,9 @@ PETS.all ={
         pois={
             {name="Recipe drop:", entries={
                 {id="i11827", maps={
-                    {mapID=227, desc="Peacekeeper Security Suit", type="kill", chance=4, coords={{24.3,68.4}}},
-                    {mapID=228, desc="Arcane Nullifier X-21", chance=3},
-                    {mapID=228, desc="Crowd Pummeler 9-60", type="kill", chance=2, coords={{43.1,88.3}}},
+                    {mapID=227, display="Peacekeeper Security Suit", type="kill", chance=4, coords={{24.3,68.4}}},
+                    {mapID=228, display="Arcane Nullifier X-21", chance=3},
+                    {mapID=228, display="Crowd Pummeler 9-60", type="kill", chance=2, coords={{43.1,88.3}}},
                 }}
             }}
         },
@@ -1317,8 +1317,6 @@ PETS.all ={
         source="Profession",
         flavor="This clever toy is equipped with a secret switch to disable its 'tranquil' mode. Luckily, even the engineers who built it don't know how to find it.",
         icon="132189",
-        profession="Engineering",
-        locations={{mapID=83, coords={{59.2,49.8},}}},
         possbileBreeds={"H/B"},
         baseStats={8, 8, 8},
         professionDetail ={
@@ -1366,16 +1364,16 @@ PETS.all ={
         pois={
             {name="Christmas Tree:", entries={
                 {id="", maps={
-                    {id="", desc="Alliance", mapID=87, type="poi", coords={{33.6,66.6}}},
-                    {id="", desc="Horde", mapID=85, type="poi", coords={{52.6,77.8}}},
+                    {id="", display="Alliance", mapID=87, type="poi", coords={{33.6,66.6}}},
+                    {id="", display="Horde", mapID=85, type="poi", coords={{52.6,77.8}}},
                 }}
             }}
         },
         acquisition={
             {"The pet is only available during the Winter Veil seasonal event (christmas)."},
-            {"Historically, you receive a present under the chrismas tree on the 25th and it is available until Jan 2nd."},
+            {"Historically, you receive a %s under the chrismas tree on the 25th and it is available until Jan 2nd.", "i21310"},
             {"There is a 25% chance for this pet to be in your present. Be sure to collect your present on every alt you have for the best chance."},
-            {"You can usually buy one on the Auction House yearround for a low price."},
+            {"You can usually buy one on the Auction House year-round for a low price."},
         }
     }, 
     [118]={
@@ -1399,16 +1397,16 @@ PETS.all ={
         pois={
             {name="Christmas Tree:", entries={
                 {id="", maps={
-                    {id="", desc="Alliance", mapID=87, type="poi", coords={{33.6,66.6}}},
-                    {id="", desc="Horde", mapID=85, type="poi", coords={{52.6,77.8}}},
+                    {id="", display="Alliance", mapID=87, type="poi", coords={{33.6,66.6}}},
+                    {id="", display="Horde", mapID=85, type="poi", coords={{52.6,77.8}}},
                 }}
             }}
         },
         acquisition={
             {"The pet is only available during the Winter Veil seasonal event (christmas)."},
-            {"Historically, you receive a present under the chrismas tree on the 25th and it is available until Jan 2nd."},
+            {"Historically, you receive a %s under the chrismas tree on the 25th and it is available until Jan 2nd.", "i21310"},
             {"There is a 25% chance for this pet to be in your present. Be sure to collect your present on every alt you have for the best chance."},
-            {"You can usually buy one on the Auction House yearround for a low price."},
+            {"You can usually buy one on the Auction House year-round for a low price."},
         }
     }, 
     [119]={
@@ -1432,16 +1430,16 @@ PETS.all ={
         pois={
             {name="Christmas Tree:", entries={
                 {id="", maps={
-                    {id="", desc="Alliance", mapID=87, type="poi", coords={{33.6,66.6}}},
-                    {id="", desc="Horde", mapID=85, type="poi", coords={{52.6,77.8}}},
+                    {id="", display="Alliance", mapID=87, type="poi", coords={{33.6,66.6}}},
+                    {id="", display="Horde", mapID=85, type="poi", coords={{52.6,77.8}}},
                 }}
             }}
         },
         acquisition={
             {"The pet is only available during the Winter Veil seasonal event (christmas)."},
-            {"Historically, you receive a present under the chrismas tree on the 25th and it is available until Jan 2nd."},
+            {"Historically, you receive a %s under the chrismas tree on the 25th and it is available until Jan 2nd.", "i21310"},
             {"There is a 25% chance for this pet to be in your present. Be sure to collect your present on every alt you have for the best chance."},
-            {"You can usually buy one on the Auction House yearround for a low price."},
+            {"You can usually buy one on the Auction House year-round for a low price."},
         }
     }, 
     [120]={
@@ -1465,16 +1463,16 @@ PETS.all ={
         pois={
             {name="Christmas Tree:", entries={
                 {id="", maps={
-                    {id="", desc="Alliance", mapID=87, type="poi", coords={{33.6,66.6}}},
-                    {id="", desc="Horde", mapID=85, type="poi", coords={{52.6,77.8}}},
+                    {id="", display="Alliance", mapID=87, type="poi", coords={{33.6,66.6}}},
+                    {id="", display="Horde", mapID=85, type="poi", coords={{52.6,77.8}}},
                 }}
             }}
         },
         acquisition={
             {"The pet is only available during the Winter Veil seasonal event (christmas)."},
-            {"Historically, you receive a present under the chrismas tree on the 25th and it is available until Jan 2nd."},
+            {"Historically, you receive a %s under the chrismas tree on the 25th and it is available until Jan 2nd.", "i21310"},
             {"There is a 25% chance for this pet to be in your present. Be sure to collect your present on every alt you have for the best chance."},
-            {"You can usually buy one on the Auction House yearround for a low price."},
+            {"You can usually buy one on the Auction House year-round for a low price."},
         }
     }, 
     [121]={
@@ -1873,9 +1871,6 @@ PETS.all ={
         source="Vendor",
         flavor="Prefers flying during thunderstorms, which are common in Azuremyst Isle.",
         icon="236193",
-        currency="gold",
-        npcs={{name="Sixx"}},
-        locations={{continent="Kalimdor", zone="The Exodar", mapID=8277, coords={{30,34.2},{33.2,64.6},{33.6,65.2},}}},
         possbileBreeds={"B/B", "P/P", "H/B"},
         baseStats={8, 8.5, 7.5},
         pois={
@@ -1929,9 +1924,6 @@ PETS.all ={
         source="Vendor",
         flavor="Once prized by dragonhawk breeders in Silvermoon. Stands out at night to predators, making it necessary to gain awareness at an early age.",
         icon="132188",
-        currency="gold",
-        npcs={{name="Jilanne"}},
-        locations={{mapID=94, coords={{44.8,71.6},}}},
         possbileBreeds={"B/B", "S/S"},
         baseStats={8, 8.5, 7.5},
         pois={
@@ -2153,7 +2145,6 @@ PETS.all ={
         tcg="Through the Dark Portal",
         flavor="Although loath to part with Bananas, Landro realized it would be safer if the pet was far from Booty Bay when his father, King Mukla, discovered he was missing.",
         icon="133980",
-        locations={{mapID=210, coords={{42.6,71.6},}}},
         possbileBreeds={"B/B"},
         baseStats={8, 8, 8},
         acquisition={
@@ -2181,15 +2172,56 @@ PETS.all ={
         possbileBreeds={"B/B"},
         baseStats={8, 8, 8},
         pois={
-            {name="Points of interest:", entries={
-                {id="", maps={
-                    {id="n22819:Orphan Matron Mercy", mapID=111, type="start", coords={{75.2,48.6}}},
+            {name="Alliance:", entries={
+                {id="q1468:Children's Week", maps={
+                    {id="n51988:Orphan Matron Nightingale", subDisplay="alliance", mapID=84, type="start", coords={{56.2,54.2}}},
+                }},
+                {id="q54130:Our New Friends", maps={
+                    {display="Embassy path start", mapID=84, type="end", coords={{54.11,16.58}}},
+                }},
+                {id="q29093:Cruisin' the Chasm", maps={
+                    {id="n52190:Twilber Torqwrench", mapID=52, type="end", coords={{57.6,53.0}}},
+                }},
+                {id="q29106:The Biggest Diamond Ever!", maps={
+                    {display="ramp downstairs", mapID=87, type="cave", coords={{44.09,51.91}}},
+                }},
+                {id="q29119:You Scream, I Scream...", maps={
+                    {id="n52421:Hans Coldhearth", mapID=84, type="end", coords={{49.1,89.8}}},
+                }},
+                {id="q29117:Let's Go Fly a Kite", maps={
+                    {id="n52358:Craggle Wobbletop", mapID=84, type="end", coords={{56.4,67.4},{56.4,67.8},{56.4,69.2},{56.4,69.8},{56.6,67.2},{56.6,67.6},{56.6,70.4},{56.8,71},{57.2,65.8},{57.2,72.4},{57.4,65.4},{57.4,72.8},{57.4,73.6},{57.6,73.4},{57.8,74.2},{58,74.8},{58.2,64.6},{58.2,75.6},{58.4,64.4},{58.4,76.6},{58.6,76.8},{58.8,64},{59.2,63.4},{59.8,62.8},{60.4,62.2},{60.6,62.2},{61.4,61.4},{61.6,61.6},{62.4,61.2},{63.4,61},{63.6,61.2},{64.6,61.4},{65,62},{65.4,62.6},{65.6,63},{66.2,63.8},{66.6,64.4}}},
+                }},
+                {id="q171:A Warden of the Alliance", maps={
+                    {id="n52358:Craggle Wobbletop", mapID=84, type="end", coords={{56.4,67.4},{56.4,67.8},{56.4,69.2},{56.4,69.8},{56.6,67.2},{56.6,67.6},{56.6,70.4},{56.8,71},{57.2,65.8},{57.2,72.4},{57.4,65.4},{57.4,72.8},{57.4,73.6},{57.6,73.4},{57.8,74.2},{58,74.8},{58.2,64.6},{58.2,75.6},{58.4,64.4},{58.4,76.6},{58.6,76.8},{58.8,64},{59.2,63.4},{59.8,62.8},{60.4,62.2},{60.6,62.2},{61.4,61.4},{61.6,61.6},{62.4,61.2},{63.4,61},{63.6,61.2},{64.6,61.4},{65,62},{65.4,62.6},{65.6,63},{66.2,63.8},{66.6,64.4}}},
+                }},
+            }},
+            {name="Horde:", entries={
+                {id="q172:Children's Week", maps={
+                    {id="n51989:Orphan Matron Battlewail", subDisplay="horde", mapID=85, type="start", coords={{58,57.2}}},
+                }},
+                {id="q29167:The Banshee Queen", maps={
+                    {id="n10181:Lady Sylvanas Windrunner", mapID=90, type="end", coords={{56.3,91}}},
+                }},
+                {id="q29146:Ridin' the Rocketway", maps={
+                    {display="rocket", mapID=76, type="end", coords={{50.73,73.94}}},
+                }},
+                {id="q29176:The Fallen Chieftain", maps={
+                    {display="Winterfin Retreat", mapID=7, type="end", coords={{60.8,23}}},
+                }},
+                {id="q29190:Let's Go Fly a Kite", maps={
+                    {id="n52809:Blax Bottlerocket", mapID=85, type="end", coords={{57,52.4},{57.2,52.8},{57.4,51.4},{57.6,53.4},{57.8,51},{58.2,62.6},{58.4,54.4},{58.4,55.4},{58.4,55.8},{58.4,56.6},{58.4,57.6},{58.4,61.2},{58.4,62},{58.6,53.8},{58.6,55.2},{58.6,56.4},{58.6,57.4},{58.6,57.8},{58.6,61.6},{58.8,58.8},{58.8,60.4},{58.8,61.2},{59,51.2},{59,52.8},{59.2,52.4}}},
+                }},
+                {id="q13957:You Scream, I Scream...", maps={
+                    {id="n52818:Snixx Quickfreeze", mapID=85, type="end", coords={{58.5,56}}},
+                }},
+                {id="q5502:A Warden of the Horde", maps={
+                    {id="n52809:Blax Bottlerocket", mapID=85, type="end", coords={{57,52.4},{57.2,52.8},{57.4,51.4},{57.6,53.4},{57.8,51},{58.2,62.6},{58.4,54.4},{58.4,55.4},{58.4,55.8},{58.4,56.6},{58.4,57.6},{58.4,61.2},{58.4,62},{58.6,53.8},{58.6,55.2},{58.6,56.4},{58.6,57.4},{58.6,57.8},{58.6,61.6},{58.8,58.8},{58.8,60.4},{58.8,61.2},{59,51.2},{59,52.8},{59.2,52.4}}},
                 }}
             }}
         },
         acquisition={
-            {"The pet is only available during the Children's Week seasonal event (early in May)."},
-            {"Pick up an orphan and do their quests. Choose the %s reward.", "i32617"},
+            {"Only available during the Children's Week seasonal event (end of April to beginning of May)."},
+            {"Once you've completed the final quest in the chain you should choose %s as your reward.", "i32617"},
         }
     }, 
     [158]={
@@ -2210,15 +2242,56 @@ PETS.all ={
         possbileBreeds={"B/B"},
         baseStats={8, 8, 8},
         pois={
-            {name="Points of interest:", entries={
-                {id="", maps={
-                    {id="n22819:Orphan Matron Mercy", mapID=111, type="start", coords={{75.2,48.6}}},
+            {name="Alliance:", entries={
+                {id="q1468:Children's Week", maps={
+                    {id="n51988:Orphan Matron Nightingale", subDisplay="alliance", mapID=84, type="start", coords={{56.2,54.2}}},
+                }},
+                {id="q54130:Our New Friends", maps={
+                    {display="Embassy path start", mapID=84, type="end", coords={{54.11,16.58}}},
+                }},
+                {id="q29093:Cruisin' the Chasm", maps={
+                    {id="n52190:Twilber Torqwrench", mapID=52, type="end", coords={{57.6,53.0}}},
+                }},
+                {id="q29106:The Biggest Diamond Ever!", maps={
+                    {display="ramp downstairs", mapID=87, type="cave", coords={{44.09,51.91}}},
+                }},
+                {id="q29119:You Scream, I Scream...", maps={
+                    {id="n52421:Hans Coldhearth", mapID=84, type="end", coords={{49.1,89.8}}},
+                }},
+                {id="q29117:Let's Go Fly a Kite", maps={
+                    {id="n52358:Craggle Wobbletop", mapID=84, type="end", coords={{56.4,67.4},{56.4,67.8},{56.4,69.2},{56.4,69.8},{56.6,67.2},{56.6,67.6},{56.6,70.4},{56.8,71},{57.2,65.8},{57.2,72.4},{57.4,65.4},{57.4,72.8},{57.4,73.6},{57.6,73.4},{57.8,74.2},{58,74.8},{58.2,64.6},{58.2,75.6},{58.4,64.4},{58.4,76.6},{58.6,76.8},{58.8,64},{59.2,63.4},{59.8,62.8},{60.4,62.2},{60.6,62.2},{61.4,61.4},{61.6,61.6},{62.4,61.2},{63.4,61},{63.6,61.2},{64.6,61.4},{65,62},{65.4,62.6},{65.6,63},{66.2,63.8},{66.6,64.4}}},
+                }},
+                {id="q171:A Warden of the Alliance", maps={
+                    {id="n52358:Craggle Wobbletop", mapID=84, type="end", coords={{56.4,67.4},{56.4,67.8},{56.4,69.2},{56.4,69.8},{56.6,67.2},{56.6,67.6},{56.6,70.4},{56.8,71},{57.2,65.8},{57.2,72.4},{57.4,65.4},{57.4,72.8},{57.4,73.6},{57.6,73.4},{57.8,74.2},{58,74.8},{58.2,64.6},{58.2,75.6},{58.4,64.4},{58.4,76.6},{58.6,76.8},{58.8,64},{59.2,63.4},{59.8,62.8},{60.4,62.2},{60.6,62.2},{61.4,61.4},{61.6,61.6},{62.4,61.2},{63.4,61},{63.6,61.2},{64.6,61.4},{65,62},{65.4,62.6},{65.6,63},{66.2,63.8},{66.6,64.4}}},
+                }},
+            }},
+            {name="Horde:", entries={
+                {id="q172:Children's Week", maps={
+                    {id="n51989:Orphan Matron Battlewail", subDisplay="horde", mapID=85, type="start", coords={{58,57.2}}},
+                }},
+                {id="q29167:The Banshee Queen", maps={
+                    {id="n10181:Lady Sylvanas Windrunner", mapID=90, type="end", coords={{56.3,91}}},
+                }},
+                {id="q29146:Ridin' the Rocketway", maps={
+                    {display="rocket", mapID=76, type="end", coords={{50.73,73.94}}},
+                }},
+                {id="q29176:The Fallen Chieftain", maps={
+                    {display="Winterfin Retreat", mapID=7, type="end", coords={{60.8,23}}},
+                }},
+                {id="q29190:Let's Go Fly a Kite", maps={
+                    {id="n52809:Blax Bottlerocket", mapID=85, type="end", coords={{57,52.4},{57.2,52.8},{57.4,51.4},{57.6,53.4},{57.8,51},{58.2,62.6},{58.4,54.4},{58.4,55.4},{58.4,55.8},{58.4,56.6},{58.4,57.6},{58.4,61.2},{58.4,62},{58.6,53.8},{58.6,55.2},{58.6,56.4},{58.6,57.4},{58.6,57.8},{58.6,61.6},{58.8,58.8},{58.8,60.4},{58.8,61.2},{59,51.2},{59,52.8},{59.2,52.4}}},
+                }},
+                {id="q13957:You Scream, I Scream...", maps={
+                    {id="n52818:Snixx Quickfreeze", mapID=85, type="end", coords={{58.5,56}}},
+                }},
+                {id="q5502:A Warden of the Horde", maps={
+                    {id="n52809:Blax Bottlerocket", mapID=85, type="end", coords={{57,52.4},{57.2,52.8},{57.4,51.4},{57.6,53.4},{57.8,51},{58.2,62.6},{58.4,54.4},{58.4,55.4},{58.4,55.8},{58.4,56.6},{58.4,57.6},{58.4,61.2},{58.4,62},{58.6,53.8},{58.6,55.2},{58.6,56.4},{58.6,57.4},{58.6,57.8},{58.6,61.6},{58.8,58.8},{58.8,60.4},{58.8,61.2},{59,51.2},{59,52.8},{59.2,52.4}}},
                 }}
             }}
         },
         acquisition={
-            {"The pet is only available during the Children's Week seasonal event (early in May)."},
-            {"Pick up an orphan and do their quests. Choose the %s reward.", "i32616"},
+            {"Only available during the Children's Week seasonal event (end of April to beginning of May)."},
+            {"Once you've completed the final quest in the chain you should choose %s as your reward.", "i32616"},
         }
     }, 
     [159]={
@@ -2239,15 +2312,56 @@ PETS.all ={
         possbileBreeds={"H/H"},
         baseStats={8, 8, 8},
         pois={
-            {name="Points of interest:", entries={
-                {id="", maps={
-                    {id="n22819:Orphan Matron Mercy", mapID=111, type="start", coords={{75.2,48.6}}},
+            {name="Alliance:", entries={
+                {id="q1468:Children's Week", maps={
+                    {id="n51988:Orphan Matron Nightingale", subDisplay="alliance", mapID=84, type="start", coords={{56.2,54.2}}},
+                }},
+                {id="q54130:Our New Friends", maps={
+                    {display="Embassy path start", mapID=84, type="end", coords={{54.11,16.58}}},
+                }},
+                {id="q29093:Cruisin' the Chasm", maps={
+                    {id="n52190:Twilber Torqwrench", mapID=52, type="end", coords={{57.6,53.0}}},
+                }},
+                {id="q29106:The Biggest Diamond Ever!", maps={
+                    {display="ramp downstairs", mapID=87, type="cave", coords={{44.09,51.91}}},
+                }},
+                {id="q29119:You Scream, I Scream...", maps={
+                    {id="n52421:Hans Coldhearth", mapID=84, type="end", coords={{49.1,89.8}}},
+                }},
+                {id="q29117:Let's Go Fly a Kite", maps={
+                    {id="n52358:Craggle Wobbletop", mapID=84, type="end", coords={{56.4,67.4},{56.4,67.8},{56.4,69.2},{56.4,69.8},{56.6,67.2},{56.6,67.6},{56.6,70.4},{56.8,71},{57.2,65.8},{57.2,72.4},{57.4,65.4},{57.4,72.8},{57.4,73.6},{57.6,73.4},{57.8,74.2},{58,74.8},{58.2,64.6},{58.2,75.6},{58.4,64.4},{58.4,76.6},{58.6,76.8},{58.8,64},{59.2,63.4},{59.8,62.8},{60.4,62.2},{60.6,62.2},{61.4,61.4},{61.6,61.6},{62.4,61.2},{63.4,61},{63.6,61.2},{64.6,61.4},{65,62},{65.4,62.6},{65.6,63},{66.2,63.8},{66.6,64.4}}},
+                }},
+                {id="q171:A Warden of the Alliance", maps={
+                    {id="n52358:Craggle Wobbletop", mapID=84, type="end", coords={{56.4,67.4},{56.4,67.8},{56.4,69.2},{56.4,69.8},{56.6,67.2},{56.6,67.6},{56.6,70.4},{56.8,71},{57.2,65.8},{57.2,72.4},{57.4,65.4},{57.4,72.8},{57.4,73.6},{57.6,73.4},{57.8,74.2},{58,74.8},{58.2,64.6},{58.2,75.6},{58.4,64.4},{58.4,76.6},{58.6,76.8},{58.8,64},{59.2,63.4},{59.8,62.8},{60.4,62.2},{60.6,62.2},{61.4,61.4},{61.6,61.6},{62.4,61.2},{63.4,61},{63.6,61.2},{64.6,61.4},{65,62},{65.4,62.6},{65.6,63},{66.2,63.8},{66.6,64.4}}},
+                }},
+            }},
+            {name="Horde:", entries={
+                {id="q172:Children's Week", maps={
+                    {id="n51989:Orphan Matron Battlewail", subDisplay="horde", mapID=85, type="start", coords={{58,57.2}}},
+                }},
+                {id="q29167:The Banshee Queen", maps={
+                    {id="n10181:Lady Sylvanas Windrunner", mapID=90, type="end", coords={{56.3,91}}},
+                }},
+                {id="q29146:Ridin' the Rocketway", maps={
+                    {display="rocket", mapID=76, type="end", coords={{50.73,73.94}}},
+                }},
+                {id="q29176:The Fallen Chieftain", maps={
+                    {display="Winterfin Retreat", mapID=7, type="end", coords={{60.8,23}}},
+                }},
+                {id="q29190:Let's Go Fly a Kite", maps={
+                    {id="n52809:Blax Bottlerocket", mapID=85, type="end", coords={{57,52.4},{57.2,52.8},{57.4,51.4},{57.6,53.4},{57.8,51},{58.2,62.6},{58.4,54.4},{58.4,55.4},{58.4,55.8},{58.4,56.6},{58.4,57.6},{58.4,61.2},{58.4,62},{58.6,53.8},{58.6,55.2},{58.6,56.4},{58.6,57.4},{58.6,57.8},{58.6,61.6},{58.8,58.8},{58.8,60.4},{58.8,61.2},{59,51.2},{59,52.8},{59.2,52.4}}},
+                }},
+                {id="q13957:You Scream, I Scream...", maps={
+                    {id="n52818:Snixx Quickfreeze", mapID=85, type="end", coords={{58.5,56}}},
+                }},
+                {id="q5502:A Warden of the Horde", maps={
+                    {id="n52809:Blax Bottlerocket", mapID=85, type="end", coords={{57,52.4},{57.2,52.8},{57.4,51.4},{57.6,53.4},{57.8,51},{58.2,62.6},{58.4,54.4},{58.4,55.4},{58.4,55.8},{58.4,56.6},{58.4,57.6},{58.4,61.2},{58.4,62},{58.6,53.8},{58.6,55.2},{58.6,56.4},{58.6,57.4},{58.6,57.8},{58.6,61.6},{58.8,58.8},{58.8,60.4},{58.8,61.2},{59,51.2},{59,52.8},{59.2,52.4}}},
                 }}
             }}
         },
         acquisition={
-            {"The pet is only available during the Children's Week seasonal event (early in May)."},
-            {"Pick up an orphan and do their quests. Choose the %s reward.", "i32622"},
+            {"Only available during the Children's Week seasonal event (end of April to beginning of May)."},
+            {"Once you've completed the final quest in the chain you should choose %s as your reward.", "i32622"},
         }
     }, 
     [160]={
@@ -2354,7 +2468,6 @@ PETS.all ={
         source="Fishing",
         flavor="Muckbreath is just like other crocolisks, except he has an excellent sense of humor.",
         icon="656553",
-        locations={{mapID=108, coords={{38.6,12.8},}}},
         possbileBreeds={"B/B"},
         baseStats={8, 8.5, 7.5},
         pois={
@@ -2387,13 +2500,18 @@ PETS.all ={
         source="Drop",
         flavor="Amani witch doctors have turned many victims into frogs. Some never recover.",
         icon="237579",
-        npcs={{name="Forest Frog"}},
-        locations={{continent="Eastern Kingdoms", zone="Ghostlands", area="Zul'Aman", mapID=3805, coords={{50.8,51.6},}}},
         possbileBreeds={"H/S"},
         baseStats={8.5, 7.5, 8},
+        pois={
+            {name="Points of interest:", entries={
+                {id="", maps={
+                    {id="n24396:Forest Frog", mapID=333, type="dot", coords={{37.4,51},{37.4,51.8},{37.4,55.4},{37.4,56.4},{37.4,56.6},{37.6,55.4},{37.6,56.2},{37.6,56.6},{38,50.4},{38,50.6},{38.4,51.6},{38.6,50.4},{38.6,50.6},{38.6,51.6},{38.6,57},{39.2,57.6},{39.8,57.4},{39.8,57.6},{47.4,47.4},{47.4,47.6},{48.4,46.4},{48.4,47},{48.4,48},{48.4,48.6},{48.6,47.4},{48.8,48.4},{49,49},{49.2,49.8},{49.4,50.6},{49.4,56.4},{49.4,57.4},{49.4,57.6},{49.6,50.4},{49.6,56.8},{49.6,57.6},{49.8,50.6},{49.8,56.4},{50,55.4},{50.4,51.6},{50.4,53.2},{50.4,54.4},{50.6,53.4},{50.6,54.6},{50.6,55.6},{50.8,51.4},{50.8,51.6},{50.8,53.8}}},
+                }}
+            }}
+        },
         acquisition={
             {"Kill mobs in Zul'Aman with the Amani'shi prefix for a 15%%-ish chance to receive a %s. Or buy some on the Auction House.", "i33865"},
-            {"Use the items on the frogs at the beginning of Zul'Aman for a 2%% chance to receive a %s.", "i33993"},
+            {"Use the items on the %s at the beginning of Zul'Aman for a 2%% chance to receive a %s.", "n24396:Forest Frogs", "i33993"},
         }
     }, 
     [166]={
@@ -2471,7 +2589,6 @@ PETS.all ={
         tcg="March of the Legion",
         flavor="When the Burning Legion invaded Outland, Landro Longshot contributed this design to the war effort. Both the Alliance and Horde passed on production.",
         icon="133883",
-        locations={{mapID=210, coords={{42.6,71.6},}}},
         possbileBreeds={"S/S"},
         baseStats={8.5, 7.5, 8},
         acquisition={
@@ -2493,7 +2610,6 @@ PETS.all ={
         tcg="March of the Legion",
         flavor="Much quieter than a real dragon.",
         icon="133838",
-        locations={{mapID=210, coords={{42.6,71.6},}}},
         possbileBreeds={"B/B", "S/S"},
         baseStats={8, 8, 8},
         acquisition={
@@ -2585,7 +2701,6 @@ PETS.all ={
         source="Fishing",
         flavor="Crocolisks are six-legged amphibian predators found in coastal waters. Archaeologists believe they may be descended from the diemetradons of Un'Goro Crater.",
         icon="656554",
-        locations={{mapID=108, coords={{38.6,12.8},}}},
         possbileBreeds={"H/P"},
         baseStats={8, 8.5, 7.5},
         pois={
@@ -2618,7 +2733,6 @@ PETS.all ={
         source="Fishing",
         flavor="After studying the crocolisk species for several years, the famed angler Nat Pagle determined that baby crocolisks are mostly harmless.",
         icon="656552",
-        locations={{mapID=108, coords={{38.6,12.8},}}},
         possbileBreeds={"B/B"},
         baseStats={8, 8.5, 7.5},
         pois={
@@ -2651,10 +2765,18 @@ PETS.all ={
         source="Drop",
         flavor="A child of phoenix god Al'ar, the hatchling takes flight immediately after birth.",
         icon="134373",
-        npcs={{name="Kael'thas Sunstrider"}},
-        locations={{continent="Outland", zone="Isle of Quel'Danas", area="Magisters' Terrace", mapID=4131, mapFloor=1, coords={{8.6,50.6},}}},
         possbileBreeds={"S/S"},
         baseStats={7.5, 8.5, 8},
+        pois={
+            {name="Npc drop:", entries={
+                {id="", maps={
+                    {id="n24664:Kael'thas Sunstrider", mapID=348, chance=8, type="boss", coords={{8.6,50.2}}},
+                }}
+            }}
+        },
+        acquisition={
+            {"%s has an 8%% chance of dropping %s.", "n24664:Kael'thas Sunstrider", "i35504"}
+        }
     }, 
     [179]={
         name="Spirit of Competition",
@@ -2666,13 +2788,17 @@ PETS.all ={
         isTradeable=false,
         isUnique=false,
         isPassive=false,
+        unobtainable=true,
         source="Promotion",
+        promotion="Battleground Event",
         flavor="These stunning creatures, awarded to heroes for victory in battle, represent bravery and strength.",
         icon="133278",
-        promotion="Battleground Event",
-        unobtainable=true,
         possbileBreeds={"H/P"},
         baseStats={8.5, 8, 7.5},
+        acquisition={
+            {"This was originally only available to those who won any pvp battleground during the Summer Olympics in August 2008."},
+            {"It was then redistributed through the August 2023 Trading Post."},
+        }
     }, 
     [180]={
         name="Essence of Competition",
@@ -2684,13 +2810,16 @@ PETS.all ={
         isTradeable=false,
         isUnique=false,
         isPassive=false,
+        unobtainable=true,
         source="Promotion",
         flavor="Only heroes who have proven their valor through great acts are gifted one of these mystical serpentine creatures.",
         icon="133443",
         promotion="China PVP Event",
-        unobtainable=true,
         possbileBreeds={"H/P"},
         baseStats={8.5, 8, 7.5},
+        acquisition={
+            {"This was given to players in China who won any pvp battleground during the Summer Olympics in August 2008."}
+        }
     }, 
     [183]={
         name="Ethereal Soul-Trader",
@@ -2703,12 +2832,15 @@ PETS.all ={
         isUnique=false,
         isPassive=false,
         source="Trading Card Game",
+        tcg="The Hunt for Illidan",
         flavor="Ethereal soul-traders will travel with those who can free the essences they need from unruly hosts.",
         icon="136039",
-        tcg="The Hunt for Illidan",
-        locations={{mapID=210, coords={{42.6,71.6},}}},
         possbileBreeds={"B/B"},
         baseStats={8, 8, 8},
+        acquisition={
+            {"This was offered as part of the Trading Card Game. You may be able to buy a redemption card from eBay."},
+            {"It is also available on the Black Market Auction House in game."}
+        }
     }, 
     [186]={
         name="Nether Ray Fry",
@@ -2723,12 +2855,19 @@ PETS.all ={
         source="Vendor",
         flavor="Native to the Terokkar Forest, nether rays spawn during the rainy season. Out of the hundreds of offspring resulting from one hatching, very few survive to adulthood.",
         icon="132191",
-        currency="gold",
-        reputation="Sha'tari Skyguard",
-        npcs={{name="Grella"}},
-        locations={{mapID=108, coords={{64.2,66.2},}}},
+        reputation={type="Sha'tari Skyguard", level="Exalted"},
         possbileBreeds={"B/B", "P/P", "S/S", "P/S"},
         baseStats={7.5, 8.5, 8},
+        pois={
+            {name="Vendors:", entries={
+                {id="", maps={
+                    {id="n23367:Grella", mapID=108, currencies={"cgold:38"}, type="npc", coords={{64.2,66.2}}},
+                }}
+            }}
+        },
+        acquisition={
+            {"Gain exalted rep with the Sha'tari Skyguard and then purchase a %s.", "i38628"}
+        }
     }, 
     [187]={
         name="Vampiric Batling",
@@ -2740,13 +2879,15 @@ PETS.all ={
         isTradeable=false,
         isUnique=false,
         isPassive=false,
+        unobtainable=true,
         source="Drop",
         flavor="Vampire bats have been trained as scouts and mounts by the Forsaken of the Undercity and the Amani trolls of Zul'Aman.",
         icon="132182",
-        npcs={{name="Prince Tenris Mirkblood"}},
-        locations={{continent="Eastern Kingdoms", zone="Deadwind Pass", area="Karazhan"}},
         possbileBreeds={"P/S"},
         baseStats={8.5, 8.5, 7},
+        acquisition={
+            {"%s used to drop from Prince Tenris Mirkblood. However, that npc was removed from Karazhan making this pet presently unobtainable.", "i38658"}
+        }
     }, 
     [188]={
         name="Frosty",
@@ -2758,13 +2899,17 @@ PETS.all ={
         isTradeable=false,
         isUnique=true,
         isPassive=false,
+        unobtainable=true,
         source="Promotion",
+        promotion="Wrath of the Lich King Collector's Edition",
         flavor="Accidentally created when the Lich King's deathly powers raised Rimefang from undeath.",
         icon="237441",
-        promotion="Wrath of the Lich King Collector's Edition",
-        unobtainable=true,
         possbileBreeds={"H/H"},
         baseStats={8.5, 8.5, 7},
+        acquisition={
+            {"This pet was given to those that purchased the Collector's Edition of Wrath of the Lich King."},
+            {"You may still be able to buy an unclaimed box on eBay"}
+        }
     }, 
     [189]={
         name="Mini Tyrael",
@@ -2776,13 +2921,16 @@ PETS.all ={
         isTradeable=false,
         isUnique=true,
         isPassive=false,
+        unobtainable=true,
         source="Promotion",
+        promotion="World Wide Invitational 2008",
         flavor="'I am Justice itself!'",
         icon="135277",
-        promotion="World Wide Invitational 2008",
-        unobtainable=true,
         possbileBreeds={"B/B"},
         baseStats={8, 8, 8},
+        acquisition={
+            {"This was a gift to attendees of the 2008 Blizzard Worldwide Invitational."}
+        }
     }, 
     [190]={
         name="Ghostly Skull",
@@ -2797,11 +2945,18 @@ PETS.all ={
         source="Vendor",
         flavor="When it senses the impending death of a nearby creature, the skull will emit an ear-piercing cackle.",
         icon="133730",
-        currency="gold",
-        npcs={{name="Darahir"}},
-        locations={{continent="Northrend", zone="Crystalsong Forest", mapID=4395, mapFloor=2, coords={{63.8,18.8},}}},
         possbileBreeds={"H/H", "H/P", "H/B"},
         baseStats={8.5, 8.5, 7},
+        pois={
+            {name="Vendors:", entries={
+                {id="", maps={
+                    {id="n29537:Darahir", mapID=126, currencies={"cgold:40"}, type="npc", coords={{63.8,16.6}}},
+                }}
+            }}
+        },
+        acquisition={
+            {"Head to Northrend Dalaran's sewer to purchase a %s.", "i39973"}
+        }
     }, 
     [191]={
         name="Clockwork Rocket Bot",
@@ -2813,12 +2968,27 @@ PETS.all ={
         isTradeable=true,
         isUnique=false,
         isPassive=false,
+        intermittent=true,
         source="World Event",
+        eventName="Feast of Winter Veil",
         flavor="This mechanical warrior is a favorite gift during Winter Veil. Batteries not included, but rockets definitely are!",
         icon="133000",
-        eventName="Feast of Winter Veil",
         possbileBreeds={"B/B"},
         baseStats={8.5, 7.5, 8},
+        pois={
+            {name="Christmas Tree:", entries={
+                {id="", maps={
+                    {id="", display="Alliance", mapID=87, type="poi", coords={{33.6,66.6}}},
+                    {id="", display="Horde", mapID=85, type="poi", coords={{52.6,77.8}}},
+                }}
+            }}
+        },
+        acquisition={
+            {"The pet is only available during the Winter Veil seasonal event (christmas)."},
+            {"Historically, you receive a %s under the chrismas tree on the 25th and it is available until Jan 2nd.", "i116762"},
+            {"There is a chance for this pet to be in your present. Be sure to collect your present on every alt you have for the best chance."},
+            {"You can usually buy one on the Auction House year-round for a low price."},
+        }
     }, 
     [192]={
         name="Mr. Chilly",
@@ -2830,14 +3000,16 @@ PETS.all ={
         isTradeable=false,
         isUnique=true,
         isPassive=false,
+        unobtainable=true,
         source="Promotion",
+        promotion="WoW/Blizzard Account Merger",
         flavor="Mr. Chilly's appearance evokes a more civilized era, when duelists battled in tuxedos.",
         icon="327502",
-        promotion="WoW/Blizzard Account Merger",
-        unobtainable=true,
-        locations={{continent="Northrend", zone="Dalaran (Northrend)", mapID=51, mapFloor=10, coords={{30.8,21.8},{30.8,22.6},{31,21.2},{31.6,21.4},{31.6,22},{32,23.4},{32,23.8},{32.6,21.4},{32.6,22.2},}}},
         possbileBreeds={"H/S"},
         baseStats={8, 8, 8},
+        acquisition={
+            {"This pet was given to everyone who merged their WoW account with battlenet before novemeber 2009."},
+        }
     }, 
     [193]={
         name="Giant Sewer Rat",
@@ -2852,9 +3024,19 @@ PETS.all ={
         source="Fishing",
         flavor="You wouldn't want to meet this rat in a dark alley. Or anywhere else, for that matter.",
         icon="134324",
-        locations={{continent="Northrend", zone="Dalaran (Northrend)", mapID=4395, mapFloor=1, coords={{49.5,36.9},}}},
         possbileBreeds={"P/P"},
         baseStats={8, 8.5, 7.5},
+        pois={
+            {name="Points of interest:", entries={
+                {id="", maps={
+                    {id="", display="Fishing", mapID=126},
+                }}
+            }}
+        },
+        acquisition={
+            {"Head to Dalaran's Underbelly in Northrend and fish. It is a very low drop rate."},
+            {"It can also be purchased from the Black Market Auction House in game."},
+        }
     }, 
     [194]={
         name="Tickbird Hatchling",
@@ -2869,13 +3051,21 @@ PETS.all ={
         source="Vendor",
         flavor="Unlike most of Geen the gorloc's 'mysterious eggs,' this one actually contained a living thing.",
         icon="132192",
-        currency="gold",
-        note="Purchase a [Mysterious Egg] for a chance at the pet when it hatches.",
-        reputation="The Oracles",
-        npcs={{name="Geen"}},
-        locations={{mapID=119, coords={{54.6,56.2},}}},
+        reputation={type="The Oracles", level="Revered"},
         possbileBreeds={"B/B", "S/S", "P/S", "H/S", "S/B"},
         baseStats={8, 8, 8},
+        pois={
+            {name="Vendors:", entries={
+                {id="i39878", maps={
+                    {id="n31910:Geen", mapID=119, currencies={"cgold:2.4"}, type="npc", coords={{54.6,56.2}}},
+                }}
+            }}
+        },
+        acquisition={
+            {"Obtain Revered reputation with The Oracles and purchase a %s.", "i39878"},
+            {"Wait 3 days for it to transition to a %s.", "i39883"},
+            {"There will be an 18%% chance for the egg to yield a %s.", "i39896"}
+        }
     }, 
     [195]={
         name="White Tickbird Hatchling",
@@ -2890,13 +3080,21 @@ PETS.all ={
         source="Vendor",
         flavor="The rare albino tickbird is revered amongst the Oracles. It is seen as a sign of heavy rainstorms, good grub harvests, and hibernating wolvar.",
         icon="132192",
-        currency="gold",
-        note="Purchase a [Mysterious Egg] for a chance at the pet when it hatches.",
-        reputation="The Oracles",
-        npcs={{name="Geen"}},
-        locations={{mapID=119, coords={{54.6,56.2},}}},
+        reputation={type="The Oracles", level="Revered"},
         possbileBreeds={"S/S", "P/S", "H/S", "S/B"},
         baseStats={7.5, 7.5, 9},
+        pois={
+            {name="Vendors:", entries={
+                {id="i39878", maps={
+                    {id="n31910:Geen", mapID=119, currencies={"cgold:2.4"}, type="npc", coords={{54.6,56.2}}},
+                }}
+            }}
+        },
+        acquisition={
+            {"Obtain Revered reputation with The Oracles and purchase a %s.", "i39878"},
+            {"Wait 3 days for it to transition to a %s.", "i39883"},
+            {"There will be an 18%% chance for the egg to yield a %s.", "i39899"}
+        }
     }, 
     [196]={
         name="Proto-Drake Whelp",
@@ -2911,13 +3109,21 @@ PETS.all ={
         source="Vendor",
         flavor="These voracious whelps grow at an incredible rate and can devour nearly twice their weight in raw meat per day.",
         icon="236233",
-        currency="gold",
-        note="Purchase a [Mysterious Egg] for a chance at the pet when it hatches.",
-        reputation="The Oracles",
-        npcs={{name="Geen"}},
-        locations={{mapID=119, coords={{54.6,56.2},}}},
+        reputation={type="The Oracles", level="Revered"},
         possbileBreeds={"H/P"},
         baseStats={8.5, 8, 7.5},
+        pois={
+            {name="Vendors:", entries={
+                {id="i39878", maps={
+                    {id="n31910:Geen", mapID=119, currencies={"cgold:2.4"}, type="npc", coords={{54.6,56.2}}},
+                }}
+            }}
+        },
+        acquisition={
+            {"Obtain Revered reputation with The Oracles and purchase a %s.", "i39878"},
+            {"Wait 3 days for it to transition to a %s.", "i39883"},
+            {"There will be an 7%% chance for the egg to yield a %s.", "i44721"}
+        }
     }, 
     [197]={
         name="Cobra Hatchling",
@@ -2932,13 +3138,21 @@ PETS.all ={
         source="Vendor",
         flavor="The cobras of Azeroth are renowned for their fast-acting venom and swift strikes.",
         icon="236177",
-        currency="gold",
-        note="Purchase a [Mysterious Egg] for a chance at the pet when it hatches.",
-        reputation="The Oracles",
-        npcs={{name="Geen"}},
-        locations={{mapID=119, coords={{54.6,56.2},}}},
+        reputation={type="The Oracles", level="Revered"},
         possbileBreeds={"P/S"},
         baseStats={7.5, 8, 8.5},
+        pois={
+            {name="Vendors:", entries={
+                {id="i39878", maps={
+                    {id="n31910:Geen", mapID=119, currencies={"cgold:2.4"}, type="npc", coords={{54.6,56.2}}},
+                }}
+            }}
+        },
+        acquisition={
+            {"Obtain Revered reputation with The Oracles and purchase a %s.", "i39878"},
+            {"Wait 3 days for it to transition to a %s.", "i39883"},
+            {"There will be an 19%% chance for the egg to yield a %s.", "i39898"}
+        }
     }, 
     [198]={
         name="Pengu",
@@ -2953,11 +3167,20 @@ PETS.all ={
         source="Vendor",
         flavor="Notable for its wide eyes and sassy slide.",
         icon="655866",
-        currency="gold",
-        npcs={{name="Sairuk"}},
-        locations={{mapID=115, coords={{48.6,75.6},}}},
+        reputation={type="The Kalu'ak", level="Exalted"},
         possbileBreeds={"S/B"},
         baseStats={8, 8, 8},
+        pois={
+            {name="Vendors:", entries={
+                {id="", maps={
+                    {id="n32763:Sairuk", mapID=115, currencies={"cgold:12"}, type="npc", coords={{48.6,75.6}}},
+                    {id="n31916:Tanaika", mapID=117, currencies={"cgold:12"}, type="npc", coords={{25.4,58.6}}},
+                }}
+            }}
+        },
+        acquisition={
+            {"Obtain Exalted reputation with The Kalu'ak and purchase a %s.", "i44723"},
+        }
     }, 
     [199]={
         name="Kirin Tor Familiar",
@@ -2972,10 +3195,34 @@ PETS.all ={
         source="Achievement",
         flavor="To prevent apprentices from secretly using the familiar to complete their chores, the archmagi placed the ritual required to summon the creature across the pages of several spellbooks hidden throughout Dalaran.",
         icon="132102",
-        achievement={name="Higher Learning", ID=1956},
-        locations={{continent="Northrend", zone="Dalaran (Northrend)", mapID=4395, mapFloor=1, coords={{47,39.9},}}},
+        achievement={id="a1956"},
         possbileBreeds={"P/B"},
         baseStats={8, 8, 8},
+        pois={
+            {name="Points of interest:", entries={
+                {id="", maps={
+                    {id="o192708:Introduction", mapID=125, type="poi", coords={{56.5,45.8}}},
+                    {id="o192710:Conjuration", mapID=125, type="poi", coords={{30.9,46.5}}},
+                    {id="o192713:Enchantment", mapID=125, type="poi", coords={{43.5,47.5}}},
+                    {id="o192866:Necromancy", mapID=125, type="poi", coords={{47.0,39.5}}},
+                    {id="o192709:Abjuration", mapID=125, type="poi", coords={{52.5,54.6}}},
+                    {id="o192711:Divination", mapID=125, type="poi", coords={{26.5,51.7}}},
+                    {id="o192865:Illusion", mapID=125, type="poi", coords={{64.5,52.8}}},
+                    {id="o192867:Transmutation", mapID=125, type="poi", coords={{46.9,39.8}}},
+                }}
+            }}
+        },
+        acquisition={
+            {"Read the books to satisfy the achievement and receive your %s.", "i44738"},
+            {"Introduction - to your right as you enter (northern bookcase) on the floor in front of bookcase."},
+            {"Conjuration - group of bookcases on the right as you go in, Bottom of the left bookcase."},
+            {"Enchantment - Go up stairs out on the balcony on top of a crate to your right as you walk out onto the balcony."},
+            {"Necromancy - Upstairs west room, empty bookcase."},
+            {"Abjuration - on the floor to the right as you go in, in front of the little table with books on it."},
+            {"Divination - Up the stairs to the left, on the floor in front of the bookcase, next to the sands of time portal."},
+            {"Illusion - as you go in head to the left and against the wall on the left crate, next to Archmage Timear."},
+            {"Transmutation - 1st floor western bookcase near the door."},
+        }
     }, 
     [200]={
         name="Spring Rabbit",
@@ -2988,13 +3235,29 @@ PETS.all ={
         isUnique=false,
         isPassive=false,
         source="World Event",
+        eventName="Noblegarden",
         flavor="Spring rabbits symbolize fertility, and they love to demonstrate why.",
         icon="134010",
-        currency="event",
-        eventName="Noblegarden",
-        npcs={{name="Noblegarden Merchant"}},
         possbileBreeds={"S/S"},
         baseStats={8, 7, 9},
+        pois={
+            {name="Vendors:", entries={
+                {id="", maps={
+                    {id="n32836:Noblegarden Vendor", mapID=37, currencies={"ci:100:44791"}, type="npc", coords={{43.0,65.2}}},
+                    {id="n32836:Noblegarden Vendor", mapID=97, currencies={"ci:100:44791"}, type="npc", coords={{49.0,51.2}}},
+                    {id="n32836:Noblegarden Vendor", mapID=27, currencies={"ci:100:44791"}, type="npc", coords={{54.0,50.8}}},
+                    {id="n32836:Noblegarden Vendor", mapID=57, currencies={"ci:100:44791"}, type="npc", coords={{56.0,58.6}}},
+                    {id="n32837:Noblegarden Merchant", mapID=94, currencies={"ci:100:44791"}, type="npc", coords={{47.6,45.6}}},
+                    {id="n32837:Noblegarden Merchant", mapID=1, currencies={"ci:100:44791"}, type="npc", coords={{52.2,41.6}}},
+                    {id="n32837:Noblegarden Merchant", mapID=7, currencies={"ci:100:44791"}, type="npc", coords={{47.0,59.8}}},
+                    {id="n32837:Noblegarden Merchant", mapID=2070, currencies={"ci:100:44791"}, type="npc", coords={{61.4,53.0}}},
+                }}
+            }}
+        },
+        acquisition={
+            {"The pet is only available during the Noblegarden seasonal event (easter)."},
+            {"Do daily events to earn the currency to purchase a %s.", "i44794"},
+        }
     }, 
     [201]={
         name="Plump Turkey",
@@ -3007,11 +3270,32 @@ PETS.all ={
         isUnique=true,
         isPassive=false,
         source="World Event",
+        eventName="Pilgrim's Bounty",
         flavor="He's humble, clairvoyant, and delicious with cranberry sauce.",
         icon="250626",
-        eventName="Pilgrim's Bounty",
+        achievement={id="a3478"},
         possbileBreeds={"H/P"},
         baseStats={8, 8, 8},
+        pois={
+            {name="SubAchievements:", entries={
+                {id="a3579"},
+                {id="a3582"},
+                {id="a3559"},
+                {id="a3558"},
+                {id="a3556", subDisplay="alliance"},
+                {id="a3557", subDisplay="horde"},
+                {id="a3576", subDisplay="alliance"},
+                {id="a3577", subDisplay="horde"},
+                {id="a3596", subDisplay="alliance"},
+                {id="a3597", subDisplay="horde"},
+                {id="a3580", subDisplay="alliance"},
+                {id="a3581", subDisplay="horde"}
+            }}
+        },
+        acquisition={
+            {"The pet is only available during the Pilgrim's Bounty seasonal event (thanksgiving)."},
+            {"Complete the meta achievement to receive a %s.", "i44810"},
+        }
     }, 
     [202]={
         name="Baby Blizzard Bear",
@@ -3023,13 +3307,16 @@ PETS.all ={
         isTradeable=false,
         isUnique=true,
         isPassive=false,
+        unobtainable=true,
         source="Promotion",
+        promotion="WoW's 4th Anniversary",
         flavor="This rare bear is bred for its small size and perpetually youthful appearance.",
         icon="294471",
-        promotion="WoW's 4th Anniversary",
-        unobtainable=true,
         possbileBreeds={"H/P"},
         baseStats={8, 8, 8},
+        acquisition={
+            {"Given as a gift during the 4th anniversary of WoW."},
+        }
     }, 
     [203]={
         name="Little Fawn",
@@ -3042,11 +3329,14 @@ PETS.all ={
         isUnique=true,
         isPassive=false,
         source="Achievement",
+        achievement={id="a2516"},
         flavor="She likes the company of friends. Seventy-five of them, to be precise.",
         icon="656350",
-        achievement={name="Lil' Game Hunter", ID=2516},
         possbileBreeds={"H/B"},
         baseStats={8, 7, 9},
+        acquisition={
+            {"Collect 75 unique pets to receive your %s.", "i44841"},
+        }
     }, 
     [204]={
         name="Teldrassil Sproutling",
@@ -3061,11 +3351,19 @@ PETS.all ={
         source="Vendor",
         flavor="It always wakes up dancing. What a happy little tree!",
         icon="134183",
-        currency="item",
-        npcs={{name="Rook Hawkfist"}},
-        locations={{mapID=118, coords={{76.2,19.2},}}},
         possbileBreeds={"B/B"},
         baseStats={8, 8, 8},
+        pois={
+            {name="Vendors:", entries={
+                {id="", maps={
+                    {id="n33653:Rook Hawkfist", mapID=118, currencies={"c241:40"}, type="npc", coords={{76.2,19.2}}},
+                }}
+            }}
+        },
+        acquisition={
+            {"Collect the special currency and purchase a %s.", "i44965"},
+            {"This pet is also available on the Black Market Auction House"},
+        }
     }, 
     [205]={
         name="Dun Morogh Cub",
@@ -3080,11 +3378,19 @@ PETS.all ={
         source="Vendor",
         flavor="The bears of Dun Morogh are prized for their hardiness, loyalty, and combat prowess. Their time among the dwarves does little to curb their ferocity.",
         icon="236243",
-        currency="item",
-        npcs={{name="Derrick Brindlebeard"}},
-        locations={{mapID=118, coords={{76.3,19.2},}}},
         possbileBreeds={"H/P"},
         baseStats={8, 8, 8},
+        pois={
+            {name="Vendors:", entries={
+                {id="", maps={
+                    {id="n33310:Derrick Brindlebeard", mapID=118, currencies={"c241:40"}, type="npc", coords={{76.4,19.4}}},
+                }}
+            }}
+        },
+        acquisition={
+            {"Collect the special currency and purchase a %s.", "i44970"},
+            {"This pet is also available on the Black Market Auction House"},
+        }
     }, 
     [206]={
         name="Tirisfal Batling",
@@ -3099,11 +3405,19 @@ PETS.all ={
         source="Vendor",
         flavor="Can sense an opponent's heartbeat through echolocation.",
         icon="132182",
-        currency="item",
-        npcs={{name="Eliza Killian"}},
-        locations={{mapID=118, coords={{76.3,21.5},}}},
         possbileBreeds={"B/B", "H/S", "S/B"},
         baseStats={8.5, 8.5, 7},
+        pois={
+            {name="Vendors:", entries={
+                {id="", maps={
+                    {id="n33555:Eliza Killian", mapID=118, currencies={"c241:40"}, type="npc", coords={{76.4,24.0}}},
+                }}
+            }}
+        },
+        acquisition={
+            {"Collect the special currency and purchase a %s.", "i44971"},
+            {"This pet is also available on the Black Market Auction House"},
+        }
     }, 
     [207]={
         name="Durotar Scorpion",
@@ -3118,12 +3432,20 @@ PETS.all ={
         source="Vendor",
         flavor="The volatile Durotar scorpion is a fierce desert predator. It's known for only occasionally stinging its owner.",
         icon="132195",
-        currency="item",
-        npcs={{name="Freka Bloodaxe"}},
-        locations={{mapID=118, coords={{76.3,21.2},}}},
         possbileBreeds={"P/S"},
         baseStats={8, 8, 8},
-    }, 
+        pois={
+            {name="Vendors:", entries={
+                {id="", maps={
+                    {id="n33553:Freka Bloodaxe", mapID=118, currencies={"c241:40"}, type="npc", coords={{76.4,24.2}}},
+                }}
+            }}
+        },
+        acquisition={
+            {"Collect the special currency and purchase a %s.", "i44973"},
+            {"This pet is also available on the Black Market Auction House"},
+        }
+    },
     [209]={
         name="Elwynn Lamb",
         speciesID=209,
@@ -3137,11 +3459,19 @@ PETS.all ={
         source="Vendor",
         flavor="Unlike the polymorphed variety, trueborn sheep can be quite scary.",
         icon="136071",
-        currency="item",
-        npcs={{name="Corporal Arthur Flew"}},
-        locations={{mapID=118, coords={{75.3,19.2},}}},
         possbileBreeds={"B/B"},
         baseStats={8, 8, 8},
+        pois={
+            {name="Vendors:", entries={
+                {id="", maps={
+                    {id="n33307:Corporal Arthur Flew", mapID=118, currencies={"c241:40"}, type="npc", coords={{76.4,19.2}}},
+                }}
+            }}
+        },
+        acquisition={
+            {"Collect the special currency and purchase a %s.", "i44974"},
+            {"This pet is also available on the Black Market Auction House"},
+        }
     }, 
     [210]={
         name="Mulgore Hatchling",
@@ -3156,11 +3486,19 @@ PETS.all ={
         source="Vendor",
         flavor="A tallstrider's speed on open ground is unrivaled, so predators rely on stealth and pack tactics when hunting them.",
         icon="132198",
-        currency="item",
-        npcs={{name="Doru Thunderhorn"}},
-        locations={{mapID=118, coords={{76.3,21.2},}}},
         possbileBreeds={"S/S"},
         baseStats={8, 8, 8},
+        pois={
+            {name="Vendors:", entries={
+                {id="", maps={
+                    {id="n33556:Doru Thunderhorn", mapID=118, currencies={"c241:40"}, type="npc", coords={{76.2,24.4}}},
+                }}
+            }}
+        },
+        acquisition={
+            {"Collect the special currency and purchase a %s.", "i44980"},
+            {"This pet is also available on the Black Market Auction House"},
+        }
     }, 
     [211]={
         name="Strand Crawler",
@@ -3220,11 +3558,18 @@ PETS.all ={
         source="Vendor",
         flavor="The long-term effects of the contamination caused by the Exodar are still under observation.",
         icon="133941",
-        currency="item",
-        npcs={{name="Irisee"}},
-        locations={{mapID=118, coords={{76.2,19.2},}}},
         possbileBreeds={"B/B"},
         baseStats={8, 8, 8},
+        pois={
+            {name="Vendors:", entries={
+                {id="", maps={
+                    {id="n33657:Irisee", mapID=118, currencies={"c241:40"}, type="npc", coords={{76.2,19.2}}},
+                }}
+            }}
+        },
+        acquisition={
+            {"Collect the special currency and purchase a %s.", "i44984"}
+        }
     }, 
     [213]={
         name="Enchanted Broom",
@@ -3239,11 +3584,19 @@ PETS.all ={
         source="Vendor",
         flavor="Created by a blood elf apprentice, this broom would be extremely useful if anyone could figure out how to make it stop.",
         icon="655994",
-        currency="item",
-        npcs={{name="Trellis Morningsun"}},
-        locations={{mapID=118, coords={{76.3,21.5},}}},
         possbileBreeds={"S/S"},
         baseStats={8, 8, 8},
+        pois={
+            {name="Vendors:", entries={
+                {id="", maps={
+                    {id="n33557:Trellis Morningsun", mapID=118, currencies={"c241:40"}, type="npc", coords={{76.2,23.8}}},
+                }}
+            }}
+        },
+        acquisition={
+            {"Collect the special currency and purchase a %s.", "i44982"},
+            {"This pet is also available on the Black Market Auction House"},
+        }
     }, 
     [214]={
         name="Argent Squire",
@@ -3258,10 +3611,37 @@ PETS.all ={
         source="Quest",
         flavor="Many of Stormwind's youth joined the Argent Crusade as squires, hoping to one day serve the Holy Light in battle.",
         icon="236689",
-        quest={name="A Champion Rises"},
-        locations={{mapID=118, coords={{69.6,22.8},}}},
         possbileBreeds={"B/B"},
         baseStats={8, 8, 8},
+        pois={
+            {name="Quests:", entries={
+                {id="q13672:Up To The Challenge", maps={
+                    {id="n33625:Arcanist Taelis", mapID=118, type="start", coords={{76.4,19.4}}},
+                }},
+                {id="q13679:The Aspirant's Challenge", maps={
+                    {id="n33625:Arcanist Taelis", mapID=118, type="start", coords={{76.4,19.4}}},
+                    {id="n33447:Squire David", mapID=118, type="npc", coords={{71.4,19.6}}},
+                    {id="n33518:Squire Danny", mapID=118, type="npc", coords={{68.6,21.0}}},
+                }},
+                {id="q13718:The Valiant's Charge", maps={
+                    {id="n33225:Marshal Jacob Alerius", mapID=118, type="start", coords={{76.6,19.2}}},
+                }},
+                {id="q13725:The Valiant's Challenge", maps={
+                    {id="n33592:Jaelyne Evensong", mapID=118, type="start", coords={{76.2,19.0}}},
+                }},
+                {id="q13702:A Champion Rises", maps={
+                    {id="n33225:Marshal Jacob Alerius", mapID=118, type="start", coords={{76.6,19.2}}},
+                    {id="n33817:Justicar Mariel Trueheart", mapID=118, type="end", coords={{69.6,22.8}}},
+                }}
+            }}
+        },
+        acquisition={
+            {"Only available to Alliance characters."},
+            {"To receive this pet you must complete a series of quests related to the Argent Tournement in IceCrown."},
+            {"Your opponents can leave the ring, but you cannot. Kite them back to the center of the ring as needed."},
+            {"Note, currently it's not possible complete this quest chain as a Dracthyr since you wont get the Valiant quest. You'll need to make a support ticket for them to give you a quest from one of the other races."},
+            {"After you earn this pet you can then buy 2 more at any pet trainer across the world."},
+        }
     }, 
     [215]={
         name="Mechanopeep",
@@ -3276,11 +3656,19 @@ PETS.all ={
         source="Vendor",
         flavor="Used as a training mount for young gnomes, the Mechanopeep has none of the speed but all of the charm of its bigger brothers.",
         icon="132247",
-        currency="item",
-        npcs={{name="Rillie Spindlenut"}},
-        locations={{mapID=118, coords={{76.2,19.2},}}},
         possbileBreeds={"P/B"},
         baseStats={8.5, 7.5, 8},
+        pois={
+            {name="Vendors:", entries={
+                {id="", maps={
+                    {id="n33650:Rillie Spindlenut", mapID=118, currencies={"c241:40"}, type="npc", coords={{76.4,19.6}}},
+                }}
+            }}
+        },
+        acquisition={
+            {"Collect the special currency and purchase a %s.", "i45002"},
+            {"This pet is also available on the Black Market Auction House"},
+        }
     }, 
     [216]={
         name="Argent Gruntling",
@@ -3295,10 +3683,37 @@ PETS.all ={
         source="Quest",
         flavor="These young orcs strive to embody the Argent Crusade's virtues: valor, strength, and integrity.",
         icon="236689",
-        quest={name="A Champion Rises"},
-        locations={{mapID=118, coords={{69.6,22.8},}}},
         possbileBreeds={"B/B"},
         baseStats={8, 8, 8},
+        pois={
+            {name="Quests:", entries={
+                {id="q13672:Up To The Challenge", maps={
+                    {id="n33625:Arcanist Taelis", mapID=118, type="start", coords={{76.4,19.4}}},
+                }},
+                {id="q13679:The Aspirant's Challenge", maps={
+                    {id="n33625:Arcanist Taelis", mapID=118, type="start", coords={{76.4,19.4}}},
+                    {id="n33447:Squire David", mapID=118, type="npc", coords={{71.4,19.6}}},
+                    {id="n33518:Squire Danny", mapID=118, type="npc", coords={{68.6,21.0}}},
+                }},
+                {id="q13718:The Valiant's Charge", maps={
+                    {id="n33225:Marshal Jacob Alerius", mapID=118, type="start", coords={{76.6,19.2}}},
+                }},
+                {id="q13725:The Valiant's Challenge", maps={
+                    {id="n33592:Jaelyne Evensong", mapID=118, type="start", coords={{76.2,19.0}}},
+                }},
+                {id="q13702:A Champion Rises", maps={
+                    {id="n33225:Marshal Jacob Alerius", mapID=118, type="start", coords={{76.6,19.2}}},
+                    {id="n33817:Justicar Mariel Trueheart", mapID=118, type="end", coords={{69.6,22.8}}},
+                }}
+            }}
+        },
+        acquisition={
+            {"Only available to Horde characters."},
+            {"To receive this pet you must complete a series of quests related to the Argent Tournement in IceCrown."},
+            {"Your opponents can leave the ring, but you cannot. Kite them back to the center of the ring as needed."},
+            {"Note, currently it's not possible complete this quest chain as a Dracthyr since you wont get the Valiant quest. You'll need to make a support ticket for them to give you a quest from one of the other races."},
+            {"After you earn this pet you can then buy 2 more at any pet trainer across the world."},
+        }
     }, 
     [217]={
         name="Murkimus the Gladiator",
@@ -3310,13 +3725,17 @@ PETS.all ={
         isTradeable=false,
         isUnique=true,
         isPassive=false,
+        unobtainable=true,
         source="Promotion",
+        promotion="Arena Tournament",
         flavor="Murkimus is the most fearsome of all murloc arena warriors. And for a time, the only one.",
         icon="135128",
-        promotion="Arena Tournament",
-        unobtainable=true,
         possbileBreeds={"H/P"},
         baseStats={8, 8, 8},
+        acquisition={
+            {"This pet was awarded in 2013 to encourage people to participate in the Tournement Arena system."},
+            {"It is no longer obtainable."},
+        }
     }, 
     [218]={
         name="Sen'jin Fetish",
@@ -3331,11 +3750,19 @@ PETS.all ={
         source="Vendor",
         flavor="This is actually three pets in one. You won't know what you'll get until you summon it!",
         icon="133798",
-        currency="item",
-        npcs={{name="Samamba"}},
-        locations={{mapID=118, coords={{76.3,21.5},}}},
         possbileBreeds={"P/P"},
         baseStats={8.5, 7.5, 8},
+        pois={
+            {name="Vendors:", entries={
+                {id="", maps={
+                    {id="n33554:Samamba", mapID=118, currencies={"c241:40"}, type="npc", coords={{76.0,24.4}}},
+                }}
+            }}
+        },
+        acquisition={
+            {"Collect the special currency and purchase a %s.", "i45606"},
+            {"This pet is also available on the Black Market Auction House"},
+        }
     }, 
     [220]={
         name="Withers",
@@ -3350,10 +3777,131 @@ PETS.all ={
         source="Quest",
         flavor="A solemn reminder of what was lost when the Worldbreaker changed the face of Azeroth.",
         icon="132129",
-        quest={name="Remembrance of Auberdine"},
-        locations={{mapID=62, coords={{50.8,18},{57.2,33.8},}}},
         possbileBreeds={"H/S"},
         baseStats={8, 8, 8},
+        pois={
+            {name="Vendors (horde):", entries={
+                {id="", maps={
+                    {id="n33980:Apothecary Furrows", currencies={"cgold:.5"}, mapID=62, coords={{57.2,33.8, type="npc"}, {56.8,31.2, type="cave"}}},
+                }}
+            }},
+            {name="Quests (alliance):", entries={
+                {id="q13518:The Last Wave of Survivors", maps={
+                    {id="n32973:Dentaria Silverglade", mapID=62, type="start", coords={{51.8,18.0}}},
+                    {id="n32911:Gershala Nightwhisper", mapID=62, type="dot", coords={{44.0,17.8}}},
+                    {id="n33094:Volcor", mapID=62, type="dot", coords={{45.0,18.2}}},
+                    {id="n33093:Cerellean Whiteclaw", mapID=62, type="dot", coords={{44.6,19.8}}},
+                    {id="n33095:Shaldyn", mapID=62, type="dot", coords={{42.8,21.4}}},
+                }},
+                {id="q13522:Threat from the Water", maps={
+                    {id="n32971:Ranger Glynda Nal'Shea", mapID=62, type="start", coords={{50.6,19.6}}},
+                    {id="n32928:Vile Spray", mapID=62, type="dot", coords={{43.2,19.4},{43.4,17.2},{43.4,19.8},{43.4,20.6},{43.4,22.2},{43.6,19.8},{43.8,16.6},{43.8,17.6},{43.8,19.4},{43.8,21.6},{44.4,21},{44.6,20.6},{45,17.2},{45,18.6},{45.2,16.4},{45.2,18},{45.4,20},{45.8,17.2},{46.2,18.2},{46.2,19.2},{48.4,18.4},{48.4,18.6},{48.6,18.4},{48.6,19},{49,19.6},{50.2,17.2}}},
+                }},
+                {id="q32972:The Boon of the Seas", maps={
+                    {id="n32972:Serendia Oakwhisper", mapID=62, type="start", coords={{51.8,18.0}}},
+                    {id="o17189:The Fall of Ameth'Aran", mapID=62, type="dot", coords={{42.6,63.1}}},
+                    {id="oobject:Encrusted Clam", mapID=62, type="dot", coords={{49.3,17.4},{49.3,17.7},{49.4,15.6},{49.5,18.6},{50,16.5},{50.1,15.9},{50.4,17.5},{50.7,16.6},{51,15.7},{51,18.1},{51.4,15.4},{51.5,14.8},{51.7,16.3},{51.9,17.4},{52,18.3},{52.2,19.3},{52.2,19.5},{52.5,15.1},{52.5,17.7},{53,15.8},{53.2,18.6},{53.4,16.7},{53.5,15.9},{54.1,17.4},{54.1,17.5}}},
+                }},
+                {id="q13521:The Buzzbox 413", maps={
+                    {id="n32977:Wizbang Cranktoggle", mapID=62, type="start", coords={{51.2,19.6}}},
+                    {id="o194105:Buzzbox 413", mapID=62, type="end", coords={{53.3,19.6}}},
+                    {id="n32935:Corrupted Tide Crawler", mapID=62, type="dot", coords={{47,18.8},{47.2,18.4},{47.4,17.4},{47.8,18.4},{48,18.6},{48.4,17.2},{48.6,18.2},{48.8,16.6},{49.4,16.2},{49.4,18.6},{50,18.6},{50.2,16.6},{50.4,15.4},{50.4,15.6},{50.4,17.8},{50.6,16},{51,14.8},{51.4,17.4},{51.4,17.6},{51.8,15.2},{52,16},{52,17.4},{52,17.8},{52.2,20.2},{52.2,20.6},{52.4,19.2},{52.6,17},{52.6,18.4},{52.8,18.6},{53,16.4},{53,20.8},{53.4,19.6},{53.6,16.4},{53.6,19.4},{53.6,20.2},{54,20.8},{54.2,16.8},{54.2,18.4},{54.6,18.6},{54.8,18.2},{55,20.8}}},
+                }},
+                {id="q13527:No Accounting for Taste", maps={
+                    {id="o194105:Buzzbox 413", mapID=62, type="start", coords={{53.3,19.6}}},
+                    {id="n32977:Wizbang Cranktoggle", mapID=62, type="end", coords={{51.2,19.6}}},
+                    {display="Bear carcass", mapID=62, type="dot", coords={{55.1,21}}},
+                }},
+                {id="q13528:Buzzbox 723", maps={
+                    {id="n32977:Wizbang Cranktoggle", mapID=62, type="start", coords={{51.2,19.6}}},
+                    {id="o194122:Buzzbox 723", mapID=62, type="end", coords={{54.2,29.3}}},
+                    {display="Corrupted bears", mapID=62, type="kill", coords={{52.4,24.8},{52.6,25},{52.8,25.6},{53,27},{53.2,28.8},{53.4,23.4},{53.4,24},{53.4,28.4},{53.6,24},{53.8,27.4},{53.8,27.6},{54,25.4},{54.2,29.8},{54.4,26.2},{54.4,28.8},{54.4,30.8},{54.6,25.4},{54.6,26.2},{54.6,27},{54.6,28.4},{54.6,28.8},{54.6,30.8},{54.8,23.4},{54.8,23.6},{55,29.6},{55.6,19.8},{55.6,25.4},{55.6,25.6},{55.6,27},{55.8,21.6},{56,23.8},{56.4,20.6},{56.6,20.4},{56.6,20.6},{52.4,26.4},{52.4,29},{52.4,29.6},{52.6,25.8},{52.6,28.8},{52.6,29.8},{52.8,28},{53,27.2},{53.2,24.8},{54,25.4},{54.2,29.2},{54.4,26.4},{54.4,26.6},{54.4,27.8},{54.4,30},{54.4,30.8},{54.6,28},{54.6,30.4},{54.6,30.6},{54.8,25.4},{54.8,25.6},{54.8,29.2},{55,24.4},{55.2,26.6},{55.4,23.4},{55.6,25.8},{55.8,24},{55.8,25}}},
+                }},
+                {id="q13554:A Cure In The Dark", maps={
+                    {id="o194122:Buzzbox 723", mapID=62, type="start", coords={{54.2,29.3}}},
+                    {id="n32977:Wizbang Cranktoggle", mapID=62, type="end", coords={{51.2,19.6}}},
+                    {display="Vile corruptors and grells", mapID=62, type="kill", coords={{56.4,31.2},{56.6,30.8},{57,33.4},{57.2,31.8},{57.2,34.8},{57.4,34},{57.6,33},{57.6,33.6},{58.2,32.4},{58.4,31.4},{58.6,31.4},{58.6,32.6},{58.8,31.6},{56.6,33.6},{57,31.4},{57,31.6},{57,34.8},{57.4,33.2},{57.8,32.4},{57.8,32.6},{58.6,31.4},{58.6,31.8}}},
+                }},
+                {id="q13529:The Corruption's Source", maps={
+                    {id="n32978:Tharnariun Treetender", mapID=62, type="start", coords={{51.2,19.6}}},
+                    {id="n33020:Zenn Foulhoof", mapID=62, type="boss", coords={{58.6,32.6}}},
+                    {display="Vile corruptors and grells", mapID=62, type="kill", coords={{56.4,31.2},{56.6,30.8},{57,33.4},{57.2,31.8},{57.2,34.8},{57.4,34},{57.6,33},{57.6,33.6},{58.2,32.4},{58.4,31.4},{58.6,31.4},{58.6,32.6},{58.8,31.6},{56.6,33.6},{57,31.4},{57,31.6},{57,34.8},{57.4,33.2},{57.8,32.4},{57.8,32.6},{58.6,31.4},{58.6,31.8}}},
+                }},
+                {id="q13564:A Lost Companion", maps={
+                    {id="n32960:Volcor", mapID=62, type="start", coords={{50.8,18.0}}},
+                    {id="n33048:Keeper Karithus", mapID=62, type="end", coords={{43.0,39.0}}},
+                }},
+                {id="q13598:Unsavory Remedies", maps={
+                    {id="n33048:Keeper Karithus", mapID=62, type="start", coords={{43.0,39.0}}},
+                    {id="o194208:Fuming Toadstool", mapID=62, type="dot", coords={{47,41.7},{47.2,39.6},{47.3,40.8},{47.6,44.2},{47.7,38.9},{47.8,39.8},{48.1,41.7},{48.5,40.1},{48.7,41.2},{48.7,42.1},{49.1,39.2},{49.3,38.3}}},
+                }},
+                {id="q13565:Twice Removed", maps={
+                    {id="n33126:Seraphine", mapID=62, type="start", coords={{42.8,39.0}}},
+                    {id="n33207:Lady Janira", mapID=62, type="boss", coords={{48.6,40.6}}},
+                }},
+                {id="q13566:Ritual Materials", maps={
+                    {id="n33048:Keeper Karithus", mapID=62, type="start", coords={{43.0,39.0}}},
+                    {id="n33978:Hungry Thistle Bear", subDisplay="click, dont kill", mapID=62, type="dot", coords={{45.2,37.2},{45.2,38.8},{45.8,37.4},{45.8,38.4},{46.2,38.8},{47,38.6},{47.4,38.4},{48.2,38.4},{48.2,38.6},{48.8,38.4},{49.2,39},{49.4,37},{49.6,37},{49.6,38.2}}},
+                    {id="n33313:Mottled Doe", subDisplay="click, dont kill", mapID=62, type="dot", coords={{44.4,40.8},{44.6,37.4},{44.6,37.6},{44.6,39.4},{44.6,39.6},{44.6,40.8}}},
+                    {id="n33127:Moonstalker", subDisplay="click, dont kill", mapID=62, type="dot", coords={{40,35.8},{40.6,37.4},{41,38.6},{41.2,35.4},{41.4,39.8},{41.6,39},{41.6,39.8},{41.8,35.2},{41.8,37},{42.2,36.4},{42.4,40.8},{42.6,39.4},{42.6,40.8}}},
+                }},
+                {id="q13569:The Ritual Bond", maps={
+                    {id="n33048:Keeper Karithus", mapID=62, type="start", coords={{43.0,39.0}}},
+                    {display="Essence is next to quest giver"},
+                }},
+                {id="q13599:Grimclaw's Return", maps={
+                    {id="n33048:Keeper Karithus", mapID=62, type="start", coords={{43.0,39.0}}},
+                    {id="n32972:Serendia Oakwhisper", mapID=62, type="end", coords={{51.8,18.0}}},
+                }},
+                {id="q13589:The Shatterspear Invaders", maps={
+                    {id="n32971:Ranger Glynda Nal'Shea", mapID=62, type="start", coords={{50.8,18.2}}},
+                    {id="n32963:Lieutenant Morra Starbreeze", mapID=62, type="end", coords={{58.8,19.4}}},
+                }},
+                {id="q13505:Remnants of the Highborne", maps={
+                    {id="n32966:Balthule Shadowstrike", mapID=62, type="start", coords={{58.8,19.6}}},
+                    {id="o194090:Highborne Relic", mapID=62, type="dot", coords={{59,17.8},{59.2,17.1},{59.3,16.1},{59.3,20.3},{59.4,21.3},{60,23.9},{60.1,14},{60.1,17.2},{60.2,15.2},{60.2,17.8},{60.2,20.8},{60.3,16.2},{60.3,21.9},{60.3,22.9},{60.4,19.1},{60.4,20.1},{60.7,12.2},{60.7,19.6},{60.8,17.7},{60.9,18.7},{61.3,12.8},{61.4,13.9},{61.4,15},{61.4,21.9},{61.4,22.8},{61.5,15},{61.5,21.1},{61.7,14.3},{61.7,16.6},{61.8,15.8},{61.8,21.5},{61.9,19.4},{61.9,19.5},{62,12.8},{62.2,17.8},{62.5,16.9},{62.8,19.4},{62.8,19.5},{62.8,21.1},{63.1,13.9},{63.7,17.1},{63.9,18}}},
+                }},
+                {id="q13504:Shatterspear Laborers", maps={
+                    {id="n32965:Sentinel Tysha Moonblade", mapID=62, type="start", coords={{58.8,19.4}}},
+                    {id="n32861:Shatterspear Laborer", mapID=62, type="dot", coords={{59,17.6},{59.2,17.2},{59.4,16},{59.4,19.2},{59.4,20.4},{59.4,21},{59.4,22.2},{59.6,15},{59.6,17.6},{59.6,19.6},{60,21.4},{60.2,14.2},{60.2,16.4},{60.2,19},{60.2,21.6},{60.2,22.8},{60.4,13.4},{60.4,17},{60.6,12.4},{60.6,14.8},{60.6,18.4},{60.6,19.8},{60.8,11.4},{60.8,18.6},{61.2,14},{61.4,12.8},{61.4,21.8},{61.4,22.6},{61.6,21.6},{61.8,16},{61.8,19.4},{61.8,19.6},{61.8,21.4},{62,14.6},{62.2,17.6},{62.4,16.8},{62.8,20.2},{63,10.6},{63,18.8},{63.2,10.4},{63.2,17.4}}},
+                }},
+                {id="q13507:Denying Manpower", maps={
+                    {id="n32965:Sentinel Tysha Moonblade", mapID=62, type="start", coords={{58.8,19.4}}},
+                    {display="Enforcers and mystics", mapID=62, type="kill", coords={{61.2,9.2},{61.4,8},{61.6,9},{62,10},{62.2,11},{62.4,8},{62.6,8.4},{63,9.4},{63,9.6},{63.8,7.2}}},
+                }},
+                {id="q13509:War Supplies", maps={
+                    {id="n32963:Lieutenant Morra Starbreeze", mapID=62, type="start", coords={{58.8,19.4}}},
+                    {display="War supplies", mapID=62, type="dot", coords={{62,10}}},
+                }},
+                {id="q13513:On the Brink", maps={
+                    {id="n32966:Balthule Shadowstrike", mapID=62, type="start", coords={{58.8,19.6}}},
+                    {id="n32860:Shatterspear Shaman", mapID=62, type="kill", coords={{56.8,25.4},{56.8,25.6},{58.4,25},{58.8,23.6},{59,25.2},{60.8,20.2},{61,20.8}}},
+                }},
+                {id="q13512:Strategic Strikes", maps={
+                    {id="n32963:Lieutenant Morra Starbreeze", mapID=62, type="start", coords={{58.8,19.4}}},
+                    {id="n32868:Lorenth Thundercall", mapID=62, type="boss", coords={{56.6,25.8}}},
+                    {id="n32869:Sheya Stormweaver", mapID=62, type="boss", coords={{61.2,20.4}}},
+                }},
+                {id="q13590:The Front Line", maps={
+                    {id="n32963:Lieutenant Morra Starbreeze", mapID=62, type="start", coords={{58.8,19.4}}},
+                    {id="n33178:Huntress Sandrya Moonfall", mapID=62, type="end", coords={{72.2,19.0}}},
+                    {id="n33359:Nightsaber Rider", subDisplay="you must ride this", mapID=62, type="poi", coords={{58.6,20.0}}},
+                }},
+                {id="q13591:Disturbing Connections", maps={
+                    {id="n32862:Jor'kil the Soulripper", mapID=62, type="boss", coords={{72.6,18.2}}},
+                    {id="n32971:Ranger Glynda Nal'Shea", mapID=62, type="end", coords={{50.8,18.2}}},
+                    {id="n33359:Nightsaber Rider", subDisplay="you must ride this", mapID=62, type="poi", coords={{58.6,20.0}}},
+                }},
+                {id="q13570:Remembrance of Auberdine", maps={
+                    {id="n32959:Cerellean Whiteclaw", mapID=62, type="boss", coords={{50.2,19.4}}},
+                }},
+            }}
+        },
+        acquisition={
+            {"Alliance is awarded by a long quest chain.", "i46325"},
+            {"Horde can simply buy a %s from %s. His cave entrance is behind a waterfall. If he's dead then wait a few minutes - alliance has a quest that involves killing him.", "i46325", "n33980:Apothecary Furrows"},
+            {"Disturbing Connections - kill %s to receive a %s, which starts this quest.", "n32862:Jor'kil the Soulripper", "i46318"}
+        }
     }, 
     [224]={
         name="Calico Cat",
@@ -3368,11 +3916,18 @@ PETS.all ={
         source="Vendor",
         flavor="Many have mocked this cat before battle. Their last words are usually, 'Here, kitty, kitty.'",
         icon="656576",
-        currency="gold",
-        npcs={{name="Breanni"}},
-        locations={{continent="Northrend", zone="Crystalsong Forest", mapID=4395, mapFloor=1, coords={{58.6,39.6},}}},
         possbileBreeds={"P/B"},
         baseStats={7, 8.5, 8.5},
+        pois={
+            {name="Vendors:", entries={
+                {id="", maps={
+                    {id="n28951:Breanni ", mapID=41, currencies={"cgold:40"}, type="npc", coords={{58.6,39.6}}},
+                }}
+            }}
+        },
+        acquisition={
+            {"Purchase a %s.", "i46398"},
+        }
     }, 
     [225]={
         name="Curious Oracle Hatchling",
@@ -3384,13 +3939,47 @@ PETS.all ={
         isTradeable=false,
         isUnique=false,
         isPassive=false,
+        intermittent = true,
         source="World Event",
+        eventName="Children's Week",
         flavor="The bouncy gurloc is a distant cousin of the murloc.",
         icon="252780",
-        eventName="Children's Week",
-        locations={{continent="Northrend", zone="Dalaran (Northrend)", mapID=4395, mapFloor=1, coords={{49.4,69.4},}}},
         possbileBreeds={"B/B"},
         baseStats={8, 8, 8},
+        pois={
+            {name="Points of interest:", entries={
+                {id="q13926:Little Orphan Roo Of The Oracles", maps={
+                    {id="n34365:Orphan Matron Aria", mapID=125, type="start", coords={{49.6,63.6}}},
+                }},
+                {id="q13929:The Biggest Tree Ever!", maps={
+                    {display="Tree", mapID=116, type="end", coords={{50.84,42.73}}},
+                }},
+                {id="q13933:The Bronze Dragonshrine", maps={
+                    {display="Bronze Dragonshrine", mapID=115, type="end", coords={{70.15,37.71}}},
+                }},
+                {id="q13950:Playmates!", maps={
+                    {display="Winterfin Retreat", mapID=114, type="end", coords={{43.2,13.6}}},
+                }},
+                {id="q13956:Meeting a Great One", maps={
+                    {display="Waygate", mapID=119, type="poi", coords={{40,83}}},
+                    {id="n28092:The Etymidian", mapID=78, type="end", coords={{47.6,9.2}}},
+                }},
+                {id="q13954:The Dragon Queen", maps={
+                    {id="n26443:Tariolstrasz", subDisplay="ride to top", mapID=115, type="npc", coords={{57.8,54.2}}},
+                    {id="n26917:Alexstrasza", mapID=115, type="end", coords={{59.8,54.6}}},
+                }},
+                {id="q13937:A Trip To The Wonderworks", maps={
+                    {id="n29478:Jepetto Joybuzz", mapID=125, type="npc", coords={{44.6,46.0}}},
+                }},
+                {id="q13959:Back To The Orphanage", maps={
+                    {id="n34365:Orphan Matron Aria", mapID=125, type="end", coords={{49.6,63.6}}},
+                }},
+            }}
+        },
+        acquisition={
+            {"Only available during the Children's Week seasonal event (end of April to beginning of May).", "i46545"},
+            {"You'll receive a %s in the mail after the quest chain is complete.", "i46545"},
+        }
     }, 
     [226]={
         name="Curious Wolvar Pup",
@@ -3402,13 +3991,47 @@ PETS.all ={
         isTradeable=false,
         isUnique=false,
         isPassive=false,
+        intermittent = true,
         source="World Event",
+        eventName="Children's Week",
         flavor="Despite their smaller stature, the wolvar are some of the most aggressive creatures in Northrend. This often makes their curious nature intimidating.",
         icon="236698",
-        eventName="Children's Week",
-        locations={{continent="Northrend", zone="Dalaran (Northrend)", mapID=4395, mapFloor=1, coords={{49.4,69.4},}}},
         possbileBreeds={"P/P"},
         baseStats={8, 8, 8},
+        pois={
+            {name="Points of interest:", entries={
+                {id="q13927:Little Orphan Kekek Of The Wolvar", maps={
+                    {id="n34365:Orphan Matron Aria", mapID=125, type="start", coords={{49.6,63.6}}},
+                }},
+                {id="q13930:Home Of The Bear-Men", maps={
+                    {display="Tree", mapID=116, type="end", coords={{50.84,42.73}}},
+                }},
+                {id="q13934:The Bronze Dragonshrine", maps={
+                    {display="Bronze Dragonshrine", mapID=115, type="end", coords={{70.15,37.71}}},
+                }},
+                {id="q13951:Playmates!", maps={
+                    {display="Winterfin Retreat", mapID=115, type="end", coords={{46.6,60}}},
+                }},
+                {id="q13955:The Dragon Queen", maps={
+                    {id="n26443:Tariolstrasz", subDisplay="ride to top", mapID=115, type="npc", coords={{57.8,54.2}}},
+                    {id="n26917:Alexstrasza", mapID=115, type="end", coords={{59.8,54.6}}},
+                }},
+                {id="q13957:The Mighty Hemet Nesingwary", maps={
+                    {display="Waygate", mapID=119, type="poi", coords={{40,83}}},
+                    {id="n27986:Hemet Nesingwary", mapID=119, type="end", coords={{27.0,58.6}}},
+                }},
+                {id="q13938:A Visit To The Wonderworks", maps={
+                    {id="n29478:Jepetto Joybuzz", mapID=125, type="npc", coords={{44.6,46.0}}},
+                }},
+                {id="q13960:Back To The Orphanage", maps={
+                    {id="n34365:Orphan Matron Aria", mapID=125, type="end", coords={{49.6,63.6}}},
+                }},
+            }}
+        },
+        acquisition={
+            {"Only available during the Children's Week seasonal event (end of April to beginning of May)."},
+            {"You'll receive a %s in the mail after the quest chain is complete.", "i46544"},
+        }
     }, 
     [227]={
         name="Warbot",
@@ -3420,13 +4043,24 @@ PETS.all ={
         isTradeable=false,
         isUnique=true,
         isPassive=false,
-        source="Promotion",
+        source="Vendor",
         flavor="A fighting robot fueled by delicious red or blue electrolytes.",
         icon="134239",
-        promotion="Mountain Dew Promotion",
-        unobtainable=true,
         possbileBreeds={"P/P"},
         baseStats={8, 8, 8},
+        pois={
+            {name="Vendors:", entries={
+                {id="", maps={
+                    {id="n52358:Craggle Wobbletop", mapID=84, currencies={"cgold:500"}, type="npc", coords={{56.4,67.4},{56.4,67.8},{56.4,69.2},{56.4,69.8},{56.6,67.2},{56.6,67.6},{56.6,70.4},{56.8,71},{57.2,65.8},{57.2,72.4},{57.4,65.4},{57.4,72.8},{57.4,73.6},{57.6,73.4},{57.8,74.2},{58,74.8},{58.2,64.6},{58.2,75.6},{58.4,64.4},{58.4,76.6},{58.6,76.8},{58.8,64},{59.2,63.4},{59.8,62.8},{60.4,62.2},{60.6,62.2},{61.4,61.4},{61.6,61.6},{62.4,61.2},{63.4,61},{63.6,61.2},{64.6,61.4},{65,62},{65.4,62.6},{65.6,63},{66.2,63.8},{66.6,64.4}}},
+                    {id="n52809:Blax Bottlerocket", mapID=85, currencies={"cgold:500"}, type="npc", coords={{57,52.4},{57.2,52.8},{57.4,51.4},{57.6,53.4},{57.8,51},{58.2,62.6},{58.4,54.4},{58.4,55.4},{58.4,55.8},{58.4,56.6},{58.4,57.6},{58.4,61.2},{58.4,62},{58.6,53.8},{58.6,55.2},{58.6,56.4},{58.6,57.4},{58.6,57.8},{58.6,61.6},{58.8,58.8},{58.8,60.4},{58.8,61.2},{59,51.2},{59,52.8},{59.2,52.4}}},
+                    {id="n29478:Jepetto Joybuzz", mapID=41, currencies={"cgold:500"}, type="npc", coords={{44.6,46.0}}},
+                }}
+            }}
+        },
+        acquisition={
+            {"This pet was previously given out as part of a Mountain Dew promotion in 2009."},
+            {"It was then returned to the game via vendors. Purchase a %s.", "i46767"},
+        }
     }, 
     [228]={
         name="Grunty",
@@ -3438,13 +4072,17 @@ PETS.all ={
         isTradeable=false,
         isUnique=true,
         isPassive=false,
+        unobtainable=true,
         source="Promotion",
+        promotion="BlizzCon 2009",
         flavor="Only the rarest of murlocs is able to successfully cross dimensional barriers. Fewer still return with the kind of advanced armor and weaponry possessed by Grunty.",
         icon="656340",
-        promotion="BlizzCon 2009",
-        unobtainable=true,
         possbileBreeds={"H/P"},
         baseStats={8, 8, 8},
+        acquisition={
+            {"This pet was previously given out to attendees of BlizzCon 2009 as well as via a DirectTV promotion."},
+            {"You may be able to purchase this on eBay."},
+        }
     }, 
     [229]={
         name="Shimmering Wyrmling",
@@ -3459,11 +4097,21 @@ PETS.all ={
         source="Vendor",
         flavor="This extremely rare species of mana wyrm is prized for its unique coloration and even temperament.",
         icon="132849",
-        currency="item",
-        npcs={{name="Hiren Loresong"}},
-        locations={{mapID=118, coords={{76.2,19.2},}}},
         possbileBreeds={"B/B"},
         baseStats={8, 8, 8},
+        pois={
+            {name="Vendors:", entries={
+                {id="", maps={
+                    {id="n167081:Vasarin Redmorn", subDisplay="horde", mapID=118, currencies={"c241:40"}, type="npc", coords={{76.2,24.0}}},
+                    {id="n34881:Hiren Loresong", subDisplay="alliance", mapID=118, currencies={"c241:40"}, type="npc", coords={{76.2,19.6}}},
+                }}
+            }}
+        },
+        acquisition={
+            {"Horde requires exalted with Sunreavers."},
+            {"Alliance requires exalted with The Silver Covenant."},
+            {"Gain the necessary currency and buy a %s.", "i46820"},
+        }
     }, 
     [231]={
         name="Jade Tiger",
@@ -3475,13 +4123,16 @@ PETS.all ={
         isTradeable=false,
         isUnique=true,
         isPassive=false,
+        unobtainable=true,
         source="Promotion",
+        promotion="Recruit-A-Friend",
         flavor="Considered to be lucky, tigers carved of jade are prized, but taming a jade tiger itself is an even greater prize.",
         icon="134134",
-        promotion="Recruit-A-Friend",
-        unobtainable=true,
         possbileBreeds={"B/B"},
         baseStats={8.5, 8, 7.5},
+        acquisition={
+            {"Initially this was a promotional pet for China in 2009. It then became a Recruit-A-Friend reward in 2012."},
+        }
     }, 
     [232]={
         name="Darting Hatchling",
@@ -3493,13 +4144,22 @@ PETS.all ={
         isTradeable=true,
         isUnique=false,
         isPassive=false,
-        source="Drop",
+        source="Treasure",
         flavor="Rarely leaves nest until maturity. Enjoys conducting pranks on the nearby Razormaw nest.",
         icon="132193",
-        npcs={{name="Dart's Nest"}},
-        locations={{mapID=70, coords={{49.1,17.5},}}},
         possbileBreeds={"P/S"},
         baseStats={7, 8.5, 8.5},
+        pois={
+            {name="Points of interest:", entries={
+                {id="", maps={
+                    {id="o202080:Dart's Nest", mapID=70, type="treasure", coords={{46.4,17.2},{46.5,17.2},{47.9,19},{48,14.2},{49.1,17.4}}},
+                }}
+            }}
+        },
+        acquisition={
+            {"Loot a nest to receive a %s.", "i48112"},
+            {"It is also available in the Black Market Auction House."},
+        }
     }, 
     [233]={
         name="Deviate Hatchling",
@@ -3514,13 +4174,20 @@ PETS.all ={
         source="Drop",
         flavor="The demand for this purple-skinned breed has drastically reduced the raptor population near the Wailing Caverns.",
         icon="132193",
-        npcs={
-            {name="Deviate Guardian"},
-            {name="Deviate Ravager"}
-        },
-        locations={{continent="Kalimdor", zone="Northern Barrens", area="Wailing Caverns"}},
         possbileBreeds={"P/S"},
         baseStats={7, 8.5, 8.5},
+        pois={
+            {name="Npc drop:", entries={
+                {id="", maps={
+                    {id="n3637:Deviate Guardian", chance=.02, mapID=279},
+                    {id="n3636:Deviate Ravager", chance=.02, mapID=279},
+                }}
+            }}
+        },
+        acquisition={
+            {"Enter the dungeon to kill the 2 types of mobs, then exit and reset as necessary until you receive a %s.", "i48114"},
+            {"It is also available in the Black Market Auction House."},
+        }
     }, 
     [234]={
         name="Gundrak Hatchling",
@@ -3535,10 +4202,19 @@ PETS.all ={
         source="Drop",
         flavor="This crafty raptor was born in the icy wastes of Northrend. Its harsh upbringing gives it strength when many others would perish.",
         icon="132253",
-        npcs={{name="Gundrak Raptor"}},
-        locations={{mapID=121, coords={{73.2,17.6},}}},
         possbileBreeds={"P/B"},
         baseStats={7, 8.5, 8.5},
+        pois={
+            {name="Points of interest:", entries={
+                {id="", maps={
+                    {id="n29334:Gundrak Raptor", chance=.09, mapID=121, type="kill", coords={{71.2,18.4},{71.2,18.6},{71.2,28.2},{71.2,28.6},{71.4,21.4},{71.4,21.8},{71.4,24.4},{71.4,24.6},{71.4,30.4},{71.4,30.6},{71.6,18.4},{71.6,18.6},{71.6,21.4},{71.6,21.8},{71.6,22.6},{71.6,24.4},{71.6,24.6},{71.6,30.2},{71.6,30.6},{72.4,27.8},{72.6,27.4},{72.6,27.8},{73,19.4},{73,19.6},{73.2,21.4},{73.2,21.6},{73.4,17.2},{73.8,17},{73.8,17.6},{74,16.4},{74.4,35.4},{74.4,35.6},{74.6,35.4},{74.6,35.6},{74.6,37.2},{75.2,38.4},{75.2,38.6},{76.2,17},{76.2,17.6},{76.4,15.4},{76.4,15.6},{76.4,40.4},{76.4,40.6},{76.6,15.2},{76.6,15.8},{76.6,40.4},{76.6,40.8},{77.2,43.4},{77.2,43.6},{78.2,16.4},{78.2,16.6},{78.4,13.4},{78.4,13.6},{78.4,40.6},{78.6,13.6},{79,40.2},{79.2,41},{79.4,15.4},{79.4,15.6},{79.8,32.4},{79.8,32.6},{79.8,38.6},{80.2,38.2},{80.6,37.4},{80.6,37.6},{81,33.4},{81,33.8},{81.2,32},{81.2,35.6},{81.4,35.4},{81.6,31.4},{81.6,31.6},{82.4,34.4},{82.4,34.6},{82.6,34.4},{82.6,34.6},{83.4,26.4},{83.4,26.6},{83.6,26.6},{84,26.4},{84.4,25},{84.8,27.4},{84.8,27.8},{85.4,29.6},{85.6,29.8},{86.8,28.4},{86.8,28.6},{87,24.2},{87,24.6},{87,26.2},{87,26.6}}},
+                }}
+            }}
+        },
+        acquisition={
+            {"Farm until you receive a %s.", "i48116"},
+            {"It is also available in the Black Market Auction House."},
+        }
     }, 
     [235]={
         name="Leaping Hatchling",
@@ -3553,10 +4229,19 @@ PETS.all ={
         source="Drop",
         flavor="This offspring of Takk the Leaper is incredibly agile and can maneuver through difficult environments with ease.",
         icon="132253",
-        npcs={{name="Takk's Nest"}},
-        locations={{mapID=10, coords={{62.8,20.2},}}},
         possbileBreeds={"P/B"},
         baseStats={7, 8.5, 8.5},
+        pois={
+            {name="Points of interest:", entries={
+                {id="", maps={
+                    {id="o202081:Takk's Nest", mapID=10, type="treasure", coords={{61.0,19.8},{62.8,20.2},{64.1,23.0},{65.0,28.7}}},
+                }}
+            }}
+        },
+        acquisition={
+            {"Loot a nest to receive a %s.", "i48118"},
+            {"It is also available in the Black Market Auction House."},
+        }
     }, 
     [236]={
         name="Obsidian Hatchling",
@@ -3571,11 +4256,18 @@ PETS.all ={
         source="Vendor",
         flavor="This hatchling is coveted for its unique coloration. Despite Breanni's loving care, the raptor's feral nature cannot be restrained.",
         icon="132253",
-        npcs={{name="Breanni"}},
-        items={{name="gold"}},
-        locations={{continent="Northrend", zone="Crystalsong Forest", mapID=4395, mapFloor=1, coords={{58.6,39.6},}}},
         possbileBreeds={"H/H"},
         baseStats={7.5, 8.5, 8},
+        pois={
+            {name="Vendors:", entries={
+                {id="", maps={
+                    {id="n28951:Breanni ", mapID=41, currencies={"cgold:40"}, type="npc", coords={{58.6,39.6}}},
+                }}
+            }}
+        },
+        acquisition={
+            {"Purchase a %s.", "i48120"},
+        }
     }, 
     [237]={
         name="Ravasaur Hatchling",
@@ -3590,10 +4282,19 @@ PETS.all ={
         source="Drop",
         flavor="Larger than other raptor infants, these hatchlings grow into towering reptilian beasts capable of massive devastation.",
         icon="132253",
-        npcs={{name="Ravasaur Matriarch's Nest"}},
-        locations={{mapID=78, coords={{68.9,61.2},}}},
         possbileBreeds={"B/B"},
         baseStats={7, 8.5, 8.5},
+        pois={
+            {name="Points of interest:", entries={
+                {id="", maps={
+                    {id="o202082:Ravasaur Matriarch's Nest", mapID=78, type="treasure", coords={{62,73.3},{62,73.6},{62.2,65.3},{63,63.2},{68.9,61.2},{68.9,66.9}}},
+                }}
+            }}
+        },
+        acquisition={
+            {"Loot a nest to receive a %s.", "i48122"},
+            {"It is also available in the Black Market Auction House."},
+        }
     }, 
     [238]={
         name="Razormaw Hatchling",
@@ -3608,10 +4309,19 @@ PETS.all ={
         source="Drop",
         flavor="Razormaw eggs are protected fiercely by their mothers. Their cuteness belies their inherited ferocity.",
         icon="132193",
-        npcs={{name="Razormaw Matriarch's Nest"}},
-        locations={{mapID=56, coords={{69.9,29.1},}}},
         possbileBreeds={"S/B"},
         baseStats={7, 8.5, 8.5},
+        pois={
+            {name="Points of interest:", entries={
+                {id="", maps={
+                    {id="o202083:Razormaw Matriarch's Nest", mapID=56, type="treasure", coords={{69.9,29.1}}},
+                }}
+            }}
+        },
+        acquisition={
+            {"Loot a nest to receive a %s.", "i48124"},
+            {"It is also available in the Black Market Auction House."},
+        }
     }, 
     [239]={
         name="Razzashi Hatchling",
@@ -3627,11 +4337,16 @@ PETS.all ={
         flavor="Razzashi raptors are among the cleverest predators in the jungle, making them favored by the Gurubashi trolls.",
         icon="132193",
         locations={
-            {mapID=50, coords={{67.2,31.4},}},
-            {continent="Eastern Kingdoms", zone="The Cape of Stranglethorn"}
+            {mapID=50},
+            {mapID=210},
         },
         possbileBreeds={"P/P"},
         baseStats={8, 8, 8},
+        chance=.01,
+        acquisition={
+            {"%s has a low .01%% world drop rate from any mob in either Stranglethorn zone.", "i48126"},
+            {"It is also available in the Black Market Auction House."},
+        }
     }, 
     [240]={
         name="Onyx Panther",
@@ -3643,13 +4358,16 @@ PETS.all ={
         isTradeable=false,
         isUnique=true,
         isPassive=false,
+        unobtainable=true,
         source="Promotion",
+        promotion="Korea World Event",
         flavor="The onyx panther is invisible at night, like a stalking shadow, and disappears with the dawn.",
         icon="134399",
-        promotion="Korea World Event",
-        unobtainable=true,
         possbileBreeds={"B/B"},
         baseStats={8.5, 8.5, 7},
+        acquisition={
+            {"This pet was a promotional offer to players in Korea"}
+        }
     }, 
     [241]={
         name="Tuskarr Kite",
@@ -3662,12 +4380,15 @@ PETS.all ={
         isUnique=false,
         isPassive=false,
         source="Trading Card Game",
+        tcg="Scourgewar",
         flavor="Seeing these kites soaring above Northrend's shores is a clear sign that tuskarr are nearby.",
         icon="318523",
-        tcg="Scourgewar",
-        locations={{mapID=210, coords={{42.6,71.6},}}},
         possbileBreeds={"H/B"},
         baseStats={8, 8, 8},
+        acquisition={
+            {"This pet was available as part of the Trading Card Game. You may find it on eBay."},
+            {"It is also available in the Black Market Auction House."},
+        }
     }, 
     [242]={
         name="Spectral Tiger Cub",
@@ -3680,12 +4401,16 @@ PETS.all ={
         isUnique=false,
         isPassive=false,
         source="Trading Card Game",
+        tcg="Scourgewar",
         flavor="Affectionate and curious, these kittens seem to find the most peculiar hiding places.",
         icon="298591",
-        tcg="Scourgewar",
-        locations={{mapID=210, coords={{42.6,71.6},}}},
         possbileBreeds={"P/S"},
         baseStats={7.5, 8.5, 8},
+        acquisition={
+            {"This pet was available as part of the Trading Card Game. You may find it on eBay."},
+            {"It is also available in the Black Market Auction House."},
+            {"It was then offered on the Trading Post in July 2023. That version was not tradeable."},
+        }
     }, 
     [243]={
         name="Onyxian Whelpling",
@@ -3697,13 +4422,16 @@ PETS.all ={
         isTradeable=false,
         isUnique=true,
         isPassive=false,
+        unobtainable=true,
         source="Promotion",
+        promotion="WoW's 5th Anniversary",
         flavor="Spawn of Onyxia, this young dragon has decided that it doesn't want to follow in its grandfathers' cataclysmic footsteps.",
         icon="134154",
-        promotion="WoW's 5th Anniversary",
-        unobtainable=true,
         possbileBreeds={"P/B"},
         baseStats={9, 9, 6},
+        acquisition={
+            {"This pet was distributed as part of WoW's 5th anniversary."},
+        }
     }, 
     [244]={
         name="Core Hound Pup",
@@ -3716,11 +4444,14 @@ PETS.all ={
         isUnique=true,
         isPassive=false,
         source="Promotion",
+        promotion="Authenticator Account Link",
         flavor="Found in the Firelands and the Molten Core, core hounds can trace their lineage back to the alpha male, Magmadar.",
         icon="236191",
-        promotion="Authenticator Account Link",
         possbileBreeds={"H/P"},
         baseStats={8.5, 9, 6.5},
+        acquisition={
+            {"This pet is given when you add an authenticator to your battleNet account."},
+        }
     }, 
     [245]={
         name="Gryphon Hatchling",
@@ -3732,12 +4463,15 @@ PETS.all ={
         isTradeable=false,
         isUnique=true,
         isPassive=false,
+        unobtainable=true,
         source="In-Game Shop",
         flavor="A gift from the Wildhammer dwarves to the heroes of the Alliance, these hatchlings are descendants of the same gryphons ridden by Falstad and his entourage into Grim Batol.",
         icon="327735",
-        unobtainable=true,
         possbileBreeds={"P/S"},
         baseStats={8, 8, 8},
+        acquisition={
+            {"This pet was awarded if you purchased a matching Plushie toy from the store."},
+        }
     }, 
     [246]={
         name="Wind Rider Cub",
@@ -3749,12 +4483,15 @@ PETS.all ={
         isTradeable=false,
         isUnique=true,
         isPassive=false,
+        unobtainable=true,
         source="In-Game Shop",
         flavor="Thorg No-Legs never paid heed to the old orc saying, 'Don't pull a wyvern's tail.'",
         icon="328270",
-        unobtainable=true,
         possbileBreeds={"B/B"},
         baseStats={8, 8, 8},
+        acquisition={
+            {"This pet was awarded if you purchased a matching Plushie toy from the store."},
+        }
     }, 
     [247]={
         name="Zipao Tiger",
@@ -3766,13 +4503,16 @@ PETS.all ={
         isTradeable=false,
         isUnique=true,
         isPassive=false,
+        unobtainable=true,
         source="Promotion",
+        promotion="Recruit-A-Friend",
         flavor="A rarely seen family of tigers, many believe (perhaps incorrectly) that some residual magic or other event is responsible for the unique color.",
         icon="237194",
-        promotion="Recruit-A-Friend",
-        unobtainable=true,
         possbileBreeds={"H/H"},
         baseStats={8, 8, 8},
+        acquisition={
+            {"This was a Recruit-A-Friend reward for asian servers."},
+        }
     }, 
     [248]={
         name="Pandaren Monk",
@@ -3784,12 +4524,16 @@ PETS.all ={
         isTradeable=false,
         isUnique=true,
         isPassive=false,
+        unobtainable=true,
         source="In-Game Shop",
         flavor="The pandaren monk is a fearless traveling companion, constantly training in his art... unless you offer him a drink. He considers it rude to refuse.",
         icon="328269",
-        unobtainable=true,
         possbileBreeds={"P/S"},
         baseStats={8, 8, 8},
+        acquisition={
+            {"This was first available in the Store in 2009 and its proceeds went to the Make A Wish Foundation."},
+            {"It was later reintroduced via the Trading Post in March 2023."},
+        }
     }, 
     [249]={
         name="Lil' K.T.",
@@ -3801,12 +4545,16 @@ PETS.all ={
         isTradeable=false,
         isUnique=true,
         isPassive=false,
-        source="",
+        unobtainable=true,
+        source="In-Game Shop",
         flavor="In life, Kel'Thuzad betrayed the Kirin Tor and created the Cult of the Damned. In death, he serves the Scourge as the Archlich Lord of Naxxramas.",
         icon="254094",
-        unobtainable=true,
         possbileBreeds={"H/P"},
         baseStats={8.5, 8.5, 7},
+        acquisition={
+            {"This was first available in the Store in 2009"},
+            {"It was later reintroduced via the Trading Post in October 2023."},
+        }
     }, 
     [250]={
         name="Perky Pug",
@@ -3821,9 +4569,12 @@ PETS.all ={
         source="Achievement",
         flavor="Although small, pugs are very dangerous when provoked.",
         icon="133718",
-        achievement={name="Looking For Multitudes", ID=4478},
+        achievement={id="a4478"},
         possbileBreeds={"P/S"},
         baseStats={7.5, 9, 7.5},
+        acquisition={
+            {"Complete heroic dungeons with 100 different people to receive the achievement and the pet will be mailed to you."},
+        }
     }, 
     [251]={
         name="Toxic Wasteling",
@@ -3835,12 +4586,25 @@ PETS.all ={
         isTradeable=true,
         isUnique=false,
         isPassive=false,
+        intermittent=true,
         source="World Event",
+        eventName="Love is in the Air",
         flavor="This, um, 'adorable' little guy likes to play with critters. Just don't let them get too close.",
         icon="134437",
-        eventName="Love is in the Air",
         possbileBreeds={"B/B"},
         baseStats={8.5, 8.5, 7},
+        pois={
+            {name="Drop:", entries={
+                {id="", maps={
+                    {id="i54537", chance=5},
+                }}
+            }}
+        },
+        acquisition={
+            {"The pet is only available during the Love is in the Air seasonal event (valentine's day)."},
+            {"%s has a 5%% chance of dropping from the %s reward given when completing the event's dungeon.", "i50446", "i54537"},
+            {"You can only receive one box per day per character."},
+        }
     }, 
     [253]={
         name="Frigid Frostling",
@@ -3852,12 +4616,26 @@ PETS.all ={
         isTradeable=true,
         isUnique=false,
         isPassive=false,
+        intermittent=true,
         source="World Event",
+        eventName="Midsummer Fire Festival",
         flavor="While not nearly as destructive as its original master, the Ice Lord Ahune, the frostling has been known to lob chilly snowballs at unsuspecting adventurers.",
         icon="135851",
-        eventName="Midsummer Fire Festival",
         possbileBreeds={"B/B"},
         baseStats={8, 8, 8},
+        pois={
+            {name="Drop:", entries={
+                {id="", maps={
+                    {id="i54536", chance=3},
+                    {id="i117394", chance=3},
+                }}
+            }}
+        },
+        acquisition={
+            {"The pet is only available during the Midsummer Fire Festival seasonal event (late June to early July)."},
+            {"%s has a 3%% chance of dropping from the reward given when completing the event's dungeon.", "i53641"},
+            {"You can only receive one reward per day per character."},
+        }
     }, 
     [254]={
         name="Blue Clockwork Rocket Bot",
@@ -3872,24 +4650,22 @@ PETS.all ={
         source="Vendor",
         flavor="Jepetto's top-selling toy this season, the bot's new blue chassis has children across Azeroth scrambling for this feisty battle bot.",
         icon="133000",
-        currency="gold",
-        cost=50,
-        npcs={
-            {name="Craggle Wobbletop"},
-            {name="Blax Bottlerocket"},
-            {name="Japetto Joybuzz"},
-            {name="Clockwork Assistant"},
-            {name="Bangle Wobblebonk"}
-        },
-        locations={
-            {continent="Eastern Kingdoms", zone="Stormwind City", mapID=4395, mapFloor=1, coords={{60.6,62.2},{44.6,46},{44.8,46.2},}},
-            {mapID=85, coords={{59.2,52.2},}},
-            {continent="Broken Isles", zone="Dalaran (Broken Isles)"},
-            {continent="Northrend", zone="Dalaran (Northrend)"},
-            {continent="Kul Tiras", zone="Boralus"}
-        },
         possbileBreeds={"B/B", "S/S", "P/S"},
         baseStats={8, 8, 8},
+        pois={
+            {name="Vendors:", entries={
+                {id="", maps={
+                    {id="n52358:Craggle Wobbletop", mapID=84, currencies={"cgold:40"}, type="npc", coords={{56.4,67.4},{56.4,67.8},{56.4,69.2},{56.4,69.8},{56.6,67.2},{56.6,67.6},{56.6,70.4},{56.8,71},{57.2,65.8},{57.2,72.4},{57.4,65.4},{57.4,72.8},{57.4,73.6},{57.6,73.4},{57.8,74.2},{58,74.8},{58.2,64.6},{58.2,75.6},{58.4,64.4},{58.4,76.6},{58.6,76.8},{58.8,64},{59.2,63.4},{59.8,62.8},{60.4,62.2},{60.6,62.2},{61.4,61.4},{61.6,61.6},{62.4,61.2},{63.4,61},{63.6,61.2},{64.6,61.4},{65,62},{65.4,62.6},{65.6,63},{66.2,63.8},{66.6,64.4}}},
+                    {id="n52809:Blax Bottlerocket", mapID=85, currencies={"cgold:45"}, type="npc", coords={{57,52.4},{57.2,52.8},{57.4,51.4},{57.6,53.4},{57.8,51},{58.2,62.6},{58.4,54.4},{58.4,55.4},{58.4,55.8},{58.4,56.6},{58.4,57.6},{58.4,61.2},{58.4,62},{58.6,53.8},{58.6,55.2},{58.6,56.4},{58.6,57.4},{58.6,57.8},{58.6,61.6},{58.8,58.8},{58.8,60.4},{58.8,61.2},{59,51.2},{59,52.8},{59.2,52.4}}},
+                    {id="n29478:Jepetto Joybuzz", mapID=41, currencies={"cgold:45"}, type="npc", coords={{44.6,46.0}}},
+                    {id="n84212:Kazbala", mapID=535, currencies={"cgold:50"}, type="npc", coords={{45.2,38.8}}},
+                    {id="n144084:Bangle Wobblebonk", mapID=1161, currencies={"cgold:50"}, type="npc", coords={{56.12,65.01}}},
+                }}
+            }}
+        },
+        acquisition={
+            {"Purchase a %s.", "i54436"},
+        }
     }, 
     [255]={
         name="Celestial Dragon",
@@ -3904,9 +4680,12 @@ PETS.all ={
         source="Achievement",
         flavor="Breanni in Dalaran, one of the world's foremost collectors of exotic pets, will only award the mystical Celestial Dragon to fellow collectors whose obsession rivals her own.",
         icon="368365",
-        achievement={name="Littlest Pet Shop", ID=5875},
+        achievement={id="a5875"},
         possbileBreeds={"H/H"},
         baseStats={7.5, 9, 7.5},
+        acquisition={
+            {"Collect 150 unique pets and this pet will automatically be added to your pet journal."},
+        }
     }, 
     [256]={
         name="Lil' XT",
@@ -3918,12 +4697,16 @@ PETS.all ={
         isTradeable=false,
         isUnique=true,
         isPassive=false,
+        unobtainable=true,
         source="In-Game Shop",
         flavor="Modeled after the huge titan prototype in Ulduar, this volatile little construct plays hard with its toys.",
         icon="254104",
-        unobtainable=true,
         possbileBreeds={"H/P"},
         baseStats={8, 9, 7},
+        acquisition={
+            {"This pet was first available in the store in 2010."},
+            {"It was then available as an Amazon Prime promotion in April 2023."},
+        }
     }, 
     [258]={
         name="Mini Thor",
@@ -3935,13 +4718,17 @@ PETS.all ={
         isTradeable=false,
         isUnique=true,
         isPassive=false,
+        unobtainable=true,
         source="Promotion",
+        promotion="StarCraft II: Wings of Liberty Collector's Edition",
         flavor="Powerful artillery of the Terran army. The Thor is always the first one in and the last one out!",
         icon="387415",
-        promotion="StarCraft II: Wings of Liberty Collector's Edition",
-        unobtainable=true,
         possbileBreeds={"H/H"},
         baseStats={8.5, 9, 6.5},
+        acquisition={
+            {"Awarded to those that purchased the Collector's Edition of Starcraft II."},
+            {"It sometimes returns to the store as variants of Starcraft II deluxe/collectors editions, campaign collections, etc"},
+        }
     }, 
     [259]={
         name="Blue Mini Jouster",
@@ -3956,10 +4743,37 @@ PETS.all ={
         source="Quest",
         flavor="Unlike its gold counterpart, the blue mini jouster takes a leisurely pace when jabbing its opponent's eyeballs.",
         icon="132188",
-        quest={name="Egg Wave"},
-        locations={{mapID=198, coords={{42.8,45.2},}}},
         possbileBreeds={"H/B"},
         baseStats={8.5, 7.5, 8},
+        pois={
+            {name="Quests:", entries={
+                {id="q25810:The Hatchery Must Burn", maps={
+                    {id="n41003:Morthis Whisperwing", mapID=198, type="start", coords={{44.0,46.0}}},
+                    {display="Portal", mapID=198, type="poi", coords={{39.1,58.3}}},
+                    {id="n40578:Farden Talonshrike", mapID=198, type="end", coords={{37.2,56.2}}},
+                }},
+                {id="q25523:Flight in the Firelands", maps={
+                    {id="n40578:Farden Talonshrike", mapID=198, type="start", coords={{37.2,56.2}}},
+                    {display="Use Ctrl+4 to flap",},
+                }},
+                {id="q25525:Wave One", maps={
+                    {id="n40578:Farden Talonshrike", mapID=198, type="start", coords={{37.2,56.2}}},
+                    {id="n39835:Twilight Knight Rider", mapID=198, type="dot", coords={{33.6,53.6},{34.2,51.6},{35.2,54.2},{36.4,54},{37,53},{37.6,54.2}}},
+                }},
+                {id="q25544:Wave Two", maps={
+                    {id="n40578:Farden Talonshrike", mapID=198, type="start", coords={{37.2,56.2}}},
+                    {id="n40660:Twilight Lancer", mapID=198, type="dot", coords={{33.2,55.4},{33.8,54.6},{34,53.8},{34.6,50.2},{34.6,53.4},{34.8,57},{35,55.6},{35.2,55.4},{36.8,51}}},
+                }},
+                {id="q25523:Egg Wave", maps={
+                    {id="n40578:Farden Talonshrike", mapID=198, type="start", coords={{37.2,56.2}}},
+                    {display="There's a shelf with 15 eggs and no boulders"},
+                }}
+            }}
+        },
+        acquisition={
+            {"This quest is part of a series."},
+            {"WARNING: If you get motion sickness easily then you should probably have someone else do this quest chain for you."},
+        }
     }, 
     [260]={
         name="Gold Mini Jouster",
@@ -3974,10 +4788,37 @@ PETS.all ={
         source="Quest",
         flavor="This critter is infamous for its ability to unleash a fast and furious eyeball jabbing.",
         icon="132200",
-        quest={name="Egg Wave"},
-        locations={{mapID=198, coords={{42.8,45.2},}}},
         possbileBreeds={"P/S"},
         baseStats={8, 8.5, 7.5},
+        pois={
+            {name="Quests:", entries={
+                {id="q25810:The Hatchery Must Burn", maps={
+                    {id="n41003:Morthis Whisperwing", mapID=198, type="start", coords={{44.0,46.0}}},
+                    {display="Portal", mapID=198, type="poi", coords={{39.1,58.3}}},
+                    {id="n40578:Farden Talonshrike", mapID=198, type="end", coords={{37.2,56.2}}},
+                }},
+                {id="q25523:Flight in the Firelands", maps={
+                    {id="n40578:Farden Talonshrike", mapID=198, type="start", coords={{37.2,56.2}}},
+                    {display="Use Ctrl+4 to flap",},
+                }},
+                {id="q25525:Wave One", maps={
+                    {id="n40578:Farden Talonshrike", mapID=198, type="start", coords={{37.2,56.2}}},
+                    {id="n39835:Twilight Knight Rider", mapID=198, type="dot", coords={{33.6,53.6},{34.2,51.6},{35.2,54.2},{36.4,54},{37,53},{37.6,54.2}}},
+                }},
+                {id="q25544:Wave Two", maps={
+                    {id="n40578:Farden Talonshrike", mapID=198, type="start", coords={{37.2,56.2}}},
+                    {id="n40660:Twilight Lancer", mapID=198, type="dot", coords={{33.2,55.4},{33.8,54.6},{34,53.8},{34.6,50.2},{34.6,53.4},{34.8,57},{35,55.6},{35.2,55.4},{36.8,51}}},
+                }},
+                {id="q25523:Egg Wave", maps={
+                    {id="n40578:Farden Talonshrike", mapID=198, type="start", coords={{37.2,56.2}}},
+                    {display="There's a shelf with 15 eggs and no boulders"},
+                }}
+            }}
+        },
+        acquisition={
+            {"This quest is part of a series."},
+            {"WARNING: If you get motion sickness easily then you should probably have someone else do this quest chain for you."},
+        }
     }, 
     [261]={
         name="Personal World Destroyer",
@@ -3992,9 +4833,29 @@ PETS.all ={
         source="Profession",
         flavor="Goblin engineering at its finest. Blueprints based on the massive fel reaver in Hellfire Peninsula.",
         icon="133861",
-        profession="Engineering",
         possbileBreeds={"P/P"},
         baseStats={8.5, 7.5, 8},
+        professionDetail ={
+            profession="Engineering",
+            desc="Cataclysm 25",
+            recipe=84412,
+            materials = {
+                {qty=8, id=60224},
+                {qty=8, id=67749},
+                {qty=10, id=54849},
+            }
+        },
+        pois={
+            {name="Trainers:", entries={
+                {id="", maps={
+                    {id="n5518:Lilliam Sparkspindle", mapID=84, currencies={"cgold:16"}, type="npc", coords={{62.8,32.0}}},
+                    {id="n93520:Didi the Wrench", mapID=501, currencies={"cgold:16"}, type="npc", coords={{38.8,25.6}}},
+                }}
+            }}
+        },
+        acquisition={
+            {"Learn the recipe from a trainer and then craft a %s", "i59597"},
+        }
     }, 
     [262]={
         name="De-Weaponized Mechanical Companion",
@@ -4009,9 +4870,30 @@ PETS.all ={
         source="Profession",
         flavor="The gold standard for sturdy gnomish design, this mechanical critter is the perfect companion for the lonely engineer on the go.",
         icon="466036",
-        profession="Engineering",
         possbileBreeds={"S/S"},
         baseStats={8.5, 7.5, 8},
+        professionDetail ={
+            profession="Engineering",
+            desc="Cataclysm 25",
+            recipe=84413,
+            materials = {
+                {qty=2, id=52182},
+                {qty=4, id=60224},
+                {qty=8, id=60224},
+                {qty=12, id=54849},
+            }
+        },
+        pois={
+            {name="Trainers:", entries={
+                {id="", maps={
+                    {id="n5518:Lilliam Sparkspindle", mapID=84, currencies={"cgold:16"}, type="npc", coords={{62.8,32.0}}},
+                    {id="n93520:Didi the Wrench", mapID=501, currencies={"cgold:16"}, type="npc", coords={{38.8,25.6}}},
+                }}
+            }}
+        },
+        acquisition={
+            {"Learn the recipe from a trainer and then craft a %s", "i60216"},
+        }
     }, 
     [264]={
         name="Crawling Claw",
@@ -4026,9 +4908,12 @@ PETS.all ={
         source="Archaeology",
         flavor="This appears to be nothing more than the paw of a small primate. A closer inspection shows that the hand has been dried by centuries of exposure to the sands of Uldum.",
         icon="134555",
-        locations={{mapID=249, coords={{49.8,54.9},}}},
         possbileBreeds={"P/S"},
         baseStats={8.5, 8.5, 7},
+        acquisition={
+            {"Hope for the right Tol'vir project."},
+            {"The rare projects require %s.", "c401:150"}
+        }
     }, 
     [265]={
         name="Pebble",
@@ -4040,13 +4925,25 @@ PETS.all ={
         isTradeable=false,
         isUnique=true,
         isPassive=false,
+        intermittent=true,
         source="Achievement",
+        achievement={id="a5449"},
         flavor="An adventurous little elemental, Pebble escaped hungry gyreworms in the Crumbling Depths, braved the emptiness of the Twisting Nether, and ultimately found himself rescued from a mailbox.",
         icon="136024",
-        achievement={name="Rock Lover", ID=5449},
-        locations={{mapID=207, coords={{55.4,14},}}},
         possbileBreeds={"H/H"},
         baseStats={9.5, 8, 6.5},
+        pois={
+            {name="Points of interest:", entries={
+                {id="", maps={
+                    {id="n44945:Pyrite Stonetender", mapID=207, type="start", coords={{55.4,14.0}}},
+                }}
+            }}
+        },
+        acquisition={
+            {"Become at least Honored with Therazane."},
+            {"Complete the daily quest %s offered by %s 10 times.", "q26710:Lost In The Deeps", "n44945:Pyrite Stonetender"},
+            {"You'll then earn the achievement and be awarded a %s.", "i60869"},
+        }
     }, 
     [266]={
         name="Fossilized Hatchling",
@@ -4063,6 +4960,10 @@ PETS.all ={
         icon="458255",
         possbileBreeds={"P/S"},
         baseStats={8.5, 8.5, 7},
+        acquisition={
+            {"Hope for the right Fossil project."},
+            {"The rare projects require %s.", "c393:85"}
+        }
     }, 
     [267]={
         name="Enchanted Lantern",
@@ -4077,9 +4978,32 @@ PETS.all ={
         source="Profession",
         flavor="Reduces the likelihood of being eaten by monsters when you enter pitch-black places.",
         icon="134249",
-        profession="Enchanting",
         possbileBreeds={"B/B"},
         baseStats={8, 8, 8},
+        professionDetail ={
+            profession="Enchanting",
+            desc="Cataclysm 75",
+            recipe=93841,
+            materials = {
+                {qty=1, id=52722},
+                {qty=8, id=52721},
+                {qty=8, id=52555},
+            }
+        },
+        pois={
+            {name="Vendors:", entries={
+                {id="", maps={
+                    {id="n3346:Kithas", mapID=85, currencies={"ci:20:52555"}, type="npc", coords={{53.2,48.8}}},
+                    {id="n4617:Thaddeus Webb", mapID=90, currencies={"ci:20:52555"}, type="npc", coords={{62.0,60.8}}},
+                    {id="n3012:Nata Dawnstrider", mapID=88, currencies={"ci:20:52555"}, type="npc", coords={{45.0,38.6}}},
+                    {id="n16635:Lyna", mapID=110, currencies={"ci:20:52555"}, type="npc", coords={{70.0,24.6}}},
+                    {id="n50146:Agatian Fallanos", mapID=241, currencies={"ci:20:52555"}, type="npc", coords={{76.6,49.4}}},
+                }}
+            }}
+        },
+        acquisition={
+            {"Purchase the recipe and then craft a %s", "i67274"},
+        }
     }, 
     [268]={
         name="Lil' Deathwing",
@@ -4091,13 +5015,17 @@ PETS.all ={
         isTradeable=false,
         isUnique=true,
         isPassive=false,
+        unobtainable=true,
         source="Promotion",
+        promotion="Cataclysm Collector's Edition",
         flavor="Nations tremble under his shadow - the Destroyer, the one-time Aspect of Earth, and the monster responsible for breaking Azeroth asunder.  Now in a convenient travel-size!",
         icon="441880",
-        promotion="Cataclysm Collector's Edition",
-        unobtainable=true,
         possbileBreeds={"P/P"},
         baseStats={8.5, 9, 6.5},
+        acquisition={
+            {"Given to those that purchase a Collectors Edition copy of Cataclsym."},
+            {"You may still be able to buy a copy on eBay."},
+        }
     }, 
     [270]={
         name="Dark Phoenix Hatchling",
@@ -4109,17 +5037,23 @@ PETS.all ={
         isTradeable=false,
         isUnique=true,
         isPassive=false,
-        source="Vendor",
+        source="Achievement",
         flavor="Fire hatchlings are born from the ashes of a phoenix. Dark hatchlings emerge from their shadows.",
         icon="464139",
-        currency="gold",
-        npcs={{name="Guild Vendor"}},
-        locations={
-            {mapID=84, coords={{64.6,76.8},}},
-            {mapID=85, coords={{48.2,75.6},}}
-        },
         possbileBreeds={"H/S"},
         baseStats={8.5, 8.5, 7},
+        pois={
+            {name="Achievements:", entries={
+                {id="a5144", subDisplay="alliance"},
+                {id="a5892", subDisplay="horde"},
+            }},
+            SHARED.guildVendors
+        },
+        acquisition={
+            {"This is a guild achievement whereby, collectively, the members of the guild must have 55 different exalted reputations."},
+            {"A member must be exalted with the guild for their reps to be considered."},
+            {"Members with an Honored guild rep can buy %s once the guild earns the achievement.", "i63138"},
+        }
     }, 
     [271]={
         name="Rustberg Gull",
@@ -4135,11 +5069,20 @@ PETS.all ={
         flavor="This bird is a salty veteran of the endless naval battles surrounding Tol Barad--a veteran whose grown plump from picking through the leftovers, that is.",
         icon="464160",
         currency="item",
-        reputation="Baradin's Wardens (Honored)",
-        npcs={{name="Quartermaster Brazie"}},
-        locations={{mapID=245, coords={{54.6,81},{72.6,62.6},}}},
+        reputation={type="Baradin's Wardens", level="Honored"},
         possbileBreeds={"B/B", "H/S", "P/B"},
         baseStats={8, 7.5, 8.5},
+        pois={
+            {name="Vendors:", entries={
+                {id="", maps={
+                    {id="n47328:Quartermaster Brazie", mapID=245, currencies={"c391:50"}, type="npc", coords={{72.6,62.6}}},
+                    {id="n48531:Pogg", mapID=245, currencies={"c391:50"}, type="npc", coords={{54.6,81.0}}},
+                }}
+            }}
+        },
+        acquisition={
+            {"Purchase a %s.", "i63355"},
+        }
     }, 
     [272]={
         name="Armadillo Pup",
@@ -4151,17 +5094,21 @@ PETS.all ={
         isTradeable=false,
         isUnique=true,
         isPassive=false,
-        source="Vendor",
+        source="Achievement",
         flavor="Rolls into a protective ball when it feels threatened. Or when its mother calls.",
         icon="464159",
-        currency="gold",
-        npcs={{name="Guild Vendor"}},
-        locations={
-            {mapID=84, coords={{64.6,76.8},}},
-            {mapID=85, coords={{48.2,75.6},}}
-        },
         possbileBreeds={"H/H", "H/S"},
         baseStats={9, 7.5, 7.5},
+        pois={
+            {name="Achievements:", entries={
+                {id="a5144", subDisplay="guild achievemnt"},
+            }},
+            SHARED.guildVendors
+        },
+        acquisition={
+            {"Members of a guild must kill a combined total of 50,000 critters."},
+            {"Members with an Exalted guild rep can buy %s once the guild earns the achievement.", "i63398"},
+        }
     }, 
     [277]={
         name="Clockwork Gnome",
@@ -4178,6 +5125,10 @@ PETS.all ={
         icon="134152",
         possbileBreeds={"S/B"},
         baseStats={8.5, 7.5, 8},
+        acquisition={
+            {"Hope for the right Dwarf project."},
+            {"The rare projects require %s.", "c384:100"}
+        }
     }, 
     [278]={
         name="Fox Kit",
@@ -4192,10 +5143,25 @@ PETS.all ={
         source="Drop",
         flavor="The fighting in Tol Barad has made it difficult to find these kits, and numerous would-be owners have decimated the fox population there as a result.",
         icon="462532",
-        npcs={{name="Baradin Fox"}},
-        locations={{mapID=245, coords={{54.6,81},{72.6,62.6},}}},
+        reputation={type="Baradin's Wardens", level="Exalted"},
         possbileBreeds={"H/S"},
         baseStats={8, 8, 8},
+        pois={
+            {name="Npc drop:", entries={
+                {id="", maps={
+                    {id="n47676:Baradin Fox", mapID=245, chance=.1, type="kill", coords={{32.4,46.4},{32.4,47.4},{32.4,47.6},{32.8,47.8},{33,46.8},{33.2,46.4},{33.4,43.4},{33.4,43.6},{33.4,58.4},{33.4,58.8},{33.4,59.6},{33.8,44.6},{33.8,58.2},{34,58.6},{34,60.6},{34.2,42.4},{34.2,43.4},{34.2,57.4},{34.2,60},{34.4,43.6},{34.6,43.4},{34.6,43.6},{35.4,55.4},{35.4,56},{35.4,56.6},{35.6,55.8},{35.8,55.2},{35.8,56.6},{36,54.4},{36.6,53.6},{37.2,52.6},{37.4,52.2},{37.6,52},{37.8,51.4},{39.4,54.4},{39.4,54.6},{40.2,54.4},{40.4,55},{40.4,55.6},{40.6,54.4},{40.6,55},{40.6,55.6},{40.8,53.4},{46,42.6},{46.4,40.6},{46.4,42.2},{46.6,42.2},{47.2,40.4},{47.2,41.2},{47.4,36.4},{47.4,37.2},{47.4,37.6},{47.4,38.8},{47.4,42.6},{47.6,40.4},{47.6,41.4},{47.6,42},{47.6,42.6},{47.8,37.2},{48,37.6},{48.2,36.4},{48.4,35.4},{48.6,35.4},{48.6,35.6},{48.6,37.4},{48.6,37.6},{49.2,46.8},{49.4,45.4},{49.4,46.4},{49.4,67.4},{49.4,67.6},{49.4,74.4},{49.4,74.8},{49.6,46.6},{49.6,74.4},{49.6,75.6},{49.8,46.4},{49.8,74.8},{50,67.4},{50,67.8},{50,68.6},{50.4,45.4},{50.6,45.4},{50.6,46},{50.6,46.6},{50.6,67.4},{50.6,68},{50.6,68.6},{51.4,39.4},{51.4,39.8},{51.4,40.6},{51.4,57.4},{51.4,57.8},{51.4,58.8},{51.6,40.6},{51.8,39.8},{52,39.4},{52.2,58.4},{52.2,58.8},{52.2,59.6},{52.6,39.2},{52.6,58.4},{52.6,59},{56.4,72.4},{56.4,73.2},{56.4,73.6},{56.6,72.4},{56.6,72.6},{56.6,73.6},{66.4,65.8},{67.4,65.4},{67.4,65.8},{67.4,66.6},{67.4,75.4},{67.4,76.4},{67.4,77},{67.4,78},{67.6,65.4},{67.6,66},{67.6,66.6},{67.6,75.4},{67.6,76.4},{67.6,77},{67.6,77.6},{68.6,76.4},{68.6,76.6},{70.4,60.4},{70.4,61},{70.4,61.6},{70.8,61.6},{71,60.4},{71,60.6},{71.2,59.4},{71.6,59.8}}},
+                }}
+            }},
+            {name="Vendors:", entries={
+                {id="", maps={
+                    {id="n47328:Quartermaster Brazie", mapID=245, currencies={"c391:200"}, type="npc", coords={{72.6,62.6}}},
+                    {id="n48531:Pogg", mapID=245, currencies={"c391:200"}, type="npc", coords={{54.6,81.0}}},
+                }}
+            }}
+        },
+        acquisition={
+            {"You can either farm it for a .1%% drop chance or purcahse a %s with commendations.", "i90898"},
+        }
     }, 
     [279]={
         name="Tiny Shale Spider",
@@ -4214,6 +5180,18 @@ PETS.all ={
         locations={{mapID=207, coords={{61.2,22.6},}}},
         possbileBreeds={"P/S"},
         baseStats={8, 8, 8},
+        pois={
+            {name="Npc drop:", entries={
+                {id="", maps={
+                    {id="n49822:Jadefang", mapID=207, chance=100, type="boss", coords={{61.2,22.6}}},
+                }}
+            }}
+        },
+        acquisition={
+            {"To get up to where the mob is you'll want the %s daily quest from %s so that you'll have a huge knockback effect from %s.", "q27048:Underground Economy", "n44968:Ricket", "i65514"},
+            {"Head over toward Jadefang and experiment with using the bombs to blast yourself over to it."},
+            {"The bombs have unlimited charges. Face your back toward where you want to fly."},
+        }
     }, 
     [280]={
         name="Guild Page",
@@ -4225,17 +5203,21 @@ PETS.all ={
         isTradeable=false,
         isUnique=false,
         isPassive=true,
-        source="Vendor",
+        source="Achievement",
         flavor="Guild pages must be fearless since they are called upon to announce their guild's victories over the Horde in battle.",
         icon="413584",
-        currency="gold",
-        npcs={{name="Guild Vendor"}},
-        locations={
-            {continent="Eastern Kingdoms", zone="Stormwind City"},
-            {continent="Kalimdor", zone="Orgrimmar"}
-        },
         possbileBreeds={"B/B"},
         baseStats={8, 8, 8},
+        pois={
+            {name="Achievements:", entries={
+                {id="a5031", subDisplay="alliance"},
+            }},
+            SHARED.guildVendors
+        },
+        acquisition={
+            {"Members of a guild must collectivel kill one of each race/class combination."},
+            {"Members can buy %s once the guild earns the achievement.", "i65362"},
+        }
     }, 
     [281]={
         name="Guild Page",
@@ -4247,17 +5229,21 @@ PETS.all ={
         isTradeable=false,
         isUnique=false,
         isPassive=true,
-        source="Vendor",
+        source="Achievement",
         flavor="When a guild earns enough glory by defeating Alliance champions, some orcs will come to share the glory by serving the guild.",
         icon="413584",
-        currency="gold",
-        npcs={{name="Guild Vendor"}},
-        locations={
-            {continent="Eastern Kingdoms", zone="Stormwind City"},
-            {continent="Kalimdor", zone="Orgrimmar"}
-        },
         possbileBreeds={"B/B"},
         baseStats={8, 8, 8},
+        pois={
+            {name="Achievements:", entries={
+                {id="a5179", subDisplay="horde"},
+            }},
+            SHARED.guildVendors
+        },
+        acquisition={
+            {"Members of a guild must collectivel kill one of each race/class combination."},
+            {"Members can buy %s once the guild earns the achievement.", "i65362"},
+        }
     }, 
     [282]={
         name="Guild Herald",
@@ -4269,17 +5255,31 @@ PETS.all ={
         isTradeable=false,
         isUnique=false,
         isPassive=true,
-        source="Vendor",
+        source="Achievement",
         flavor="When guilds have accumulated enough wealth, brave soldiers are often called to bear their standards.",
         icon="413585",
-        currency="gold",
-        npcs={{name="Guild Vendor"}},
-        locations={
-            {continent="Eastern Kingdoms", zone="Stormwind City"},
-            {continent="Kalimdor", zone="Orgrimmar"}
-        },
         possbileBreeds={"B/B"},
         baseStats={8, 8, 8},
+        pois={
+            {name="Achievements:", entries={
+                {id="a5201"},
+            }},
+            {name="Vendors:", entries={
+                {id="", maps={
+                    {id="n46602:Shay Pressler", mapID=84, currencies={"cgold:500"}, type="npc", coords={{64.6,76.8}}},
+                    {id="n51512:Mirla Silverblaze", mapID=125, currencies={"cgold:500"}, type="npc", coords={{52.6,56.6}}},
+                    {id="n51495:Steeg Haskell", mapID=87, currencies={"cgold:500"}, type="npc", coords={{36.0,85.6}}},
+                    {id="n52268:Riha", mapID=111, currencies={"cgold:500"}, type="npc", coords={{58.6,46.6}}},
+                    {id="n51504:Velia Moonbow", mapID=89, currencies={"cgold:500"}, type="npc", coords={{64.6,37.6}}},
+                    {id="n142086:Perry Charlton", mapID=1161, currencies={"cgold:500"}, type="npc", coords={{70.0,14.8}}},
+                }}
+            }}
+        },
+        acquisition={
+            {"This is the Alliance version."},
+            {"Members of a guild must collectivel loot %s from killing creatures.", "cgold:100000"},
+            {"Members can buy %s once the guild earns the achievement.", "i65364"},
+        }
     }, 
     [283]={
         name="Guild Herald",
@@ -4291,17 +5291,30 @@ PETS.all ={
         isTradeable=false,
         isUnique=false,
         isPassive=true,
-        source="Vendor",
+        source="Achievement",
         flavor="Wealthy guilds draw the attention of soldiers willing to carry their standards into battle.",
         icon="413585",
-        currency="gold",
-        npcs={{name="Guild Vendor"}},
-        locations={
-            {continent="Eastern Kingdoms", zone="Stormwind City"},
-            {continent="Kalimdor", zone="Orgrimmar"}
-        },
         possbileBreeds={"B/B"},
         baseStats={8, 8, 8},
+        pois={
+            {name="Achievements:", entries={
+                {id="a5201"},
+            }},
+            {name="Vendors:", entries={
+                {id="", maps={
+                    {id="n46572:Goram", mapID=85, currencies={"cgold:500"}, type="npc", coords={{48.2,75.6}}},
+                    {id="n51496:Kim Horn", mapID=90, currencies={"cgold:500"}, type="npc", coords={{69.6,43.8}}},
+                    {id="n51512:Mirla Silverblaze", mapID=125, currencies={"cgold:500"}, type="npc", coords={{52.6,56.6}}},
+                    {id="n51503:Randah Songhorn", mapID=88, currencies={"cgold:500"}, type="npc", coords={{37.4,62.4}}},
+                    {id="n52268:Riha", mapID=111, currencies={"cgold:500"}, type="npc", coords={{58.6,46.6}}},
+                }}
+            }}
+        },
+        acquisition={
+            {"This is the Horde version."},
+            {"Members of a guild must collectivel loot %s from killing creatures.", "cgold:100000"},
+            {"Members can buy %s once the guild earns the achievement.", "i65364"},
+        }
     }, 
     [285]={
         name="Landro's Lil' XT",
@@ -4314,12 +5327,14 @@ PETS.all ={
         isUnique=false,
         isPassive=false,
         source="Trading Card Game",
+        tcg="Worldbreaker",
         flavor="Always 'ready to play,' Landro's Lil' XT is almost indistinguishable from the original. Prone to tantrums and narcolepsy.",
         icon="254104",
-        tcg="Worldbreaker",
-        locations={{mapID=210, coords={{42.6,71.6},}}},
         possbileBreeds={"P/B"},
         baseStats={8, 9, 7},
+        acquisition={
+            {"This is available through the Trading Card Game. You may be able to buy a card on eBay."},
+        }
     }, 
     [286]={
         name="Mr. Grubbs",
@@ -4334,10 +5349,30 @@ PETS.all ={
         source="World Drop",
         flavor="The grubs of the Plaguelands are a side effect of necromantic corruption and the massive number of corpses there. Mr. Grubbs is from a particularly acrobatic breed.",
         icon="648918",
-        note="requires Fiona's Lucky Charm",
-        locations={{mapID=23, coords={{13,66},}}},
         possbileBreeds={"H/P"},
         baseStats={9, 8, 7},
+        pois={
+            {name="Prerequisite quests:", entries={
+                {id="q27367:Gidwin Goldbraids", maps={
+                    {id="n45417:Fiona", mapID=23, type="start", coords={{9.0,66.4}}},
+                    {id="n45428:Gidwin Goldbraids", mapID=23, type="end", coords={{4.2,36.0}}}
+                }},
+                {id="q27370:Tarenar Sunstrike", maps={
+                    {id="n45417:Fiona", mapID=23, type="start", coords={{9.0,66.4}}},
+                    {id="n45429:Tarenar Sunstrike", mapID=23, type="end", coords={{35.2,68.8}}}
+                }}
+            }},
+            {name="Quest:", entries={
+                {id="q27555:Fiona's Lucky Charm", maps={
+                    {id="n45400:Fiona's Caravan", mapID=23, type="start", coords={{8.8,66.6}}}
+                }},
+            }},
+        },
+        acquisition={
+            {"Make sure those first two prerequisite quets are done. This will unlock the blue question mark by the caravan."},
+            {"Choose the %s quest which gives you a buff %s.", "q27555:Fiona's Lucky Charm", "s85612"},
+            {"Now killing things in Eastern Plaguelands will have a chance to drop %s, which has a 39%% chance of containing a %s.", "i61387", "i66076"},
+        }
     }, 
     [287]={
         name="Tiny Flamefly",
@@ -4352,10 +5387,75 @@ PETS.all ={
         source="Quest",
         flavor="After swarming around open lava pits during the day, these strange insects emit a fiery glow at night.",
         icon="237146",
-        quest={name="SEVEN! YUP!, Not Fireflies, Flameflies"},
-        locations={{mapID=36, coords={{54.8,22.6},}}},
         possbileBreeds={"B/B"},
         baseStats={8, 7.5, 8.5},
+        pois={
+            {name="Alliance quest chain:", entries={
+                {id="q28514:Mouton Flamestar", maps={
+                    {id="n14625:Overseer Oilfist", mapID=36, type="start", coords={{38.2,27.0}}},
+                }},
+                {id="q28416:Burning Vengeance"},
+                {id="q28172:Done Nothing Wrong"},
+                {id="q28178:A Future Project"},
+                {id="q28179:Mud Hunter"},
+                {id="q28177:Stocking Up"},
+                {id="q28180:The Sand, the Cider, and the Orb"},
+                {id="q28181:Warlocks Have the Neatest Stuff"},
+                {id="q28182:Shadow Boxing"},
+                {id="q28183:Return to Keeshan"},
+                {id="q28184:Chiselgrip, the Heart of the Steppes"},
+                {id="q28254:A Needle in a Hellhole"},
+                {id="q28205:A Perfect Costume"},
+                {id="q28226:Scrapped Golems"},
+                {id="q28225:Prove Yer Allegiance"},
+                {id="q28227:Golem Training"},
+                {id="q28239:Into the Black Tooth Hovel"},
+                {id="q28246:Strategic Cuts"},
+                {id="q28245:Grunt Work"},
+                {id="q28252:The Kodocaller's Horn"},
+                {id="q28253:Taking the Horn For Ourselves"},
+                {id="q28265:General Thorg'izog"},
+                {id="q28266:Trial by Magma"},
+                {id="q28278:I Am the Law and I Am the Lash"},
+                {id="q28440:Abuse of Power"},
+                {id="q28286:Enough Damage For One Day"},
+                {id="q28310:Morgan's Vigil"},
+                {id="q28415:SEVEN! YUP!"},
+            }},
+            {name="Horde quest chain:", entries={
+                {id="q28417:Done Nothing Wrong", maps={
+                    {id="n47779:Mouton Flamestar", mapID=36, type="start", coords={{17.1,51.3}}},
+                }},
+                {id="q28418:Burning Vengeance"},
+                {id="q28419:Stocking Up"},
+                {id="q28420:A Future Project"},
+                {id="q28421:Mud Hunter"},
+                {id="q28422:The Sand, the Cider, and the Orb"},
+                {id="q28423:Warlocks Have the Neatest Stuff"},
+                {id="q28424:Shadow Boxing"},
+                {id="q28425:Return to Ariok"},
+                {id="q28426:Chiselgrip, the Heart of the Steppes"},
+                {id="q28225:Prove Yer Allegiance"},
+                {id="q28226:Scrapped Golems"},
+                {id="q28227:Golem Training"},
+                {id="q28427:A Needle in a Hellhole"},
+                {id="q28428:A Perfect Costume"},
+                {id="q28432:Into the Black Tooth Hovel"},
+                {id="q28434:Strategic Cuts"},
+                {id="q28433:Grunt Work"},
+                {id="q28435:The Kodocaller's Horn"},
+                {id="q28436:Taking the Horn For Ourselves"},
+                {id="q28437:General Thorg'izog"},
+                {id="q28438:Trial by Magma"},
+                {id="q28440:Abuse of Power"},
+                {id="q28441:Enough Damage For One Day"},
+                {id="q28442:Flame Crest"},
+                {id="q28491:Not Fireflies, Flameflies"},
+            }},
+        },
+        acquisition={
+            {"Complete the long chain of quests for your faction. There's a lot but they're all fairly quick, simple and straightforward."},
+        }
     }, 
     [289]={
         name="Scooter the Snail",
@@ -4367,12 +5467,65 @@ PETS.all ={
         isTradeable=true,
         isUnique=false,
         isPassive=false,
+        intermittent=true,
         source="World Event",
+        eventName="Children's Week",
         flavor="You'll find him in his shell, exactly where a snail has to be!",
         icon="134434",
-        eventName="Children's Week",
         possbileBreeds={"H/H"},
         baseStats={9.5, 8.5, 6},
+        pois={
+            {name="Alliance:", entries={
+                {id="q1468:Children's Week", maps={
+                    {id="n51988:Orphan Matron Nightingale", subDisplay="alliance", mapID=84, type="start", coords={{56.2,54.2}}},
+                }},
+                {id="q54130:Our New Friends", maps={
+                    {display="Embassy path start", mapID=84, type="end", coords={{54.11,16.58}}},
+                }},
+                {id="q29093:Cruisin' the Chasm", maps={
+                    {id="n52190:Twilber Torqwrench", mapID=52, type="end", coords={{57.6,53.0}}},
+                }},
+                {id="q29106:The Biggest Diamond Ever!", maps={
+                    {display="ramp downstairs", mapID=87, type="cave", coords={{44.09,51.91}}},
+                }},
+                {id="q29119:You Scream, I Scream...", maps={
+                    {id="n52421:Hans Coldhearth", mapID=84, type="end", coords={{49.1,89.8}}},
+                }},
+                {id="q29117:Let's Go Fly a Kite", maps={
+                    {id="n52358:Craggle Wobbletop", mapID=84, type="end", coords={{56.4,67.4},{56.4,67.8},{56.4,69.2},{56.4,69.8},{56.6,67.2},{56.6,67.6},{56.6,70.4},{56.8,71},{57.2,65.8},{57.2,72.4},{57.4,65.4},{57.4,72.8},{57.4,73.6},{57.6,73.4},{57.8,74.2},{58,74.8},{58.2,64.6},{58.2,75.6},{58.4,64.4},{58.4,76.6},{58.6,76.8},{58.8,64},{59.2,63.4},{59.8,62.8},{60.4,62.2},{60.6,62.2},{61.4,61.4},{61.6,61.6},{62.4,61.2},{63.4,61},{63.6,61.2},{64.6,61.4},{65,62},{65.4,62.6},{65.6,63},{66.2,63.8},{66.6,64.4}}},
+                }},
+                {id="q171:A Warden of the Alliance", maps={
+                    {id="n52358:Craggle Wobbletop", mapID=84, type="end", coords={{56.4,67.4},{56.4,67.8},{56.4,69.2},{56.4,69.8},{56.6,67.2},{56.6,67.6},{56.6,70.4},{56.8,71},{57.2,65.8},{57.2,72.4},{57.4,65.4},{57.4,72.8},{57.4,73.6},{57.6,73.4},{57.8,74.2},{58,74.8},{58.2,64.6},{58.2,75.6},{58.4,64.4},{58.4,76.6},{58.6,76.8},{58.8,64},{59.2,63.4},{59.8,62.8},{60.4,62.2},{60.6,62.2},{61.4,61.4},{61.6,61.6},{62.4,61.2},{63.4,61},{63.6,61.2},{64.6,61.4},{65,62},{65.4,62.6},{65.6,63},{66.2,63.8},{66.6,64.4}}},
+                }},
+            }},
+            {name="Horde:", entries={
+                {id="q172:Children's Week", maps={
+                    {id="n51989:Orphan Matron Battlewail", subDisplay="horde", mapID=85, type="start", coords={{58,57.2}}},
+                }},
+                {id="q29167:The Banshee Queen", maps={
+                    {id="n10181:Lady Sylvanas Windrunner", mapID=90, type="end", coords={{56.3,91}}},
+                }},
+                {id="q29146:Ridin' the Rocketway", maps={
+                    {display="rocket", mapID=76, type="end", coords={{50.73,73.94}}},
+                }},
+                {id="q29176:The Fallen Chieftain", maps={
+                    {display="Winterfin Retreat", mapID=7, type="end", coords={{60.8,23}}},
+                }},
+                {id="q29190:Let's Go Fly a Kite", maps={
+                    {id="n52809:Blax Bottlerocket", mapID=85, type="end", coords={{57,52.4},{57.2,52.8},{57.4,51.4},{57.6,53.4},{57.8,51},{58.2,62.6},{58.4,54.4},{58.4,55.4},{58.4,55.8},{58.4,56.6},{58.4,57.6},{58.4,61.2},{58.4,62},{58.6,53.8},{58.6,55.2},{58.6,56.4},{58.6,57.4},{58.6,57.8},{58.6,61.6},{58.8,58.8},{58.8,60.4},{58.8,61.2},{59,51.2},{59,52.8},{59.2,52.4}}},
+                }},
+                {id="q13957:You Scream, I Scream...", maps={
+                    {id="n52818:Snixx Quickfreeze", mapID=85, type="end", coords={{58.5,56}}},
+                }},
+                {id="q5502:A Warden of the Horde", maps={
+                    {id="n52809:Blax Bottlerocket", mapID=85, type="end", coords={{57,52.4},{57.2,52.8},{57.4,51.4},{57.6,53.4},{57.8,51},{58.2,62.6},{58.4,54.4},{58.4,55.4},{58.4,55.8},{58.4,56.6},{58.4,57.6},{58.4,61.2},{58.4,62},{58.6,53.8},{58.6,55.2},{58.6,56.4},{58.6,57.4},{58.6,57.8},{58.6,61.6},{58.8,58.8},{58.8,60.4},{58.8,61.2},{59,51.2},{59,52.8},{59.2,52.4}}},
+                }}
+            }}
+        },
+        acquisition={
+            {"Only available during the Children's Week seasonal event (end of April to beginning of May)."},
+            {"Once you've completed the final quest in the chain you should choose %s as your reward.", "i66073"},
+        }
     }, 
     [291]={
         name="Singing Sunflower",
@@ -4387,10 +5540,20 @@ PETS.all ={
         source="Quest",
         flavor="This sweet flower will brighten your day with its warm smile and cheerful song! Also strong against undead.",
         icon="133939",
-        quest={name="Lawn of the Dead"},
-        locations={{mapID=25, coords={{33.6,49.2},}}},
         possbileBreeds={"H/B"},
         baseStats={9, 7.5, 7.5},
+        pois={
+            {name="Quest:", entries={
+                {id="q28748:Lawn of the Dead", maps={
+                    {id="n49687:Brazie the Botanist", mapID=25, type="start", coords={{33.6,49.2}}},
+                }},
+            }}
+        },
+        acquisition={
+            {"You'll complete a series of plant vs zombie events."},
+            {"If you succeed then you'll receive a %s.", "i66067"},
+            {"You'll then be able to buy 2 more from any pet trainer."},
+        }
     }, 
     [292]={
         name="Magic Lamp",
@@ -4405,9 +5568,32 @@ PETS.all ={
         source="Profession",
         flavor="Higitus figi- hockity pocki- abracadab- prestidig--oh, pinfeathers!",
         icon="134971",
-        profession="Enchanting",
         possbileBreeds={"B/B"},
         baseStats={8, 8, 8},
+        professionDetail ={
+            profession="Enchanting",
+            desc="Cataclysm 75",
+            recipe=93843,
+            materials = {
+                {qty=1, id=52722},
+                {qty=4, id=52719},
+                {qty=8, id=52721},
+            }
+        },
+        pois={
+            {name="Vendors:", entries={
+                {id="", maps={
+                    {id="n1318:Jessara Cordell", mapID=84, currencies={"ci:20:52555"}, type="npc", coords={{53.0,74.2}}},
+                    {id="n50134:Senthii", mapID=241, currencies={"ci:20:52555"}, type="npc", coords={{78.6,77.0}}},
+                    {id="n4228:Vaean", mapID=89, currencies={"ci:20:52555"}, type="npc", coords={{56.6,31.8}}},
+                    {id="n5158:Tilli Thistlefuzz", mapID=87, currencies={"ci:20:52555"}, type="npc", coords={{61.6,44.8}}},
+                    {id="n16722:Egomis", mapID=103, currencies={"ci:20:52555"}, type="npc", coords={{40.4,39.2}}},
+                }}
+            }}
+        },
+        acquisition={
+            {"Purchase a %s and then craft a %s", "i67312", "i67275"},
+        }
     }, 
     [293]={
         name="Elementium Geode",
@@ -4420,20 +5606,20 @@ PETS.all ={
         isUnique=false,
         isPassive=false,
         source="Profession",
+        profession="Mining",
         flavor="Often confused by miners as a rare gem, the geode initially makes its presence known by emitting melodic reverberations.",
         icon="399040",
-        profession="Mining",
-        npcs={
-            {name="Elementium Vein"},
-            {name="Rich Elementium Vein"}
-        },
-        locations={
-            {mapID=207, coords={{54.6,48.3},}},
-            {mapID=241, coords={{33.1,38.8},}},
-            {mapID=249, coords={{65.8,33.1},}}
-        },
         possbileBreeds={"H/S"},
         baseStats={8, 8, 8},
+        locations={
+            {mapID=241, coords={{17.2,56.7},{17.8,63.2},{17.9,61.8},{18.1,57},{18.4,16.3},{18.5,16.3},{18.7,17.6},{18.9,60.5},{19.1,59.9},{19.2,56.8},{19.4,15.1},{19.5,15.1},{19.6,17.5},{19.7,57.6},{20.1,20.7},{20.4,14},{20.4,18.9},{20.5,18.9},{21.2,59},{21.3,59.8},{21.4,13.9},{21.9,58.4},{21.9,58.5},{22.3,55.4},{22.3,55.5},{22.4,14.4},{22.4,14.5},{22.4,21.7},{22.5,21.8},{22.7,58.1},{23.2,14.7},{23.4,55.1},{23.8,57.7},{24,54.8},{24.3,56.9},{24.4,15},{24.5,15},{25,54},{25.1,56.1},{25.3,56.7},{25.3,65.9},{25.4,39.1},{25.5,39.1},{25.6,67.1},{25.6,70},{25.7,68.6},{25.8,52.4},{25.9,53.1},{25.9,62.9},{26,16.4},{26,16.5},{26.3,36.7},{26.4,55.7},{26.5,55.8},{26.6,52.7},{26.6,69.5},{26.8,16.4},{27,16.9},{27,39.9},{27,56.5},{27.3,37.8},{27.4,68.5},{27.5,56.9},{27.5,68.6},{27.6,52.4},{27.6,52.5},{27.6,60},{27.7,51.4},{28.1,49.4},{28.1,49.5},{28.2,38.6},{28.2,40.9},{28.2,56.1},{28.3,68.3},{28.5,38.9},{28.5,51.8},{28.6,34.7},{28.6,59.7},{28.7,65.3},{28.8,68.5},{28.9,68.4},{29,45.8},{29,56.2},{29.2,42.7},{29.2,49.4},{29.2,49.5},{29.3,47.9},{29.4,34.3},{29.4,45.4},{29.4,55.4},{29.5,34.3},{29.5,45.4},{29.5,45.5},{29.5,55.5},{29.6,35.1},{29.6,40},{29.6,44.1},{29.7,53.9},{29.8,54.6},{30.1,47.2},{30.1,66.5},{30.2,58.6},{30.2,66.4},{30.4,71.2},{30.5,71.2},{30.8,42.3},{30.8,62.9},{30.9,41},{31,43.3},{31.1,44.3},{31.1,66.1},{31.3,47.2},{31.3,48.4},{31.3,48.5},{31.4,34.4},{31.4,34.5},{31.5,34.4},{31.6,35.4},{31.8,36.4},{31.9,37.4},{31.9,37.5},{32,31.5},{32,33.1},{32.1,72.2},{32.2,30.4},{32.2,30.5},{32.4,71.3},{32.7,39.8},{32.8,88.5},{33.1,38.8},{33.1,40.7},{33.1,59.3},{33.2,71.1},{33.2,87.7},{33.7,87.6},{33.8,89.1},{34,86.9},{34.1,86.2},{34.2,84.2},{34.3,59.8},{34.4,89.6},{34.5,88.9},{34.6,48},{34.7,83.5},{34.7,89.6},{34.8,19.3},{34.8,83.4},{34.9,21.6},{34.9,87.3},{35,90.7},{35.1,20.3},{35.1,73.4},{35.1,73.5},{35.2,59.4},{35.2,60.7},{35.3,93},{35.4,87.7},{35.4,91.7},{35.5,22.4},{35.5,87.8},{35.8,18.7},{35.8,91.3},{35.9,35.3},{35.9,52.4},{35.9,83.4},{35.9,87},{35.9,92.2},{36,38.8},{36.1,19.5},{36.2,22.7},{36.2,24.7},{36.2,46},{36.2,74.1},{36.2,92.6},{36.3,47.6},{36.3,80.7},{36.4,18},{36.4,45.2},{36.4,53.4},{36.4,53.5},{36.4,84.6},{36.4,90.4},{36.4,94.2},{36.4,95.3},{36.4,95.5},{36.5,53.4},{36.5,85.3},{36.5,85.5},{36.5,89.8},{36.5,93.5},{36.5,95.3},{36.6,34.4},{36.6,34.5},{36.7,25.8},{36.7,75},{36.7,82.9},{36.7,92.5},{36.8,18.2},{36.9,53.6},{37,39.4},{37,39.5},{37,81.4},{37,81.5},{37,95.6},{37.1,55},{37.1,76.2},{37.1,91.5},{37.3,44.5},{37.4,16.4},{37.4,16.5},{37.4,42.6},{37.4,90.6},{37.5,16.5},{37.5,18.1},{37.5,40.3},{37.5,84.9},{37.5,93},{37.5,96.1},{37.6,26.2},{37.6,81.6},{37.7,56.3},{37.7,62.4},{37.7,84.3},{37.7,91.3},{37.8,16},{37.8,29.6},{37.8,32.4},{37.8,43.3},{37.8,89.3},{37.9,32.5},{37.9,41.3},{38,57.4},{38,58},{38,91.7},{38.2,62.9},{38.3,61},{38.3,95.2},{38.4,67.2},{38.4,79.6},{38.4,94.4},{38.5,67.3},{38.5,79.6},{38.5,91.4},{38.5,94.5},{38.6,78.4},{38.6,78.5},{38.6,85.3},{38.7,67.9},{38.8,23},{38.8,66},{38.8,91.8},{38.9,93.6},{39,68.9},{39,76.4},{39,76.5},{39,89.2},{39.3,21.4},{39.3,21.5},{39.3,92.9},{39.4,87.7},{39.5,79.4},{39.5,79.5},{39.6,70.4},{39.6,70.5},{39.7,72.3},{39.8,87},{39.9,73.4},{39.9,73.5},{39.9,80.7},{39.9,88},{39.9,88.9},{40.2,24.1},{40.2,47.4},{40.2,47.6},{40.2,61.1},{40.3,45.7},{40.6,47.9},{40.7,45.2},{40.9,75.6},{41.1,28.7},{41.2,81.1},{41.3,20.4},{41.3,20.5},{41.6,88.3},{41.6,88.5},{41.7,20.5},{42.3,29.6},{42.4,28.2},{42.4,76.2},{42.5,28.2},{42.7,80.1},{42.9,88.7},{43,21.1},{43.2,76.2},{43.3,20.4},{43.3,85.4},{43.3,85.5},{43.3,87.6},{43.7,89.7},{43.8,91.9},{43.8,93},{43.9,50},{44,21},{44.4,49.1},{44.5,85.3},{44.7,51.8},{44.9,21},{45.1,46.7},{45.1,93.6},{45.3,87.7},{45.4,51.4},{45.5,51.5},{45.6,46.2},{45.8,20.4},{45.8,20.5},{46.2,45.4},{46.2,87.1},{46.2,92.4},{46.2,92.5},{46.3,51.1},{46.5,44.3},{46.6,44.5},{46.7,22.1},{46.8,51},{46.9,42.2},{47.2,41.3},{47.2,86.3},{47.3,20.4},{47.3,20.5},{47.5,22.1},{47.5,50.8},{47.6,40.2},{47.8,85.9},{48.2,50.4},{48.2,78.1},{48.4,20.4},{48.4,20.5},{48.4,61.1},{48.5,61.1},{48.6,77.8},{48.6,86.6},{48.9,62},{49,20.4},{49,20.5},{49.1,49.2},{49.2,87.9},{49.4,48.2},{49.4,77.3},{49.5,77.3},{49.6,38.5},{49.9,56},{49.9,82.8},{50,20.7},{50,38},{50,47.4},{50,47.5},{50,61.2},{50,81.9},{50.4,17.9},{50.4,46.4},{50.5,46.5},{50.5,56.1},{50.6,81.1},{50.7,21.7},{50.7,37.3},{50.7,37.5},{51,21.4},{51,46},{51.1,18.2},{51.3,45.1},{51.3,81.5},{51.4,23.1},{51.4,36.2},{51.5,22.6},{51.5,36.2},{51.6,43.9},{51.8,50.4},{51.8,50.9},{51.9,80.4},{52,19.7},{52,20.9},{52,42.8},{52,79.1},{52,81.7},{52.1,81.2},{52.2,21.5},{52.5,36.7},{52.6,21.1},{52.6,36.1},{52.8,59.9},{52.8,83.4},{52.8,83.5},{52.9,82.2},{53.2,19.9},{53.4,35.4},{53.4,60.9},{53.5,35.4},{53.5,35.5},{53.5,60.9},{53.8,59.7},{53.8,82.4},{53.8,82.5},{54,23.3},{54,38.6},{54.1,19.7},{54.1,80.6},{54.2,80.4},{54.4,23.7},{54.5,83.2},{54.6,20.7},{54.8,21.9},{54.8,22.5},{54.8,39.7},{54.9,23.8},{55.1,38.7},{55.4,79.4},{55.4,79.5},{55.5,79.5},{55.6,85.7},{55.7,24.1},{55.8,84.1},{55.9,79.3},{55.9,84.8},{56.1,78.3},{56.3,48.4},{56.4,25},{56.4,34.7},{56.6,82.6},{56.7,49.2},{56.8,39.1},{57,54.1},{57.2,50.3},{57.3,78.6},{57.4,25.4},{57.4,25.5},{57.4,35},{57.4,53.3},{57.5,25.5},{57.5,53.3},{57.6,18.7},{57.6,55.7},{57.7,78.5},{57.8,17.8},{57.8,25.1},{57.9,15.6},{57.9,55.2},{58,34.9},{58,40.6},{58,49.7},{58.2,14.3},{58.3,21.6},{58.3,38.9},{58.4,39.8},{58.4,77.8},{58.5,39.8},{58.5,50},{59,77.4},{59,77.5},{59.1,39},{59.1,49.2},{59.2,75.7},{59.3,35.6},{59.4,26.6},{59.6,12.7},{59.6,36.2},{59.8,39.9},{60,28.6},{60.4,36.7},{60.6,40.2},{60.7,11.4},{60.7,11.5},{61.2,37.4},{61.2,37.5},{61.5,31},{61.6,29.2},{61.7,29.9},{62,28.1},{62.1,31.8},{62.2,42.4},{62.2,42.5},{62.6,32.1},{62.7,38.1},{62.9,29.4},{62.9,29.6},{63,44.4},{63,44.5},{63.4,33.1},{63.4,39},{63.5,30.4},{63.5,30.5},{63.5,33.1},{63.5,39},{63.7,45.9},{64,39.7},{64.4,33.7},{64.7,35.2},{64.7,46.4},{64.7,46.5},{65,40.4},{65,40.5},{65.3,18.3},{65.4,20.8},{65.4,48.3},{65.5,20.8},{65.5,48.3},{65.6,34.4},{65.6,41.1},{65.9,50.3},{66.1,39.8},{66.2,42.2},{66.4,35.3},{66.4,52.4},{66.4,52.5},{66.5,35.3},{66.5,52.4},{66.5,52.5},{66.6,42.8},{66.8,20},{66.9,38.8},{67,54.1},{67.2,18.3},{67.2,39.7},{67.3,36.8},{68.1,43.3},{68.2,43.5},{68.3,35.9},{68.5,36.2},{68.8,44},{69.4,45},{69.5,35.6},{69.8,46.3},{70.4,47.9},{70.5,47.9},{70.8,48.8},{74.9,15.7},{76.2,13.7}}},
+            {mapID=249, coords={{15.4,59.7},{15.5,59.7},{16.6,57.7},{18,56.6},{18.3,52},{18.8,52.7},{23.1,49.2},{23.4,64.4},{23.4,64.5},{23.5,48.5},{23.5,64.4},{23.5,64.5},{24.4,48.3},{24.5,48.3},{25.4,46.3},{25.5,46.2},{25.8,7.1},{25.8,43.1},{26,64.5},{26.1,40.3},{26.3,64.1},{26.7,37},{26.7,66},{27.1,42},{27.2,30.9},{27.3,15.8},{27.4,22.6},{27.4,37.7},{27.5,22.6},{27.5,37.7},{27.6,39.8},{27.9,33.1},{28,18.4},{28,18.5},{28,21.3},{28.2,7.4},{28.2,7.5},{28.2,36.6},{28.3,31.2},{30.7,19.6},{30.8,9.1},{31.5,17.7},{31.6,21.9},{31.6,27.2},{32.4,15.6},{32.4,23.3},{32.4,34.9},{32.5,15.6},{32.5,23.3},{32.6,26.1},{32.8,17},{33,9.2},{33,14.1},{33.9,35.9},{34.1,34.4},{34.1,34.5},{35.1,23.4},{35.1,23.5},{35.2,34.3},{35.4,27.9},{35.5,27.9},{35.7,22.9},{35.7,34.6},{36.4,9.3},{36.5,9.3},{36.6,27},{36.6,34.4},{36.6,34.5},{36.7,24.2},{36.8,24.9},{36.8,33.1},{37.1,9.8},{37.4,8.2},{37.5,8.2},{37.6,26.6},{37.6,36.4},{37.6,36.5},{37.9,30.1},{38.3,18.3},{38.3,18.5},{38.3,29.3},{38.3,32.4},{38.3,32.5},{38.3,54.9},{38.4,7.1},{38.4,16.6},{38.4,30.8},{38.5,7.1},{39,11.2},{39,16.9},{39.4,54.4},{39.4,54.5},{39.5,54.4},{40.1,15.9},{40.1,55.2},{40.2,6.2},{40.4,11.1},{40.5,11.1},{40.8,58.9},{40.8,60.1},{40.9,63.2},{41,51.7},{41.1,10},{41.2,7.2},{41.3,12.7},{41.7,61.3},{41.9,55.3},{43.1,6.8},{43.1,63.8},{43.6,6.1},{43.7,78.7},{44.1,56.6},{44.2,7.1},{44.4,54.9},{44.4,65.3},{44.5,65.3},{44.5,86.2},{44.7,78.9},{45,27.3},{45.1,27.5},{45.5,59.7},{45.9,86.5},{46,34.3},{46,64.4},{46,64.5},{46,77.7},{46.1,7.8},{46.1,77},{46.2,27.7},{46.2,35.9},{46.3,36.5},{46.4,94.1},{46.6,8.7},{46.7,7.7},{47.2,29.7},{47.4,9.6},{47.5,9.6},{47.5,49.1},{47.5,58.9},{48.1,96},{48.3,30.7},{48.6,46.1},{49.2,13.6},{49.3,11.8},{49.3,62.9},{49.4,46.9},{49.4,49.6},{49.5,46.9},{49.5,49.6},{49.8,54.9},{49.8,66},{50,12.4},{50,12.5},{50.4,56.5},{50.5,56.5},{50.9,64.2},{51.1,12.4},{51.1,12.5},{51.5,62.2},{51.8,12.7},{52.1,58},{52.2,57.1},{52.3,12.2},{52.4,73.1},{52.5,73.1},{52.7,11.4},{53,92.7},{53.1,12.4},{53.1,12.5},{53.6,54.2},{53.9,54.9},{54.1,12},{54.3,73},{54.4,14.1},{54.5,76.5},{55,13.9},{55.2,14.9},{55.2,56},{55.2,73.9},{55.4,11.4},{55.4,11.5},{55.6,14.7},{56,12.4},{56,12.5},{56.6,58.5},{57.1,57},{57.2,58.1},{58.1,19.2},{58.3,17},{58.3,19.7},{59,16.7},{60.9,30.3},{61.1,14.9},{61.1,18.1},{61.4,13.1},{61.4,30.6},{61.5,13.1},{61.7,15.4},{61.7,15.5},{61.7,28},{61.7,50.6},{62,14.4},{62.4,17.4},{62.4,17.5},{62.5,17.4},{62.5,17.5},{62.5,32.2},{62.5,51.1},{62.6,44.2},{62.8,15.9},{63.4,50.4},{63.7,16.8},{64.4,57.6},{64.5,57.6},{64.9,35.3},{65,15.2},{65.2,14.4},{65.2,17.4},{65.2,17.5},{65.7,57.4},{65.7,57.5},{65.8,33.1},{66.2,33.5},{66.4,60.4},{66.4,60.5},{66.7,15.7},{67,59.7},{67.9,31.4},{67.9,31.5},{68.1,29.8},{68.2,20.1},{68.6,36.6},{68.7,18.7},{68.7,35.3},{68.8,60.9},{68.9,31.8},{69,18.3},{69,30},{69.3,62.4},{69.3,62.5},{69.4,25},{69.4,26.3},{69.5,20.2},{69.5,25},{69.5,26.3},{69.6,34.8},{69.8,62.4},{69.8,62.5},{70.1,36.3},{70.2,67.7},{70.8,72.2},{70.9,62.1},{71,69.4},{71,69.5},{71.1,68},{71.7,41.9},{72.6,39.2},{72.6,41.2},{77.9,46.1},{78.2,46.8},{78.7,46.5},{79,45.8},{80.9,54.6},{81.1,45.3},{81.2,56.3},{81.2,58},{81.4,47.6},{81.8,55.2},{82.2,45.8},{82.2,47}}},
+            {mapID=207, coords={{19.1,54.9},{19.4,55.7},{19.4,59.2},{19.5,55.7},{19.5,59.1},{19.5,59.7},{19.6,49.1},{19.6,52.3},{19.7,58.3},{20.2,48.1},{20.3,49.8},{20.5,49},{20.8,62},{20.9,35.4},{20.9,35.5},{21.1,46.8},{21.4,62.9},{21.4,63.6},{21.5,63.6},{22.3,43.8},{22.4,64.5},{22.5,39.2},{22.8,42.6},{23.3,36.8},{23.4,65.3},{23.4,71.1},{23.5,36.7},{23.5,65.4},{23.6,32.4},{23.6,32.5},{23.7,68},{23.8,66.1},{23.8,69.3},{24.2,71.7},{24.3,31},{24.3,42.9},{24.4,38.4},{24.5,38.3},{24.5,38.5},{24.6,40.9},{24.8,72.1},{24.9,30.6},{25.2,73.1},{25.6,30.2},{25.7,28.4},{25.8,26.8},{25.9,25.6},{25.9,43.7},{26,28.8},{26.1,43.4},{26.3,77.4},{26.3,77.5},{26.4,74.6},{26.4,76.2},{26.5,74.6},{26.5,76.2},{26.8,78.1},{27.4,22.6},{27.9,22.7},{28,53.7},{28.2,23.9},{28.8,24.3},{28.9,20.4},{28.9,20.5},{28.9,52.4},{28.9,52.5},{28.9,55.7},{29.1,43.6},{29.2,56.7},{29.4,25.4},{29.4,25.5},{29.4,42.4},{29.4,42.5},{29.4,45.4},{29.4,45.5},{29.5,25.4},{29.5,42.4},{29.5,42.5},{29.5,45.5},{29.6,20.1},{29.6,53.2},{29.7,57.4},{29.7,79.5},{29.8,26.3},{29.8,79},{29.9,58},{30.1,23.4},{30.1,23.5},{30.1,81.4},{30.1,81.5},{30.2,40.9},{30.2,44.6},{30.2,53.6},{30.4,47.3},{30.4,48.1},{30.4,78.1},{30.5,78},{30.7,19.7},{30.7,25.8},{30.7,53.9},{30.8,39.4},{31,26.7},{31,59.1},{31,77.4},{31,82.4},{31.1,38.4},{31.2,21.8},{31.2,24.4},{31.2,24.5},{31.2,59.7},{31.3,27.8},{31.3,34.1},{31.3,57.7},{31.4,54.9},{31.4,56.8},{31.4,83},{31.5,83},{31.6,38.4},{31.6,38.5},{31.6,55.6},{31.6,76.6},{31.8,60.2},{32,28.2},{32.1,56.9},{32.2,75.7},{32.3,28.7},{32.3,60.5},{32.4,21.4},{32.4,84.9},{32.5,21.4},{32.5,38},{32.5,84.9},{32.8,16.1},{32.8,61.7},{32.8,62.9},{33,32.4},{33,32.5},{33.1,70.9},{33.1,74.6},{33.2,28.4},{33.2,28.5},{33.2,71.7},{33.4,73},{33.5,73},{33.6,28.8},{33.7,37.4},{33.7,37.5},{33.7,62.9},{33.8,85.9},{33.9,16.5},{33.9,20.8},{33.9,33.6},{33.9,34.7},{33.9,36.4},{33.9,70.9},{34,30.4},{34,30.5},{34,67.8},{34.1,20.1},{34.2,68.9},{34.3,16.2},{34.4,41.8},{34.4,64.3},{34.4,85.3},{34.5,41.8},{34.5,64.3},{34.6,20.6},{34.6,32.5},{34.8,15.4},{34.9,31.9},{34.9,55.4},{34.9,55.5},{34.9,65.6},{35,84.6},{35.1,39.7},{35.2,68.2},{35.3,31.2},{35.3,41.2},{35.4,30.1},{35.5,14.9},{35.5,54.9},{35.8,42.2},{35.9,44},{35.9,53.7},{36,52.5},{36.1,32},{36.1,33.6},{36.2,55.9},{36.3,68.7},{36.3,85.2},{36.4,33.3},{36.4,40.1},{36.5,33.3},{36.5,40.1},{36.5,69.2},{36.6,14.8},{36.8,42.2},{36.9,34},{36.9,55.4},{37,13.4},{37,55.5},{37,70},{37.1,13.5},{37.1,34.6},{37.1,52.5},{37.2,40.5},{37.4,51.9},{37.4,54.1},{37.5,34.1},{37.5,51.9},{37.5,87.4},{37.6,12.4},{37.6,12.5},{37.7,43.4},{37.7,43.6},{37.8,35.1},{37.8,54.7},{37.8,55.7},{37.9,42.3},{37.9,70.6},{38,36.7},{38.1,71.6},{38.2,40.6},{38.3,37.6},{38.3,73.4},{38.4,56.8},{38.4,60.2},{38.4,61.1},{38.4,62.1},{38.4,87.6},{38.5,38.3},{38.5,56.8},{38.5,60.2},{38.5,61.1},{38.6,11.1},{38.6,57.7},{38.6,58.9},{38.6,72.1},{38.7,14.8},{38.7,16.2},{38.7,88.1},{38.9,39},{39.2,19.5},{39.3,19.4},{39.4,14.3},{39.4,21.3},{39.4,74.5},{39.4,88.7},{39.5,88.8},{39.6,11.5},{39.6,41.6},{39.7,37.6},{39.7,62.8},{39.9,19.6},{39.9,38.9},{40,40.1},{40.1,74.8},{40.2,14.2},{40.3,10.9},{40.3,19.3},{40.3,37},{40.3,62},{40.6,74.9},{41,10},{41.1,37.4},{41.1,37.5},{41.1,80.4},{41.1,80.5},{41.2,88.2},{41.4,11.2},{41.4,63.2},{41.4,75.6},{41.4,89},{41.5,11.3},{41.5,63.2},{41.5,75.6},{41.5,78.9},{41.5,80.2},{41.5,89.1},{41.7,64.4},{42.1,36.9},{42.1,48.9},{42.2,88.2},{42.3,41.4},{42.3,41.5},{42.4,64.8},{42.4,78.1},{42.4,80.8},{42.5,10.9},{42.5,66.5},{42.5,78.1},{42.6,66.4},{42.7,36.6},{42.7,42.8},{43,24.4},{43,24.5},{43,35.8},{43,54},{43.2,10.2},{43.2,80.1},{43.3,35.4},{43.3,49.4},{43.3,49.5},{43.3,89.4},{43.3,89.5},{43.4,40.6},{43.4,46.1},{43.5,40.6},{43.5,46.2},{43.6,24.1},{43.7,34.5},{43.7,79.1},{43.8,9.4},{43.9,21.9},{43.9,43},{44,33.7},{44,66.4},{44,66.5},{44,90.5},{44.1,23.2},{44.1,48.1},{44.1,77.1},{44.1,78.4},{44.3,9.6},{44.3,53.3},{44.3,74.3},{44.4,68.2},{44.4,75.9},{44.5,56.8},{44.5,59.7},{44.5,68.1},{44.5,75.9},{44.7,33.9},{44.9,73.1},{45.1,37.9},{45.1,78},{45.3,61.6},{45.4,10},{45.4,43.6},{45.4,89.8},{45.6,33.1},{45.8,39.4},{45.8,39.5},{46.1,77.9},{46.2,68.3},{46.2,72.2},{46.3,75.4},{46.3,75.5},{46.4,10.4},{46.4,60.4},{46.4,60.5},{46.5,10.4},{46.5,10.5},{46.5,60.5},{46.6,38},{47,77.9},{47.1,67.9},{47.1,71.4},{47.1,71.5},{47.3,41.2},{47.3,75},{47.4,89.8},{47.6,58.9},{47.7,33},{47.7,62},{47.7,68.2},{47.8,78.3},{47.9,89.8},{48.3,64.6},{48.4,37.4},{48.5,37.3},{48.6,42.7},{48.6,90.2},{48.7,24.5},{48.7,63.4},{48.7,68.8},{48.8,63.5},{49,23.2},{49.6,22},{50.2,43.8},{50.3,39.2},{50.4,64.2},{50.5,64.2},{50.8,75.1},{50.9,40.1},{50.9,81.1},{51.2,37.3},{51.2,74.4},{51.4,79.8},{51.5,79.7},{51.5,86},{51.9,60.4},{51.9,60.5},{51.9,78.5},{52.1,63.3},{52.2,38.7},{52.2,85.3},{52.4,74.7},{52.6,79.4},{52.9,61.1},{53.2,75.1},{53.2,80.3},{53.3,85.7},{53.4,58.1},{53.5,58.1},{53.6,80.9},{53.9,41.3},{54.1,81.5},{54.3,86.3},{54.5,86.9},{54.6,40.6},{54.6,48.3},{54.6,77.7},{54.6,81.4},{54.6,81.5},{54.7,53.6},{54.7,78.7},{54.9,42.9},{55,57.4},{55,57.5},{55.1,87.6},{55.2,39.6},{55.2,80.1},{55.2,88.6},{55.4,55.8},{55.4,61.1},{55.5,61.1},{55.5,89.3},{55.8,46.6},{55.9,40.2},{56,80.4},{56,80.5},{56.3,42.8},{56.4,53.4},{56.4,90.1},{56.5,53.4},{56.5,53.5},{56.6,44.6},{56.6,57.1},{56.6,81},{57,47.4},{57.3,79.4},{57.4,77.8},{57.4,79.5},{57.5,50.3},{57.7,45},{57.7,47.9},{57.7,52},{57.7,53.4},{57.7,53.5},{57.7,77},{57.8,40.5},{57.9,40.4},{58,77.5},{58.3,42},{58.3,88.7},{58.7,76.8},{58.7,88},{59,26.4},{59,31.6},{59,32.6},{59,43.7},{59.1,26.5},{59.1,64.8},{59.1,86.9},{59.3,44.7},{59.4,66.2},{59.5,45.1},{59.7,85.8},{59.8,23.4},{59.8,23.5},{59.8,31.4},{59.8,31.5},{59.8,46.1},{59.9,61.4},{60,76.9},{60.1,26.1},{60.1,32.5},{60.1,62.2},{60.1,85.2},{60.2,70.2},{60.3,55.3},{60.4,62.5},{60.4,66.8},{60.4,69.4},{60.4,72.9},{60.5,62.5},{60.5,69.4},{60.5,70.3},{60.5,76.7},{60.6,26.5},{60.6,56.1},{60.6,73.8},{60.9,22},{60.9,28.6},{60.9,66.9},{60.9,70.6},{60.9,73.2},{60.9,85.3},{61,53.4},{61,53.5},{61.1,52.1},{61.2,23.6},{61.2,25.8},{61.3,19.1},{61.3,72.4},{61.4,27.5},{61.4,44.7},{61.5,27.5},{61.5,29},{61.5,68.3},{61.6,20.4},{61.6,21.4},{61.6,21.5},{61.6,49.6},{61.7,83.8},{61.8,23.4},{61.8,74.3},{61.8,77.1},{61.8,84.7},{61.9,48.8},{62,17.1},{62,26.4},{62,26.5},{62,29.6},{62,68.5},{62,85.5},{62.1,18.2},{62.1,55.9},{62.1,57.6},{62.1,76.1},{62.2,24.9},{62.2,75.4},{62.3,24.2},{62.4,83.3},{62.5,23.7},{62.5,27.7},{62.5,82.2},{62.5,85.4},{62.6,22.4},{62.6,22.5},{62.9,18.4},{62.9,58.5},{62.9,78.4},{62.9,78.5},{63,53.1},{63,81.3},{63,85.6},{63.1,20.4},{63.1,20.5},{63.2,15.7},{63.2,19.3},{63.2,43.6},{63.2,57.7},{63.3,46.1},{63.3,48.3},{63.4,24.9},{63.4,25.6},{63.4,45.2},{63.4,49.2},{63.4,62},{63.5,45.2},{63.5,62},{63.5,85.9},{63.6,49.4},{63.6,49.5},{63.7,54.4},{63.7,54.5},{63.8,42.9},{63.9,56.7},{63.9,64.5},{64,19.4},{64,19.5},{64,20.9},{64,85.3},{64.1,18},{64.1,28.3},{64.3,14.9},{64.3,17.1},{64.3,78.4},{64.3,78.5},{64.3,84},{64.4,22.4},{64.4,22.5},{64.4,24.4},{64.4,24.5},{64.4,62.7},{64.4,68},{64.5,21.5},{64.5,27.6},{64.5,62.7},{64.6,61.4},{64.6,61.6},{64.7,20.3},{64.7,23.7},{64.7,57},{64.9,58.3},{64.9,67.2},{65,21.1},{65.1,23.3},{65.1,30.4},{65.1,30.5},{65.1,35},{65.1,37.3},{65.1,37.9},{65.2,18.9},{65.2,26.2},{65.2,36.1},{65.2,46},{65.3,32.5},{65.3,43.8},{65.3,47.6},{65.3,58.6},{65.3,73.5},{65.3,83.2},{65.4,27.4},{65.4,59.9},{65.4,66.2},{65.4,73.4},{65.4,74.6},{65.5,18.6},{65.5,27.4},{65.5,27.5},{65.5,66.2},{65.5,72.2},{65.5,77.4},{65.5,77.5},{65.7,49.2},{65.8,31},{65.8,69.4},{65.8,69.5},{65.8,76.3},{65.9,23.4},{65.9,23.5},{65.9,44.9},{65.9,81.9},{66,71.2},{66.1,19.6},{66.2,60.4},{66.3,65.3},{66.4,60.6},{66.5,60.6},{66.5,62.8},{66.7,23.1},{66.7,56},{66.7,64.4},{66.7,64.5},{66.8,54.4},{66.8,61.7},{66.9,21.7},{67,27.4},{67,27.5},{67.2,24.4},{67.2,24.5},{67.2,71.6},{67.3,52.3},{67.4,20.2},{67.4,80.3},{67.5,20.3},{67.5,33.4},{67.5,33.6},{67.5,80.3},{67.6,27.1},{67.6,38.2},{67.6,53.4},{67.6,53.5},{67.6,55.6},{67.7,20.8},{67.8,36.3},{67.8,54.6},{67.8,65.4},{67.8,71.6},{67.8,81.1},{67.9,36.5},{68.1,27.5},{68.3,65.7},{68.5,35.9},{68.5,66.2},{68.5,81.2},{68.6,37.2},{68.6,44.6},{68.7,41.9},{68.7,72},{68.8,66.8},{68.9,26.3},{68.9,38.1},{69,54.9},{69,80.4},{69.2,35},{69.3,38.8},{69.4,30.3},{69.4,34.1},{69.5,26.1},{69.5,35.8},{69.5,79.8},{69.6,30.3},{69.6,71.7},{69.7,31.8},{69.7,35.3},{69.9,38.4},{69.9,55.2},{69.9,55.6},{69.9,57.1},{69.9,79},{70,32.8},{70.3,38.9},{70.4,33.7},{70.5,33.8},{70.7,25.2},{70.7,69.8},{70.7,78.6},{70.8,35},{70.9,71.7},{71.2,27.3},{71.2,36.2},{71.2,37.4},{71.2,38.7},{71.2,71},{71.4,38},{71.4,57.7},{71.5,77.7},{71.6,24.7},{71.9,75.9},{72.1,28.8},{72.1,57.4},{72.1,57.5},{72.4,74},{72.8,57.4},{72.8,57.5},{73.5,57.7},{74.2,57.2},{74.2,58.8},{74.7,60.7},{74.8,27.2},{74.9,33.6},{75.1,28.4},{75.2,68.5},{75.3,68.4},{75.6,62.9},{75.9,32.2},{75.9,65.6},{75.9,67.4},{75.9,67.5},{76,64.9},{76.6,38.1},{76.9,63.9},{77.1,37.2},{77.6,38.7},{77.6,40.6},{77.7,38.3},{77.9,41.8},{78.5,43.1},{78.5,45.8},{78.5,47.6},{78.5,48.6},{78.6,49.8},{78.8,44.3}}},
+        },
+        acquisition={
+            {"%s is a very rare drop from mining %s and %s.", "i67282", "o202738:Elementium Vein", "o202741:Rich Elementium Vein"},
+            {"These nodes are primarily in Deepholm, Twilight highlands, and Uldum. There's also a small amount in Tol Barad."}
+        }
     }, 
     [294]={
         name="Deathy",
@@ -4445,13 +5631,16 @@ PETS.all ={
         isTradeable=false,
         isUnique=true,
         isPassive=false,
+        unobtainable=true,
         source="Promotion",
         flavor="Deathwing's emergence transformed the whole of Azeroth; not even the ocean-dwelling murlocs were immune to his corrupt influence.",
         icon="441880",
         promotion="BlizzCon 2010",
-        unobtainable=true,
         possbileBreeds={"P/S"},
         baseStats={8, 8, 8},
+        acquisition={
+            {"This was awarded to attendees of Blizzcon 2010"}
+        }
     }, 
     [296]={
         name="Moonkin Hatchling",
@@ -4466,9 +5655,12 @@ PETS.all ={
         source="In-Game Shop",
         flavor="Moonkin are blessed by Elune and spread nature's grace wherever they travel. The festive fowls are always in the mood for a dance.",
         icon="467893",
-        locations={{continent="Northrend", zone="Dalaran (Northrend)", mapID=51, mapFloor=10, coords={{31.8,22.6},{32,22.2},{32,23.6},{32.6,22.2},}}},
         possbileBreeds={"B/B"},
         baseStats={8, 8, 8},
+        acquisition={
+            {"This pet was first available from the Store in 2010."},
+            {"When purcahsed, you'd receive both a Horde and Alliance version of the pet. This is the Alliance version."},
+        }
     }, 
     [297]={
         name="Lil' Ragnaros",
@@ -4485,6 +5677,9 @@ PETS.all ={
         icon="254652",
         possbileBreeds={"P/P"},
         baseStats={8, 9.5, 6.5},
+        acquisition={
+            {"This pet was first available from the Store in 2010."},
+        }
     }, 
     [298]={
         name="Moonkin Hatchling",
@@ -4499,9 +5694,12 @@ PETS.all ={
         source="In-Game Shop",
         flavor="The distinct roar of the moonkin is one of the most terrifying sounds in nature.",
         icon="467894",
-        locations={{continent="Northrend", zone="Dalaran (Northrend)", mapID=51, mapFloor=10, coords={{31.6,24.4},{31.8,22.4},{32.4,22.6},{33.2,22},}}},
         possbileBreeds={"B/B"},
         baseStats={8, 8, 8},
+        acquisition={
+            {"This pet was first available from the Store in 2010."},
+            {"When purcahsed, you'd receive both a Horde and Alliance version of the pet. This is the Horde version."},
+        }
     }, 
     [301]={
         name="Panther Cub",
@@ -4516,10 +5714,49 @@ PETS.all ={
         source="Quest",
         flavor="It looked up at you with those huge black eyes and seemed to ask, 'Are you my mommy?'",
         icon="132225",
-        quest={name="Some Good Will Come"},
-        locations={{mapID=50, coords={{76,66.6},}}},
         possbileBreeds={"S/B"},
         baseStats={7, 8.5, 8.5},
+        pois={
+            {name="Alliance:", entries={
+                {id="q29100:The Bwemba's Spirit", maps={
+                    {id="n52654:Bwemba", mapID=84, type="start", coords={{26.0,29.6}}},
+                }},
+                {id="q29102:To Fort Livingston"},
+                {id="q29103:Serpents and Poison"},
+                {id="q29104:Spirits Are With Us"},
+                {id="q29105:Nesingwary Will Know"},
+                {id="q29114:Track the Tracker"},
+                {id="q29115:The Hunter's Revenge"},
+                {id="q29118:Follow That Cat", maps={
+                    {display="Mauti's lair", mapID=50, type="end", coords={{77.48,68.92}}},
+                }},
+                {id="q29120:Mauti"},
+                {id="q29213:How's the Hunter Holding Up?"},
+                {id="q29121:Bury Me With Me Boots..."},
+                {id="q29267:Some Good Will Come"},
+            }},
+            {name="Horde:", entries={
+                {id="q29219:Bwemba's Spirit", maps={
+                    {id="n53081:Bwemba", mapID=85, type="start", coords={{32.6,67.4}}},
+                }},
+                {id="q29220:To Bambala"},
+                {id="q29221:Serpents and Poison"},
+                {id="q29222:Spirits Are With Us"},
+                {id="q29223:Nesingwary Will Know"},
+                {id="q29226:Track the Tracker"},
+                {id="q29227:The Hunter's Revenge"},
+                {id="q29229:Follow That Cat", maps={
+                    {display="Mauti's lair", mapID=50, type="end", coords={{77.48,68.92}}},
+                }},
+                {id="q29230:Mauti"},
+                {id="q29231:How's the Hunter Holding Up?"},
+                {id="q29232:Bury Me With Me Boots..."},
+                {id="q29268:Some Good Will Come"},
+            }}
+        },
+        acquisition={
+            {"Complete the quest chain up to the point where you receive the %s.", "i68833"},
+        }
     }, 
     [302]={
         name="Landro's Lichling",
@@ -4532,12 +5769,14 @@ PETS.all ={
         isUnique=false,
         isPassive=false,
         source="Trading Card Game",
+        tcg="Worldbreaker",
         flavor="How the goblin Landro Longshot initially came into possession of the lichling remains a mystery, but he was all too eager to wager it in a game of cards.",
         icon="254094",
-        tcg="Worldbreaker",
-        locations={{mapID=210, coords={{42.6,71.6},}}},
         possbileBreeds={"H/P"},
         baseStats={8.5, 8.5, 7},
+        acquisition={
+            {"Released as part of the Trading Card Game. May be purchasable on eBay."},
+        }
     }, 
     [303]={
         name="Nightsaber Cub",
@@ -4550,12 +5789,14 @@ PETS.all ={
         isUnique=false,
         isPassive=false,
         source="Trading Card Game",
+        tcg="Twilight of the Dragons",
         flavor="Elune made nightsabers silver and black so they could meld into the shadows on a moonlit night.",
         icon="132242",
-        tcg="Twilight of the Dragons",
-        locations={{mapID=210, coords={{42.6,71.6},}}},
         possbileBreeds={"S/S"},
         baseStats={7, 8.5, 8.5},
+        acquisition={
+            {"Released as part of the Trading Card Game. May be purchasable on eBay."},
+        }
     }, 
     [306]={
         name="Winterspring Cub",
@@ -4570,11 +5811,18 @@ PETS.all ={
         source="Vendor",
         flavor="Winterspring cubs are happiest when frolicking in freshly fallen snow.",
         icon="132252",
-        currency="gold",
-        npcs={{name="Michelle De Rum"}},
-        locations={{mapID=83, coords={{59.8,51.4},{59.8,51.6},}}},
         possbileBreeds={"S/B"},
         baseStats={7, 8.5, 8.5},
+        pois={
+            {name="Vendors:", entries={
+                {id="", maps={
+                    {id="n52830:Michelle De Rum", mapID=83, currencies={"cgold:50"}, type="npc", coords={{59.8,51.6}}},
+                }}
+            }}
+        },
+        acquisition={
+            {"Purchase a %s.", "i69239"}
+        }
     }, 
     [307]={
         name="Lashtail Hatchling",
@@ -4589,10 +5837,58 @@ PETS.all ={
         source="Quest",
         flavor="Born in the jungles of Stranglethorn, unlucky raptor hatchlings are often captured by the Gurubashi and taken to the troll city of Zul'Gurub.",
         icon="132193",
-        quest={name="An Old Friend"},
-        locations={{continent="Eastern Kingdoms", zone="Northern Stranglethorn", area="Zul'Gurub", mapID=1977, coords={{61.2,81.4},}}},
         possbileBreeds={"B/B"},
         baseStats={8, 8, 8},
+        pois={
+            {name="Alliance:", entries={
+                {id="q26732:Bad Medicine", maps={
+                    {id="n739:Brother Nimetz", mapID=50, type="start", coords={{47.2,11.0}}},
+                }},
+                {id="q26738:Just Hatched"},
+                {id="q26739:I Think She's Hungry"},
+                {id="q26735:The Fate of Kurzen"},
+                {id="q26736:Spared from Madness"},
+                {id="q26745:Favored Skull", maps={
+                    {display="Bal'lal Ruis", subDisplay="skull pile", mapID=50, type="start", coords={{33.7,37.2 }}},
+                }},
+                {id="q26746:A Nose for This Sort of Thing"},
+                {id="q26747:A Physical Specimen"},
+                {id="q26748:Bloodlord Mandokir"},
+                {id="q26749:Priestess Thaalia"},
+                {id="q26772:Mind Vision"},
+                {id="q26773:See Raptor"},
+                {id="q26774:Mind Control"},
+                {id="q26775:Be Raptor"},
+                {id="q26776:Ghaliri"},
+                {id="q29208:An Old Friend"},
+            }},
+            {name="Horde:", entries={
+                {id="q26278:The Defense of Grom'gol; Raptor Risk", maps={
+                    {id="n2464:Commander Aggro'gosh", mapID=50, type="start", coords={{38.4,50.6}}},
+                }},
+                {id="q26317:A Lashtail Hatchling"},
+                {id="q26321:I Think She's Hungry"},
+                {id="q26323:Favored Skull", maps={
+                    {display="Bal'lal Ruis", subDisplay="skull pile", mapID=50, type="start", coords={{33.7,37.2 }}},
+                }},
+                {id="q26325:A Nose for This Sort of Thing"},
+                {id="q26330:Who's a Big Troll?"},
+                {id="q26332:Skullsplitter Mojo"},
+                {id="q26334:Bloodlord Mandokir"},
+                {id="q26350:Priestess Hu'rala"},
+                {id="q26351:Mind Vision"},
+                {id="q26359:See Raptor"},
+                {id="q26360:Mind Control"},
+                {id="q26362:Be Raptor"},
+                {id="q26386:Surkhan"},
+                {id="q29208:An Old Friend"},
+            }}
+        },
+        acquisition={
+            {"Complete the long quest chain for your faction to receive a %s.", "i69251"},
+            {"Note for alliance - After you get the Favored Skull quest, you'll likely need to log out/in to cause %s to spawn.", "n43884:Osborne Obnoticus"},
+            {"Once you earn the pet you'll then be able to buy 2 more at pet trainers throughout the world."},
+        }
     }, 
     [308]={
         name="Legs",
@@ -4605,12 +5901,63 @@ PETS.all ={
         isUnique=false,
         isPassive=false,
         source="World Event",
+        eventName="Children's Week",
         flavor="Wild marsh walkers are dangerously aggressive, but they're loyal and affectionate if you manage to tame them.",
         icon="254502",
-        eventName="Children's Week",
-        locations={{continent="Outland", zone="Shattrath City", mapID=111, coords={{74.8,47.8},}}},
         possbileBreeds={"B/B"},
         baseStats={8, 8, 8},
+        pois={
+            {name="Alliance:", entries={
+                {id="q1468:Children's Week", maps={
+                    {id="n51988:Orphan Matron Nightingale", subDisplay="alliance", mapID=84, type="start", coords={{56.2,54.2}}},
+                }},
+                {id="q54130:Our New Friends", maps={
+                    {display="Embassy path start", mapID=84, type="end", coords={{54.11,16.58}}},
+                }},
+                {id="q29093:Cruisin' the Chasm", maps={
+                    {id="n52190:Twilber Torqwrench", mapID=52, type="end", coords={{57.6,53.0}}},
+                }},
+                {id="q29106:The Biggest Diamond Ever!", maps={
+                    {display="ramp downstairs", mapID=87, type="cave", coords={{44.09,51.91}}},
+                }},
+                {id="q29119:You Scream, I Scream...", maps={
+                    {id="n52421:Hans Coldhearth", mapID=84, type="end", coords={{49.1,89.8}}},
+                }},
+                {id="q29117:Let's Go Fly a Kite", maps={
+                    {id="n52358:Craggle Wobbletop", mapID=84, type="end", coords={{56.4,67.4},{56.4,67.8},{56.4,69.2},{56.4,69.8},{56.6,67.2},{56.6,67.6},{56.6,70.4},{56.8,71},{57.2,65.8},{57.2,72.4},{57.4,65.4},{57.4,72.8},{57.4,73.6},{57.6,73.4},{57.8,74.2},{58,74.8},{58.2,64.6},{58.2,75.6},{58.4,64.4},{58.4,76.6},{58.6,76.8},{58.8,64},{59.2,63.4},{59.8,62.8},{60.4,62.2},{60.6,62.2},{61.4,61.4},{61.6,61.6},{62.4,61.2},{63.4,61},{63.6,61.2},{64.6,61.4},{65,62},{65.4,62.6},{65.6,63},{66.2,63.8},{66.6,64.4}}},
+                }},
+                {id="q171:A Warden of the Alliance", maps={
+                    {id="n52358:Craggle Wobbletop", mapID=84, type="end", coords={{56.4,67.4},{56.4,67.8},{56.4,69.2},{56.4,69.8},{56.6,67.2},{56.6,67.6},{56.6,70.4},{56.8,71},{57.2,65.8},{57.2,72.4},{57.4,65.4},{57.4,72.8},{57.4,73.6},{57.6,73.4},{57.8,74.2},{58,74.8},{58.2,64.6},{58.2,75.6},{58.4,64.4},{58.4,76.6},{58.6,76.8},{58.8,64},{59.2,63.4},{59.8,62.8},{60.4,62.2},{60.6,62.2},{61.4,61.4},{61.6,61.6},{62.4,61.2},{63.4,61},{63.6,61.2},{64.6,61.4},{65,62},{65.4,62.6},{65.6,63},{66.2,63.8},{66.6,64.4}}},
+                }},
+            }},
+            {name="Horde:", entries={
+                {id="q172:Children's Week", maps={
+                    {id="n51989:Orphan Matron Battlewail", subDisplay="horde", mapID=85, type="start", coords={{58,57.2}}},
+                }},
+                {id="q29167:The Banshee Queen", maps={
+                    {id="n10181:Lady Sylvanas Windrunner", mapID=90, type="end", coords={{56.3,91}}},
+                }},
+                {id="q29146:Ridin' the Rocketway", maps={
+                    {display="rocket", mapID=76, type="end", coords={{50.73,73.94}}},
+                }},
+                {id="q29176:The Fallen Chieftain", maps={
+                    {display="Winterfin Retreat", mapID=7, type="end", coords={{60.8,23}}},
+                }},
+                {id="q29190:Let's Go Fly a Kite", maps={
+                    {id="n52809:Blax Bottlerocket", mapID=85, type="end", coords={{57,52.4},{57.2,52.8},{57.4,51.4},{57.6,53.4},{57.8,51},{58.2,62.6},{58.4,54.4},{58.4,55.4},{58.4,55.8},{58.4,56.6},{58.4,57.6},{58.4,61.2},{58.4,62},{58.6,53.8},{58.6,55.2},{58.6,56.4},{58.6,57.4},{58.6,57.8},{58.6,61.6},{58.8,58.8},{58.8,60.4},{58.8,61.2},{59,51.2},{59,52.8},{59.2,52.4}}},
+                }},
+                {id="q13957:You Scream, I Scream...", maps={
+                    {id="n52818:Snixx Quickfreeze", mapID=85, type="end", coords={{58.5,56}}},
+                }},
+                {id="q5502:A Warden of the Horde", maps={
+                    {id="n52809:Blax Bottlerocket", mapID=85, type="end", coords={{57,52.4},{57.2,52.8},{57.4,51.4},{57.6,53.4},{57.8,51},{58.2,62.6},{58.4,54.4},{58.4,55.4},{58.4,55.8},{58.4,56.6},{58.4,57.6},{58.4,61.2},{58.4,62},{58.6,53.8},{58.6,55.2},{58.6,56.4},{58.6,57.4},{58.6,57.8},{58.6,61.6},{58.8,58.8},{58.8,60.4},{58.8,61.2},{59,51.2},{59,52.8},{59.2,52.4}}},
+                }}
+            }}
+        },
+        acquisition={
+            {"Only available during the Children's Week seasonal event (end of April to beginning of May)."},
+            {"Once you've completed the final quest in the chain you should choose %s as your reward.", "i69648"},
+        }
     }, 
     [309]={
         name="Pterrordax Hatchling",
@@ -4625,16 +5972,12 @@ PETS.all ={
         source="Archaeology",
         flavor="Pterrordax eggs are incubated underneath the fossils of their forebears, allowing the hatchlings to absorb their ancestors' ferocity and intelligence.",
         icon="516665",
-        locations={
-            {mapID=17, coords={{41.9,37},}},
-            {mapID=36, coords={{77.8,56.3},}},
-            {mapID=47, coords={{32.4,70.8},}},
-            {mapID=25, coords={{59.7,57.4},}},
-            {mapID=50, coords={{36.6,46.6},}},
-            {mapID=49, coords={{34.2,70.1},}}
-        },
         possbileBreeds={"P/S"},
         baseStats={6.5, 9, 8.5},
+        acquisition={
+            {"Hope for the right Fossil project."},
+            {"The rare projects require %s.", "c393:120"}
+        }
     }, 
     [310]={
         name="Voodoo Figurine",
@@ -4651,6 +5994,10 @@ PETS.all ={
         icon="516666",
         possbileBreeds={"P/S"},
         baseStats={8, 8, 8},
+        acquisition={
+            {"Hope for the right Troll project."},
+            {"The rare projects require %s.", "c385:100"}
+        }
     }, 
     [311]={
         name="Guardian Cub",
@@ -4667,6 +6014,9 @@ PETS.all ={
         icon="519402",
         possbileBreeds={"B/B"},
         baseStats={8.5, 8, 7.5},
+        acquisition={
+            {"This pet was added to the Store in 2011."},
+        }
     }, 
     [316]={
         name="Cenarion Hatchling",
@@ -4684,6 +6034,10 @@ PETS.all ={
         locations={{continent="Northrend", zone="Dalaran (Northrend)", mapID=51, mapFloor=10, coords={{30.4,22.4},{30.6,21},{31.2,22},{31.2,22.6},{31.8,23.8},{32,21.8},{32.2,20.8},{32.2,23.4},{32.6,21.6},}}},
         possbileBreeds={"B/B"},
         baseStats={8.5, 7.5, 8},
+        acquisition={
+            {"This pet was added to the Store in 2011."},
+            {"It was available as a Twitch drop in Dec 2022."},
+        }
     }, 
     [317]={
         name="Hyjal Bear Cub",
@@ -4698,11 +6052,30 @@ PETS.all ={
         source="Vendor",
         flavor="The cubs of Hyjal suffered much during the Cataclysm. On the bright side, the devastation also led to their newfound love of heights and daredevil stunts.",
         icon="446127",
-        currency="gold",
-        npcs={{name="Varlan Highbough"}},
-        locations={{continent="Kalimdor", zone="Molten Front", mapID=5733, coords={{44.6,88.6},}}},
         possbileBreeds={"B/B"},
         baseStats={8.5, 8.5, 7},
+        pois={
+            {name="Quest", entries={
+                {id="q29181:Druids of the Talon", maps={
+                    {id="n52135:Malfurion Stormrage", mapID=338, type="start", coords={{47.0,91.0}}},
+                }},
+                {id="q29214:The Shadow Wardens", maps={
+                    {id="n52135:Malfurion Stormrage", mapID=338, type="start", coords={{47.0,91.0}}},
+                }},
+                {id="q29283:Calling the Ancients", maps={
+                    {id="n53882:Varlan Highbough", mapID=338, type="start", coords={{44.6,88.6}}},
+                }}
+            }},
+            {name="Vendors:", entries={
+                {id="", maps={
+                    {id="n53882:Varlan Highbough", mapID=338, currencies={"cgold:1500"}, type="npc", coords={{44.6,88.6}}},
+                }}
+            }}
+        },
+        acquisition={
+            {"The pet is only offered for sale after you've completed the 3 quests."},
+            {"Purchase a %s.", "i70140"}
+        }
     }, 
     [318]={
         name="Crimson Lasher",
@@ -4717,11 +6090,30 @@ PETS.all ={
         source="Vendor",
         flavor="Native to the ashen soils of the Firelands, the lasher was transplanted to Azeroth with the help of the Guardians of Hyjal.",
         icon="133941",
-        currency="gold",
-        npcs={{name="Ayla Shadowstorm"}},
-        locations={{continent="Kalimdor", zone="Molten Front", mapID=5733, coords={{44.8,86.6},}}},
         possbileBreeds={"B/B"},
         baseStats={7.5, 8.5, 8},
+        pois={
+            {name="Quest", entries={
+                {id="q29181:Druids of the Talon", maps={
+                    {id="n52135:Malfurion Stormrage", mapID=338, type="start", coords={{47.0,91.0}}},
+                }},
+                {id="q29214:The Shadow Wardens", maps={
+                    {id="n52135:Malfurion Stormrage", mapID=338, type="start", coords={{47.0,91.0}}},
+                }},
+                {id="q29279:Filling the Moonwell", maps={
+                    {id="n53881:Ayla Shadowstorm", mapID=338, type="start", coords={{44.8,86.6}}},
+                }}
+            }},
+            {name="Vendors:", entries={
+                {id="", maps={
+                    {id="n53881:Ayla Shadowstorm", mapID=338, currencies={"cgold:1500"}, type="npc", coords={{44.8,86.6}}},
+                }}
+            }}
+        },
+        acquisition={
+            {"The pet is only offered for sale after you've completed the 3 quests."},
+            {"Purchase a %s.", "i70160"}
+        }
     }, 
     [319]={
         name="Feline Familiar",
@@ -4734,20 +6126,23 @@ PETS.all ={
         isUnique=false,
         isPassive=false,
         source="World Event",
+        eventName="Hallow's End",
         flavor="Ride with the moon (and this furry, whiskered witch) in the dead of night!",
         icon="236547",
-        currency="item",
-        eventName="Hallow's End",
-        npcs={
-            {name="Woim"},
-            {name="Pippi"}
-        },
-        locations={
-            {continent="Eastern Kingdoms", zone="Tirisfal Glades"},
-            {continent="Eastern Kingdoms", zone="Stormwind City"}
-        },
         possbileBreeds={"P/B"},
         baseStats={6.5, 9, 8.5},
+        pois={
+            {name="Vendors:", entries={
+                {id="", maps={
+                    {id="n109685:Pippi", mapID=37, currencies={"ci:150:33226"}, type="npc", coords={{32.0,50.2}}},
+                    {id="n109688:Woim", mapID=2070, currencies={"ci:150:33226"}, type="npc", coords={{62.2,66.6}}},
+                }}
+            }}
+        },
+        acquisition={
+            {"The pet is only available during the Hallow's End seasonal event (halloween)."},
+            {"You can purchase a %s from one of the vendors for event currency.", "i70908"}
+        }
     }, 
     [320]={
         name="Lil' Tarecgosa",
@@ -27685,7 +29080,7 @@ PETS.all ={
         pois={
             {name="Quests", entries={
                 {id="q63824", maps={
-                    {mapID=1543, desc="General quest area", type="start", coords={{43,43}}},
+                    {mapID=1543, display="General quest area", type="start", coords={{43,43}}},
                 }}
             }}
         },
@@ -27908,7 +29303,7 @@ PETS.all ={
         pois={
             {name="Quests", entries={
                 {id="q63543", maps={
-                    {mapID=1543, desc="General quest area", type="start", coords={{32,60}}},
+                    {mapID=1543, display="General quest area", type="start", coords={{32,60}}},
                 }}
             }}
         },
@@ -27956,7 +29351,7 @@ PETS.all ={
         pois={
             {name="Quests", entries={
                 {id="q63823", maps={
-                    {mapID=1543, desc="General quest area", type="start", coords={{22,50}}},
+                    {mapID=1543, display="General quest area", type="start", coords={{22,50}}},
                 }}
             }}
         },

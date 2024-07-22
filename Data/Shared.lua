@@ -42,3 +42,17 @@ SHARED.aurelidLattice = {id="i187636", maps={
     {id="n180978:Hirukon ", chance=13, mapID=1970, type="kill", coords={{51.6,74.6}}},
     {id="n182688:Aurelid ", chance=4, mapID=1970, type="kill", coords={{45.2,62.6},{50.0,61.2},{48.8,55.0},{48.4,52.6}}},
 }}
+
+SHARED.guildVendors300g = {name="Vendors:", entries={
+    {id="", maps={
+        {id="n46602:Shay Pressler", mapID=84, currencies={"cgold:300"}, type="npc", coords={{64.6,76.8}}},
+        {id="n46572:Goram", mapID=85, currencies={"cgold:300"}, type="npc", coords={{48.2,75.6}}},
+        {id="n51496:Kim Horn", mapID=90, currencies={"cgold:300"}, type="npc", coords={{69.6,43.8}}},
+        {id="n51512:Mirla Silverblaze", mapID=125, currencies={"cgold:300"}, type="npc", coords={{52.6,56.6}}},
+        {id="n51495:Steeg Haskell", mapID=87, currencies={"cgold:300"}, type="npc", coords={{36.0,85.6}}},
+        {id="n51503:Randah Songhorn", mapID=88, currencies={"cgold:300"}, type="npc", coords={{37.4,62.4}}},
+        {id="n52268:Riha", mapID=111, currencies={"cgold:300"}, type="npc", coords={{58.6,46.6}}},
+        {id="n51504:Velia Moonbow", mapID=89, currencies={"cgold:300"}, type="npc", coords={{64.6,37.6}}},
+        {id="n142086:Perry Charlton", mapID=1161, currencies={"cgold:300"}, type="npc", coords={{70.0,14.8}}},
+    }}
+}}

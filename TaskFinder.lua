@@ -337,7 +337,7 @@ function TASKFINDER:UpdateTradingPostCache()
     end
 
     if UTILITIES:Count(items) == 0 then
-        if (PETC_tradingPostVendor and PETC_tradingPostVendor.expiration > GetTime()) then
+        if (PETC_tradingPostVendor and type(PETC_tradingPostVendor.expiration) == "number" and PETC_tradingPostVendor.expiration > GetTime()) then
             items = PETC_tradingPostVendor.items
             DEBUG:AddLine(file, method, "no response from server.  Used our cache")
         else

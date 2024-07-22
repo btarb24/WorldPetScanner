@@ -182,35 +182,48 @@ local function GetPoiIconAtlas(mapType)
     return nil
 end
 
-local function GetPois(pois, selectedIdx)
+local function GetPois(topDock, pois, selectedIdx)
     local selectedDepth1, selectedDepth2, selectedDepth3 = ParseLocation(selectedIdx)
     
-    local topDock 
     for poiTypeIdx, poiRoot in ipairs(pois) do
         local mainPoiLbl = DISPLAY_UTIL:AcquireLabelFont(PAPetCard, PAPetCardTab2.content.scrollFrame.child)
         mainPoiLbl:SetText(poiRoot.name)
-        if (poiTypeIdx == 1) then            
-            mainPoiLbl:SetPoint("TOPLEFT", PAPetCardTab2.content.scrollFrame.child, "TOPLEFT")
+        if (poiTypeIdx == 1) then
+            if (topDock) then
+                mainPoiLbl:SetPoint("LEFT", PAPetCardTab2.content.scrollFrame.child, "LEFT")
+                mainPoiLbl:SetPoint("TOP", topDock, "BOTTOM", 0, -10)
+            else
+                mainPoiLbl:SetPoint("TOPLEFT", PAPetCardTab2.content.scrollFrame.child, "TOPLEFT")
+            end
         else
             mainPoiLbl:SetPoint("LEFT", PAPetCardTab2.content.scrollFrame.child, "LEFT")
             mainPoiLbl:SetPoint("TOP", topDock, "BOTTOM", 0, -10)
         end
         
         topDock = mainPoiLbl
+        local t3Indent = 15
         local leftDock = mainPoiLbl
         for entryIdx, entry in ipairs(poiRoot.entries) do
             local poiLbl = DISPLAY_UTIL:AcquireHighlightFont(PAPetCard, PAPetCardTab2.content.scrollFrame.child)
             local poiLink, poiID, _, poiType
             if (entry.id and entry.id ~= "") then
                 poiLink, poiID, _, poiType = GetLink(entry.id);
+                if (entry.subDisplay) then
+                    poiLink = string.format("%s |cFFb3b3b3(%s)|r", poiLink, entry.subDisplay)
+                end
                 poiLbl:SetText(poiLink)
                 poiLbl:SetPoint("TOP", topDock, "BOTTOM", 0, -5)
-
-                if (poiType == "q") then                
-                    local completed = C_QuestLog.IsComplete(poiID)
+ 
+                if (poiType == "q" or poiType == "a") then                
+                    local completed
+                    if (poiType == "q") then
+                        completed = C_QuestLog.IsQuestFlaggedCompleted(poiID)
+                    else --a
+                        completed = select(4, GetAchievementInfo(poiID))
+                    end 
 
                     local questState = DISPLAY_UTIL:AcquireTexture(PAPetCard, PAPetCardTab2.content.scrollFrame.child)
-                    if completed or entryIdx == 2 then
+                    if completed then
                         questState:SetAtlas("auctionhouse-icon-checkmark")
                         questState:SetSize(12,12)
                         questState:SetPoint("TOP", poiLbl, "TOP", 0, -1)
@@ -227,6 +240,7 @@ local function GetPois(pois, selectedIdx)
                     leftDock = poiLbl
                     poiLbl:SetPoint("LEFT", mainPoiLbl, "LEFT", 15, 0)
                 end
+                t3Indent = 30
                 topDock = poiLbl
             else
                 leftDock = mainPoiLbl
@@ -235,37 +249,39 @@ local function GetPois(pois, selectedIdx)
             if (entry.maps) then
                 for mapIdx, map in ipairs(entry.maps) do
                     local mapDescLbl
+                    local mapVal = map.display
                     if map.coords then
                         local isSelected = poiTypeIdx == selectedDepth1 and entryIdx == selectedDepth2 and mapIdx == selectedDepth3
                         if isSelected then
                             mapDescLbl = DISPLAY_UTIL:AcquireHighlightFont(PAPetCard, PAPetCardTab2.content.scrollFrame.child)
-                            if (map.desc) then
-                                mapDescLbl:SetText(map.desc)
-                            else
-                                mapDescLbl:SetText(select(1, GetLink(map.id, "ffffff")))
+                            if (not mapVal) then
+                                mapVal = GetLink(map.id, "ffffff")
                             end
                         else
                             mapDescLbl = DISPLAY_UTIL:AcquireMultiValueFont(PAPetCard, PAPetCardTab2.content.scrollFrame.child)
-                            if (map.desc) then
-                                mapDescLbl:SetText(map.desc)
-                            else
-                                mapDescLbl:SetText(select(3, GetLink(map.id, "ffffff")))
+                            if (not mapVal) then
+                                mapVal = select(3, GetLink(map.id, "ffffff"))
                             end
-                            if (map.coords) then
-                                mapDescLbl.locationIndex = string.format("%d:%d:%d", poiTypeIdx, entryIdx, mapIdx)
-                                mapDescLbl:SetScript("OnMouseDown",
-                                    function(self)
-                                        DISPLAY.PetCard:Show(PAPetCard.pet, self.locationIndex)
-                                    end
-                                )
-                            end
+                            mapDescLbl.locationIndex = string.format("%d:%d:%d", poiTypeIdx, entryIdx, mapIdx)
+                            mapDescLbl:SetScript("OnMouseDown",
+                                function(self)
+                                    DISPLAY.PetCard:Show(PAPetCard.pet, self.locationIndex)
+                                end
+                            )
                         end
                     else
                         mapDescLbl = DISPLAY_UTIL:AcquireHighlightFont(PAPetCard, PAPetCardTab2.content.scrollFrame.child)
-                        mapDescLbl:SetText(GetLink(map.id))
+                        if (not mapVal) then
+                            mapVal = GetLink(map.id)
+                        end
                     end
+                    if (map.subDisplay) then
+                        mapVal = string.format("%s |cFFb3b3b3(%s)|r", mapVal, map.subDisplay)
+                    end
+                    mapDescLbl:SetText(mapVal)
                     mapDescLbl:SetPoint("TOP", topDock, "BOTTOM", 0, -2)
-                    mapDescLbl:SetPoint("LEFT", leftDock, "LEFT", 15, 0)
+                    -- mapDescLbl:SetPoint("LEFT", leftDock, "LEFT", 15, 0)
+                    mapDescLbl:SetPoint("LEFT", PAPetCardTab2.content.scrollFrame.child, "LEFT", t3Indent, 0)
 
                     local details = ""
                     if (map.chance) then
@@ -290,8 +306,8 @@ local function GetPois(pois, selectedIdx)
                         mapTipIcon:SetAtlas(poiIconAtlas)
                         mapTipIcon:SetSize(16,16)
                         mapTipIcon:SetPoint("TOP", topDock, "BOTTOM")
-                        mapTipIcon:SetPoint("LEFT", leftDock, "LEFT", 15, 0)
-                        mapDescLbl:SetPoint("LEFT", mapTipIcon, "RIGHT", 0, 0)
+                        mapTipIcon:SetPoint("LEFT", PAPetCardTab2.content.scrollFrame.child, "LEFT", t3Indent-6, 0)
+                        mapDescLbl:SetPoint("LEFT", PAPetCardTab2.content.scrollFrame.child, "LEFT", t3Indent+10, 0)
                     end
 
                     topDock = mapDescLbl
@@ -357,22 +373,26 @@ local function GetProfessionText(professionDetail, topDock)
     return topDock
 end
 
-local function GetAchievementText(achievement, topDock)
-    local achievementLbl = DISPLAY_UTIL:AcquireLabelFont(PAPetCard, PAPetCardTab2.content.scrollFrame.child)
+local function AddLabelAndVal(topDock, header, val, subval)
+    local sourceLbl = DISPLAY_UTIL:AcquireLabelFont(PAPetCard, PAPetCardTab2.content.scrollFrame.child)
+    sourceLbl:SetText(header)
+    
     if (topDock) then
-        achievementLbl:SetPoint("LEFT", PAPetCardTab2.content.scrollFrame.child, "LEFT")
-        achievementLbl:SetPoint("TOP", topDock, "BOTTOM", 0, -10)
+        sourceLbl:SetPoint("TOP", topDock, "BOTTOM", 0, -10)
     else
-        achievementLbl:SetPoint("TOPLEFT", PAPetCardTab2.content.scrollFrame.child, "TOPLEFT")        
+        sourceLbl:SetPoint("TOP", PAPetCardTab2.content.scrollFrame.child, "TOP")
     end
-    achievementLbl:SetText("Achievement: ")
 
-    local achievementVal = DISPLAY_UTIL:AcquireHighlightFont(PAPetCard, PAPetCardTab2.content.scrollFrame.child)
-    achievementVal:SetText(GetLink(achievement.id))
-    achievementVal:SetPoint("TOPLEFT", achievementLbl, "TOPRIGHT")
-    topDock = achievementLbl
+    sourceLbl:SetPoint("LEFT", PAPetCardTab2.content.scrollFrame.child, "LEFT")
+    local sourceVal = DISPLAY_UTIL:AcquireHighlightFont(PAPetCard, PAPetCardTab2.content.scrollFrame.child)
+    sourceVal:SetPoint("TOPLEFT", sourceLbl, "TOPRIGHT", 5, 0)
+    sourceVal:SetWordWrap(true)
+    if (subval) then
+        val = string.format("%s |cFFb3b3b3(%s)|r", val, subval)
+    end
+    sourceVal:SetText(val)
 
-    return topDock
+    return sourceVal
 end
 
 local function BuildMapTitle(location)
@@ -398,11 +418,15 @@ local function GetLocation(pet, location) --location, showLocList
         end
 
         local entry = poi.entries[depth2]
-        return entry.maps[depth3], false
-    end
-
-    if (not pet.isWild) then
-        return nil
+        if (not entry.maps) then
+            return nil
+        end
+        local map = entry.maps[depth3]
+        if map.mapID then
+            return map, false
+        else
+            return nil
+        end
     end
 
     --no location map
@@ -1036,7 +1060,7 @@ local function UpdateWindow(pet, locationIdx)
         f.tab1.content.abilitiesFrame:Hide()
     end
 
-    local actualContentHeight = f.tab1.content.possibleBreedsTable:GetBottom() - f.tab1.content:GetTop() - 75
+    local actualContentHeight = f.tab1.content:GetTop() - f.tab1.content.possibleBreedsTable:GetBottom() +50
     if (actualContentHeight < 550) then
         actualContentHeight = 550
     end
@@ -1198,51 +1222,56 @@ local function UpdateWindow(pet, locationIdx)
     end
 
     local bottomOfSourceSection
-    if (pet.pois) then
-        bottomOfSourceSection = GetPois(pet.pois, locationIdx)
+
+    if (pet.achievement) then
+        local link = GetLink(pet.achievement.id)
+        bottomOfSourceSection = AddLabelAndVal(bottomOfSourceSection, "Achievement: ", link)
     end
 
-    if (pet.source == "Profession") then
-        bottomOfSourceSection = GetProfessionText(pet.professionDetail, bottomOfSourceSection)
-    elseif (pet.source == "Achievement" and pet.achievement) then
-        bottomOfSourceSection = GetAchievementText(pet.achievement, bottomOfSourceSection)
-    elseif pet.source == "World Event" or pet.source == "Promotion" or pet.source == "Trading Card Game" or pet.source == "Quest" or not bottomOfSourceSection then
-        local sourceLbl = DISPLAY_UTIL:AcquireLabelFont(PAPetCard, f.tab2.content.scrollFrame.child)
-        if (pet.source == "Quest" and pet.quest) then
-            sourceLbl:SetText("Quest: ")
-        else
-            sourceLbl:SetText("Source: ")
-        end
-        
-        if (bottomOfSourceSection) then
-            sourceLbl:SetPoint("TOP", bottomOfSourceSection, "BOTTOM", 0, -10)
-        else
-            sourceLbl:SetPoint("TOP", f.tab2.content.scrollFrame.child, "TOP")
-        end
+    if (pet.pois) then
+        bottomOfSourceSection = GetPois(bottomOfSourceSection, pet.pois, locationIdx)
+    end
 
-        sourceLbl:SetPoint("LEFT", f.tab2.content.scrollFrame.child, "LEFT")
-        local sourceVal = DISPLAY_UTIL:AcquireHighlightFont(PAPetCard, f.tab2.content.scrollFrame.child)
-        sourceVal:SetPoint("TOPLEFT", sourceLbl, "TOPRIGHT", 5, 0)
-        sourceVal:SetWordWrap(true)
-        local source = pet.source
-        if (pet.source == "World Event") then
-            source = string.format("%s |cFFb3b3b3(%s)|r", pet.source, pet.eventName)
-        elseif (pet.source == "Trading Card Game") then
-            source = string.format("%s |cFFb3b3b3(%s)|r", pet.source, pet.tcg)
-        elseif (pet.source == "Quest" and pet.quest) then
-            source = GetLink(pet.quest)
-        end
-        sourceVal:SetText(source)
-        bottomOfSourceSection = sourceVal
+    if (pet.professionDetail) then
+        bottomOfSourceSection = GetProfessionText(pet.professionDetail, bottomOfSourceSection)
+    end
+
+    if (pet.quest) then
+        local link = GetLink(pet.quest)
+        bottomOfSourceSection = AddLabelAndVal(bottomOfSourceSection, "Quest: ", link)
+    end
+    
+    if (pet.reputation and pet.reputation.type) then
+        bottomOfSourceSection = AddLabelAndVal(bottomOfSourceSection, "Reputation: ", pet.reputation.type, pet.reputation.level)
+    end
+
+    if (pet.source == "World Event") then
+        bottomOfSourceSection = AddLabelAndVal(bottomOfSourceSection, "Source: ", pet.source, pet.eventName)
+    end
+    
+    if (pet.source == "Promotion") then
+        bottomOfSourceSection = AddLabelAndVal(bottomOfSourceSection, "Source: ", pet.source, pet.promotion)
+    end
+
+    if (pet.source == "Trading Card Game") then
+        bottomOfSourceSection = AddLabelAndVal(bottomOfSourceSection, "Source: ", pet.source, pet.tcg)
+    end
+
+    if (pet.source == "World Drop" or pet.source =="In-Game Shop" or pet.source == "Archaeology") then
+        bottomOfSourceSection = AddLabelAndVal(bottomOfSourceSection, "Source: ", pet.source)
     end
 
    -- INSTRUCTIONS
-   local bla = PETC.SHARED.Instr.synthForge
+    local bla = PETC.SHARED.Instr.synthForge
     local priorBottom = bottomOfSourceSection
     if (pet.acquisition) then
         f.tab2.content.instructionLbl = DISPLAY_UTIL:AcquireLabelFont(PAPetCard, f.tab2.content.scrollFrame.child)
         f.tab2.content.instructionLbl:SetPoint("LEFT", f.tab2.content.scrollFrame.child, "LEFT")
-        f.tab2.content.instructionLbl:SetPoint("TOP", priorBottom, "BOTTOM", 0, -10)
+        if priorBottom then
+            f.tab2.content.instructionLbl:SetPoint("TOP", priorBottom, "BOTTOM", 0, -10)
+        else
+            f.tab2.content.instructionLbl:SetPoint("TOP", f.tab2.content.scrollFrame.child, "TOP")
+        end
         f.tab2.content.instructionLbl:SetText("Instructions:")
         priorBottom = f.tab2.content.instructionLbl
 

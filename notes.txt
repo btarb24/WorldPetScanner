@@ -16,6 +16,9 @@ https://www.townlong-yak.com/framexml/live/Blizzard_APIDocumentation
 
 /script print(_VERSION)   .. prints the lua version in wow
 
+accurate debug timestamps print(debugprofilestop())
+GetTimePreciseSec()
+
 TODO
 * falkosaur pet food
 * etherwyrm  - make sure A Shady Place quest is up as part of the criteria
@@ -23,8 +26,8 @@ TODO
 * separate data for report?
 * create Logging window that you turn on via chat command
 * better option to 'show for collected pets'
-* make dice icon a bit smaller so it VAligns with non-dice rewards
 * font scaler option
+* track these pets: 265, 279
 
 DATA
 * requiresScan -- for pets that show up Today's Events
