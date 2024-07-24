@@ -38,6 +38,9 @@ PETS.FAMILIES ={
     [10] ="Mechanical"
 }
 
+PETS.lowest = 39 --updated later
+PETS.highest = 39 --updated later
+
 PETS.all ={
     [39]={
         name="Mechanical Squirrel",
@@ -85,7 +88,7 @@ PETS.all ={
         pois={
             {name="Vendors:", entries={
                 {id="", maps={
-                    {id="n6367:Donni Anthania", currencies={"cgold:.4"}, mapID=37, coords={{44.2,53.2},}}
+                    {id="n6367:Donni Anthania", currencies={"cgold:.4"}, mapID=37, type="vendor", coords={{44.2,53.2},}}
                 }}
             }}
         },
@@ -111,7 +114,7 @@ PETS.all ={
         pois={
             {name="Vendors:", entries={
                 {id="", maps={
-                    {id="n6367:Donni Anthania", currencies={"cgold:.4"}, mapID=37, coords={{44.2,53.2},}}
+                    {id="n6367:Donni Anthania", currencies={"cgold:.4"}, type="vendor", mapID=37, coords={{44.2,53.2},}}
                 }}
             }}
         },
@@ -158,7 +161,7 @@ PETS.all ={
         pois={
             {name="Vendors:", entries={
                 {id="", maps={
-                    {id="n6367:Donni Anthania", currencies={"cgold:.4"}, mapID=37, coords={{44.2,53.2},}}
+                    {id="n6367:Donni Anthania", currencies={"cgold:.4"}, type="vendor", mapID=37, coords={{44.2,53.2},}}
                 }}
             }}
         },
@@ -184,7 +187,7 @@ PETS.all ={
         pois={
             {name="Vendors:", entries={
                 {id="", maps={
-                    {id="n20980:Dealer Rashaad", currencies={"cgold:.6"}, mapID=109, coords={{43.4,29.2},}}
+                    {id="n20980:Dealer Rashaad", currencies={"cgold:.6"}, type="vendor", mapID=109, coords={{43.4,29.2},}}
                 }}
             }}
         },
@@ -210,7 +213,7 @@ PETS.all ={
         pois={
             {name="Vendors:", entries={
                 {id="", maps={
-                    {id="n6367:Donni Anthania", currencies={"cgold:.4"}, mapID=37, coords={{44.2,53.2},}}
+                    {id="n6367:Donni Anthania", currencies={"cgold:.4"}, type="vendor", mapID=37, coords={{44.2,53.2},}}
                 }}
             }}
         },
@@ -236,7 +239,7 @@ PETS.all ={
         pois={
             {name="Vendors:", entries={
                 {id="", maps={
-                    {id="n8666:Lil Timmy", currencies={"cgold:.6"}, mapID=84, coords={{46.8,56},{47.4,57.2},{47.4,57.6},{47.6,57.4},{47.8,57.8},{48.4,58.8},{48.6,59.2},{48.8,59.6},{49.2,60.6},{49.4,58.4},{49.6,61.4},{49.8,57.8},{49.8,61.6},{50.4,56.8},{50.6,62.4},{51,56.4},{51,56.6},{51.2,63},{52,55.4},{52,55.6},{52,63.2},{53,55.2},{53,62.6},{53.4,62.4},{53.6,55.2},{53.6,62.4},{53.8,62.6},{54.4,56.2},{54.6,56.4},{54.8,63.6},{55.2,63.2},{55.4,57},{55.8,56.8},{56.2,62.6},{56.4,56},{56.4,62.4},{56.6,56},{57,55},{57,62.4},{57.4,54.4},{57.4,63.2},{57.6,63.2},{58.2,52.4},{58.2,53.2},{58.2,53.6},{58.2,64.2},{58.4,51.2},{58.6,64.2},{58.8,50.8},{59,50.4},{59.4,63.2},{59.6,46.2},{59.6,49.8},{59.8,47.2},{60,48},{60,62.8},{60.2,48.6},{60.4,45.4},{60.4,62.4},{60.6,62.6},{60.8,62.2},{61.2,44.8},{61.6,61.6},{61.8,45},{62.2,61.4},{62.4,46.2},{62.6,46.4},{62.8,46.8},{63.2,47.8},{63.4,61},{63.6,48.4},{63.6,48.6},{63.6,61.2},{64,49.6},{64.6,61.2},{64.8,50.4},{64.8,61.6},{65.2,50.6},{65.4,62.8},{65.6,51},{65.8,63.2},{66.4,64.4},{66.4,64.6},{67,64.6},{67.2,50.6},{67.4,50.4},{67.4,56.4},{67.4,56.6},{67.4,58.2},{67.4,58.6},{67.4,63.2},{67.4,64.2},{67.6,56.2},{67.6,57.6},{67.6,59},{67.6,64},{68,50.4},{68,63.4},{68.2,51},{68.2,55.2},{68.2,60.2},{68.4,51.6},{68.4,54.2},{68.6,51.4},{68.6,54.6},{68.6,60.8},{68.6,62.6},{69,52.4},{69,54},{69.2,52.6},{69.2,62},{69.6,53.2}}}
+                    {id="n8666:Lil Timmy", currencies={"cgold:.6"}, type="vendor", mapID=84, coords={{46.8,56},{47.4,57.2},{47.4,57.6},{47.6,57.4},{47.8,57.8},{48.4,58.8},{48.6,59.2},{48.8,59.6},{49.2,60.6},{49.4,58.4},{49.6,61.4},{49.8,57.8},{49.8,61.6},{50.4,56.8},{50.6,62.4},{51,56.4},{51,56.6},{51.2,63},{52,55.4},{52,55.6},{52,63.2},{53,55.2},{53,62.6},{53.4,62.4},{53.6,55.2},{53.6,62.4},{53.8,62.6},{54.4,56.2},{54.6,56.4},{54.8,63.6},{55.2,63.2},{55.4,57},{55.8,56.8},{56.2,62.6},{56.4,56},{56.4,62.4},{56.6,56},{57,55},{57,62.4},{57.4,54.4},{57.4,63.2},{57.6,63.2},{58.2,52.4},{58.2,53.2},{58.2,53.6},{58.2,64.2},{58.4,51.2},{58.6,64.2},{58.8,50.8},{59,50.4},{59.4,63.2},{59.6,46.2},{59.6,49.8},{59.8,47.2},{60,48},{60,62.8},{60.2,48.6},{60.4,45.4},{60.4,62.4},{60.6,62.6},{60.8,62.2},{61.2,44.8},{61.6,61.6},{61.8,45},{62.2,61.4},{62.4,46.2},{62.6,46.4},{62.8,46.8},{63.2,47.8},{63.4,61},{63.6,48.4},{63.6,48.6},{63.6,61.2},{64,49.6},{64.6,61.2},{64.8,50.4},{64.8,61.6},{65.2,50.6},{65.4,62.8},{65.6,51},{65.8,63.2},{66.4,64.4},{66.4,64.6},{67,64.6},{67.2,50.6},{67.4,50.4},{67.4,56.4},{67.4,56.6},{67.4,58.2},{67.4,58.6},{67.4,63.2},{67.4,64.2},{67.6,56.2},{67.6,57.6},{67.6,59},{67.6,64},{68,50.4},{68,63.4},{68.2,51},{68.2,55.2},{68.2,60.2},{68.4,51.6},{68.4,54.2},{68.6,51.4},{68.6,54.6},{68.6,60.8},{68.6,62.6},{69,52.4},{69,54},{69.2,52.6},{69.2,62},{69.6,53.2}}}
                 }}
             }}
         },
@@ -263,8 +266,8 @@ PETS.all ={
         pois={
             {name="Vendors:", entries={
                 {id="", maps={
-                    {id="n44179:Harry No-Hooks", currencies={"cgold:.36"}, mapID=210, coords={{46.6,93.6}}},
-                    {id="n2663:Narkk", currencies={"cgold:.38"}, mapID=210, coords={{42.6,69.2}}}    
+                    {id="n44179:Harry No-Hooks", currencies={"cgold:.36"}, type="vendor", mapID=210, coords={{46.6,93.6}}},
+                    {id="n2663:Narkk", currencies={"cgold:.38"}, type="vendor", mapID=210, coords={{42.6,69.2}}}    
                 }}
             }}
         },
@@ -340,9 +343,9 @@ PETS.all ={
         pois={
             {name="Vendors:", entries = {
                 {id="", maps={
-                    {id="n44179:Harry No-Hooks", currencies={"cgold:.36"}, mapID=210, coords={{46.6,93.6}}},
-                    {id="n2663:Narkk", currencies={"cgold:.38"}, mapID=210, coords={{42.6,69.2}}},
-                    {id="n20980:Dealer Rashaad", currencies={"cgold:.4"}, mapID=109, coords={{43.4,29.2}}}
+                    {id="n44179:Harry No-Hooks", currencies={"cgold:.36"}, type="vendor", mapID=210, coords={{46.6,93.6}}},
+                    {id="n2663:Narkk", currencies={"cgold:.38"}, type="vendor", mapID=210, coords={{42.6,69.2}}},
+                    {id="n20980:Dealer Rashaad", currencies={"cgold:.4"}, type="vendor", mapID=109, coords={{43.4,29.2}}}
                 }}
             }}
         },
@@ -370,8 +373,8 @@ PETS.all ={
         pois={
             {name="Vendors:", entries = {
                 {id="", maps={
-                    {id="n44135:Plucky Johnson", currencies={"cgold:1"}, mapID=64, coords={{84.4,91.4},{85.2,91.6},{85.4,91.4},{85.6,91.2},{85.6,91.6}}},
-                    {id="n141009:Col. Tenders", currencies={"cgold:.85"}, mapID=1161, coords={{60,22.4}}}
+                    {id="n44135:Plucky Johnson", currencies={"cgold:1"}, type="vendor", mapID=64, coords={{85.2,91.6}}},
+                    {id="n141009:Col. Tenders", currencies={"cgold:.85"}, type="vendor", mapID=1161, coords={{60,22.4}}}
                 }}
             }}
         },
@@ -395,11 +398,11 @@ PETS.all ={
         pois={
             {name="Vendors:", entries = {
                 {id="", maps={
-                    {id="n20980:Dealer Rashaad", currencies={"cgold:.5"}, mapID=109, coords={{43.4,29.2}}},
-                    {id="n140137:Bugcatcher Cal'yoon", currencies={"cgold:.5"}, mapID=862, coords={{77,15.8}}},
-                    {id="n130975:Jeremiah Payson", currencies={"cgold:.5"}, mapID=90, coords={{67,47},{67.4,44.4},{67.4,44.6}}},
-                    {id="n186073:Jeremiah Payson", currencies={"cgold:.5"}, mapID=2070, coords={{65.2,66.8}}},
-                    {id="n141702:Jeremiah Payson", currencies={"cgold:.4"}, mapID=85, coords={{54.4,89.4},{54.4,89.6},{54.6,89.4},{54.6,89.6},{54.6,90.6}}},
+                    {id="n20980:Dealer Rashaad", currencies={"cgold:.5"}, type="vendor", mapID=109, coords={{43.4,29.2}}},
+                    {id="n140137:Bugcatcher Cal'yoon", currencies={"cgold:.5"}, type="vendor", mapID=862, coords={{77,15.8}}},
+                    {id="n130975:Jeremiah Payson", currencies={"cgold:.5"}, type="vendor", mapID=90, coords={{67.4,44.6}}},
+                    {id="n186073:Jeremiah Payson", currencies={"cgold:.5"}, type="vendor", mapID=2070, coords={{65.2,66.8}}},
+                    {id="n141702:Jeremiah Payson", currencies={"cgold:.4"}, type="vendor", mapID=85, coords={{54.4,89.4}}},
                 }}
             }}
         },
@@ -529,7 +532,7 @@ PETS.all ={
         pois={
             {name="Vendors:", entries={
                 {id="", maps={
-                    {id="n14860:Flik", currencies={"cgold:1"}, mapID=407, coords={{52.4,62.2},{52.4,62.6},{52.4,63.8},{52.6,62.4},{52.6,63.4},{52.6,63.6},{53.2,69},{53.4,66.4},{53.4,66.6},{53.4,68.4},{53.6,62.6},{53.6,65.4},{53.6,66.2},{53.6,67.4},{53.8,68.2},{54,62.4},{54.2,70.2},{54.4,64.4},{54.4,69.2},{54.4,70.6},{54.6,69.4},{54.6,69.6},{54.8,64},{54.8,70.6},{55.4,63},{55.4,71.6},{55.6,70.2},{55.8,70.6},{55.8,71.6},{56,76},{56,76.6},{56.2,63.4},{56.2,72.6},{56.4,63.6},{56.4,73.8},{56.6,74.4},{56.8,69.6},{56.8,71.6},{56.8,76},{57,62.4},{57,63},{57,69},{57,71.4},{57.2,64.4},{57.2,64.6},{57.2,68.4},{57.2,74.8},{57.4,65.8},{57.4,72.6},{57.6,64.4},{57.6,66.4},{57.6,70.4},{57.6,71},{57.8,69.2},{57.8,73.4},{57.8,75.2},{58.2,62.6},{58.2,65.2},{58.4,67},{58.4,68.2},{58.6,62.6},{58.6,64},{58.6,66.8},{58.8,66.4},{58.8,68.6},{59.2,68.4},{59.6,68},{59.8,67}}},
+                    {id="n14860:Flik", currencies={"cgold:1"}, type="vendor", mapID=407, coords={{52.4,62.2},{52.4,62.6},{52.4,63.8},{52.6,62.4},{52.6,63.4},{52.6,63.6},{53.2,69},{53.4,66.4},{53.4,66.6},{53.4,68.4},{53.6,62.6},{53.6,65.4},{53.6,66.2},{53.6,67.4},{53.8,68.2},{54,62.4},{54.2,70.2},{54.4,64.4},{54.4,69.2},{54.4,70.6},{54.6,69.4},{54.6,69.6},{54.8,64},{54.8,70.6},{55.4,63},{55.4,71.6},{55.6,70.2},{55.8,70.6},{55.8,71.6},{56,76},{56,76.6},{56.2,63.4},{56.2,72.6},{56.4,63.6},{56.4,73.8},{56.6,74.4},{56.8,69.6},{56.8,71.6},{56.8,76},{57,62.4},{57,63},{57,69},{57,71.4},{57.2,64.4},{57.2,64.6},{57.2,68.4},{57.2,74.8},{57.4,65.8},{57.4,72.6},{57.6,64.4},{57.6,66.4},{57.6,70.4},{57.6,71},{57.8,69.2},{57.8,73.4},{57.8,75.2},{58.2,62.6},{58.2,65.2},{58.4,67},{58.4,68.2},{58.6,62.6},{58.6,64},{58.6,66.8},{58.8,66.4},{58.8,68.6},{59.2,68.4},{59.6,68},{59.8,67}}},
                 }}
             }}
         },
@@ -561,7 +564,7 @@ PETS.all ={
         pois={
             {name="Vendors:", entries={
                 {id="", maps={
-                    {id="n14860:Flik", currencies={"cgold:1"}, mapID=407, coords={{52.4,62.2},{52.4,62.6},{52.4,63.8},{52.6,62.4},{52.6,63.4},{52.6,63.6},{53.2,69},{53.4,66.4},{53.4,66.6},{53.4,68.4},{53.6,62.6},{53.6,65.4},{53.6,66.2},{53.6,67.4},{53.8,68.2},{54,62.4},{54.2,70.2},{54.4,64.4},{54.4,69.2},{54.4,70.6},{54.6,69.4},{54.6,69.6},{54.8,64},{54.8,70.6},{55.4,63},{55.4,71.6},{55.6,70.2},{55.8,70.6},{55.8,71.6},{56,76},{56,76.6},{56.2,63.4},{56.2,72.6},{56.4,63.6},{56.4,73.8},{56.6,74.4},{56.8,69.6},{56.8,71.6},{56.8,76},{57,62.4},{57,63},{57,69},{57,71.4},{57.2,64.4},{57.2,64.6},{57.2,68.4},{57.2,74.8},{57.4,65.8},{57.4,72.6},{57.6,64.4},{57.6,66.4},{57.6,70.4},{57.6,71},{57.8,69.2},{57.8,73.4},{57.8,75.2},{58.2,62.6},{58.2,65.2},{58.4,67},{58.4,68.2},{58.6,62.6},{58.6,64},{58.6,66.8},{58.8,66.4},{58.8,68.6},{59.2,68.4},{59.6,68},{59.8,67}}},
+                    {id="n14860:Flik", currencies={"cgold:1"}, type="vendor", mapID=407, coords={{52.4,62.2},{52.4,62.6},{52.4,63.8},{52.6,62.4},{52.6,63.4},{52.6,63.6},{53.2,69},{53.4,66.4},{53.4,66.6},{53.4,68.4},{53.6,62.6},{53.6,65.4},{53.6,66.2},{53.6,67.4},{53.8,68.2},{54,62.4},{54.2,70.2},{54.4,64.4},{54.4,69.2},{54.4,70.6},{54.6,69.4},{54.6,69.6},{54.8,64},{54.8,70.6},{55.4,63},{55.4,71.6},{55.6,70.2},{55.8,70.6},{55.8,71.6},{56,76},{56,76.6},{56.2,63.4},{56.2,72.6},{56.4,63.6},{56.4,73.8},{56.6,74.4},{56.8,69.6},{56.8,71.6},{56.8,76},{57,62.4},{57,63},{57,69},{57,71.4},{57.2,64.4},{57.2,64.6},{57.2,68.4},{57.2,74.8},{57.4,65.8},{57.4,72.6},{57.6,64.4},{57.6,66.4},{57.6,70.4},{57.6,71},{57.8,69.2},{57.8,73.4},{57.8,75.2},{58.2,62.6},{58.2,65.2},{58.4,67},{58.4,68.2},{58.6,62.6},{58.6,64},{58.6,66.8},{58.8,66.4},{58.8,68.6},{59.2,68.4},{59.6,68},{59.8,67}}},
                 }}
             }}
         },
@@ -589,8 +592,8 @@ PETS.all ={
         pois={
             {name="Vendors:", entries={
                 {id="", maps={
-                    {id="n8665:Shylenai", currencies={"cgold:.5"}, mapID=89, coords={{64,53.2}}},
-                    {id="n8665:Shylenai", currencies={"cgold:.5"}, mapID=84, coords={{55.8,3.6}}},
+                    {id="n8665:Shylenai", currencies={"cgold:.5"}, type="vendor", mapID=89, coords={{64,53.2}}},
+                    {id="n8665:Shylenai", currencies={"cgold:.5"}, type="vendor", mapID=84, coords={{55.8,3.6}}},
                 }}
             }}
         },
@@ -616,8 +619,8 @@ PETS.all ={
         pois={
             {name="Vendors:", entries={
                 {id="", maps={
-                    {id="n8665:Shylenai", currencies={"cgold:.5"}, mapID=89, coords={{64,53.2}}},
-                    {id="n8665:Shylenai", currencies={"cgold:.5"}, mapID=84, coords={{55.8,3.6}}},
+                    {id="n8665:Shylenai", currencies={"cgold:.5"}, type="vendor", mapID=89, coords={{64,53.2}}},
+                    {id="n8665:Shylenai", currencies={"cgold:.5"}, type="vendor", mapID=84, coords={{55.8,3.6}}},
                 }}
             }}
         },
@@ -665,7 +668,7 @@ PETS.all ={
         pois={
             {name="Vendors:", entries={
                 {id="", maps={
-                    {id="n8401:Halpa", currencies={"cgold:.4"}, mapID=88, coords={{62.8,58.4}}},
+                    {id="n8401:Halpa", currencies={"cgold:.4"}, type="vendor", mapID=88, coords={{62.8,58.4}}},
                 }}
             }}
         },
@@ -691,7 +694,7 @@ PETS.all ={
         pois={
             {name="Vendors:", entries={
                 {id="", maps={
-                    {id="n1263:Yarlyn Amberstill", currencies={"cgold:.2"}, mapID=27, coords={{70.6,49}}},
+                    {id="n1263:Yarlyn Amberstill", currencies={"cgold:.2"}, type="vendor", mapID=27, coords={{70.6,49}}},
                 }}
             }}
         },
@@ -717,7 +720,7 @@ PETS.all ={
         pois={
             {name="Vendors:", entries={
                 {id="", maps={
-                    {id="n96479:Breanni", currencies={"cgold:40"}, mapID=41, coords={{58.6,39.6}}},
+                    {id="n96479:Breanni", currencies={"cgold:40"}, type="vendor", mapID=41, coords={{58.6,39.6}}},
                 }}
             }}
         },
@@ -744,7 +747,7 @@ PETS.all ={
         pois={
             {name="Vendors:", entries={
                 {id="", maps={
-                    {id="n8404:Xan'tish", currencies={"cgold:.475"}, mapID=85, coords={{32,66},{32.4,63.2},{32.4,65.2},{32.6,67},{33.6,63.8},{33.8,68},{34.2,64.6},{34.2,66.6}}},
+                    {id="n8404:Xan'tish", currencies={"cgold:.475"}, type="vendor", mapID=85, coords={{32,66},{32.4,63.2},{32.4,65.2},{32.6,67},{33.6,63.8},{33.8,68},{34.2,64.6},{34.2,66.6}}},
                 }}
             }}
         },
@@ -770,7 +773,7 @@ PETS.all ={
         pois={
             {name="Vendors:", entries={
                 {id="", maps={
-                    {id="n8404:Xan'tish", currencies={"cgold:.5"}, mapID=85, coords={{32,66},{32.4,63.2},{32.4,65.2},{32.6,67},{33.6,63.8},{33.8,68},{34.2,64.6},{34.2,66.6}}},
+                    {id="n8404:Xan'tish", currencies={"cgold:.5"}, type="vendor", mapID=85, coords={{32,66},{32.4,63.2},{32.4,65.2},{32.6,67},{33.6,63.8},{33.8,68},{34.2,64.6},{34.2,66.6}}},
                 }}
             }}
         },
@@ -796,7 +799,7 @@ PETS.all ={
         pois={
             {name="Vendors:", entries={
                 {id="", maps={
-                    {id="n8404:Xan'tish", currencies={"cgold:.5"}, mapID=85, coords={{32,66},{32.4,63.2},{32.4,65.2},{32.6,67},{33.6,63.8},{33.8,68},{34.2,64.6},{34.2,66.6}}},
+                    {id="n8404:Xan'tish", currencies={"cgold:.5"}, type="vendor", mapID=85, coords={{32,66},{32.4,63.2},{32.4,65.2},{32.6,67},{33.6,63.8},{33.8,68},{34.2,64.6},{34.2,66.6}}},
                 }}
             }}
         },
@@ -821,22 +824,22 @@ PETS.all ={
         icon="656513",
         pois={
             {name="Quests:", entries={
-                {id="q485", maps={
+                {id="q485:Find OOX-09/HL!", maps={
                     {mapID=26, display="OOX-09/HL Distress Beacon", type="start"},
                     {mapID=26, display="Homing Robot OOX-09/HL", type="end", coords={{49.4,37.8}}},
                 }},
-                {id="q836"},
-                {id="q25475", maps={
+                {id="q836:Rescue OOX-09/HL!"},
+                {id="q25475:Find OOX-22/FE!", maps={
                     {mapID=69, display="OOX-22/FE Distress Beacon", type="start"},
                     {mapID=69, display="Homing Robot OOX-22/FE", type="end", coords={{53.4,55.6}}},
                 }},
-                {id="q25476"},
-                {id="q351", maps={
+                {id="q25476:Rescue OOX-22/FE!"},
+                {id="q351:Find OOX-17/TN!", maps={
                     {mapID=219, display="OOX-17/TN Distress Beacon", type="start"},
                     {mapID=71, display="Homing Robot OOX-17/TN", type="end", coords={{59.8,64}}},
                 }},
-                {id="q648"},
-                {id="q3721", name="An OOX of Your Own", maps={
+                {id="q648:Rescue OOX-17/TN!"},
+                {id="q3721:An OOX of Your Own", name="An OOX of Your Own", maps={
                     {mapID=210, display="Oglethorpe Obnoticus", type="start", coords={{43,72}}},
                 }}
             }}
@@ -869,7 +872,7 @@ PETS.all ={
         icon="135996",
         pois={
             {name="Quests:", entries={
-                {id="q3861", maps={
+                {id="q3861:CLUCK!", maps={
                     {mapID=52, display="Farmer Saldean (alliance)", type="start", coords={{56,31.2}}},
                     {mapID=18, display="William Saldean (horde)", type="start", coords={{61.2,52}}},
                     {mapID=18, display="Chicken (horde)", type="end", coords={{61.8,57.5}}},
@@ -1371,7 +1374,7 @@ PETS.all ={
         },
         acquisition={
             {"The pet is only available during the Winter Veil seasonal event (christmas)."},
-            {"Historically, you receive a %s under the chrismas tree on the 25th and it is available until Jan 2nd.", "i21310"},
+            {"Historically, you receive a %s under the christmas tree on the 25th and it is available until Jan 2nd.", "i21310"},
             {"There is a 25% chance for this pet to be in your present. Be sure to collect your present on every alt you have for the best chance."},
             {"You can usually buy one on the Auction House year-round for a low price."},
         }
@@ -1404,7 +1407,7 @@ PETS.all ={
         },
         acquisition={
             {"The pet is only available during the Winter Veil seasonal event (christmas)."},
-            {"Historically, you receive a %s under the chrismas tree on the 25th and it is available until Jan 2nd.", "i21310"},
+            {"Historically, you receive a %s under the christmas tree on the 25th and it is available until Jan 2nd.", "i21310"},
             {"There is a 25% chance for this pet to be in your present. Be sure to collect your present on every alt you have for the best chance."},
             {"You can usually buy one on the Auction House year-round for a low price."},
         }
@@ -1437,7 +1440,7 @@ PETS.all ={
         },
         acquisition={
             {"The pet is only available during the Winter Veil seasonal event (christmas)."},
-            {"Historically, you receive a %s under the chrismas tree on the 25th and it is available until Jan 2nd.", "i21310"},
+            {"Historically, you receive a %s under the christmas tree on the 25th and it is available until Jan 2nd.", "i21310"},
             {"There is a 25% chance for this pet to be in your present. Be sure to collect your present on every alt you have for the best chance."},
             {"You can usually buy one on the Auction House year-round for a low price."},
         }
@@ -1470,7 +1473,7 @@ PETS.all ={
         },
         acquisition={
             {"The pet is only available during the Winter Veil seasonal event (christmas)."},
-            {"Historically, you receive a %s under the chrismas tree on the 25th and it is available until Jan 2nd.", "i21310"},
+            {"Historically, you receive a %s under the christmas tree on the 25th and it is available until Jan 2nd.", "i21310"},
             {"There is a 25% chance for this pet to be in your present. Be sure to collect your present on every alt you have for the best chance."},
             {"You can usually buy one on the Auction House year-round for a low price."},
         }
@@ -1742,7 +1745,7 @@ PETS.all ={
         pois={
             {name="Points of interest:", entries={
                 {id="", maps={
-                    {id="i27388", mapID=108, type="dot", coords={{45.3,40.2},{46.3,39.6},{48.2,40.1},{58.4,58.9},{58.5,58.8},{58.6,60.7},{58.6,61.6},{60.3,59.2},{60.8,59.3},{63.2,77.9},{63.3,73.4},{63.3,73.5},{63.8,79.7},{65.2,78.6},{65.4,84.2},{66.4,80},{66.5,80},{67.6,75.3},{67.7,74.4},{67.8,79.7},{68.9,77.1},{69.3,80.5}}},
+                    {id="i27388", mapID=108, type="fish", coords={{45.3,40.2},{46.3,39.6},{48.2,40.1},{58.4,58.9},{58.5,58.8},{58.6,60.7},{58.6,61.6},{60.3,59.2},{60.8,59.3},{63.2,77.9},{63.3,73.4},{63.3,73.5},{63.8,79.7},{65.2,78.6},{65.4,84.2},{66.4,80},{66.5,80},{67.6,75.3},{67.7,74.4},{67.8,79.7},{68.9,77.1},{69.3,80.5}}},
                 }}
             }}
         },
@@ -2985,7 +2988,7 @@ PETS.all ={
         },
         acquisition={
             {"The pet is only available during the Winter Veil seasonal event (christmas)."},
-            {"Historically, you receive a %s under the chrismas tree on the 25th and it is available until Jan 2nd.", "i116762"},
+            {"Historically, you receive a %s under the christmas tree on the 25th and it is available until Jan 2nd.", "i116762"},
             {"There is a chance for this pet to be in your present. Be sure to collect your present on every alt you have for the best chance."},
             {"You can usually buy one on the Auction House year-round for a low price."},
         }
@@ -6157,14 +6160,43 @@ PETS.all ={
         source="Vendor",
         flavor="A legendary member of the blue dragonflight.",
         icon="524050",
-        currency="gold",
-        npcs={{name="Guild Vendor"}},
-        locations={
-            {mapID=84, coords={{64.6,76.8},}},
-            {mapID=85, coords={{48.2,75.6},}}
-        },
         possbileBreeds={"H/P"},
         baseStats={8.5, 7.5, 8},
+        pois={
+            {name="Vendors:", entries={
+                {id="", maps={
+                    {id="n46602:Shay Pressler", mapID=84, currencies={"cgold:1500"}, type="npc", coords={{64.6,76.8}}},
+                    {id="n46572:Goram", mapID=85, currencies={"cgold:1500"}, type="npc", coords={{48.2,75.6}}},
+                    {id="n51496:Kim Horn", mapID=90, currencies={"cgold:1500"}, type="npc", coords={{69.6,43.8}}},
+                    {id="n51512:Mirla Silverblaze", mapID=125, currencies={"cgold:1500"}, type="npc", coords={{52.6,56.6}}},
+                    {id="n51495:Steeg Haskell", mapID=87, currencies={"cgold:1500"}, type="npc", coords={{36.0,85.6}}},
+                    {id="n51503:Randah Songhorn", mapID=88, currencies={"cgold:1500"}, type="npc", coords={{37.4,62.4}}},
+                    {id="n52268:Riha", mapID=111, currencies={"cgold:1500"}, type="npc", coords={{58.6,46.6}}},
+                    {id="n51504:Velia Moonbow", mapID=89, currencies={"cgold:1500"}, type="npc", coords={{64.6,37.6}}},
+                    {id="n142086:Perry Charlton", mapID=1161, currencies={"cgold:1500"}, type="npc", coords={{70.0,14.8}}},
+                }}
+            }},
+            {name="Getting the staff:", entries={
+                {id="q29129:A Legendary Engagement"},
+                {id="q29134:A Wrinkle in Time"},
+                {id="q29135:All-Seeing Eye"},
+                {id="q29193:On a Wing and a Prayer"},
+                {id="q29194:Through a Glass, Darkly"},
+                {id="q29225:Actionable Intelligence"},
+                {id="q29234:Delegation"},
+                {id="q29239:Nordrassil's Bough"},
+                {id="q29240:Emergency Extraction"},
+                {id="q29269:At One"},
+                {id="q29270:Time Grows Short"},
+                {id="q29285:Alignment"},
+                {id="q29307:Heart of Flame"},
+                {id="q29312:The Stuff of Legends"},
+            }}
+        },
+        acquisition={
+            {"Someone in the guild must own a %s.", "i71086"},
+            {"After that, members can go to a guild vendor to purchase a %s", "i71033"}
+        }
     }, 
     [321]={
         name="Creepy Crate",
@@ -6176,12 +6208,41 @@ PETS.all ={
         isTradeable=false,
         isUnique=false,
         isPassive=false,
+        intermittent=true,
         source="World Event",
+        eventName="Hallow's End",
         flavor="Previous owners of the crate have reported the disappearance of other pets from their collection.",
         icon="132762",
-        eventName="Hallow's End",
         possbileBreeds={"H/H"},
         baseStats={8, 8, 8},
+        pois={
+            {name="Alliance:", entries={
+                {id="q29392:Missing Heirlooms", maps={
+                    {id="n53949:Anson Hastings", mapID=84, type="start", coords={{60.2,75.2}}},
+                }},
+                {id="q29398:Fencing the Goods"},
+                {id="q29399:Shopping Around"},
+                {id="q29402:Taking Precautions"},
+                {id="q29403:The Collector's Agent"},
+                {id="q29411:What Now?"},
+                {id="q29413:The Creepy Crate"},
+            }},
+            {name="Horde:", entries={
+                {id="q29415:Missing Heirlooms", maps={
+                    {id="n54141:Edgar Goodwin", mapID=85, type="start", coords={{54.6,77.8}}},
+                }},
+                {id="q29416:Fencing the Goods"},
+                {id="q29425:Shopping Around"},
+                {id="q29426:Taking Precautions"},
+                {id="q29427:The Collector's Agent"},
+                {id="q29428:What Now?"},
+                {id="q29429:The Creepy Crate"},
+            }},
+        },
+        acquisition={
+            {"The pet is only available during the Hallow's End seasonal event (halloween)."},
+            {"You'll receive a %s after completing the quest chain.", "i71076"}
+        }
     }, 
     [323]={
         name="Nuts",
@@ -6194,12 +6255,14 @@ PETS.all ={
         isUnique=true,
         isPassive=false,
         source="Achievement",
+        achievement={id="a5876"},
         flavor="Most squirrels hoard acorns for sustenance. Nuts, on the other hand, hoards acorns to stock its supply of ammunition.",
         icon="133944",
-        achievement={name="Petting Zoo", ID=5876},
-        locations={{continent="Zandalar", zone="Dazar'alor", mapID=1165, coords={{56,31.8},}}},
         possbileBreeds={"P/S"},
         baseStats={8, 8, 8},
+        acquisition={
+            {"%s is a reward for acquiring 100 other unique pets","i71140"}
+        }
     }, 
     [325]={
         name="Brilliant Kaliri",
@@ -6214,9 +6277,12 @@ PETS.all ={
         source="Achievement",
         flavor="One of the rarest creatures, this kaliri is set apart from others by its brilliant plumage and the lengths hunters will go to capture them.",
         icon="132926",
-        achievement={name="Menagerie", ID=5877},
+        achievement={id="a5877"},
         possbileBreeds={"S/S", "P/S", "P/B"},
         baseStats={7.5, 9, 7.5},
+        acquisition={
+            {"%s is a reward for acquiring 125 other unique pets","i71387"}
+        }
     }, 
     [328]={
         name="Purple Puffer",
@@ -6229,12 +6295,14 @@ PETS.all ={
         isUnique=false,
         isPassive=false,
         source="Trading Card Game",
+        tcg="Throne of the Tides",
         flavor="You might think this fish out of water would be a weak opponent... until you see the intensity that lies within its protective bubble.",
         icon="133920",
-        tcg="Throne of the Tides",
-        locations={{mapID=210, coords={{42.6,71.6},}}},
         possbileBreeds={"P/P"},
         baseStats={8, 8, 8},
+        acquisition={
+            {"This pet was a card in the Trading Card Game. You may be able to purchase it on eBay."}
+        }
     }, 
     [329]={
         name="Murkablo",
@@ -6246,13 +6314,16 @@ PETS.all ={
         isTradeable=false,
         isUnique=true,
         isPassive=false,
+        unobtainable=true,
         source="Promotion",
+        promotion="BlizzCon 2011",
         flavor="When you're confronting Murkablo or any of the Prime Murlocs, possession of a soulstone is strongly advised.",
         icon="528288",
-        promotion="BlizzCon 2011",
-        unobtainable=true,
         possbileBreeds={"P/S"},
         baseStats={8, 8, 8},
+        acquisition={
+            {"This pet was given to attendees of BlizzCon 2011."}
+        }
     }, 
     [330]={
         name="Darkmoon Monkey",
@@ -6267,11 +6338,18 @@ PETS.all ={
         source="Vendor",
         flavor="The monkeys of Azeroth are infamous tricksters, and these beloved companions of the Darkmoon Faire have taken that innate cunning to a whole new level.",
         icon="132159",
-        currency="item",
-        npcs={{name="Lhara"}},
-        locations={{mapID=407, coords={{48.2,69.4},{48.2,69.6},}}},
         possbileBreeds={"P/B"},
         baseStats={8, 8, 8},
+        pois={
+            {name="Vendors:", entries={
+                {id="", maps={
+                    {id="n14846:Lhara", mapID=407, currencies={"c515:90"}, type="npc", coords={{48.6,69.8}}},
+                }}
+            }}
+        },
+        acquisition={
+            {"Purchase a %s.", "i73764"}
+        }
     }, 
     [331]={
         name="Alliance Balloon",
@@ -6286,10 +6364,19 @@ PETS.all ={
         source="Quest",
         flavor="Created to entertain children at the Darkmoon Faire, these magical balloons never lose their floatiness.",
         icon="647628",
-        quest={name="Blown Away"},
-        locations={{mapID=84, coords={{58.8,52.8},}}},
         possbileBreeds={"B/B"},
         baseStats={8, 8, 8},
+        pois={
+            {name="Quests:", entries={
+                {id="q29412:Blow Away", maps={
+                    {id="n54117:Vin", mapID=84, type="start", coords={{58.8,52.8}}},
+                }}
+            }}
+        },
+        acquisition={
+            {"Complete the quest to recive a %s", "i72042"},
+            {"You can then buy 2 more at any pet trainer around the world."}
+        }
     }, 
     [332]={
         name="Horde Balloon",
@@ -6304,10 +6391,19 @@ PETS.all ={
         source="Quest",
         flavor="A magical wonder, these balloons will never deflate and are traditionally created in batches of ninety-nine.",
         icon="647626",
-        quest={name="Blown Away"},
-        locations={{mapID=85, coords={{48,47},}}},
         possbileBreeds={"B/B"},
         baseStats={8, 8, 8},
+        pois={
+            {name="Quests:", entries={
+                {id="q29401:Blow Away", maps={
+                    {id="n54004:Jara", mapID=85, type="start", coords={{48.0,47.6}}},
+                }}
+            }}
+        },
+        acquisition={
+            {"Complete the quest to recive a %s", "i72045"},
+            {"You can then buy 2 more at any pet trainer around the world."}
+        }
     }, 
     [333]={
         name="Gregarious Grell",
@@ -6320,12 +6416,14 @@ PETS.all ={
         isUnique=false,
         isPassive=false,
         source="Trading Card Game",
+        tcg="Crown of the Heavens",
         flavor="The grell are embodiments of the wild side of nature. Tame ones are very rare.",
         icon="136218",
-        tcg="Crown of the Heavens",
-        locations={{mapID=210, coords={{42.6,71.6},}}},
         possbileBreeds={"S/B"},
         baseStats={8, 8, 8},
+        acquisition={
+            {"This pet was available as a card in the Trading Card Game in 2012. You may be able to buy one on eBay."}
+        }
     }, 
     [335]={
         name="Darkmoon Turtle",
@@ -6340,11 +6438,18 @@ PETS.all ={
         source="Vendor",
         flavor="This shelled reptile bravely protects the home on its back with an unwaveringly happy disposition.",
         icon="1738682",
-        currency="item",
-        npcs={{name="Lhara"}},
-        locations={{mapID=407, coords={{48.2,69.4},{48.2,69.6},{48.6,69},}}},
         possbileBreeds={"H/B"},
         baseStats={9, 7.5, 7.5},
+        pois={
+            {name="Vendors:", entries={
+                {id="", maps={
+                    {id="n14846:Lhara", mapID=407, currencies={"c515:90"}, type="npc", coords={{48.6,69.8}}},
+                }}
+            }}
+        },
+        acquisition={
+            {"Purchase a %s.", "i73765"}
+        }
     }, 
     [336]={
         name="Darkmoon Balloon",
@@ -6359,11 +6464,18 @@ PETS.all ={
         source="Vendor",
         flavor="It just floats along...",
         icon="647625",
-        currency="item",
-        npcs={{name="Lhara"}},
-        locations={{mapID=407, coords={{48.6,69.8},}}},
         possbileBreeds={"B/B"},
         baseStats={8, 8, 8},
+        pois={
+            {name="Vendors:", entries={
+                {id="", maps={
+                    {id="n14846:Lhara", mapID=407, currencies={"c515:90"}, type="npc", coords={{48.6,69.8}}},
+                }}
+            }}
+        },
+        acquisition={
+            {"Purchase a %s.", "i73762"}
+        }
     }, 
     [337]={
         name="Lumpy",
@@ -6376,11 +6488,25 @@ PETS.all ={
         isUnique=false,
         isPassive=false,
         source="World Event",
+        eventName="Feast of Winter Veil",
         flavor="A stowaway from Greatfather Winter's workshop, this tiny elemental found himself trapped in a present that was stolen by the Abominable Greench.",
         icon="134579",
-        eventName="Feast of Winter Veil",
         possbileBreeds={"H/B"},
         baseStats={8, 8, 8},
+        pois={
+            {name="Quest:", entries={
+                {id="q7043:You're a Mean One...", maps={
+                    {id="n13433:Wulmort Jinglepocket", subDisplay="alliance", mapID=87, type="start", coords={{33.2,67.8}}},
+                    {id="n13418:Kaymard Copperpinch", subDisplay="horde", mapID=85, type="start", coords={{52.4,77}}},
+                    {id="n15664:Metzen the Reindeer", mapID=25, type="poi", coords={{45.2,40.4}}},
+                }}
+            }}
+        },
+        acquisition={
+            {"The pet is only available during the Winter Veil seasonal event (christmas)."},
+            {"Complete the seasonal daily quest to receive a %s", "i116762"},
+            {"It has a 2-3%% chance of containing a %s.", "i73797"},
+        }
     }, 
     [338]={
         name="Darkmoon Tonk",
@@ -6395,11 +6521,18 @@ PETS.all ={
         source="Vendor",
         flavor="A favorite of children across Azeroth, this tough little toy can withstand even the most aggressive imagination.",
         icon="133015",
-        currency="item",
-        npcs={{name="Lhara"}},
-        locations={{mapID=407, coords={{48.2,69.4},{48.2,69.6},}}},
         possbileBreeds={"H/P"},
         baseStats={8.5, 7.5, 8},
+        pois={
+            {name="Vendors:", entries={
+                {id="", maps={
+                    {id="n14846:Lhara", mapID=407, currencies={"c515:90"}, type="npc", coords={{48.6,69.8}}},
+                }}
+            }}
+        },
+        acquisition={
+            {"Purchase a %s.", "i73903"}
+        }
     }, 
     [339]={
         name="Darkmoon Zeppelin",
@@ -6414,11 +6547,18 @@ PETS.all ={
         source="Vendor",
         flavor="Lacking the mines and rockets of its predecessor, this kid-friendly faire prize is a new favorite among Azeroth's children.",
         icon="134509",
-        currency="item",
-        npcs={{name="Lhara"}},
-        locations={{mapID=407, coords={{48.2,69.4},{48.2,69.6},}}},
         possbileBreeds={"H/B"},
         baseStats={8, 8, 8},
+        pois={
+            {name="Vendors:", entries={
+                {id="", maps={
+                    {id="n14846:Lhara", mapID=407, currencies={"c515:90"}, type="npc", coords={{48.6,69.8}}},
+                }}
+            }}
+        },
+        acquisition={
+            {"Purchase a %s.", "i73905"}
+        }
     }, 
     [340]={
         name="Sea Pony",
@@ -6433,9 +6573,18 @@ PETS.all ={
         source="Fishing",
         flavor="Despite its diminutive size, it is impossible to miss a sea pony cutting through the water.",
         icon="433440",
-        locations={{mapID=407, coords={{52.6,86.6},}}},
         possbileBreeds={"B/B"},
         baseStats={8, 8, 8},
+        pois={
+            {name="Fishing locations:", entries={
+                {id="", maps={
+                    {id="o210216:Shipwreck Debris", mapID=407, type="fish", coords={{19.8,34.8},{28,54.8},{31.8,25.1},{32.6,82.3},{33,25.1},{37.7,88.3},{42.2,13.1},{42.2,92.5},{43.6,90.9},{45.1,90.5},{47.4,89.3},{49.1,89.7},{49.1,91.3},{49.2,91.5},{49.8,91},{50.1,94.7},{50.3,2.6},{50.3,91.5},{50.6,92},{51.4,91.3},{51.7,91.1},{51.7,91.5},{52,93.1},{52.2,90.2},{52.8,93.7},{53.7,89.4},{53.7,90.6},{54.4,91.9},{55.1,89.7},{55.9,5.6},{56.9,89.5},{58.9,89.9},{59.6,89.3},{61,85.8},{62.1,81.3},{62.2,80.1},{62.8,88.1},{64.3,86.6},{64.7,20.6},{73.7,89.2},{78,81.9},{78.1,80.5},{79.8,81.6}}},
+                }}
+            }}
+        },
+        acquisition={
+            {"Fish Shipwreck Debris pools on Darkmoon Island for a small chance of receiving a %s", "i73953"},
+        }
     }, 
     [341]={
         name="Lunar Lantern",
@@ -6447,14 +6596,24 @@ PETS.all ={
         isTradeable=true,
         isUnique=false,
         isPassive=false,
+        intermittent=true,
         source="World Event",
+        eventName="Lunar Festival",
         flavor="These magical lanterns are acquired at the Lunar Festival, which celebrates the defeat of the Burning Legion by the free races of Azeroth.",
         icon="134971",
-        eventName="table",
-        npcs={{name="Valadar Starsong"}},
-        locations={{mapID=80, coords={{54,35},}}},
         possbileBreeds={"B/B"},
         baseStats={8, 8, 8},
+        pois={
+            {name="Fishing locations:", entries={
+                {id="", maps={
+                    {id="n15864:Valadar Starsong", mapID=80, currencies={"ci:50:21100"}, type="npc", coords={{54.0,35.0}}},
+                }}
+            }}
+        },
+        acquisition={
+            {"This pet is only available while the Lunar Festival event is ongoing (basically the month of January)"},
+            {"Earn the special event currency and purchase a %s", "i74610"},
+        }
     }, 
     [342]={
         name="Festival Lantern",
@@ -6466,14 +6625,24 @@ PETS.all ={
         isTradeable=true,
         isUnique=false,
         isPassive=false,
+        intermittent=true,
         source="World Event",
+        eventName="Lunar Festival",
         flavor="The light from each lantern honors the soul of an ancestor spirit. During the Lunar Festival, these ghostly elders pass along their wisdom to the current generation.",
         icon="134971",
-        eventName="table",
-        npcs={{name="Valadar Starsong"}},
-        locations={{mapID=80, coords={{54,35},}}},
         possbileBreeds={"B/B"},
         baseStats={8, 8, 8},
+        pois={
+            {name="Vendors:", entries={
+                {id="", maps={
+                    {id="n15864:Valadar Starsong", mapID=80, currencies={"ci:50:21100"}, type="vendor", coords={{54.0,35.0}}},
+                }}
+            }}
+        },
+        acquisition={
+            {"This pet is only available while the Lunar Festival event is ongoing (basically the month of January)"},
+            {"Earn the special event currency and purchase a %s", "i74611"},
+        }
     }, 
     [343]={
         name="Darkmoon Cub",
@@ -6488,11 +6657,18 @@ PETS.all ={
         source="Vendor",
         flavor="This snuggly kitten loves to frolic, but sometimes it seems to be chasing things that aren't really there.",
         icon="132242",
-        currency="item",
-        npcs={{name="Lhara"}},
-        locations={{mapID=407, coords={{48.2,69.4},{48.2,69.6},{48.6,69.8},}}},
         possbileBreeds={"B/B", "P/S"},
         baseStats={7, 8.5, 8.5},
+        pois={
+            {name="Vendors:", entries={
+                {id="", maps={
+                    {id="n14846:Lhara", mapID=407, currencies={"c515:90"}, type="vendor", coords={{48.6,69.8}}},
+                }}
+            }}
+        },
+        acquisition={
+            {"Purchase a %s.", "i74981"}
+        }
     }, 
     [346]={
         name="Fetish Shaman",
@@ -6504,13 +6680,16 @@ PETS.all ={
         isTradeable=false,
         isUnique=true,
         isPassive=false,
+        unobtainable=true,
         source="Promotion",
+        promotion="Diablo 3 Collector's Edition",
         flavor="Fetish shaman are empowered by the spirits of their fallen ancestors. These malevolent spirits are bound to the shaman's tribal spear. Control this spear, and you control the shaman.",
         icon="135128",
-        promotion="Diablo 3 Collector's Edition",
-        unobtainable=true,
         possbileBreeds={"B/B"},
         baseStats={8, 8, 8},
+        acquisition={
+            {"This was awarded to players that purchased a collector's edition of Diablo III. You may be able to purchase this on eBay."}
+        }
     }, 
     [347]={
         name="Soul of the Aspects",
@@ -6527,6 +6706,9 @@ PETS.all ={
         icon="574806",
         possbileBreeds={"B/B"},
         baseStats={8, 8.75, 7.25},
+        acquisition={
+            {"This pet was first available in the Store in 2011."}
+        }
     }, 
     [348]={
         name="Eye of the Legion",
@@ -6539,12 +6721,15 @@ PETS.all ={
         isUnique=false,
         isPassive=false,
         source="Trading Card Game",
+        tcg="Timewalkers: War of the Ancients",
         flavor="Always watching. Always judging.",
         icon="136155",
-        tcg="Timewalkers: War of the Ancients",
-        locations={{mapID=210, coords={{42.6,71.6},}}},
         possbileBreeds={"P/S"},
         baseStats={8.5, 8.5, 7},
+        acquisition={
+            {"This pet was a card in the Trading Card Game in 2012. You may be able to purchase this from eBay."},
+            {"It was also distributed as a Twitch drop in May 2024. The twitch drop was not tradeable."}
+        }
     }, 
     [374]={
         name="Black Lamb",
@@ -6579,7 +6764,7 @@ PETS.all ={
         locations={
             {mapID=37, coords={{30.6,53.2},{32.2,52.2},{33.2,49.2},{34,51.4},{34,51.6},{34.4,54.4},}},
             {mapID=650, coords={{43,34.4},{45.2,39.4},}},
-            {mapID=84, coords={{69.8,23.8},{70,23.4},{71.8,28.8},{72,28.2},{79.4,64.4},{79.4,64.6},{79.8,64.2},}},
+            {mapID=84, coords={{69.8,23.8},{71.8,28.8},{79.4,64.4},}},
         },
         possbileBreeds={"B/B", "S/S", "H/P", "H/S", "S/B", "H/B"},
         baseStats={8, 7, 9},
@@ -6600,7 +6785,6 @@ PETS.all ={
         locations={
             {mapID=63, coords={{18,25},{18.8,59.2},{20.2,33},{21.6,57.6},{23.2,30.6},{24.4,37.8},{31,44},{34,37.8},{35.2,32.4},{42,57.4},{44.8,56.6},{52.4,63.2},{53.8,71.6},{54,70.8},{54,72.6},{54.8,55.2},{55.2,69.2},{57,68.4},{58.2,66.6},{58.8,62.2},{60.8,80.2},{62.4,81.2},{62.8,82.6},{63.8,73.6},{63.8,84.4},{64.4,65.6},{64.6,84},{65.4,71.8},{65.8,74},{66.2,68.8},{67,62.4},{67.6,85.6},{68.4,61.6},{68.6,81.2},{69,64.2},{69,79.6},{69.2,82.6},{70,84.6},{70.8,84.4},{71.4,56.6},{71.6,79.6},{72.2,70.4},{72.6,55.2},{73,72.8},{73.2,54.4},{73.6,46.8},{73.8,67.6},{74.8,72.8},{75.8,65.2},{76.2,71},{77,72.6},{80.8,59.2},{82.8,49.2},{84,47.2},}},
             {mapID=76, coords={{15.4,65.6},{17,62.2},{17.6,66},{26.2,47},{26.6,66.6},{27.4,66.2},{27.6,65.6},{27.6,68},{27.8,40.2},{28.4,62.4},{29.2,72.4},{29.4,61.2},{29.6,68.4},{31.8,65.4},{33,68.4},{35,70.4},{39,75.4},{39.4,66.6},{40.4,71.2},{40.8,73},{43,69.2},{44.2,30.4},{44.4,72.6},{48.6,76.6},{52,78},{57.4,25.6},}},
-            {mapID=105, coords={{36.2,71.6},{53.8,71},}},
             {mapID=127, coords={{12.2,48.6},{13.6,51},{16.4,27.8},{17.2,32},{18.8,49.2},{21.6,56.8},{22.4,37.4},{25.6,36.8},{26,30.8},{27.6,48.6},{28.8,54.4},{30.4,58.2},{34.8,53.8},{35.4,59.4},{35.8,38.8},{35.8,59},{39.4,44},{40.2,47.4},{40.2,47.6},{40.4,38.4},{40.4,38.8},{40.6,38.4},{41.4,57.6},{44,45.6},{44.2,45.4},{44.2,60},{46,52},{48,45.2},{48,45.8},{49,61.2},{49.2,61.6},{50.8,49.2},{50.8,49.8},{51,41},{51.4,44.2},{51.6,44.6},{52.6,54.6},{54,46.2},{54.2,46.6},{56,60.2},{61.8,60.6},{61.8,66.4},{66.8,68.8},}},
             {mapID=62, coords={{39.8,47},{44.2,81},{44.8,51.2},{45,35.2},{47,31.6},{48,29},{50.6,19.4},{55.2,22.2},{56.8,18.4},{59.6,16.8},{60.6,13.8},{62.6,21.8},{63.4,19},}},
             {mapID=47, coords={{16.6,22.8},{17.6,22.6},{40.2,19.4},{44.8,41},{44.8,41.6},{47.4,40},{48.4,40.6},{62.6,16.6},{83,16.4},}},
@@ -6611,12 +6795,10 @@ PETS.all ={
             {mapID=48, coords={{21.2,17.8},{25.4,36.8},{26.2,66.6},{27.4,12.8},{27.4,13.6},{27.4,21.4},{28.4,17},{28.4,28.8},{29.8,12.4},{30,40.8},{30.4,12.8},{30.8,32.2},{31,50.4},{31.4,58},{32.2,16.4},{33.6,45.6},{33.8,49.4},{34,35},{35.4,51.4},{37.2,47.8},{37.4,43.2},{38.6,19.8},{38.8,42.4},{39.2,13.6},{39.2,34.8},{39.2,48.2},{39.4,48.8},{39.8,45.4},{39.8,47},{41,52},}},
             {mapID=80, coords={{33.4,58.4},{35,40},{35.4,53.6},{35.8,51.4},{37.2,44.2},{40.8,63.8},{41.2,40.8},{41.8,60.8},{48,63},{48.4,31.4},{50.4,63.2},}},
             {mapID=119, coords={{26.4,82.4},{52.2,30.2},{55,45.2},{64.8,28.6},{65,75},}},
-            {mapID=21, coords={{54.6,37.8},}},
             {mapID=542, coords={{33,37},{33.4,37.8},{38,30.8},{39.6,27.2},{45.6,48.8},{53.6,50.8},{54.8,84.6},}},
             {mapID=84, coords={{44.2,79.8},{44.2,82.4},{44.2,82.6},{44.4,81},{44.6,79.6},{47.6,87},{47.8,77},{47.8,86.4},{47.8,87.6},{48.6,11.4},{48.6,11.6},{49.2,9.2},{49.4,82.4},{49.4,83.4},{49.4,83.6},{49.6,81.6},{49.6,83.4},{49.6,83.8},{49.8,80.4},{49.8,80.8},{50.2,78.4},{50.2,78.8},{50.4,85.4},{50.4,85.8},{50.4,86.6},{50.6,78.4},{50.6,78.6},{50.6,85.4},{50.6,85.8},{50.8,15.8},{50.8,87.4},{50.8,87.6},{52.4,15.6},{53,15.6},{53.4,3.8},{53.6,3.8},{54.2,84.6},{54.4,84.2},{54.6,83.4},{54.6,83.8},{54.8,20.2},{54.8,20.8},{54.8,84.6},{55.2,4.8},{55.4,15.8},{55.6,15.8},{55.8,15.2},{56.8,3.4},{56.8,3.6},{57,12.6},{57.2,12.2},{59.2,3.6},{59.6,82.4},{59.6,82.6},{60.8,80},{64.2,6.6},{69.2,7},{69.8,23.6},{70,9.4},{70,9.6},{70,23.4},{71.8,28.8},{72,28.2},{73.8,7.4},{76.4,6.6},{76.8,6.4},{77.4,6.6},{77.6,6.4},{77.6,6.6},{79,8.2},{79.2,8.6},{79.4,64.2},{79.4,64.8},{79.6,64.2},{79.6,64.6},{80.2,63.4},{80.6,11},{81.2,13.4},{85.6,15.4},{85.6,20.6},}},
             {mapID=108, coords={{32.8,37.8},{33.6,41.2},{38,35.4},{38.2,29},{40.4,28.4},{40.6,28.4},{40.6,31.8},{42.4,33.8},{42.6,33.8},{44.2,29.8},{44.4,17.4},{44.4,17.6},{45.8,32.8},{46,29.8},{46.8,12.4},{46.8,12.6},{47.4,22.4},{47.4,22.6},{47.4,33.6},{47.6,22.4},{47.6,22.6},{49.4,34.8},{49.6,34.8},{50.2,26.2},{53.2,42.8},{54.8,37.4},{54.8,37.6},{55.2,57},{56.4,26.6},{56.6,26.8},{57.4,38.4},{57.4,38.6},{57.4,41.2},{58.8,36.2},{58.8,40},{60.6,24.4},{61,44.2},{62.8,31.4},{64.8,41},{65.8,34.4},{65.8,34.6},{67.6,41.8},{68.4,38.6},{69,88.4},{70.2,34},{70.8,45.2},}},
             {mapID=22, coords={{32,60.6},{37.6,67.4},{43,52.2},{50.4,47.8},}},
-            {mapID=52, coords={{53.6,51.8},{64.4,25.2},}},
             {mapID=56, coords={{63.4,48.4},{66,50.6},{66.6,44},{67.2,52.6},{70.4,46.6},}},
             {mapID=107, coords={{31.2,60},{33.6,28.8},{50,68},{56.6,51.2},{59,40.8},{59.2,47.2},{59.6,62.8},{66.8,47.4},{67.6,50.4},{69.4,49.8},{69.8,42.8},{70.2,55.4},{70.8,48.2},{72.4,46.6},}},
         },
@@ -6657,10 +6839,35 @@ PETS.all ={
         source="Drop",
         flavor="Despite the name you should absolutely never, ever pet it.",
         icon="644001",
-        note="The sack is a reward from beating Tamers in early expansions.",
-        items={{name="Sack of Pet Supplies"}},
         possbileBreeds={"H/S"},
         baseStats={8, 8, 8},
+        pois={
+            {name="Quest chains:", entries={
+                {id="i89125", maps={
+                    {id="n63596:Audrey Burnhep", subDisplay="Alliance", mapID=84, chance=.3, type="start", coords={{69.4,24.4}}},
+                    {id="n63626:Varzok", subDisplay="Horde", mapID=85, chance=.3, type="start", coords={{52.4,59.2}}},
+                }},
+            }},
+            {name="Dailies:", entries={
+                {id="i151638", maps={
+                    {id="q47895:Bert's Bots", mapID=30, chance=.7, type="start", coords={{43.0,73.6}}},
+                }},
+                {id="i89125", maps={
+                    {id="q31957:Shu", mapID=422, chance=.3, type="start", coords={{55.0,37.6}}},
+                    {id="q31970:Obalis", mapID=249, chance=.3, type="start", coords={{56.6,41.8}}},
+                    {id="q31958:Aki", mapID=390, chance=.3, type="start", coords={{31.2,74.2}}},
+                    {id="q31953:Hyuna", mapID=371, chance=.3, type="start", coords={{48.0,54.0}}},
+                    {id="q31954:Mo'ruk", mapID=418, chance=.3, type="start", coords={{62.2,45.8}}},
+                    {id="q31956:Yon", mapID=379, chance=.3, type="start", coords={{35.8,73.6}}},
+                    {id="q31991:Zusshi", mapID=388, chance=.3, type="start", coords={{36.2,52.2}}},
+                    {id="q31955:Nishi", mapID=376, chance=.3, type="start", coords={{46.0,43.6}}},
+                }}
+            }}
+        },
+        acquisition={
+            {"This pet has a chance of dropping from the pet supply sacks that are rewarded from doing certain pet battles."},
+            {"Start with the faction quest chains since they also give achievements. Then move onto the dailies if you still need it."},
+        }
     }, 
     [382]={
         name="Sun Darter Hatchling",
@@ -11832,11 +12039,18 @@ PETS.all ={
         source="Vendor",
         flavor="Most of Violet's numerous forest strider hatchlings are turned into Faire fare by Stamp Thunderhorn, though a few are raised as mounts or purchased by adventurers looking for a petite purple pet.",
         icon="132198",
-        currency="item",
-        npcs={{name="Lhara"}},
-        locations={{mapID=407, coords={{48.2,69.4},{48.2,69.6},{48.4,68.4},{48.6,68.4},{48.6,68.6},{48.6,69.6},{49.2,70.6},}}},
         possbileBreeds={"S/S"},
         baseStats={8, 8, 8},
+        pois={
+            {name="Vendors:", entries={
+                {id="", maps={
+                    {id="n14846:Lhara", mapID=407, currencies={"c515:90"}, type="npc", coords={{48.6,69.8}}},
+                }}
+            }}
+        },
+        acquisition={
+            {"Purchase a %s.", "i91003"}
+        }
     }, 
     [1062]={
         name="Darkmoon Glowfly",

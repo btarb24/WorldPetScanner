@@ -133,9 +133,13 @@ function DISPLAY.TodaysEvents:Update()
     if not UTILITIES:IsEmpty(DATA.tradingPost) then
         scrollFrame.child.tradingPostBox:SetHeight(30)
         scrollFrame.child.tradingPostBox:Show()
+        scrollFrame.child.tradingPostBox.icon = DISPLAY_UTIL:AcquireTexture(PAMainFrameTab1, scrollFrame.child.tradingPostOverlay)
+        scrollFrame.child.tradingPostBox.icon:SetAtlas("trading-post-minimap-icon")
+        scrollFrame.child.tradingPostBox.icon:SetSize(20,20)
+        scrollFrame.child.tradingPostBox.icon:SetPoint("TOPLEFT", scrollFrame.child.tradingPostOverlay, "TOPLEFT", 8, -6)
         scrollFrame.child.tradingPostBoxHeader = DISPLAY_UTIL:AcquireLabelFont(PAMainFrameTab1, scrollFrame.child.tradingPostOverlay)
         scrollFrame.child.tradingPostBoxHeader:SetText("Trading Post: ")
-        scrollFrame.child.tradingPostBoxHeader:SetPoint("TOPLEFT", scrollFrame.child.tradingPostOverlay, "TOPLEFT", 12, -10)
+        scrollFrame.child.tradingPostBoxHeader:SetPoint("TOPLEFT", scrollFrame.child.tradingPostBox.icon, "TOPRIGHT", 5,-4)
         local tradingPostPetAnchor = scrollFrame.child.tradingPostBoxHeader
         for _, tradingPostPet in pairs(DATA.tradingPost) do
             local tradingPostPetDisplay = DISPLAY_UTIL:AcquirePetLinkFont(PAMainFrameTab1, scrollFrame.child.tradingPostOverlay, tradingPostPet.pet)

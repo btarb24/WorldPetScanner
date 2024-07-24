@@ -154,6 +154,16 @@ local function BuildPetList()
 			table.insert(pet.collected, collectedPet)
 		end
     end
+
+	--get bounds for the next/prev buttons on pet card
+	for idx, pet in pairs(PETS.all) do
+		if idx > PETS.highest then
+			PETS.highest = idx
+		elseif idx < PETS.lowest then
+			PETS.lowest = idx
+		end
+	end
+
 end
 
 function PETC:OnInitialize()

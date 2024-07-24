@@ -71,6 +71,33 @@ function DISPLAY_UTIL:AcquireTexture(poolOwner, controlParent)
     return t
 end
 
+function DISPLAY_UTIL:AcquireMapTileTexture(poolOwner, controlParent)
+    if (not controlParent.mapTilePool) then
+        controlParent.mapTilePool = CreateTexturePool(controlParent, "BACKGROUND")
+        AddToPoolOwner(poolOwner, controlParent.mapTilePool)
+    end
+
+    local t = controlParent.mapTilePool:Acquire()
+    t:SetScript("OnEnter", nil)
+    t:SetScript("OnLeave", nil)
+    t:SetTexture(nil)
+    t:Show()
+    return t
+end
+
+function DISPLAY_UTIL:AcquireMapPinTexture(poolOwner, controlParent)
+    if (not controlParent.mapPinPool) then
+        controlParent.mapPinPool = CreateTexturePool(controlParent, "OVERLAY")
+        AddToPoolOwner(poolOwner, controlParent.mapPinPool)
+    end
+
+    local t = controlParent.mapPinPool:Acquire()
+    t:SetIgnoreParentScale(true)
+    t:SetTexture(nil)
+    t:Show()
+    return t
+end
+
 function DISPLAY_UTIL:AcquireLabelFont(poolOwner, controlParent)
     if (not controlParent.labelFontPool) then
         controlParent.labelFontPool = CreateFontStringPool(controlParent, "OVERLAY", nil, "GameFontNormal")
@@ -156,15 +183,11 @@ end
 
 function DISPLAY_UTIL:AcquireSmallerSubduedFont(poolOwner, controlParent)
     if (not controlParent.smallerSubduedFontPool) then
-        controlParent.smallerSubduedFontPool = CreateFontStringPool(controlParent, "OVERLAY", nil, "GameFontHighlight")
+        controlParent.smallerSubduedFontPool = CreateFontStringPool(controlParent, "OVERLAY", nil, "AchievementFont_Small")
         AddToPoolOwner(poolOwner, controlParent.smallerSubduedFontPool)
     end
 
     local t = controlParent.smallerSubduedFontPool:Acquire()
-    if (not t:GetText()) then
-        local fontFile, fontHeight, fontFlags = t:GetFont()
-        t:SetFont(fontFile, fontHeight-2, fontFlags)
-    end
     t:SetTextColor(.7, .7, .7)
     t:SetScript("OnEnter", nil)
     t:SetScript("OnLeave", nil)

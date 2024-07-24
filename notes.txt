@@ -20,7 +20,6 @@ accurate debug timestamps print(debugprofilestop())
 GetTimePreciseSec()
 
 TODO
-* falkosaur pet food
 * etherwyrm  - make sure A Shady Place quest is up as part of the criteria
 * improve frame stata - same level as char / social / map/etc
 * separate data for report?

@@ -41,27 +41,6 @@ local function ParseLocation(location)
     return depth1, depth2, depth3
 end
 
-local function AcquireMapTileTexture(parent)
-    if (not parent.mapTilePool) then
-        parent.mapTilePool = CreateTexturePool(parent, "BACKGROUND")
-        table.insert(PAPetCard.pools, parent.mapTilePool)
-    end
-
-    local t = parent.mapTilePool:Acquire()
-    t:Show()
-    return t
-end
-local function AcquireMapPinTexture(parent)
-    if (not parent.mapPinPool) then
-        parent.mapPinPool = CreateTexturePool(parent, "OVERLAY")
-        table.insert(PAPetCard.pools, parent.mapPinPool)
-    end
-
-    local t = parent.mapPinPool:Acquire()
-    t:Show()
-    return t
-end
-
 local function SetPetColor(fontString, rarity)
     if rarity == 0 then
         fontString:SetTextColor(.5, .1, .57) -- poor
@@ -104,7 +83,7 @@ local function GetLink(idStr, color)
         name, link = GetItemInfo(id)
     elseif (type == "s") then
         id = tonumber(strsub(idStr, 2))
-        link = GetSpellLink(id)
+        link = C_Spell.GetSpellLink(id)
     elseif (type == "a") then
         id = tonumber(strsub(idStr, 2))
         link = GetAchievementLink(id)
@@ -319,7 +298,7 @@ local function GetPois(topDock, pois, selectedIdx)
     return topDock
 end
 
-local function GetProfessionText(professionDetail, topDock)    
+local function GetProfessionText(topDock, professionDetail)    
     local professionLbl = DISPLAY_UTIL:AcquireLabelFont(PAPetCard, PAPetCardTab2.content.scrollFrame.child)
     if (topDock) then
         professionLbl:SetPoint("LEFT", PAPetCardTab2.content.scrollFrame.child, "LEFT")
@@ -348,7 +327,7 @@ local function GetProfessionText(professionDetail, topDock)
         recipeLbl:SetText("Recipe: ")
         recipeLbl:SetPoint("TOPLEFT", professionLbl, "BOTTOMLEFT", 0, -10)
         local recipeVal = DISPLAY_UTIL:AcquireHighlightFont(PAPetCard, PAPetCardTab2.content.scrollFrame.child)
-        recipeVal:SetText(GetSpellLink(professionDetail.recipe))
+        recipeVal:SetText(C_Spell.GetSpellLink(professionDetail.recipe))
         recipeVal:SetPoint("TOPLEFT", recipeLbl, "TOPRIGHT")
         topDock = recipeLbl
     end
@@ -386,6 +365,8 @@ local function AddLabelAndVal(topDock, header, val, subval)
     sourceLbl:SetPoint("LEFT", PAPetCardTab2.content.scrollFrame.child, "LEFT")
     local sourceVal = DISPLAY_UTIL:AcquireHighlightFont(PAPetCard, PAPetCardTab2.content.scrollFrame.child)
     sourceVal:SetPoint("TOPLEFT", sourceLbl, "TOPRIGHT", 5, 0)
+    sourceVal:SetPoint("RIGHT", PAPetCardTab2.content.scrollFrame.child, "RIGHT", -5, 0)
+    sourceVal:SetJustifyH("LEFT")
     sourceVal:SetWordWrap(true)
     if (subval) then
         val = string.format("%s |cFFb3b3b3(%s)|r", val, subval)
@@ -483,6 +464,8 @@ local function CreateTab(idNum, name, tabButtonWidth)
     tabButtonWidth = 96
 
     local tab = CreateFrame("Button", "PAPetCardTab"..idNum, PAPetCard, "PanelTabButtonTemplate") --"CharacterFrameTabButtonTemplate"
+    tab:SetFrameStrata("HIGH")
+    tab:SetFrameLevel(1000)
     tab:SetID(idNum)
     tab:SetText(name)
     tab:SetWidth(32)
@@ -584,6 +567,48 @@ local function CreateWindow()
             PAPetCard:StopMovingOrSizing()
         end
     )
+    f.Title:ClearAllPoints()
+    f.Title:SetPoint("TOP", 0, -9)
+    f.Title:SetPoint("CENTER")
+
+    f.NextPet = CreateFrame("BUTTON", nil, f.TitleArea)
+    f.NextPet:SetNormalAtlas("perks-nextbutton")
+    f.NextPet:SetPushedAtlas("perks-nextbutton-down")
+    -- f.NextPet:SetHighlightAtlas("chatframe-button-up")
+    f.NextPet:SetHighlightAtlas("hud-microbutton-highlight")
+    f.NextPet:SetPoint("TOPLEFT", f.Title, "TOPRIGHT", 10, 5)
+    f.NextPet:SetSize(24,22)
+    f.NextPet:SetScript("OnClick", function(self)
+        if PAPetCard.pet.speciesID == PETS.highest then
+            DISPLAY.PetCard:Show(PETS.all[PETS.lowest])
+        else
+            for idx = PAPetCard.pet.speciesID+1, PETS.highest, 1 do
+                if (PETS.all[idx]) then
+                    DISPLAY.PetCard:Show(PETS.all[idx])
+                    return;
+                end
+            end
+        end
+    end)
+
+    f.PrevPet = CreateFrame("BUTTON", nil, f.TitleArea)
+    f.PrevPet:SetNormalAtlas("perks-backbutton")
+    f.PrevPet:SetPushedAtlas("perks-backbutton-down")
+    f.PrevPet:SetHighlightAtlas("hud-microbutton-highlight")
+    f.PrevPet:SetPoint("TOPRIGHT", f.Title, "TOPLEFT", -10, 5)
+    f.PrevPet:SetSize(24,22)
+    f.PrevPet:SetScript("OnClick", function(self)
+        if PAPetCard.pet.speciesID == PETS.lowest then
+            DISPLAY.PetCard:Show(PETS.all[PETS.highest])
+        else
+            for idx = PAPetCard.pet.speciesID-1, PETS.lowest, -1 do
+                if (PETS.all[idx]) then
+                    DISPLAY.PetCard:Show(PETS.all[idx])
+                    return;
+                end
+            end
+        end
+    end)
 
     f.Close = CreateFrame("Button", "$parentClose", f)
     f.Close:SetSize(24, 24)
@@ -837,16 +862,30 @@ local function CreateWindow()
     tab2.content.mapFrame = CreateFrame("Frame", nil, tab2.content)
     tab2.content.mapFrame:SetSize(350, 240)
     tab2.content.mapFrame:SetPoint("TOP", tab2.content.mapLbl, "BOTTOM",0, 0)
-    tab2.content.mapFrame:SetPoint("LEFT", tab2.content, 20, 0)
+    tab2.content.mapFrame:SetPoint("CENTER", tab2.content)
 	tab2.content.mapFrame:SetScript("OnMouseWheel", function(self, delta)
         local curScale = self:GetScale()
         if (delta>0) then
             if (curScale <4) then
-                self:SetScale(curScale +1)
+                local mapFrame = self
+                local scale = curScale +1
+                mapFrame:SetScale(scale)
+                local mapWidth = mapFrame:GetWidth() * mapFrame:GetEffectiveScale()
+                local mapHeight = mapFrame:GetHeight() * mapFrame:GetEffectiveScale()
+                for _, pin in pairs(mapFrame.pins) do
+                    pin:SetPoint("TOPLEFT", mapWidth * (pin.coord[1]/100) - pin:GetWidth()/2, (mapHeight * (pin.coord[2]/100))*-1 + pin:GetHeight()/2)
+                end
             end
         else
             if (curScale > 1) then
-                self:SetScale(curScale - 1)
+                local mapFrame = self
+                local scale = curScale -1
+                mapFrame:SetScale(scale)
+                local mapWidth = mapFrame:GetWidth() * mapFrame:GetEffectiveScale()
+                local mapHeight = mapFrame:GetHeight() * mapFrame:GetEffectiveScale()
+                for _, pin in pairs(mapFrame.pins) do
+                    pin:SetPoint("TOPLEFT", mapWidth * (pin.coord[1]/100) - pin:GetWidth()/2, (mapHeight * (pin.coord[2]/100))*-1 + pin:GetHeight()/2)
+                end
             end
         end
     end);
@@ -1070,7 +1109,7 @@ local function UpdateWindow(pet, locationIdx)
     local requestedLocation, showLocationList = GetLocation(pet, locationIdx)
 
     local mapFrame = f.tab2.content.mapFrame
-    local lastElement
+    local priorBottom
 
     if (showLocationList) then
         f.tab2.content.scrollFrame:SetPoint("TOPLEFT", f.tab2.content.locationsFrame, "BOTTOMLEFT", 0, -10);
@@ -1082,7 +1121,7 @@ local function UpdateWindow(pet, locationIdx)
         f.tab2.content.scrollFrame:SetPoint("TOPLEFT", f.tab2.content, "TOPLEFT", 20, -20);
         f.tab2.content.mapFrame:Hide()
     end
-
+    
     if (requestedLocation) then
         local mapID = requestedLocation.mapID
         local layers = C_Map.GetMapArtLayers(mapID)
@@ -1110,7 +1149,7 @@ local function UpdateWindow(pet, locationIdx)
             for y=1,heightCount do
                 for x=1,widthCount do
                     local textureIdx = (y-1)*widthCount + x
-                    local t = AcquireMapTileTexture(mapFrame)
+                    local t = DISPLAY_UTIL:AcquireMapTileTexture(PAPetCard, mapFrame)
 
                     t:SetSize(layerInfo.tileWidth*scale,layerInfo.tileHeight*scale)
                     t:SetPoint("TOPLEFT",adjustX + layerInfo.tileWidth * (x-1) * scale,-(y-1)*layerInfo.tileHeight * scale-adjustY)
@@ -1120,46 +1159,62 @@ local function UpdateWindow(pet, locationIdx)
             end
 
             if (requestedLocation.coords) then
+                mapFrame.pins = {}
                 for _, coord in pairs(requestedLocation.coords) do
-                    local dot = AcquireMapPinTexture(mapFrame)
+                    local pin = DISPLAY_UTIL:AcquireMapPinTexture(PAPetCard, mapFrame)
                     local type = coord.type and coord.type or requestedLocation.type
                     if type == "start" then
-                        dot:SetAtlas("Islands-QuestBang")
-                        dot:SetSize(20,20)
+                        pin:SetAtlas("Islands-QuestBang")
+                        pin:SetSize(16,16)
                     elseif type == "end" then
-                        dot:SetAtlas("Islands-QuestTurnin")
-                        dot:SetSize(20,20)
+                        pin:SetAtlas("Islands-QuestTurnin")
+                        pin:SetSize(16,16)
                     elseif type == "poi" then
-                        dot:SetAtlas("VignetteKill")
-                        dot:SetSize(12,12)
+                        pin:SetAtlas("VignetteKill")
+                        pin:SetSize(12,12)
                     elseif type == "dot" then
-                        dot:SetAtlas("Object")
-                        dot:SetSize(12,12)
+                        pin:SetAtlas("Object")
+                        pin:SetSize(9,9)
+                    elseif type == "prof" then
+                        pin:SetAtlas("LevelUp-Icon-Book")
+                        pin:SetSize(12,12)
                     elseif type == "treasure" then
-                        dot:SetAtlas("VignetteLoot")
-                        dot:SetSize(12,12)
+                        pin:SetAtlas("VignetteLoot")
+                        pin:SetSize(7,7)
+                    elseif type == "fish" then
+                        pin:SetAtlas("Professions_Tracking_Fish")
+                        pin:SetSize(8,8)
                     elseif type == "cave" then
-                        dot:SetAtlas("CaveUnderground-Down")
-                        dot:SetSize(14,14)
+                        pin:SetAtlas("CaveUnderground-Down")
+                        pin:SetSize(12,12)
                     elseif type == "boss" then
-                        dot:SetAtlas("ShipMission_DangerousSkull")
-                        dot:SetSize(12,14)
+                        pin:SetAtlas("ShipMission_DangerousSkull")
+                        pin:SetSize(8,9)
                     elseif type == "kill" then
                         if(#requestedLocation.coords == 1) then
-                            dot:SetAtlas("ShipMission_DangerousSkull")
-                            dot:SetSize(12,14)
+                            pin:SetAtlas("ShipMission_DangerousSkull")
+                            pin:SetSize(8,10)
                         else
-                            dot:SetAtlas("ComboPoints-ComboPoint")
-                            dot:SetSize(10,10)
+                            pin:SetAtlas("ComboPoints-ComboPoint")
+                            pin:SetSize(6,6)
                         end
-                    elseif pet.source == "Vendor" or type == "npc" then                        
-                        dot:SetAtlas("GM-icon-headCount")
-                        dot:SetSize(16,16)
+                    elseif requestedLocation.currencies then
+                        pin:SetAtlas("Levelup-Icon-Bag")
+                        pin:SetSize(8,10)
+                    elseif type == "npc" then                        
+                        pin:SetAtlas("GM-icon-headCount")
+                        pin:SetSize(10,10)
                     else
-                        dot:SetTexture("Interface\\Icons\\Tracking_WildPet")
-                        dot:SetSize(6,6)
+                        pin:SetTexture("Interface\\Icons\\Tracking_WildPet")
+                        pin:SetSize(6,6)
                     end
-                    dot:SetPoint("TOPLEFT", mapFrame:GetWidth() * (coord[1]/100) - dot:GetWidth()/2, (mapFrame:GetHeight() * (coord[2]/100))*-1 + dot:GetHeight()/2)
+                    local mapWidth = mapFrame:GetWidth() * mapFrame:GetEffectiveScale()
+                    local mapHeight = mapFrame:GetHeight() * mapFrame:GetEffectiveScale()
+                    local x = mapWidth * (coord[1]/100) - pin:GetWidth()/2
+                    local y = (mapHeight * (coord[2]/100))*-1 + pin:GetHeight()/2
+                    pin:SetPoint("TOPLEFT", mapFrame, "TOPLEFT", x, y)
+                    pin.coord = coord
+                    table.insert(mapFrame.pins, pin)
                 end
             end
 
@@ -1202,7 +1257,6 @@ local function UpdateWindow(pet, locationIdx)
                         locationLineWidth = locationLineWidth + comma:GetWidth()
                     end
                     priorLoc = loc
-                    lastElement = loc
                     if (location ~= requestedLocation) then
                         loc:SetScript("OnMouseDown",
                             function(self)
@@ -1214,6 +1268,7 @@ local function UpdateWindow(pet, locationIdx)
             end
             locationsFrame:SetSize(DISPLAY.PetCard.winWidth, (line+1) * locationLbl:GetHeight())
             locationsFrame:Show()
+            priorBottom = locationsFrame
         else
             
         end
@@ -1221,49 +1276,46 @@ local function UpdateWindow(pet, locationIdx)
         f.tab2.content.mapLbl:SetText(nil)
     end
 
-    local bottomOfSourceSection
-
     if (pet.achievement) then
         local link = GetLink(pet.achievement.id)
-        bottomOfSourceSection = AddLabelAndVal(bottomOfSourceSection, "Achievement: ", link)
+        priorBottom = AddLabelAndVal(priorBottom, "Achievement: ", link)
     end
 
     if (pet.pois) then
-        bottomOfSourceSection = GetPois(bottomOfSourceSection, pet.pois, locationIdx)
+        priorBottom = GetPois(priorBottom, pet.pois, locationIdx)
     end
 
     if (pet.professionDetail) then
-        bottomOfSourceSection = GetProfessionText(pet.professionDetail, bottomOfSourceSection)
+        priorBottom = GetProfessionText(priorBottom, pet.professionDetail)
     end
 
     if (pet.quest) then
         local link = GetLink(pet.quest)
-        bottomOfSourceSection = AddLabelAndVal(bottomOfSourceSection, "Quest: ", link)
+        priorBottom = AddLabelAndVal(priorBottom, "Quest: ", link)
     end
     
     if (pet.reputation and pet.reputation.type) then
-        bottomOfSourceSection = AddLabelAndVal(bottomOfSourceSection, "Reputation: ", pet.reputation.type, pet.reputation.level)
+        priorBottom = AddLabelAndVal(priorBottom, "Reputation: ", pet.reputation.type, pet.reputation.level)
     end
 
     if (pet.source == "World Event") then
-        bottomOfSourceSection = AddLabelAndVal(bottomOfSourceSection, "Source: ", pet.source, pet.eventName)
+        priorBottom = AddLabelAndVal(priorBottom, "Source: ", pet.source, pet.eventName)
     end
     
     if (pet.source == "Promotion") then
-        bottomOfSourceSection = AddLabelAndVal(bottomOfSourceSection, "Source: ", pet.source, pet.promotion)
+        priorBottom = AddLabelAndVal(priorBottom, "Source: ", pet.source, pet.promotion)
     end
 
     if (pet.source == "Trading Card Game") then
-        bottomOfSourceSection = AddLabelAndVal(bottomOfSourceSection, "Source: ", pet.source, pet.tcg)
+        priorBottom = AddLabelAndVal(priorBottom, "Source: ", pet.source, pet.tcg)
     end
 
-    if (pet.source == "World Drop" or pet.source =="In-Game Shop" or pet.source == "Archaeology") then
-        bottomOfSourceSection = AddLabelAndVal(bottomOfSourceSection, "Source: ", pet.source)
+    if (pet.source == "World Drop" or pet.source =="In-Game Shop" or pet.source == "Archaeology" or pet.source == "Pet Battle") then
+        priorBottom = AddLabelAndVal(priorBottom, "Source: ", pet.source)
     end
 
    -- INSTRUCTIONS
     local bla = PETC.SHARED.Instr.synthForge
-    local priorBottom = bottomOfSourceSection
     if (pet.acquisition) then
         f.tab2.content.instructionLbl = DISPLAY_UTIL:AcquireLabelFont(PAPetCard, f.tab2.content.scrollFrame.child)
         f.tab2.content.instructionLbl:SetPoint("LEFT", f.tab2.content.scrollFrame.child, "LEFT")
