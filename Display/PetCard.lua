@@ -22,23 +22,40 @@ local function Tab_OnClick(self)
     self.Text:SetPoint("LEFT", self, "LEFT", -38, 3)
 end
 
-local function ParseLocation(location)
+local function ParseLocation(location, pet)
+    local type = "location"
     local depth1 = 1
     local depth2 = 1
     local depth3 = 1
-    if (location and type(location) == "string") then        
-        local depth1Str, depth2Str, depth3Str  = strsplit(":", location)
-        depth1 = tonumber(depth1Str)
-        if (depth2Str) then
-            depth2 = tonumber(depth2Str)
+
+    if (location == nil) then
+        if (pet.locations) then
+            type = "location"
+        elseif (pet.pois) then
+            type = "poi"
+        else
+            type = "unknown"
         end
-        if (depth3Str) then
-            depth3 = tonumber(depth3Str)
+    else
+        local firstChar = tostring(location):sub(1, 1)
+        if (firstChar == "p") then
+            type = "poi"
+            location = location:sub(2)
+            
+            local depth1Str, depth2Str, depth3Str  = strsplit(":", location)
+            depth1 = tonumber(depth1Str)
+            if (depth2Str) then
+                depth2 = tonumber(depth2Str)
+            end
+            if (depth3Str) then
+                depth3 = tonumber(depth3Str)
+            end
+        else
+            depth1 = location
         end
-    elseif location then
-        depth1 = location
     end
-    return depth1, depth2, depth3
+
+    return type, depth1, depth2, depth3
 end
 
 local function SetPetColor(fontString, rarity)
@@ -85,7 +102,8 @@ local function GetLink(idStr, color)
         id = tonumber(strsub(idStr, 2))
         link = C_Spell.GetSpellLink(id)
     elseif (type == "a") then
-        id = tonumber(strsub(idStr, 2))
+        local detail = strsub(idStr, 2)
+        id, name = strsplit(":", detail)
         link = GetAchievementLink(id)
     elseif(type == "n") then
         local detail = strsub(idStr, 2)
@@ -161,10 +179,10 @@ local function GetPoiIconAtlas(mapType)
     return nil
 end
 
-local function GetPois(topDock, pois, selectedIdx)
-    local selectedDepth1, selectedDepth2, selectedDepth3 = ParseLocation(selectedIdx)
+local function GetPois(topDock, pet, selectedIdx)
+    local locationType, selectedDepth1, selectedDepth2, selectedDepth3 = ParseLocation(selectedIdx, pet)
     
-    for poiTypeIdx, poiRoot in ipairs(pois) do
+    for poiTypeIdx, poiRoot in ipairs(pet.pois) do
         local mainPoiLbl = DISPLAY_UTIL:AcquireLabelFont(PAPetCard, PAPetCardTab2.content.scrollFrame.child)
         mainPoiLbl:SetText(poiRoot.name)
         if (poiTypeIdx == 1) then
@@ -230,7 +248,7 @@ local function GetPois(topDock, pois, selectedIdx)
                     local mapDescLbl
                     local mapVal = map.display
                     if map.coords then
-                        local isSelected = poiTypeIdx == selectedDepth1 and entryIdx == selectedDepth2 and mapIdx == selectedDepth3
+                        local isSelected = locationType == "poi" and poiTypeIdx == selectedDepth1 and entryIdx == selectedDepth2 and mapIdx == selectedDepth3
                         if isSelected then
                             mapDescLbl = DISPLAY_UTIL:AcquireHighlightFont(PAPetCard, PAPetCardTab2.content.scrollFrame.child)
                             if (not mapVal) then
@@ -241,7 +259,7 @@ local function GetPois(topDock, pois, selectedIdx)
                             if (not mapVal) then
                                 mapVal = select(3, GetLink(map.id, "ffffff"))
                             end
-                            mapDescLbl.locationIndex = string.format("%d:%d:%d", poiTypeIdx, entryIdx, mapIdx)
+                            mapDescLbl.locationIndex = string.format("p%d:%d:%d", poiTypeIdx, entryIdx, mapIdx)
                             mapDescLbl:SetScript("OnMouseDown",
                                 function(self)
                                     DISPLAY.PetCard:Show(PAPetCard.pet, self.locationIndex)
@@ -262,6 +280,18 @@ local function GetPois(topDock, pois, selectedIdx)
                     -- mapDescLbl:SetPoint("LEFT", leftDock, "LEFT", 15, 0)
                     mapDescLbl:SetPoint("LEFT", PAPetCardTab2.content.scrollFrame.child, "LEFT", t3Indent, 0)
 
+                    local factionIcon
+                    if (map.faction) then
+                        factionIcon = DISPLAY_UTIL:AcquireTexture(PAPetCard, PAPetCardTab2.content.scrollFrame.child)
+                        if (map.faction == "h") then
+                            factionIcon:SetAtlas("questlog-questtypeicon-horde")
+                        else
+                            factionIcon:SetAtlas("questlog-questtypeicon-alliance")
+                        end
+                        factionIcon:SetSize(12,12)
+                        factionIcon:SetPoint("TOPLEFT", mapDescLbl, "TOPRIGHT")
+                    end
+
                     local details = ""
                     if (map.chance) then
                         details = string.format(" %s%%", map.chance)
@@ -277,7 +307,11 @@ local function GetPois(topDock, pois, selectedIdx)
                     end
                     local mapDetails = DISPLAY_UTIL:AcquireSmallerSubduedFont(PAPetCard, PAPetCardTab2.content.scrollFrame.child)
                     mapDetails:SetText(details)
-                    mapDetails:SetPoint("TOPLEFT", mapDescLbl, "TOPRIGHT", 3, -1)
+                    if (factionIcon) then
+                        mapDetails:SetPoint("TOPLEFT", mapDescLbl, "TOPRIGHT", factionIcon:GetWidth(), -1)
+                    else
+                        mapDetails:SetPoint("TOPLEFT", mapDescLbl, "TOPRIGHT", 3, -1)
+                    end
                     
                     local poiIconAtlas = GetPoiIconAtlas(map.type)
                     if (poiIconAtlas) then
@@ -391,20 +425,20 @@ local function BuildMapTitle(location)
 end
 
 local function GetLocation(pet, location) --location, showLocList
-    local depth1, depth2, depth3 = ParseLocation(location)
-    if (pet.pois) then
+    local locationType, depth1, depth2, depth3 = ParseLocation(location, pet)
+    if (locationType == "poi" and pet.pois) then
         local poi = pet.pois[depth1]
         if not poi.entries then
             return nil
         end
 
         local entry = poi.entries[depth2]
-        if (not entry.maps) then
+        if (not entry or not entry.maps) then
             return nil
         end
         local map = entry.maps[depth3]
         if map.mapID then
-            return map, false
+            return map
         else
             return nil
         end
@@ -418,11 +452,11 @@ local function GetLocation(pet, location) --location, showLocList
     --standard map locations    
     for _, loc in ipairs(pet.locations) do
         if loc.mapID == location then
-            return loc, true
+            return loc
         end
     end
 
-    return pet.locations[1], true
+    return pet.locations[1]
 end
 
 local function UpdateAbility(texture, abilityID, petType)
@@ -1106,12 +1140,12 @@ local function UpdateWindow(pet, locationIdx)
     f:SetHeight(actualContentHeight)
 
  --TAB 2
-    local requestedLocation, showLocationList = GetLocation(pet, locationIdx)
+    local requestedLocation = GetLocation(pet, locationIdx)
 
     local mapFrame = f.tab2.content.mapFrame
     local priorBottom
 
-    if (showLocationList) then
+    if (pet.locations) then
         f.tab2.content.scrollFrame:SetPoint("TOPLEFT", f.tab2.content.locationsFrame, "BOTTOMLEFT", 0, -10);
         f.tab2.content.mapFrame:Show()
     elseif (requestedLocation) then
@@ -1146,6 +1180,7 @@ local function UpdateWindow(pet, locationIdx)
             elseif (not adjustY == 0) then
                 mapFrame:SetHeight(layerInfo.layerHeight * scale);
             end
+
             for y=1,heightCount do
                 for x=1,widthCount do
                     local textureIdx = (y-1)*widthCount + x
@@ -1170,7 +1205,8 @@ local function UpdateWindow(pet, locationIdx)
                         pin:SetAtlas("Islands-QuestTurnin")
                         pin:SetSize(16,16)
                     elseif type == "poi" then
-                        pin:SetAtlas("VignetteKill")
+                        -- pin:SetAtlas("VignetteKill")
+                        pin:SetAtlas("VignetteEvent-SuperTracked")
                         pin:SetSize(12,12)
                     elseif type == "dot" then
                         pin:SetAtlas("Object")
@@ -1185,8 +1221,9 @@ local function UpdateWindow(pet, locationIdx)
                         pin:SetAtlas("Professions_Tracking_Fish")
                         pin:SetSize(8,8)
                     elseif type == "cave" then
-                        pin:SetAtlas("CaveUnderground-Down")
-                        pin:SetSize(12,12)
+                        --pin:SetAtlas("CaveUnderground-Down")
+                        pin:SetAtlas("poi-door-down")
+                        pin:SetSize(10,10)
                     elseif type == "boss" then
                         pin:SetAtlas("ShipMission_DangerousSkull")
                         pin:SetSize(8,9)
@@ -1205,7 +1242,8 @@ local function UpdateWindow(pet, locationIdx)
                         pin:SetAtlas("GM-icon-headCount")
                         pin:SetSize(10,10)
                     else
-                        pin:SetTexture("Interface\\Icons\\Tracking_WildPet")
+                        -- pin:SetAtlas("Interface\\Icons\\Tracking_WildPet")                        
+                        pin:SetAtlas("WildBattlePetCapturable")
                         pin:SetSize(6,6)
                     end
                     local mapWidth = mapFrame:GetWidth() * mapFrame:GetEffectiveScale()
@@ -1222,7 +1260,7 @@ local function UpdateWindow(pet, locationIdx)
             f.tab2.content.mapLbl:SetText(mapName)
         end
 
-        if (showLocationList) then
+        if (pet.locations) then
             local locationsFrame = f.tab2.content.locationsFrame
             local locationLbl = DISPLAY_UTIL:AcquireLabelFont(PAPetCard, locationsFrame)
             locationLbl:SetText("Locations:  ")
@@ -1282,7 +1320,7 @@ local function UpdateWindow(pet, locationIdx)
     end
 
     if (pet.pois) then
-        priorBottom = GetPois(priorBottom, pet.pois, locationIdx)
+        priorBottom = GetPois(priorBottom, pet, locationIdx)
     end
 
     if (pet.professionDetail) then
@@ -1407,6 +1445,7 @@ local function PrefetchItemInfo(itemIDStr)
     else
         id = tonumber(strsub(itemIDStr, 2))
     end
+
     if (not PAPetCard.itemsRequiredForCache[id]) then
         local response = GetItemInfo(id)
         PAPetCard.itemsRequiredForCache[id] = "bla" -- to avoid requesting the same item multiple times
