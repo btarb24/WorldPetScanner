@@ -48,10 +48,7 @@ PETS.all ={
         companionID=2671,
         displayID=7937,
         family=10,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="Profession",
         flavor="A mechanical squirrel's logic center tells it to collect and store both nuts and bolts for the winter.",
         icon="656559",
@@ -78,10 +75,7 @@ PETS.all ={
         companionID=7385,
         displayID=5556,
         family=8,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="Vendor",
         flavor="Donni Anthania plans to have a bombay buried with her when she dies. A wise adventurer can put its talents to much better use.",
         icon="656575",
@@ -104,10 +98,7 @@ PETS.all ={
         companionID=7384,
         displayID=5586,
         family=8,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="Vendor",
         flavor="Donni Anthania invites these cats to her tea parties. But she doesn't serve their favorite drink: the tears of their enemies.",
         icon="656577",
@@ -130,10 +121,7 @@ PETS.all ={
         companionID=7383,
         displayID=5448,
         family=8,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="World Drop",
         flavor="Old Alterac saying: 'A cat has nine lives, but needs only one.'",
         icon="656574",
@@ -151,10 +139,7 @@ PETS.all ={
         companionID=7382,
         displayID=5554,
         family=8,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="Vendor",
         flavor="The last person who tried to housebreak this cat quickly learned that a soiled rug is better than a shredded everything-else.",
         icon="656578",
@@ -177,10 +162,7 @@ PETS.all ={
         companionID=7380,
         displayID=5585,
         family=8,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="Vendor",
         flavor="Known for its blue eyes. Also considered a delicacy by giant murlocs.",
         icon="656579",
@@ -203,10 +185,7 @@ PETS.all ={
         companionID=7381,
         displayID=5555,
         family=8,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="Vendor",
         flavor="Sleeping is this cat's second favorite activity. The first is yawning.",
         icon="656580",
@@ -229,10 +208,7 @@ PETS.all ={
         companionID=7386,
         displayID=9990,
         family=8,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="Vendor",
         flavor="'The queen had three kittens. The first gave her a juicy rat. The second, a tasty hare. And the white, her favorite, presented the head of her rival.'",
         icon="656581",
@@ -256,10 +232,7 @@ PETS.all ={
         companionID=7390,
         displayID=6191,
         family=3,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="Vendor",
         flavor="Some say this clever bird can be taught to speak--but it's smart enough to keep its beak shut.",
         icon="132921",
@@ -283,10 +256,7 @@ PETS.all ={
         companionID=7391,
         displayID=6192,
         family=3,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="World Drop",
         flavor="The jungle trolls train these birds to mimic calls for help in order to lure unsuspecting travelers into traps.",
         icon="132921",
@@ -305,10 +275,7 @@ PETS.all ={
         companionID=7387,
         displayID=5207,
         family=3,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="Drop",
         flavor="Favored pet of the Defias pirates, this colorful bird is handy for remembering passwords, grocery lists, and cracker recipes.",
         icon="132925",
@@ -333,10 +300,7 @@ PETS.all ={
         companionID=7389,
         displayID=6190,
         family=3,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="Vendor",
         flavor="Favored pet of the goblins of Booty Bay, this colorful bird is renowned for its ability to count coins, tally budgets, and lie about contracts.",
         icon="132924",
@@ -361,10 +325,7 @@ PETS.all ={
         companionID=7394,
         displayID=5369,
         family=3,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="Vendor",
         flavor="It thinks you taste like chicken too.",
         icon="135996",
@@ -388,10 +349,7 @@ PETS.all ={
         companionID=7395,
         displayID=2177,
         family=5,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="Vendor",
         flavor="The cockroach is usually an impulse buy. Its owners have a hard time parting with it even after numerous attempts.",
         icon="294474",
@@ -418,10 +376,7 @@ PETS.all ={
         companionID=7543,
         displayID=6288,
         family=2,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="Drop",
         flavor="Hopes that someday it can grow up to destroy villages, just like mommy.",
         icon="134154",
@@ -451,10 +406,7 @@ PETS.all ={
         companionID=7547,
         displayID=6293,
         family=2,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="World Drop",
         flavor="Like other members of the blue dragonflight, these whimsical little critters display an affinity to arcane magic.",
         icon="134155",
@@ -473,10 +425,7 @@ PETS.all ={
         companionID=7544,
         displayID=6290,
         family=2,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="World Drop",
         flavor="Hailing from the Wetlands, this young dragon is just learning how to hunt, breathe fire, and go on cute destructive rampages.",
         icon="134158",
@@ -495,10 +444,7 @@ PETS.all ={
         companionID=7545,
         displayID=6291,
         family=2,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="Drop",
         flavor="Once bred and raised by the green dragon Itharius, this unique breed of dragon has settled in the jungles of Feralas.",
         icon="134157",
@@ -522,10 +468,7 @@ PETS.all ={
         companionID=7550,
         displayID=901,
         family=9,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="Vendor",
         flavor="Vendors at the Darkmoon Faire offer strange and exotic wonders. They also sell wood frogs.",
         icon="237579",
@@ -552,10 +495,7 @@ PETS.all ={
         companionID=7549,
         displayID=6295,
         family=9,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="Vendor",
         flavor="Known for their powerful legs and keen eyesight.",
         icon="237579",
@@ -582,10 +522,7 @@ PETS.all ={
         companionID=7555,
         displayID=6299,
         family=3,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="Vendor",
         flavor="This dark-feathered bird of prey is often seen as a harbinger of doom amongst the druids of Teldrassil.",
         icon="132150",
@@ -609,10 +546,7 @@ PETS.all ={
         companionID=7553,
         displayID=4615,
         family=3,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="Vendor",
         flavor="Night elf children are given an owl feather on their first birthday as a token of good luck.",
         icon="132150",
@@ -637,9 +571,6 @@ PETS.all ={
         displayID=6298,
         family=3,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         intermittent=true,
         source="Pet Battle",
         flavor="Winterspring's furbolg prize the brilliant white feathers of these majestic creatures for ritual purposes.",
@@ -658,10 +589,7 @@ PETS.all ={
         companionID=14421,
         displayID=1072,
         family=5,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="Vendor",
         flavor="A complex system of burrows protects the prairie dog from its neighbors' massive hooves.",
         icon="2126349",
@@ -684,10 +612,7 @@ PETS.all ={
         companionID=7560,
         displayID=328,
         family=5,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="Vendor",
         flavor="If you go chasing snowshoe rabbits, you know you're going to fall.",
         icon="132762",
@@ -710,10 +635,7 @@ PETS.all ={
         companionID=7561,
         displayID=2955,
         family=8,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="Vendor",
         flavor="A favored companion of Kirin Tor magi, this reptile makes one wonder whether it's truly a snake or something else altogether.",
         icon="136040",
@@ -737,10 +659,7 @@ PETS.all ={
         companionID=7565,
         displayID=1206,
         family=8,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="Vendor",
         flavor="Xan'tish fearlessly tracks, captures, and trains these noble snakes so they will aid their comrades in battle.",
         icon="136040",
@@ -763,10 +682,7 @@ PETS.all ={
         companionID=7562,
         displayID=2957,
         family=8,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="Vendor",
         flavor="The brown snake is native to Horde-controlled territories. It seems unremarkable until its victims are within range.",
         icon="136040",
@@ -789,10 +705,7 @@ PETS.all ={
         companionID=7567,
         displayID=6303,
         family=8,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="Vendor",
         flavor="The crimson snake is favored among the Darkspear trolls for not only its vicious nature, but also its steadfast loyalty.",
         icon="136040",
@@ -815,10 +728,6 @@ PETS.all ={
         companionID=8376,
         displayID=7920,
         family=10,
-        isWild=false,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Quest",
         flavor="Not to worry; the combat mechanisms and homing logic have been disabled on this unit, I think. --Oglethorpe Obnoticus",
         icon="656513",
@@ -863,10 +772,6 @@ PETS.all ={
         companionID=30379,
         displayID=304,
         family=3,
-        isWild=false,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Quest",
         flavor="Don't call this bird chicken unless you want egg on your face.",
         icon="135996",
@@ -903,10 +808,7 @@ PETS.all ={
         companionID=9656,
         displayID=8909,
         family=10,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="Profession",
         professionDetail ={
             profession="Engineering",
@@ -941,10 +843,7 @@ PETS.all ={
         companionID=9657,
         displayID=8910,
         family=10,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="Profession",
         flavor="This tiny peacekeeper security bot is often outfitted with the latest arcane nullifiers and crowd pummelers. Not for the environmentally minded.",
         icon="294476",
@@ -982,10 +881,7 @@ PETS.all ={
         companionID=9662,
         displayID=6294,
         family=2,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="World Drop",
         flavor="These adorable critters love snuggling with their owners after a long day of brutal, bloody battle.",
         icon="657499",
@@ -1003,10 +899,7 @@ PETS.all ={
         companionID=10259,
         displayID=9563,
         family=8,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="Drop",
         flavor="Worgs are the favored companions of orcs and are fiercely loyal on the battlefield.",
         icon="132599",
@@ -1042,10 +935,7 @@ PETS.all ={
         companionID=10598,
         displayID=27718,
         family=8,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="Drop",
         flavor="Although born in the warm heights of Blackrock Spire, the smolderweb hatchling can survive most environments.",
         icon="132598",
@@ -1079,10 +969,7 @@ PETS.all ={
         companionID=11325,
         displayID=10990,
         family=8,
-        isWild=false,
-        isTradeable=false,
         isUnique=true,
-        isPassive=false,
         unobtainable=true,
         source="Promotion",
         flavor="This pint-sized panda cub is highly sought after by adventurers around Azeroth - despite its narcoleptic nature.",
@@ -1100,10 +987,7 @@ PETS.all ={
         companionID=11326,
         displayID=10992,
         family=6,
-        isWild=false,
-        isTradeable=false,
         isUnique=true,
-        isPassive=false,
         unobtainable=true,
         source="Promotion",
         flavor="AND THE HEAVENS SHALL TREMBLE, AND MAN SHALL WEEP, AND THE END OF DAYS SHALL--wait, why are you so tall?",
@@ -1121,10 +1005,7 @@ PETS.all ={
         companionID=11327,
         displayID=10993,
         family=5,
-        isWild=false,
-        isTradeable=false,
         isUnique=true,
-        isPassive=false,
         unobtainable=true,
         source="Promotion",
         flavor="A small, fierce member of the Zerg swarm, the zergling is not to be trifled with. Very dangerous in high numbers.",
@@ -1142,10 +1023,7 @@ PETS.all ={
         companionID=12419,
         displayID=901,
         family=10,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="Profession",
         flavor="Talented engineers have crafted an exact replica of a wood frog, at only ten times the cost of buying the real thing.",
         icon="237579",
@@ -1174,10 +1052,6 @@ PETS.all ={
         companionID=14878,
         displayID=14938,
         family=9,
-        isWild=false,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="World Event",
         flavor="The legendary ale frog was believed to be extinct until the strange brews at the Darkmoon Faire brought them out of hiding.",
         icon="237579",
@@ -1212,10 +1086,7 @@ PETS.all ={
         companionID=15186,
         displayID=15369,
         family=1,
-        isWild=false,
-        isTradeable=false,
         isUnique=true,
-        isPassive=false,
         unobtainable=true,
         source="Promotion",
         flavor="Appearances of this beloved and ultra-reclusive murloc are sure to draw a crowd.",
@@ -1233,10 +1104,7 @@ PETS.all ={
         companionID=15358,
         displayID=15398,
         family=1,
-        isWild=false,
-        isTradeable=false,
         isUnique=true,
-        isPassive=false,
         unobtainable=true,
         source="Promotion",
         flavor="Lurky's charming disposition and lively antics are guaranteed to soothe frustration and lighten even the darkest moods.",
@@ -1254,10 +1122,7 @@ PETS.all ={
         companionID=15429,
         displayID=15436,
         family=6,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="World Drop",
         flavor="Warning: Wear gloves and goggles while handling disgusting oozeling. DO NOT WASH. Will stain most armor.",
         icon="132107",
@@ -1291,10 +1156,7 @@ PETS.all ={
         companionID=86445,
         displayID=15595,
         family=9,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="Profession",
         flavor="After birth, newborn sharks quickly flee their hungry mothers. Their early independence makes them dangerous, even while young.",
         icon="294472",
@@ -1323,10 +1185,7 @@ PETS.all ={
         companionID=15699,
         displayID=10269,
         family=10,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="Profession",
         flavor="This clever toy is equipped with a secret switch to disable its 'tranquil' mode. Luckily, even the engineers who built it don't know how to find it.",
         icon="132189",
@@ -1364,8 +1223,6 @@ PETS.all ={
         family=7,
         isWild=true,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         intermittent=true,
         source="World Event",
         eventName="Feast of Winter Veil",
@@ -1395,10 +1252,7 @@ PETS.all ={
         companionID=15706,
         displayID=15904,
         family=5,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         intermittent=true,
         source="World Event",
         eventName="Feast of Winter Veil",
@@ -1428,10 +1282,7 @@ PETS.all ={
         companionID=15698,
         displayID=15660,
         family=1,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         intermittent=true,
         source="World Event",
         eventName="Feast of Winter Veil",
@@ -1461,10 +1312,7 @@ PETS.all ={
         companionID=15705,
         displayID=15663,
         family=1,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         intermittent=true,
         source="World Event",
         eventName="Feast of Winter Veil",
@@ -1494,10 +1342,7 @@ PETS.all ={
         companionID=16069,
         displayID=15984,
         family=1,
-        isWild=false,
-        isTradeable=false,
         isUnique=true,
-        isPassive=false,
         unobtainable=true,
         source="Promotion",
         flavor="Gurky is a born performer, though she remains elusive, making public appearances only on the rarest of occasions.",
@@ -1515,10 +1360,7 @@ PETS.all ={
         companionID=16085,
         displayID=15992,
         family=1,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         intermittent=true,
         source="World Event",
         flavor="The power of love can be a dangerous thing, especially when wielded by an airborne, ill-tempered goblin.",
@@ -1553,10 +1395,7 @@ PETS.all ={
         companionID=16456,
         displayID=16189,
         family=8,
-        isWild=false,
-        isTradeable=false,
         isUnique=true,
-        isPassive=false,
         unobtainable=true,
         source="Promotion",
         flavor="This cub shares many traits with its relatives, but it's in a league of its own with its singing ability.",
@@ -1574,10 +1413,7 @@ PETS.all ={
         companionID=16547,
         displayID=16259,
         family=9,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         intermittent=true,
         source="World Event",
         eventName="Children's Week",
@@ -1604,10 +1440,7 @@ PETS.all ={
         companionID=16548,
         displayID=27681,
         family=5,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         intermittent=true,
         source="World Event",
         eventName="Children's Week",
@@ -1634,10 +1467,7 @@ PETS.all ={
         companionID=16549,
         displayID=2176,
         family=5,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         intermittent=true,
         source="World Event",
         eventName="Children's Week",
@@ -1664,10 +1494,7 @@ PETS.all ={
         companionID=16701,
         displayID=16587,
         family=7,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         intermittent=true,
         source="World Event",
         eventName="Midsummer Fire Festival",
@@ -1701,10 +1528,7 @@ PETS.all ={
         companionID=17255,
         displayID=16943,
         family=3,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="Trading Card Game",
         tcg="Heroes of Azeroth",
         flavor="After a harpy incursion in Feralas, several hippogryph nesting grounds were attacked. Hundreds of hatchlings were orphaned, and they have been entrusted to the care of the druids on Sardor Isle.",
@@ -1722,10 +1546,7 @@ PETS.all ={
         companionID=18381,
         displayID=17723,
         family=2,
-        isWild=false,
-        isTradeable=false,
         isUnique=true,
-        isPassive=false,
         unobtainable=true,
         source="Promotion",
         promotion="Burning Crusade Collector's Edition",
@@ -1743,10 +1564,7 @@ PETS.all ={
         companionID=18839,
         displayID=18269,
         family=9,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="Fishing",
         flavor="Only magical wishes make magical crawdads. If you wish for a fish, fish for a wish.",
         icon="133900",
@@ -1771,10 +1589,7 @@ PETS.all ={
         companionID=20408,
         displayID=19600,
         family=6,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="Vendor",
         flavor="The ethereal Rashaad began breeding these enigmatic creatures after learning of their ability to feed on arcane energies.",
         icon="136006",
@@ -1797,10 +1612,7 @@ PETS.all ={
         companionID=20472,
         displayID=4626,
         family=5,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="Vendor",
         flavor="This bunny is the cutest thing its opponent will ever see. It'll also be the last.",
         icon="132762",
@@ -1823,10 +1635,7 @@ PETS.all ={
         companionID=21010,
         displayID=19987,
         family=3,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="Vendor",
         flavor="Delicate denizen of Azuremyst Isle, this magical insect has been rumored to possess healing abilities.",
         icon="236193",
@@ -1850,10 +1659,7 @@ PETS.all ={
         companionID=21009,
         displayID=19986,
         family=3,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="Vendor",
         flavor="A product of exposure to wild magical energies, this insect is the unexpectedly colorful result of Azerothian moth species being released into the eco-domes of the Netherstorm.",
         icon="236193",
@@ -1877,10 +1683,7 @@ PETS.all ={
         companionID=21008,
         displayID=19985,
         family=3,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="Vendor",
         flavor="Prefers flying during thunderstorms, which are common in Azuremyst Isle.",
         icon="236193",
@@ -1904,10 +1707,7 @@ PETS.all ={
         companionID=21018,
         displayID=19999,
         family=3,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="Vendor",
         flavor="Prefers flying during foggy nights, which are common in Azuremyst Isle.",
         icon="236193",
@@ -1930,10 +1730,7 @@ PETS.all ={
         companionID=21055,
         displayID=20026,
         family=2,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="Vendor",
         flavor="Once prized by dragonhawk breeders in Silvermoon. Stands out at night to predators, making it necessary to gain awareness at an early age.",
         icon="132188",
@@ -1956,10 +1753,7 @@ PETS.all ={
         companionID=21064,
         displayID=20027,
         family=2,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="Vendor",
         flavor="Mortal enemies with silver dragonhawks; on pretty good terms with golden dragonhawks.",
         icon="132188",
@@ -1982,10 +1776,7 @@ PETS.all ={
         companionID=21063,
         displayID=20037,
         family=2,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="Vendor",
         flavor="Ferocious species of dragonhawk, often seen diving down on prey from high in the sky.",
         icon="132188",
@@ -2008,10 +1799,7 @@ PETS.all ={
         companionID=21056,
         displayID=20029,
         family=2,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="Vendor",
         flavor="Raised by the few dealers still willing to trade in Netherstorm.",
         icon="132188",
@@ -2034,10 +1822,7 @@ PETS.all ={
         companionID=21076,
         displayID=20042,
         family=3,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="Drop",
         flavor="Commonly used by sporelings as a light source as they navigate the waterways of Zangarmarsh, this luminescent insect helps them avoid the dangerous bogflare needlers.",
         icon="236196",
@@ -2060,10 +1845,6 @@ PETS.all ={
         companionID=22445,
         displayID=20996,
         family=3,
-        isWild=false,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Quest",
         flavor="The magical energies released during Skywing's transformation back into his true arakkoa form liberated this poor creature, a fledgling bird imprisoned by Luanga in order to power his fowl curse.",
         icon="132598",
@@ -2088,10 +1869,7 @@ PETS.all ={
         companionID=22943,
         displayID=22349,
         family=5,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="World Event",
         eventName="Brewfest",
         flavor="Many a drunken Brewfest goer has told the tale of this mysterious creature, but few remember that tale in the morning.",
@@ -2129,10 +1907,7 @@ PETS.all ={
         companionID=23198,
         displayID=21328,
         family=5,
-        isWild=false,
-        isTradeable=false,
         isUnique=true,
-        isPassive=false,
         unobtainable=true,
         source="Promotion",
         promotion="World Wide Invitational 2007",
@@ -2150,10 +1925,7 @@ PETS.all ={
         companionID=23234,
         displayID=21362,
         family=8,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="Trading Card Game",
         tcg="Through the Dark Portal",
         flavor="Although loath to part with Bananas, Landro realized it would be safer if the pet was far from Booty Bay when his father, King Mukla, discovered he was missing.",
@@ -2173,10 +1945,7 @@ PETS.all ={
         companionID=23231,
         displayID=21381,
         family=6,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         intermittent=true,
         source="World Event",
         eventName="Children's Week",
@@ -2243,10 +2012,7 @@ PETS.all ={
         companionID=23258,
         displayID=21382,
         family=5,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         intermittent=true,
         source="World Event",
         eventName="Children's Week",
@@ -2313,10 +2079,7 @@ PETS.all ={
         companionID=23266,
         displayID=21393,
         family=5,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         intermittent=true,
         source="World Event",
         eventName="Children's Week",
@@ -2383,10 +2146,7 @@ PETS.all ={
         companionID=23274,
         displayID=16633,
         family=5,
-        isWild=false,
-        isTradeable=false,
         isUnique=true,
-        isPassive=false,
         source="Achievement",
         achievement={id="a1250"},
         flavor="Stinker uses his aroma to repel predators and attract cats. He's much more successful with the former than the latter.",
@@ -2403,10 +2163,7 @@ PETS.all ={
         companionID=23909,
         displayID=21900,
         family=7,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         intermittent=true,
         source="World Event",
         eventName="Hallow's End",
@@ -2442,10 +2199,7 @@ PETS.all ={
         companionID=24388,
         displayID=22388,
         family=9,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="Fishing",
         flavor="The crocolisk's hide and meat are prized by hunters, but the beast is ferocious and seldom taken by surprise.",
         icon="656555",
@@ -2474,10 +2228,7 @@ PETS.all ={
         companionID=24389,
         displayID=22389,
         family=9,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="Fishing",
         flavor="Muckbreath is just like other crocolisks, except he has an excellent sense of humor.",
         icon="656553",
@@ -2506,10 +2257,7 @@ PETS.all ={
         companionID=24480,
         displayID=28501,
         family=9,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="Drop",
         flavor="Amani witch doctors have turned many victims into frogs. Some never recover.",
         icon="237579",
@@ -2533,10 +2281,7 @@ PETS.all ={
         companionID=24753,
         displayID=22629,
         family=5,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="World Event",
         eventName="Brewfest",
         flavor="A shy creature, the pink elekk will only make its presence known to those that have befriended it, or to anyone too intoxicated to harm it.",
@@ -2565,10 +2310,7 @@ PETS.all ={
         companionID=25062,
         displayID=22855,
         family=3,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="Vendor",
         reputation={type="Sporeggar", level="exalted"},
         flavor="Wild sporebats are vicious creatures, but if tamed at a young age, they can be loyal companions.",
@@ -2594,10 +2336,7 @@ PETS.all ={
         companionID=25109,
         displayID=22903,
         family=10,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="Trading Card Game",
         tcg="March of the Legion",
         flavor="When the Burning Legion invaded Outland, Landro Longshot contributed this design to the war effort. Both the Alliance and Horde passed on production.",
@@ -2615,10 +2354,7 @@ PETS.all ={
         companionID=25110,
         displayID=22966,
         family=3,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="Trading Card Game",
         tcg="March of the Legion",
         flavor="Much quieter than a real dragon.",
@@ -2636,10 +2372,7 @@ PETS.all ={
         companionID=25146,
         displayID=21304,
         family=5,
-        isWild=false,
-        isTradeable=false,
         isUnique=true,
-        isPassive=false,
         unobtainable=true,
         source="Promotion",
         promotion="Recruit-A-Friend",
@@ -2657,10 +2390,7 @@ PETS.all ={
         companionID=25147,
         displayID=22938,
         family=5,
-        isWild=false,
-        isTradeable=false,
         isUnique=true,
-        isPassive=false,
         unobtainable=true,
         source="Promotion",
         promotion="Recruit-A-Friend",
@@ -2678,10 +2408,7 @@ PETS.all ={
         companionID=25706,
         displayID=8409,
         family=7,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="Vendor",
         flavor="Elder shaman have warned that wisps of Ragnaros, loyal servants of the Firelord, have taken to the Molten Front.  Vigilance is advised.",
         icon="294481",
@@ -2707,10 +2434,7 @@ PETS.all ={
         companionID=26050,
         displayID=23507,
         family=9,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="Fishing",
         flavor="Crocolisks are six-legged amphibian predators found in coastal waters. Archaeologists believe they may be descended from the diemetradons of Un'Goro Crater.",
         icon="656554",
@@ -2739,10 +2463,7 @@ PETS.all ={
         companionID=26056,
         displayID=23506,
         family=9,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="Fishing",
         flavor="After studying the crocolisk species for several years, the famed angler Nat Pagle determined that baby crocolisks are mostly harmless.",
         icon="656552",
@@ -2771,10 +2492,7 @@ PETS.all ={
         companionID=26119,
         displayID=23574,
         family=7,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="Drop",
         flavor="A child of phoenix god Al'ar, the hatchling takes flight immediately after birth.",
         icon="134373",
@@ -2797,10 +2515,6 @@ PETS.all ={
         companionID=27217,
         displayID=113730,
         family=2,
-        isWild=false,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         unobtainable=true,
         source="Promotion",
         promotion="Battleground Event",
@@ -2819,10 +2533,6 @@ PETS.all ={
         companionID=27346,
         displayID=24620,
         family=2,
-        isWild=false,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         unobtainable=true,
         source="Promotion",
         flavor="Only heroes who have proven their valor through great acts are gifted one of these mystical serpentine creatures.",
@@ -2840,10 +2550,7 @@ PETS.all ={
         companionID=27914,
         displayID=25002,
         family=6,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="Trading Card Game",
         tcg="The Hunt for Illidan",
         flavor="Ethereal soul-traders will travel with those who can free the essences they need from unruly hosts.",
@@ -2861,10 +2568,7 @@ PETS.all ={
         companionID=28470,
         displayID=25457,
         family=3,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="Vendor",
         flavor="Native to the Terokkar Forest, nether rays spawn during the rainy season. Out of the hundreds of offspring resulting from one hatching, very few survive to adulthood.",
         icon="132191",
@@ -2888,10 +2592,6 @@ PETS.all ={
         companionID=28513,
         displayID=4185,
         family=4,
-        isWild=false,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         unobtainable=true,
         source="Drop",
         flavor="Vampire bats have been trained as scouts and mounts by the Forsaken of the Undercity and the Amani trolls of Zul'Aman.",
@@ -2908,10 +2608,7 @@ PETS.all ={
         companionID=28883,
         displayID=28456,
         family=4,
-        isWild=false,
-        isTradeable=false,
         isUnique=true,
-        isPassive=false,
         unobtainable=true,
         source="Promotion",
         promotion="Wrath of the Lich King Collector's Edition",
@@ -2930,10 +2627,7 @@ PETS.all ={
         companionID=29089,
         displayID=25900,
         family=1,
-        isWild=false,
-        isTradeable=false,
         isUnique=true,
-        isPassive=false,
         unobtainable=true,
         source="Promotion",
         promotion="World Wide Invitational 2008",
@@ -2951,10 +2645,7 @@ PETS.all ={
         companionID=29147,
         displayID=28089,
         family=4,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="Vendor",
         flavor="When it senses the impending death of a nearby creature, the skull will emit an ear-piercing cackle.",
         icon="133730",
@@ -2977,10 +2668,7 @@ PETS.all ={
         companionID=24968,
         displayID=22776,
         family=10,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         intermittent=true,
         source="World Event",
         eventName="Feast of Winter Veil",
@@ -3009,10 +2697,7 @@ PETS.all ={
         companionID=29726,
         displayID=26452,
         family=9,
-        isWild=false,
-        isTradeable=false,
         isUnique=true,
-        isPassive=false,
         unobtainable=true,
         source="Promotion",
         promotion="WoW/Blizzard Account Merger",
@@ -3030,10 +2715,7 @@ PETS.all ={
         companionID=31575,
         displayID=27627,
         family=5,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="Fishing",
         flavor="You wouldn't want to meet this rat in a dark alley. Or anywhere else, for that matter.",
         icon="134324",
@@ -3057,10 +2739,7 @@ PETS.all ={
         companionID=32589,
         displayID=62217,
         family=3,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="Vendor",
         flavor="Unlike most of Geen the gorloc's 'mysterious eggs,' this one actually contained a living thing.",
         icon="132192",
@@ -3086,10 +2765,7 @@ PETS.all ={
         companionID=32590,
         displayID=28215,
         family=3,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="Vendor",
         flavor="The rare albino tickbird is revered amongst the Oracles. It is seen as a sign of heavy rainstorms, good grub harvests, and hibernating wolvar.",
         icon="132192",
@@ -3115,10 +2791,7 @@ PETS.all ={
         companionID=32592,
         displayID=28217,
         family=2,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="Vendor",
         flavor="These voracious whelps grow at an incredible rate and can devour nearly twice their weight in raw meat per day.",
         icon="236233",
@@ -3144,10 +2817,7 @@ PETS.all ={
         companionID=32591,
         displayID=28084,
         family=8,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="Vendor",
         flavor="The cobras of Azeroth are renowned for their fast-acting venom and swift strikes.",
         icon="236177",
@@ -3173,10 +2843,7 @@ PETS.all ={
         companionID=32595,
         displayID=28216,
         family=9,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="Vendor",
         flavor="Notable for its wide eyes and sassy slide.",
         icon="655866",
@@ -3201,10 +2868,7 @@ PETS.all ={
         companionID=32643,
         displayID=45937,
         family=7,
-        isWild=false,
-        isTradeable=false,
         isUnique=true,
-        isPassive=false,
         source="Achievement",
         flavor="To prevent apprentices from secretly using the familiar to complete their chores, the archmagi placed the ritual required to summon the creature across the pages of several spellbooks hidden throughout Dalaran.",
         icon="132102",
@@ -3243,10 +2907,7 @@ PETS.all ={
         companionID=32791,
         displayID=6302,
         family=5,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="World Event",
         eventName="Noblegarden",
         flavor="Spring rabbits symbolize fertility, and they love to demonstrate why.",
@@ -3278,10 +2939,7 @@ PETS.all ={
         companionID=32818,
         displayID=45968,
         family=3,
-        isWild=false,
-        isTradeable=false,
         isUnique=true,
-        isPassive=false,
         source="World Event",
         eventName="Pilgrim's Bounty",
         flavor="He's humble, clairvoyant, and delicious with cranberry sauce.",
@@ -3316,10 +2974,7 @@ PETS.all ={
         companionID=32841,
         displayID=16189,
         family=8,
-        isWild=false,
-        isTradeable=false,
         isUnique=true,
-        isPassive=false,
         unobtainable=true,
         source="Promotion",
         promotion="WoW's 4th Anniversary",
@@ -3337,10 +2992,7 @@ PETS.all ={
         companionID=32939,
         displayID=28397,
         family=5,
-        isWild=false,
-        isTradeable=false,
         isUnique=true,
-        isPassive=false,
         source="Achievement",
         achievement={id="a2516"},
         flavor="She likes the company of friends. Seventy-five of them, to be precise.",
@@ -3357,10 +3009,7 @@ PETS.all ={
         companionID=33188,
         displayID=28482,
         family=7,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="Vendor",
         flavor="It always wakes up dancing. What a happy little tree!",
         icon="134183",
@@ -3384,10 +3033,7 @@ PETS.all ={
         companionID=33194,
         displayID=28489,
         family=8,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="Vendor",
         flavor="The bears of Dun Morogh are prized for their hardiness, loyalty, and combat prowess. Their time among the dwarves does little to curb their ferocity.",
         icon="236243",
@@ -3411,10 +3057,7 @@ PETS.all ={
         companionID=33197,
         displayID=4732,
         family=3,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="Vendor",
         flavor="Can sense an opponent's heartbeat through echolocation.",
         icon="132182",
@@ -3438,10 +3081,7 @@ PETS.all ={
         companionID=33198,
         displayID=15470,
         family=8,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="Vendor",
         flavor="The volatile Durotar scorpion is a fierce desert predator. It's known for only occasionally stinging its owner.",
         icon="132195",
@@ -3465,10 +3105,7 @@ PETS.all ={
         companionID=33200,
         displayID=16205,
         family=5,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="Vendor",
         flavor="Unlike the polymorphed variety, trueborn sheep can be quite scary.",
         icon="136071",
@@ -3492,10 +3129,7 @@ PETS.all ={
         companionID=33219,
         displayID=28502,
         family=5,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="Vendor",
         flavor="A tallstrider's speed on open ground is unrivaled, so predators rely on stealth and pack tactics when hunting them.",
         icon="132198",
@@ -3519,10 +3153,7 @@ PETS.all ={
         companionID=33226,
         displayID=45880,
         family=9,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="Profession",
         flavor="The strand crawler has adapted to the northern cold by hibernating under the island beaches.",
         icon="2027886",
@@ -3564,10 +3195,7 @@ PETS.all ={
         companionID=33205,
         displayID=28493,
         family=7,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="Vendor",
         flavor="The long-term effects of the contamination caused by the Exodar are still under observation.",
         icon="133941",
@@ -3590,10 +3218,7 @@ PETS.all ={
         companionID=33227,
         displayID=45960,
         family=6,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="Vendor",
         flavor="Created by a blood elf apprentice, this broom would be extremely useful if anyone could figure out how to make it stop.",
         icon="655994",
@@ -3617,9 +3242,6 @@ PETS.all ={
         companionID=33238,
         displayID=28946,
         family=1,
-        isWild=false,
-        isTradeable=false,
-        isUnique=false,
         isPassive=true,
         source="Quest",
         flavor="Many of Stormwind's youth joined the Argent Crusade as squires, hoping to one day serve the Holy Light in battle.",
@@ -3662,10 +3284,7 @@ PETS.all ={
         companionID=33274,
         displayID=28539,
         family=10,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="Vendor",
         flavor="Used as a training mount for young gnomes, the Mechanopeep has none of the speed but all of the charm of its bigger brothers.",
         icon="132247",
@@ -3689,9 +3308,6 @@ PETS.all ={
         companionID=33239,
         displayID=28948,
         family=1,
-        isWild=false,
-        isTradeable=false,
-        isUnique=false,
         isPassive=true,
         source="Quest",
         flavor="These young orcs strive to embody the Argent Crusade's virtues: valor, strength, and integrity.",
@@ -3734,10 +3350,7 @@ PETS.all ={
         companionID=33578,
         displayID=28734,
         family=1,
-        isWild=false,
-        isTradeable=false,
         isUnique=true,
-        isPassive=false,
         unobtainable=true,
         source="Promotion",
         promotion="Arena Tournament",
@@ -3756,10 +3369,7 @@ PETS.all ={
         companionID=33810,
         displayID=46939,
         family=4,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="Vendor",
         flavor="This is actually three pets in one. You won't know what you'll get until you summon it!",
         icon="133798",
@@ -3783,10 +3393,6 @@ PETS.all ={
         companionID=34278,
         displayID=45943,
         family=7,
-        isWild=false,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Quest",
         flavor="A solemn reminder of what was lost when the Worldbreaker changed the face of Azeroth.",
         icon="132129",
@@ -3927,10 +3533,7 @@ PETS.all ={
         companionID=34364,
         displayID=11709,
         family=8,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="Vendor",
         flavor="Many have mocked this cat before battle. Their last words are usually, 'Here, kitty, kitty.'",
         icon="656576",
@@ -3953,10 +3556,6 @@ PETS.all ={
         companionID=33530,
         displayID=25173,
         family=1,
-        isWild=false,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         intermittent = true,
         source="World Event",
         eventName="Children's Week",
@@ -4005,10 +3604,6 @@ PETS.all ={
         companionID=33529,
         displayID=25384,
         family=1,
-        isWild=false,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         intermittent = true,
         source="World Event",
         eventName="Children's Week",
@@ -4057,10 +3652,7 @@ PETS.all ={
         companionID=34587,
         displayID=29279,
         family=10,
-        isWild=false,
-        isTradeable=false,
         isUnique=true,
-        isPassive=false,
         source="Vendor",
         flavor="A fighting robot fueled by delicious red or blue electrolytes.",
         icon="134239",
@@ -4086,10 +3678,7 @@ PETS.all ={
         companionID=34694,
         displayID=29348,
         family=1,
-        isWild=false,
-        isTradeable=false,
         isUnique=true,
-        isPassive=false,
         unobtainable=true,
         source="Promotion",
         promotion="BlizzCon 2009",
@@ -4108,10 +3697,7 @@ PETS.all ={
         companionID=34724,
         displayID=70232,
         family=6,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="Vendor",
         flavor="This extremely rare species of mana wyrm is prized for its unique coloration and even temperament.",
         icon="132849",
@@ -4137,10 +3723,7 @@ PETS.all ={
         companionID=34930,
         displayID=29605,
         family=6,
-        isWild=false,
-        isTradeable=false,
         isUnique=true,
-        isPassive=false,
         unobtainable=true,
         source="Promotion",
         promotion="Recruit-A-Friend",
@@ -4158,10 +3741,7 @@ PETS.all ={
         companionID=35396,
         displayID=29805,
         family=8,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="Treasure",
         flavor="Rarely leaves nest until maturity. Enjoys conducting pranks on the nearby Razormaw nest.",
         icon="132193",
@@ -4185,10 +3765,7 @@ PETS.all ={
         companionID=35395,
         displayID=29807,
         family=8,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="Drop",
         flavor="The demand for this purple-skinned breed has drastically reduced the raptor population near the Wailing Caverns.",
         icon="132193",
@@ -4213,10 +3790,7 @@ PETS.all ={
         companionID=35400,
         displayID=29803,
         family=8,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="Drop",
         flavor="This crafty raptor was born in the icy wastes of Northrend. Its harsh upbringing gives it strength when many others would perish.",
         icon="132253",
@@ -4240,10 +3814,7 @@ PETS.all ={
         companionID=35387,
         displayID=29802,
         family=8,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="Drop",
         flavor="This offspring of Takk the Leaper is incredibly agile and can maneuver through difficult environments with ease.",
         icon="132253",
@@ -4267,10 +3838,7 @@ PETS.all ={
         companionID=35399,
         displayID=29809,
         family=8,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="Vendor",
         flavor="This hatchling is coveted for its unique coloration. Despite Breanni's loving care, the raptor's feral nature cannot be restrained.",
         icon="132253",
@@ -4293,10 +3861,7 @@ PETS.all ={
         companionID=35397,
         displayID=29810,
         family=8,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="Drop",
         flavor="Larger than other raptor infants, these hatchlings grow into towering reptilian beasts capable of massive devastation.",
         icon="132253",
@@ -4320,10 +3885,7 @@ PETS.all ={
         companionID=35398,
         displayID=29808,
         family=8,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="Drop",
         flavor="Razormaw eggs are protected fiercely by their mothers. Their cuteness belies their inherited ferocity.",
         icon="132193",
@@ -4347,10 +3909,7 @@ PETS.all ={
         companionID=35394,
         displayID=29806,
         family=8,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="World Drop",
         flavor="Razzashi raptors are among the cleverest predators in the jungle, making them favored by the Gurubashi trolls.",
         icon="132193",
@@ -4372,10 +3931,7 @@ PETS.all ={
         companionID=35468,
         displayID=29819,
         family=6,
-        isWild=false,
-        isTradeable=false,
         isUnique=true,
-        isPassive=false,
         unobtainable=true,
         source="Promotion",
         promotion="Korea World Event",
@@ -4393,10 +3949,7 @@ PETS.all ={
         companionID=36482,
         displayID=30157,
         family=3,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="Trading Card Game",
         tcg="Scourgewar",
         flavor="Seeing these kites soaring above Northrend's shores is a clear sign that tuskarr are nearby.",
@@ -4414,10 +3967,7 @@ PETS.all ={
         companionID=36511,
         displayID=30409,
         family=6,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="Trading Card Game",
         tcg="Scourgewar",
         flavor="Affectionate and curious, these kittens seem to find the most peculiar hiding places.",
@@ -4436,10 +3986,7 @@ PETS.all ={
         companionID=36607,
         displayID=30356,
         family=2,
-        isWild=false,
-        isTradeable=false,
         isUnique=true,
-        isPassive=false,
         unobtainable=true,
         source="Promotion",
         promotion="WoW's 5th Anniversary",
@@ -4457,10 +4004,7 @@ PETS.all ={
         companionID=36871,
         displayID=30462,
         family=7,
-        isWild=false,
-        isTradeable=false,
         isUnique=true,
-        isPassive=false,
         source="Promotion",
         promotion="Authenticator Account Link",
         flavor="Found in the Firelands and the Molten Core, core hounds can trace their lineage back to the alpha male, Magmadar.",
@@ -4477,10 +4021,7 @@ PETS.all ={
         companionID=36908,
         displayID=30412,
         family=3,
-        isWild=false,
-        isTradeable=false,
         isUnique=true,
-        isPassive=false,
         unobtainable=true,
         source="In-Game Shop",
         flavor="A gift from the Wildhammer dwarves to the heroes of the Alliance, these hatchlings are descendants of the same gryphons ridden by Falstad and his entourage into Grim Batol.",
@@ -4497,10 +4038,7 @@ PETS.all ={
         companionID=36909,
         displayID=30413,
         family=8,
-        isWild=false,
-        isTradeable=false,
         isUnique=true,
-        isPassive=false,
         unobtainable=true,
         source="In-Game Shop",
         flavor="Thorg No-Legs never paid heed to the old orc saying, 'Don't pull a wyvern's tail.'",
@@ -4517,10 +4055,7 @@ PETS.all ={
         companionID=36910,
         displayID=30402,
         family=6,
-        isWild=false,
-        isTradeable=false,
         isUnique=true,
-        isPassive=false,
         unobtainable=true,
         source="Promotion",
         promotion="Recruit-A-Friend",
@@ -4538,10 +4073,7 @@ PETS.all ={
         companionID=36911,
         displayID=30414,
         family=1,
-        isWild=false,
-        isTradeable=false,
         isUnique=true,
-        isPassive=false,
         unobtainable=true,
         source="In-Game Shop",
         flavor="The pandaren monk is a fearless traveling companion, constantly training in his art... unless you offer him a drink. He considers it rude to refuse.",
@@ -4559,10 +4091,7 @@ PETS.all ={
         companionID=36979,
         displayID=30507,
         family=4,
-        isWild=false,
-        isTradeable=false,
         isUnique=true,
-        isPassive=false,
         unobtainable=true,
         source="In-Game Shop",
         flavor="In life, Kel'Thuzad betrayed the Kirin Tor and created the Cult of the Damned. In death, he serves the Scourge as the Archlich Lord of Naxxramas.",
@@ -4580,10 +4109,7 @@ PETS.all ={
         companionID=37865,
         displayID=31174,
         family=5,
-        isWild=false,
-        isTradeable=false,
         isUnique=true,
-        isPassive=false,
         source="Achievement",
         flavor="Although small, pugs are very dangerous when provoked.",
         icon="133718",
@@ -4600,10 +4126,7 @@ PETS.all ={
         companionID=38374,
         displayID=31073,
         family=6,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         intermittent=true,
         source="World Event",
         eventName="Love is in the Air",
@@ -4630,10 +4153,7 @@ PETS.all ={
         companionID=40198,
         displayID=31722,
         family=7,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         intermittent=true,
         source="World Event",
         eventName="Midsummer Fire Festival",
@@ -4661,10 +4181,7 @@ PETS.all ={
         companionID=40295,
         displayID=22778,
         family=10,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="Vendor",
         flavor="Jepetto's top-selling toy this season, the bot's new blue chassis has children across Azeroth scrambling for this feisty battle bot.",
         icon="133000",
@@ -4691,10 +4208,7 @@ PETS.all ={
         companionID=40624,
         displayID=31956,
         family=2,
-        isWild=false,
-        isTradeable=false,
         isUnique=true,
-        isPassive=false,
         source="Achievement",
         flavor="Breanni in Dalaran, one of the world's foremost collectors of exotic pets, will only award the mystical Celestial Dragon to fellow collectors whose obsession rivals her own.",
         icon="368365",
@@ -4711,10 +4225,7 @@ PETS.all ={
         companionID=40703,
         displayID=32031,
         family=10,
-        isWild=false,
-        isTradeable=false,
         isUnique=true,
-        isPassive=false,
         unobtainable=true,
         source="In-Game Shop",
         flavor="Modeled after the huge titan prototype in Ulduar, this volatile little construct plays hard with its toys.",
@@ -4732,10 +4243,7 @@ PETS.all ={
         companionID=42078,
         displayID=32670,
         family=10,
-        isWild=false,
-        isTradeable=false,
         isUnique=true,
-        isPassive=false,
         unobtainable=true,
         source="Promotion",
         promotion="StarCraft II: Wings of Liberty Collector's Edition",
@@ -4754,10 +4262,6 @@ PETS.all ={
         companionID=42177,
         displayID=69048,
         family=3,
-        isWild=false,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Quest",
         flavor="Unlike its gold counterpart, the blue mini jouster takes a leisurely pace when jabbing its opponent's eyeballs.",
         icon="132188",
@@ -4799,10 +4303,6 @@ PETS.all ={
         companionID=42183,
         displayID=69047,
         family=3,
-        isWild=false,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Quest",
         flavor="This critter is infamous for its ability to unleash a fast and furious eyeball jabbing.",
         icon="132200",
@@ -4844,10 +4344,7 @@ PETS.all ={
         companionID=43800,
         displayID=33512,
         family=10,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="Profession",
         flavor="Goblin engineering at its finest. Blueprints based on the massive fel reaver in Hellfire Peninsula.",
         icon="133861",
@@ -4881,10 +4378,7 @@ PETS.all ={
         companionID=43916,
         displayID=33559,
         family=10,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="Profession",
         flavor="The gold standard for sturdy gnomish design, this mechanical critter is the perfect companion for the lonely engineer on the go.",
         icon="466036",
@@ -4919,10 +4413,7 @@ PETS.all ={
         companionID=45128,
         displayID=34262,
         family=4,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="Archaeology",
         flavor="This appears to be nothing more than the paw of a small primate. A closer inspection shows that the hand has been dried by centuries of exposure to the sands of Uldum.",
         icon="134555",
@@ -4939,10 +4430,7 @@ PETS.all ={
         companionID=45247,
         displayID=45940,
         family=7,
-        isWild=false,
-        isTradeable=false,
         isUnique=true,
-        isPassive=false,
         intermittent=true,
         source="Achievement",
         achievement={id="a5449"},
@@ -4969,10 +4457,7 @@ PETS.all ={
         companionID=45340,
         displayID=34413,
         family=4,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="Archaeology",
         flavor="You stare at her, and she just stares right back. So clever; sometimes it seems as if she's figuring out how to open doors.",
         icon="458255",
@@ -4989,10 +4474,7 @@ PETS.all ={
         companionID=46898,
         displayID=36902,
         family=6,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="Profession",
         flavor="Reduces the likelihood of being eaten by monsters when you enter pitch-black places.",
         icon="134249",
@@ -5029,10 +4511,7 @@ PETS.all ={
         companionID=46896,
         displayID=35338,
         family=2,
-        isWild=false,
-        isTradeable=false,
         isUnique=true,
-        isPassive=false,
         unobtainable=true,
         source="Promotion",
         promotion="Cataclysm Collector's Edition",
@@ -5051,10 +4530,7 @@ PETS.all ={
         companionID=47944,
         displayID=37136,
         family=7,
-        isWild=false,
-        isTradeable=false,
         isUnique=true,
-        isPassive=false,
         source="Achievement",
         flavor="Fire hatchlings are born from the ashes of a phoenix. Dark hatchlings emerge from their shadows.",
         icon="464139",
@@ -5079,10 +4555,7 @@ PETS.all ={
         companionID=48107,
         displayID=36499,
         family=3,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="Vendor",
         flavor="This bird is a salty veteran of the endless naval battles surrounding Tol Barad--a veteran whose grown plump from picking through the leftovers, that is.",
         icon="464160",
@@ -5108,10 +4581,7 @@ PETS.all ={
         companionID=48242,
         displayID=36220,
         family=5,
-        isWild=false,
-        isTradeable=false,
         isUnique=true,
-        isPassive=false,
         source="Achievement",
         flavor="Rolls into a protective ball when it feels threatened. Or when its mother calls.",
         icon="464159",
@@ -5134,10 +4604,7 @@ PETS.all ={
         companionID=48609,
         displayID=36211,
         family=10,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="Archaeology",
         flavor="Thought to be an original construct of the titans, the clockwork gnome has some gears smaller than the eye can see.",
         icon="134152",
@@ -5154,10 +4621,7 @@ PETS.all ={
         companionID=48641,
         displayID=33217,
         family=8,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="Drop",
         flavor="The fighting in Tol Barad has made it difficult to find these kits, and numerous would-be owners have decimated the fox population there as a result.",
         icon="462532",
@@ -5187,10 +4651,7 @@ PETS.all ={
         companionID=48982,
         displayID=36637,
         family=7,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="Drop",
         flavor="The elemental shale spider is no true arachnid, but it has durability and ferocity that make it feared even in Deepholm.",
         icon="134397",
@@ -5217,9 +4678,6 @@ PETS.all ={
         companionID=49586,
         displayID=37200,
         family=1,
-        isWild=false,
-        isTradeable=false,
-        isUnique=false,
         isPassive=true,
         source="Achievement",
         flavor="Guild pages must be fearless since they are called upon to announce their guild's victories over the Horde in battle.",
@@ -5243,9 +4701,6 @@ PETS.all ={
         companionID=49588,
         displayID=37199,
         family=1,
-        isWild=false,
-        isTradeable=false,
-        isUnique=false,
         isPassive=true,
         source="Achievement",
         flavor="When a guild earns enough glory by defeating Alliance champions, some orcs will come to share the glory by serving the guild.",
@@ -5269,9 +4724,6 @@ PETS.all ={
         companionID=49587,
         displayID=37198,
         family=1,
-        isWild=false,
-        isTradeable=false,
-        isUnique=false,
         isPassive=true,
         source="Achievement",
         flavor="When guilds have accumulated enough wealth, brave soldiers are often called to bear their standards.",
@@ -5305,9 +4757,6 @@ PETS.all ={
         companionID=49590,
         displayID=37196,
         family=1,
-        isWild=false,
-        isTradeable=false,
-        isUnique=false,
         isPassive=true,
         source="Achievement",
         flavor="Wealthy guilds draw the attention of soldiers willing to carry their standards into battle.",
@@ -5340,10 +4789,7 @@ PETS.all ={
         companionID=50468,
         displayID=32031,
         family=10,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="Trading Card Game",
         tcg="Worldbreaker",
         flavor="Always 'ready to play,' Landro's Lil' XT is almost indistinguishable from the original. Prone to tantrums and narcolepsy.",
@@ -5360,10 +4806,7 @@ PETS.all ={
         companionID=50586,
         displayID=9905,
         family=8,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="World Drop",
         flavor="The grubs of the Plaguelands are a side effect of necromantic corruption and the massive number of corpses there. Mr. Grubbs is from a particularly acrobatic breed.",
         icon="648918",
@@ -5398,10 +4841,6 @@ PETS.all ={
         companionID=51632,
         displayID=28435,
         family=3,
-        isWild=false,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Quest",
         flavor="After swarming around open lava pits during the day, these strange insects emit a fiery glow at night.",
         icon="237146",
@@ -5481,10 +4920,7 @@ PETS.all ={
         companionID=51635,
         displayID=38135,
         family=5,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         intermittent=true,
         source="World Event",
         eventName="Children's Week",
@@ -5551,10 +4987,6 @@ PETS.all ={
         companionID=51090,
         displayID=37154,
         family=7,
-        isWild=false,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Quest",
         flavor="This sweet flower will brighten your day with its warm smile and cheerful song! Also strong against undead.",
         icon="133939",
@@ -5579,10 +5011,7 @@ PETS.all ={
         companionID=50545,
         displayID=36901,
         family=6,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="Profession",
         flavor="Higitus figi- hockity pocki- abracadab- prestidig--oh, pinfeathers!",
         icon="134971",
@@ -5619,10 +5048,7 @@ PETS.all ={
         companionID=50722,
         displayID=45878,
         family=7,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="Profession",
         profession="Mining",
         flavor="Often confused by miners as a rare gem, the geode initially makes its presence known by emitting melodic reverberations.",
@@ -5652,10 +5078,7 @@ PETS.all ={
         companionID=51122,
         displayID=36896,
         family=1,
-        isWild=false,
-        isTradeable=false,
         isUnique=true,
-        isPassive=false,
         unobtainable=true,
         source="Promotion",
         flavor="Deathwing's emergence transformed the whole of Azeroth; not even the ocean-dwelling murlocs were immune to his corrupt influence.",
@@ -5673,10 +5096,7 @@ PETS.all ={
         companionID=51601,
         displayID=37526,
         family=1,
-        isWild=false,
-        isTradeable=false,
         isUnique=true,
-        isPassive=false,
         source="In-Game Shop",
         flavor="Moonkin are blessed by Elune and spread nature's grace wherever they travel. The festive fowls are always in the mood for a dance.",
         icon="467893",
@@ -5693,10 +5113,7 @@ PETS.all ={
         companionID=51600,
         displayID=37541,
         family=7,
-        isWild=false,
-        isTradeable=false,
         isUnique=true,
-        isPassive=false,
         source="In-Game Shop",
         flavor="It's never too soon to summon this tiny aspect of the dread Firelord.",
         icon="254652",
@@ -5712,10 +5129,7 @@ PETS.all ={
         companionID=51649,
         displayID=37527,
         family=1,
-        isWild=false,
-        isTradeable=false,
         isUnique=true,
-        isPassive=false,
         source="In-Game Shop",
         flavor="The distinct roar of the moonkin is one of the most terrifying sounds in nature.",
         icon="467894",
@@ -5732,10 +5146,6 @@ PETS.all ={
         companionID=52226,
         displayID=37814,
         family=8,
-        isWild=false,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Quest",
         flavor="It looked up at you with those huge black eyes and seemed to ask, 'Are you my mommy?'",
         icon="132225",
@@ -5789,10 +5199,7 @@ PETS.all ={
         companionID=52343,
         displayID=30507,
         family=4,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="Trading Card Game",
         tcg="Worldbreaker",
         flavor="How the goblin Landro Longshot initially came into possession of the lichling remains a mystery, but he was all too eager to wager it in a game of cards.",
@@ -5809,10 +5216,7 @@ PETS.all ={
         companionID=52344,
         displayID=37846,
         family=8,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="Trading Card Game",
         tcg="Twilight of the Dragons",
         flavor="Elune made nightsabers silver and black so they could meld into the shadows on a moonlit night.",
@@ -5829,10 +5233,7 @@ PETS.all ={
         companionID=52831,
         displayID=37712,
         family=8,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="Vendor",
         flavor="Winterspring cubs are happiest when frolicking in freshly fallen snow.",
         icon="132252",
@@ -5855,10 +5256,6 @@ PETS.all ={
         companionID=52894,
         displayID=38065,
         family=8,
-        isWild=false,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Quest",
         flavor="Born in the jungles of Stranglethorn, unlucky raptor hatchlings are often captured by the Gurubashi and taken to the troll city of Zul'Gurub.",
         icon="132193",
@@ -5921,10 +5318,7 @@ PETS.all ={
         companionID=53048,
         displayID=38134,
         family=6,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="World Event",
         eventName="Children's Week",
         flavor="Wild marsh walkers are dangerously aggressive, but they're loyal and affectionate if you manage to tame them.",
@@ -5990,10 +5384,7 @@ PETS.all ={
         companionID=53225,
         displayID=38229,
         family=3,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="Archaeology",
         flavor="Pterrordax eggs are incubated underneath the fossils of their forebears, allowing the hatchlings to absorb their ancestors' ferocity and intelligence.",
         icon="516665",
@@ -6010,10 +5401,7 @@ PETS.all ={
         companionID=53232,
         displayID=38232,
         family=4,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="Archaeology",
         flavor="Voodoo figurines were often empowered by flasks of mojo, troll sweat, and the flesh of tribal enemies.",
         icon="516666",
@@ -6030,10 +5418,7 @@ PETS.all ={
         companionID=53283,
         displayID=38359,
         family=3,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="In-Game Shop",
         flavor="Still a little clumsy, this tiny winged lion is learning how to be the best mount it can be!",
         icon="519402",
@@ -6049,10 +5434,7 @@ PETS.all ={
         companionID=53623,
         displayID=16943,
         family=3,
-        isWild=false,
-        isTradeable=false,
         isUnique=true,
-        isPassive=false,
         source="In-Game Shop",
         flavor="Not yet the fearsome creatures they grow to in adulthood, the Cenarion hatchlings have an almost harmless appearance that has caught novice trainers of the Cenarion Circle off guard.",
         icon="132833",
@@ -6070,10 +5452,7 @@ PETS.all ={
         companionID=53658,
         displayID=38455,
         family=8,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="Vendor",
         flavor="The cubs of Hyjal suffered much during the Cataclysm. On the bright side, the devastation also led to their newfound love of heights and daredevil stunts.",
         icon="446127",
@@ -6108,10 +5487,7 @@ PETS.all ={
         companionID=53661,
         displayID=38429,
         family=7,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="Vendor",
         flavor="Native to the ashen soils of the Firelands, the lasher was transplanted to Azeroth with the help of the Guardians of Hyjal.",
         icon="133941",
@@ -6146,10 +5522,7 @@ PETS.all ={
         companionID=53884,
         displayID=74790,
         family=8,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="World Event",
         eventName="Hallow's End",
         flavor="Ride with the moon (and this furry, whiskered witch) in the dead of night!",
@@ -6175,10 +5548,7 @@ PETS.all ={
         companionID=54027,
         displayID=38614,
         family=2,
-        isWild=false,
-        isTradeable=false,
         isUnique=true,
-        isPassive=false,
         source="Vendor",
         flavor="A legendary member of the blue dragonflight.",
         icon="524050",
@@ -6226,10 +5596,6 @@ PETS.all ={
         companionID=54128,
         displayID=38638,
         family=4,
-        isWild=false,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         intermittent=true,
         source="World Event",
         eventName="Hallow's End",
@@ -6272,10 +5638,7 @@ PETS.all ={
         companionID=54227,
         displayID=38693,
         family=5,
-        isWild=false,
-        isTradeable=false,
         isUnique=true,
-        isPassive=false,
         source="Achievement",
         achievement={id="a5876"},
         flavor="Most squirrels hoard acorns for sustenance. Nuts, on the other hand, hoards acorns to stock its supply of ammunition.",
@@ -6292,10 +5655,7 @@ PETS.all ={
         companionID=54374,
         displayID=38776,
         family=3,
-        isWild=false,
-        isTradeable=false,
         isUnique=true,
-        isPassive=false,
         source="Achievement",
         flavor="One of the rarest creatures, this kaliri is set apart from others by its brilliant plumage and the lengths hunters will go to capture them.",
         icon="132926",
@@ -6312,10 +5672,7 @@ PETS.all ={
         companionID=54383,
         displayID=38777,
         family=9,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="Trading Card Game",
         tcg="Throne of the Tides",
         flavor="You might think this fish out of water would be a weak opponent... until you see the intensity that lies within its protective bubble.",
@@ -6332,10 +5689,7 @@ PETS.all ={
         companionID=54438,
         displayID=38803,
         family=1,
-        isWild=false,
-        isTradeable=false,
         isUnique=true,
-        isPassive=false,
         unobtainable=true,
         source="Promotion",
         promotion="BlizzCon 2011",
@@ -6353,10 +5707,7 @@ PETS.all ={
         companionID=54491,
         displayID=46001,
         family=8,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="Vendor",
         flavor="The monkeys of Azeroth are infamous tricksters, and these beloved companions of the Darkmoon Faire have taken that innate cunning to a whole new level.",
         icon="132159",
@@ -6379,9 +5730,6 @@ PETS.all ={
         companionID=54539,
         displayID=38343,
         family=3,
-        isWild=false,
-        isTradeable=false,
-        isUnique=false,
         isPassive=true,
         source="Quest",
         flavor="Created to entertain children at the Darkmoon Faire, these magical balloons never lose their floatiness.",
@@ -6406,9 +5754,6 @@ PETS.all ={
         companionID=54541,
         displayID=38342,
         family=3,
-        isWild=false,
-        isTradeable=false,
-        isUnique=false,
         isPassive=true,
         source="Quest",
         flavor="A magical wonder, these balloons will never deflate and are traditionally created in batches of ninety-nine.",
@@ -6433,10 +5778,7 @@ PETS.all ={
         companionID=54730,
         displayID=38919,
         family=1,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="Trading Card Game",
         tcg="Crown of the Heavens",
         flavor="The grell are embodiments of the wild side of nature. Tame ones are very rare.",
@@ -6453,10 +5795,7 @@ PETS.all ={
         companionID=54487,
         displayID=27678,
         family=9,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="Vendor",
         flavor="This shelled reptile bravely protects the home on its back with an unwaveringly happy disposition.",
         icon="1738682",
@@ -6479,9 +5818,6 @@ PETS.all ={
         companionID=55187,
         displayID=38344,
         family=3,
-        isWild=false,
-        isTradeable=false,
-        isUnique=false,
         isPassive=true,
         source="Vendor",
         flavor="It just floats along...",
@@ -6505,10 +5841,7 @@ PETS.all ={
         companionID=55215,
         displayID=45939,
         family=7,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="World Event",
         eventName="Feast of Winter Veil",
         flavor="A stowaway from Greatfather Winter's workshop, this tiny elemental found himself trapped in a present that was stolen by the Abominable Greench.",
@@ -6536,10 +5869,7 @@ PETS.all ={
         companionID=55356,
         displayID=15381,
         family=10,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="Vendor",
         flavor="A favorite of children across Azeroth, this tough little toy can withstand even the most aggressive imagination.",
         icon="133015",
@@ -6562,10 +5892,7 @@ PETS.all ={
         companionID=55367,
         displayID=17192,
         family=10,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="Vendor",
         flavor="Lacking the mines and rockets of its predecessor, this kid-friendly faire prize is a new favorite among Azeroth's children.",
         icon="134509",
@@ -6588,10 +5915,7 @@ PETS.all ={
         companionID=55386,
         displayID=39109,
         family=9,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="Fishing",
         flavor="Despite its diminutive size, it is impossible to miss a sea pony cutting through the water.",
         icon="433440",
@@ -6614,10 +5938,7 @@ PETS.all ={
         companionID=55571,
         displayID=39163,
         family=6,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         intermittent=true,
         source="World Event",
         eventName="Lunar Festival",
@@ -6643,10 +5964,7 @@ PETS.all ={
         companionID=55574,
         displayID=39333,
         family=6,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         intermittent=true,
         source="World Event",
         eventName="Lunar Festival",
@@ -6672,10 +5990,7 @@ PETS.all ={
         companionID=56031,
         displayID=39137,
         family=8,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="Vendor",
         flavor="This snuggly kitten loves to frolic, but sometimes it seems to be chasing things that aren't really there.",
         icon="132242",
@@ -6698,10 +6013,7 @@ PETS.all ={
         companionID=56266,
         displayID=39380,
         family=4,
-        isWild=false,
-        isTradeable=false,
         isUnique=true,
-        isPassive=false,
         unobtainable=true,
         source="Promotion",
         promotion="Diablo 3 Collector's Edition",
@@ -6719,10 +6031,7 @@ PETS.all ={
         companionID=58163,
         displayID=40019,
         family=2,
-        isWild=false,
-        isTradeable=false,
         isUnique=true,
-        isPassive=false,
         source="In-Game Shop",
         flavor="The Soul of the Aspects is said to be possessed of mercurial moods ranging from stoic and deliberate to unpredictable and erratic, to loving and deeply pensive.",
         icon="574806",
@@ -6738,10 +6047,7 @@ PETS.all ={
         companionID=59020,
         displayID=40538,
         family=4,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="Trading Card Game",
         tcg="Timewalkers: War of the Ancients",
         flavor="Always watching. Always judging.",
@@ -6760,9 +6066,6 @@ PETS.all ={
         displayID=42906,
         family=5,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="Offspring of the black sheep, the black lamb is only found in the forests of Elwynn.",
         icon="136071",
@@ -6777,9 +6080,6 @@ PETS.all ={
         displayID=328,
         family=5,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="When you have two rabbits, you'll often soon have three.",
         icon="254857",
@@ -6798,9 +6098,6 @@ PETS.all ={
         displayID=134,
         family=5,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="Most people do not know the difference between a squirrel and a chipmunk. Most don't care.",
         icon="134322",
@@ -6834,9 +6131,6 @@ PETS.all ={
         displayID=40713,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="It's hard to know what's more dangerous: the teeth or the tail.",
         icon="645526",
@@ -6854,10 +6148,7 @@ PETS.all ={
         companionID=61086,
         displayID=41833,
         family=5,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="Drop",
         flavor="Despite the name you should absolutely never, ever pet it.",
         icon="644001",
@@ -6902,10 +6193,7 @@ PETS.all ={
         companionID=61087,
         displayID=74529,
         family=2,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="Drop",
         flavor="This unique species of faerie dragon is not usually found on Azeroth.",
         icon="1675028",
@@ -6994,9 +6282,6 @@ PETS.all ={
         displayID=43798,
         family=9,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="It seems like a trick to the eyes, but the eternal strider can walk across water, its small feet never breaking the surface.",
         icon="643423",
@@ -7011,9 +6296,6 @@ PETS.all ={
         displayID=4959,
         family=5,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="It seems that mice are completely incapable of resisting cheese even in the face of imprisonment, injury, or death.",
         icon="647701",
@@ -7038,9 +6320,6 @@ PETS.all ={
         displayID=1072,
         family=5,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="Distinct from their tree dwelling cousins, these ground squirrels make their homes on the plains of Azeroth and beyond.",
         icon="656176",
@@ -7063,9 +6342,6 @@ PETS.all ={
         displayID=1206,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="Due to recent accidents, the goblin cartels have prohibited anyone from bringing snakes on a zeppelin.",
         icon="132211",
@@ -7092,9 +6368,6 @@ PETS.all ={
         displayID=45880,
         family=9,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="These arthropods line many Azerothian shores and seek to fulfill their one true desire: to pinch.",
         icon="2027878",
@@ -7117,9 +6390,6 @@ PETS.all ={
         displayID=41886,
         family=10,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="The tiny harvester collects weeds and small grains that the larger reapers may have missed.",
         icon="134065",
@@ -7134,9 +6404,6 @@ PETS.all ={
         displayID=328,
         family=5,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="Mountain cottontails can leap up a steep incline with speed you would not believe.",
         icon="254857",
@@ -7154,9 +6421,6 @@ PETS.all ={
         displayID=1141,
         family=5,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="The rats in Redridge grow fat from feasting on the bounty of the village larders.",
         icon="134324",
@@ -7171,9 +6435,6 @@ PETS.all ={
         displayID=2177,
         family=5,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="They were here long before us and will be here long after we are gone.",
         icon="294474",
@@ -7199,9 +6460,6 @@ PETS.all ={
         displayID=41887,
         family=3,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="Always wear a helm in the Redridge Mountains. Buzzards view humanoid hair as excellent nesting material.",
         icon="132200",
@@ -7216,9 +6474,6 @@ PETS.all ={
         displayID=2536,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="Native to Duskwood, these eight-legged critters are often used as ingredients in alchemy potions.",
         icon="132196",
@@ -7237,9 +6492,6 @@ PETS.all ={
         displayID=16633,
         family=5,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="Skunks are known as solitary creatures for reasons which are hopefully obvious.",
         icon="463569",
@@ -7263,9 +6515,6 @@ PETS.all ={
         displayID=1141,
         family=5,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="While many people believe black cats to be bad luck, black rats are held in higher esteem.",
         icon="134324",
@@ -7288,9 +6537,6 @@ PETS.all ={
         displayID=3126,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="Years ago, humans introduced these reptiles into Duskwood to cull the local rat population.",
         icon="132211",
@@ -7305,9 +6551,6 @@ PETS.all ={
         displayID=35424,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         intermittent=true,
         source="Pet Battle",
         flavor="Widow spiderlings have plenty of time to explore Duskwood once they take care of their pesky family commitments.",
@@ -7327,9 +6570,6 @@ PETS.all ={
         displayID=32789,
         family=9,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="The low tide reveals the colonies of strand crabs and the sound of their clicking dance as they feed upon small creatures hidden in the sand.",
         icon="2027868",
@@ -7349,9 +6589,6 @@ PETS.all ={
         displayID=36944,
         family=3,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="Prefers to dwell in wet, muddy areas and feed on Sorrowmoss nectar.",
         icon="236193",
@@ -7369,9 +6606,6 @@ PETS.all ={
         displayID=6189,
         family=3,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="Parrots can mimic speech, but have difficulty with meaningful conversation.",
         icon="136036",
@@ -7389,9 +6623,6 @@ PETS.all ={
         displayID=4959,
         family=5,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="Thought by many to be nothing more than the subject of children's nursery rhymes, the long-tailed mole is very much real.",
         icon="134324",
@@ -7411,9 +6642,6 @@ PETS.all ={
         displayID=36578,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="Stranglethorn's Gurubashi trolls often capture these powerful beasts to keep as pets... or to cook as meals.",
         icon="132211",
@@ -7433,9 +6661,6 @@ PETS.all ={
         displayID=7511,
         family=5,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="A hardy insect that can dwell in just about any climate, the beetle is known to thrive on battlefields after the fighting has ended.",
         icon="237144",
@@ -7466,9 +6691,6 @@ PETS.all ={
         displayID=44816,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="This vicious species weaves elaborate webs throughout the dense jungles of Stranglethorn Vale.",
         icon="132196",
@@ -7489,9 +6711,6 @@ PETS.all ={
         displayID=36583,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="If a female lizard does not lay her clutch in a well camouflaged area, her eggs will likely be devoured by Lashtail Raptors.",
         icon="463491",
@@ -7509,9 +6728,6 @@ PETS.all ={
         displayID=42509,
         family=3,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="Parrots can't get enough of the fresh fish the Bloodscalp trolls eat. They're less interested in dry flatbreads.",
         icon="136036",
@@ -7526,9 +6742,6 @@ PETS.all ={
         displayID=1141,
         family=5,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="Just like the rough and tumble sailors who live dockside, the wharf rats are feral, violent creatures.",
         icon="134324",
@@ -7547,9 +6760,6 @@ PETS.all ={
         displayID=21362,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="Young apes quickly learn to hang from branches with their feet, leaving both hands free to fling objects at interlopers.",
         icon="651242",
@@ -7567,9 +6777,6 @@ PETS.all ={
         displayID=44816,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="The most common of the arachnid family, these critters spin their webs in nearly every corner of Azeroth.",
         icon="132196",
@@ -7594,9 +6801,6 @@ PETS.all ={
         displayID=15469,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="Venom capable of killing creatures up to 100 times its own body weight.",
         icon="132195",
@@ -7627,9 +6831,6 @@ PETS.all ={
         displayID=8971,
         family=5,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="Drawn to heat and the smell of smoke, the fire beetle's diet consists of ash.",
         icon="237144",
@@ -7650,9 +6851,6 @@ PETS.all ={
         displayID=41960,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="Despite its snapping claws and venom-dripping tail, it is the bite of the diminutive scorpling that is the greatest threat.",
         icon="132195",
@@ -7670,9 +6868,6 @@ PETS.all ={
         displayID=1141,
         family=5,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="The intrepid archaeologist Harrison Jones has a well documented fear of rats.",
         icon="134324",
@@ -7706,9 +6901,6 @@ PETS.all ={
         displayID=1986,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="Brought to Orgrimmar aboard merchant ships, these short-lived reptiles are considered pests by the city's residents.",
         icon="132211",
@@ -7729,9 +6921,6 @@ PETS.all ={
         displayID=6297,
         family=9,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="This is a small frog.",
         icon="237579",
@@ -7760,9 +6949,6 @@ PETS.all ={
         displayID=901,
         family=9,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="The song of late summer nights is the song of toads.",
         icon="237579",
@@ -7790,9 +6976,6 @@ PETS.all ={
         displayID=36671,
         family=3,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="Prefers to dwell in humid, tropical areas and feed on Kingsblood nectar.",
         icon="236193",
@@ -7810,9 +6993,6 @@ PETS.all ={
         displayID=1986,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="When hunting or evading predators, this snake can travel on the surface of water for short distances.",
         icon="132211",
@@ -7830,9 +7010,6 @@ PETS.all ={
         displayID=28507,
         family=7,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="The thick exoskeleton of this adaptable arthropod allows it to thrive in harsh environments.",
         icon="2027886",
@@ -7850,9 +7027,6 @@ PETS.all ={
         displayID=2177,
         family=5,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="A nuisance to most, roaches' incredible survivability sets them apart from other species.",
         icon="294474",
@@ -7877,9 +7051,6 @@ PETS.all ={
         displayID=4268,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="This ill-tempered snake species makes its home around the fiery molten pits of the Burning Steppes.",
         icon="132211",
@@ -7898,9 +7069,6 @@ PETS.all ={
         displayID=42365,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="The rock-hard carapaces of these spiders allow them to survive in the Searing Gorge's blistering heat.",
         icon="132196",
@@ -7918,9 +7086,6 @@ PETS.all ={
         displayID=42051,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="These blisteringly hot spiders camouflage themselves by blending in with oozing magma.",
         icon="132196",
@@ -7938,9 +7103,6 @@ PETS.all ={
         displayID=41981,
         family=5,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="Beetles in the Burning Steppes roll magma into tiny balls and eat them once they cool off.",
         icon="237144",
@@ -7958,9 +7120,6 @@ PETS.all ={
         displayID=15467,
         family=5,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="Tiny, autonomous machines created by the Titans to clean and maintain their mighty edifices.",
         icon="237144",
@@ -7979,9 +7138,6 @@ PETS.all ={
         displayID=35804,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="Wildhammer dwarves train young gryphons by sending them out to hunt rattlesnakes in the Twilight Highlands.",
         icon="132211",
@@ -8000,9 +7156,6 @@ PETS.all ={
         displayID=15469,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="Less venomous but more aggressive than other breeds of scorpion.",
         icon="132195",
@@ -8021,9 +7174,6 @@ PETS.all ={
         displayID=36585,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="The coloration of the spiky lizard allows it to blend in seamlessly with the desert sands of Silithus.",
         icon="463491",
@@ -8048,9 +7198,6 @@ PETS.all ={
         displayID=42068,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="These rams hone their fighting skills by head-butting twigs and saplings near Loch Modan.",
         icon="132248",
@@ -8068,9 +7215,6 @@ PETS.all ={
         displayID=2954,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="This snake is often seen sunning on the exposed rocks high in the Badlands.",
         icon="136040",
@@ -8088,9 +7232,6 @@ PETS.all ={
         displayID=45917,
         family=4,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         intermittent=true,
         source="Pet Battle",
         flavor="These creatures are silent, save for the occasional sigh of otherworldly despair.",
@@ -8109,9 +7250,6 @@ PETS.all ={
         displayID=42203,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="The thick snow near Dun Morogh acts as camouflage for snow cubs learning to hunt.",
         icon="132252",
@@ -8129,9 +7267,6 @@ PETS.all ={
         displayID=36342,
         family=5,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="The alpine hare can burrow into the permafrost and hibernate for weeks or even months.",
         icon="254857",
@@ -8150,9 +7285,6 @@ PETS.all ={
         displayID=2177,
         family=5,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="Most creatures cannot withstand a fraction of the harsh conditions that roaches can thrive in.",
         icon="294474",
@@ -8171,9 +7303,6 @@ PETS.all ={
         displayID=328,
         family=5,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="Despite their idyllic surroundings, grasslands cottontails hop at surprising speed when evading their pursuers.",
         icon="254857",
@@ -8198,9 +7327,6 @@ PETS.all ={
         displayID=45936,
         family=7,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="Twisters delight in sneaking up on unsuspecting creatures and surprising them with gusts up their nostrils.",
         icon="236154",
@@ -8226,9 +7352,6 @@ PETS.all ={
         displayID=42218,
         family=6,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="Jade Oozelings glow in the dark, making them a welcome sight to workers in pitch-black mineshafts.",
         icon="134437",
@@ -8247,9 +7370,6 @@ PETS.all ={
         displayID=654,
         family=5,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="Pay attention to deer crossings. Even a fawn will total a goblin trike.",
         icon="656350",
@@ -8269,9 +7389,6 @@ PETS.all ={
         displayID=1560,
         family=5,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="A carrot, a box, a stick, and some string. Wait a few hours and you'll have a hare.",
         icon="254857",
@@ -8292,9 +7409,6 @@ PETS.all ={
         displayID=45899,
         family=5,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="Distinct from their Azerothian relatives, these critters of Outland make their home in Blade's Edge Mountains.",
         icon="2126349",
@@ -8315,9 +7429,6 @@ PETS.all ={
         displayID=9904,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="The preferred habitat of this creature is woodland areas where it can safely complete its metamorphosis.",
         icon="651538",
@@ -8339,9 +7450,6 @@ PETS.all ={
         displayID=36620,
         family=5,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="According to the tales of the night elves, the first red-tailed chipmunk was colored so after the theft and consumption of a sacred apple.",
         icon="134322",
@@ -8362,9 +7470,6 @@ PETS.all ={
         displayID=42229,
         family=4,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="Infested cubs still listen for the telltale buzzing of bees even though they can no longer taste honey.",
         icon="648803",
@@ -8382,9 +7487,6 @@ PETS.all ={
         displayID=1141,
         family=5,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="Even the rats of Lordaeron fell to the apothecaries' plague, chewing upon the tainted flesh of the dead.",
         icon="134324",
@@ -8410,9 +7512,6 @@ PETS.all ={
         displayID=42334,
         family=4,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="Undead squirrels have acquired a taste for the strange berries and mushrooms that now grow in Silverpine Forest.",
         icon="646782",
@@ -8427,9 +7526,6 @@ PETS.all ={
         displayID=42265,
         family=4,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="Curiously, this hawk uses its razor-sharp talons to peel the bark off trees as it searches for bugs, even though it has no need for sustenance.",
         icon="648726",
@@ -8448,9 +7544,6 @@ PETS.all ={
         displayID=9904,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="It can swallow three times its own body weight in blood.",
         icon="236197",
@@ -8468,9 +7561,6 @@ PETS.all ={
         displayID=45952,
         family=4,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="These small spirits find their undead neighbors to be poor company, so they typically wander Tirisfal Glades alone.",
         icon="135974",
@@ -8495,9 +7585,6 @@ PETS.all ={
         displayID=5585,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="After centuries of domestication, these furry critters inhabit nearly every human nation in the Eastern Kingdoms.",
         icon="132167",
@@ -8519,9 +7606,6 @@ PETS.all ={
         displayID=42335,
         family=7,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="Small elemental saplings grow into treants, fierce defenders of forests and groves.",
         icon="132129",
@@ -8536,9 +7620,6 @@ PETS.all ={
         displayID=9906,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="This new arrival to Azeroth was spawned a short time ago. It seeks to thrive while awaiting its next phase of evolution.",
         icon="651538",
@@ -8556,9 +7637,6 @@ PETS.all ={
         displayID=32791,
         family=4,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="The souls of slain crabs seek vengeance against the murlocs who ate them.",
         icon="133275",
@@ -8573,9 +7651,6 @@ PETS.all ={
         displayID=42343,
         family=3,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="You can easily locate moths if you wear expensive garments near Ammen Vale. They can't resist the delicious taste of high fashion.",
         icon="236193",
@@ -8597,9 +7672,6 @@ PETS.all ={
         displayID=42344,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="These voracious carnivores first arrived on Azeroth aboard the draenei's dimensional fortress, the Exodar.",
         icon="132194",
@@ -8614,9 +7686,6 @@ PETS.all ={
         displayID=36583,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="The children of Orgrimmar frequently capture these lizards as pets.  The adults of Orgrimmar frequently step on them.",
         icon="463491",
@@ -8637,9 +7706,6 @@ PETS.all ={
         displayID=7511,
         family=5,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="A desert dwelling forager attracted to areas rich with dung.",
         icon="133570",
@@ -8668,9 +7734,6 @@ PETS.all ={
         displayID=46940,
         family=5,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="These beetles often make their homes in quarries abandoned by the Horde war machine in Durotar.",
         icon="133570",
@@ -8685,9 +7748,6 @@ PETS.all ={
         displayID=7511,
         family=5,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="An enigmatic species, said to feed off the chaotic energies of the Old Gods.",
         icon="133570",
@@ -8709,9 +7769,6 @@ PETS.all ={
         displayID=38672,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="Twisted by the Twilight Hammer's dark magic, these sinister critters are known to feed on their own young.",
         icon="132196",
@@ -8733,9 +7790,6 @@ PETS.all ={
         displayID=7920,
         family=10,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="Originally built by an irate goblin to annoy neighbors with an early morning wake-up call.",
         icon="656513",
@@ -8757,9 +7811,6 @@ PETS.all ={
         displayID=26532,
         family=10,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="Considered by most to be a significant improvement to the 4000 series, there were nonetheless serious concerns about the amount of heat they produced.",
         icon="134322",
@@ -8781,9 +7832,6 @@ PETS.all ={
         displayID=27881,
         family=9,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="Turtles are feared by the naga, who consider them bad luck and give them a wide berth on the shores of Azshara.",
         icon="1738680",
@@ -8798,9 +7846,6 @@ PETS.all ={
         displayID=42362,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="These playful feline cubs practice their hunting skills by stalking each other through the Barrens.",
         icon="132242",
@@ -8818,9 +7863,6 @@ PETS.all ={
         displayID=45896,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="The barbaric centaur over-hunted giraffes for decades, but it was the tauren who saved this species from extinction.",
         icon="132368",
@@ -8838,9 +7880,6 @@ PETS.all ={
         displayID=45958,
         family=5,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="Young gazelles quickly learn to flee when they hear the war cries of tauren hunters in Mulgore.  They don't hear the good hunters, unfortunately.",
         icon="132368",
@@ -8858,9 +7897,6 @@ PETS.all ={
         displayID=36944,
         family=3,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="Prefers to dwell in cool, forested areas and feed on Mageroyal nectar.",
         icon="236193",
@@ -8883,9 +7919,6 @@ PETS.all ={
         displayID=328,
         family=5,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="Their proximity to the magic of the elves has caused some of them unnatural long life. And in some elfin rabbits...stranger things.",
         icon="254857",
@@ -8909,9 +7942,6 @@ PETS.all ={
         displayID=36648,
         family=7,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="Prized by gem crafters, the undamaged carapace of a topaz hatchling can be used to create stunning inlays for rings and bracelets.",
         icon="134395",
@@ -8932,9 +7962,6 @@ PETS.all ={
         displayID=4268,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="Long ago, Mount Hyjal's druids tempered this species to live in peace alongside the region's other creatures.",
         icon="132211",
@@ -8961,9 +7988,6 @@ PETS.all ={
         displayID=36583,
         family=9,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="There are many scholars who question whether it is a toad or not.",
         icon="237579",
@@ -8984,9 +8008,6 @@ PETS.all ={
         displayID=45906,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="This cunning species tunnels beneath Uldum and erupts from the ground to ensnare its prey.",
         icon="132196",
@@ -9014,9 +8035,6 @@ PETS.all ={
         displayID=42381,
         family=5,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         intermittent=true,
         source="Pet Battle",
         flavor="When these sleepy critters aren't snoozing, they use their massive claws to dig for tasty insect snacks.",
@@ -9036,9 +8054,6 @@ PETS.all ={
         displayID=36620,
         family=5,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="Many an explorer has been entranced by the adorable nature of the alpine chipmunk, failing to notice its small teeth on frostbitten digits.",
         icon="134322",
@@ -9061,9 +8076,6 @@ PETS.all ={
         displayID=36580,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="Brave assassins sometimes capture these critters to use their highly toxic venom to poison weapons.",
         icon="132211",
@@ -9081,9 +8093,6 @@ PETS.all ={
         displayID=42745,
         family=2,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="These vicious fire-breathing whelps escaped Onyxia's lair and fled into the surrounding region. Handle with extreme caution.",
         icon="134154",
@@ -9098,9 +8107,6 @@ PETS.all ={
         displayID=5586,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="Originally bred by the Sandfury trolls as pets, these feral and savage felines prowl the deserts of Tanaris.",
         icon="132167",
@@ -9118,9 +8124,6 @@ PETS.all ={
         displayID=7511,
         family=5,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="A desert-dwelling insect which defends its eggs by spraying a foul, ogrelike scent.",
         icon="237144",
@@ -9138,9 +8141,6 @@ PETS.all ={
         displayID=42407,
         family=5,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="Hunts for food just below the water's surface on the coast of Darkshore.",
         icon="442735",
@@ -9166,9 +8166,6 @@ PETS.all ={
         displayID=42416,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         intermittent=true,
         source="Pet Battle",
         flavor="These hatchlings entertain themselves by clacking their mandibles together in increasingly complex rhythms.",
@@ -9188,9 +8185,6 @@ PETS.all ={
         displayID=6297,
         family=9,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="For every frog, a prince and princess in waiting.",
         icon="237579",
@@ -9208,9 +8202,6 @@ PETS.all ={
         displayID=42409,
         family=5,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="Don't let their lack of a face fool you--these slimy critters are angry and just itching for a fight.",
         icon="442735",
@@ -9231,9 +8222,6 @@ PETS.all ={
         displayID=2177,
         family=5,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="Even cockroaches were not strong enough to withstand the foul seepage of demonic corruption.",
         icon="294474",
@@ -9255,9 +8243,6 @@ PETS.all ={
         displayID=36944,
         family=3,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="Prefers to dwell in corrupted woodlands and feed on Purple Lotus nectar.",
         icon="236193",
@@ -9275,9 +8260,6 @@ PETS.all ={
         displayID=1141,
         family=5,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="There are some things too dirty even for rats.",
         icon="134324",
@@ -9292,9 +8274,6 @@ PETS.all ={
         displayID=46003,
         family=6,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="These ill-tempered constructs of flame and rage sometimes rise from the remains of larger infernals who fall in battle.",
         icon="136219",
@@ -9312,9 +8291,6 @@ PETS.all ={
         displayID=6297,
         family=9,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="The dwarven explorer who first discovered the spotted bell frog could not decide between naming it after the unique spot pattern or the sound of the frog's mating ritual. She chose both.",
         icon="237579",
@@ -9333,9 +8309,6 @@ PETS.all ={
         displayID=36944,
         family=3,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="Prefers to dwell in the shadow of Nordrassil and feed on Stormvine nectar.",
         icon="236193",
@@ -9354,9 +8327,6 @@ PETS.all ={
         displayID=45913,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="Diemetradons abandon their hatchlings in Un'Goro Crater to fend for themselves. Only the strongest survive.",
         icon="134318",
@@ -9374,9 +8344,6 @@ PETS.all ={
         displayID=42415,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="Although most reptiles enjoy basking in sunlight, these scaly beasts love bathing in the glow of Azeroth's twin moons.",
         icon="463491",
@@ -9394,9 +8361,6 @@ PETS.all ={
         displayID=45908,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="These eight-legged critters have lurked in the shadowy cliffs of the Stonetalon Mountains for millennia.",
         icon="132196",
@@ -9411,9 +8375,6 @@ PETS.all ={
         displayID=6300,
         family=3,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="Many owls nest high in the stone structures of Darnassus, hunting any pests that enter the night elves' city.",
         icon="132192",
@@ -9438,9 +8399,6 @@ PETS.all ={
         displayID=42412,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="The fur of the darkshore bears owes to the almost perpetual gloom they live in, and their vision in the darkness is uncanny.",
         icon="446127",
@@ -9465,9 +8423,6 @@ PETS.all ={
         displayID=42202,
         family=7,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="These small elementals cling to the backs of larger mire beasts, picking off tasty bugs and mites.",
         icon="135049",
@@ -9485,9 +8440,6 @@ PETS.all ={
         displayID=35804,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="Native to Azeroth's desert regions, these resilient reptiles can survive for weeks without water.",
         icon="132211",
@@ -9516,9 +8468,6 @@ PETS.all ={
         displayID=35113,
         family=5,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="Spawn of the nefarious Shrieker Scarabs of Ahn'Qiraj, the hatchlings are much more docile (and quiet) than their parents.",
         icon="133570",
@@ -9545,9 +8494,6 @@ PETS.all ={
         displayID=42523,
         family=1,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         intermittent=true,
         source="Pet Battle",
         flavor="The squeaks used by these tiny insectoids may sound cute, but they're actually screaming for your death.",
@@ -9575,9 +8521,6 @@ PETS.all ={
         displayID=42553,
         family=1,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="A brash fel orc once tried to enslave these critters as his personal soldiers. Pieces of him are still scattered across Outland.",
         icon="366938",
@@ -9592,9 +8535,6 @@ PETS.all ={
         displayID=42554,
         family=1,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="These pudgy little beings often get themselves into trouble while hunting down their favorite snack: glow caps.",
         icon="134532",
@@ -9609,9 +8549,6 @@ PETS.all ={
         displayID=45998,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="After hatching, these twisted reptiles devour the weaker members of their clutches as an act of dominance.",
         icon="132201",
@@ -9626,9 +8563,6 @@ PETS.all ={
         displayID=42575,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="For ogres, comparing a female's hair to a clefthoof's shaggy coat is a term of great endearment.",
         icon="134060",
@@ -9646,9 +8580,6 @@ PETS.all ={
         displayID=45923,
         family=7,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="Born from demonic magic, these petulant little entities corrupt everything they touch with foul energies.",
         icon="135794",
@@ -9669,9 +8600,6 @@ PETS.all ={
         displayID=45988,
         family=3,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="Adult nether rays are relatively docile, but their younglings are short-tempered and highly energetic beasts.",
         icon="132191",
@@ -9686,9 +8614,6 @@ PETS.all ={
         displayID=45885,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="Howling Fjord teems with the ever shifting cycle of life. When a creature dies, its body is quickly consumed by maggots, which in turn pass those nutrients on to a number of other creatures.",
         icon="134895",
@@ -9714,9 +8639,6 @@ PETS.all ={
         displayID=45968,
         family=3,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="A key food source during the Feast of Winter Veil.",
         icon="250626",
@@ -9734,9 +8656,6 @@ PETS.all ={
         displayID=45953,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="This grumpy species of basilisk roams the Blade's Edge Mountains, avoiding contact with other critters whenever possible.",
         icon="463491",
@@ -9751,9 +8670,6 @@ PETS.all ={
         displayID=42617,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="There's an old vrykul saying that goes, 'Let sleeping worgs lie, unless you don't want your face anymore.'",
         icon="132203",
@@ -9768,9 +8684,6 @@ PETS.all ={
         displayID=42781,
         family=6,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="These living blobs of ooze lack even the most rudimentary form of intelligence, but that doesn't mean they can't be your friend.",
         icon="134438",
@@ -9785,9 +8698,6 @@ PETS.all ={
         displayID=42708,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="The fierce wolvar hunt these ill-tempered brutes for their horns, which are then carved into talismans and other trinkets.",
         icon="236194",
@@ -9805,9 +8715,6 @@ PETS.all ={
         displayID=42709,
         family=3,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="The taunka collect the feathers of these noble birds of prey to use in crude fortunetelling ceremonies.",
         icon="132172",
@@ -9822,9 +8729,6 @@ PETS.all ={
         displayID=30159,
         family=7,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="The trolls of Zul'Drak inadvertently created these little beings while summoning water elementals to fight the Scourge.",
         icon="135862",
@@ -9839,9 +8743,6 @@ PETS.all ={
         displayID=25390,
         family=9,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="Tundra penguins often gather in large groups on the ice for protection against aquatic threats. Unfortunately this makes them easy prey for humanoid hunters seeking meat, skins and other achievements.",
         icon="655866",
@@ -9862,9 +8763,6 @@ PETS.all ={
         displayID=42735,
         family=3,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="These skulking little creatures hatch in nests built around the ancient dragon bones of central Northrend.",
         icon="132200",
@@ -9879,9 +8777,6 @@ PETS.all ={
         displayID=42737,
         family=4,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="Kel'Thuzad once nursed a plague-infected whelp to adulthood, feeding it only the finest liquefied remains.",
         icon="134154",
@@ -9899,9 +8794,6 @@ PETS.all ={
         displayID=4959,
         family=5,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="Grotto voles are often confused with mice. Never twice.",
         icon="134324",
@@ -9927,9 +8819,6 @@ PETS.all ={
         displayID=1141,
         family=5,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="Where there is carrion, there will always be rats.",
         icon="134324",
@@ -9947,9 +8836,6 @@ PETS.all ={
         displayID=2177,
         family=5,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="The outer member of the roaches' eggs protect the larva from incineration. It is here in incubation that they gain the ability to resist the fire and heat of the volcanic climate.",
         icon="294474",
@@ -9969,9 +8855,6 @@ PETS.all ={
         displayID=6297,
         family=9,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="Flamboyantly colored and more exuberant than most frogs.",
         icon="237579",
@@ -9996,9 +8879,6 @@ PETS.all ={
         displayID=2177,
         family=5,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="When the locusts swarm, you can hear nothing but the sound of their wings.",
         icon="294474",
@@ -10023,9 +8903,6 @@ PETS.all ={
         displayID=36944,
         family=3,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="Prefers to dwell along desert streams, wells or watering holes and feed on Whiptail nectar.",
         icon="236193",
@@ -10051,9 +8928,6 @@ PETS.all ={
         displayID=15469,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="Loves to rest inside footwear of unsuspecting travelers during the night.",
         icon="132195",
@@ -10078,9 +8952,6 @@ PETS.all ={
         displayID=42771,
         family=5,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="Carrion feeders often found in large numbers within ancient unearthed tombs; they can survive long periods of time without feeding.",
         icon="134936",
@@ -10105,9 +8976,6 @@ PETS.all ={
         displayID=45820,
         family=6,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="During the Third War, thousands of these mystical beings annihilated the demon lord Archimonde.",
         icon="136116",
@@ -10122,9 +8990,6 @@ PETS.all ={
         displayID=30412,
         family=3,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="Too afraid to attempt flying until thrown from a great height.",
         icon="327735",
@@ -10144,9 +9009,6 @@ PETS.all ={
         displayID=45900,
         family=5,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="Distinct from their plain dwelling relatives, these critters make their homes amidst the war-torn Twilight Highlands.",
         icon="2126349",
@@ -10161,9 +9023,6 @@ PETS.all ={
         displayID=4959,
         family=5,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="The mice of the highlands, perhaps twisted by the Twilight's Hammer, are aggressive and fight for dominance between each other.",
         icon="647701",
@@ -10184,9 +9043,6 @@ PETS.all ={
         displayID=42783,
         family=6,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="Demonstrating that a little evil goes a long way, this fiendling uses its razor-sharp teeth and gaping maw to devour anything in its path.",
         icon="136199",
@@ -10204,9 +9060,6 @@ PETS.all ={
         displayID=1141,
         family=5,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="In the lean times when adrift at sea, the sight of a rat was a welcome one.",
         icon="134324",
@@ -10224,9 +9077,6 @@ PETS.all ={
         displayID=36605,
         family=7,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="Through experimentation, the mages of Dalaran have discovered that the powered remains of a crimson shale spider will greatly increase the conflagration of their fire spells.",
         icon="134396",
@@ -10241,9 +9091,6 @@ PETS.all ={
         displayID=45897,
         family=5,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="The cockroaches of Deepholm can burrow into stone itself to make their nests.",
         icon="294474",
@@ -10258,9 +9105,6 @@ PETS.all ={
         displayID=15467,
         family=5,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="A cousin to the Twilight Beetle, this insect has learned to feed on crystals which resonate with ancient energies.",
         icon="237144",
@@ -10278,9 +9122,6 @@ PETS.all ={
         displayID=42467,
         family=2,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="Much like other faerie dragons, these playful and mystical flyers are born with a natural defense against magic.",
         icon="236997",
@@ -10295,9 +9136,6 @@ PETS.all ={
         displayID=42757,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         intermittent=true,
         source="Pet Battle",
         flavor="During frigid nights in the Storm Peaks, these critters use their fluffy tails as a blanket to stay warm.",
@@ -10317,9 +9155,6 @@ PETS.all ={
         displayID=45879,
         family=7,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="Therazane wore these spunky crimson elementals as jewelry before the azure craze swept through Deepholm.",
         icon="134396",
@@ -10334,9 +9169,6 @@ PETS.all ={
         displayID=45995,
         family=3,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="The seagull is a coastal scavenger often found near the docks.",
         icon="464160",
@@ -10358,15 +9190,15 @@ PETS.all ={
         displayID=36544,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="The coral adder's venom is so deadly that one bite has been known to kill a full grown kodo beast.",
         icon="132211",
         locations={{mapID=371, coords={{63.6,82},{64.4,85.4},{64.4,86.2},{64.8,84.4},{65.2,85.4},{65.2,85.6},{65.4,82.4},{65.8,81},{66,82.4},{66,82.6},{66,85.4},{66.2,86.4},{66.2,86.6},{66.6,85},{66.6,86},}}},
         possbileBreeds={"B/B", "S/S", "P/S"},
         baseStats={7.5, 8, 8.5},
+        acquisition={
+            {"Also available as a secondary pet in the Timeless Isle."},
+        }
     }, 
     [564]={
         name="Emerald Turtle",
@@ -10375,9 +9207,6 @@ PETS.all ={
         displayID=27883,
         family=9,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="It is difficult to believe that Shen-zin Su, on whose shell rests all of the Wandering Isle, began life as a tiny emerald turtle.",
         icon="1738681",
@@ -10387,6 +9216,9 @@ PETS.all ={
         },
         possbileBreeds={"B/B", "H/H", "H/B"},
         baseStats={9.5, 7.5, 7},
+        acquisition={
+            {"Also available as a secondary pet."},
+        }
     }, 
     [565]={
         name="Jungle Darter",
@@ -10395,15 +9227,15 @@ PETS.all ={
         displayID=6297,
         family=9,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="In the jungle, every leaf could conceal a frog. Stop to check and it could be long gone.",
         icon="237579",
         locations={{mapID=371, coords={{43,90.6},{44.2,92},{44.6,90.4},{45.2,73.4},{45.2,73.6},{45.4,72},{45.6,72.2},{45.6,91.6},{45.8,91.4},{46,76},{46.2,67.8},{47,75},{47.2,68.4},{47.2,68.8},{47.2,76.6},{47.4,77.8},{47.6,77.4},{48.2,70.6},{48.2,78},{48.4,70.4},{48.8,70.2},{49.4,77.4},{49.4,77.6},{49.6,77.4},{49.6,77.6},{50.4,84.4},{50.4,84.6},{50.6,84.6},{50.8,71.8},{51,83.8},{51.8,67.4},{51.8,67.6},{52.4,69.4},{53,69.6},{53,84.6},{53.2,84.4},{53.4,67.4},{53.4,69.2},{53.6,67.4},{53.6,68.2},{53.6,68.6},{54.2,71},{54.6,82.6},{54.8,84.2},{55,72.4},{55.4,70.4},{55.4,71},{55.4,72.6},{55.4,86.2},{55.6,83.4},{55.6,86},{55.8,68.4},{55.8,70.2},{55.8,72.4},{55.8,84.6},{56,72.6},{56.2,84.4},{56.8,71.2},{56.8,71.8},{56.8,86.2},{57.8,71.8},}}},
         possbileBreeds={"B/B", "H/B"},
         baseStats={8.5, 7.5, 8},
+        acquisition={
+            {"Also available as a secondary pet."},
+        }
     }, 
     [566]={
         name="Mirror Strider",
@@ -10412,15 +9244,15 @@ PETS.all ={
         displayID=45852,
         family=9,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="When preparing to travel to distant locations, Pandaren will traditionally capture a mirror strider and safely relocate it to another body of water.",
         icon="643423",
         locations={{mapID=371, coords={{28.6,45.4},{29.8,44.8},{30.8,45.2},{31,46.4},{31.6,45.4},{31.8,46.4},{31.8,46.6},{32.6,45.4},{33.4,45.6},{33.4,47.4},{33.6,45.4},{33.6,45.6},{33.6,47.4},{39.4,54.4},{39.6,54.4},{40.4,54.8},{40.6,53.4},{42.4,54.4},{42.4,54.6},{55.8,78.8},{56,80.2},{56.4,80.6},{56.6,82.4},{56.6,82.6},{56.8,84.4},{56.8,84.6},{57,85.6},{57.6,86.2},{57.8,78.2},{58.6,78.2},{58.8,86.6},{59,86.2},{59.2,87.6},{59.4,79},{59.6,79},{60,86},{60,86.6},{60.6,87.6},{61.2,81.4},{61.2,81.6},{61.2,82.8},{61.4,80.4},{61.4,84.4},{61.4,84.6},{61.4,85.6},{61.6,84.2},{61.6,85.8},{62,86.6},{63,87.4},{63,87.6},}}},
         possbileBreeds={"B/B", "H/S", "H/B"},
         baseStats={7.5, 7.5, 9},
+        acquisition={
+            {"Also available as a secondary pet, including on the Timeless Isle."},
+        }
     }, 
     [567]={
         name="Temple Snake",
@@ -10429,9 +9261,6 @@ PETS.all ={
         displayID=2955,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="The Jade Forest's pandaren consider these reptiles distant relatives of the revered Jade Serpent, Yu'lon.",
         icon="132211",
@@ -10446,9 +9275,6 @@ PETS.all ={
         displayID=38380,
         family=5,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="Hides in shell to escape claws of nearby crabs.",
         icon="442735",
@@ -10460,6 +9286,9 @@ PETS.all ={
         },
         possbileBreeds={"B/B", "H/S"},
         baseStats={9.5, 8.5, 6},
+        acquisition={
+            {"Also available as a secondary pet."},
+        }
     }, 
     [569]={
         name="Garden Frog",
@@ -10468,9 +9297,6 @@ PETS.all ={
         displayID=5379,
         family=9,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="One of the stranger nuisances to horticulturalists, garden frogs can cause untold damage to gardens.",
         icon="237579",
@@ -10480,6 +9306,9 @@ PETS.all ={
         },
         possbileBreeds={"B/B", "H/B"},
         baseStats={8.5, 7.5, 8},
+        acquisition={
+            {"Also available as a secondary pet."},
+        }
     }, 
     [570]={
         name="Masked Tanuki",
@@ -10488,9 +9317,6 @@ PETS.all ={
         displayID=40093,
         family=5,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="There's a raging debate over whether tanukis are raccoons or dogs, but the distinction seems trivial when they're gnawing on your femur.",
         icon="646059",
@@ -10505,9 +9331,6 @@ PETS.all ={
         displayID=35802,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="The Jade Forest's mountain hozen fear these venomous reptiles and often hunt them out of pure spite.",
         icon="132211",
@@ -10522,15 +9345,15 @@ PETS.all ={
         displayID=45880,
         family=9,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="These tiny arthropods are Pandaria natives that call the area of the Windless Isle their home.",
         icon="2027886",
         locations={{mapID=371, coords={{66,27.8},{66.2,25.6},{66.4,25.4},{66.4,27},{66.6,25.4},{66.6,26.4},{66.6,26.8},{67.6,27.2},{67.8,26.4},{68,25},{68.2,32.4},{68.4,27.8},{68.4,28.6},{68.4,31},{68.6,25},{68.8,28},{68.8,28.6},{68.8,31.6},{69.2,25.6},{69.2,27},{69.2,30},{69.2,30.8},}}},
         possbileBreeds={"P/P", "H/H"},
         baseStats={8.5, 8, 7.5},
+        acquisition={
+            {"Also available as a secondary pet."},
+        }
     }, 
     [573]={
         name="Sandy Petrel",
@@ -10539,15 +9362,15 @@ PETS.all ={
         displayID=45994,
         family=3,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="The sandy petrel flies high above the Windless Isle, safe from landbound predators.",
         icon="464160",
         locations={{mapID=371, coords={{65.4,28.4},{65.6,29.4},{66.4,27},{66.4,28},{66.8,26.4},{66.8,26.6},{66.8,28},{67,25},{69.2,26.6},}}},
         possbileBreeds={"B/B", "S/S", "P/B", "S/B"},
         baseStats={9, 7, 8},
+        acquisition={
+            {"Also available as a secondary pet, also in the Timeless Isle."},
+        }
     }, 
     [626]={
         name="Bat",
@@ -10556,9 +9379,6 @@ PETS.all ={
         displayID=4732,
         family=3,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="This foreboding creature stalks the night skies of the Eastern Plaguelands, feeding on carrion.",
         icon="132182",
@@ -10568,6 +9388,9 @@ PETS.all ={
         },
         possbileBreeds={"P/P", "S/S", "H/P", "P/S", "P/B", "S/B"},
         baseStats={7.5, 8, 8.5},
+        acquisition={
+            {"Also available as a secondary pet in Mount Hyjal."},
+        }
     }, 
     [627]={
         name="Infected Squirrel",
@@ -10576,9 +9399,6 @@ PETS.all ={
         displayID=10090,
         family=4,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="More horrifying than its appearance is that the infected squirrels of the Plaguelands no longer hoard nuts, instead collecting rotten, decaying flesh.",
         icon="646782",
@@ -10589,6 +9409,9 @@ PETS.all ={
         },
         possbileBreeds={"H/P", "P/B"},
         baseStats={8.5, 8.5, 7},
+        acquisition={
+            {"Also available as a secondary pet."},
+        }
     }, 
     [628]={
         name="Infected Fawn",
@@ -10597,9 +9420,6 @@ PETS.all ={
         displayID=37686,
         family=4,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="Only the dimwitted or insane would mount an infected deer head on their wall. The good news is they'll fit right in with their new undead friends.",
         icon="132104",
@@ -10610,6 +9430,9 @@ PETS.all ={
         },
         possbileBreeds={"B/B", "P/B"},
         baseStats={8.5, 8, 7.5},
+        acquisition={
+            {"Also available as a secondary pet."},
+        }
     }, 
     [629]={
         name="Shore Crawler",
@@ -10617,19 +9440,25 @@ PETS.all ={
         companionID=63097,
         displayID=32790,
         family=9,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="Vendor",
         flavor="Only found on the shores of Kezan, this lovely sea creature can be a bit snarky.",
         icon="2027878",
-        currency="gold",
         note="The pet is only available if your character is a Goblin.  Creating a Class Trial character works. Choose a mage and you can port right to Orgrimmar.",
-        npcs={{name="Matty"}},
-        locations={{continent="Kalimdor", zone="Orgrimmar", mapID=1637, mapFloor=1, coords={{37.6,79},}}},
         possbileBreeds={"B/B", "P/P", "H/P"},
         baseStats={8.5, 8, 7.5},
+        pois={
+            {name="Vendor:", entries={
+                {id="", maps={
+                    {id="n63086:Matty", type="prof", mapID=85, coords={{37.6,79.0},}}
+                }}
+            }}
+        },
+        acquisition={
+            {"Only available to Goblin characters."},
+            {"One quick way to acquire it is to create a Class Trial for a goblin mage. Complete the quick training session and then teleport to Orgrimmar."},
+            {"The pet is taught via training rather than bought like a typical vendor."},
+        }
     }, 
     [630]={
         name="Gilnean Raven",
@@ -10637,17 +9466,10 @@ PETS.all ={
         companionID=63098,
         displayID=42872,
         family=3,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="Vendor",
         flavor="Quoth the raven: the last word you said. It gets old.",
         icon="132915",
-        currency="gold",
-        note="The pet is only available if your character is a GobWorgenlin.  Creating a Class Trial character works.",
-        npcs={{name="Will Larsons"}},
-        locations={{mapID=62, coords={{50.2,20.2},}}},
         possbileBreeds={"B/B", "S/S", "P/S", "P/B"},
         baseStats={8, 7, 9},
         pois={
@@ -10655,8 +9477,19 @@ PETS.all ={
                 {id="", maps={
                     {id="n141489:Zidormi", type="npc", mapID=62, coords={{48.0,25.6},}}
                 }}
+            }},
+            {name="Vendor:", entries={
+                {id="", maps={
+                    {id="n63083:Will Larsons", type="prof", mapID=62, coords={{50.2,20.0,}}},
+                    {id="n63596:Audrey Burnhep", type="prof", mapID=84, coords={{69.4,24.4},}}
+                }}
             }}
         },
+        acquisition={
+            {"Only available to Worgen characters."},
+            {"One quick way to acquire it is to create a Class Trial for a worgen mage. Complete the quick training session and then teleport to Stormwind."},
+            {"The pet is taught via training rather than bought like a typical vendor."},
+        }
     }, 
     [631]={
         name="Emerald Boa",
@@ -10665,9 +9498,6 @@ PETS.all ={
         displayID=36578,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="Hunted for its beautifully patterned skin, this majestic species thrives alongside Azeroth's lush rivers.",
         icon="132211",
@@ -10686,6 +9516,9 @@ PETS.all ={
                 }}
             }}
         },
+        acquisition={
+            {"Also available as a secondary pet."},
+        }
     }, 
     [632]={
         name="Ash Lizard",
@@ -10694,9 +9527,6 @@ PETS.all ={
         displayID=36583,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="The ash lizard gets its name from the way its shed skin looks, with an appearance like burnt cinders.",
         icon="463491",
@@ -10706,6 +9536,9 @@ PETS.all ={
         },
         possbileBreeds={"B/B", "P/B"},
         baseStats={7.5, 8, 8.5},
+        acquisition={
+            {"Also available as a secondary pet."},
+        }
     }, 
     [633]={
         name="Mountain Skunk",
@@ -10714,9 +9547,6 @@ PETS.all ={
         displayID=16633,
         family=5,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="The mountain skunk is most famous for its adventurous nature. No really, that is what it is famous for.",
         icon="463569",
@@ -10730,6 +9560,9 @@ PETS.all ={
         },
         possbileBreeds={"B/B", "H/P", "H/S", "H/B"},
         baseStats={8, 8, 8},
+        acquisition={
+            {"Also available as a secondary pet."},
+        }
     }, 
     [634]={
         name="Crystal Spider",
@@ -10738,15 +9571,15 @@ PETS.all ={
         displayID=27718,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="These strange critters glimmer like ice, allowing them to hide among Winterspring's snowy expanses.",
         icon="132196",
         locations={{mapID=83, coords={{48,54.8},{48,56.4},{48.2,56.6},{48.4,54.2},{48.6,54.2},{48.6,55.4},{49,56.4},{49.4,57.4},{49.4,57.6},{49.6,55.6},{49.6,57.8},{49.8,57},{50,54.4},{50,54.6},{50.6,54.6},{50.8,54.4},{51.2,53.4},{51.4,56.2},{51.8,53},{52,54},{52,55.4},{52.4,56.2},{52.6,54},{53.2,54.8},{57,80.6},{57,81.8},{57.2,82.8},{57.4,83.8},{58,83.8},{58.6,84.2},{59.4,85.2},{59.6,84.4},{59.6,85.2},{60.6,86},{61.6,87},{61.8,85.4},{62,86},{62.6,86.4},{63,86.8},}}},
         possbileBreeds={"B/B", "H/S"},
         baseStats={7, 8.5, 8.5},
+        acquisition={
+            {"Also available as a secondary pet."},
+        }
     }, 
     [635]={
         name="Adder",
@@ -10755,9 +9588,6 @@ PETS.all ={
         displayID=1986,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="Unlike other snakes that actively hunt, these crafty reptiles hide in thick foliage and ambush their prey.",
         icon="132211",
@@ -10773,6 +9603,9 @@ PETS.all ={
         },
         possbileBreeds={"B/B", "P/S", "P/B"},
         baseStats={7.5, 8, 8.5},
+        acquisition={
+            {"Also available as a secondary pet."},
+        }
     }, 
     [637]={
         name="Skittering Cavern Crawler",
@@ -10781,15 +9614,23 @@ PETS.all ={
         displayID=20923,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="These arachnids use their razor-sharp legs to carve tunnels in the solid rock of the Blade's Edge Mountains.",
         icon="132196",
         locations={{mapID=105, coords={{34.4,88.4},{34.4,88.6},{34.6,88.2},{34.8,86.6},{35,85.2},{36.2,84.8},{36.4,84.4},{36.6,84.4},{51,82.2},{51.2,91.4},{51.4,89.4},{51.4,89.8},{51.4,92.4},{51.6,89.8},{51.6,90.8},{51.8,84.4},{52,87.4},{52,88.8},{52.2,92.2},{52.4,85.4},{52.4,85.6},{52.4,88},{52.6,85.6},{52.6,87.8},{52.6,88.8},}}},
         possbileBreeds={"B/B", "S/S", "S/B"},
         baseStats={8, 8, 8},
+        pois={
+            {name="Points of interest:", entries={
+                {id="", maps={
+                    {display="Cave entrance", type="cave", mapID=105, coords={{51.6,75},}}
+                }}
+            }}
+        },
+        acquisition={
+            {"Also available as a secondary pet."},
+            {"Shares a spawn with critters, kill them to increase spawn chance."},
+        }
     }, 
     [638]={
         name="Nether Roach",
@@ -10798,15 +9639,15 @@ PETS.all ={
         displayID=2177,
         family=5,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="The nether roach has adapted to the cold vacuum of space and requires no air to survive. Inside it bears almost no resemblance to a common roach.",
         icon="294474",
         locations={{mapID=109, coords={{19.8,69},{20.8,75.2},{20.8,75.6},{23.2,35.8},{23.4,35.4},{23.6,72.4},{23.8,72.6},{24.2,78.2},{24.4,41.6},{24.4,44},{24.6,41.4},{24.6,41.6},{24.6,44},{24.6,78.4},{24.8,78.6},{26,65.8},{27,57.4},{27,57.6},{27.4,74.4},{27.4,74.6},{27.6,74.6},{28,44},{28.4,78.6},{28.8,79},{29.2,63.8},{29.4,56},{29.6,40.2},{29.6,40.6},{29.6,63.6},{29.8,56.4},{29.8,63.4},{31,68.4},{31,68.8},{31.4,51.4},{31.4,51.6},{31.6,51.4},{32.8,59.4},{32.8,75.6},{33.2,75.4},{35,64.8},{35.2,22.8},{35.2,35.4},{35.2,35.6},{35.2,39.4},{35.4,53.4},{35.4,77.2},{35.6,18.8},{35.6,35.2},{35.6,53.8},{35.8,77.2},{35.8,77.8},{36.4,26.6},{36.4,31.4},{36.6,26.4},{36.6,30.6},{36.8,42.6},{37,42.4},{37.2,61},{37.2,72},{38,60.8},{38.8,67.6},{39.4,22},{39.4,76.4},{39.4,76.6},{39.6,16},{39.6,77},{39.6,77.8},{40.2,29},{40.6,72.2},{42.4,75.2},{42.4,75.6},{42.6,70},{42.6,75.4},{42.6,75.6},{43.2,18.2},{43.4,17.4},{45.2,72.2},{47.4,60},{47.4,86.4},{47.4,86.6},{47.6,20.8},{47.6,86.4},{48.2,47.8},{48.8,16.2},{48.8,25.2},{49,78},{49.2,78.6},{50.2,59},{50.2,64.4},{50.4,65.2},{50.6,54.6},{51.2,17.4},{51.2,67.6},{51.4,17.6},{51.8,21.4},{51.8,21.6},{52,86.6},{52.2,86.4},{52.4,83},{52.6,83},{53.2,65},{53.6,42.8},{54.4,77.4},{54.4,78},{54.6,62.4},{54.6,62.6},{54.6,77.6},{55,32.6},{55.2,32.2},{55.4,24.4},{55.4,25},{55.4,83.8},{55.6,83.8},{56,20.4},{56,42.6},{56,45},{56.6,37.8},{56.8,78.4},{56.8,78.6},{57.2,48},{57.2,68.4},{57.2,68.6},{57.4,31.8},{57.4,62},{57.6,62.2},{57.8,82.2},{59,48.2},{59.8,41.6},{60.4,79.2},{60.6,61.4},{61,29.6},{61,32.4},{61,61.6},{61,78.8},{61.2,38.4},{61.2,38.6},{62,65},{62,65.8},{62.2,49.6},{62.6,58.4},{62.6,58.8},{62.8,35.8},{64,31.4},{64.4,43},{65.2,64.6},{65.2,68.2},{65.4,39.4},{65.4,39.8},{65.4,64.4},{65.8,49.4},{65.8,49.8},{67,35},{67,60.2},{67.2,31},{67.4,64.6},{67.6,45.4},{67.6,45.6},{67.6,64.4},{68.2,40.6},{69.8,45.2},}}},
         possbileBreeds={"S/S", "H/H", "H/P", "H/S"},
         baseStats={8.5, 7, 8.5},
+        acquisition={
+            {"Also available as a secondary pet."},
+        }
     }, 
     [639]={
         name="Borean Marmot",
@@ -10815,9 +9656,6 @@ PETS.all ={
         displayID=1072,
         family=5,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="Distinct from their cousins found in warmer climes, these hardy critters make their homes in the icy wastes of Northrend.",
         icon="2126349",
@@ -10832,15 +9670,19 @@ PETS.all ={
         displayID=328,
         family=5,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="With the extra large surface area of their legs, snowshoe hares are able to effortlessly hop along the snow while their pursuers get bogged down in the drifts.",
         icon="254857",
         locations={{mapID=25, coords={{40,29.8},{40.8,27},{41,27.6},{42.4,40.6},{42.6,40.8},{43,21.8},{46.4,35.2},{46.6,35.2},{46.8,20.4},{46.8,20.6},{47.6,21},{49.8,21},{50.8,23.2},{51.2,22.4},{52.2,23.2},{53.4,24.8},{53.6,25},}}},
         possbileBreeds={"B/B", "S/S", "H/P", "H/S", "S/B", "H/B"},
         baseStats={8, 7, 9},
+        acquisition={
+            {"This one has an odd spawn pattern."},
+            {"If you don't find one right away then head to Strahnbrad and kill the (likely) 3 rats running around."},
+            {"Now fly the loop of spawn points a couple of times looking for the hare."},
+            {"If none spawned then check back in Strahnbrad for more rats to kill to try again."},
+            {"Also available as a secondary pet in the old Dalaran crater area."},
+        }
     }, 
     [641]={
         name="Arctic Hare",
@@ -10849,9 +9691,6 @@ PETS.all ={
         displayID=328,
         family=5,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="The heart of an arctic hare beats twice as fast as a common hare.",
         icon="254857",
@@ -10872,15 +9711,16 @@ PETS.all ={
         displayID=22175,
         family=5,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="If not for being extremely accident prone, the fjord rat might take over the world.",
         icon="134324",
         locations={{mapID=117, coords={{30.4,44},{31.2,42},{44.2,35.8},{56.4,50.4},{56.4,50.6},{56.6,50.2},{56.6,53.2},{57,57},{57.2,54.4},{57.2,54.6},{57.2,56},{57.8,55.2},{58.2,51.8},{58.4,53},{58.6,51.2},{58.6,53},{58.6,54.8},{58.8,38.2},{58.8,55.8},{59,52.4},{59.2,50},{59.8,50},{67,26.8},{67.8,32.4},{68.2,29.6},{68.8,25.8},{70.8,28.2},{75.8,33.8},{77.2,31.4},{81.6,41.6},}}},
         possbileBreeds={"B/B", "S/S", "P/B", "S/B", "H/B"},
         baseStats={8, 7.5, 8.5},
+        acquisition={
+            {"Shares spawns with regular rats. Kill those to reroll spawns."},
+            {"Also available as a secondary pet."},
+        }
     }, 
     [645]={
         name="Highlands Turkey",
@@ -10889,9 +9729,6 @@ PETS.all ={
         displayID=45970,
         family=3,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="Capable of flying, unlike domesticated types.",
         icon="250626",
@@ -10901,6 +9738,9 @@ PETS.all ={
         },
         possbileBreeds={"B/B", "P/S", "H/S"},
         baseStats={8, 8, 8},
+        acquisition={
+            {"Also available as a secondary pet."},
+        }
     }, 
     [646]={
         name="Chicken",
@@ -10909,9 +9749,6 @@ PETS.all ={
         displayID=304,
         family=3,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="Tends to avoid crossing roads, regardless of motivations.",
         icon="250626",
@@ -10925,6 +9762,9 @@ PETS.all ={
         },
         possbileBreeds={"B/B", "S/S", "S/B", "H/B"},
         baseStats={8, 8, 8},
+        acquisition={
+            {"Also available as a secondary pet in Dustwallow Marsh."},
+        }
     }, 
     [647]={
         name="Grizzly Squirrel",
@@ -10933,9 +9773,6 @@ PETS.all ={
         displayID=134,
         family=5,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="In the deep forest, even the small creatures must have the ferocity to fend for themselves.",
         icon="134322",
@@ -10955,9 +9792,6 @@ PETS.all ={
         displayID=5379,
         family=9,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="This is a huge toad.",
         icon="237579",
@@ -10969,6 +9803,9 @@ PETS.all ={
         },
         possbileBreeds={"B/B", "H/H", "H/P", "H/B"},
         baseStats={9, 7.5, 7.5},
+        acquisition={
+            {"Also available as a secondary pet."},
+        }
     }, 
     [649]={
         name="Biletoad",
@@ -10977,9 +9814,6 @@ PETS.all ={
         displayID=1924,
         family=9,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="The rumors of the medicinal uses of the biletoad were believed to have been started by a particularly mischievous apothecary.",
         icon="237579",
@@ -10993,16 +9827,24 @@ PETS.all ={
         companionID=63365,
         displayID=44655,
         family=7,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="World Drop",
         flavor="And you thought turnips at the dinner table were bad.",
         icon="646148",
-        locations={{mapID=376, coords={{52.6,48},}}},
         possbileBreeds={"P/S"},
         baseStats={8.5, 8, 7.5},
+        pois={
+            {name="Quest chain to unlock farming:", entries={
+                {id="", maps={
+                    {id="n58721:Farmer Yoon", type="start", mapID=376, coords={{52.0,48.0},}}
+                }}
+            }}
+        },
+        acquisition={
+            {"Acquired through Mist of Pandaria farming. Complete a series of quests (not dailies) offered by %s to gain access to the farm system.", "n58721:Farmer Yoon"},
+            {"Do general farming until you loot an %s (can be from any plant).", "i85219"},
+            {"Plant the seed and you should receive a %s when you harvest.", "i85220"},
+        }
     }, 
     [652]={
         name="Tiny Goldfish",
@@ -11010,19 +9852,23 @@ PETS.all ={
         companionID=63559,
         displayID=47955,
         family=9,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="Vendor",
         flavor="This bubble is way worse than a tank.",
         icon="133922",
-        currency="gold",
-        reputation="The Anglers (honored)",
-        npcs={{name="Nat Pagle"}},
-        locations={{mapID=418, coords={{68.4,43.4},}}},
+        reputation={type="The Anglers", level="honored"},
         possbileBreeds={"S/B"},
         baseStats={8, 8, 8},
+        pois={
+            {name="Vendors:", entries={
+                {id="", maps={
+                    {id="n63721:Nat Pagle", type="vendor", currencies={"cgold:200"}, mapID=418, coords={{68.4,43.4},}}
+                }}
+            }}
+        },
+        acquisition={
+            {"Become Honored with The Anglers and purchase a %s.", "i85447"},
+        }
     }, 
     [665]={
         name="Sand Scarab",
@@ -11030,17 +9876,16 @@ PETS.all ={
         companionID=54745,
         displayID=39694,
         family=5,
-        isWild=false,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
         source="Trading Card Game",
+        tcg="Tomb of the Forgotten",
         flavor="Easily mistaken for a common beetle, the sting of a sand scarab will quickly clear up the misconception should you be unlucky enough to be stung by one.",
         icon="134931",
-        tcg="Tomb of the Forgotten",
-        locations={{mapID=210, coords={{42.6,71.6},}}},
         possbileBreeds={"S/B"},
         baseStats={7.5, 8.5, 8},
+        acquisition={
+            {"Available as from the Trading Card Game. May be purchasable on eBay."},
+        }
     }, 
     [666]={
         name="Micronax",
@@ -11048,16 +9893,16 @@ PETS.all ={
         companionID=63724,
         displayID=78587,
         family=10,
-        isWild=false,
-        isTradeable=false,
         isUnique=true,
-        isPassive=false,
         source="Achievement",
         flavor="Whenever his forces would experience setbacks in Azeroth, Kil'jaeden would pull out Micronax and terrorize the local cat-like creatures of Argus to vent his frustrations.",
         icon="1450455",
-        achievement={name="Glory of the Tomb Raider", ID=11763},
+        achievement={id="a11763:Glory of the Tomb Raider"},
         possbileBreeds={"H/P"},
         baseStats={8.5, 9, 6.5},
+        acquisition={
+            {"You cannot solo this achievement due to boss mechanics."},
+        }
     }, 
     [671]={
         name="Lucky Quilen Cub",
@@ -11065,17 +9910,17 @@ PETS.all ={
         companionID=63832,
         displayID=43255,
         family=5,
-        isWild=false,
-        isTradeable=false,
         isUnique=true,
-        isPassive=false,
+        unobtainable=true,
         source="Promotion",
+        promotion="Mists of Pandaria Collector's Edition Pet",
         flavor="Offspring of the Imperial Quilen.",
         icon="656128",
-        promotion="Mists of Pandaria Collector's Edition Pet",
-        unobtainable=true,
         possbileBreeds={"P/S"},
         baseStats={8, 8, 8},
+        acquisition={
+            {"Awarded as part of the Collector's Edition of Mists of Pandaria. You may be able to buy a copy on eBay."},
+        }
     }, 
     [675]={
         name="Stormwind Rat",
@@ -11084,9 +9929,6 @@ PETS.all ={
         displayID=1141,
         family=5,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="Unnoticed but to cats and ratcatchers, when Deathwing descended upon Stormwind all the rats beat a hasty retreat from the city. Only of late have they returned.",
         icon="134324",
@@ -11104,15 +9946,15 @@ PETS.all ={
         displayID=40089,
         family=5,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="A goblin alchemist once claimed that the bite of this raccoon gave him the gift of prophecy. Turns out, it was just rabies.",
         icon="646059",
         locations={{mapID=376, coords={{10.2,45.8},{10.6,45.6},{11,48.4},{11,48.6},{11.2,44.4},{11.2,44.6},{11.4,40.8},{11.6,40.8},{11.6,44.6},{14,27.2},{14.2,27.6},{14.4,40.8},{14.6,41},{15,36.4},{15,36.6},{16,27.2},{16,31.8},{16,44},{16,44.8},{16.2,37.2},{16.6,37.2},{17,26.6},{17.4,34.2},{17.4,34.6},{17.6,34.6},{17.6,42.2},{17.8,42.8},{18.4,50},{18.6,40.6},{18.8,49.4},{19,40.2},{19,50.4},{19.4,44.2},{19.6,44.2},{20.4,47.4},{20.4,47.8},{20.6,47.4},{20.6,47.6},{21,52.6},{21.2,45.4},{21.2,45.6},{21.2,52.4},{21.4,40.4},{21.6,45.2},{21.6,52.4},{21.8,40.4},{21.8,40.6},{22.2,32},{22.4,50.4},{22.4,51},{22.6,50.2},{23.4,55.2},{23.4,55.6},{23.6,55.4},{23.6,55.6},{24.2,47.4},{24.2,47.6},{24.6,47.4},{24.6,48},{25,56.4},{25,57},{25.2,52.2},{25.2,52.6},{26.2,51.8},{26.4,51.4},{26.4,53.4},{26.4,53.6},{26.6,51.4},{26.6,51.8},{26.8,53.8},{27.2,57.4},{27.6,57},{27.6,57.6},}}},
         possbileBreeds={"B/B", "S/S", "P/S"},
         baseStats={8, 8, 8},
+        acquisition={
+            {"Shares a spawn with other bandicoon critters. Try killing those if you cannot get a spawn."},
+        }
     }, 
     [678]={
         name="Jungle Grub",
@@ -11121,9 +9963,6 @@ PETS.all ={
         displayID=40226,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="These little green grubs are native to wilds of Pandaria. Its verdant coloration camouflages it from would-be predators.",
         icon="648918",
@@ -11138,9 +9977,6 @@ PETS.all ={
         displayID=43485,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="You'll often find them perched high atop impossibly high and remote stone outcroppings. There are few creatures as sure of foot.",
         icon="237397",
@@ -11155,9 +9991,6 @@ PETS.all ={
         displayID=43347,
         family=9,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="The mongoose is prized for its ability to drive off poisonous snakes.  Rikk-tikk-tikki-tikki-tchk!",
         icon="237409",
@@ -11172,9 +10005,6 @@ PETS.all ={
         displayID=43199,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="This terrifying and highly venomous species leaps onto its prey from the Jade Forest's dense canopy.",
         icon="132196",
@@ -11189,9 +10019,6 @@ PETS.all ={
         displayID=6296,
         family=9,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="The leopard tree frog was named for the way it pounces from branch to branch.",
         icon="237579",
@@ -11201,6 +10028,9 @@ PETS.all ={
         },
         possbileBreeds={"B/B", "S/S", "H/B"},
         baseStats={8.5, 7.5, 8},
+        acquisition={
+            {"Also available as a secondary pet."},
+        }
     }, 
     [703]={
         name="Masked Tanuki Pup",
@@ -11209,15 +10039,15 @@ PETS.all ={
         displayID=43194,
         family=5,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="Many young raccoons rail against their strict curfews, complaining that dawn is way too early to go to bed.",
         icon="646059",
         locations={{mapID=371, coords={{29.8,30},{30.2,25.8},{31.2,24.8},{35,8.8},{35.2,22.4},{35.8,20.8},{36.2,33.4},{36.2,33.6},{38.6,26.4},{38.6,26.6},{40.4,76.2},{40.6,76.2},{42.6,87.6},{44,30.4},{44,30.6},{44.8,78.8},{46.8,23.4},{46.8,23.6},{47.6,33.4},{48.2,49.8},{48.6,72.4},{48.6,72.6},{49,68},{49.2,29},{49.6,25.4},{49.6,25.6},{50.4,39.8},{50.4,50.4},{50.4,50.6},{50.6,39.8},{50.6,70.8},{51.6,73.2},{52,52.8},{52.2,44.8},{53.4,40.4},{53.4,40.6},{53.8,35.2},{54.4,38},{54.4,48.4},{54.4,48.6},{54.6,38},{54.8,72.4},{54.8,72.6},{55,34.2},{57.2,47.2},}}},
         possbileBreeds={"B/B", "S/B"},
         baseStats={8, 8, 8},
+        acquisition={
+            {"Also available as a secondary pet."},
+        }
     }, 
     [706]={
         name="Bandicoon",
@@ -11226,9 +10056,6 @@ PETS.all ={
         displayID=40089,
         family=5,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="The taciturn bandicoon's diet consists mostly of apples.",
         icon="646059",
@@ -11248,15 +10075,15 @@ PETS.all ={
         displayID=41834,
         family=5,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="Some druids say pandaren and raccoons are distant cousins, but never when a pandaren can hear them.",
         icon="646059",
         locations={{mapID=376, coords={{9.8,65.4},{9.8,65.6},{14.8,36.8},{15.8,44.6},{20,50.4},{20,50.6},{23.2,41},{29.4,30.4},{29.4,30.6},{29.4,41.6},{29.6,42},{37,25.4},{37,25.6},{37.4,39.8},{37.6,39.8},{42.2,77},{46.2,29.8},{48.2,61.8},{48.2,66},{49,71.6},{50.4,43.8},{50.4,47.2},{50.6,44},{50.6,47.2},{50.8,43.4},{50.8,44.8},{55.2,42},{55.6,75.8},{57,45.2},{57,45.6},{58,75},{58.2,74.4},{63.4,63.2},{67.2,34},{69.6,34.6},{70.2,34.4},{73.4,37},{73.6,25},{73.6,37},{79.6,29.2},{83,31},}}},
         possbileBreeds={"B/B", "S/S"},
         baseStats={8, 8, 8},
+        acquisition={
+            {"Also available as a secondary pet."},
+        }
     }, 
     [708]={
         name="Malayan Quillrat",
@@ -11265,9 +10092,6 @@ PETS.all ={
         displayID=45991,
         family=5,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="Many believe that the quillrat is able to shoot its spines at aggressors.",
         icon="134322",
@@ -11277,6 +10101,9 @@ PETS.all ={
         },
         possbileBreeds={"B/B", "S/S", "P/B", "S/B", "H/B"},
         baseStats={8, 7.5, 8.5},
+        acquisition={
+            {"Also available as a secondary pet."},
+        }
     }, 
     [709]={
         name="Malayan Quillrat Pup",
@@ -11285,9 +10112,6 @@ PETS.all ={
         displayID=45990,
         family=5,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="Although the wounds caused by the young quillrat are seldom fatal, most predators seek easier prey.",
         icon="134322",
@@ -11297,6 +10121,9 @@ PETS.all ={
         },
         possbileBreeds={"B/B", "S/S", "S/B", "H/B"},
         baseStats={8, 7.5, 8.5},
+        acquisition={
+            {"Also available as a secondary pet."},
+        }
     }, 
     [710]={
         name="Marsh Fiddler",
@@ -11305,9 +10132,6 @@ PETS.all ={
         displayID=43360,
         family=5,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="Known to feast on the tasty plants in Valley of the Four Winds.",
         icon="646325",
@@ -11322,9 +10146,6 @@ PETS.all ={
         displayID=42856,
         family=9,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="The sifang otter lives near rivers and is normally friendly and playful.",
         icon="645906",
@@ -11335,6 +10156,9 @@ PETS.all ={
         },
         possbileBreeds={"B/B", "S/S", "S/B"},
         baseStats={8, 8, 8},
+        acquisition={
+            {"Also available as a secondary pet."},
+        }
     }, 
     [712]={
         name="Sifang Otter Pup",
@@ -11343,9 +10167,6 @@ PETS.all ={
         displayID=42983,
         family=9,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="Otters swim by propelling themselves with their powerful tails and flexing their long bodies. Very fast in the water.",
         icon="645906",
@@ -11355,6 +10176,9 @@ PETS.all ={
         },
         possbileBreeds={"B/B", "S/S", "S/B"},
         baseStats={8, 8, 8},
+        acquisition={
+            {"Also available as a secondary pet."},
+        }
     }, 
     [713]={
         name="Softshell Snapling",
@@ -11363,9 +10187,6 @@ PETS.all ={
         displayID=16259,
         family=9,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="Softshell turtle meat is considered a delicacy and is the key ingredient in soothing turtle bisque.",
         icon="1738657",
@@ -11380,15 +10201,15 @@ PETS.all ={
         displayID=44816,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="The common folk remedy to a feverbite hatchling's bite is to dance wildly and try to sweat out the toxins before they can take hold.",
         icon="132196",
         locations={{mapID=418, coords={{16.2,42},{16.6,42.4},{16.8,45},{17,44},{17.2,41},{17.2,45.8},{17.2,47.6},{17.4,46.8},{17.6,44.6},{17.8,42.2},{17.8,43.2},{18,43.8},{18.2,40},{18.2,47.4},{18.4,47.6},{18.6,39.8},{18.6,40.8},{18.6,47.6},{18.8,47.4},{19,43},{19.2,43.6},{19.6,43.4},{19.6,43.6},{19.6,46.6},{19.8,45.2},{19.8,46},}}},
         possbileBreeds={"B/B", "P/P", "P/B", "S/B"},
         baseStats={7, 8.5, 8.5},
+        acquisition={
+            {"Also available as a secondary pet."},
+        }
     }, 
     [716]={
         name="Amethyst Spiderling",
@@ -11397,15 +10218,15 @@ PETS.all ={
         displayID=38672,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="A rarity among arachnids, these non-venomous critters feed solely on plants and fruit.",
         icon="132196",
         locations={{mapID=418, coords={{9.6,37.6},{10.2,54},{14.8,39.2},{15,34.8},{22.6,29.2},{25.6,49},{26.4,49.6},{26.6,46.8},{26.6,49.2},{28,39.8},{28,50.2},{28.2,46.8},{29.4,40},{29.4,46.2},{32.4,54.4},{33.8,47},{34,44.2},{34.2,42.8},{34.2,44.6},{34.8,41.2},{35,39.2},{35.6,36},{36.4,44.8},{36.8,32},{36.8,51.4},{37,58.2},{37.2,36.8},{38.2,43.8},{39.4,56.6},{40.4,34.4},{40.4,34.6},{41.8,60.2},{43.2,67.2},{44,32.6},{44.4,56.6},{45.2,57.4},{46,46},{46.2,67.8},{46.8,52},{47.6,36.6},{48,35.8},{48,48},{48.4,39.8},{49,28.4},{52.2,73},{53.4,37.2},{55.8,46},{57,41},{57.6,30.4},{57.8,28.6},{57.8,37.6},{58.2,26},{58.4,38.8},{58.6,37.2},{59.2,27.2},{59.6,37.4},{60,34.2},{60.4,31.2},{60.4,35.2},{60.6,33.2},{63,24.4},{63,25},{65.2,34.4},{66.2,32.8},{66.4,22.6},{69,25},{70,28},{70.4,19.4},{71,29},{74,14.2},{77.2,23},{78,18.6},{80.8,19},{81.2,22.2},{82.2,17},{83.6,15.4},{85.2,13.8},}}},
         possbileBreeds={"H/P", "H/S"},
         baseStats={7, 8.5, 8.5},
+        acquisition={
+            {"Also available as a secondary pet."},
+        }
     }, 
     [717]={
         name="Savory Beetle",
@@ -11414,9 +10235,6 @@ PETS.all ={
         displayID=45996,
         family=5,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="The most delicious of the beetle family.",
         icon="237144",
@@ -11431,15 +10249,15 @@ PETS.all ={
         displayID=36955,
         family=3,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="A daring, narcissist insect willing to brave any threat in its pursuit of the spotlight.",
         icon="236193",
         locations={{mapID=418, coords={{9.4,57},{10,53},{10.4,59.6},{10.4,61.6},{10.8,55.6},{11,55.4},{11.4,57.8},{11.6,36.2},{12.2,54.8},{13.2,36.4},{13.2,36.6},{14.2,56.4},{14.4,34.4},{14.4,34.6},{14.4,39},{14.6,34.8},{15.4,40.4},{15.4,40.6},{15.6,40.2},{15.8,42.2},{17.2,44.8},{21,58.6},{21.2,37.2},{21.4,38.4},{21.4,38.6},{21.4,41},{23.6,39.2},{24.2,34},{24.2,37.4},{24.2,37.6},{26.2,50.4},{26.2,50.6},{26.4,52},{30.4,69},{30.6,69.6},{31,68.2},{31,68.6},{31.4,67.2},{31.6,67.4},{32,72.4},{32,73},{33,68.4},{33,68.8},{34.2,69.8},{34.4,74.8},{34.6,69},{34.8,70.6},{35,70.4},{35.4,72.4},{35.4,72.6},{35.8,69.4},{35.8,77.8},{43.8,31},{45.2,36.2},{45.4,36.6},{46,33.4},{46,33.8},{47.2,39.2},{47.4,41.4},{47.6,41.4},{47.6,41.6},{48.8,34},{48.8,37.4},{48.8,37.6},{49,35},{49,35.6},{49.4,39.6},{49.6,39.4},{49.6,39.8},{50.2,42.8},{50.8,31.2},{50.8,40},{52.8,36.4},{52.8,36.6},{54,37.8},{54.2,38.8},{54.8,39},{55.6,40.6},{56,38.4},{57.2,35},{58.2,34.6},{66.2,31.4},{66.2,31.6},{66.8,27.6},{67.4,26},{67.4,29.2},{67.6,26},{67.6,29.2},{67.8,23},{67.8,27.8},{70.4,24},{70.6,14.4},{70.6,24},{70.8,14.6},{71.2,15.6},{71.4,8.8},{71.4,24.6},{71.6,8.8},{71.6,13.8},{72.4,15.2},{72.4,24.8},{72.6,11.8},{72.6,15.2},{72.6,25},{72.8,17},{73,13.2},{73,13.6},{74.4,6.8},{74.4,9.8},{74.6,7},{74.6,9.8},{75,20},{81.2,20.4},{81.2,20.6},{81.6,20.4},{81.8,19.2},{81.8,22},{82.6,19.2},{83.4,19.6},{83.6,19.4},{83.6,19.6},{84.2,21.4},{84.2,21.6},{85.6,15.4},{86,14.2},{88.6,16.4},}}},
         possbileBreeds={"B/B", "P/S", "H/S"},
         baseStats={8, 8, 8},
+        acquisition={
+            {"Also available as a secondary pet."},
+        }
     }, 
     [722]={
         name="Mei Li Sparkler",
@@ -11448,15 +10266,15 @@ PETS.all ={
         displayID=28434,
         family=3,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="Feeds on small leaves and grass when full grown.",
         icon="236196",
         locations={{mapID=418, coords={{14,36.8},{14.8,36},{17.2,38.2},{17.4,41.6},{17.6,41.4},{17.6,41.6},{18,45.8},{18.8,43.8},{29.4,37.2},{31.2,41.2},{31.6,48},{33.4,42},{33.4,53.2},{33.6,53.2},{33.6,54},{34,38.2},{34.2,49},{34.4,39.8},{35,36.4},{35.2,54},{36.2,51.8},{36.4,48.2},{37.4,44},{37.6,44},{38.4,40.6},{38.6,40},{38.8,58.4},{38.8,58.6},{39.8,31.4},{39.8,56.4},{40,31.8},{41.2,28.4},{41.2,42.2},{41.2,42.6},{41.4,58.6},{42.8,56.8},{43.8,45.4},{44.2,53},{44.4,54.4},{44.6,54.4},{44.6,54.6},{44.8,47},{45.4,35.2},{45.4,42.2},{45.6,35.2},{45.6,53.8},{47.2,31.2},}}},
         possbileBreeds={"B/B", "H/S", "P/B", "H/B"},
         baseStats={7.5, 8.5, 8},
+        acquisition={
+            {"Also available as a secondary pet."},
+        }
     }, 
     [723]={
         name="Spiny Terrapin",
@@ -11465,9 +10283,6 @@ PETS.all ={
         displayID=42859,
         family=9,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="Angering a spiny terrapin will cause it to withdraw into its shell and begin to spin wildly towards an attacker.",
         icon="656345",
@@ -11485,15 +10300,15 @@ PETS.all ={
         displayID=36388,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="Burrows deep into snowbanks to hide from predators.",
         icon="797544",
         locations={{mapID=379, coords={{32.4,50.6},{32.6,50.6},{35,48.8},{35.6,75},{35.8,64.2},{35.8,66.6},{37.6,48.8},{37.8,80.8},{38.4,76},{39,81.8},{39.4,48.4},{39.4,48.6},{39.4,51},{39.6,70.6},{39.8,68},{39.8,70.4},{41.4,66},{42.2,60.4},{42.2,60.6},{43.4,60.4},{43.4,60.6},{43.6,65.2},{44,63.8},{44.6,65.8},{45.8,59.4},{47,44.4},{47.2,44.6},{47.2,60.2},{47.6,45.4},{48.2,62},{48.8,50.6},{48.8,58},{49,50.4},{49.4,63},{50,56.4},{50,59},{50.2,56.8},{51,59.2},{52.4,62.6},{52.6,62.6},{53.2,47.2},{53.2,62},{53.4,60},{54.6,41.8},{55,41},{55.2,63},{55.8,50.4},{55.8,50.6},{56,60.6},{56.4,38.8},{57.4,44.4},{57.4,56.8},{57.6,44.6},{57.6,57},{59.8,49},{60.6,45.2},{61.2,53.2},{64.6,45.8},}}},
         possbileBreeds={"S/S", "P/B"},
         baseStats={8, 8, 8},
+        acquisition={
+            {"Also available as a secondary pet."},
+        }
     }, 
     [725]={
         name="Alpine Foxling Kit",
@@ -11502,15 +10317,15 @@ PETS.all ={
         displayID=42757,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="Occasionally sneaks bites of food from kills made by much larger animals.",
         icon="797544",
         locations={{mapID=379, coords={{32.4,50.4},{32.4,50.6},{32.6,50.6},{35.8,64.2},{39,82},{39.2,51.2},{39.8,68},{42.2,60.4},{42.2,60.6},{43.4,65.2},{43.6,65.2},{47.2,60.4},{50,59},{52.4,62.6},{52.6,62.4},{52.6,62.6},{54.4,42.2},{54.4,42.6},{54.6,41.8},{61.2,53.4},}}},
         possbileBreeds={"B/B", "S/B"},
         baseStats={8, 8, 8},
+        acquisition={
+            {"Also available as a secondary pet."},
+        }
     }, 
     [726]={
         name="Plains Monitor",
@@ -11519,9 +10334,6 @@ PETS.all ={
         displayID=45999,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="While stationary, the plains monitor will continuously flick its tail back and forth. From a distance this mimics the appearance of swaying tallgrass, camouflaging the lizard from aerial predators.",
         icon="463491",
@@ -11536,9 +10348,6 @@ PETS.all ={
         displayID=4959,
         family=5,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="On the prairie there are numerous rodents and other small creatures, but none more common than the mouse.",
         icon="647701",
@@ -11553,15 +10362,15 @@ PETS.all ={
         displayID=304,
         family=3,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="Will only lay eggs in bright light.",
         icon="250626",
         locations={{mapID=379, coords={{58.8,89.6},{59.2,89.4},{59.4,88.2},{59.6,88.2},{59.6,88.6},{60,86.4},{60,86.6},{60.8,87.8},{61.4,86.8},}}},
         possbileBreeds={"B/B", "S/S", "S/B", "H/B"},
         baseStats={8, 8, 8},
+        acquisition={
+            {"Also available as a secondary pet."},
+        }
     }, 
     [729]={
         name="Tolai Hare",
@@ -11570,9 +10379,6 @@ PETS.all ={
         displayID=6302,
         family=5,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="In the ancient fables, the first Tolai hare strode across the gulf between the stars before it upset them and they tumbled from the heavens to the world below.",
         icon="254857",
@@ -11582,6 +10388,9 @@ PETS.all ={
         },
         possbileBreeds={"B/B", "S/S", "H/P", "H/S", "S/B", "H/B"},
         baseStats={8, 7, 9},
+        acquisition={
+            {"Also available as a secondary pet."},
+        }
     }, 
     [730]={
         name="Tolai Hare Pup",
@@ -11590,15 +10399,15 @@ PETS.all ={
         displayID=28998,
         family=5,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="Tolai hare pups are sent from their dens at a young age to find their own way.",
         icon="254857",
         locations={{mapID=379, coords={{42.4,77.2},{42.4,77.6},{42.6,77},{44.2,70.2},{44.2,79.8},{46.4,86},{51,85.2},{54.8,66.8},{55.6,63.8},{56.8,88.4},{56.8,88.6},{57.2,82},{59.4,82.4},{59.4,82.6},{59.6,82.4},{59.6,82.6},{60,27.2},{61.4,75.2},{61.6,25.2},{62.2,34.4},{62.4,88.8},{63.4,89.4},{63.4,89.6},{63.6,89.4},{64,80.6},{64.2,25.4},{64.2,80.4},{66.4,79.4},{66.4,79.6},{66.6,79.6},{66.8,33.6},{67,33.4},{73.8,64.4},{74,64.6},{75.2,10.4},{75.2,10.6},{75.2,15.4},{75.2,15.6},}}},
         possbileBreeds={"B/B", "S/S", "H/S", "S/B", "H/B"},
         baseStats={8, 7, 9},
+        acquisition={
+            {"Also available as a secondary pet."},
+        }
     }, 
     [731]={
         name="Zooey Snake",
@@ -11607,9 +10416,6 @@ PETS.all ={
         displayID=4440,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="These reptiles possess hooked scales, allowing them to slither up Kun-Lai Summit's rocky slopes and steep cliffs.",
         icon="132211",
@@ -11624,9 +10430,6 @@ PETS.all ={
         displayID=36956,
         family=3,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="Known to flourish in the rainy season, this insect is drawn to lightning storms.",
         icon="236193",
@@ -11636,6 +10439,9 @@ PETS.all ={
         },
         possbileBreeds={"P/S", "H/S"},
         baseStats={8, 8.5, 7.5},
+        acquisition={
+            {"Also available as a secondary pet."},
+        }
     }, 
     [733]={
         name="Grassland Hopper",
@@ -11644,9 +10450,6 @@ PETS.all ={
         displayID=43344,
         family=5,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="At night, the grassland hoppers fill the night with their maddening song. Those unaccustomed to it have spent many a sleepless night serenaded by their mating calls.",
         icon="646325",
@@ -11661,15 +10464,15 @@ PETS.all ={
         displayID=43347,
         family=9,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="Contrary to its benign appearance, mongoose are dangerous carnivores, well known for their ability to hunt venomous snakes that could kill much larger creatures.",
         icon="237409",
         locations={{mapID=388, coords={{17,47},{17.8,51.2},{24.2,53.6},{26.4,43},{34.2,54.2},{34.8,61.2},{35.8,48.4},{35.8,48.6},{36,62},{37.8,55.6},{38.4,85.6},{38.6,85.4},{42.4,89.8},{43,55.2},{46,88},{51.8,70.8},{52.4,65.8},{52.6,65.4},{52.6,65.8},{55.4,71.8},{55.6,71.8},{56.4,68.8},{56.6,68.8},{56.8,76.2},{57.2,75.4},{57.4,79.2},{60,79.4},{60,79.6},{60.4,52},{60.6,52.4},{60.6,52.6},{61,75.4},{61.8,67.4},{62,67.6},{62.4,70.4},{62.4,70.6},{62.6,70.6},{63.8,64.2},{63.8,64.6},{64.4,75},{64.6,75.2},{70.6,66.4},{70.6,67},{70.6,81.2},{72.4,80.4},{72.4,80.8},{72.6,80.6},{72.8,76.4},{72.8,76.6},{76,72.6},{77,67},{78.6,64.2},{80,67},{81.4,81.2},{81.4,84},{81.8,84.2},}}},
         possbileBreeds={"S/S", "P/S"},
         baseStats={6.5, 8, 9.5},
+        acquisition={
+            {"Also available as a secondary pet."},
+        }
     }, 
     [739]={
         name="Mongoose Pup",
@@ -11678,15 +10481,15 @@ PETS.all ={
         displayID=43346,
         family=9,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="Mongoose pups prefer long grass where only their mothers can find them.",
         icon="237409",
         locations={{mapID=388, coords={{16.8,47},{19.4,41},{33.8,54.2},{35,61.4},{35.8,48.6},{36,48.4},{37.8,55.4},{37.8,55.8},{42.2,89.4},{42.4,90},{43,55.2},{46,88},{51.6,70.4},{51.8,70.8},{52.4,65.8},{52.6,65.4},{52.6,65.8},{55.4,71.8},{55.6,71.8},{57.2,75.4},{57.4,79.2},{60,79.4},{60,79.6},{61,75.4},{61,75.6},{62.4,70.4},{62.4,70.6},{62.6,70.6},{63.8,64.4},{63.8,64.6},{64.4,75},{64.6,75},{70.6,81.2},{70.8,66.4},{70.8,66.8},{70.8,81.6},{72.8,76.4},{72.8,76.6},{75.8,72.4},{76,72.6},{77,67},{78.6,64.2},{80,67},{81.4,81.2},}}},
         possbileBreeds={"S/S", "P/S"},
         baseStats={7, 8, 9},
+        acquisition={
+            {"Also available as a secondary pet."},
+        }
     }, 
     [740]={
         name="Yakrat",
@@ -11695,9 +10498,6 @@ PETS.all ={
         displayID=4959,
         family=5,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="The bond between yak and rat is a strange one, and what the rat gains out of the symbiotic relationship is a mystery.",
         icon="134324",
@@ -11714,9 +10514,6 @@ PETS.all ={
         displayID=45984,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="These hedgehogs may be silent, but often are heard the cries of those that foolishly step upon their quills.",
         icon="644001",
@@ -11734,9 +10531,6 @@ PETS.all ={
         displayID=45985,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="Hedgehogs are not at all fond of croquet nor flamingos.",
         icon="644001",
@@ -11746,6 +10540,9 @@ PETS.all ={
         },
         possbileBreeds={"B/B", "S/S"},
         baseStats={8, 8, 8},
+        acquisition={
+            {"Also available as a secondary pet."},
+        }
     }, 
     [743]={
         name="Rapana Whelk",
@@ -11754,9 +10551,6 @@ PETS.all ={
         displayID=45882,
         family=5,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="Has been spotted fighting other whelks for prime food sources.",
         icon="442735",
@@ -11775,9 +10569,6 @@ PETS.all ={
         displayID=45898,
         family=5,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="The roaches of the Dread Wastes dwell in the shadows. Some people swear the shadows travel with them.",
         icon="294474",
@@ -11792,9 +10583,6 @@ PETS.all ={
         displayID=15469,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="Unique carapace is prized by trinket makers for its texture and strength.",
         icon="132195",
@@ -11804,6 +10592,9 @@ PETS.all ={
         },
         possbileBreeds={"B/B", "H/S"},
         baseStats={8, 8, 8},
+        acquisition={
+            {"Also available as a secondary pet."},
+        }
     }, 
     [746]={
         name="Emperor Crab",
@@ -11812,15 +10603,15 @@ PETS.all ={
         displayID=45881,
         family=9,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="The emperor crab was named for its regal appearance: the ridges of its shell and its raised claws eerily resembling a crown. One that would pinch your eyes out if you tried to wear it.",
         icon="2027883",
         locations={{mapID=422, coords={{25.5,65.6},}}},
         possbileBreeds={"P/P", "H/H"},
         baseStats={8.5, 9, 6.5},
+        acquisition={
+            {"Also available as a secondary pet."},
+        }
     }, 
     [747]={
         name="Effervescent Glowfly",
@@ -11829,9 +10620,6 @@ PETS.all ={
         displayID=46000,
         family=3,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="Luminescent body used to attract mates.",
         icon="236196",
@@ -11841,6 +10629,9 @@ PETS.all ={
         },
         possbileBreeds={"B/B", "H/S", "P/B", "H/B"},
         baseStats={7.5, 8.5, 8},
+        acquisition={
+            {"Also available as a secondary pet."},
+        }
     }, 
     [748]={
         name="Gilded Moth",
@@ -11849,9 +10640,6 @@ PETS.all ={
         displayID=36956,
         family=3,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="This delicate insect's wings are often sewn into clothing and armor.",
         icon="236193",
@@ -11866,9 +10654,6 @@ PETS.all ={
         displayID=43428,
         family=9,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="Civets are landbound cousins of the otter and are prized for their heady musks.",
         icon="645906",
@@ -11883,15 +10668,15 @@ PETS.all ={
         displayID=43259,
         family=9,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
         source="Pet Battle",
         flavor="The civets are known to guard their young ferociously.",
         icon="645906",
         locations={{mapID=390, coords={{11.2,70.4},{11.2,70.6},{38.6,64.8},}}},
         possbileBreeds={"B/B", "S/S", "S/B"},
         baseStats={8, 8, 8},
+        acquisition={
+            {"Also available as a secondary pet."},
+        }
     }, 
     [751]={
         name="Dancing Water Skimmer",
@@ -11900,9 +10685,9 @@ PETS.all ={
         displayID=40584,
         family=9,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Named for their apparent dancelike behavior when skimming aquatic surfaces, the species uses erratic movements to avoid being devoured by fish and other underwater predators.",
         icon="643423",
@@ -11917,9 +10702,9 @@ PETS.all ={
         displayID=6297,
         family=9,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Despite its menacing appearance, the yellow-bellied bullfrog was aptly named.",
         icon="237579",
@@ -11934,9 +10719,9 @@ PETS.all ={
         displayID=36671,
         family=3,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Known to flourish in the rainy season, this insect is drawn to lightning storms.",
         icon="236193",
@@ -11951,9 +10736,9 @@ PETS.all ={
         displayID=20042,
         family=3,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="This species of insect is drawn to the latent energy in shrines, their luminescent appearance adding to the mystique of the places of power.",
         icon="236196",
@@ -11968,9 +10753,9 @@ PETS.all ={
         displayID=2177,
         family=5,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="The markings on the carapace of this cockroach closely resemble that of the Death's Head.",
         icon="294474",
@@ -11985,9 +10770,9 @@ PETS.all ={
         displayID=36944,
         family=3,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Prefers to dwell in dark caves and feed on Heartblossom nectar.",
         icon="236193",
@@ -12001,10 +10786,10 @@ PETS.all ={
         companionID=14755,
         displayID=14778,
         family=2,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Promotion",
         flavor="Legends say that these vibrant emerald beings bring good fortune and safe travels to their owners.",
         icon="134157",
@@ -12019,10 +10804,10 @@ PETS.all ={
         companionID=14756,
         displayID=14779,
         family=2,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Promotion",
         flavor="Said to bring good fortune when spotted in autumn.  Known to hide from unfamiliar creatures.",
         icon="134158",
@@ -12037,10 +10822,10 @@ PETS.all ={
         companionID=65314,
         displayID=43868,
         family=3,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="A graceful creature from the isle of Pandaria.",
         icon="646586",
@@ -12062,10 +10847,10 @@ PETS.all ={
         companionID=65313,
         displayID=43865,
         family=2,
-        isWild=false,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
+
         source="Black Market",
         flavor="A baby version of the mighty Thundering Cloud Serpent that hails from the far lands of Pandaria.",
         icon="646018",
@@ -12079,9 +10864,9 @@ PETS.all ={
         displayID=43875,
         family=2,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="So cute, yet so epic.",
         icon="646018",
@@ -12098,9 +10883,9 @@ PETS.all ={
         displayID=45064,
         family=2,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="The offspring of Tsulong, hidden away before the corruption of the Sha had fully taken hold of the Terrace of Endless Spring.",
         icon="652138",
@@ -12117,9 +10902,9 @@ PETS.all ={
         displayID=43874,
         family=2,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="It's red, so it must fly faster.",
         icon="630863",
@@ -12135,10 +10920,10 @@ PETS.all ={
         companionID=64232,
         displayID=43127,
         family=5,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Achievement",
         flavor="Known to feast on the tasty plants in Krasarang Wilds.",
         icon="646325",
@@ -12152,10 +10937,10 @@ PETS.all ={
         companionID=63621,
         displayID=45894,
         family=1,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Achievement",
         flavor="It keeps looking at me. I think it wants to bite me.",
         icon="646445",
@@ -12171,9 +10956,9 @@ PETS.all ={
         displayID=22447,
         family=5,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="This ferocious skunk can spray an attacker from thirty yards away, temporarily blinding them.  Handle with caution!",
         icon="463569",
@@ -12187,10 +10972,10 @@ PETS.all ={
         companionID=64634,
         displayID=45938,
         family=7,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Mogu sorcerers, keepers of the secret to bringing stone to life, prefer these stolid companions over more beastly familiars.",
         icon="399041",
@@ -12205,10 +10990,10 @@ PETS.all ={
         companionID=64632,
         displayID=43597,
         family=1,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Achievement",
         flavor="The great big world can be a dangerous place for such a tiny, adorable creature.",
         icon="594273",
@@ -12222,10 +11007,10 @@ PETS.all ={
         companionID=64633,
         displayID=45854,
         family=9,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Water striders serve an important role in Jinyu culture, acting as a mount, means of sending communications, and even a family pet.",
         icon="133942",
@@ -12241,9 +11026,9 @@ PETS.all ={
         displayID=36603,
         family=7,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Adventurers have reported rare sightings of a monstrous sized emerald shale spider, which the denizens of Deepholm have come to call the Jadefang.",
         icon="134397",
@@ -12258,9 +11043,9 @@ PETS.all ={
         displayID=36604,
         family=7,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Adult amethyst shale spiders prefer to create their nests against the outer walls of Deepholm.",
         icon="134399",
@@ -12277,10 +11062,10 @@ PETS.all ={
         companionID=64899,
         displayID=45386,
         family=10,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Profession",
         flavor="Constructed from a seemingly impossible mass of gears, springs, wires, and a little something special, this dragonling embodies the spirit of Pandaria as seen through an engineer's goggles.",
         icon="236473",
@@ -12295,10 +11080,10 @@ PETS.all ={
         companionID=61877,
         displayID=15905,
         family=6,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Profession",
         flavor="Jade is naturally rich with life and color, making it the perfect raw material for this gentle companion.  It is said the wind created by their wings can soothe the troubled mind.",
         icon="133247",
@@ -12312,10 +11097,10 @@ PETS.all ={
         companionID=61883,
         displayID=42297,
         family=6,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Profession",
         flavor="While each cub is crafted in the same fashion, tiny imperfections in the gemstones create a unique personality when imbued with life.  They are, however, always playful and friendly.",
         icon="133236",
@@ -12329,10 +11114,10 @@ PETS.all ={
         companionID=62829,
         displayID=42721,
         family=9,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Quest",
         flavor="Many believe (incorrectly) that goldfish have no memories. Trainers who have worked with them know this is clearly not the case and have the bruises to prove it.",
         icon="237309",
@@ -12347,10 +11132,10 @@ PETS.all ={
         companionID=59358,
         displayID=45957,
         family=5,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="This rabbit is much stronger than it looks.",
         icon="237182",
@@ -12365,9 +11150,9 @@ PETS.all ={
         companionID=66104,
         displayID=44791,
         family=3,
-        isWild=false,
-        isTradeable=false,
-        isUnique=false,
+
+
+
         isPassive=true,
         source="Profession",
         flavor="A beautiful kite brought to life by the scribes of Pandaria.",
@@ -12382,9 +11167,9 @@ PETS.all ={
         companionID=66105,
         displayID=44792,
         family=3,
-        isWild=false,
-        isTradeable=false,
-        isUnique=false,
+
+
+
         isPassive=true,
         source="Profession",
         flavor="Who knew scribes could make kites?",
@@ -12400,9 +11185,9 @@ PETS.all ={
         displayID=36583,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Not only is it quick, it's loud too!",
         icon="463491",
@@ -12423,10 +11208,10 @@ PETS.all ={
         companionID=66491,
         displayID=45195,
         family=7,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Achievement",
         flavor="Seems odd that he doesn't like flies... right?",
         icon="463540",
@@ -12440,10 +11225,10 @@ PETS.all ={
         companionID=66450,
         displayID=45987,
         family=7,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Achievement",
         flavor="Careful now, she can get a bit frisky sometimes!",
         icon="254105",
@@ -12457,10 +11242,10 @@ PETS.all ={
         companionID=66950,
         displayID=45942,
         family=7,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Quest",
         flavor="Water spirits are especially mischievous, and are known to frequent the canals of the Stormstout Brewery.",
         icon="656560",
@@ -12475,10 +11260,10 @@ PETS.all ={
         companionID=66984,
         displayID=45527,
         family=5,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Promotion",
         flavor="A rolling, explosive member of the Zerg swarm, the baneling deals terrible, terrible damage. Very dangerous in close quarters.",
         icon="656595",
@@ -12494,9 +11279,9 @@ PETS.all ={
         displayID=44779,
         family=9,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Legend has it that a seadragon turtle just like this one grew up to become Shen-zin Su, the Wandering Isle. Perhaps your little turtle will grow into something amazing?",
         icon="656342",
@@ -12511,10 +11296,10 @@ PETS.all ={
         companionID=67230,
         displayID=44551,
         family=3,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Profession",
         flavor="The larval form of this moth is world-renowned for creating the finest silk in Azeroth.",
         icon="236193",
@@ -12529,10 +11314,10 @@ PETS.all ={
         companionID=67233,
         displayID=40521,
         family=5,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Profession",
         flavor="This plump red caterpillar is world-renowned for creating the finest silk in Azeroth.",
         icon="648918",
@@ -12547,10 +11332,10 @@ PETS.all ={
         companionID=63370,
         displayID=46385,
         family=5,
-        isWild=false,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
+
         source="Quest",
         flavor="Be careful, he might eat all your crops!",
         icon="646325",
@@ -12566,10 +11351,10 @@ PETS.all ={
         companionID=67319,
         displayID=46163,
         family=5,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="Most of Violet's numerous forest strider hatchlings are turned into Faire fare by Stamp Thunderhorn, though a few are raised as mounts or purchased by adventurers looking for a petite purple pet.",
         icon="132198",
@@ -12593,9 +11378,9 @@ PETS.all ={
         displayID=46171,
         family=3,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Their eerie green light, reminiscent of fel flames, is occasionally seen flitting through the twisted trees of Darkmoon Island.",
         icon="1044485",
@@ -12609,10 +11394,10 @@ PETS.all ={
         companionID=67332,
         displayID=46174,
         family=6,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Don't even think about cheating now.",
         icon="136155",
@@ -12628,10 +11413,10 @@ PETS.all ={
         companionID=67443,
         displayID=36743,
         family=3,
-        isWild=false,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
+
         source="Pet Battle",
         flavor="While smaller than the infamous ravens of Gilneas, crows are no less clever or cunning.",
         icon="645217",
@@ -12646,10 +11431,10 @@ PETS.all ={
         companionID=16445,
         displayID=15398,
         family=1,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Drop",
         flavor="Terky is as shy as she is adorable, preferring the company of close friends over new ones.",
         icon="656558",
@@ -12664,10 +11449,10 @@ PETS.all ={
         companionID=68267,
         displayID=46720,
         family=7,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="In-Game Shop",
         flavor="A playful, purring pyromaniac. Don't pet these kittens without fireproof mittens!",
         icon="666530",
@@ -12680,10 +11465,10 @@ PETS.all ={
         companionID=68466,
         displayID=46809,
         family=7,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Quest",
         flavor="Though it appears to be a vaguely-related cousin to the Cinder Kitten, the two creatures actually share no ancestry.",
         icon="774324",
@@ -12698,10 +11483,10 @@ PETS.all ={
         companionID=68467,
         displayID=46810,
         family=7,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Quest",
         flavor="These spirits represent the heart of Pandaria's elemental powers.",
         icon="774322",
@@ -12716,10 +11501,10 @@ PETS.all ={
         companionID=68468,
         displayID=46811,
         family=7,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Quest",
         flavor="The elements of Pandaria can be cute and playful, until their homeland is threatened.",
         icon="774323",
@@ -12734,10 +11519,10 @@ PETS.all ={
         companionID=68502,
         displayID=30409,
         family=6,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Promotion",
         flavor="Capable of sitting in even the smallest of boxes, thanks to its ghostly nature.",
         icon="298591",
@@ -12753,9 +11538,9 @@ PETS.all ={
         displayID=40714,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="A rodent of usual size.",
         icon="645526",
@@ -12770,10 +11555,10 @@ PETS.all ={
         companionID=68601,
         displayID=46882,
         family=10,
-        isWild=false,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
+
         source="Vendor",
         flavor="Created for one purpose and one purpose alone: to punch little critters, as hard as it possibly can.",
         icon="134152",
@@ -12796,10 +11581,10 @@ PETS.all ={
         companionID=68656,
         displayID=46898,
         family=4,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Found in a dusty egg clutch at the back of Maexxna's lair, these creatures are already undead when they hatch.",
         icon="134899",
@@ -12814,10 +11599,10 @@ PETS.all ={
         companionID=68657,
         displayID=46896,
         family=4,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Loatheb's body is covered in small pods capable of spreading blighted fungal spores up to 1000 yards given proper wind conditions.",
         icon="571319",
@@ -12832,10 +11617,10 @@ PETS.all ={
         companionID=68655,
         displayID=46897,
         family=4,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Achievement",
         flavor="Upon exiting the freezing necropolis of Naxxramas, Mr. Bigglesworth promptly found a warm spot in the sun to take a long nap in.",
         icon="656579",
@@ -12849,10 +11634,10 @@ PETS.all ={
         companionID=68654,
         displayID=46921,
         family=4,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="When Gluth died to a band of brave adventurers, these lil' guys were found in the corpse, gnawing on giant, undead bones.",
         icon="133718",
@@ -12867,10 +11652,10 @@ PETS.all ={
         companionID=68665,
         displayID=46900,
         family=1,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Few of these fiery harbingers remain following Ragnaros' defeat in the Firelands.",
         icon="132312",
@@ -12885,10 +11670,10 @@ PETS.all ={
         companionID=68664,
         displayID=46923,
         family=1,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="These tiny flame imps roam the Molten Core in large swarms and can replenish their numbers rapidly.",
         icon="136218",
@@ -12903,10 +11688,10 @@ PETS.all ={
         companionID=68666,
         displayID=46902,
         family=7,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="The cooled core of Golemagg, it appears to retain some semi-sentient properties.",
         icon="237011",
@@ -12921,10 +11706,10 @@ PETS.all ={
         companionID=68661,
         displayID=46903,
         family=2,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="One of Razorgore's eggs that miraculously survived in Blackwing Lair.",
         icon="236469",
@@ -12939,10 +11724,10 @@ PETS.all ={
         companionID=68662,
         displayID=46925,
         family=2,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Opponents that face this fierce chromatic monstrosity just hope it doesn't have Time Stop!",
         icon="377270",
@@ -12957,10 +11742,10 @@ PETS.all ={
         companionID=68663,
         displayID=46905,
         family=2,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="A runt of the Black Talon, left to guard the whelps.",
         icon="236472",
@@ -12975,10 +11760,10 @@ PETS.all ={
         companionID=68660,
         displayID=46924,
         family=6,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="This small globule didn't make it back to Viscidus in time to re-form.",
         icon="132108",
@@ -12993,10 +11778,10 @@ PETS.all ={
         companionID=68659,
         displayID=46922,
         family=1,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="An anubisath idol from the Temple of Ahn'qiraj, infused with ancient qiraji magic.",
         icon="134908",
@@ -13011,10 +11796,10 @@ PETS.all ={
         companionID=68658,
         displayID=46909,
         family=6,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="The bane of many an adventurer, to look into its eyes is to truly know madness.",
         icon="134896",
@@ -13030,9 +11815,9 @@ PETS.all ={
         displayID=46936,
         family=1,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="They only get more beautiful as they age.",
         icon="132921",
@@ -13047,9 +11832,9 @@ PETS.all ={
         displayID=46937,
         family=1,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Hunted by locals for years, this is an extremely rare specimen.",
         icon="458252",
@@ -13064,9 +11849,9 @@ PETS.all ={
         displayID=46938,
         family=6,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Most people have never read this book.",
         icon="133740",
@@ -13081,9 +11866,9 @@ PETS.all ={
         displayID=46941,
         family=6,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Never take your eye off of it.",
         icon="134416",
@@ -13098,9 +11883,9 @@ PETS.all ={
         displayID=47636,
         family=2,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="You better believe he knows what time it is.",
         icon="298656",
@@ -13115,9 +11900,9 @@ PETS.all ={
         displayID=46947,
         family=10,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Originally created by the engineers in the bowels of Gnomeregan, the Fluxfire Feline is a marvel of modern engineering.",
         icon="668552",
@@ -13136,9 +11921,9 @@ PETS.all ={
         displayID=46948,
         family=10,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="The engineering wizards in Everlook created this unique cub as a test model.  Unfortunately a few went rogue and were never recovered.",
         icon="773096",
@@ -13153,9 +11938,9 @@ PETS.all ={
         displayID=47021,
         family=10,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="This model of raptors is produced in the Blade's Edge Mountains.  Their robotic roars are a common sound near Toshley Station.",
         icon="774414",
@@ -13170,9 +11955,9 @@ PETS.all ={
         displayID=47635,
         family=2,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="The runts of Malygos brood, these whelplings are prized for their boundless arcane magics.",
         icon="797547",
@@ -13187,9 +11972,9 @@ PETS.all ={
         displayID=46953,
         family=1,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Indigenous to the peaks of Kun-Lai Summit, this rare yeti is much more dangerous than it looks.",
         icon="797882",
@@ -13204,9 +11989,9 @@ PETS.all ={
         displayID=46954,
         family=2,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="These beautiful drakes can be found across the shores of Northrend.",
         icon="587740",
@@ -13220,10 +12005,10 @@ PETS.all ={
         companionID=15361,
         displayID=15395,
         family=1,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Promotion",
         flavor="Murki is one of the world's rarest species of murloc.",
         icon="132834",
@@ -13238,10 +12023,10 @@ PETS.all ={
         companionID=69208,
         displayID=47348,
         family=6,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Trading Card Game",
         flavor="A fel-tainted tome whose secrets are so terrible and bizarre that its pages have taken on an eerie semblance of life. Found on many a warlock's nightstand.",
         icon="355498",
@@ -13257,9 +12042,9 @@ PETS.all ={
         displayID=47633,
         family=7,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Touched by lightning, these dangerous rodents should be kept at a safe distance.",
         icon="796787",
@@ -13273,10 +12058,10 @@ PETS.all ={
         companionID=69649,
         displayID=47634,
         family=8,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Quest",
         flavor="Can you believe how cute i am? Mei Neither.",
         icon="774009",
@@ -13291,10 +12076,10 @@ PETS.all ={
         companionID=69748,
         displayID=47252,
         family=7,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Born of sand, these dangerous creatures can form and disperse in the blink of an eye.",
         icon="796636",
@@ -13309,10 +12094,10 @@ PETS.all ={
         companionID=69778,
         displayID=47848,
         family=10,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Loyal to the Sunreavers from creation, these pint-sized constructs can still pack a punch.",
         icon="838516",
@@ -13328,9 +12113,9 @@ PETS.all ={
         displayID=47690,
         family=7,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Lightning can be seen flowing across its body, teeth to tail.",
         icon="801473",
@@ -13344,10 +12129,10 @@ PETS.all ={
         companionID=69796,
         displayID=47731,
         family=8,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="This unique raptor was born on the island of Zandalar and transported here along with the rest of the Zandalari army.",
         icon="797325",
@@ -13363,9 +12148,9 @@ PETS.all ={
         displayID=47887,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="These snakes have been known to swallow gnomes in one gulp.",
         icon="801474",
@@ -13380,9 +12165,9 @@ PETS.all ={
         displayID=47989,
         family=9,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Probably best not to touch it.",
         icon="804969",
@@ -13396,10 +12181,10 @@ PETS.all ={
         companionID=69820,
         displayID=47708,
         family=10,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Forged in the Throne of Thunder, these tiny creations are servants of the great Dark Animus.",
         icon="838812",
@@ -13414,10 +12199,10 @@ PETS.all ={
         companionID=69849,
         displayID=48211,
         family=8,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Achievement",
         flavor="Even at this tiny size, Direhorns are known to wreak havoc on unsuspecting victims.",
         icon="840541",
@@ -13431,10 +12216,10 @@ PETS.all ={
         companionID=69848,
         displayID=47732,
         family=6,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Quest",
         flavor="Something about this creature looks familiar...",
         icon="838549",
@@ -13449,10 +12234,10 @@ PETS.all ={
         companionID=69891,
         displayID=47747,
         family=8,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Quest",
         flavor="These cuddly rascals enjoy basking in the sun, sleeping in the sun, and napping in the sun.",
         icon="643423",
@@ -13467,10 +12252,10 @@ PETS.all ={
         companionID=69893,
         displayID=47749,
         family=8,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Quest",
         flavor="The white fur of the Snowy Panda allows it to hide in the snowbanks of Kun-Lai Summit.",
         icon="838693",
@@ -13485,10 +12270,10 @@ PETS.all ={
         companionID=69892,
         displayID=47748,
         family=8,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Quest",
         flavor="Cousin to the Snowy Panda, Mountain Pandas reside n the lower regions of Kun-Lai Summit.",
         icon="838691",
@@ -13503,10 +12288,10 @@ PETS.all ={
         companionID=70083,
         displayID=48212,
         family=8,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Don't pet the pointy end. Note: all of the ends are pointy.",
         icon="840540",
@@ -13521,10 +12306,10 @@ PETS.all ={
         companionID=70098,
         displayID=48091,
         family=9,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Some Pandaren believe G'nathus to be an ancient Zandalari Loa left behind to guard the waters south of Lei Shen's island citadel.",
         icon="133898",
@@ -13539,10 +12324,10 @@ PETS.all ={
         companionID=70144,
         displayID=48001,
         family=3,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Deadly offspring of the Ancient Mother, Ji-Kun Hatchlings are considered sacred treasures in many cultures.",
         icon="838694",
@@ -13557,10 +12342,10 @@ PETS.all ={
         companionID=70082,
         displayID=47711,
         family=10,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Profession",
         flavor="Every cook's dream wrapped up in a perfect bundle of metal and bolts. Too bad what he cooks up isn't suitable for humanoid consumption. According to Jard's notes, he intends to make this little guy for his friend, Emily Cole.",
         icon="798062",
@@ -13575,10 +12360,10 @@ PETS.all ={
         companionID=70154,
         displayID=48213,
         family=8,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="The Zandalari breed specific Direhorn species for their small size for use as mounts.",
         icon="840542",
@@ -13593,10 +12378,10 @@ PETS.all ={
         companionID=70257,
         displayID=47959,
         family=9,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Fishing",
         flavor="The red scales on these fish are believed to be a warning to predators of the Townlong Steppes and the Dread Wastes that their flesh is toxic. Dedicated fishermen can sometimes befriend one.",
         icon="850139",
@@ -13611,10 +12396,10 @@ PETS.all ={
         companionID=70258,
         displayID=47957,
         family=9,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Fishing",
         flavor="These little guys can be found in the waters of the Timeless Isle, or swimming alongside Jewel Danio or Redbelly Mandarin. Dedicated fishermen can sometimes befriend one.",
         icon="850137",
@@ -13628,10 +12413,10 @@ PETS.all ={
         companionID=70259,
         displayID=47958,
         family=9,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Fishing",
         flavor="It is believed that the green coloration and stripes on the tiny green carp serve as camouflage in the waters of the Jade Forest, Valley of the Four Winds and the Krasarang Wilds. Dedicated fishermen can sometimes befriend one.",
         icon="850138",
@@ -13645,10 +12430,10 @@ PETS.all ={
         companionID=70260,
         displayID=47960,
         family=9,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Fishing",
         flavor="These hardy fish can survive in a wide range of climates, from the snow capped mountains of Kun-Lai Summit to the temperate, salty waters of the oceans around Pandaria. Dedicated fishermen can sometimes befriend one.",
         icon="850140",
@@ -13663,10 +12448,10 @@ PETS.all ={
         companionID=70451,
         displayID=48055,
         family=8,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="These tiny minions of Zandalar are adept at stowing away within the cargo holds of the enormous Zandalari warships.",
         icon="797326",
@@ -13681,10 +12466,10 @@ PETS.all ={
         companionID=70452,
         displayID=48056,
         family=8,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Even at this size, these raptors can eviscerate an entire cow in less than 10 seconds.",
         icon="797327",
@@ -13699,10 +12484,10 @@ PETS.all ={
         companionID=70453,
         displayID=48057,
         family=8,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="These adorable beasts are both cuddly and huggable, provided you do not enjoy having a face.",
         icon="797328",
@@ -13717,10 +12502,10 @@ PETS.all ={
         companionID=71014,
         displayID=48878,
         family=1,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="The oft-forgotten offspring of the Big Bad Wolf, found gorged and asleep in a basket of sweets.",
         icon="463876",
@@ -13735,10 +12520,10 @@ PETS.all ={
         companionID=71015,
         displayID=48857,
         family=10,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Primary responsibilities include dusting Medivh's many magical artifacts, an activity which has claimed the life, sanity, or physical composition of the many caretakers preceding Moroes.",
         icon="236513",
@@ -13753,10 +12538,10 @@ PETS.all ={
         companionID=71016,
         displayID=48856,
         family=6,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Upon leaving Netherspace, Malchezaar's Abyssals become strangely distorted by Karazhan's magical protections, rendering them tiny, and much less likely to spontaneously erupt in flames.",
         icon="615096",
@@ -13771,10 +12556,10 @@ PETS.all ={
         companionID=71033,
         displayID=48662,
         family=1,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="A minion of Terestian Illhoof, this tricky imp was left in Karazhan when the portal to the Twisting Nether closed behind it.",
         icon="460856",
@@ -13789,10 +12574,10 @@ PETS.all ={
         companionID=71017,
         displayID=48855,
         family=9,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="An astounding find for the scientific community of Azeroth, who have long pondered, often in taverns, what a baby Sea Giant might look like.",
         icon="443382",
@@ -13807,10 +12592,10 @@ PETS.all ={
         companionID=71018,
         displayID=48666,
         family=7,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="The spawn of Hydross, considered by the elemental community to be the \"Earl of Puddles.\"",
         icon="136030",
@@ -13825,10 +12610,10 @@ PETS.all ={
         companionID=71019,
         displayID=48661,
         family=6,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="It is unknown how Lady Vashj empowers these Fen Striders with their mind-bending powers; even at an early age this creature shows significant psychic ability.",
         icon="254502",
@@ -13843,10 +12628,10 @@ PETS.all ={
         companionID=71020,
         displayID=48664,
         family=10,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Sent through the Twisting Nether by the great Archimonde the Defiler to terrorize tiny civilizations with their medium-sized stomping noises.",
         icon="466089",
@@ -13861,10 +12646,10 @@ PETS.all ={
         companionID=71021,
         displayID=48668,
         family=6,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="The lanterns carried by Voidcallers bridge the realms of the living and the dead, and often attract wayward ghosts and spirits.",
         icon="538447",
@@ -13879,10 +12664,10 @@ PETS.all ={
         companionID=71022,
         displayID=48663,
         family=2,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="These brightly-colored dragonhawks carry Kael'thas' forces swiftly and unerringly through the nether storm surrounding the Eye.",
         icon="132188",
@@ -13897,10 +12682,10 @@ PETS.all ={
         companionID=71023,
         displayID=48667,
         family=8,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Achievement",
         flavor="Though generally an expert at taking stage direction, the show had to be stopped on more than one occasion when Tito and Roar would lock eyes, resulting in an extended chase around the Karazhan Opera House.",
         icon="133695",
@@ -13914,10 +12699,10 @@ PETS.all ={
         companionID=71159,
         displayID=48651,
         family=9,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="The trolls have a long and storied history of summoning hydras. While he might not be the biggest or strongest hydra, Gahz'rooki will bite your fingers quite hard if you get too close.",
         icon="463493",
@@ -13937,9 +12722,9 @@ PETS.all ={
         displayID=48650,
         family=4,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Val'kyr are considered \"unborn\" until they vanquish a creature of high nobility.",
         icon="851119",
@@ -13963,10 +12748,10 @@ PETS.all ={
         companionID=71199,
         displayID=48704,
         family=6,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="The dark pools in Primordius' chamber laid stagnant after the fall of the mogu, and murky thoughts began to coalesce.",
         icon="237513",
@@ -13982,10 +12767,10 @@ PETS.all ={
         companionID=71200,
         displayID=48705,
         family=6,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="These malicious oozes are highly sensitive to Primordius' pheromone signature.",
         icon="576309",
@@ -14001,10 +12786,10 @@ PETS.all ={
         companionID=71201,
         displayID=48708,
         family=6,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Battle pet trainers are strongly encouraged to wash their hands for at least 30 minutes after playing with the filthling.",
         icon="576313",
@@ -14019,10 +12804,10 @@ PETS.all ={
         companionID=71488,
         displayID=48934,
         family=7,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="In-Game Shop",
         flavor="This budding ancient is a unique variety in Azeroth, created from the ever-living branches of the Great Tree, and can bloom in any season.",
         icon="874857",
@@ -14035,10 +12820,10 @@ PETS.all ={
         companionID=71655,
         displayID=64587,
         family=6,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Promotion",
         flavor="Infamous psionic battering ram of the Protoss, Zeradar is also the only archon that can utilize psionic storm. Power overwhelming!",
         icon="1125916",
@@ -14053,10 +12838,10 @@ PETS.all ={
         companionID=71693,
         displayID=49084,
         family=10,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Profession",
         flavor="This little guy seems to like to hang out at the fringes of cataclysmic events. There is no evidence to suggest he has anything to do with the cause of these events, though - he's probably just an observer. Or maybe he just gets lost on his trek to other places.",
         icon="876476",
@@ -14071,10 +12856,10 @@ PETS.all ={
         companionID=71942,
         displayID=49846,
         family=8,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Vendor",
         flavor="Fierce and loyal, Xu-Fu loves to hunt by moonlight.  Once during a full moon, he killed and ate an entire Ironfur Great Bull, prompting a two day nap.",
         icon="877410",
@@ -14090,10 +12875,10 @@ PETS.all ={
         companionID=72160,
         displayID=855,
         family=8,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Moonfang's cubs grow into massive, slavering, black-furred killing machines...except for Moon Moon.",
         icon="538568",
@@ -14108,10 +12893,10 @@ PETS.all ={
         companionID=72462,
         displayID=49835,
         family=3,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Vendor",
         flavor="Chi-Chi tries to inspire hope with her loud squawk and by chasing, and eventually eating, butterflies.",
         icon="877514",
@@ -14127,10 +12912,10 @@ PETS.all ={
         companionID=72463,
         displayID=49836,
         family=2,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Vendor",
         flavor="A master sculptor devoted her life to creating an incomparably beautiful statue, inspired by her love and reverence for Yu'lon.  When the sculptor passed away, Yu'lon breathed a fraction of her essence into the statue, bringing Yu'la into the world.",
         icon="877408",
@@ -14146,10 +12931,10 @@ PETS.all ={
         companionID=72464,
         displayID=49845,
         family=8,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Vendor",
         flavor="Always on the lookout for a fight or some tasty grass, Zao keeps his head down and eyes forward.",
         icon="900317",
@@ -14165,10 +12950,10 @@ PETS.all ={
         companionID=73011,
         displayID=49289,
         family=10,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="This handsome little robot is the spitting image of his \"Dad\", Blingtron 4000.  As a Blingtron's generosity circuits don't mature until they have been built to maximum specification, you shouldn't expect any free handouts from him.",
         icon="773178",
@@ -14182,10 +12967,10 @@ PETS.all ={
         companionID=73534,
         displayID=51413,
         family=3,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Crane chicks of the Timeless Isle sometimes sing a curious song that calms the nerves and soothes the soul.",
         icon="646586",
@@ -14200,10 +12985,10 @@ PETS.all ={
         companionID=73352,
         displayID=51268,
         family=10,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="The first bombling created in the Underhold, Siegecrafter Blackfuse couldn't bear to see it destroyed, and kept it as a friendly, if explosive, pet.",
         icon="897633",
@@ -14218,10 +13003,10 @@ PETS.all ={
         companionID=73533,
         displayID=40908,
         family=1,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="The Ashleaf Sprites of the Timeless Isle tirelessly protect the vegetation of the island from the burning fury of Ordos and his minions.",
         icon="136021",
@@ -14237,9 +13022,9 @@ PETS.all ={
         displayID=51742,
         family=3,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Jinyu assassins employ this moth as both a portable decoy and a light source to reveal weak spots in their enemy's armor.",
         icon="236193",
@@ -14254,9 +13039,9 @@ PETS.all ={
         displayID=51301,
         family=3,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Cats and other curious critters often have short-lived play sessions with this moth that end with a face full of singed hair.",
         icon="236193",
@@ -14274,9 +13059,9 @@ PETS.all ={
         displayID=51740,
         family=3,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="This curious moth is sometimes found interrupting the spells of a wandering mage or warlock.",
         icon="236193",
@@ -14290,10 +13075,10 @@ PETS.all ={
         companionID=73356,
         displayID=51271,
         family=7,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="The waters of Ruby Lake are colored a strange reddish hue, possibly due to the ruby crystals found deep within the mountains of the Timeless Isle.",
         icon="669468",
@@ -14308,10 +13093,10 @@ PETS.all ={
         companionID=73532,
         displayID=51408,
         family=1,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="While fascinated by flowers, the frolicker has also been known to dance with blades of grass and the occasional weed.",
         icon="348547",
@@ -14326,10 +13111,10 @@ PETS.all ={
         companionID=73364,
         displayID=51277,
         family=8,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Late in life, if the environmental conditions are correct, a Death Adder may shed its skin and undergo a transformation into an Imperial Python.",
         icon="801475",
@@ -14344,10 +13129,10 @@ PETS.all ={
         companionID=73350,
         displayID=51417,
         family=7,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="A small remnant of the power of Y'shaarj that spawned the Sha, a single Drop of Y'shaarj can magnify emotional states for thousands of yards, causing entire towns to shut down in fear or doubt.",
         icon="132851",
@@ -14363,10 +13148,10 @@ PETS.all ={
         companionID=73351,
         displayID=51267,
         family=7,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Sha-lings reflect the emotional state of their handler, becoming agitated, depressed, fearful, or doubtful depending on the magnitude of negative thoughts around them.",
         icon="651085",
@@ -14382,10 +13167,10 @@ PETS.all ={
         companionID=73355,
         displayID=51270,
         family=7,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="The Jademist Dancers of the Timeless Isle have a curious attraction to the steam vents of the northwestern shore.",
         icon="656560",
@@ -14400,10 +13185,10 @@ PETS.all ={
         companionID=73354,
         displayID=51269,
         family=8,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="The tiny terror of the Dread Wastes, Kovok prefers a steady diet of \"brain food:\" mushan brains, human brains, any brains really. This strange nutritional requirement may be tangentally related to his enormous head.",
         icon="624010",
@@ -14418,10 +13203,10 @@ PETS.all ={
         companionID=73357,
         displayID=51272,
         family=7,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="The odd blue flames found within the Cavern of Lost Spirits have led many unwary adventurers to their doom.",
         icon="135777",
@@ -14436,10 +13221,10 @@ PETS.all ={
         companionID=73367,
         displayID=51279,
         family=7,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="When the village of Pi'jiu was attacked by the Ordon Yaungol generations ago, the villagers bravely erected a keg in the center of the village. The following morning, after the celebration had died down, the still-drunken Yaungol blearily agreed to a peace treaty.",
         icon="669467",
@@ -14454,10 +13239,10 @@ PETS.all ={
         companionID=73366,
         displayID=51278,
         family=9,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Spineclaw crabs of Pandaria have existed for thousands of years and remain one of the continent's oldest creatures.",
         icon="132186",
@@ -14472,10 +13257,10 @@ PETS.all ={
         companionID=73359,
         displayID=47991,
         family=9,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Gulp frogs of the Timeless Isle can feast upon prey several times larger than themselves by slowly digesting the victim externally with a toxic slime.",
         icon="804966",
@@ -14490,10 +13275,10 @@ PETS.all ={
         companionID=73668,
         displayID=51475,
         family=1,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Some young and rambunctious hozen are trained from an early age to use boxing gloves so they don't accidentally kill their tribe members, and more importantly, to keep them from picking their noses.",
         icon="877482",
@@ -14508,10 +13293,10 @@ PETS.all ={
         companionID=73688,
         displayID=47858,
         family=8,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="One of the beasts left on the Timeless Isle when it shifted through time, most likely sacrificed by the Ordon to their demigod, Ordos.",
         icon="838551",
@@ -14527,10 +13312,10 @@ PETS.all ={
         companionID=73730,
         displayID=51502,
         family=5,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Swarmlings of Gu'chi spin an ancient, and very powerful, form of silk that has not been seen in Pandaria in ages.",
         icon="648918",
@@ -14545,10 +13330,10 @@ PETS.all ={
         companionID=73732,
         displayID=47856,
         family=6,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="Prolonged exposure to Shaohao's tranquil mists has calmed these spirits, which act as peaceful companions to the Mistweavers.",
         icon="838550",
@@ -14565,10 +13350,10 @@ PETS.all ={
         companionID=73738,
         displayID=51504,
         family=7,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="The Jadefire Spirit is thought to be a living embodiment of Yu'lon's own jade breath.",
         icon="135794",
@@ -14583,10 +13368,10 @@ PETS.all ={
         companionID=73741,
         displayID=51505,
         family=1,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="World Event",
         flavor="Fed up with long hours, low pay, and entitled adventurers whining about sub-standard Winter Veil gifts, these nasty little creatures fled their magical workshops to join up with the Abominable Greench.",
         icon="134144",
@@ -14600,9 +13385,9 @@ PETS.all ={
         companionID=73809,
         displayID=51530,
         family=3,
-        isWild=false,
-        isTradeable=false,
-        isUnique=false,
+
+
+
         isPassive=true,
         source="Vendor",
         flavor="A candle inside of the kite heats the air, causing it to rise into the air without the need for wind.",
@@ -14619,10 +13404,10 @@ PETS.all ={
         companionID=34770,
         displayID=29404,
         family=4,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="World Event",
         flavor="These possessed puppets are given a semblance of life by whimsical spirits of the departed.",
         icon="237272",
@@ -14636,10 +13421,10 @@ PETS.all ={
         companionID=74402,
         displayID=51988,
         family=8,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="In-Game Shop",
         flavor="A mastiff bred for rescue, the Alterac brewhound's bloodline is famous for having found and resuscitated many mountain travelers trapped beneath the snow... and then slobbering all over them.",
         icon="930453",
@@ -14652,10 +13437,10 @@ PETS.all ={
         companionID=74405,
         displayID=51990,
         family=1,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Promotion",
         flavor="We're Crusaders from a fable. We dance whene'er we're able. We do routines and chorus scenes, with footwork impeccable!",
         icon="615479",
@@ -14670,10 +13455,10 @@ PETS.all ={
         companionID=74413,
         displayID=51994,
         family=1,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Promotion",
         flavor="Watch your coin purse.",
         icon="370211",
@@ -14688,10 +13473,10 @@ PETS.all ={
         companionID=76873,
         displayID=53502,
         family=1,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Achievement",
         flavor="Tenacious and terrible, the mighty Hogs slaughters weaker enemies without hesitation.",
         icon="134163",
@@ -14705,10 +13490,10 @@ PETS.all ={
         companionID=77021,
         displayID=53610,
         family=2,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Quest",
         flavor="Both heads are equally fearsome on the terrifying chimaera, each capable of its own unique breath attack.",
         icon="236190",
@@ -14723,10 +13508,10 @@ PETS.all ={
         companionID=77137,
         displayID=53719,
         family=3,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Promotion",
         flavor="The dark wings will cloud and consume the minds of the weak, because they are just so adorable!",
         icon="952507",
@@ -14741,10 +13526,10 @@ PETS.all ={
         companionID=77221,
         displayID=53748,
         family=10,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Quest",
         flavor="This massive weapon of destruction has been miniaturized for use in the garden.  Moles beware!",
         icon="892829",
@@ -14762,10 +13547,10 @@ PETS.all ={
         companionID=78421,
         displayID=54511,
         family=4,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Quest",
         flavor="Made from bits and pieces of vanquished battle pets, dark magic, and just a pinch of love.",
         icon="136118",
@@ -14780,10 +13565,10 @@ PETS.all ={
         companionID=78895,
         displayID=54752,
         family=6,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Profession",
         flavor="Cute enough to eat, but not recommended.",
         icon="134062",
@@ -14797,10 +13582,10 @@ PETS.all ={
         companionID=79039,
         displayID=54848,
         family=7,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="Left to their own devices, carrots will simply lose their minds.",
         icon="134010",
@@ -14822,10 +13607,10 @@ PETS.all ={
         companionID=79410,
         displayID=59021,
         family=3,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Profession",
         flavor="Squeeeeeeeawk!",
         icon="132598",
@@ -14839,10 +13624,10 @@ PETS.all ={
         companionID=80101,
         displayID=53878,
         family=3,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Achievement",
         flavor="A single peacock feather is often laid upon a grave to ward off evil spirits.",
         icon="667691",
@@ -14857,10 +13642,10 @@ PETS.all ={
         companionID=80329,
         displayID=55679,
         family=10,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Profession",
         flavor="After many complaints that taming young boars was a painful experience, engineers came to the rescue with this creepily lifelike model.",
         icon="463878",
@@ -14874,10 +13659,10 @@ PETS.all ={
         companionID=81431,
         displayID=58722,
         family=3,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="The teroclaw is a potent hunter of the small and furry.",
         icon="132921",
@@ -14892,10 +13677,10 @@ PETS.all ={
         companionID=82464,
         displayID=58170,
         family=6,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Profession",
         flavor="This adorable little elephant is always there for you.",
         icon="1044082",
@@ -14910,9 +13695,9 @@ PETS.all ={
         displayID=4960,
         family=5,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Annoying and destructive, they can be coaxed with enough cheese to become a tolerable companion.",
         icon="134324",
@@ -14929,10 +13714,10 @@ PETS.all ={
         companionID=83562,
         displayID=57803,
         family=4,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Zomstrok is evil incarnate, the unholy mistake of someone maddened by isolation, a creation that could not be undone.",
         icon="134048",
@@ -14950,10 +13735,10 @@ PETS.all ={
         companionID=83584,
         displayID=57823,
         family=7,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="From seed to flower, a tiny terror is grown.",
         icon="960698",
@@ -14970,10 +13755,10 @@ PETS.all ={
         companionID=83583,
         displayID=57822,
         family=7,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="From seed to flower, a tiny terror is grown.",
         icon="960698",
@@ -14990,10 +13775,10 @@ PETS.all ={
         companionID=83594,
         displayID=57824,
         family=7,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Profession",
         flavor="From seed to flower, a tiny terror is grown.",
         icon="960698",
@@ -15007,10 +13792,10 @@ PETS.all ={
         companionID=83588,
         displayID=57825,
         family=7,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Quest",
         flavor="From seed to flower, a tiny terror is grown.",
         icon="960698",
@@ -15026,9 +13811,9 @@ PETS.all ={
         displayID=58606,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Many years ago, an ogre tried to use a leatherhide runt as kickball.  He was forever known as Onefoot afterwards.",
         icon="134060",
@@ -15043,9 +13828,9 @@ PETS.all ={
         displayID=47992,
         family=9,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Orcish children have a tradition where they sneak up on a mud jumper and whisper a secret they wish to come true.  If the mud jumper doesn't jump, the wish will come true.",
         icon="804968",
@@ -15065,10 +13850,10 @@ PETS.all ={
         companionID=83817,
         displayID=57970,
         family=4,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Quest",
         flavor="In the ultimate demonstration of stubborness, this once-living nannie simply refused to die.",
         icon="877477",
@@ -15083,10 +13868,10 @@ PETS.all ={
         companionID=84330,
         displayID=39130,
         family=8,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Quest",
         flavor="The intelligence and caring nature of elekk calves make them a stalwart lifelong companion.",
         icon="656599",
@@ -15102,9 +13887,9 @@ PETS.all ={
         displayID=56803,
         family=9,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="The moonshell crab reflects light so well that they can be picked up and used as a mirror.  Just keep your face away from the claws!",
         icon="2027885",
@@ -15118,10 +13903,10 @@ PETS.all ={
         companionID=84441,
         displayID=49259,
         family=9,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Fishing",
         flavor="The sea calf has a natural affinity for balancing things.",
         icon="134480",
@@ -15137,10 +13922,10 @@ PETS.all ={
         companionID=84521,
         displayID=58395,
         family=8,
-        isWild=false,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
+
         source="Vendor",
         flavor="This hatchling has an unusual sense that allows it to detect and follow along with alpha predators.",
         icon="1044497",
@@ -15159,10 +13944,10 @@ PETS.all ={
         companionID=84885,
         displayID=58547,
         family=10,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="While these tiny mechanical guardians were created to protect domesticated elekks from pests, they also turned out to be really good at giving back massages.",
         icon="986488",
@@ -15179,10 +13964,10 @@ PETS.all ={
         companionID=84915,
         displayID=58570,
         family=7,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Promotion",
         flavor="Loves to herd imps, roll around in lava, and snuggle with elemental lords.",
         icon="1044792",
@@ -15197,10 +13982,10 @@ PETS.all ={
         companionID=79730,
         displayID=55291,
         family=8,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="Surprisingly quick when provoked, but easily calmed with a meal of Nagrand arrowbloom.",
         icon="1044480",
@@ -15217,10 +14002,10 @@ PETS.all ={
         companionID=85009,
         displayID=64589,
         family=1,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Promotion",
         flavor="After consuming the shin bone of Gul'dan, this fiesty demon hunter was caged for 10000 years by his brother Murkfurion.",
         icon="1129435",
@@ -15236,9 +14021,9 @@ PETS.all ={
         displayID=58612,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Camouflaged like moss, the skitterer will hide in trees and leap on their victims from above.",
         icon="1044500",
@@ -15253,9 +14038,9 @@ PETS.all ={
         displayID=58614,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Their deceptively cute looks will lure in their prey, and then greet them with a flurry of devastating swipes. Hug with caution.",
         icon="1044500",
@@ -15270,9 +14055,9 @@ PETS.all ={
         displayID=58610,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Equipped with extremely sharp claws, these frigid hatchlings dig through thick layers of ice and rock for shelter.",
         icon="1044498",
@@ -15286,10 +14071,10 @@ PETS.all ={
         companionID=85014,
         displayID=58617,
         family=3,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="One ogre ritual involves cupping a bone wasp in their hands and shaking vigorously.  The venom increases strength and invokes vivid imagery.",
         icon="1044486",
@@ -15307,9 +14092,9 @@ PETS.all ={
         displayID=58746,
         family=3,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Contrary to popular belief, bloodsting wasps do not feed on blood, but love.",
         icon="1044488",
@@ -15324,9 +14109,9 @@ PETS.all ={
         displayID=58745,
         family=3,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Wood wasps make nests in dead or hollowed out trees, and are quick to attack anything that threatens their home.",
         icon="1044487",
@@ -15341,9 +14126,9 @@ PETS.all ={
         displayID=58744,
         family=3,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="In the moonlight their wings create a glittering aura, giving the illusion of twinkling starlight.",
         icon="1044485",
@@ -15362,9 +14147,9 @@ PETS.all ={
         displayID=58748,
         family=3,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Amberbarbs often try to provoke larger creatures to attack it. Once their victim strikes them, they will retaliate with the entire hive.",
         icon="1044489",
@@ -15378,10 +14163,10 @@ PETS.all ={
         companionID=85283,
         displayID=64621,
         family=6,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="In-Game Shop",
         flavor="This magical kitty has so much energy that she will sometimes zip around for no reason whatsoever.",
         icon="1116250",
@@ -15394,10 +14179,10 @@ PETS.all ={
         companionID=85284,
         displayID=58770,
         family=10,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="The Sky-Bo was originally designed by the infamous Millie Watt as a toy for her cat.  The cat just slept in the box next to it.",
         icon="894222",
@@ -15412,9 +14197,9 @@ PETS.all ={
         displayID=58826,
         family=3,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="The ancient tribes of Draenor were known to harvest their sharp beaks for crude tools and weapons.",
         icon="1045160",
@@ -15429,9 +14214,9 @@ PETS.all ={
         displayID=58823,
         family=3,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="The colorful plumage from these birds are highly sought after by collectors. It is rumored that wearing these feathers will bring you good luck.",
         icon="1045161",
@@ -15446,9 +14231,9 @@ PETS.all ={
         displayID=58824,
         family=3,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="The edges of its beak are particularly sharp. Watch your fingers during feeding time!",
         icon="1045158",
@@ -15462,10 +14247,10 @@ PETS.all ={
         companionID=85387,
         displayID=58825,
         family=3,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="This anxious avian has a voracious appetite for fruit.",
         icon="133997",
@@ -15480,10 +14265,10 @@ PETS.all ={
         companionID=85527,
         displayID=47931,
         family=6,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="This tiny squid seems to enjoy wearing pants, but where in the world would you find some that fit?",
         icon="632858",
@@ -15499,10 +14284,10 @@ PETS.all ={
         companionID=85667,
         displayID=60875,
         family=1,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Profession",
         flavor="They eat and eat and eat, until they grow large.  Then they eat some more.",
         icon="443397",
@@ -15516,10 +14301,10 @@ PETS.all ={
         companionID=85710,
         displayID=28502,
         family=5,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="World Event",
         flavor="Of course there are hatchlings, they're called Lovebirds aren't they?",
         icon="132198",
@@ -15533,9 +14318,9 @@ PETS.all ={
         companionID=85773,
         displayID=59099,
         family=3,
-        isWild=false,
-        isTradeable=false,
-        isUnique=false,
+
+
+
         isPassive=true,
         source="World Event",
         flavor="Animated by magical means, and chlorophyll.",
@@ -15550,10 +14335,10 @@ PETS.all ={
         companionID=85231,
         displayID=58736,
         family=10,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="The master-crafted gear assembly and precision joints in this robot are clearly made with love.",
         icon="986489",
@@ -15568,10 +14353,10 @@ PETS.all ={
         companionID=85846,
         displayID=30969,
         family=5,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="World Event",
         flavor="Following their introduction to the mainland by the goblins, Bush Chickens have become the entre du jour for Pilgrim's Bounty due to their high deliciousness and low intelligence.",
         icon="132926",
@@ -15585,10 +14370,10 @@ PETS.all ={
         companionID=85872,
         displayID=38473,
         family=7,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="World Event",
         flavor="Tiny, incinerated corpses of various insects line its cage.",
         icon="519830",
@@ -15602,10 +14387,10 @@ PETS.all ={
         companionID=85994,
         displayID=42430,
         family=7,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="World Event",
         flavor="The Pandaren Brewmasters accidentally brought a barrel of Uncle Gao's last sentient batch of brew with them to Brewfest.",
         icon="669468",
@@ -15619,10 +14404,10 @@ PETS.all ={
         companionID=86061,
         displayID=58169,
         family=4,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="World Event",
         flavor="One of this cat's nine lives has returned to haunt the living by yowling loudly when you're trying to sleep.",
         icon="454045",
@@ -15636,10 +14421,10 @@ PETS.all ={
         companionID=86067,
         displayID=59330,
         family=4,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="World Event",
         flavor="Not even death would stop this kitten's insatiable curiosity.",
         icon="656575",
@@ -15653,10 +14438,10 @@ PETS.all ={
         companionID=86081,
         displayID=59352,
         family=6,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="This slime has a long and confusing lineage.",
         icon="136007",
@@ -15671,10 +14456,10 @@ PETS.all ={
         companionID=86422,
         displayID=59578,
         family=4,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Archaeology",
         flavor="The little wolf told to stay.\nWatching, waiting, for vacant prey.\nToo proud to leave, she slipped away.\nUnburdened now, forever free to play.",
         icon="1120424",
@@ -15687,10 +14472,10 @@ PETS.all ={
         companionID=86420,
         displayID=59577,
         family=10,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Archaeology",
         flavor="The ancient nest guardian was designed with the unthinkable in mind: to hate cats.",
         icon="986483",
@@ -15703,10 +14488,10 @@ PETS.all ={
         companionID=86447,
         displayID=59602,
         family=3,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Quest",
         flavor="Kaliri hatchlings feast on grubs when they're young, and eventually graduate to anything smaller than themselves.",
         icon="132914",
@@ -15721,10 +14506,10 @@ PETS.all ={
         companionID=86532,
         displayID=59668,
         family=2,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="No one knows what deep part of Blackwing Descent the Lanticore was kept in, but it probably smelled pretty awful.",
         icon="462337",
@@ -15739,10 +14524,10 @@ PETS.all ={
         companionID=86715,
         displayID=59885,
         family=3,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="In Draenor, the Zangar Sea seeks to overtake the land by releasing thousands of these spores and slowly growing inland over time.",
         icon="460954",
@@ -15757,10 +14542,10 @@ PETS.all ={
         companionID=86716,
         displayID=61549,
         family=3,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="A spore plucked from the Crimson Fen, an area of Gorgrond that was swallowed when Draenor was torn apart by nether magics.",
         icon="463282",
@@ -15775,10 +14560,10 @@ PETS.all ={
         companionID=86717,
         displayID=61548,
         family=3,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="The deep blue Umbrafen would later become home to a tribe of Broken.",
         icon="463280",
@@ -15793,10 +14578,10 @@ PETS.all ={
         companionID=86718,
         displayID=61550,
         family=3,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="A spore from Zangarra, a central area of the Zangar encroachment that would later bloom into the Zangarmarsh.",
         icon="463281",
@@ -15811,10 +14596,10 @@ PETS.all ={
         companionID=86719,
         displayID=61547,
         family=3,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Brilliant spores are very rarely seen, found deep under the waves of Draenor within the darkest corners of the Zangar fungal encroachment.",
         icon="132851",
@@ -15829,10 +14614,10 @@ PETS.all ={
         companionID=86879,
         displayID=60016,
         family=9,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="The hydraling can be an expensive pet, as it is capable of eating from three food bowls at the same time.",
         icon="463493",
@@ -15847,10 +14632,10 @@ PETS.all ={
         companionID=87111,
         displayID=54855,
         family=8,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="These pups are bundles of fur and teeth until they grow up, at which point they are really just teeth.",
         icon="1120424",
@@ -15867,10 +14652,10 @@ PETS.all ={
         companionID=87257,
         displayID=58932,
         family=5,
-        isWild=false,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
+
         source="Drop",
         flavor="Originally bred to make milk more palatable for gnomes.",
         icon="136072",
@@ -15885,10 +14670,10 @@ PETS.all ={
         companionID=87669,
         displayID=60441,
         family=7,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="His hate is not diminished by size.",
         icon="525026",
@@ -15903,10 +14688,10 @@ PETS.all ={
         companionID=87704,
         displayID=59017,
         family=3,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Quest",
         flavor="Don't line her cage with paper unless you want a fire.",
         icon="526578",
@@ -15921,10 +14706,10 @@ PETS.all ={
         companionID=87705,
         displayID=60458,
         family=3,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Achievement",
         flavor="Half bird, half elemental, the beautiful Stormwing is truly capable of shock and awe.",
         icon="897087",
@@ -15938,10 +14723,10 @@ PETS.all ={
         companionID=7546,
         displayID=6292,
         family=2,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="The Bronze Whelpling was lost in time until an unusual event allowed her to escape.",
         icon="134156",
@@ -15956,10 +14741,10 @@ PETS.all ={
         companionID=88103,
         displayID=60732,
         family=7,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="A clear indication why goblin fertilizers should be used sparingly.",
         icon="134205",
@@ -15974,10 +14759,10 @@ PETS.all ={
         companionID=88134,
         displayID=49122,
         family=10,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Profession",
         flavor="Iron, iron, steel and fire.  Bellows, gears, plates, and wire.",
         icon="986492",
@@ -15991,10 +14776,10 @@ PETS.all ={
         companionID=88222,
         displayID=60819,
         family=3,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Quest",
         flavor="These tiny creatures seem to favor big, fluffy nests, preferably atop an animal-loving dryad.",
         icon="667692",
@@ -16009,10 +14794,10 @@ PETS.all ={
         companionID=88225,
         displayID=60820,
         family=3,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Quest",
         flavor="The companion of a night elf sentinel, rarely given out as a gift.",
         icon="133247",
@@ -16027,10 +14812,10 @@ PETS.all ={
         companionID=88300,
         displayID=59038,
         family=9,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Quest",
         flavor="Living so closely to the water's surface, the puddle terror is not only friend to all aquatic creatures, it is one.",
         icon="893777",
@@ -16045,10 +14830,10 @@ PETS.all ={
         companionID=84853,
         displayID=58534,
         family=7,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Profession",
         flavor="When forging enchanted steel, bits of magic seep into the coals.  Over a period of years, decades even, the unbound energy slowly takes form, creating a tiny elemental being of immense fortitude.",
         icon="1044088",
@@ -16062,10 +14847,10 @@ PETS.all ={
         companionID=88367,
         displayID=60617,
         family=3,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Quest",
         flavor="Legend says the Sunfire Kaliri flies into the sun itself when it is ready to die.",
         icon="132919",
@@ -16080,10 +14865,10 @@ PETS.all ={
         companionID=85281,
         displayID=58768,
         family=8,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="Their white hide would make them vulnerable to sunburn, if it wasn't as thick as plate armor.",
         icon="1044482",
@@ -16101,9 +14886,9 @@ PETS.all ={
         displayID=59130,
         family=3,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="The bloodfeather is completely fearless, fanning out its feathers and charging any threat.",
         icon="667690",
@@ -16118,9 +14903,9 @@ PETS.all ={
         displayID=59131,
         family=3,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="It's said the feathers glitter like gold when the rising sun shines upon them.",
         icon="667690",
@@ -16134,10 +14919,10 @@ PETS.all ={
         companionID=88401,
         displayID=60876,
         family=4,
-        isWild=false,
+
         isTradeable=true,
         isUnique=true,
-        isPassive=false,
+
         source="Vendor",
         flavor="Godlike being now in travel size.",
         icon="1029738",
@@ -16160,10 +14945,10 @@ PETS.all ={
         companionID=88452,
         displayID=60909,
         family=3,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="Playing fetch with a ray is always fun.  You don't even have to aim.",
         icon="132191",
@@ -16180,10 +14965,10 @@ PETS.all ={
         companionID=88490,
         displayID=60930,
         family=6,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="You'll always feel like... something is watching you.",
         icon="236407",
@@ -16198,10 +14983,10 @@ PETS.all ={
         companionID=88514,
         displayID=58613,
         family=8,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="Ravagers are favored ogre snacks when they are small and less deadly.",
         icon="1044499",
@@ -16222,9 +15007,9 @@ PETS.all ={
         displayID=60923,
         family=9,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="The frostshell pinchers build up layers of ice to give them the extra protection from larger predators.",
         icon="132186",
@@ -16239,9 +15024,9 @@ PETS.all ={
         displayID=60922,
         family=9,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="With claws that can crush a platemail gauntlet, it's best to handle with care.",
         icon="132186",
@@ -16259,9 +15044,9 @@ PETS.all ={
         displayID=60916,
         family=9,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="These crafty crustaceans burrow under the mud to avoid being scooped up by larger predators.",
         icon="132186",
@@ -16276,9 +15061,9 @@ PETS.all ={
         displayID=60915,
         family=9,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="They feed off of the nutrient-rich fungal spores which gives these crabs the district coloring of their shells.",
         icon="132186",
@@ -16296,9 +15081,9 @@ PETS.all ={
         displayID=60914,
         family=9,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="They will cover themselves in seaweed and other ocean foliage to get the upper claw on their prey.",
         icon="132186",
@@ -16317,9 +15102,9 @@ PETS.all ={
         displayID=60618,
         family=3,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Delicate and dangerous, brilliant and bold, a beauty worth more than gold.",
         icon="236193",
@@ -16334,9 +15119,9 @@ PETS.all ={
         displayID=60891,
         family=3,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Their deep purple wings are highly sought after by ogre magi believing that they can bring prolonged life when added to potions.",
         icon="236193",
@@ -16355,10 +15140,10 @@ PETS.all ={
         companionID=88415,
         displayID=60889,
         family=3,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="Their wings emit a fine powder as a defensive mechanism when it is in danger.",
         icon="236193",
@@ -16379,9 +15164,9 @@ PETS.all ={
         displayID=60888,
         family=3,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Delicate and dangerous, brilliant and bold, a beauty worth more than its weight in gold.  Too bad they are so light.",
         icon="236193",
@@ -16396,9 +15181,9 @@ PETS.all ={
         displayID=60864,
         family=3,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Scholars have debated at length about how fireflies glow, but the leading hypothesis is \"magic\".",
         icon="236196",
@@ -16416,9 +15201,9 @@ PETS.all ={
         displayID=60863,
         family=3,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="These fireflies retain their purple glow by eating only purple flowers and nectar.",
         icon="236196",
@@ -16436,9 +15221,9 @@ PETS.all ={
         displayID=60862,
         family=3,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="It has been referred to as \"the flying gem\" due to its similar luster to the finest of sapphires.",
         icon="236196",
@@ -16453,9 +15238,9 @@ PETS.all ={
         displayID=60861,
         family=3,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="The watefly uses the surface of the water to reflect the light from their abdomen to attract mates.",
         icon="236196",
@@ -16475,9 +15260,9 @@ PETS.all ={
         displayID=58767,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Surprisingly quick when provoked, but easily calmed with a meal of Nagrand arrowbloom.",
         icon="979220",
@@ -16492,9 +15277,9 @@ PETS.all ={
         displayID=58766,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Surprisingly quick when provoked, but easily calmed with a meal of Nagrand arrowbloom.",
         icon="1044481",
@@ -16508,10 +15293,10 @@ PETS.all ={
         companionID=88573,
         displayID=59603,
         family=3,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="Hunted to near extinction for its feathers, this kaliri has developed keen senses.",
         icon="132914",
@@ -16527,10 +15312,10 @@ PETS.all ={
         companionID=88574,
         displayID=59034,
         family=3,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="Hunted to near extinction for its feathers, the kaliri has developed keen senses.",
         icon="132914",
@@ -16546,10 +15331,10 @@ PETS.all ={
         companionID=88575,
         displayID=60972,
         family=3,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="Wild sporebats are vicious creatures, but if tamed at a young age, they can be loyal companions.",
         icon="132197",
@@ -16570,9 +15355,9 @@ PETS.all ={
         displayID=60974,
         family=3,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Wild sporebats are vicious creatures, but if tamed at a young age, they can be loyal companions.",
         icon="132197",
@@ -16586,10 +15371,10 @@ PETS.all ={
         companionID=88577,
         displayID=60975,
         family=4,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Young bone serpents will try to burrow into a living creature's skull and devour their brain.  So you may want to wear a night cap.",
         icon="970830",
@@ -16607,10 +15392,10 @@ PETS.all ={
         companionID=88692,
         displayID=61016,
         family=6,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Demidos created a great many servants when he was hosting parties for other void lords.",
         icon="136221",
@@ -16625,10 +15410,10 @@ PETS.all ={
         companionID=88805,
         displayID=61127,
         family=1,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Promotion",
         flavor="No matter how much he screams, never give him demon blood.",
         icon="1044791",
@@ -16643,10 +15428,10 @@ PETS.all ={
         companionID=88807,
         displayID=61128,
         family=8,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="In-Game Shop",
         flavor="Often caught chewing on things they shouldn't be, goats were initially blamed for the crash of the Exodar.",
         icon="1044790",
@@ -16659,8 +15444,8 @@ PETS.all ={
         companionID=88814,
         displayID=61133,
         family=6,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
         isPassive=true,
         source="World Drop",
@@ -16676,10 +15461,10 @@ PETS.all ={
         companionID=88830,
         displayID=61148,
         family=6,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Achievement",
         flavor="A magical friend created with equal parts adventure and spirit.",
         icon="656597",
@@ -16694,9 +15479,9 @@ PETS.all ={
         displayID=36585,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Not only is it quick, it's loud too!",
         icon="463491",
@@ -16710,10 +15495,10 @@ PETS.all ={
         companionID=90200,
         displayID=61884,
         family=4,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="A smaller gargoyle that is used to divert the flow of rainwater on scourge buildings to prevent mausoleum flooding.",
         icon="458967",
@@ -16728,10 +15513,10 @@ PETS.all ={
         companionID=90201,
         displayID=61887,
         family=9,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="The dark green water in the Black Temple's sewer system gives these hydras their distinctive color.",
         icon="1100171",
@@ -16746,10 +15531,10 @@ PETS.all ={
         companionID=90202,
         displayID=61888,
         family=6,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="A fragment of the great abyssal Supremus, Abyssius contains enough fiery essence to burn a hole right through your pocket.",
         icon="1100169",
@@ -16764,10 +15549,10 @@ PETS.all ={
         companionID=90203,
         displayID=61890,
         family=4,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="It's just a little mad.",
         icon="1100173",
@@ -16782,10 +15567,10 @@ PETS.all ={
         companionID=90204,
         displayID=61891,
         family=4,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="It's only mildly irritated.",
         icon="1100175",
@@ -16800,10 +15585,10 @@ PETS.all ={
         companionID=90205,
         displayID=61889,
         family=4,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="It's only somewhat interested.",
         icon="1100174",
@@ -16818,10 +15603,10 @@ PETS.all ={
         companionID=90206,
         displayID=61892,
         family=1,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="She's the devil on your shoulder, whispering in your ear.",
         icon="136220",
@@ -16836,10 +15621,10 @@ PETS.all ={
         companionID=90207,
         displayID=61894,
         family=4,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="What's that smell?",
         icon="1100170",
@@ -16854,10 +15639,10 @@ PETS.all ={
         companionID=90208,
         displayID=40224,
         family=6,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Hundreds of these wisps came together to defend Hyjal from Archimonde and save the world.",
         icon="1100178",
@@ -16872,10 +15657,10 @@ PETS.all ={
         companionID=90212,
         displayID=61896,
         family=10,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Because you don't want to know what happens when a rat wanders into the Sunwell.",
         icon="1100176",
@@ -16890,10 +15675,10 @@ PETS.all ={
         companionID=90213,
         displayID=62466,
         family=6,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="The Twisting Nether is an infinite abyss of terrors and one small corner of extreme cuteness.",
         icon="1100177",
@@ -16908,10 +15693,10 @@ PETS.all ={
         companionID=90214,
         displayID=61898,
         family=1,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Magic-addicted elves too small and frail to serve in Kil'Jaeden's army were relegated to servant roles for the higher-class demons.",
         icon="1100179",
@@ -16926,8 +15711,8 @@ PETS.all ={
         companionID=90215,
         displayID=61900,
         family=6,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
         isPassive=true,
         source="Achievement",
@@ -16943,10 +15728,10 @@ PETS.all ={
         companionID=90345,
         displayID=62404,
         family=10,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Achievement",
         flavor="One of the Darkmoon Race's most obnoxious obstacles, now in the palm of your hand!",
         icon="134509",
@@ -16960,10 +15745,10 @@ PETS.all ={
         companionID=91226,
         displayID=62354,
         family=4,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Promotion",
         flavor="In one invasion of the Haunted Mines, a team of heroes only managed to collect a single skull. The golem that resulted, too small to do much damage to the enemy towers, wandered off into the Nexus, eventually finding its way to Azeroth.",
         icon="1065381",
@@ -16977,10 +15762,10 @@ PETS.all ={
         companionID=91407,
         displayID=62440,
         family=9,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="The rivers of Draenor are filled with moray.  They are vicious predators, attacking anything that enters the water.",
         icon="133897",
@@ -16999,10 +15784,10 @@ PETS.all ={
         companionID=91408,
         displayID=60609,
         family=8,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Talbuk grow their horns to full size at an early age.",
         icon="1044501",
@@ -17021,10 +15806,10 @@ PETS.all ={
         companionID=91823,
         displayID=61986,
         family=8,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Quest",
         flavor="These pups are bundles of fur and teeth until they grow up, at which point they are really just teeth.",
         icon="1120425",
@@ -17039,10 +15824,10 @@ PETS.all ={
         companionID=93142,
         displayID=63447,
         family=8,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="Rumor has it that some beasts that were touched by the void exist in a space between this world and the next.",
         icon="1120427",
@@ -17062,10 +15847,10 @@ PETS.all ={
         companionID=93143,
         displayID=63446,
         family=8,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Mission",
         flavor="Found munching on a blackened bone in the Black Forge of Blackrock Foundry, this pup really seems to warm up to you quickly.",
         icon="1120426",
@@ -17080,10 +15865,10 @@ PETS.all ={
         companionID=93352,
         displayID=58760,
         family=8,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="These playful little riverbeasts enjoy scooping up a large mouthful of water and then spitting it at one another.",
         icon="979220",
@@ -17098,10 +15883,10 @@ PETS.all ={
         companionID=93483,
         displayID=63584,
         family=6,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Once a holy artifact used by draenei priests to calm spirits, it has become animated by anguished souls and drawn to locations of death and corruption.",
         icon="133706",
@@ -17116,10 +15901,10 @@ PETS.all ={
         companionID=93808,
         displayID=63691,
         family=9,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="These crabs have developed an advanced form of camouflage that causes their skin to appear translucent.",
         icon="237176",
@@ -17135,9 +15920,9 @@ PETS.all ={
         companionID=93814,
         displayID=63693,
         family=9,
-        isWild=false,
-        isTradeable=false,
-        isUnique=false,
+
+
+
         isPassive=true,
         source="Vendor",
         flavor="This fish doesn't seem to respond to your commands at all, or notice that you're there, really.",
@@ -17154,10 +15939,10 @@ PETS.all ={
         companionID=94623,
         displayID=64097,
         family=10,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="There is very little difference between a corrupted nest guardian and an omelette chef.",
         icon="1117883",
@@ -17172,10 +15957,10 @@ PETS.all ={
         companionID=94867,
         displayID=64194,
         family=9,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Mission",
         flavor="Who would leave such a cute shark behind? The Iron Horde truly has no soul.",
         icon="294472",
@@ -17190,10 +15975,10 @@ PETS.all ={
         companionID=94927,
         displayID=64222,
         family=1,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="Found wandering in a small blizzard, this lost goren carries a mining pick to show that he is a jack of all trades.",
         icon="1003743",
@@ -17215,10 +16000,10 @@ PETS.all ={
         companionID=95572,
         displayID=64425,
         family=7,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Treasure",
         flavor="A small amount of Cyrukh burns everlasting within this portion of the Cipher. Best keep it close to you.",
         icon="1135365",
@@ -17232,10 +16017,10 @@ PETS.all ={
         companionID=95841,
         displayID=64585,
         family=5,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Promotion",
         flavor="This young stalker was easily swayed from Sargeras' grasp by a handful of Magical Mini-Treats.",
         icon="1129035",
@@ -17250,10 +16035,10 @@ PETS.all ={
         companionID=96126,
         displayID=64720,
         family=8,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="Pets often look a lot like their owners, which is especially true if the owner was a saberon.",
         icon="132242",
@@ -17269,10 +16054,10 @@ PETS.all ={
         companionID=96123,
         displayID=38310,
         family=3,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="Arakkoa sun worship has resulted in the creation of some strange and monstrous minions.",
         icon="526578",
@@ -17289,10 +16074,10 @@ PETS.all ={
         companionID=96403,
         displayID=69490,
         family=6,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Profession",
         flavor="Strega the Hag enchanted her cauldron to prevent it from tipping over and spilling hot soup.  She never expected it to achieve sentience and attempt to murder her.",
         icon="1379178",
@@ -17306,10 +16091,10 @@ PETS.all ={
         companionID=96404,
         displayID=69489,
         family=6,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Profession",
         flavor="Strega the Hag didn't like carrying her own torches.  One quick enchantment, and the thing would dutifully follow her into the night.",
         icon="1379180",
@@ -17323,10 +16108,10 @@ PETS.all ={
         companionID=96405,
         displayID=69488,
         family=6,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Profession",
         flavor="Strega the Hag, tired of writing thank you notes, used her magic to automate the task.  Unfortunately, the pen had a dark side and all the recipients received strongly worded letters...",
         icon="1379179",
@@ -17340,10 +16125,10 @@ PETS.all ={
         companionID=96622,
         displayID=65071,
         family=8,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Quest",
         flavor="You saved him, but maybe he saved you.",
         icon="877481",
@@ -17358,10 +16143,10 @@ PETS.all ={
         companionID=96649,
         displayID=65070,
         family=8,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Quest",
         flavor="This little guy has had a rough start at life, be sure to take good care of him.",
         icon="446127",
@@ -17377,9 +16162,9 @@ PETS.all ={
         displayID=65066,
         family=3,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Many sailors believe that harming an albatross will bring terrible luck upon their voyage.",
         icon="464160",
@@ -17396,9 +16181,9 @@ PETS.all ={
         displayID=62219,
         family=3,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="While other species of birds take turns leading the flock during migration, the kingfeather always remains in the lead.  Whether this is an effort to help the rest of the flock conserve energy or out of dominance remains unknown.",
         icon="1392564",
@@ -17413,9 +16198,9 @@ PETS.all ={
         displayID=62217,
         family=3,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Always in its brother's shadow.",
         icon="1392564",
@@ -17429,10 +16214,10 @@ PETS.all ={
         companionID=97079,
         displayID=62216,
         family=3,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Quest",
         flavor="A very rare bird, but this one was intrusted to you.",
         icon="132172",
@@ -17448,9 +16233,9 @@ PETS.all ={
         displayID=62218,
         family=3,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="These birds often prey on turtles by dropping them from great heights to break open their shell.",
         icon="1392564",
@@ -17465,9 +16250,9 @@ PETS.all ={
         displayID=65089,
         family=3,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Its eyesight is better than its hearing.",
         icon="1387709",
@@ -17485,9 +16270,9 @@ PETS.all ={
         displayID=65091,
         family=3,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Its sharp eyes can spot a snowshoe rabbit in a snowstorm.",
         icon="1387709",
@@ -17501,10 +16286,10 @@ PETS.all ={
         companionID=97127,
         displayID=65090,
         family=3,
-        isWild=false,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
+
         source="Vendor",
         flavor="These creatures can hunt in almost pure darkness.",
         icon="1387709",
@@ -17521,10 +16306,10 @@ PETS.all ={
         companionID=97128,
         displayID=65087,
         family=3,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="A young companion in need of training.",
         icon="1387709",
@@ -17541,10 +16326,10 @@ PETS.all ={
         companionID=97174,
         displayID=65113,
         family=6,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="What was once a great enemy is now an adorable friend!",
         icon="1387707",
@@ -17561,10 +16346,10 @@ PETS.all ={
         companionID=97178,
         displayID=65111,
         family=6,
-        isWild=false,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
+
         source="Order Hall",
         flavor="What are YOU looking at?!",
         icon="1387707",
@@ -17579,10 +16364,10 @@ PETS.all ={
         companionID=97179,
         displayID=65112,
         family=6,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Hello. Is it me you're looking for?",
         icon="1387707",
@@ -17597,10 +16382,10 @@ PETS.all ={
         companionID=97207,
         displayID=65120,
         family=2,
-        isWild=false,
+
         isTradeable=true,
         isUnique=true,
-        isPassive=false,
+
         source="Quest",
         flavor="The great-great-great-great-great granddaughter of Senegos.",
         icon="134155",
@@ -17615,10 +16400,10 @@ PETS.all ={
         companionID=97205,
         displayID=71835,
         family=2,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Its scales are electrified, making it exceedingly tricky to cuddle.",
         icon="134158",
@@ -17634,9 +16419,9 @@ PETS.all ={
         displayID=65121,
         family=2,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Beautiful dreamer, wake unto me, Starlight and dewdrops are waiting for thee.",
         icon="134157",
@@ -17663,10 +16448,10 @@ PETS.all ={
         companionID=112015,
         displayID=71945,
         family=2,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="What's a little corruption between friends?",
         icon="1354171",
@@ -17681,10 +16466,10 @@ PETS.all ={
         companionID=97229,
         displayID=65128,
         family=1,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="World Event",
         flavor="Grumplings are created when the tears of a kidnapped child fall upon a mound of new snow.",
         icon="1245298",
@@ -17699,9 +16484,9 @@ PETS.all ={
         displayID=65129,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="The front legs of this spider are almost indestructable, allowing it to burrow into almost any surface.",
         icon="132196",
@@ -17715,10 +16500,10 @@ PETS.all ={
         companionID=97238,
         displayID=65130,
         family=8,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="Why is it called a nursery spider? Does it prefer to lurk in nurseries? Why would it do that? What does it do there? Oh, dear! Someone check on the kids!",
         icon="236551",
@@ -17739,9 +16524,9 @@ PETS.all ={
         displayID=65151,
         family=9,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Juvenile describes this scuttleback's age, not its maturity.",
         icon="132186",
@@ -17759,9 +16544,9 @@ PETS.all ={
         displayID=4626,
         family=5,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Olivetail is a bit of misnomer, as its whole body is just brown...",
         icon="254857",
@@ -17778,9 +16563,9 @@ PETS.all ={
         displayID=65159,
         family=4,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="World Event",
         flavor="As if a mine full of non-ghost spiders wasn't scary enough.",
         icon="236551",
@@ -17799,9 +16584,9 @@ PETS.all ={
         displayID=72868,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="It's just like a regular spider, but fel.",
         icon="134321",
@@ -17818,9 +16603,9 @@ PETS.all ={
         displayID=65237,
         family=3,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="On very rare occasions glowflies synchronize their flashing creating a spectacular sight for any adventurer lucky enough to catch this phenomenon.",
         icon="236196",
@@ -17835,9 +16620,9 @@ PETS.all ={
         displayID=30995,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="The terror larva seeks a host to feed on their dreams and terrors. Soon the larva will grow into the host's worst fears.",
         icon="134895",
@@ -17852,9 +16637,9 @@ PETS.all ={
         displayID=63674,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="These snakes are extraordinarily docile creatures.  However, they blend with their environment so well that many adventurers tread too closely to a nest.  Most bites result from totally avoidable incidents.",
         icon="136040",
@@ -17874,9 +16659,9 @@ PETS.all ={
         displayID=51292,
         family=3,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Vale flitter normally have incredibly long lifespans.  That was until people found use for them in pet battles.",
         icon="236193",
@@ -17891,9 +16676,9 @@ PETS.all ={
         displayID=64651,
         family=5,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Is it three white stripes on a brown tail, or two brown stripes on a white tail?",
         icon="646059",
@@ -17908,9 +16693,9 @@ PETS.all ={
         displayID=43798,
         family=9,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Striders glow brightest during spring, hence the name.",
         icon="643423",
@@ -17925,9 +16710,9 @@ PETS.all ={
         displayID=65274,
         family=4,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="World Event",
         flavor="If a live maggot eats the dead, what does an undead maggot eat?",
         icon="648918",
@@ -17946,9 +16731,9 @@ PETS.all ={
         displayID=65273,
         family=4,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="World Event",
         flavor="By far the best way to spread the plague of undeath.",
         icon="515993",
@@ -17967,9 +16752,9 @@ PETS.all ={
         displayID=65389,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Often it is red-footed after it catches its prey.",
         icon="462532",
@@ -17987,9 +16772,9 @@ PETS.all ={
         displayID=65390,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="It disappears as quietly and mysteriously as the mist.",
         icon="797544",
@@ -18007,9 +16792,9 @@ PETS.all ={
         displayID=65457,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="The last thing you'll see is a streak of red.",
         icon="133262",
@@ -18024,9 +16809,9 @@ PETS.all ={
         displayID=65516,
         family=4,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="It's more cute than spooky.",
         icon="236548",
@@ -18040,10 +16825,10 @@ PETS.all ={
         companionID=98077,
         displayID=65590,
         family=5,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Oddly, he was named Crispin even before the incident.",
         icon="133944",
@@ -18058,10 +16843,10 @@ PETS.all ={
         companionID=98116,
         displayID=65630,
         family=9,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="When a helsquid has devoured most of the food in any area, it can return to its polyp form and begin life anew.",
         icon="970806",
@@ -18076,10 +16861,10 @@ PETS.all ={
         companionID=98128,
         displayID=65637,
         family=9,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="Dalaran's drainage is not as good as you think.",
         icon="970806",
@@ -18095,10 +16880,10 @@ PETS.all ={
         companionID=98132,
         displayID=65638,
         family=9,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="Once its tentacles take hold there is no escape, much like its love for you.",
         icon="970806",
@@ -18115,10 +16900,10 @@ PETS.all ={
         companionID=98172,
         displayID=65667,
         family=8,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Profession",
         flavor="He loves to play in the mud! Then he likes to give you a hug!",
         icon="1044799",
@@ -18132,10 +16917,10 @@ PETS.all ={
         companionID=98183,
         displayID=65671,
         family=8,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Profession",
         flavor="The formula had a bit too much... purple.",
         icon="1044799",
@@ -18149,10 +16934,10 @@ PETS.all ={
         companionID=98185,
         displayID=65672,
         family=8,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="Even piglets are not safe from the Legion's corruption.  Although, this one seems harmless enough.",
         icon="1240370",
@@ -18170,9 +16955,9 @@ PETS.all ={
         displayID=65981,
         family=3,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Most bats are not blind, except this one.  This one is blind.",
         icon="132182",
@@ -18187,9 +16972,9 @@ PETS.all ={
         displayID=65982,
         family=3,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Never say \"oink\" in its presence.",
         icon="132182",
@@ -18204,9 +16989,9 @@ PETS.all ={
         displayID=40713,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Its traveled all the way from New Beavertown.",
         icon="645526",
@@ -18220,10 +17005,10 @@ PETS.all ={
         companionID=98236,
         displayID=65713,
         family=6,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Energized by the ogre-mages of Highmaul, this mana-hungry creature will drain you dry before you know it.",
         icon="237228",
@@ -18238,10 +17023,10 @@ PETS.all ={
         companionID=98238,
         displayID=65714,
         family=6,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="A shimmering creature made of pure arcane energy, it is hard to focus your eyes directly on it.",
         icon="237230",
@@ -18256,10 +17041,10 @@ PETS.all ={
         companionID=98237,
         displayID=65717,
         family=6,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="First created in the presence of Highmaul runes, this tiny manafiend really packs a punch!",
         icon="237227",
@@ -18275,9 +17060,9 @@ PETS.all ={
         displayID=65715,
         family=6,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Mages seek these manafiends to absorb their ley energies.",
         icon="135735",
@@ -18292,9 +17077,9 @@ PETS.all ={
         displayID=65716,
         family=6,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Once a manafiend consumes enough ley energy, it becomes more aggressive and twisted.  Approach with extreme caution.",
         icon="1391780",
@@ -18309,9 +17094,9 @@ PETS.all ={
         displayID=65800,
         family=9,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Even in its juvenile stage, this crab's pincers can break bone.",
         icon="132186",
@@ -18326,9 +17111,9 @@ PETS.all ={
         displayID=45883,
         family=5,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Guess what its bed is. A piece of bread.",
         icon="442735",
@@ -18342,10 +17127,10 @@ PETS.all ={
         companionID=98463,
         displayID=65813,
         family=7,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Order Hall",
         flavor="I am Broot.",
         icon="874857",
@@ -18361,9 +17146,9 @@ PETS.all ={
         displayID=65854,
         family=5,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="This very elusive creature likes to hide in places where many adventurers don't frequently travel.",
         icon="132331",
@@ -18395,10 +17180,10 @@ PETS.all ={
         companionID=99394,
         displayID=66155,
         family=7,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="After a long night out mages find that their water elementals smell a bit off.",
         icon="132886",
@@ -18413,10 +17198,10 @@ PETS.all ={
         companionID=99389,
         displayID=66147,
         family=1,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Leaving the forest to see the world, which must look so much bigger to such a little guy.",
         icon="463540",
@@ -18432,10 +17217,10 @@ PETS.all ={
         companionID=99403,
         displayID=66157,
         family=4,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Eternally cute.",
         icon="132225",
@@ -18450,10 +17235,10 @@ PETS.all ={
         companionID=99425,
         displayID=74484,
         family=10,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="For Sale: Slightly used Alarm-o-Bot. Rebuilt and refurbished. Still annoying.",
         icon="133001",
@@ -18470,10 +17255,10 @@ PETS.all ={
         companionID=99505,
         displayID=59042,
         family=10,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Don't want to break the bank on that new robot? Have a little helper at half the cost! Come down to Goblin Experimental Engineering Korporation and put in your order! All sales final.",
         icon="1005279",
@@ -18488,9 +17273,9 @@ PETS.all ={
         displayID=66210,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="You can identify the cruelest and most vicious of the brood by their reddish hue.",
         icon="1387708",
@@ -18504,10 +17289,10 @@ PETS.all ={
         companionID=99526,
         displayID=66212,
         family=8,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Treasure",
         flavor="When demons, nightmares, and magic collide!",
         icon="1387708",
@@ -18522,9 +17307,9 @@ PETS.all ={
         displayID=66211,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Its proximity to crystalline mana clusters has hardened this broodlings body to an almost rocklike state.",
         icon="1387708",
@@ -18539,9 +17324,9 @@ PETS.all ={
         displayID=66213,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="These creatures have developed a chitin armor around its fangs, legs and abdomen.",
         icon="1387708",
@@ -18555,10 +17340,10 @@ PETS.all ={
         companionID=103159,
         displayID=68067,
         family=1,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Promotion",
         flavor="An intelligent ape that claims he is from 'the moon'. Does he mean the White Lady, or the Blue Child?",
         icon="1303199",
@@ -18573,10 +17358,10 @@ PETS.all ={
         companionID=106152,
         displayID=66485,
         family=8,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="Isn't baby elderhorn an oxymoron?",
         icon="1387706",
@@ -18593,10 +17378,10 @@ PETS.all ={
         companionID=106181,
         displayID=69254,
         family=1,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="Val'kyr are considered \"sunborne\" when they are honored in the presence of Odyn.",
         icon="1349535",
@@ -18613,10 +17398,10 @@ PETS.all ={
         companionID=106210,
         displayID=68666,
         family=10,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Profession",
         flavor="Ever wanted to cuddle with a gun? Introducing Trigger, the Cuter Shooter.",
         icon="1336885",
@@ -18630,10 +17415,10 @@ PETS.all ={
         companionID=106232,
         displayID=69532,
         family=1,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Archaeology",
         flavor="In his home realm, he commanded an army of ten million demons. Now his power is yours to command. Go make him fight a chicken!",
         icon="1387710",
@@ -18646,10 +17431,10 @@ PETS.all ={
         companionID=106270,
         displayID=68858,
         family=6,
-        isWild=false,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
+
         source="Vendor",
         flavor="How the Mad Merchant got his hands on one of these otherworldly creatures is unknown. What we do know is, he knows it's valuable.",
         icon="1338948",
@@ -18664,10 +17449,10 @@ PETS.all ={
         companionID=106278,
         displayID=68859,
         family=3,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="World Event",
         flavor="A felbat's fire never burns its master.",
         icon="1338893",
@@ -18681,10 +17466,10 @@ PETS.all ={
         companionID=106283,
         displayID=68729,
         family=8,
-        isWild=false,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
+
         source="Vendor",
         flavor="His tiny legs make him more aerodynamic.",
         icon="1339013",
@@ -18700,10 +17485,10 @@ PETS.all ={
         companionID=107206,
         displayID=69896,
         family=5,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Achievement",
         flavor="He may not be the fastest snail, but he has the heart of a champion.",
         icon="1100022",
@@ -18717,10 +17502,10 @@ PETS.all ={
         companionID=108568,
         displayID=65091,
         family=3,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="No size jokes, please.",
         icon="1029736",
@@ -18735,10 +17520,10 @@ PETS.all ={
         companionID=109216,
         displayID=70937,
         family=9,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="These fast and nimble swimmers are highly desired by pet collectors. Though they can appear friendly, their tail stinger can kill on contact.",
         icon="1387376",
@@ -18754,10 +17539,10 @@ PETS.all ={
         companionID=110666,
         displayID=71611,
         family=9,
-        isWild=false,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
+
         source="Vendor",
         flavor="Mmm... Pizza!",
         icon="656341",
@@ -18784,9 +17569,9 @@ PETS.all ={
         displayID=71224,
         family=5,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Now, where are its parents? You monster.",
         icon="1383844",
@@ -18801,9 +17586,9 @@ PETS.all ={
         displayID=71056,
         family=3,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="It enjoys long walks on the beach.",
         icon="838694",
@@ -18821,9 +17606,9 @@ PETS.all ={
         displayID=4960,
         family=5,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Do you see how they run?",
         icon="134324",
@@ -18838,9 +17623,9 @@ PETS.all ={
         displayID=47633,
         family=7,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="This creature was once a normal beaver, but was struck by lightning, a stormwing drake's breath, and a rock all at the same time.",
         icon="796787",
@@ -18854,10 +17639,10 @@ PETS.all ={
         companionID=111202,
         displayID=71002,
         family=1,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Vendor",
         flavor="Maybe a bit too enthusiastic.",
         icon="1387710",
@@ -18880,10 +17665,10 @@ PETS.all ={
         companionID=111296,
         displayID=71003,
         family=1,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Vendor",
         flavor="Puts the fan in fanatic!",
         icon="1387710",
@@ -18908,10 +17693,10 @@ PETS.all ={
         companionID=111425,
         displayID=71828,
         family=6,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Profession",
         flavor="When alchemy goes wrong... So, so, wrong.",
         icon="463532",
@@ -18925,10 +17710,10 @@ PETS.all ={
         companionID=111423,
         displayID=71827,
         family=6,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Quest",
         flavor="A wyrmlings temperment hinges primarily on how long its been since its fed on mana. Remember to feed your pets.",
         icon="132841",
@@ -18943,10 +17728,10 @@ PETS.all ={
         companionID=111421,
         displayID=71826,
         family=8,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Quest",
         flavor="It's a bird! It's a cat! It's... biting me...",
         icon="132116",
@@ -18961,10 +17746,10 @@ PETS.all ={
         companionID=111984,
         displayID=71938,
         family=6,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Thousands of years ago, ten magisters were exiled from Highborne society for seeking power in the corrupting darkness. In the wilds, they found hunger, desperation, and Kosumoth.",
         icon="537022",
@@ -18979,10 +17764,10 @@ PETS.all ={
         companionID=17254,
         displayID=37949,
         family=8,
-        isWild=false,
+
         isTradeable=true,
         isUnique=true,
-        isPassive=false,
+
         source="Vendor",
         flavor="One of Ash'alah's litter, entrusted to you by the Dreamweavers.",
         icon="132267",
@@ -18999,10 +17784,10 @@ PETS.all ={
         companionID=112132,
         displayID=68860,
         family=3,
-        isWild=false,
+
         isTradeable=true,
         isUnique=true,
-        isPassive=false,
+
         source="Mission",
         flavor="Fire it up!",
         icon="1338893",
@@ -19018,10 +17803,10 @@ PETS.all ={
         companionID=112144,
         displayID=68845,
         family=8,
-        isWild=false,
+
         isTradeable=true,
         isUnique=true,
-        isPassive=false,
+
         source="Mission",
         flavor="True royalty among Corgis.",
         icon="1339013",
@@ -19037,10 +17822,10 @@ PETS.all ={
         companionID=112167,
         displayID=71980,
         family=9,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Achievement",
         flavor="Fond of slithering through tight spaces, these sea creatures lurk in the wreckage of sunken ships.",
         icon="133897",
@@ -19054,10 +17839,10 @@ PETS.all ={
         companionID=112728,
         displayID=72239,
         family=6,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="Ghosts are voracious readers.",
         icon="355498",
@@ -19074,10 +17859,10 @@ PETS.all ={
         companionID=112798,
         displayID=72085,
         family=7,
-        isWild=false,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
+
         source="Order Hall",
         flavor="A lasher by any other name would smell as sweet.",
         icon="959797",
@@ -19092,10 +17877,10 @@ PETS.all ={
         companionID=112945,
         displayID=72461,
         family=7,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Achievement",
         flavor="Didn't play nice with the other plants in the nursery.",
         icon="1357816",
@@ -19109,10 +17894,10 @@ PETS.all ={
         companionID=113136,
         displayID=72658,
         family=9,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Younger brother to Anax.  Big brother to Cenax and Denax.",
         icon="804967",
@@ -19128,9 +17913,9 @@ PETS.all ={
         displayID=72660,
         family=1,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="During a special time of year, a secretive clan of murlocs often sends young tadpoles out to explore, adventure, and begin their tale.",
         icon="1450884",
@@ -19144,10 +17929,10 @@ PETS.all ={
         companionID=113527,
         displayID=73353,
         family=8,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="In-Game Shop",
         flavor="This ferocious feline followed the fel forces into Azeroth during the Legion's return.",
         icon="1411879",
@@ -19160,9 +17945,9 @@ PETS.all ={
         companionID=113827,
         displayID=73463,
         family=6,
-        isWild=false,
-        isTradeable=false,
-        isUnique=false,
+
+
+
         isPassive=true,
         source="Quest",
         flavor="A magical wisdom-filled head in a ball bearing Khadgar's visage, it can only answer questions with a few phrases.",
@@ -19179,10 +17964,10 @@ PETS.all ={
         companionID=113855,
         displayID=70663,
         family=5,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Achievement",
         flavor="With enough of your love, and tiny milk bottles, she will grow strong enough to rejoin the wild.",
         icon="1383844",
@@ -19196,10 +17981,10 @@ PETS.all ={
         companionID=113984,
         displayID=73352,
         family=1,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Promotion",
         flavor="A proud supporter of the Horde, this tiny murloc left his clutch to seek out blue-clad foes to slay.",
         icon="1411890",
@@ -19214,10 +17999,10 @@ PETS.all ={
         companionID=113983,
         displayID=73351,
         family=1,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Promotion",
         flavor="A tiny admirer of the Alliance, this courageous murloc made his own sword and shield to slay red-clad foes.",
         icon="1411878",
@@ -19232,10 +18017,10 @@ PETS.all ={
         companionID=114063,
         displayID=73093,
         family=8,
-        isWild=false,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
+
         source="Order Hall",
         flavor="A pup of Thrall's frostwolf, Snowsong, besting her in combat has earned you a lifelong companion.",
         icon="1488892",
@@ -19250,10 +18035,10 @@ PETS.all ={
         companionID=33975,
         displayID=28726,
         family=5,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="World Event",
         flavor="Why do bunnies lay eggs?",
         icon="254858",
@@ -19267,10 +18052,10 @@ PETS.all ={
         companionID=114543,
         displayID=73308,
         family=7,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="World Event",
         flavor="Who's ready for a hot stone massage?",
         icon="1020381",
@@ -19284,10 +18069,10 @@ PETS.all ={
         companionID=115135,
         displayID=73661,
         family=8,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Deep beneath the Argent Tournament grounds a clutch of eggs belonging to mates Acidmaw and Dreadscale was found.",
         icon="236197",
@@ -19302,10 +18087,10 @@ PETS.all ={
         companionID=115136,
         displayID=73663,
         family=1,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Really much more tolerable when he's not riding on your head.",
         icon="134168",
@@ -19320,10 +18105,10 @@ PETS.all ={
         companionID=115137,
         displayID=59766,
         family=4,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Thousands of these skittering nightmares swarm underneath Northrend to this day.",
         icon="236463",
@@ -19338,10 +18123,10 @@ PETS.all ={
         companionID=115138,
         displayID=73671,
         family=7,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="In the eternal balance of frost and fire, the raging flames fuel many aggressive fronts.",
         icon="236297",
@@ -19356,10 +18141,10 @@ PETS.all ={
         companionID=115139,
         displayID=26740,
         family=2,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="The denizens of Ulduar transformed even small whelps into ironclad monstrosities.",
         icon="298670",
@@ -19374,10 +18159,10 @@ PETS.all ={
         companionID=115140,
         displayID=73673,
         family=10,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="The runeforged sentries of Ulduar march endlessly without the need for rest or recharging.",
         icon="254109",
@@ -19392,10 +18177,10 @@ PETS.all ={
         companionID=115141,
         displayID=29819,
         family=6,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Rub its belly more than twice and you're just asking to be pounced on.",
         icon="133236",
@@ -19410,10 +18195,10 @@ PETS.all ={
         companionID=115142,
         displayID=73684,
         family=7,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="",
         flavor="In the eternal balance of frost and fire, the stolid ice forms a defense without measure.",
         icon="135988",
@@ -19426,10 +18211,10 @@ PETS.all ={
         companionID=115143,
         displayID=73689,
         family=7,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Glowing from within, these sprouts have been blessed with a gift from Eonar.",
         icon="134182",
@@ -19444,10 +18229,10 @@ PETS.all ={
         companionID=115144,
         displayID=73692,
         family=10,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="The next level of scrapbot technology: pushes the scrap into a heap, then destroys it with flame vents and rockets.",
         icon="254102",
@@ -19462,10 +18247,10 @@ PETS.all ={
         companionID=115145,
         displayID=73694,
         family=6,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="There is something deeply unsettling about the tentacle, perhaps it is best not to look at it for too long.",
         icon="254105",
@@ -19480,10 +18265,10 @@ PETS.all ={
         companionID=115146,
         displayID=73697,
         family=4,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="A small fragment of Lord Marrowgar, it will NOT stop assaulting your shins.",
         icon="342917",
@@ -19498,10 +18283,10 @@ PETS.all ={
         companionID=115147,
         displayID=73699,
         family=6,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="It really seems to want to touch you, but why?",
         icon="1357798",
@@ -19516,10 +18301,10 @@ PETS.all ={
         companionID=115148,
         displayID=73704,
         family=4,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="The eternal answer to the question 'what's that smell?'",
         icon="348273",
@@ -19534,10 +18319,10 @@ PETS.all ={
         companionID=115149,
         displayID=73706,
         family=4,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="The Lich King tore the spirits of Sindragosa's lost whelps into undeath in front of her skeletal form as a final affront to the great dragon.",
         icon="134155",
@@ -19552,10 +18337,10 @@ PETS.all ={
         companionID=115150,
         displayID=73707,
         family=4,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="One of innumerable ghouls summoned by the Lich King in his final battle, left to roam the world for eternity.",
         icon="1100170",
@@ -19570,10 +18355,10 @@ PETS.all ={
         companionID=115152,
         displayID=73708,
         family=4,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="An unrepentant soul that was once trapped inside Frostmourne, and now flits restlessly between worlds.",
         icon="460857",
@@ -19588,10 +18373,10 @@ PETS.all ={
         companionID=115158,
         displayID=68857,
         family=6,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Quest",
         flavor="In the end, we are all wrought from stardust.",
         icon="1338949",
@@ -19606,10 +18391,10 @@ PETS.all ={
         companionID=115784,
         displayID=70071,
         family=3,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         intermittent=true,
         source="Treasure",
         flavor="Snowfeather falcosaur hatchlings instinctively flee to nearby adults when threatened. The species is particularly fond of large prey.",
@@ -19638,10 +18423,10 @@ PETS.all ={
         companionID=115785,
         displayID=70070,
         family=3,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         intermittent=true,
         source="Treasure",
         flavor="Direbeak falcosaurs are heartier than other falcosaur species, but cannot smell as well. They prefer pungent meals and will often eat carrion that has been sitting in the sun for days.",
@@ -19670,10 +18455,10 @@ PETS.all ={
         companionID=115786,
         displayID=70069,
         family=3,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         intermittent=true,
         source="Treasure",
         flavor="Sharptalon falcosaurs can subsist entirely on a diet of small nuts and berries, and use their talons mostly for defense.",
@@ -19702,8 +18487,8 @@ PETS.all ={
         companionID=115787,
         displayID=70068,
         family=3,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
         intermittent=true,
         source="Treasure",
@@ -19733,8 +18518,8 @@ PETS.all ={
         companionID=115918,
         displayID=73244,
         family=1,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
         isPassive=true,
         source="Vendor",
@@ -19761,8 +18546,8 @@ PETS.all ={
         companionID=115919,
         displayID=73245,
         family=1,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
         isPassive=true,
         source="Vendor",
@@ -19789,10 +18574,10 @@ PETS.all ={
         companionID=116080,
         displayID=74036,
         family=3,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Crysa has collected many exotic avians in her travels, none more rare than this hatchling.",
         icon="132200",
@@ -19808,10 +18593,10 @@ PETS.all ={
         companionID=116871,
         displayID=58823,
         family=3,
-        isWild=false,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
+
         source="Order Hall",
         flavor="They say Fleet Admiral Tethys was never without his trusty parrot by his side - or on his shoulder. Tethys could always call him with a whistle.",
         icon="1045161",
@@ -19826,10 +18611,10 @@ PETS.all ={
         companionID=117180,
         displayID=74468,
         family=7,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="In the fertile grounds of the Wailing Caverns, nothing truly dies.",
         icon="571318",
@@ -19844,10 +18629,10 @@ PETS.all ={
         companionID=117182,
         displayID=74469,
         family=8,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="This serpent seems used to being at your side, it may have been the companion of one of the other druids of the fang.",
         icon="237237",
@@ -19862,10 +18647,10 @@ PETS.all ={
         companionID=117184,
         displayID=74472,
         family=3,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Untouched by the deviate corruption seeping through the Wailing Caverns.",
         icon="132209",
@@ -19880,10 +18665,10 @@ PETS.all ={
         companionID=117340,
         displayID=74513,
         family=10,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="This tiny robot specializes in drilling, clamping, and shooting lightning out of its brain. A typical gnome invention.",
         icon="1548512",
@@ -19899,10 +18684,10 @@ PETS.all ={
         companionID=117341,
         displayID=74514,
         family=4,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="World Event",
         flavor="It's just constantly barfing plague fluid. Where does it come from? Where does it go?",
         icon="1548513",
@@ -19916,10 +18701,10 @@ PETS.all ={
         companionID=117343,
         displayID=74515,
         family=7,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Achievement",
         flavor="Crafted by a great and powerful wizard who refused to wear robes with pockets.",
         icon="1551374",
@@ -19933,10 +18718,10 @@ PETS.all ={
         companionID=117371,
         displayID=74520,
         family=5,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Vendor",
         flavor="How do you kill that which lives in garbage?",
         icon="646059",
@@ -19952,10 +18737,10 @@ PETS.all ={
         companionID=118060,
         displayID=74657,
         family=2,
-        isWild=false,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
+
         source="Vendor",
         flavor="The infinite dragonflight is far more diverse than most denizens of Azeroth know.",
         icon="651733",
@@ -19971,10 +18756,10 @@ PETS.all ={
         companionID=118063,
         displayID=74700,
         family=7,
-        isWild=false,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
+
         source="Vendor",
         flavor="It is a riddle wrapped in a mystery inside an enigma.",
         icon="656560",
@@ -19990,10 +18775,10 @@ PETS.all ={
         companionID=119040,
         displayID=59026,
         family=1,
-        isWild=false,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
+
         source="Vendor",
         flavor="A terror so terrible, you're amazed it could ever be real.",
         icon="1019377",
@@ -20016,10 +18801,10 @@ PETS.all ={
         companionID=119498,
         displayID=75315,
         family=4,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Vendor",
         flavor="Unlike other wyrms, blood wyrms drain their foes rather than consuming them whole.",
         icon="1580449",
@@ -20035,10 +18820,10 @@ PETS.all ={
         companionID=119499,
         displayID=75316,
         family=4,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Vendor",
         flavor="Among the Death Knight's forces, the frost wyrm is the most formidable. This whelpling is no different.",
         icon="1580450",
@@ -20054,10 +18839,10 @@ PETS.all ={
         companionID=119500,
         displayID=75317,
         family=4,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Vendor",
         flavor="Biohazard. Handle with gloves.",
         icon="1580451",
@@ -20073,10 +18858,10 @@ PETS.all ={
         companionID=119794,
         displayID=75498,
         family=10,
-        isWild=false,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
+
         source="Vendor",
         flavor="Mr. Smite kept this in his trunk, but always seemed to prefer his hammer. Seems like a mistake in hindsight.",
         icon="1373903",
@@ -20092,10 +18877,10 @@ PETS.all ={
         companionID=120397,
         displayID=75766,
         family=4,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="He's one cowardly companion, because he's got no guts...",
         icon="135551",
@@ -20110,10 +18895,10 @@ PETS.all ={
         companionID=120830,
         displayID=75989,
         family=8,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Vendor",
         flavor="Introducing the youngest member of the Xuen Dynasty! Daughter of Ban-Lu. Niece of Xu-Fu. Granddaughter of the celestial Xuen... It's Ban-Fu!",
         icon="1598223",
@@ -20129,10 +18914,10 @@ PETS.all ={
         companionID=121317,
         displayID=76262,
         family=8,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Achievement",
         flavor="He's very friendly, but any amount of snuggles is going to result in you getting a nasty shock.",
         icon="134310",
@@ -20146,10 +18931,10 @@ PETS.all ={
         companionID=121715,
         displayID=68861,
         family=3,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="World Event",
         flavor="Sure are a lot of these around the Broken Shore.",
         icon="1321546",
@@ -20163,10 +18948,10 @@ PETS.all ={
         companionID=122033,
         displayID=76595,
         family=8,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="In-Game Shop",
         flavor="This energetic kitten changes colors depending on its mood.",
         icon="1616893",
@@ -20179,10 +18964,10 @@ PETS.all ={
         companionID=122612,
         displayID=76956,
         family=5,
-        isWild=false,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
+
         source="Vendor",
         flavor="He'll plunder your provolone, turn your ship to swiss, then get your gouda. He's a true muenster and the scourge of the seven bries.",
         icon="515993",
@@ -20198,10 +18983,10 @@ PETS.all ={
         companionID=122629,
         displayID=45555,
         family=10,
-        isWild=false,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
+
         source="Vendor",
         flavor="The earliest prototype of the deadly Foe Reaper.",
         icon="134065",
@@ -20217,10 +19002,10 @@ PETS.all ={
         companionID=123650,
         displayID=77501,
         family=6,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="In-Game Shop",
         flavor="Lost on Argus and overtaken by darkness, this playful fox can shrug off the void just by being by your side.",
         icon="1634262",
@@ -20233,10 +19018,10 @@ PETS.all ={
         companionID=124389,
         displayID=1072,
         family=5,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Order Hall",
         flavor="This marmot has been with you this entire time. He's that good.",
         icon="594273",
@@ -20252,10 +19037,10 @@ PETS.all ={
         companionID=124589,
         displayID=78106,
         family=8,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Achievement",
         flavor="Best keep him away from any cannons.",
         icon="877482",
@@ -20269,10 +19054,10 @@ PETS.all ={
         companionID=124594,
         displayID=1418,
         family=5,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Order Hall",
         flavor="Rogues often kept a few of these in their pockets in times of emergency. Don't ask me why.",
         icon="647701",
@@ -20288,10 +19073,10 @@ PETS.all ={
         companionID=124858,
         displayID=78222,
         family=2,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="The Bronze Proto-Whelps have been discovered only in the most peculiar of timelines.",
         icon="1380676",
@@ -20306,10 +19091,10 @@ PETS.all ={
         companionID=124944,
         displayID=78261,
         family=2,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="This particular drake has oddly retained its age throughout its travels, but its size has certainly changed.",
         icon="134156",
@@ -20324,10 +19109,10 @@ PETS.all ={
         companionID=126579,
         displayID=78989,
         family=9,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Fishing",
         flavor="Queen Azshara's curse over the denizens of Azsuna did not only affect the night elves. This shark is doomed to an eternity of bottomless hunger.",
         icon="294472",
@@ -20341,10 +19126,10 @@ PETS.all ={
         companionID=127850,
         displayID=79630,
         family=10,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="During their years-long war with the black dragonflight, the dwarves tried crafting smaller golems that were more difficult to hit.",
         icon="415046",
@@ -20359,10 +19144,10 @@ PETS.all ={
         companionID=127852,
         displayID=79634,
         family=2,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Maloriak was nothing if not resourceful, not letting even small scraps of flesh go to waste.",
         icon="429380",
@@ -20377,10 +19162,10 @@ PETS.all ={
         companionID=127853,
         displayID=24751,
         family=4,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Nefarian's reanimated bone constructs were an effective way to combat the many adventurers that plagued him, and especially their mages.",
         icon="132095",
@@ -20395,10 +19180,10 @@ PETS.all ={
         companionID=127857,
         displayID=79635,
         family=2,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Even very small things can be corrupted, the apocalypse is for everyone.",
         icon="429378",
@@ -20413,10 +19198,10 @@ PETS.all ={
         companionID=127858,
         displayID=79637,
         family=7,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Amongst the rudest of the Twilight's Hammer's corrupting activities was binding the elements of small streams and brooks.",
         icon="1385912",
@@ -20431,10 +19216,10 @@ PETS.all ={
         companionID=127859,
         displayID=79638,
         family=6,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="It has no eyes, but it always seems to be staring at you.",
         icon="298654",
@@ -20449,10 +19234,10 @@ PETS.all ={
         companionID=127862,
         displayID=79641,
         family=7,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="A minor diety of wind, lording over the tiny breezes that make you think the heat of the summer season will be bearable for a brief moment.",
         icon="462522",
@@ -20467,10 +19252,10 @@ PETS.all ={
         companionID=127863,
         displayID=79639,
         family=7,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="If you feel a slight gust that made you shiver, that was probably Drafty.",
         icon="132845",
@@ -20485,10 +19270,10 @@ PETS.all ={
         companionID=127947,
         displayID=79707,
         family=7,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Some say it's the pup of Riplimb and Rageface, others say 'I don't want to think about that.'",
         icon="236946",
@@ -20503,10 +19288,10 @@ PETS.all ={
         companionID=127948,
         displayID=45289,
         family=7,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="A rarely-seen cinderweb species known for devouring her mate's legs and laying eggs in his still-twitching body, and a lovely purple color.",
         icon="425958",
@@ -20521,10 +19306,10 @@ PETS.all ={
         companionID=127950,
         displayID=79709,
         family=7,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Five things he can never do without: surging, surging, surging, surging, surging.",
         icon="524350",
@@ -20539,10 +19324,10 @@ PETS.all ={
         companionID=127951,
         displayID=38283,
         family=8,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="During his time in the Firelands, Fandral would often grow bored and work shaping magic on the local flora and fauna.",
         icon="464143",
@@ -20557,10 +19342,10 @@ PETS.all ={
         companionID=127952,
         displayID=65888,
         family=6,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Can't quite take over your mind, but capable of giving you a really bad migraine.",
         icon="574793",
@@ -20575,10 +19360,10 @@ PETS.all ={
         companionID=127953,
         displayID=71972,
         family=7,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Some fragments of Deathwing's blood live on to this day, deep within the lost places of the world, forever seeking their lost host.",
         icon="538039",
@@ -20592,10 +19377,10 @@ PETS.all ={
         companionID=127954,
         displayID=79711,
         family=7,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Its friends call it \"Slappy.\"",
         icon="538042",
@@ -20609,10 +19394,10 @@ PETS.all ={
         companionID=127956,
         displayID=79712,
         family=7,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Achievement",
         flavor="Infused with the elementium ore used to plate the great dragon Deathwing, and one of the last remnants of the madness that nearly consumed Azeroth.",
         icon="515033",
@@ -20626,10 +19411,10 @@ PETS.all ={
         companionID=128146,
         displayID=78451,
         family=5,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Achievement",
         flavor="While most of the marsuul on Argus feed on fruits, this particular one prefers the juicy crunch of small rodents.",
         icon="1715032",
@@ -20644,9 +19429,9 @@ PETS.all ={
         displayID=79795,
         family=1,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="World Event",
         flavor="Who makes them? How do they get there? No one knows, except maybe Greatfather Winter.",
         icon="237419",
@@ -20664,10 +19449,10 @@ PETS.all ={
         companionID=128118,
         displayID=79777,
         family=6,
-        isWild=false,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
+
         source="Vendor",
         flavor="I always feel like somebody's watching me.",
         icon="538445",
@@ -20683,10 +19468,10 @@ PETS.all ={
         companionID=128119,
         displayID=79776,
         family=5,
-        isWild=false,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
+
         source="Vendor",
         flavor="It's not really an orphan. The name just makes you feel better about abducting it.",
         icon="1715033",
@@ -20703,10 +19488,10 @@ PETS.all ={
         companionID=128137,
         displayID=79783,
         family=7,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Profession",
         flavor="Beautiful and deadly.",
         icon="134207",
@@ -20720,10 +19505,10 @@ PETS.all ={
         companionID=128157,
         displayID=79796,
         family=3,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Skyfin can be observed in a wide variety of colors. Biologists believe the vibrancy of those colors both help attract mates and ward predators.",
         icon="1570762",
@@ -20747,10 +19532,10 @@ PETS.all ={
         companionID=128158,
         displayID=79797,
         family=3,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Watch out when it spits.",
         icon="1570760",
@@ -20774,10 +19559,10 @@ PETS.all ={
         companionID=128159,
         displayID=79760,
         family=6,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Reaching out from some vast unknown corner of the void... to give you a hug.",
         icon="460700",
@@ -20792,10 +19577,10 @@ PETS.all ={
         companionID=128160,
         displayID=79798,
         family=8,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Profession",
         flavor="If a bile larva stays burrowed for an extended period of time they begin to lose their pigment. When they finally do emerge, they can be quite ravenous.",
         icon="1418495",
@@ -20810,9 +19595,9 @@ PETS.all ={
         displayID=79363,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Proximity to Antorus makes these larva hyper agressive.",
         icon="1418495",
@@ -20827,9 +19612,9 @@ PETS.all ={
         displayID=77759,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="An early stage of the bilescourge life cycle.",
         icon="1418495",
@@ -20844,9 +19629,9 @@ PETS.all ={
         displayID=78449,
         family=3,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="The final phase of the bilescourge life cycle.",
         icon="1686580",
@@ -20861,9 +19646,9 @@ PETS.all ={
         displayID=79358,
         family=3,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Bilescourge mostly feed on the corpses of victims of the Legion. However, since your arrival, it has developed a taste for demon corpses as well.",
         icon="1686580",
@@ -20878,9 +19663,9 @@ PETS.all ={
         displayID=78464,
         family=7,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Born from the crash site of the Xenedar on Argus.",
         icon="294481",
@@ -20895,9 +19680,9 @@ PETS.all ={
         displayID=78508,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="While there are many similarities to the warpstalkers from Azeroth, evidence suggests they evolved completely independently from one another. Fascinating!",
         icon="132201",
@@ -20912,9 +19697,9 @@ PETS.all ={
         displayID=78502,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="The void can consume life or meld with it. The latter often has unpercieved consequences.",
         icon="132201",
@@ -20929,9 +19714,9 @@ PETS.all ={
         displayID=78509,
         family=6,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="You have the odd feeling that it wants to kill you.",
         icon="1391780",
@@ -20946,9 +19731,9 @@ PETS.all ={
         displayID=78595,
         family=6,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Mana wyrm used to thrive on Argus many millennia ago, but lots has changed since those halcyon days.",
         icon="132841",
@@ -20963,9 +19748,9 @@ PETS.all ={
         displayID=78606,
         family=6,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="If mana becomes scarce these wyrm look for other sources of energy to feed on.",
         icon="132841",
@@ -20980,9 +19765,9 @@ PETS.all ={
         displayID=78599,
         family=5,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="It likes to be petted behind the fins.",
         icon="1715031",
@@ -20997,9 +19782,9 @@ PETS.all ={
         displayID=78499,
         family=3,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Skyfin can fly from birth and there are some observed cases of mothers giving birth midflight!",
         icon="1570761",
@@ -21013,10 +19798,10 @@ PETS.all ={
         companionID=128388,
         displayID=79888,
         family=1,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="What are they rebelling against? The real question is what are they NOT rebelling against.",
         icon="460856",
@@ -21031,9 +19816,9 @@ PETS.all ={
         companionID=128396,
         displayID=76829,
         family=1,
-        isWild=false,
-        isTradeable=false,
-        isUnique=false,
+
+
+
         isPassive=true,
         source="Drop",
         flavor="Uuna was found bound to an Ur'zul, and was released into the Shadowlands, where she wandered in the utter darkness.",
@@ -21049,10 +19834,10 @@ PETS.all ={
         companionID=129049,
         displayID=87401,
         family=9,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Promotion",
         flavor="Tottle's one wish is to explore the world at your side!",
         icon="1719412",
@@ -21067,10 +19852,10 @@ PETS.all ={
         companionID=131644,
         displayID=81984,
         family=8,
-        isWild=false,
+
         isTradeable=true,
         isUnique=true,
-        isPassive=false,
+
         source="Quest",
         flavor="This young crawgling was rescued from a vicious blood troll war camp. With care, and lots of feeding, you earned his trust and Krag'wa asked you to take care of him always.",
         icon="463492",
@@ -21085,10 +19870,10 @@ PETS.all ={
         companionID=132366,
         displayID=82391,
         family=6,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Achievement",
         flavor="The Postmaster is often described as esoteric, mystical, even inexplicable. For the precious little known about the enigmatic mail-master, perhaps none outside of the wax seal can confirm the existence of the fantastical letter-loving Mailemental.",
         icon="413580",
@@ -21102,10 +19887,10 @@ PETS.all ={
         companionID=133064,
         displayID=82688,
         family=8,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="This silithid battle tank evolved prematurely. It will never reach full size, but it is just as ferocious as its larger cousins.",
         icon="1623380",
@@ -21124,10 +19909,10 @@ PETS.all ={
         companionID=134406,
         displayID=75339,
         family=3,
-        isWild=false,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
+
         source="",
         flavor="Francois, a pompous member of the bockgeoisie, whose wealth and influence was born from the exploitation and labor of the peckletariat.",
         icon="651737",
@@ -21141,10 +19926,10 @@ PETS.all ={
         companionID=138742,
         displayID=86020,
         family=1,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="In-Game Shop",
         flavor="When Whomper wants to play, he'll let you know with a playful headbutt.",
         icon="1998314",
@@ -21157,10 +19942,10 @@ PETS.all ={
         companionID=138741,
         displayID=86021,
         family=3,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="In-Game Shop",
         flavor="Don't say anything to Cap'n Crackers that you don't want repeated to you every day for the next 20 years.",
         icon="1998635",
@@ -21173,10 +19958,10 @@ PETS.all ={
         companionID=138964,
         displayID=86088,
         family=8,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Not much is known about the great snake Merektha and the many eggs in the Temple of Sethraliss, but the residents of Zandalar all seem to have a distinct amount of both respect and fear for these serpents.",
         icon="135461",
@@ -21192,10 +19977,10 @@ PETS.all ={
         companionID=139049,
         displayID=86101,
         family=6,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="You're not entirely sure where this came from, nor do you really want to know, but you are sure that it does eat a tremendous amount of garbage.",
         icon="252178",
@@ -21211,10 +19996,10 @@ PETS.all ={
         companionID=139073,
         displayID=86136,
         family=8,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Quest",
         flavor="Poda was just a small part of the larger business, always trying to live up to the standards of his older brother Coda.",
         icon="2027895",
@@ -21229,10 +20014,10 @@ PETS.all ={
         companionID=139081,
         displayID=86135,
         family=4,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="Smoochums loved life in Glenbrook, it was full of people to play with and places to sleep, and also where unspeakable acts happen at the most innocent of tea parties.",
         icon="656581",
@@ -21249,10 +20034,10 @@ PETS.all ={
         companionID=139252,
         displayID=86229,
         family=8,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Quest",
         flavor="A newly hatched Cobra can be just as deadly as a fully grown one, if not more.",
         icon="237237",
@@ -21267,10 +20052,10 @@ PETS.all ={
         companionID=139372,
         displayID=86231,
         family=10,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         intermittent=true,
         source="Quest",
         flavor="The wisest engineers of Azeroth all know that the only thing more dangerous than a living evil chicken, is the mind of an evil chicken transplanted into the body of a mechanical chicken.",
@@ -21298,10 +20083,10 @@ PETS.all ={
         companionID=139622,
         displayID=86445,
         family=8,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="Most predators favored the soft parts of their prey to attack first.  Lil' Tika prefers to go for the face.",
         icon="797327",
@@ -21318,10 +20103,10 @@ PETS.all ={
         companionID=139744,
         displayID=86484,
         family=8,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Archaeology",
         flavor="The Direhorn species is among the toughest and strongest of all things that walk on Azeroth. They can seem like gentle giants, but be cautious that you don't find yourself in front of one when they are on a warpath.",
         icon="840540",
@@ -21334,10 +20119,10 @@ PETS.all ={
         companionID=139770,
         displayID=86488,
         family=8,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Quest",
         flavor="Taptaf is loyal beyond a doubt, as long as food is provided.",
         icon="1721029",
@@ -21352,10 +20137,10 @@ PETS.all ={
         companionID=139782,
         displayID=86806,
         family=4,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Archaeology",
         flavor="The Drustvar people learned over time that when burying someone or some thing that there are sadly a number of shady people looking to exhume and reanimate whatever they can find.",
         icon="2030683",
@@ -21368,10 +20153,10 @@ PETS.all ={
         companionID=139743,
         displayID=86482,
         family=6,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Profession",
         flavor="The Zandalari are masters of magic and communications with the spirits, and they often imbued items with powers to strengthen their bonds with the spirit world.",
         icon="1726348",
@@ -21385,10 +20170,10 @@ PETS.all ={
         companionID=140125,
         displayID=86574,
         family=4,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Achievement",
         flavor="The mummy's wraps serves two purposes, one being to keep everything inside intact, the other is to lessen the fright of people seeing what's really below the wrappings.",
         icon="2027568",
@@ -21402,10 +20187,10 @@ PETS.all ={
         companionID=141941,
         displayID=80456,
         family=6,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Treasure",
         flavor="Not much is known about this otherworldly minion.",
         icon="1722953",
@@ -21419,9 +20204,9 @@ PETS.all ={
         displayID=32791,
         family=9,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Even the toughest of crabs with the toughest of shells can succumb to the dark mysteries of the shadows.",
         icon="2027883",
@@ -21436,9 +20221,9 @@ PETS.all ={
         displayID=87594,
         family=9,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="The river frogs of Stormsong Valley have been known to try to hypnotize people by staring directly into their eyes and making a low rumbling noise.",
         icon="804969",
@@ -21453,9 +20238,9 @@ PETS.all ={
         displayID=79014,
         family=9,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="The hermit crabs of Stormsong Valley will use whatever they can find that fits them for their shell.  If it fits, they sits.",
         icon="2027918",
@@ -21470,9 +20255,9 @@ PETS.all ={
         displayID=1072,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Vale Marmots are very quick on their feet and are masters of digging holes for their burrows.  Children like to chase them around and try to bop them on the head when they poke their head out to catch some sunlight.",
         icon="2126349",
@@ -21487,9 +20272,9 @@ PETS.all ={
         displayID=88469,
         family=3,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Long ago, the population of chickens in Stormsong Valley was so high, there was fear that the chickens would eat all of the corn from the fields and leave the other residents hungry.",
         icon="2027863",
@@ -21504,9 +20289,9 @@ PETS.all ={
         displayID=85797,
         family=9,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="The sandyback crawlers get their name from having a slightly sticky outer shell that sand sticks to as they walk around.",
         icon="2027867",
@@ -21525,9 +20310,9 @@ PETS.all ={
         displayID=41326,
         family=9,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="River otters start growing whiskers at a very young age and never stop.  By the time they are fully grown and reach old age, they have more whiskers on their face than any other known creature.",
         icon="645906",
@@ -21545,9 +20330,9 @@ PETS.all ={
         displayID=82001,
         family=3,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="It is rumored that these honey bees can detect the pollen of a newly blossomed plant in northern Stormsong Valley when they are all the way down in Drustvar.",
         icon="2027853",
@@ -21562,9 +20347,9 @@ PETS.all ={
         displayID=60901,
         family=3,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="The stinger of a Ravager Wasp can cause intense pain for up to three hours.  Consult a physician immediately if stung.",
         icon="2027900",
@@ -21579,9 +20364,9 @@ PETS.all ={
         displayID=79014,
         family=9,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Shack crabs are the only species of hermit crabs known to regenerate limbs if torn off in battle.",
         icon="2027906",
@@ -21601,9 +20386,9 @@ PETS.all ={
         displayID=78835,
         family=9,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="The mucus secreted from inland croakers is so effective at repelling water, the ship builders of Kul Tiras have been using it in the wood sealant for many years.",
         icon="804968",
@@ -21618,9 +20403,9 @@ PETS.all ={
         displayID=36595,
         family=5,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="The giant woodworm can burrow into almost any surface they crawl on, except solid stone.",
         icon="134933",
@@ -21635,9 +20420,9 @@ PETS.all ={
         displayID=86529,
         family=3,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Butterflies taste with their feet! I tried it once, but I only made a mess.",
         icon="2059632",
@@ -21652,9 +20437,9 @@ PETS.all ={
         displayID=87603,
         family=9,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="The 'door ditch' prank is not as effective when the house can chase you.",
         icon="2027922",
@@ -21669,9 +20454,9 @@ PETS.all ={
         displayID=32791,
         family=9,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="The purple coloration helps this species blend into the rocks and shadows, but the crabs become easy prey for seagulls when they linger too long on the open sand.",
         icon="2027883",
@@ -21686,9 +20471,9 @@ PETS.all ={
         displayID=33088,
         family=5,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Many ancient tribes revered these enormous beetles.",
         icon="134933",
@@ -21703,9 +20488,9 @@ PETS.all ={
         displayID=45908,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="While completely harmless to trolls, the animal life within Nazmir fear these creatures.",
         icon="2027961",
@@ -21720,9 +20505,9 @@ PETS.all ={
         displayID=44656,
         family=9,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Water Skimmers use the tension of water and long, hydrophobic legs to help them walk along the water's surface.",
         icon="643423",
@@ -21737,9 +20522,9 @@ PETS.all ={
         displayID=86533,
         family=3,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="When perched on a tree, this species can be almost invisible to any prey.",
         icon="2059637",
@@ -21754,9 +20539,9 @@ PETS.all ={
         displayID=79015,
         family=9,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="This species looks through the sand for the buried remains of rotting creatures. It keeps our beaches clean!",
         icon="2027910",
@@ -21771,9 +20556,9 @@ PETS.all ={
         displayID=42781,
         family=6,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="It's a repulsive creature. No one should want this.",
         icon="1500940",
@@ -21788,9 +20573,9 @@ PETS.all ={
         displayID=34417,
         family=4,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="A terror in life. A terror in death.",
         icon="458255",
@@ -21805,9 +20590,9 @@ PETS.all ={
         displayID=80457,
         family=5,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Apply directly to the forehead.",
         icon="1723700",
@@ -21822,9 +20607,9 @@ PETS.all ={
         displayID=81076,
         family=4,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Suddenly there came a tapping...",
         icon="1733736",
@@ -21839,9 +20624,9 @@ PETS.all ={
         displayID=1924,
         family=9,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="How many bogs has it hopped? No one knows.",
         icon="804966",
@@ -21856,9 +20641,9 @@ PETS.all ={
         displayID=79014,
         family=9,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="When you're a hoarder, but want to stay on the move!",
         icon="2027914",
@@ -21878,9 +20663,9 @@ PETS.all ={
         displayID=1924,
         family=9,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="A quite annoying species. No matter how high you build your walls, these creatures still manage to hop over.",
         icon="804966",
@@ -21898,10 +20683,10 @@ PETS.all ={
         companionID=143142,
         displayID=75349,
         family=10,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Achievement",
         flavor="Built to dig holes by a gnomish farmer, Rooter quickly and predictably went haywire, with disastrous results.",
         icon="2126357",
@@ -21915,10 +20700,10 @@ PETS.all ={
         companionID=143160,
         displayID=87760,
         family=10,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Achievement",
         flavor="Built with ever-wagging tail technology, Brutus is a mechanically-certified good boy.",
         icon="1567068",
@@ -21932,10 +20717,10 @@ PETS.all ={
         companionID=143175,
         displayID=78244,
         family=9,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="When the Naga invaded Stormsong, they brought their favored pets: Abyssal Eels.",
         icon="2027958",
@@ -21958,10 +20743,10 @@ PETS.all ={
         companionID=143176,
         displayID=81966,
         family=3,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="These hardy bees form the backbone of a great honey and mead industry. For decades, the Tidesages forbade anyone from taking them outside of Stormsong.",
         icon="2027854",
@@ -21979,10 +20764,10 @@ PETS.all ={
         companionID=143177,
         displayID=81079,
         family=3,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="Corlain Falcons are trained from birth to be scouts and fighting companions. The few spared from the Heartsbane curse serve the Order of Embers in the same capacity.",
         icon="132188",
@@ -22000,10 +20785,10 @@ PETS.all ={
         companionID=143178,
         displayID=27682,
         family=8,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="This piglet avoided being turned into sausage at the hands of Roland with the help of a cunning spider.",
         icon="1721029",
@@ -22026,10 +20811,10 @@ PETS.all ={
         companionID=143179,
         displayID=80951,
         family=5,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="This red-nosed bunny is incredibly soft to the touch; just watch your fingers.",
         icon="2399278",
@@ -22052,10 +20837,10 @@ PETS.all ={
         companionID=143181,
         displayID=69092,
         family=4,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="Silver dust sparkling on each of this spider's legs attracts prey; unwittingly drawn into an inescapable web.",
         icon="2027859",
@@ -22078,10 +20863,10 @@ PETS.all ={
         companionID=143184,
         displayID=80414,
         family=3,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="Best not to park your mount beneath this one.",
         icon="1716280",
@@ -22104,10 +20889,10 @@ PETS.all ={
         companionID=143188,
         displayID=75353,
         family=10,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="This adorable mass of whirlers, cogs, and sprockets wasn't assembled in Gnomeregan. Where then?",
         icon="2126363",
@@ -22130,10 +20915,10 @@ PETS.all ={
         companionID=143189,
         displayID=86805,
         family=4,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="She loves tummy rubs. Just watch out for splinters.",
         icon="2030683",
@@ -22147,10 +20932,10 @@ PETS.all ={
         companionID=143191,
         displayID=84857,
         family=8,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="A popular pet among children, despite frequent accidental gorings.",
         icon="1958452",
@@ -22173,10 +20958,10 @@ PETS.all ={
         companionID=143193,
         displayID=84863,
         family=8,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="Known to chomp on the shins of everything from saurids to brutosaurs.",
         icon="797327",
@@ -22199,10 +20984,10 @@ PETS.all ={
         companionID=143194,
         displayID=80460,
         family=5,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="Exceptionally squishy, especially after a big meal.",
         icon="1723703",
@@ -22226,10 +21011,10 @@ PETS.all ={
         companionID=143195,
         displayID=88468,
         family=9,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="Krag'wa reluctantly sent Tragg to the Talanji Expedition with the hope that they could find someone suitable to escort him on a tour of Azeroth.",
         icon="1802889",
@@ -22247,10 +21032,10 @@ PETS.all ={
         companionID=143196,
         displayID=83641,
         family=8,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="White Brutosaurs were on the brink of extinction until some enterprising adventurers took action. Lil' Ben'fon may have inherited her father's size, but definitely has her mother's temper!",
         icon="1881827",
@@ -22267,10 +21052,10 @@ PETS.all ={
         companionID=143197,
         displayID=76383,
         family=1,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="Always hungry, and has a shockingly good personality.",
         icon="2399286",
@@ -22293,10 +21078,10 @@ PETS.all ={
         companionID=143198,
         displayID=78161,
         family=8,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="The scavenger Loa thinks you can teach this saurid a thing or two. Just don't lose sight of your coin purse.",
         icon="2399239",
@@ -22319,10 +21104,10 @@ PETS.all ={
         companionID=143199,
         displayID=76761,
         family=9,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="These toads do not appreciate having their legs pulled off.",
         icon="804969",
@@ -22345,10 +21130,10 @@ PETS.all ={
         companionID=143200,
         displayID=80852,
         family=6,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="No one knows where this haunted tiki mask came from, or why its so angry all the time. It seems to like you though!",
         icon="1726347",
@@ -22372,10 +21157,10 @@ PETS.all ={
         companionID=143202,
         displayID=81219,
         family=2,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="They are so cute before they develop razor-sharp teeth and venom.",
         icon="2027847",
@@ -22398,10 +21183,10 @@ PETS.all ={
         companionID=143203,
         displayID=86529,
         family=3,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="So pretty you could eat it. But don't. It's poisonous.",
         icon="2059632",
@@ -22424,10 +21209,10 @@ PETS.all ={
         companionID=143204,
         displayID=76624,
         family=9,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="Finding freshwater pearls with this crab by your side will be a pinch.",
         icon="2027880",
@@ -22450,10 +21235,10 @@ PETS.all ={
         companionID=143205,
         displayID=81058,
         family=9,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="This frog's peculiar red color appears to have evolved specifically for camouflage in blood. Spooky.",
         icon="804966",
@@ -22476,10 +21261,10 @@ PETS.all ={
         companionID=143206,
         displayID=75381,
         family=9,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="She just wanted to get away. Find a nice shell. Sit on a beach. Now she's your pet.",
         icon="2027921",
@@ -22502,10 +21287,10 @@ PETS.all ={
         companionID=143207,
         displayID=80029,
         family=3,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="It is a well-established fact that wasps produce far higher quality honey than bees. Well-established in very, very small circles of wasp farmers.",
         icon="2027902",
@@ -22528,10 +21313,10 @@ PETS.all ={
         companionID=143209,
         displayID=81099,
         family=9,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="He is a real trooper, faithfully tagging along with Kojo for years. He enjoys hide and seek as well as some serious shell sliding.",
         icon="1738685",
@@ -22552,10 +21337,10 @@ PETS.all ={
         companionID=143211,
         displayID=80467,
         family=7,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="This horrific, flesh-eating plant promises it can make all of your wildest wishes come true. If you feed it.",
         icon="2027889",
@@ -22578,10 +21363,10 @@ PETS.all ={
         companionID=143214,
         displayID=83052,
         family=7,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="A chip off the ol' girl's block. Azeriti is fiercely protective and will strike out against anyone wishing to do her mother harm.",
         icon="2032607",
@@ -22599,10 +21384,10 @@ PETS.all ={
         companionID=143360,
         displayID=83685,
         family=9,
-        isWild=false,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
+
         source="Vendor",
         flavor="The platysaur species has been roaming around the lands since before time was even measured. An ancient species that has adapted to walking on the land, and also for some reason has adapted to repeating some short sounds three times in a row.",
         icon="1888348",
@@ -22624,10 +21409,10 @@ PETS.all ={
         companionID=143464,
         displayID=79567,
         family=3,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Achievement",
         flavor="The Dreadticks have grown to be a very invasive and dominant species wherever they wind up, they are incredibly quick to assault any new species until they find a weakness to exploit.",
         icon="1618564",
@@ -22641,10 +21426,10 @@ PETS.all ={
         companionID=143499,
         displayID=87862,
         family=8,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="The young of Arathi Highlands' plains spiders may kick clouds of barbed abdomen hairs into predators' eyes. All this, and poisonous web-spitters, too.",
         icon="2027962",
@@ -22659,10 +21444,10 @@ PETS.all ={
         companionID=143503,
         displayID=87870,
         family=7,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="So long as one of his Sproutlings remains, Branchlord Aldrus will never truly die.",
         icon="135437",
@@ -22677,10 +21462,10 @@ PETS.all ={
         companionID=143507,
         displayID=87871,
         family=6,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Either Darbel Montrose was a terrible warlock, or she simply adored cute things. Perhaps both.",
         icon="136221",
@@ -22695,10 +21480,10 @@ PETS.all ={
         companionID=143515,
         displayID=87890,
         family=6,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Constructs designed to assist the titans with sundry small tasks, this example is oddly small. Teeny Titan Orb! Let's Go!",
         icon="632352",
@@ -22713,10 +21498,10 @@ PETS.all ={
         companionID=143533,
         displayID=87895,
         family=8,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="While Yogursa managed to survive the blight infesting many of Hillsbrad's ursines, she was driven mad, and her cubs forever tainted.",
         icon="648803",
@@ -22731,10 +21516,10 @@ PETS.all ={
         companionID=143563,
         displayID=87903,
         family=8,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Part owl, part bear... and part stag, which handily avoids potential lawsuits.",
         icon="132150",
@@ -22749,10 +21534,10 @@ PETS.all ={
         companionID=143564,
         displayID=74038,
         family=3,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Plaguefeather and her brood feed well on the carrion the battle for Stromgarde has left scattered across the Highlands.",
         icon="1929248",
@@ -22767,10 +21552,10 @@ PETS.all ={
         companionID=143611,
         displayID=84157,
         family=6,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="These drops of Azerite are volatile and prone to explosive reactions when prodded.",
         icon="2065616",
@@ -22788,10 +21573,10 @@ PETS.all ={
         companionID=143627,
         displayID=87945,
         family=7,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="A living piece of Arathi's most infamous stone-faced behemoth, Fozruk.",
         icon="451165",
@@ -22806,10 +21591,10 @@ PETS.all ={
         companionID=143628,
         displayID=16880,
         family=3,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Boulderfist legend recounts a cloud of carrion birds following ogre warriors through the Dark Portal during the Second War; it may be that all two-headed scavengers in Azeroth are their descendants.",
         icon="132200",
@@ -22824,10 +21609,10 @@ PETS.all ={
         companionID=143730,
         displayID=81972,
         family=3,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Achievement",
         flavor="Bumbles may not have been the largest bee of the millions within the hive, but that doesn't mean he can't grow into a champion.",
         icon="2027852",
@@ -22841,10 +21626,10 @@ PETS.all ={
         companionID=143738,
         displayID=87976,
         family=10,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="A mighty war machine of adorable proportions.",
         icon="132486",
@@ -22862,10 +21647,10 @@ PETS.all ={
         companionID=143739,
         displayID=87977,
         family=10,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="A mighty war machine of adorable proportions.",
         icon="132485",
@@ -22883,10 +21668,10 @@ PETS.all ={
         companionID=143794,
         displayID=87999,
         family=9,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Scuttle was named after the ships he destroys, not his movement patterns, and don't you forget it.",
         icon="2061891",
@@ -22900,10 +21685,10 @@ PETS.all ={
         companionID=143801,
         displayID=88000,
         family=9,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="The shells of this particular group of crabs shimmer like gems on the sand.",
         icon="2027881",
@@ -22917,10 +21702,10 @@ PETS.all ={
         companionID=143802,
         displayID=88001,
         family=7,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="The kindleweb spider species is known amongst the island tribes for its warm, threadable webbing.",
         icon="520757",
@@ -22934,10 +21719,10 @@ PETS.all ={
         companionID=143803,
         displayID=88002,
         family=8,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="The hooves of this subgroup of goats have evolved to be equally surefooted on sand or stone.",
         icon="877477",
@@ -22951,10 +21736,10 @@ PETS.all ={
         companionID=143804,
         displayID=26524,
         family=10,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Someone put this mechanical gorilla on the island to monitor the species, but who, and why?",
         icon="132189",
@@ -22968,10 +21753,10 @@ PETS.all ={
         companionID=143805,
         displayID=88004,
         family=7,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="The only balls this hound chases are diamond-hard, fireproof rocks. Very heavy, not fun to throw.",
         icon="318343",
@@ -22985,10 +21770,10 @@ PETS.all ={
         companionID=143816,
         displayID=88005,
         family=8,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Is that a venomous worm in your pocket or... why is that in your pocket?",
         icon="236197",
@@ -23002,10 +21787,10 @@ PETS.all ={
         companionID=143797,
         displayID=88003,
         family=3,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Poro cannot fly, but enjoys a long lifespan hopping along the ground and shaking the fruits from trees.",
         icon="2061724",
@@ -23019,10 +21804,10 @@ PETS.all ={
         companionID=143819,
         displayID=88007,
         family=9,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Even young brineshell are drawn to the line in the sky that meets the waves, it calls them.",
         icon="1508497",
@@ -23036,10 +21821,10 @@ PETS.all ={
         companionID=143820,
         displayID=88008,
         family=8,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Based on the size, the mantid appear to be re-growing their swarm, likely due to the presence of a new empress.",
         icon="624010",
@@ -23053,10 +21838,10 @@ PETS.all ={
         companionID=143795,
         displayID=88016,
         family=4,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Captain Nibs was once the leader of an ill-fated sea voyage of slightly-too-smart-for-their-own-good monkeys that quickly capsized.",
         icon="2055038",
@@ -23070,10 +21855,10 @@ PETS.all ={
         companionID=143796,
         displayID=88012,
         family=4,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="A wealthy pirate captain met with a strange man on the docks of an unknown city and bartered for everlasting life for his faithful companion. As with most monkey-related wishes, something went wrong.",
         icon="2055034",
@@ -23087,10 +21872,10 @@ PETS.all ={
         companionID=143821,
         displayID=86463,
         family=1,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="The coldlight once were quite common across the oceans, to the grumbles of many hunters, but no longer.",
         icon="970832",
@@ -23104,10 +21889,10 @@ PETS.all ={
         companionID=143818,
         displayID=88036,
         family=8,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Getting just one of these fragrant beasts damp is the olfactory equivalent to rolling around in a pile of wet dogs.",
         icon="1029741",
@@ -23121,10 +21906,10 @@ PETS.all ={
         companionID=143817,
         displayID=88035,
         family=8,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Particularly partial to coastal scrub grasses, this hardy species has survived many years in uncharted lands.",
         icon="616693",
@@ -23138,10 +21923,10 @@ PETS.all ={
         companionID=143822,
         displayID=88037,
         family=3,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="The voru'kar are fiercely loyal to their leader, Vorus'arak, who led them to safety from the Lich King's grasp.",
         icon="237393",
@@ -23155,10 +21940,10 @@ PETS.all ={
         companionID=143799,
         displayID=88034,
         family=9,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Whatever the story of his mysterious eyepatch is, he's not talking.",
         icon="2101159",
@@ -23172,10 +21957,10 @@ PETS.all ={
         companionID=143798,
         displayID=88017,
         family=9,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="A baby octopode is technically referred to as a \"squish.\"",
         icon="2101158",
@@ -23189,10 +21974,10 @@ PETS.all ={
         companionID=143806,
         displayID=88038,
         family=5,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="During the warm summer months, the noise that these pests make is enough to drive a person mad.",
         icon="134967",
@@ -23206,10 +21991,10 @@ PETS.all ={
         companionID=143807,
         displayID=88040,
         family=8,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="It's sting is worse than... well nothing, really. Are you sure you want to keep this as a pet?",
         icon="464143",
@@ -23223,10 +22008,10 @@ PETS.all ={
         companionID=143811,
         displayID=88057,
         family=7,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="You know how disappointing it is when you return to your beverage and the ice has all melted? This guy's fault.",
         icon="656560",
@@ -23240,10 +22025,10 @@ PETS.all ={
         companionID=143809,
         displayID=88058,
         family=7,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="The most nefarious of the trickster spirits, and the reason why the pandaren invented fireproof pants.",
         icon="774324",
@@ -23257,10 +22042,10 @@ PETS.all ={
         companionID=143812,
         displayID=88059,
         family=7,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="\"Beware the cool breeze, for it brings trickery.\" - pandaren proverb",
         icon="774322",
@@ -23274,10 +22059,10 @@ PETS.all ={
         companionID=143810,
         displayID=88060,
         family=7,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="The earth that's rumbling beneath your feet... is it quaking or laughing, or both?",
         icon="774323",
@@ -23291,10 +22076,10 @@ PETS.all ={
         companionID=143808,
         displayID=45190,
         family=1,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="The sprites that inhabit the islands of the Great Sea have thought of many traps to lure in unwary visitors.",
         icon="458176",
@@ -23308,10 +22093,10 @@ PETS.all ={
         companionID=143813,
         displayID=88061,
         family=5,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Littlehoof likes: bounding, bouncing, frolicking, and headbutts, in that order.",
         icon="1383844",
@@ -23325,10 +22110,10 @@ PETS.all ={
         companionID=143814,
         displayID=81098,
         family=9,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Wear gloves with this little guy, he loves to bite!",
         icon="1738684",
@@ -23342,10 +22127,10 @@ PETS.all ={
         companionID=143815,
         displayID=88064,
         family=3,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="The bright scales of this rare wind serpent soak up the sunlight to keep it warm, even in shade.",
         icon="132209",
@@ -23359,10 +22144,10 @@ PETS.all ={
         companionID=143957,
         displayID=78837,
         family=10,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Profession",
         flavor="Mechanical Toads can hop over seven million times before their gears begin to wear out.",
         icon="1694136",
@@ -23376,10 +22161,10 @@ PETS.all ={
         companionID=143959,
         displayID=88024,
         family=9,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Profession",
         flavor="These creatures are able to control each arm individually, which allows for great multi-tasking, and the ability to give the best hugs.",
         icon="254105",
@@ -23393,10 +22178,10 @@ PETS.all ={
         companionID=143958,
         displayID=80458,
         family=5,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Profession",
         flavor="The smallest of cuts can be devastating to this species, they start to leak all over the place.",
         icon="1723701",
@@ -23410,10 +22195,10 @@ PETS.all ={
         companionID=143374,
         displayID=83653,
         family=8,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Profession",
         flavor="The horns of a crawg grow at a tremendous rate starting almost immediately after they are born, and is among the hardest of natural materials found on a living species.",
         icon="237402",
@@ -23427,10 +22212,10 @@ PETS.all ={
         companionID=144005,
         displayID=87997,
         family=9,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Vendor",
         flavor="No one knows who first started dressing up crabs in Azeroth, and it won't be stopping any time soon.",
         icon="2061889",
@@ -23455,10 +22240,10 @@ PETS.all ={
         companionID=144004,
         displayID=87998,
         family=9,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Vendor",
         flavor="No one knows who first started dressing up crabs in Azeroth, and it won't be stopping any time soon.",
         icon="2061890",
@@ -23483,9 +22268,9 @@ PETS.all ={
         companionID=145948,
         displayID=89261,
         family=3,
-        isWild=false,
-        isTradeable=false,
-        isUnique=false,
+
+
+
         isPassive=true,
         source="Vendor",
         flavor="A Darkmoon balloon made to look like a wolf.",
@@ -23502,9 +22287,9 @@ PETS.all ={
         companionID=145947,
         displayID=89262,
         family=3,
-        isWild=false,
-        isTradeable=false,
-        isUnique=false,
+
+
+
         isPassive=true,
         source="Vendor",
         flavor="A Darkmoon balloon made to look like a murloc.",
@@ -23521,9 +22306,9 @@ PETS.all ={
         companionID=145946,
         displayID=89260,
         family=3,
-        isWild=false,
-        isTradeable=false,
-        isUnique=false,
+
+
+
         isPassive=true,
         source="Vendor",
         flavor="A Darkmoon balloon made to look like a horse.",
@@ -23540,10 +22325,10 @@ PETS.all ={
         companionID=147221,
         displayID=89609,
         family=8,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="The tarantulas that inhabit southern Redridge are smaller than their cousins elsewhere in Azeroth, but make up for their size with speed and ferocity.",
         icon="2027964",
@@ -23558,10 +22343,10 @@ PETS.all ={
         companionID=147583,
         displayID=90422,
         family=10,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Quest",
         flavor="Thought to be lost in a massive explosion, the smartest of engineers were able to rebuild Feathers into a magnificent mechanical creation.",
         icon="2490921",
@@ -23576,10 +22361,10 @@ PETS.all ={
         companionID=147586,
         displayID=30298,
         family=3,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="There is a story told to some children that all winged creatures were unable to fly until Pa'ku provided enough wind to lift them off of the ground.",
         icon="1624588",
@@ -23594,10 +22379,10 @@ PETS.all ={
         companionID=147585,
         displayID=77989,
         family=9,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="A toad with Krag'wa's bloodline has an average expectancy to leap over seven million times during its lifetime.",
         icon="2399289",
@@ -23613,10 +22398,10 @@ PETS.all ={
         companionID=147587,
         displayID=89742,
         family=8,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="The large plates on the back of this lizard are made of a mysterious but highly conductive material, making it ideal to charge up and expel massive amounts of electricity.",
         icon="136103",
@@ -23631,10 +22416,10 @@ PETS.all ={
         companionID=147619,
         displayID=90411,
         family=10,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Profession",
         flavor="The Mechantula was created by an unknown gnomish Engineer. Rumor has it when the original schematic was found, it was in a room covered with dusty old webbing, but neither the original Mechantula or the engineer who drafted the schematic could be found.",
         icon="1511262",
@@ -23648,10 +22433,10 @@ PETS.all ={
         companionID=147671,
         displayID=88790,
         family=10,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="Mechanical Cockroaches are less likely to survive an apocalypse than an actual living cockroach, making this one of the more questionable feats of engineering.",
         icon="294474",
@@ -23667,10 +22452,10 @@ PETS.all ={
         companionID=147679,
         displayID=88785,
         family=4,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="The radiation from all of the machinery in Gnomeregan gives these rats a soft green glow when looked at in absolute darkness.",
         icon="2126350",
@@ -23686,10 +22471,10 @@ PETS.all ={
         companionID=147692,
         displayID=89767,
         family=10,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="The Alarm-O-Dog was built for security purposes, but people really wanted one for their home because they are so darn cute.",
         icon="1567069",
@@ -23705,10 +22490,10 @@ PETS.all ={
         companionID=147838,
         displayID=31623,
         family=10,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Achievement",
         flavor="Nobody is sure why someone thought making a miniature version of the machines in Gnomeregan was a good idea, but they sure are fun to play with.",
         icon="132241",
@@ -23722,10 +22507,10 @@ PETS.all ={
         companionID=147884,
         displayID=86573,
         family=6,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Achievement",
         flavor="The eerie magic in Drustvar has caused some unimaginable creatures to show up. Some still lurk in the shadows, others seem to be made out of shadows.",
         icon="136221",
@@ -23740,9 +22525,9 @@ PETS.all ={
         displayID=90027,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="The raptors of Zandalar have their feathers at a very young age, making them seem like easy prey to an unsuspecting predator. In reality, these little terrors eat everything they want to and are prey to almost no other species.",
         icon="2459292",
@@ -23756,10 +22541,10 @@ PETS.all ={
         companionID=148520,
         displayID=90028,
         family=8,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Like many other species, you can get a rough guess of how large the raptor will be as a fully grown adult by the size of its largest claw.",
         icon="2459296",
@@ -23774,10 +22559,10 @@ PETS.all ={
         companionID=148524,
         displayID=90029,
         family=8,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="One of the earliest recorded victories in a large battle on Zandalar depicted mighty warriors riding into battle on armored raptors. The legend has it that the warrior did not choose their raptor, but that the raptor would choose the warrior.",
         icon="2459293",
@@ -23793,10 +22578,10 @@ PETS.all ={
         companionID=148525,
         displayID=90030,
         family=8,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="During certain times of the day, the sunlight can cause a reflection on the feathers of the red tinted raptors causing them to look more like flames than feathers.",
         icon="2459294",
@@ -23812,10 +22597,10 @@ PETS.all ={
         companionID=148781,
         displayID=90155,
         family=3,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="The Sentinel Owls of Darkshore are forever protective of their homeland.",
         icon="1387709",
@@ -23833,10 +22618,10 @@ PETS.all ={
         companionID=148784,
         displayID=5187,
         family=7,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="When Cyclarus came to Darkshore, small cyclones appeared all over the place. Some of them dissipated over time, others found their way back to Cyclarus and were absorbed into the surrounding winds.",
         icon="132119",
@@ -23851,10 +22636,10 @@ PETS.all ={
         companionID=148825,
         displayID=81665,
         family=4,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="This is what happens when you try to one-up Pip Quickwit's tall tales of being stuck inside of dangerous creatures.",
         icon="1269439",
@@ -23869,10 +22654,10 @@ PETS.all ={
         companionID=148841,
         displayID=23000,
         family=7,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Hydrath Water Droplets are also an excellent skin moisturizer.",
         icon="636335",
@@ -23887,10 +22672,10 @@ PETS.all ={
         companionID=148843,
         displayID=90140,
         family=7,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="A lone Ancient of Lore in Darnassus managed to save this Treant in its final actions with a magical aura to prevent the flames from burning it any further.",
         icon="135829",
@@ -23908,10 +22693,10 @@ PETS.all ={
         companionID=148844,
         displayID=90141,
         family=6,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="This Jelly has seen better days. Now it sees through fifty different eyes.",
         icon="537022",
@@ -23926,10 +22711,10 @@ PETS.all ={
         companionID=148846,
         displayID=90142,
         family=6,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Once a mighty warrior of the n'raqi, Zur'aj's power was stolen and absorbed by an unknown rival.",
         icon="1386549",
@@ -23944,10 +22729,10 @@ PETS.all ={
         companionID=148976,
         displayID=66487,
         family=8,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="The playful kicks of these baby moose are enough to knock an orc flat on his back.",
         icon="1387706",
@@ -23961,10 +22746,10 @@ PETS.all ={
         companionID=148979,
         displayID=90173,
         family=3,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="We don't know much about this species, but we do know this: bats aren't bugs.",
         icon="132182",
@@ -23978,10 +22763,10 @@ PETS.all ={
         companionID=148981,
         displayID=90176,
         family=4,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Get it while it lasts.",
         icon="1100170",
@@ -23995,10 +22780,10 @@ PETS.all ={
         companionID=148982,
         displayID=90177,
         family=5,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="The needleback porcupines have survived life in island climates by evolving to be extra lucky.",
         icon="644001",
@@ -24012,10 +22797,10 @@ PETS.all ={
         companionID=148985,
         displayID=80967,
         family=3,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="Albino ravens are incredibly rare and highly prized amongst the traders of the Great Sea.",
         icon="1733738",
@@ -24031,10 +22816,10 @@ PETS.all ={
         companionID=148984,
         displayID=80966,
         family=3,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Though barely a hatchling, its claws are already sharp enough to pierce the flesh of many smaller critters.",
         icon="1733737",
@@ -24048,10 +22833,10 @@ PETS.all ={
         companionID=148988,
         displayID=90181,
         family=3,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Firesting wasps are said to have one of the worst bites of any wasp species, causing a pain like a burning blaze.",
         icon="2027905",
@@ -24065,10 +22850,10 @@ PETS.all ={
         companionID=148989,
         displayID=90182,
         family=8,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Lord Woofington was given his title after the rest of the denizens of Havenswood succumbed to madness.",
         icon="877481",
@@ -24082,10 +22867,10 @@ PETS.all ={
         companionID=148990,
         displayID=76763,
         family=9,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="It has one solution to all of its problems: give em' a lashing.",
         icon="2399293",
@@ -24099,10 +22884,10 @@ PETS.all ={
         companionID=148991,
         displayID=90183,
         family=8,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Key activities include: rolling over, sunning self, whimpering for belly scratches, and enjoying belly scratches.",
         icon="797544",
@@ -24116,10 +22901,10 @@ PETS.all ={
         companionID=148995,
         displayID=90184,
         family=2,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="These whelps are frequently captured by the denizens of Jorundall when still young and trainable.",
         icon="134154",
@@ -24133,10 +22918,10 @@ PETS.all ={
         companionID=148997,
         displayID=88023,
         family=9,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="The crimson species of octopode grows larger and hardier than others, and is capable of sustaining crushing pressure in the depths.",
         icon="2101158",
@@ -24158,10 +22943,10 @@ PETS.all ={
         companionID=149205,
         displayID=90230,
         family=3,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="It is an honor in the Sentinel Army to be entrusted with the care of an owl born from the boughs of the great tree Teldrassil.",
         icon="1387709",
@@ -24179,10 +22964,10 @@ PETS.all ={
         companionID=149348,
         displayID=90279,
         family=10,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="The convenient part of robots that fight each other is that you can just put them back together. Step two is to attach a giant laser cannon to ensure you win the next battle.",
         icon="1509628",
@@ -24197,10 +22982,10 @@ PETS.all ={
         companionID=149361,
         displayID=90412,
         family=10,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Anyone serious about using a mechanical spider in battle knows that you need to buy replacement legs in bulk. Those things are fragile.",
         icon="1511262",
@@ -24215,10 +23000,10 @@ PETS.all ={
         companionID=149363,
         displayID=77901,
         family=3,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="The Albatross is capable of flying further than any other species of bird on all of Azeroth.",
         icon="132923",
@@ -24234,10 +23019,10 @@ PETS.all ={
         companionID=149372,
         displayID=80954,
         family=3,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Unlike most other bat species, the crimson bats are actually blind and rely entirely on echolocation to get around.",
         icon="2103883",
@@ -24253,10 +23038,10 @@ PETS.all ={
         companionID=149375,
         displayID=36743,
         family=3,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="The feathers of the cobalt raven glow eerily in the moonlight, making them easy to spot during the night.",
         icon="136076",
@@ -24272,10 +23057,10 @@ PETS.all ={
         companionID=149376,
         displayID=78243,
         family=9,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="The Abyssal Eels are able to swallow and digest something up to twice the width of their body.",
         icon="2027957",
@@ -24291,10 +23076,10 @@ PETS.all ={
         companionID=150098,
         displayID=82003,
         family=9,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="World Event",
         flavor="Mr. Crabs was victorious in a lengthy brawl amongst nearly a dozen other hermit crabs to claim his current shell.",
         icon="2027914",
@@ -24308,10 +23093,10 @@ PETS.all ={
         companionID=150119,
         displayID=81097,
         family=9,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="World Event",
         flavor="Beakbert's favorite food is a ravenberry.",
         icon="1738683",
@@ -24325,10 +23110,10 @@ PETS.all ={
         companionID=150120,
         displayID=78849,
         family=9,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="World Event",
         flavor="The skin of a teal frog sometimes shimmers just right in the sunlight, providing excellent camouflage when on the surface of the water.",
         icon="2399261",
@@ -24342,10 +23127,10 @@ PETS.all ={
         companionID=150126,
         displayID=81213,
         family=2,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="World Event",
         flavor="Saurolisk scales are a surprisingly flexible but durable material that are often used to reinforce or mend things that are broken or worn through.",
         icon="2027841",
@@ -24359,10 +23144,10 @@ PETS.all ={
         companionID=150354,
         displayID=40155,
         family=8,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Quilen were the favored companions of the ancient Mogu race due to their loyal nature.",
         icon="645792",
@@ -24377,10 +23162,10 @@ PETS.all ={
         companionID=150356,
         displayID=90715,
         family=4,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Crossing into the spirit world too often can be dangerous for your health.",
         icon="801002",
@@ -24395,10 +23180,10 @@ PETS.all ={
         companionID=150357,
         displayID=90830,
         family=6,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="The Engine of Nalak'sha is defended by many mighty beings, and many tiny beings.",
         icon="2622569",
@@ -24413,10 +23198,10 @@ PETS.all ={
         companionID=150360,
         displayID=47859,
         family=6,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="For being an inanimate object for many centuries, this statue sure moves around really well.",
         icon="646675",
@@ -24431,10 +23216,10 @@ PETS.all ={
         companionID=150365,
         displayID=44445,
         family=2,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="This little cloud serpent's favorite activity is chasing its own tail.",
         icon="1247267",
@@ -24449,10 +23234,10 @@ PETS.all ={
         companionID=150372,
         displayID=39739,
         family=7,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="The elemental spirits of Pandaria have been known to plan tricks to play on unsuspecting visitors years in advance.",
         icon="774324",
@@ -24467,10 +23252,10 @@ PETS.all ={
         companionID=150374,
         displayID=45274,
         family=3,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Don't let these eat after midnight, legend has it that it's very dangerous.",
         icon="624012",
@@ -24485,10 +23270,10 @@ PETS.all ={
         companionID=150375,
         displayID=90867,
         family=3,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="The glow eminating from these is both calming and eerie at the same time when in total darkness.",
         icon="2626043",
@@ -24503,10 +23288,10 @@ PETS.all ={
         companionID=150377,
         displayID=90745,
         family=8,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="The kunchong are extremely aggressive and will eat just about anything they can as soon as they are able to walk. If they can't eat it, they will smash it instead.",
         icon="624010",
@@ -24521,10 +23306,10 @@ PETS.all ={
         companionID=150380,
         displayID=42520,
         family=6,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="The mantid are extremely reliant upon amber for many things, and even use it in some of their magic.",
         icon="646670",
@@ -24539,10 +23324,10 @@ PETS.all ={
         companionID=150381,
         displayID=50919,
         family=7,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="As a spawn of the most dangerous sha, this little monster has some big plans, but needs to wait a few thousand years first.",
         icon="135782",
@@ -24557,10 +23342,10 @@ PETS.all ={
         companionID=150385,
         displayID=90866,
         family=7,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Achievement",
         flavor="This thing is equally as evil as it is adorable.",
         icon="2735130",
@@ -24574,10 +23359,10 @@ PETS.all ={
         companionID=151779,
         displayID=91267,
         family=2,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Promotion",
         flavor="This pocket-sized Lord of Blackrock is too small to call out any classes, but he can still dish up a good insult.",
         icon="2615850",
@@ -24592,10 +23377,10 @@ PETS.all ={
         companionID=151780,
         displayID=96596,
         family=8,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="World Event",
         flavor="These dazzling hatchlings have a distinctive coat color that has been highly sought after by leatherworkers for generations.",
         icon="2741548",
@@ -24609,10 +23394,10 @@ PETS.all ={
         companionID=151788,
         displayID=91271,
         family=8,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="In-Game Shop",
         flavor="Don't be fooled by Dottie's soft coat and big eyes, her tiny, sharp teeth are for more than just munching on grass.",
         icon="2735061",
@@ -24625,10 +23410,10 @@ PETS.all ={
         companionID=154445,
         displayID=92265,
         family=4,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Achievement",
         flavor="Some argue that the beard is what grants a spell caster their power, but they're wrong. The hat is where the magic is really from.",
         icon="1337422",
@@ -24643,9 +23428,9 @@ PETS.all ={
         displayID=75366,
         family=9,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="The crabs of Nazjatar seem relatively unfazed by the sudden absence of the water.",
         icon="2027869",
@@ -24660,9 +23445,9 @@ PETS.all ={
         displayID=75379,
         family=9,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="The bright shells on these crabs makes them easy prey for predators, so they mostly stay to the shadows.",
         icon="2027887",
@@ -24677,9 +23462,9 @@ PETS.all ={
         displayID=92154,
         family=9,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="The bright shells of the hermit crabs of Nazjatar have the jewelry crafters of Azeroth buzzing with excitement.",
         icon="2027923",
@@ -24694,9 +23479,9 @@ PETS.all ={
         displayID=91023,
         family=9,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="The chitterspine make a distinctive clicking noise when they see prey in the open.",
         icon="1508490",
@@ -24711,9 +23496,9 @@ PETS.all ={
         displayID=91026,
         family=9,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="The \"hissing\" of this crab can be heard underwater, and is actually it rapidly clicking its smaller claws.",
         icon="1508489",
@@ -24728,9 +23513,9 @@ PETS.all ={
         displayID=78151,
         family=3,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="These albatrosses are slightly smaller than those found inland, and they can travel great distances over the sea.",
         icon="1929246",
@@ -24745,9 +23530,9 @@ PETS.all ={
         displayID=90512,
         family=9,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="The deep sea frenzies of Nazjatar have long been a staple food of the naga.",
         icon="2564610",
@@ -24762,9 +23547,9 @@ PETS.all ={
         displayID=90946,
         family=9,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Some frenzies have been touched by whispers in the deep, and seek to turn the tides red with blood.",
         icon="2564610",
@@ -24779,9 +23564,9 @@ PETS.all ={
         displayID=90517,
         family=5,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="The pressure of the crushing depths at which these snails exist help to form its distinctive shell.",
         icon="2530492",
@@ -24796,9 +23581,9 @@ PETS.all ={
         displayID=90520,
         family=5,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="In the lightless trenches and chasms of the Great Sea, life still exists.",
         icon="2530494",
@@ -24813,9 +23598,9 @@ PETS.all ={
         displayID=91025,
         family=9,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Of the many frightening things that lurk in the deeps, a chitterspine nest is really up there.",
         icon="1508493",
@@ -24830,9 +23615,9 @@ PETS.all ={
         displayID=91113,
         family=5,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="If you are diving into the deeps and one of these attaches itself to your leg, don't panic -- they're relatively harmless.",
         icon="2763646",
@@ -24847,9 +23632,9 @@ PETS.all ={
         displayID=91087,
         family=5,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="What else is there to say? Slugs love muck.",
         icon="2763642",
@@ -24864,9 +23649,9 @@ PETS.all ={
         displayID=88762,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Snooters have a very good sense of smell and can easily find grass and seeds buried under snow or scrap.",
         icon="2205589",
@@ -24881,9 +23666,9 @@ PETS.all ={
         displayID=88763,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="The dark fur of the duskytooth allows them to more easily hide in the junkheaps of Mechagon Island.",
         icon="2205590",
@@ -24901,9 +23686,9 @@ PETS.all ={
         displayID=88786,
         family=5,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Of all of the creatures in Mechagon, the roaches seem the most unaffected by all of the changes.",
         icon="294474",
@@ -24918,9 +23703,9 @@ PETS.all ={
         displayID=88789,
         family=5,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Experiments on this roach have grown it to an enormous size. Who would want that?",
         icon="294474",
@@ -24935,9 +23720,9 @@ PETS.all ={
         displayID=78832,
         family=9,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="The frogs of Mechagon had two choices when faced with mechanization: hide or breed. This species chose the latter.",
         icon="2399262",
@@ -24952,9 +23737,9 @@ PETS.all ={
         displayID=78851,
         family=9,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="The frogs of Mechagon had two choices when faced with mechanization: hide or breed. This species chose the former.",
         icon="2399264",
@@ -24969,9 +23754,9 @@ PETS.all ={
         displayID=78843,
         family=10,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="The mechanical frogs of Mechagon Island have evolved to eat various mechanical insects, somehow.",
         icon="2399254",
@@ -24986,9 +23771,9 @@ PETS.all ={
         displayID=78839,
         family=10,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="The results of King Mechagon's experiments can be seen throughout the city and island.",
         icon="2399251",
@@ -25008,9 +23793,9 @@ PETS.all ={
         displayID=75327,
         family=3,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Some of the few remaining fleshy creatures on Mechagon, they provide food and even companionship for the citizens of Rustbolt.",
         icon="2027862",
@@ -25025,9 +23810,9 @@ PETS.all ={
         displayID=75347,
         family=5,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Experiments in mechanization have driven the few remaining critters in Mechagon to hide or flee.",
         icon="2126353",
@@ -25042,9 +23827,9 @@ PETS.all ={
         displayID=75358,
         family=10,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Specimen 97 escaped from his cage before being fully mechanized. Now, he seeks revenge.",
         icon="2126366",
@@ -25059,9 +23844,9 @@ PETS.all ={
         displayID=75350,
         family=10,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Though not real rats, they have taken over the back alleys of Mechagon City and carry diseased programs, earning them the name.",
         icon="2126359",
@@ -25081,9 +23866,9 @@ PETS.all ={
         displayID=75354,
         family=10,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Natural burrowing tendencies were programmed into these critters, and now they perform vital functions breaking down the great piles of scrap.",
         icon="2126361",
@@ -25098,9 +23883,9 @@ PETS.all ={
         displayID=74802,
         family=10,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="When you need a hand, you know who to call.",
         icon="1521022",
@@ -25121,9 +23906,9 @@ PETS.all ={
         displayID=74803,
         family=10,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="The machinists of Mechagon may automate many of the tasks of the city, but they also spend a lot of time repairing and maintaining their inventions.",
         icon="1521022",
@@ -25143,9 +23928,9 @@ PETS.all ={
         displayID=90875,
         family=10,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Doesn't remember what it was originally programmed to do, just wants to battle other pets.",
         icon="2735924",
@@ -25160,9 +23945,9 @@ PETS.all ={
         displayID=10095,
         family=2,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="A re-emergence of whelps outside of Grim Batol has the red dragonflight worried -- something is happening in the lost city.",
         icon="134154",
@@ -25177,9 +23962,9 @@ PETS.all ={
         displayID=78241,
         family=9,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="The eels that inhabit the trenches and chasms of Nazjatar are a favored food of many creatures that inhabit the area.",
         icon="2027955",
@@ -25193,10 +23978,10 @@ PETS.all ={
         companionID=154819,
         displayID=88873,
         family=1,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Treasure",
         flavor="Master of poking, stabbing, thrusting, jabbing, and gouging.",
         icon="2267048",
@@ -25210,10 +23995,10 @@ PETS.all ={
         companionID=154820,
         displayID=91235,
         family=1,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="The murloc tribe that Murgle belongs to is one of few that have resisted the naga's enslavement.",
         icon="3004140",
@@ -25228,10 +24013,10 @@ PETS.all ={
         companionID=154821,
         displayID=86465,
         family=1,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Legend has it that the Necrofin tribe found necromancy on a series of runed tablets at the bottom of the sea.",
         icon="970832",
@@ -25246,10 +24031,10 @@ PETS.all ={
         companionID=154822,
         displayID=88874,
         family=1,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Achievement",
         flavor="Don't let the cuteness fool you, this little monster will jab your ankles the second you're not looking.",
         icon="2267049",
@@ -25263,10 +24048,10 @@ PETS.all ={
         companionID=154823,
         displayID=75367,
         family=9,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="A rare species of crab found mostly in Nazjatar, it hides easily amongst the ample kelp and coral of the area.",
         icon="2027870",
@@ -25281,10 +24066,10 @@ PETS.all ={
         companionID=154824,
         displayID=75374,
         family=9,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Treasure",
         flavor="Anything can be a nest, if you try hard enough.",
         icon="2027879",
@@ -25298,10 +24083,10 @@ PETS.all ={
         companionID=154825,
         displayID=92157,
         family=9,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="When the sun shines on its shell just right, the light scatters in a thousand different directions.",
         icon="2027919",
@@ -25320,10 +24105,10 @@ PETS.all ={
         companionID=154826,
         displayID=90868,
         family=9,
-        isWild=false,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
+
         source="Quest",
         flavor="A gift, found one day and saved for a meaningful occasion, should things ever turn around.",
         icon="2027920",
@@ -25338,10 +24123,10 @@ PETS.all ={
         companionID=154827,
         displayID=92156,
         family=9,
-        isWild=false,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
+
         source="Quest",
         flavor="A gift, found one day and saved for a meaningful occasion, should things ever turn around.",
         icon="2027923",
@@ -25356,10 +24141,10 @@ PETS.all ={
         companionID=154828,
         displayID=91027,
         family=9,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="A rare evolution of chitterspine, with elongated spines to pierce soft flesh and eyes.",
         icon="1508493",
@@ -25374,10 +24159,10 @@ PETS.all ={
         companionID=154829,
         displayID=91024,
         family=9,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="As if a dark, underwater cave wasn't nightmarish enough, these things exist -- and they love it there.",
         icon="1508492",
@@ -25392,10 +24177,10 @@ PETS.all ={
         companionID=154830,
         displayID=91021,
         family=9,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="These gruesome crabs are attracted to the scent of blood and seem to revel in combat.",
         icon="1508489",
@@ -25414,10 +24199,10 @@ PETS.all ={
         companionID=154831,
         displayID=91028,
         family=9,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="In the lightless caverns, a bright shell color doesn't make you any worse at ambushing.",
         icon="1508488",
@@ -25432,10 +24217,10 @@ PETS.all ={
         companionID=154832,
         displayID=78240,
         family=9,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="In a dark place unknown to all, the seabed writhes with the children of Nalaada, a carpet of life and death.",
         icon="2027953",
@@ -25450,10 +24235,10 @@ PETS.all ={
         companionID=154833,
         displayID=90513,
         family=9,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="In the fathomless depths beyond the Eternal Palace, minds are lost in the blackness.",
         icon="2564610",
@@ -25468,10 +24253,10 @@ PETS.all ={
         companionID=154834,
         displayID=90944,
         family=9,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Frenzies in Nazjatar have learned to operate in large schools or face consumption by the many predators of the deeps.",
         icon="2564610",
@@ -25486,10 +24271,10 @@ PETS.all ={
         companionID=154835,
         displayID=88019,
         family=9,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="The influence of the old gods on the aquatic life of Nazjatar is unmistakable, as many simply wander as mindless eyes of N'zoth.",
         icon="2101158",
@@ -25504,10 +24289,10 @@ PETS.all ={
         companionID=154836,
         displayID=90519,
         family=5,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Spireshells produce a softer shell when young which will be grown out of quickly.",
         icon="2530493",
@@ -25522,10 +24307,10 @@ PETS.all ={
         companionID=154837,
         displayID=90515,
         family=5,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="Even with its softer juvenile shell, a young prismatic spireshell still glitters like a diamond.",
         icon="2530489",
@@ -25542,10 +24327,10 @@ PETS.all ={
         companionID=154838,
         displayID=91111,
         family=5,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="The bright coloration of this deep water slug seems to give off a soft, warm glow.",
         icon="2763644",
@@ -25562,10 +24347,10 @@ PETS.all ={
         companionID=154839,
         displayID=91114,
         family=5,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Watch your ears.",
         icon="2763647",
@@ -25580,10 +24365,10 @@ PETS.all ={
         companionID=154840,
         displayID=88619,
         family=7,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="The elements clash and battle for relics constantly, but few moreso than the Tidestone.",
         icon="135861",
@@ -25598,10 +24383,10 @@ PETS.all ={
         companionID=154841,
         displayID=50613,
         family=7,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="The Tidestone would empower minions of both the storm and the sea, and is sought after by both parties.",
         icon="236154",
@@ -25616,10 +24401,10 @@ PETS.all ={
         companionID=154842,
         displayID=47252,
         family=7,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="This pile of animated sand is fun to squish between your fingers, but doesn't really like it when you do that.",
         icon="796636",
@@ -25634,10 +24419,10 @@ PETS.all ={
         companionID=154843,
         displayID=92159,
         family=9,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="The hydra matriarchs of Nazjatar steal and destroy one another's eggs constantly, so you can never really know what will hatch out of one.",
         icon="463493",
@@ -25651,10 +24436,10 @@ PETS.all ={
         companionID=154845,
         displayID=90991,
         family=7,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Standing next to a brinestone algan will remind you of the smell of the sea, mixed with rotting kelp.",
         icon="960692",
@@ -25669,10 +24454,10 @@ PETS.all ={
         companionID=154846,
         displayID=90993,
         family=7,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="There's no mistaking the evidence -- algan breed by budding. We can all put this argument to rest now.",
         icon="960692",
@@ -25687,10 +24472,10 @@ PETS.all ={
         companionID=154847,
         displayID=80466,
         family=7,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="The predatory coral of Nazjatar can grow incredibly quickly given the right conditions.",
         icon="2027890",
@@ -25705,10 +24490,10 @@ PETS.all ={
         companionID=154848,
         displayID=92158,
         family=9,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="The eels of Nazjatar are experts at hiding in the many cracks and rocks of the sea floor.",
         icon="133898",
@@ -25723,10 +24508,10 @@ PETS.all ={
         companionID=154849,
         displayID=92162,
         family=4,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="When the waves crashed down around the city, not all were fortunate enough to receive N'zoth's gift.",
         icon="656241",
@@ -25742,10 +24527,10 @@ PETS.all ={
         companionID=154850,
         displayID=88764,
         family=8,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="The birth of an exceptionally rare Golden Snorf was such an abnormality that not even King Mechagon could force himself to mechanize his beloved, fuzzy friend.",
         icon="2205591",
@@ -25761,10 +24546,10 @@ PETS.all ={
         companionID=154851,
         displayID=88761,
         family=8,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Of all snooters, this one has the softest fur. Ironically, it does not like to be pet very much.",
         icon="2205588",
@@ -25779,10 +24564,10 @@ PETS.all ={
         companionID=154852,
         displayID=88766,
         family=8,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="A rare snooter, and hard to find, it's known for burrowing itself deep under wet foliage to nest.",
         icon="2205593",
@@ -25799,10 +24584,10 @@ PETS.all ={
         companionID=154853,
         displayID=75332,
         family=10,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="",
         flavor="Many advancements have been made to the initial prototype homing beacon over the years.",
         icon="3004141",
@@ -25816,10 +24601,10 @@ PETS.all ={
         companionID=154854,
         displayID=74801,
         family=10,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="It's not clear who the original owner of this arm was, but they're not getting it back now.",
         icon="1521022",
@@ -25834,10 +24619,10 @@ PETS.all ={
         companionID=154855,
         displayID=74800,
         family=10,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Profession",
         flavor="As handy as this invention is, it was also programmed to absolutely despise hand puns.",
         icon="1521022",
@@ -25852,10 +24637,10 @@ PETS.all ={
         companionID=154856,
         displayID=90878,
         family=10,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Profession",
         flavor="One of the microbots used to guard the city of Rustbolt, now purchasable for a reasonable price.",
         icon="2735922",
@@ -25870,10 +24655,10 @@ PETS.all ={
         companionID=154857,
         displayID=90874,
         family=10,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="He's just so happy to be programmed to exist.",
         icon="2735923",
@@ -25888,10 +24673,10 @@ PETS.all ={
         companionID=154893,
         displayID=81215,
         family=2,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Absolutely do not let him bite your bones.",
         icon="2027842",
@@ -25906,10 +24691,10 @@ PETS.all ={
         companionID=154894,
         displayID=90413,
         family=10,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="No one knows who made these mechanical spiders, but everyone hates them.",
         icon="2493081",
@@ -25924,10 +24709,10 @@ PETS.all ={
         companionID=154904,
         displayID=91656,
         family=6,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="It doesn't take a very large ooze to eat a gnome.",
         icon="132108",
@@ -25942,10 +24727,10 @@ PETS.all ={
         companionID=155240,
         displayID=92266,
         family=4,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Vendor",
         flavor="The stench alone that this thing makes when it burps can easily ruin your day.",
         icon="2492254",
@@ -25961,10 +24746,10 @@ PETS.all ={
         companionID=155244,
         displayID=23057,
         family=4,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Vendor",
         flavor="Every time the mandibles on this vibrate slightly, it is because it gave someone a nightmare.",
         icon="132196",
@@ -25980,10 +24765,10 @@ PETS.all ={
         companionID=155246,
         displayID=9758,
         family=4,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Vendor",
         flavor="Six legs, two claws, multiple eyes, spiked body? This thing has it all!",
         icon="237373",
@@ -25999,10 +24784,10 @@ PETS.all ={
         companionID=155248,
         displayID=10723,
         family=6,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Vendor",
         flavor="Dogs can hear her coming from extremely far away.",
         icon="2492256",
@@ -26018,10 +24803,10 @@ PETS.all ={
         companionID=155600,
         displayID=91631,
         family=10,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Even he cannot put out the fire in my heart.",
         icon="2735924",
@@ -26036,10 +24821,10 @@ PETS.all ={
         companionID=154165,
         displayID=94165,
         family=4,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Unkillable dragons, what could go wrong?",
         icon="134158",
@@ -26053,10 +24838,10 @@ PETS.all ={
         companionID=154693,
         displayID=92073,
         family=1,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="The last thing that tried to look in its tiny pack was never seen again.",
         icon="1519435",
@@ -26070,10 +24855,10 @@ PETS.all ={
         companionID=155579,
         displayID=80254,
         family=7,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="",
         flavor="In case of darkness, this little elemental is an infinite source of a soothing green glow.",
         icon="134576",
@@ -26086,10 +24871,10 @@ PETS.all ={
         companionID=151700,
         displayID=91250,
         family=9,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Treasure",
         flavor="The slimy coating on this otter provides excellent protection against sunburns.",
         icon="645906",
@@ -26104,10 +24889,10 @@ PETS.all ={
         companionID=151697,
         displayID=91249,
         family=9,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Treasure",
         flavor="Eels are already slimy. This one is extra slimy.",
         icon="2027955",
@@ -26122,10 +24907,10 @@ PETS.all ={
         companionID=151673,
         displayID=91232,
         family=9,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Treasure",
         flavor="This little octopode squirts slime out instead of ink.",
         icon="2101158",
@@ -26140,10 +24925,10 @@ PETS.all ={
         companionID=151696,
         displayID=91248,
         family=9,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Treasure",
         flavor="A fully grown Fangtooth has a bite strong enough to go right through a platinum fishing pole. Watch your fingers.",
         icon="2564610",
@@ -26158,10 +24943,10 @@ PETS.all ={
         companionID=151651,
         displayID=91224,
         family=1,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Treasure",
         flavor="Living so deep within the seas has made this species very sensitive to lights.",
         icon="252780",
@@ -26176,10 +24961,10 @@ PETS.all ={
         companionID=151632,
         displayID=91220,
         family=9,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Treasure",
         flavor="The slime on this provides essential nutrients to the hermit crab within, allowing it to go years without eating anything if it chooses.",
         icon="2027924",
@@ -26194,10 +24979,10 @@ PETS.all ={
         companionID=151631,
         displayID=91219,
         family=9,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Treasure",
         flavor="Slimy sea slugs secrete slimy sea slug slime on the slimy sea floor.",
         icon="2763642",
@@ -26212,10 +24997,10 @@ PETS.all ={
         companionID=155829,
         displayID=92502,
         family=10,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="",
         flavor="A walking vault that throws its money at you is not a very secure vault to own.",
         icon="1001977",
@@ -26229,10 +25014,10 @@ PETS.all ={
         companionID=155865,
         displayID=92580,
         family=4,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Achievement",
         flavor="Burnout always has a supply of well toasted marshmallows.",
         icon="134179",
@@ -26246,10 +25031,10 @@ PETS.all ={
         companionID=157524,
         displayID=93204,
         family=8,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Promotion",
         flavor="Rikki has a talent for sneaking in and out of all manner of small spaces, if bribed properly with figs.",
         icon="2991181",
@@ -26264,10 +25049,10 @@ PETS.all ={
         companionID=157715,
         displayID=93312,
         family=1,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Promotion",
         flavor="Little is known about the true intentions of this murloc, but her followers are among the most devoted.",
         icon="2921901",
@@ -26282,10 +25067,10 @@ PETS.all ={
         companionID=157716,
         displayID=93311,
         family=1,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Promotion",
         flavor="An unlikely leader of murlocs that had to step into the role after the death of his father, Murgian.",
         icon="2925012",
@@ -26300,10 +25085,10 @@ PETS.all ={
         companionID=157969,
         displayID=93349,
         family=2,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Promotion",
         flavor="Even the smallest creatures in the Shadowlands rely on anima to survive.",
         icon="3038273",
@@ -26318,10 +25103,10 @@ PETS.all ={
         companionID=158142,
         displayID=93437,
         family=8,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="In-Game Shop",
         flavor="Daisy moves at a very leisurely pace, and will happily accept a ride on your shoulders.",
         icon="3150958",
@@ -26334,10 +25119,10 @@ PETS.all ={
         companionID=158681,
         displayID=86531,
         family=3,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Legend has it that these purple butterflies came from a place called Devil's Island.",
         icon="2059635",
@@ -26352,10 +25137,10 @@ PETS.all ={
         companionID=158683,
         displayID=87763,
         family=3,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="The wings of this butterfly start off with no distinct color, but slowly change to yellow as they spend time in the sunlight.",
         icon="2059634",
@@ -26370,10 +25155,10 @@ PETS.all ={
         companionID=158685,
         displayID=86532,
         family=3,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="This butterfly is stained red from the blood of its enemies.",
         icon="2059636",
@@ -26388,10 +25173,10 @@ PETS.all ={
         companionID=159783,
         displayID=81387,
         family=8,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Drop",
         flavor="This cat is known for her lies, ignore her sweet meows.",
         icon="656574",
@@ -26405,10 +25190,10 @@ PETS.all ={
         companionID=160187,
         displayID=95152,
         family=9,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Treasure",
         flavor="Pulled from a horrific vision of Orgrimmar these toads are soaked in void energy.",
         icon="237579",
@@ -26423,10 +25208,10 @@ PETS.all ={
         companionID=160196,
         displayID=94166,
         family=8,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Treasure",
         flavor="This pup is now more than just a bundle of fur and teeth, it is fur, teeth and void.",
         icon="1120427",
@@ -26441,10 +25226,10 @@ PETS.all ={
         companionID=160703,
         displayID=99018,
         family=6,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Quest",
         flavor="In Maldraxxus, plague has a strange habit of finding its way back to you.",
         icon="3459797",
@@ -26459,10 +25244,10 @@ PETS.all ={
         companionID=161919,
         displayID=95141,
         family=6,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="The thirst for mana is insatiable, luckily this little one doesn't consume a whole lot.",
         icon="537516",
@@ -26477,10 +25262,10 @@ PETS.all ={
         companionID=161921,
         displayID=94706,
         family=1,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="N'Zoth's corruption spread across many beings, including this little Anubisath.",
         icon="1728726",
@@ -26495,10 +25280,10 @@ PETS.all ={
         companionID=161923,
         displayID=95174,
         family=5,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="The aqir hive has countless numbers of beings in it, all of which are supportive of the ever-present Hivemind.",
         icon="458247",
@@ -26513,10 +25298,10 @@ PETS.all ={
         companionID=161924,
         displayID=91810,
         family=3,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="The winged aqir are very fast and agile, and their wings provide a nice breeze on a warm afternoon.",
         icon="2103855",
@@ -26531,10 +25316,10 @@ PETS.all ={
         companionID=161946,
         displayID=92438,
         family=6,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Treasure",
         flavor="This creepy eye is looking at everyone, always, and only has to blink once every 10,000 years.",
         icon="3004126",
@@ -26549,10 +25334,10 @@ PETS.all ={
         companionID=161951,
         displayID=95176,
         family=6,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Fishing",
         flavor="It is very unclear whether this slime started with all of those eyes inside of it, or if those are \"leftovers\".",
         icon="1391773",
@@ -26570,10 +25355,10 @@ PETS.all ={
         companionID=161959,
         displayID=94711,
         family=8,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Treasure",
         flavor="It is always C'Thuffer. Always.",
         icon="1044799",
@@ -26588,10 +25373,10 @@ PETS.all ={
         companionID=161961,
         displayID=94712,
         family=5,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Treasure",
         flavor="Only a being of immense power could scar such an adorable creature, unless this hare was already approaching the darkness...",
         icon="2399280",
@@ -26606,10 +25391,10 @@ PETS.all ={
         companionID=161962,
         displayID=94713,
         family=8,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Treasure",
         flavor="This cat eats anything from random scraps of food to strange glowing cubes of immense power. Be careful in front of its mouth.",
         icon="656578",
@@ -26624,10 +25409,10 @@ PETS.all ={
         companionID=161963,
         displayID=94714,
         family=5,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Treasure",
         flavor="A recent debate has risen up about whether Void-Scarred rats are better or worse than plagued rats.",
         icon="132935",
@@ -26642,10 +25427,10 @@ PETS.all ={
         companionID=161964,
         displayID=95171,
         family=6,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Treasure",
         flavor="This ooze leaves behind a slimy trail as it moves that has a stench that would rival a beast rotting in the dunes of Uldum for a thousand years.",
         icon="1500933",
@@ -26663,10 +25448,10 @@ PETS.all ={
         companionID=161966,
         displayID=95172,
         family=5,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="The shell on these beetles is quite brittle from the void interference, but it also has a strangely fast regeneration rate.",
         icon="631519",
@@ -26680,10 +25465,10 @@ PETS.all ={
         companionID=161967,
         displayID=95173,
         family=6,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Achievement",
         flavor="This little guy grows an additional eye somewhere on its body every year. It rhymes with...",
         icon="3005319",
@@ -26697,10 +25482,10 @@ PETS.all ={
         companionID=161954,
         displayID=92233,
         family=1,
-        isWild=false,
+
         isTradeable=true,
         isUnique=true,
-        isPassive=false,
+
         source="Drop",
         flavor="His tentacles give you the best hug your brain has ever felt.",
         icon="2958748",
@@ -26715,10 +25500,10 @@ PETS.all ={
         companionID=161992,
         displayID=95144,
         family=6,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Where did it come from, where does it go? Where did you come from, creepy tentacle?",
         icon="538042",
@@ -26733,10 +25518,10 @@ PETS.all ={
         companionID=161997,
         displayID=95145,
         family=8,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Dragonbreath Chili is nothing compared to the stench coming from the mouth of this thing.",
         icon="2141737",
@@ -26765,10 +25550,10 @@ PETS.all ={
         companionID=162004,
         displayID=92904,
         family=5,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         intermittent=true,
         source="Drop",
         flavor="These Aqir Scarabs are masters at tunneling through any terrain.",
@@ -26798,10 +25583,10 @@ PETS.all ={
         companionID=162006,
         displayID=95143,
         family=8,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="These Pygmy Camels are often mistaken for Mysterious Camel Figurines.",
         icon="454772",
@@ -26819,10 +25604,10 @@ PETS.all ={
         companionID=162007,
         displayID=95146,
         family=1,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="This little guy was exiled and cursed by other watchers of Uldum to spend the rest of its time as a tiny insignificant being.",
         icon="462729",
@@ -26837,10 +25622,10 @@ PETS.all ={
         companionID=162012,
         displayID=95147,
         family=8,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         intermittent=true,
         source="Drop",
         flavor="Three legs, two arms, three eyeballs, the extras are for emergency situations only.",
@@ -26874,10 +25659,10 @@ PETS.all ={
         companionID=162013,
         displayID=95148,
         family=8,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Several adventurous miners have gone after the jade quilen in search of riches, but none have ever been heard from again.",
         icon="237207",
@@ -26893,10 +25678,10 @@ PETS.all ={
         companionID=162014,
         displayID=95149,
         family=3,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="Despite what the young pandaren may tell you, the windfeather cranes do not actually have feathers made out of wind.",
         icon="656318",
@@ -26915,9 +25700,9 @@ PETS.all ={
         displayID=94884,
         family=3,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Nobody is sure what sort of powder is coming off of these moths, and everyone is too terrified to find out what it actually is.",
         icon="2103857",
@@ -26939,9 +25724,9 @@ PETS.all ={
         displayID=94886,
         family=5,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Even some of the insects have succumbed to the void. They really do adapt and survive through everything.",
         icon="294474",
@@ -26963,9 +25748,9 @@ PETS.all ={
         displayID=94896,
         family=9,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="These look especially magnificent when gliding over the water under a full moon.",
         icon="643423",
@@ -26980,9 +25765,9 @@ PETS.all ={
         displayID=94895,
         family=3,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Is the void glow in addition to their natural glow, or does it replace it? The world may never know.",
         icon="236196",
@@ -26997,9 +25782,9 @@ PETS.all ={
         displayID=88784,
         family=5,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="The golden chirper has managed to stay its pristine self, despite corruption attempts from both the Sha and from the forces of N'Zoth.",
         icon="646325",
@@ -27013,10 +25798,10 @@ PETS.all ={
         companionID=162663,
         displayID=95150,
         family=10,
-        isWild=false,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
+
         source="Vendor",
         flavor="The name implies that there were 12 experiments done before this one that were less effective than sticking some guns onto a mechanical tiger. What could those have possibly been?",
         icon="606551",
@@ -27032,10 +25817,10 @@ PETS.all ={
         companionID=162670,
         displayID=94943,
         family=10,
-        isWild=false,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
+
         source="Vendor",
         flavor="This bear's necessities are fresh batteries and an occasional oil change.",
         icon="773096",
@@ -27051,10 +25836,10 @@ PETS.all ={
         companionID=162677,
         displayID=95151,
         family=7,
-        isWild=false,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
+
         source="Vendor",
         flavor="This lasher does not come from a black lagoon, or from the stars, or from beyond the moon. It just wants you to feed it.",
         icon="2027892",
@@ -27070,10 +25855,10 @@ PETS.all ={
         companionID=163646,
         displayID=91811,
         family=3,
-        isWild=false,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
+
         source="Quest",
         flavor="Void magic and giant flying insects, a combination nobody ever asked for. Surprisingly effective!",
         icon="236296",
@@ -27088,10 +25873,10 @@ PETS.all ={
         companionID=163897,
         displayID=93746,
         family=8,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Quest",
         flavor="If you received points for causing mischief while teleporting around as a tiny adorable vulpin, Renny would be on top of the leaderboard.",
         icon="3072462",
@@ -27107,10 +25892,10 @@ PETS.all ={
         companionID=169514,
         displayID=96259,
         family=1,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Quest",
         flavor="A wandering adventurer saved a small band of murlocs that had lost their homes, and a glimmer of hope was born.",
         icon="3492863",
@@ -27125,10 +25910,10 @@ PETS.all ={
         companionID=170421,
         displayID=99918,
         family=10,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Profession",
         flavor="Inspired by the phalynx of Bastion, Engineers have modified the design to be approximately 300% more adorable.",
         icon="3061634",
@@ -27142,10 +25927,10 @@ PETS.all ={
         companionID=171025,
         displayID=97448,
         family=8,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="In-Game Shop",
         flavor="All dogs go to Bastion. Cats go to Revendreth.",
         icon="3604137",
@@ -27158,10 +25943,10 @@ PETS.all ={
         companionID=171117,
         displayID=99863,
         family=8,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="The crypts and tombs of Revendreth offer the perfect spider breeding ground, and Tomb Burster's brood has become fiercely territorial of their foothold.",
         icon="2027856",
@@ -27176,10 +25961,10 @@ PETS.all ={
         companionID=171119,
         displayID=99873,
         family=7,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Lightspawn can always be found on the battlefields where light touches, no matter what form it takes.",
         icon="525026",
@@ -27194,10 +25979,10 @@ PETS.all ={
         companionID=171120,
         displayID=97329,
         family=6,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Beware awakening the power of knowledge.",
         icon="134544",
@@ -27212,10 +25997,10 @@ PETS.all ={
         companionID=171122,
         displayID=99925,
         family=4,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Treasure",
         flavor="A soul burdened with the sins of its past.",
         icon="1357814",
@@ -27231,9 +26016,9 @@ PETS.all ={
         displayID=99924,
         family=4,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="A soul, having faced the sins of the past, wanders lost in the recent turmoil of the Shadowlands.",
         icon="895888",
@@ -27247,10 +26032,10 @@ PETS.all ={
         companionID=171121,
         displayID=99909,
         family=6,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         intermittent=true,
         source="Drop",
         flavor="The sludge that can give rise to the dredgers has been known to coalesce and run a muck.",
@@ -27278,10 +26063,10 @@ PETS.all ={
         companionID=171118,
         displayID=99874,
         family=7,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Drawn from an overabundance of pride and wrath these manifestations seek even more to sustain themselves.",
         icon="1391769",
@@ -27306,10 +26091,10 @@ PETS.all ={
         companionID=171124,
         displayID=99876,
         family=7,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="These creatures manifest in the catacombs beneath Revendreth due to vile rituals practiced on souls there.",
         icon="1357796",
@@ -27325,10 +26110,10 @@ PETS.all ={
         companionID=171127,
         displayID=99902,
         family=1,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="The stone fiends were created to serve as messengers and spies for the realm of Revendreth, and those of the Court of Harvesters serve that role extremely well.",
         icon="1103069",
@@ -27346,10 +26131,10 @@ PETS.all ={
         companionID=171136,
         displayID=99904,
         family=1,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         intermittent=true,
         source="Quest",
         flavor="A fellow message courier to Chip, Dal was always on time until one day when he did not return from his appointed round.",
@@ -27376,10 +26161,10 @@ PETS.all ={
         companionID=171125,
         displayID=99903,
         family=1,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Treasure",
         flavor="Trapped in a chest and forgotten for years, this stone fiend is mad and looking for a fight.",
         icon="132766",
@@ -27395,9 +26180,9 @@ PETS.all ={
         displayID=99888,
         family=3,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="This dredwing is the most common of the dredbats, seen throughout the entire realm.",
         icon="3087791",
@@ -27411,10 +26196,10 @@ PETS.all ={
         companionID=171150,
         displayID=99890,
         family=3,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="A wild dredbat, the crimson pups are tough to tame. Their elusiveness and hardiness set them apart from their kin.",
         icon="3087789",
@@ -27428,10 +26213,10 @@ PETS.all ={
         companionID=171151,
         displayID=99889,
         family=3,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="",
         flavor="A rare mutation gives this dredbat its violet underbelly, making it a sought after gift for pet collectors with eclectic tastes.",
         icon="3087790",
@@ -27444,10 +26229,10 @@ PETS.all ={
         companionID=171247,
         displayID=93752,
         family=8,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Dodger is a bit small relative to other vulpin, but is excellent at playing hide and seek.",
         icon="3072468",
@@ -27462,10 +26247,10 @@ PETS.all ={
         companionID=171246,
         displayID=93750,
         family=8,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="The claws of a vulpin sharpen themselves naturally when walking around on any sort of cobblestone or rocky surface.",
         icon="3072466",
@@ -27480,10 +26265,10 @@ PETS.all ={
         companionID=171239,
         displayID=99898,
         family=3,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Despite the adorable name, the chirp is more of a horrible, spine-tingling shriek.",
         icon="657489",
@@ -27498,10 +26283,10 @@ PETS.all ={
         companionID=171238,
         displayID=99900,
         family=3,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Treasure",
         flavor="These ferocious flying creatures scrape their beaks against hard surfaces to sharpen them and intimidate foes.",
         icon="657490",
@@ -27516,10 +26301,10 @@ PETS.all ={
         companionID=171248,
         displayID=97518,
         family=5,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="Floofa smells like citrus fruits when its fur is wet.",
         icon="3636841",
@@ -27537,10 +26322,10 @@ PETS.all ={
         companionID=171234,
         displayID=95927,
         family=3,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Treasure",
         flavor="Much like how a squid can squirt ink to escape in the water, a glitterwing can shake the dust off of its wings and similarly vanish.",
         icon="3255391",
@@ -27555,10 +26340,10 @@ PETS.all ={
         companionID=171233,
         displayID=95929,
         family=3,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="table",
         flavor="The moths of Ardenweald can carry seeds and pods many times their own weight, aiding the Night Fae in their eternal tasks.",
         icon="3255389",
@@ -27574,10 +26359,10 @@ PETS.all ={
         companionID=171235,
         displayID=96387,
         family=3,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="Shimmermoths don't actually shimmer in the sunlight. Nobody knows who named these, but they have a lot to answer for.",
         icon="3255388",
@@ -27596,10 +26381,10 @@ PETS.all ={
         companionID=171225,
         displayID=95582,
         family=8,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Treasure",
         flavor="When a full moon is visible, streaks of hair on the dreamfoal's mane start to shimmer and glow like shooting stars.",
         icon="3387068",
@@ -27614,10 +26399,10 @@ PETS.all ={
         companionID=171224,
         displayID=95581,
         family=8,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="When the winds blow just right, howling through the canyons of Ardenweald, you can find these foals running with the wind in a spectacular show of prowess and color.",
         icon="3387067",
@@ -27636,10 +26421,10 @@ PETS.all ={
         companionID=171242,
         displayID=99866,
         family=5,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="While these gormlings may not be the fastest diggers, they are very efficient and can move long distances underground before tiring.",
         icon="3065169",
@@ -27655,10 +26440,10 @@ PETS.all ={
         companionID=171243,
         displayID=99865,
         family=5,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="Even the terrifying G'huun was, perhaps, once this cute.",
         icon="3065168",
@@ -27675,10 +26460,10 @@ PETS.all ={
         companionID=171241,
         displayID=99851,
         family=5,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Quest",
         flavor="These little slugs will try to eat literally anything they scoot over.",
         icon="3065165",
@@ -27695,9 +26480,9 @@ PETS.all ={
         displayID=99926,
         family=3,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="The sting from these gorm is incredibly painful and often inflicts temporary paralysis, even on large targets.",
         icon="3084143",
@@ -27711,10 +26496,10 @@ PETS.all ={
         companionID=171231,
         displayID=99927,
         family=3,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="There are more sharp pointy things on this species of gorm than there are on a Horde capital city.",
         icon="3084142",
@@ -27729,10 +26514,10 @@ PETS.all ={
         companionID=171230,
         displayID=99896,
         family=3,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Treasure",
         flavor="If you count the number of times its wings beat per minute, you can calculate how long it will be until this little terror will sting you.",
         icon="3084139",
@@ -27747,10 +26532,10 @@ PETS.all ={
         companionID=171240,
         displayID=99883,
         family=3,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Mission",
         flavor="No one knows where the devourers came from, but it is theorized that they flourish on several lost land masses in the In-Between.",
         icon="3155459",
@@ -27765,10 +26550,10 @@ PETS.all ={
         companionID=171227,
         displayID=99879,
         family=3,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="",
         flavor="The whooping noise these pets make when hungry will rival any tormented cry you can find in Torghast.",
         icon="656318",
@@ -27782,9 +26567,9 @@ PETS.all ={
         displayID=99880,
         family=3,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Part of the wildlife of Ardenweald, they sometimes sleep while standing straight up in the water.",
         icon="605484",
@@ -27798,10 +26583,10 @@ PETS.all ={
         companionID=171565,
         displayID=99899,
         family=3,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="A group of teroclaws is known as a fleece.",
         icon="657491",
@@ -27817,9 +26602,9 @@ PETS.all ={
         displayID=99897,
         family=3,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Young teroclaws are surprisingly effective hunters and will attempt to bring down prey up to twice their size.",
         icon="656165",
@@ -27834,9 +26619,9 @@ PETS.all ={
         displayID=99893,
         family=3,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="For some reason, these blue glimmerflies are often afraid of water.",
         icon="3052545",
@@ -27850,10 +26635,10 @@ PETS.all ={
         companionID=171667,
         displayID=99894,
         family=3,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Quest",
         flavor="A glimmerfly can load up nearly fifty percent of its weight as pollen and still retain full agility while flying.",
         icon="3052546",
@@ -27869,9 +26654,9 @@ PETS.all ={
         displayID=99895,
         family=3,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="The wings of glimmerflies are almost always saturated with some sort of pollen, causing a very steady flow of glittery dust to fall off of them as they fly.",
         icon="3052547",
@@ -27886,9 +26671,9 @@ PETS.all ={
         displayID=99853,
         family=9,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Contrary to popular belief, a terrapin's diet has nothing to do with its shell color.",
         icon="656345",
@@ -27902,10 +26687,10 @@ PETS.all ={
         companionID=171569,
         displayID=99855,
         family=9,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="",
         flavor="These brightly-colored terrapins are the least commonly seen in the wild. It is considered a sign of luck if you rub the top of its shell.",
         icon="657918",
@@ -27918,10 +26703,10 @@ PETS.all ={
         companionID=171693,
         displayID=99854,
         family=9,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Treasure",
         flavor="Terrapins prefer any sort of berry as their primary source of food, though they will eat almost anything.",
         icon="656343",
@@ -27936,10 +26721,10 @@ PETS.all ={
         companionID=171568,
         displayID=93744,
         family=8,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="table",
         flavor="Vulpin actually have very light-colored skin, but their incredibly thick coats hide any color from showing through.",
         icon="3072460",
@@ -27955,10 +26740,10 @@ PETS.all ={
         companionID=171694,
         displayID=93747,
         family=8,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="The golden vulpin are notorious for loud, barking yowls that echo across the plains of Bastion.",
         icon="3072463",
@@ -27976,10 +26761,10 @@ PETS.all ={
         companionID=171697,
         displayID=93753,
         family=8,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Treasure",
         flavor="Despite having a very fine coat of fur, young vulpin do not shed at all.",
         icon="3072469",
@@ -27995,9 +26780,9 @@ PETS.all ={
         displayID=93749,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="How is a vulpin different than a fox? That is a good question.",
         icon="3072465",
@@ -28012,9 +26797,9 @@ PETS.all ={
         displayID=93751,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Rarely, one of these kits is born to a golden-furred vulpin. It is considered a sign of distress in the pack.",
         icon="3072467",
@@ -28028,10 +26813,10 @@ PETS.all ={
         companionID=171710,
         displayID=99878,
         family=3,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Treasure",
         flavor="These golden-feathered creatures do not lay golden eggs, for that you would need a golden goose.",
         icon="605484",
@@ -28046,9 +26831,9 @@ PETS.all ={
         displayID=99881,
         family=3,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="If you mat their silvery feathers down very carefully, it almost forms a mirror-like surface.",
         icon="656318",
@@ -28062,10 +26847,10 @@ PETS.all ={
         companionID=171714,
         displayID=99882,
         family=3,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="When newly-hatched, they start with colorless, white feathers. Within weeks, they flourish into a wide spectrum of beautiful colors.",
         icon="656319",
@@ -28079,10 +26864,10 @@ PETS.all ={
         companionID=171716,
         displayID=95583,
         family=8,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Mission",
         flavor="The mane on this tiny foal reflects a majestic indigo color when the light hits it in just the right way.",
         icon="3387069",
@@ -28097,10 +26882,10 @@ PETS.all ={
         companionID=171719,
         displayID=95584,
         family=8,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Mission",
         flavor="Few things are as adorable as a young skyfoal.",
         icon="3387070",
@@ -28116,9 +26901,9 @@ PETS.all ={
         displayID=99892,
         family=3,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="These flying creatures do not leave feathers out in the wild. If a feather happens to ever detach from their body, the feather glows brilliantly for a moment and then vanishes from sight.",
         icon="3046536",
@@ -28132,10 +26917,10 @@ PETS.all ={
         companionID=171954,
         displayID=95576,
         family=4,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="The thrill of battle and the grip of war have not yet left the bones of Oonar.",
         icon="3386320",
@@ -28150,10 +26935,10 @@ PETS.all ={
         companionID=171982,
         displayID=99857,
         family=8,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="",
         flavor="A newborn bonetusk has no visible tusks, but within weeks their tusks grow to a size proportional to their body.",
         icon="3456126",
@@ -28166,10 +26951,10 @@ PETS.all ={
         companionID=171984,
         displayID=99856,
         family=8,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Mission",
         flavor="The tusks on these creatures are fused to their skulls in such a manner that they feel no pain when charging or ramming into anything.",
         icon="3456127",
@@ -28184,10 +26969,10 @@ PETS.all ={
         companionID=171985,
         displayID=99860,
         family=8,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Treasure",
         flavor="The bright color of the luminous webspinner taunts would-be predators to chase them into their webs.",
         icon="2027857",
@@ -28202,10 +26987,10 @@ PETS.all ={
         companionID=171986,
         displayID=99858,
         family=8,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Maldraxxus is full of mighty and terrifying creatures, causing most denizens to be abnormally calm when around the indigenous species of giant spiders.",
         icon="2027855",
@@ -28220,10 +27005,10 @@ PETS.all ={
         companionID=171987,
         displayID=99859,
         family=8,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Treasure",
         flavor="If this species spits venom at its prey, is it still technically considered venom, or just really gross?",
         icon="2027951",
@@ -28239,9 +27024,9 @@ PETS.all ={
         displayID=95577,
         family=4,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="That place on your back you can't quite scratch? Get the help of this little guy. Problem solved.",
         icon="3386321",
@@ -28255,10 +27040,10 @@ PETS.all ={
         companionID=172132,
         displayID=99013,
         family=6,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Treasure",
         flavor="The bubbles inside of these ooze creatures make a very satisfying pop noise when they finally surface and rupture.",
         icon="3459800",
@@ -28273,10 +27058,10 @@ PETS.all ={
         companionID=172134,
         displayID=99014,
         family=6,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="One of Plague Deviser Marileth's first creations, Shy Melvin was too timid for the demands placed on slimes by the House of Plagues.",
         icon="3459798",
@@ -28291,10 +27076,10 @@ PETS.all ={
         companionID=172135,
         displayID=98467,
         family=5,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="",
         flavor="A parasite that latches onto some of the larger beasts of Maldraxxus and drinks until fully-grown, one wonders how the beasts don't manage to notice.",
         icon="3860397",
@@ -28307,10 +27092,10 @@ PETS.all ={
         companionID=172136,
         displayID=98469,
         family=5,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Though they are quite squishy while young, the bloodlouse will eventually grow hardened plates around its entire body.",
         icon="3860399",
@@ -28325,10 +27110,10 @@ PETS.all ={
         companionID=172137,
         displayID=98468,
         family=5,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Being thrown into a pit of bloodlouse larvae is a painful fate for those that fail the great houses of Maldraxxus.",
         icon="3860398",
@@ -28343,10 +27128,10 @@ PETS.all ={
         companionID=172139,
         displayID=95573,
         family=4,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Some predators in Maldraxxus collect spines as trophies, and some of them don't stop moving even then.",
         icon="3386335",
@@ -28361,10 +27146,10 @@ PETS.all ={
         companionID=172140,
         displayID=95572,
         family=4,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="",
         flavor="What it lacks in appendages, it makes up for in positive attitude.",
         icon="3386334",
@@ -28377,10 +27162,10 @@ PETS.all ={
         companionID=172148,
         displayID=99916,
         family=4,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Even the smallest bones don't go to waste in Maldraxxus.",
         icon="3511185",
@@ -28395,10 +27180,10 @@ PETS.all ={
         companionID=172149,
         displayID=99915,
         family=6,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Is the ooze holding the bones in, or are the bones holding the ooze together?",
         icon="3459801",
@@ -28413,10 +27198,10 @@ PETS.all ={
         companionID=172150,
         displayID=99908,
         family=6,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="It is not advisable to hug a sludge feeler. Those stains never wash out.",
         icon="254105",
@@ -28432,10 +27217,10 @@ PETS.all ={
         companionID=172151,
         displayID=99922,
         family=4,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="If you can beat them, stitch them!",
         icon="3622122",
@@ -28453,10 +27238,10 @@ PETS.all ={
         companionID=172153,
         displayID=99921,
         family=4,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Mission",
         flavor="The soul that occupies Mu'dud was a harsh ruler in life, and now he seeks to dominate the most violent kingdom of all.",
         icon="3622121",
@@ -28471,10 +27256,10 @@ PETS.all ={
         companionID=172155,
         displayID=99928,
         family=3,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="The barbed mandibles on this species will dig deep into anything they bite, causing a lot of irritation.",
         icon="2027900",
@@ -28489,10 +27274,10 @@ PETS.all ={
         companionID=172284,
         displayID=99864,
         family=8,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="",
         flavor="Unlike most spiders that drain all the fluids from their prey, the bloodfeaster has developed a taste for blood alone.",
         icon="2027944",
@@ -28505,10 +27290,10 @@ PETS.all ={
         companionID=172570,
         displayID=95580,
         family=7,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="",
         flavor="Sometimes sins of great souls are so powerful that they animate the very stones they are placed on.",
         icon="3386971",
@@ -28523,10 +27308,10 @@ PETS.all ={
         companionID=172854,
         displayID=99901,
         family=1,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="",
         flavor="Dredgers are the sweat (and sometimes tears) of Revendreth, and their help is absolutely critical to the workings of Revendreth.",
         icon="1505934",
@@ -28541,10 +27326,10 @@ PETS.all ={
         companionID=173502,
         displayID=99891,
         family=3,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="These dredbats are built by the Stonewright for the Court of Harvesters. They are bonded to their owners and become fierce fighters.",
         icon="3087792",
@@ -28560,9 +27345,9 @@ PETS.all ={
         displayID=99862,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Identified by the signature coloring of their many legs, these spiders are known for elaborate dances used to threaten and confuse foes.",
         icon="2027952",
@@ -28576,10 +27361,10 @@ PETS.all ={
         companionID=173508,
         displayID=99917,
         family=6,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="No longer lost, it's now considering a name change.",
         icon="2103805",
@@ -28594,10 +27379,10 @@ PETS.all ={
         companionID=173531,
         displayID=98472,
         family=3,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Treasure",
         flavor="Roosting in the grounds of Castle Nathria, The Count did not foresee falling into an eternal stone slumber.",
         icon="3860423",
@@ -28612,10 +27397,10 @@ PETS.all ={
         companionID=173533,
         displayID=98473,
         family=3,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         intermittent=true,
         source="Treasure",
         flavor="Joining with their new residents in Sinfall a few of these juvenile dredbats accompanied Renathal's forces into the maw.",
@@ -28648,10 +27433,10 @@ PETS.all ={
         companionID=173535,
         displayID=98470,
         family=3,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="Roosting over Sinfall, Battie was roused one evening by the music of the first Ember Court. She has not missed a single one since.",
         icon="3860422",
@@ -28668,10 +27453,10 @@ PETS.all ={
         companionID=173536,
         displayID=98474,
         family=3,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Treasure",
         flavor="Abandoned by its master in a secluded room, the little bat has been hibernating in stone for ages.",
         icon="3860425",
@@ -28687,10 +27472,10 @@ PETS.all ={
         companionID=173534,
         displayID=98466,
         family=5,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Treasure",
         flavor="What vile subtance is jiggling around inside of this creature?",
         icon="3860396",
@@ -28706,9 +27491,9 @@ PETS.all ={
         displayID=98478,
         family=7,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Hiding among the reeds near muck pools, juvenile mire creepers patiently waiting for easy prey to approach.",
         icon="3860419",
@@ -28723,9 +27508,9 @@ PETS.all ={
         displayID=98479,
         family=7,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Subsisting on the residual anima in the waste of the Endmire, these mire creepers are withering away, yet in their famished state they are doubly dangerous.",
         icon="3732243",
@@ -28739,10 +27524,10 @@ PETS.all ={
         companionID=173585,
         displayID=98453,
         family=7,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="This particular tiny tree is infested with strange spores and doesn't seem to mind.",
         icon="3731816",
@@ -28761,10 +27546,10 @@ PETS.all ={
         companionID=173586,
         displayID=98454,
         family=7,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="These saplings grow unnaturally quickly when given enough anima, and their leaves are razor sharp when fully grown.",
         icon="3747335",
@@ -28782,10 +27567,10 @@ PETS.all ={
         companionID=173587,
         displayID=98455,
         family=7,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="",
         flavor="As long as any fragment of this species is found and planted, it will regrow into the same magnificent species as it once was.",
         icon="3747336",
@@ -28799,10 +27584,10 @@ PETS.all ={
         companionID=173588,
         displayID=98456,
         family=7,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="Whatever you do, don't ask it to carry a bucket of water. We don't talk about what happened to that area of the Shadowlands.",
         icon="3747337",
@@ -28821,10 +27606,10 @@ PETS.all ={
         companionID=173589,
         displayID=98457,
         family=5,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Mission",
         flavor="This pet has tremendous airborne agility and will always land on its feet, even when flung by a home-made spring-loaded leaper-flinger.",
         icon="3749003",
@@ -28840,9 +27625,9 @@ PETS.all ={
         displayID=98458,
         family=5,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="The latent energy found throughout Ardenweald's seeds sometimes augments small critters with unnatural abilities.",
         icon="3749004",
@@ -28856,10 +27641,10 @@ PETS.all ={
         companionID=173591,
         displayID=98459,
         family=5,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Treasure",
         flavor="These critters are capable of holding a tremendous amount of food in their cheeks for easy transportation between hiding spaces.",
         icon="3749005",
@@ -28874,10 +27659,10 @@ PETS.all ={
         companionID=173593,
         displayID=98460,
         family=5,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="No one is quite sure where Reginald got his or her name, but what we do know is they don't answer to anything else.",
         icon="3749006",
@@ -28896,10 +27681,10 @@ PETS.all ={
         companionID=173842,
         displayID=99877,
         family=7,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="The skies may have scorched part of Revendreth, but persistent creatures are still able to exist in these harsh conditions.",
         icon="134389",
@@ -28916,10 +27701,10 @@ PETS.all ={
         companionID=173847,
         displayID=95578,
         family=4,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         intermittent=true,
         source="Treasure",
         flavor="Nobody knows why all of these skeletal hands are from the left hand. Where did the right hands go?",
@@ -28947,10 +27732,10 @@ PETS.all ={
         companionID=173849,
         displayID=99868,
         family=5,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Torghast is a tower of hardship and perpetual agony, which is a perfect environment for these creatures.",
         icon="3579945",
@@ -28964,10 +27749,10 @@ PETS.all ={
         companionID=173850,
         displayID=99869,
         family=5,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Many have asked where these creatures came from, and how they made it to the Maw, but none that researched them have ever been heard from again.",
         icon="3579948",
@@ -28981,10 +27766,10 @@ PETS.all ={
         companionID=173851,
         displayID=100928,
         family=4,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="If a detached hand claps by itself inside of Torghast, can the Jailer hear it?",
         icon="3862168",
@@ -28998,10 +27783,10 @@ PETS.all ={
         companionID=173988,
         displayID=100929,
         family=4,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="The mysterious forces that animate this mobile mitt don't seem particularly evil, yet.",
         icon="3862169",
@@ -29015,10 +27800,10 @@ PETS.all ={
         companionID=173989,
         displayID=99871,
         family=5,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Sometimes it is best to leave what strange creature you found in a mysterious jar in the depths of Torghast alone.",
         icon="3453807",
@@ -29032,10 +27817,10 @@ PETS.all ={
         companionID=173990,
         displayID=99872,
         family=5,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Its teeth are razor sharp and will chew through just about anything.",
         icon="3860392",
@@ -29049,10 +27834,10 @@ PETS.all ={
         companionID=173991,
         displayID=99907,
         family=6,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="These guardians of Torghast are always watching for suspicious activity.",
         icon="3729719",
@@ -29066,10 +27851,10 @@ PETS.all ={
         companionID=173992,
         displayID=99923,
         family=4,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="That eerie feeling you get when the shadows seem to shift and follow you isn't just a feeling, it's usually one of these.",
         icon="237569",
@@ -29083,10 +27868,10 @@ PETS.all ={
         companionID=173993,
         displayID=99852,
         family=5,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Poking a tiny gormlng in the side makes a very satisfying, squishy noise. It is NOT advisable to poke one too many times.",
         icon="3065167",
@@ -29101,10 +27886,10 @@ PETS.all ={
         companionID=173994,
         displayID=99072,
         family=6,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Drop",
         flavor="Remornia has been exposed to untold amounts of evil and sin, and will siphon power from any available source to fuel its desires.",
         icon="3610989",
@@ -29119,10 +27904,10 @@ PETS.all ={
         companionID=174081,
         displayID=99875,
         family=7,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Staring at one of these creates a deep void of emotion at the very core of your being, then fills it with a sense of dread.",
         icon="651083",
@@ -29137,10 +27922,10 @@ PETS.all ={
         companionID=174082,
         displayID=97479,
         family=5,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="This species has a very distinct set of markings on its back that makes it easy to identify in the unending horrors of the Maw.",
         icon="3579949",
@@ -29154,10 +27939,10 @@ PETS.all ={
         companionID=174083,
         displayID=99870,
         family=5,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Tiny flakes of skin seem to perpetually fall off of this horrible creature, leaving behind a trail and a very distinct, foul odor.",
         icon="3860390",
@@ -29171,10 +27956,10 @@ PETS.all ={
         companionID=174084,
         displayID=97091,
         family=4,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="The razor sharp claws will tear into anything with ease, making for an excellent emergency can opener.",
         icon="3862170",
@@ -29189,10 +27974,10 @@ PETS.all ={
         companionID=174085,
         displayID=99906,
         family=6,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Achievement",
         flavor="What horrors these eyes have seen in the tower of Torghast, with their unsleeping, unblinking gaze?",
         icon="3729814",
@@ -29207,10 +27992,10 @@ PETS.all ={
         companionID=174087,
         displayID=98480,
         family=1,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Vendor",
         flavor="Plucking a feather from a steward is considered a sin worthy of a trip to Revendreth.",
         icon="3731724",
@@ -29228,10 +28013,10 @@ PETS.all ={
         companionID=174088,
         displayID=98461,
         family=6,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Vendor",
         flavor="Though not very fuzzy, this slimy feline is still one of the most adorable things you've ever seen.",
         icon="3732497",
@@ -29249,10 +28034,10 @@ PETS.all ={
         companionID=174089,
         displayID=99850,
         family=5,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="While young, they have an adorable face and cute little antennae. While grown up, they gain razor sharp pinchers and are unstoppable eating machines. Life is full of compromises.",
         icon="3065164",
@@ -29268,10 +28053,10 @@ PETS.all ={
         companionID=174125,
         displayID=99911,
         family=6,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Treasure",
         flavor="This slime seems to change color the more you look at it, and then suddenly, it appears to be looking back at you. Perhaps it is time for a rest.",
         icon="1500910",
@@ -29286,10 +28071,10 @@ PETS.all ={
         companionID=174181,
         displayID=99114,
         family=4,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="Despite being decrepit and undead, geists move with exceptional speed and agility.",
         icon="336781",
@@ -29313,10 +28098,10 @@ PETS.all ={
         companionID=174677,
         displayID=95575,
         family=4,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Treasure",
         flavor="You got spinebugged!",
         icon="3386337",
@@ -29332,9 +28117,9 @@ PETS.all ={
         displayID=99867,
         family=5,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Normally just a plain white in color, their skin reflects whatever they have eaten and gains wonderful spots of color depending on the organs digested.",
         icon="2141734",
@@ -29349,9 +28134,9 @@ PETS.all ={
         displayID=99861,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Legends say that if you see a bleak skitterer in your dreams, you are destined to battle one to the death.",
         icon="2027947",
@@ -29366,9 +28151,9 @@ PETS.all ={
         displayID=99910,
         family=6,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="These slimy creatures make the strangest suction noises when they try to climb up a wall. This is a well-known fact in Maldraxxus, for obvious reasons.",
         icon="3459799",
@@ -29383,9 +28168,9 @@ PETS.all ={
         displayID=99929,
         family=3,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Toxic spores rain down wherever these creatures fly, turning small, unwary critters into a gruesome feast.",
         icon="1570759",
@@ -29399,10 +28184,10 @@ PETS.all ={
         companionID=175203,
         displayID=99476,
         family=2,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Promotion",
         flavor="A strange whelp hatched on Netherwing Ledge, it is thought to be blessed by the waning lunar energies of Shadowmoon Valley.",
         icon="3846213",
@@ -29416,10 +28201,10 @@ PETS.all ={
         companionID=175220,
         displayID=99629,
         family=6,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="A good friend to Archivist Fane since his earliest days, Janeera is ready for him to let the quill go as she feels he is getting too attached.",
         icon="2103808",
@@ -29436,10 +28221,10 @@ PETS.all ={
         companionID=175561,
         displayID=98481,
         family=1,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="Stewards looking to move up in steward society know to fluff up their feathers, give out tons of juice, and always be hooting.",
         icon="3731728",
@@ -29457,10 +28242,10 @@ PETS.all ={
         companionID=175560,
         displayID=98482,
         family=1,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Tales say that the stewards were created to aid the denizens of Bastion in their eternal duties. They don't seem to mind.",
         icon="3731723",
@@ -29475,10 +28260,10 @@ PETS.all ={
         companionID=175562,
         displayID=98475,
         family=3,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Larion are prideful beasts, and see anyone that enters their territory as a challenge.",
         icon="3860694",
@@ -29494,10 +28279,10 @@ PETS.all ={
         companionID=175564,
         displayID=98477,
         family=3,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="When fully-grown, a larion that has grown up with an aspirant will never leave his or her master's side.",
         icon="3860696",
@@ -29513,10 +28298,10 @@ PETS.all ={
         companionID=175563,
         displayID=98476,
         family=3,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Young larions are often given to aspirants as an early test of compassion and leadership.",
         icon="3860695",
@@ -29531,10 +28316,10 @@ PETS.all ={
         companionID=175715,
         displayID=74794,
         family=4,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Treasure",
         flavor="Lucy was sent to Revendreth, as all cats are, and somehow escaped. When questioned, local dredgers blamed it on her being a cat.",
         icon="611425",
@@ -29548,10 +28333,10 @@ PETS.all ={
         companionID=175756,
         displayID=100017,
         family=1,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Achievement",
         flavor="Spriggans are tricky foes that live in Ardenweald and torment the Night Fae. This one has decided to play the ultimate trick--joining you.",
         icon="3536179",
@@ -29565,10 +28350,10 @@ PETS.all ={
         companionID=175787,
         displayID=100019,
         family=1,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Achievement",
         flavor="The allegiances of the spriggan are as changing as the seasons.",
         icon="3536177",
@@ -29583,9 +28368,9 @@ PETS.all ={
         displayID=93748,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Raised in the verdant groves of Ardenweald, these kits are infused with the essence of rebirth.",
         icon="3072464",
@@ -29600,9 +28385,9 @@ PETS.all ={
         displayID=100151,
         family=5,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="These grubs consume anima-depleted materials of all types. They aren't picky.",
         icon="3065166",
@@ -29617,9 +28402,9 @@ PETS.all ={
         displayID=100152,
         family=3,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="The wings of this moth glitter like the starry skies above Ardenweald.",
         icon="3255390",
@@ -29634,9 +28419,9 @@ PETS.all ={
         displayID=98462,
         family=3,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="For a pet that's all mouth, where does anything it eats go? Maldraxxus necromancers have dissected many of these pets, and have no answers.",
         icon="3731581",
@@ -29650,10 +28435,10 @@ PETS.all ={
         companionID=176662,
         displayID=90422,
         family=10,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Squibbles is engineered to never leave your side.",
         icon="2490921",
@@ -29668,10 +28453,10 @@ PETS.all ={
         companionID=178216,
         displayID=100061,
         family=8,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="Baubleworms are highly prized in the Veiled Market, where those featuring few gemstone flaws can fetch extreme prices.",
         icon="3856132",
@@ -29688,10 +28473,10 @@ PETS.all ={
         companionID=179008,
         displayID=101229,
         family=4,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         intermittent=true,
         source="Treasure",
         flavor="The fields of battle teem with Lil'Abom parts, which are perfectly interchangable and easy to put back together.",
@@ -29731,10 +28516,10 @@ PETS.all ={
         companionID=179025,
         displayID=101234,
         family=3,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         intermittent=true,
         source="Treasure",
         flavor="Infused etherwyrms can be used as portable anima batteries, but they must be trained not to flee at the sight of combat.",
@@ -29764,10 +28549,10 @@ PETS.all ={
         companionID=179125,
         displayID=101255,
         family=10,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="Dragons come in all types of temporal classification -- timeless, time-lost, and even infinite.",
         icon="2892271",
@@ -29784,10 +28569,10 @@ PETS.all ={
         companionID=179083,
         displayID=93745,
         family=8,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Achievement",
         flavor="Sly snuck aboard for a trip into the Maw. He's not scared, he just really wants to stay in your backpack for a while.",
         icon="3072461",
@@ -29828,9 +28613,9 @@ PETS.all ={
         displayID=100724,
         family=3,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="A young animite will rapidly grow if fed in excess. It is suggested that no more than one average soul's worth of anima be consumed per year to keep them docile.",
         icon="3155460",
@@ -29844,10 +28629,10 @@ PETS.all ={
         companionID=179132,
         displayID=101276,
         family=3,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         intermittent=true,
         source="Quest",
         flavor="The brilliant scales of the etherwyrm reflect the bright skies of Bastion.",
@@ -29875,10 +28660,10 @@ PETS.all ={
         companionID=179137,
         displayID=100060,
         family=8,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="The gemstones on a baubleworm will quickly deteriorate if the worm is killed. Healthy worms are kept as prized pets by wealthy Brokers.",
         icon="3856131",
@@ -29894,10 +28679,10 @@ PETS.all ={
         companionID=179138,
         displayID=100059,
         family=8,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="Baubleworms were found by the Brokers on an unknown world, and so gorgeous were their gems, that quickly the expedition turned against one another.",
         icon="3856130",
@@ -29913,10 +28698,10 @@ PETS.all ={
         companionID=179139,
         displayID=100058,
         family=8,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="Baubleworms have no natural predators, and grow their gemstones to attract mates.",
         icon="3856129",
@@ -29932,10 +28717,10 @@ PETS.all ={
         companionID=179140,
         displayID=100676,
         family=1,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Quest",
         flavor="New species of murloc are discovered around Azeroth all the time, owing to their invasive nature and varied diet.",
         icon="3987165",
@@ -29951,9 +28736,9 @@ PETS.all ={
         displayID=98506,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="The Purrkin hunt the invasive skrats in the Veiled Market, keeping the population just high enough that they are still needed.",
         icon="3742945",
@@ -29971,9 +28756,9 @@ PETS.all ={
         displayID=98509,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Purrkins are a traditional pet of the Brokers and the two have a mutually beneficial relationship -- a necessity in Broker culture.",
         icon="3742948",
@@ -29990,10 +28775,10 @@ PETS.all ={
         companionID=179166,
         displayID=98505,
         family=8,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Gizmo is considered a perfect purrkin, perhaps the best that has ever existed. He is also a ruthless murderer of small critters.",
         icon="3742944",
@@ -30009,9 +28794,9 @@ PETS.all ={
         displayID=100054,
         family=5,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Skrats are poisonous, venomous, and unusually damp -- everything you want in a pet.",
         icon="3856133",
@@ -30029,9 +28814,9 @@ PETS.all ={
         displayID=100055,
         family=5,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Skrats are an especially invasive species, in that they can reproduce with only a sole skrat, and consume almost anything.",
         icon="3856135",
@@ -30048,10 +28833,10 @@ PETS.all ={
         companionID=179169,
         displayID=100056,
         family=5,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="One particular Broker has taken a liking to the skrat species, kept this rare specimin as a pet, and inherited the smell as a souvenir.",
         icon="3856134",
@@ -30067,10 +28852,10 @@ PETS.all ={
         companionID=179171,
         displayID=101282,
         family=4,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         intermittent=true,
         source="Quest",
         flavor="When you're a Maldraxxian stitchcrafter and you have to name a lot of abominations, sometimes you just go with the obvious choice.",
@@ -30099,9 +28884,9 @@ PETS.all ={
         displayID=95579,
         family=4,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Not quite alive, not quite dead, simply an arm, with no head.",
         icon="3386323",
@@ -30115,10 +28900,10 @@ PETS.all ={
         companionID=179180,
         displayID=101284,
         family=3,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         intermittent=true,
         source="Quest",
         flavor="Gorm find a way to invade just about anywhere, and the Maw is no exception.",
@@ -30146,10 +28931,10 @@ PETS.all ={
         companionID=179181,
         displayID=101277,
         family=3,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Though the spawn of a gorm queen lost within the Maw, this pet appears to be untainted by the Jailer's foul magics.",
         icon="3084141",
@@ -30165,9 +28950,9 @@ PETS.all ={
         displayID=101285,
         family=5,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="The nails of the mawrat can inflict one of several afterlife-ending illnesses.",
         icon="3860391",
@@ -30182,9 +28967,9 @@ PETS.all ={
         displayID=101286,
         family=4,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Fragments of souls abound in the Maw, searching for meaning, or an end to their torment. But some just want to give you a hand.",
         icon="3862167",
@@ -30199,9 +28984,9 @@ PETS.all ={
         displayID=101288,
         family=4,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="These ensorcelled gauntlets are used by the mawsworn to capture escaping prisoners.",
         icon="3861531",
@@ -30215,10 +29000,10 @@ PETS.all ={
         companionID=179220,
         displayID=101289,
         family=4,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Struggle all you want, it will just grip harder.",
         icon="3861530",
@@ -30233,10 +29018,10 @@ PETS.all ={
         companionID=179222,
         displayID=101287,
         family=4,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="There was once a mawsworn so vile that he was killed by his own minions. So great was his malice that a fragment of him lives on in this glove.",
         icon="3861529",
@@ -30252,9 +29037,9 @@ PETS.all ={
         displayID=101292,
         family=5,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="A species of wild pest that exists within the Maw, no one is quite sure what it eats or why it exists, but they can't get rid of it.",
         icon="3579946",
@@ -30269,9 +29054,9 @@ PETS.all ={
         displayID=101291,
         family=5,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Every deathroach is technically considered vile, but these really take the cake.",
         icon="3579947",
@@ -30285,10 +29070,10 @@ PETS.all ={
         companionID=179228,
         displayID=101776,
         family=6,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="See reflections on the water? There's more than darkness in the depths.",
         icon="3729672",
@@ -30304,9 +29089,9 @@ PETS.all ={
         displayID=101294,
         family=6,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="These eyes were sent to slow and debilitate the wayward souls of the Maw, so that they could be more easily captured.",
         icon="3729823",
@@ -30323,10 +29108,10 @@ PETS.all ={
         companionID=179230,
         displayID=98464,
         family=3,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Quest",
         flavor="One of several indistinguishable pets, all named Chompy.",
         icon="3860692",
@@ -30341,10 +29126,10 @@ PETS.all ={
         companionID=179232,
         displayID=101777,
         family=6,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="The Eye of the Jailer, diffused, is now merely an all-seeing magical bauble.",
         icon="4062740",
@@ -30359,10 +29144,10 @@ PETS.all ={
         companionID=179233,
         displayID=101779,
         family=6,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="The rage Zovaal harbored for his punished existence echoes through the eye.",
         icon="4069937",
@@ -30378,10 +29163,10 @@ PETS.all ={
         companionID=179239,
         displayID=98524,
         family=1,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="The golden armor on these mawsworn is flimsy and easily bent -- the gilded armor is a punishment.",
         icon="3731619",
@@ -30396,10 +29181,10 @@ PETS.all ={
         companionID=179240,
         displayID=98522,
         family=1,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="The Sanctum of Domination accepts mawsworn of all shapes, sizes, and levels of corporeality.",
         icon="3731616",
@@ -30414,10 +29199,10 @@ PETS.all ={
         companionID=179241,
         displayID=98525,
         family=1,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Achievement",
         flavor="A ruthless tormenter of the smallest souls. Some say he was known in life as \"Thermaplugg.\"",
         icon="3731620",
@@ -30431,10 +29216,10 @@ PETS.all ={
         companionID=179242,
         displayID=98526,
         family=1,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Paragon Reward",
         flavor="Rook never speaks, and little about them is known.",
         icon="3731621",
@@ -30451,9 +29236,9 @@ PETS.all ={
         displayID=100725,
         family=5,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="You have never met a pet that is more about chewing.",
         icon="3931156",
@@ -30468,9 +29253,9 @@ PETS.all ={
         displayID=101298,
         family=5,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="The garnetgullet rolls in bright red flowers to enhance its color, serving as a call to similar species and a warning to enemies.",
         icon="3931158",
@@ -30484,10 +29269,10 @@ PETS.all ={
         companionID=179251,
         displayID=101301,
         family=5,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="With Korthia torn asunder by the Jailer, the few species that remain must be archived.",
         icon="3931157",
@@ -30502,10 +29287,10 @@ PETS.all ={
         companionID=179252,
         displayID=101299,
         family=5,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Paragon Reward",
         flavor="The hide color of this species is more rare on Korthia, and helps it hide from predators. And mawsworn, in this case.",
         icon="3931155",
@@ -30521,10 +29306,10 @@ PETS.all ={
         companionID=179253,
         displayID=101300,
         family=5,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="A domesticated species, it is quite calm and seems hungry.",
         icon="3931159",
@@ -30543,9 +29328,9 @@ PETS.all ={
         displayID=101280,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Devourers exist throughout the In-Between of various types and levels of power, but always seeking anima.",
         icon="3924117",
@@ -30559,10 +29344,10 @@ PETS.all ={
         companionID=179255,
         displayID=101281,
         family=8,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Paragon Reward",
         flavor="It only has two teeth, and they both mean business.",
         icon="3924116",
@@ -30579,9 +29364,9 @@ PETS.all ={
         displayID=100243,
         family=3,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Corpsefly eggs end up everywhere in Maldraxxus, and are easily transported accidentally.",
         icon="3896756",
@@ -30598,10 +29383,10 @@ PETS.all ={
         companionID=179589,
         displayID=101380,
         family=2,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="In-Game Shop",
         flavor="Blinky just hatched, and is ready for adventure, but may need a few naps along the way.",
         icon="4080512",
@@ -30614,10 +29399,10 @@ PETS.all ={
         companionID=181308,
         displayID=105573,
         family=6,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Profession",
         flavor="One part focus, one part core, zero parts coherent or stable shape.",
         icon="3851039",
@@ -30632,10 +29417,10 @@ PETS.all ={
         companionID=181335,
         displayID=105575,
         family=6,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Profession",
         flavor="The core of a song that all but faded long ago.",
         icon="4219625",
@@ -30650,10 +29435,10 @@ PETS.all ={
         companionID=181336,
         displayID=105574,
         family=6,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Profession",
         flavor="It could become anything. It could become *everything*. In the meantime, it's... this.",
         icon="4219626",
@@ -30668,10 +29453,10 @@ PETS.all ={
         companionID=181337,
         displayID=105576,
         family=6,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Treasure",
         flavor="It's hard to be sure since it has no face, but this thing seems to like you.",
         icon="4219627",
@@ -30687,9 +29472,9 @@ PETS.all ={
         displayID=103756,
         family=9,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="The signature song of the bufonid croaker can be heard across vast distances.",
         icon="3778581",
@@ -30703,10 +29488,10 @@ PETS.all ={
         companionID=181488,
         displayID=102174,
         family=8,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Profession",
         flavor="One part facial sphere, one part cube manufactory, one part successful curiosity.",
         icon="3747898",
@@ -30721,10 +29506,10 @@ PETS.all ={
         companionID=181535,
         displayID=102298,
         family=2,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Promotion",
         flavor="Hatch-queen of the baby murlocs, Murkastrasza spent many years battling her bitter rival, Deathy.",
         icon="4050685",
@@ -30738,10 +29523,10 @@ PETS.all ={
         companionID=181547,
         displayID=98969,
         family=8,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Profession",
         flavor="Only newly synthesized tunneling vombata have been seen. The rest are probably happily digging underground, never to be seen again.",
         icon="3747899",
@@ -30756,10 +29541,10 @@ PETS.all ={
         companionID=181575,
         displayID=102304,
         family=2,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Promotion",
         flavor="A drakonid hatchling is a curious sight, but now is the time for curious things.",
         icon="4186101",
@@ -30773,10 +29558,10 @@ PETS.all ={
         companionID=181578,
         displayID=105556,
         family=3,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Profession",
         flavor="One part beak, two parts wings, one part inability to stop, one part unwillingness to stop.",
         icon="3672192",
@@ -30791,10 +29576,10 @@ PETS.all ={
         companionID=181615,
         displayID=105570,
         family=7,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Profession",
         flavor="One part rocks, two parts bigger rocks, three parts smaller rocks, one part ability to move anyway.",
         icon="4227081",
@@ -30810,9 +29595,9 @@ PETS.all ={
         displayID=103757,
         family=9,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Some of the more adventurous denizens of Zereth Mortis consider venomous bufonids to be a delicacy.",
         icon="3778583",
@@ -30826,10 +29611,10 @@ PETS.all ={
         companionID=182081,
         displayID=103758,
         family=9,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Profession",
         flavor="One part slippery skin, one part powerful legs, one part vocal sac, one part complete self-acceptance.",
         icon="3778580",
@@ -30844,10 +29629,10 @@ PETS.all ={
         companionID=182183,
         displayID=100376,
         family=5,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Profession",
         flavor="One part duplication, two parts duplication, four parts duplication... oops.",
         icon="3922912",
@@ -30863,9 +29648,9 @@ PETS.all ={
         displayID=100381,
         family=5,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Some leporids are docile and cute. Others are... still cute.",
         icon="3922917",
@@ -30880,9 +29665,9 @@ PETS.all ={
         displayID=100377,
         family=5,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Some of the more timid leporids live deep underground. They emerge only to gather food before returning to their burrows.",
         icon="3922913",
@@ -30897,9 +29682,9 @@ PETS.all ={
         displayID=105557,
         family=3,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="While larger proto avians are known to feed on small animals, fledglings mostly eat insects and grubs.",
         icon="4227077",
@@ -30913,10 +29698,10 @@ PETS.all ={
         companionID=182264,
         displayID=100452,
         family=9,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Profession",
         flavor="One part gills, one part haste, one part whatever it needs to be.",
         icon="3934485",
@@ -30932,9 +29717,9 @@ PETS.all ={
         displayID=105568,
         family=3,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="The distinctive red coloration of scarlet proto avians makes it difficult for them to hide from predators, which ironically means they're very hard to find.",
         icon="4227079",
@@ -30948,10 +29733,10 @@ PETS.all ={
         companionID=182393,
         displayID=104061,
         family=8,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Profession",
         flavor="Eight parts legs. Eight parts eyes. One part rope. One part insatiable hunger.",
         icon="3684808",
@@ -30967,9 +29752,9 @@ PETS.all ={
         displayID=104058,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Some tarachnids prefer to lie in wait for their prey. These prefer to chase it, disable it, and devour it whole.",
         icon="3684809",
@@ -30984,9 +29769,9 @@ PETS.all ={
         displayID=104063,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="When prey wanders into this creature's reach, it rarely wanders out.",
         icon="3684810",
@@ -31000,10 +29785,10 @@ PETS.all ={
         companionID=182504,
         displayID=104587,
         family=5,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Profession",
         flavor="One part shell. One part claw. As many parts resilience as need be.",
         icon="3922918",
@@ -31019,9 +29804,9 @@ PETS.all ={
         displayID=100375,
         family=5,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Some of the smaller scarabids of Zereth Mortis have metallic outer shells to protect themselves. It also makes them look fabulous.",
         icon="3922919",
@@ -31036,9 +29821,9 @@ PETS.all ={
         displayID=104584,
         family=5,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="This scarabid's brightly colored shell makes it more interesting to potential mates. Unfortunately, this also makes them interesting to potential predators.",
         icon="3922921",
@@ -31052,10 +29837,10 @@ PETS.all ={
         companionID=182735,
         displayID=101994,
         family=8,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Profession",
         flavor="Three parts planning, one part danger, one part noodle.",
         icon="4095284",
@@ -31071,9 +29856,9 @@ PETS.all ={
         displayID=101998,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="The distinctive red coloration of these viperids serves as a warning to potential predators: 'eat at your own risk!'",
         icon="4095288",
@@ -31088,9 +29873,9 @@ PETS.all ={
         displayID=101988,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Where does a 350-pound viperid sit? Anywhere it wants.",
         icon="4095284",
@@ -31105,9 +29890,9 @@ PETS.all ={
         displayID=101990,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Viperids can sit still for hours, silently awaiting their prey.",
         icon="4095286",
@@ -31121,10 +29906,10 @@ PETS.all ={
         companionID=182840,
         displayID=105485,
         family=3,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Profession",
         flavor="Two parts wings, one part dagger, five parts sadism.",
         icon="3741937",
@@ -31140,9 +29925,9 @@ PETS.all ={
         displayID=100558,
         family=3,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Whether in life or the afterlife, some things are universal. Nasty blood-sucking insects are one of those things.",
         icon="3741939",
@@ -31157,9 +29942,9 @@ PETS.all ={
         displayID=104972,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Despite its vulnerable appearance, predators will often avoid attacking a juvenile vombata. It's not known exactly why, but many believe it has to do with the vombata's cute little nose.",
         icon="3747900",
@@ -31174,9 +29959,9 @@ PETS.all ={
         displayID=104977,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="There are many terrifying things in Zereth Mortis, but none so terrifying (or adorable) as a vombata protecting its young.",
         icon="3747901",
@@ -31191,9 +29976,9 @@ PETS.all ={
         displayID=105572,
         family=7,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="No one in their right mind has ever seen a Mawtouched Geomental. Even so, plenty of people have seen Mawtouched Geomentals.",
         icon="4227080",
@@ -31208,9 +29993,9 @@ PETS.all ={
         displayID=100453,
         family=9,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="The ambystan snapper is one of the nicest creatures you can meet in Zereth Mortis... until it isn't.",
         icon="3934486",
@@ -31225,9 +30010,9 @@ PETS.all ={
         displayID=104734,
         family=9,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Most of Zereth Mortis' aurelids are content to swim, but some are born to fly!",
         icon="4227095",
@@ -31242,9 +30027,9 @@ PETS.all ={
         displayID=101987,
         family=3,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Nobody calls this poultrid 'chicken.'",
         icon="4096556",
@@ -31259,9 +30044,9 @@ PETS.all ={
         displayID=105579,
         family=5,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="When confronted, helicids will hide in their heavily armored shells. If provoked further, they will lash out with devastating force.",
         icon="3764236",
@@ -31275,10 +30060,10 @@ PETS.all ={
         companionID=183557,
         displayID=101984,
         family=3,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Profession",
         flavor="Two parts wings, one part beak, two parts talon, one part smugness.",
         icon="4096544",
@@ -31293,10 +30078,10 @@ PETS.all ={
         companionID=183772,
         displayID=98523,
         family=1,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Achievement",
         flavor="This tiny tormentor of Torghast relishes in punishing any soul in the tower that can't step on it.",
         icon="3731618",
@@ -31311,10 +30096,10 @@ PETS.all ={
         companionID=184196,
         displayID=105580,
         family=5,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Profession",
         flavor="Isn't she just the sweetest little helicid?",
         icon="3764237",
@@ -31329,10 +30114,10 @@ PETS.all ={
         companionID=184183,
         displayID=100454,
         family=9,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Profession",
         flavor="Ambystans are swift but cowardly creatures. At the first hint of danger, a darter will hide in the nearest hole.",
         icon="3934487",
@@ -31347,10 +30132,10 @@ PETS.all ={
         companionID=184184,
         displayID=104582,
         family=5,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Profession",
         flavor="The red coloring on this scarabid lets potential opponents know it is not to be trifled with.",
         icon="3922923",
@@ -31365,10 +30150,10 @@ PETS.all ={
         companionID=184189,
         displayID=101985,
         family=3,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         intermittent=true,
         source="Profession",
         flavor="These poultrids are hostile, but never angry. They love every moment of every battle.",
@@ -31410,10 +30195,10 @@ PETS.all ={
         companionID=184190,
         displayID=101986,
         family=3,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Profession",
         flavor="It's really unclear what's 'multi' about them.",
         icon="4096555",
@@ -31428,10 +30213,10 @@ PETS.all ={
         companionID=184191,
         displayID=105571,
         family=7,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Profession",
         flavor="Lihuvim's geomental creations are the most majestic of walking rock piles.",
         icon="4227083",
@@ -31446,10 +30231,10 @@ PETS.all ={
         companionID=184186,
         displayID=104730,
         family=9,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         intermittent=true,
         source="Profession",
         flavor="Just one part jelly, but refreshed over and over and over again.",
@@ -31486,10 +30271,10 @@ PETS.all ={
         companionID=184192,
         displayID=104733,
         family=9,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         intermittent=true,
         source="Profession",
         flavor="It feeds on fear, but is generally too cute to inspire terror on its own.",
@@ -31528,10 +30313,10 @@ PETS.all ={
         companionID=184193,
         displayID=104732,
         family=9,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         intermittent=true,
         source="Profession",
         flavor="This creature's existence strongly implies the existence of other, more advanced tickle-based aurelids out there.",
@@ -31570,10 +30355,10 @@ PETS.all ={
         companionID=184194,
         displayID=100380,
         family=5,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Profession",
         flavor="Left to their own devices, these leporids will leap high into the air at the slightest provocation. Sometimes they'll even come down properly, as well.",
         icon="3922916",
@@ -31588,10 +30373,10 @@ PETS.all ={
         companionID=184187,
         displayID=105577,
         family=5,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Profession",
         flavor="Two parts fortress, one part eyestalks, one part slime.",
         icon="3764235",
@@ -31606,10 +30391,10 @@ PETS.all ={
         companionID=184197,
         displayID=101993,
         family=8,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Profession",
         flavor="Where some viperids lie in wait for their prey, this variety stalks their intended meals for hours.",
         icon="4095289",
@@ -31624,10 +30409,10 @@ PETS.all ={
         companionID=184195,
         displayID=105581,
         family=5,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Profession",
         flavor="Since synthesized creatures come into being fully grown, why would anyone design an immature helicid?",
         icon="3764238",
@@ -31642,10 +30427,10 @@ PETS.all ={
         companionID=184285,
         displayID=105003,
         family=1,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Promotion",
         flavor="Spunky, funky, and just a little clunky -- she's a Gnomish engineer to a T!",
         icon="4226119",
@@ -31658,10 +30443,10 @@ PETS.all ={
         companionID=184923,
         displayID=100455,
         family=9,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Quest",
         flavor="A little ambystan that was too big, then too little, and finally just right. He followed you home!",
         icon="3934488",
@@ -31677,10 +30462,10 @@ PETS.all ={
         companionID=183686,
         displayID=104794,
         family=10,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Trading Post",
         flavor="He has a heart of gold. Literally. These shiny good-boys are all the rage with affluent gnomes everywhere.",
         icon="1567069",
@@ -31693,10 +30478,10 @@ PETS.all ={
         companionID=185324,
         displayID=105301,
         family=4,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Trading Post",
         flavor="Fooled aeons ago by the clever loa of death into a bargain of unceasing service, this tiny ancient being carries out his duties eternally red with rage.",
         icon="2027568",
@@ -31709,9 +30494,9 @@ PETS.all ={
         companionID=185477,
         displayID=102001,
         family=6,
-        isWild=false,
-        isTradeable=false,
-        isUnique=false,
+
+
+
         isPassive=true,
         source="Vendor",
         flavor="This isn't the real Pocopoc, but it provided this replica to you for use outside Zereth Mortis. Its details are so accurate as to be utterly convincing to anyone who hasn't spent lots of time with the real one.",
@@ -31728,10 +30513,10 @@ PETS.all ={
         companionID=183638,
         displayID=104773,
         family=10,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Promotion",
         flavor="Ichabod began his existence as a prototype for the fearsome harvest golems terrorizing the farmers of Westfall, but a little gnomish ingenuity has since made him far less likely to attack your knees.",
         icon="4206469",
@@ -31745,10 +30530,10 @@ PETS.all ={
         companionID=185586,
         displayID=105408,
         family=8,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="In-Game Shop",
         flavor="Before he was known as one of the Wild Gods, Ursoc roamed the Grizzly Hills as a cub.",
         icon="4208901",
@@ -31761,10 +30546,10 @@ PETS.all ={
         companionID=183708,
         displayID=104798,
         family=5,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Trading Post",
         flavor="Some hawkstriders are destined to be great. Others are destined to be Egbob.",
         icon="294475",
@@ -31777,10 +30562,10 @@ PETS.all ={
         companionID=185604,
         displayID=111370,
         family=3,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Trading Post",
         flavor="Some species of red bees are known to lead solitary lives. Still, this busy bee seems happy to make time for you.",
         icon="2027854",
@@ -31793,10 +30578,10 @@ PETS.all ={
         companionID=185606,
         displayID=105423,
         family=1,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Trading Post",
         flavor="Ancient Gorian blood runs through Garrlok's veins. As far as anyone knows, only his diminutive stature keeps his imperial ambitions in check.",
         icon="4215254",
@@ -31809,10 +30594,10 @@ PETS.all ={
         companionID=185611,
         displayID=105425,
         family=8,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="In-Game Shop",
         flavor="Siege training begins early for kodo calflings that show a lack of inhibition towards breaking things. Mind your shins.",
         icon="4205812",
@@ -31825,10 +30610,10 @@ PETS.all ={
         companionID=185756,
         displayID=105497,
         family=8,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Trading Post",
         flavor="His pink antlers make him the life of any party.",
         icon="2481371",
@@ -31841,10 +30626,10 @@ PETS.all ={
         companionID=186844,
         displayID=107454,
         family=2,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Profession",
         flavor="The master jewelcrafters of the Dragon Isles have perfected their craft so much that their gemmed statues can be brought to life. This whelp forged of obsidian is now not to be trifled with.",
         icon="4397690",
@@ -31858,10 +30643,10 @@ PETS.all ={
         companionID=188709,
         displayID=106517,
         family=5,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="This little rabbit is cute from the tip of her button nose to the tips of her deadly claws.",
         icon="3733064",
@@ -31878,9 +30663,9 @@ PETS.all ={
         displayID=106597,
         family=5,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Nearly invisible, this creature leaps from tree to snow-covered tree.",
         icon="4528721",
@@ -31894,10 +30679,10 @@ PETS.all ={
         companionID=188821,
         displayID=106642,
         family=6,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Hope, like this phoenix, rises from the ashes of shattered dreams.",
         icon="4007138",
@@ -31912,10 +30697,10 @@ PETS.all ={
         companionID=188849,
         displayID=106676,
         family=8,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Achievement",
         flavor="Some very clever wizard or dragon or other magical being thought they were being clever when they decided to color an ice elemental purple for a very elaborate bit of wordplay. They were probably right.",
         icon="4572524",
@@ -31929,10 +30714,10 @@ PETS.all ={
         companionID=188861,
         displayID=106677,
         family=9,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Achievement",
         flavor="It looks like a duck and it smells like a duck and it quacks like a duck... what's a duck?",
         icon="4533201",
@@ -31946,10 +30731,10 @@ PETS.all ={
         companionID=188885,
         displayID=106690,
         family=6,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Achievement",
         flavor="A shard of a fragment of a piece of a sliver of a piece of crystal, but walking around like it owns the place. Good thing it likes you.",
         icon="133244",
@@ -31964,9 +30749,9 @@ PETS.all ={
         displayID=106658,
         family=3,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Above the vast green plains and rolling hills the slyvern fly, leaving only tiny shadows on the ground to mark their path through the sky.",
         icon="4215000",
@@ -31980,10 +30765,10 @@ PETS.all ={
         companionID=189663,
         displayID=106668,
         family=9,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Treasure",
         flavor="Oddly enough, you met this fish drifting through the air.",
         icon="4539687",
@@ -31998,10 +30783,10 @@ PETS.all ={
         companionID=189695,
         displayID=106670,
         family=9,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="To some, this fish speaks eloquently of its survival in the most arduous conditions. To most, it says 'glub.'",
         icon="4539689",
@@ -32019,9 +30804,9 @@ PETS.all ={
         displayID=106594,
         family=5,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="This is the most pettable pointy creature you will ever meet.",
         icon="3733067",
@@ -32041,9 +30826,9 @@ PETS.all ={
         displayID=108234,
         family=7,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Somehow this creature manages to be hot, rocky, and slimy all at the same time.",
         icon="3996722",
@@ -32057,10 +30842,10 @@ PETS.all ={
         companionID=189095,
         displayID=108279,
         family=10,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Profession",
         flavor="When Alvin said he wanted to be the best anvil ever, everyone doubted him. If anvils could laugh, he'd be the one laughing now.",
         icon="1020356",
@@ -32074,10 +30859,10 @@ PETS.all ={
         companionID=189096,
         displayID=106604,
         family=5,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Treasure",
         flavor="Chestnut once found an acorn larger than he was, ate the whole thing, and doubled in size. It's a good thing he didn't eat a Trunkalumpf.",
         icon="4528722",
@@ -32093,9 +30878,9 @@ PETS.all ={
         displayID=106609,
         family=5,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Many have tried to boop the cute little noses of creatures like this. Most have lost fingers.",
         icon="4528723",
@@ -32113,10 +30898,10 @@ PETS.all ={
         companionID=189099,
         displayID=106607,
         family=5,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="Pistachio got her name in exactly the way you would expect.",
         icon="4528732",
@@ -32133,10 +30918,10 @@ PETS.all ={
         companionID=189101,
         displayID=109095,
         family=2,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Achievement",
         flavor="This little racing enthusiast has never missed a race and has never met a racer she didn't like.",
         icon="4452490",
@@ -32152,8 +30937,8 @@ PETS.all ={
         family=3,
         isWild=true,
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Pet Battle",
         flavor="These elusive creatures are famous for being hard to find unless you already know where to look. Fortunately, Haniko told you where to look.",
         icon="3995640",
@@ -32168,9 +30953,9 @@ PETS.all ={
         displayID=106610,
         family=9,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Between battling, bathing, and playing, these ottuks have very busy schedules.",
         icon="3751917",
@@ -32189,9 +30974,9 @@ PETS.all ={
         displayID=108296,
         family=9,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="The reverberating sound of an adult hornswog's belch can be heard for leagues. Less far-reaching, but far more musical, is the dainty sound of a swoglet belching.",
         icon="1802889",
@@ -32211,9 +30996,9 @@ PETS.all ={
         displayID=108315,
         family=7,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="When you feel a chill run down your spine, don't be afraid. It's probably just your pet snowlemental.",
         icon="4554460",
@@ -32230,10 +31015,10 @@ PETS.all ={
         companionID=189105,
         displayID=106612,
         family=9,
-        isWild=false,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
+
         source="Vendor",
         flavor="Baby ottuks spend their days swimming, chasing butterflies, and practicing their intimidating roars.",
         icon="3751919",
@@ -32250,10 +31035,10 @@ PETS.all ={
         companionID=189106,
         displayID=106613,
         family=9,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="In its big eyes you can see your own reflection. You also see everything else because its eyes are so big.",
         icon="3751920",
@@ -32268,10 +31053,10 @@ PETS.all ={
         companionID=189108,
         displayID=106615,
         family=8,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Quest",
         flavor="His name is Mister Toots because of the melodious sounds he can make with his trunk.",
         icon="3946881",
@@ -32286,10 +31071,10 @@ PETS.all ={
         companionID=189111,
         displayID=109301,
         family=4,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="A dream of the memory of fire.",
         icon="4554439",
@@ -32306,9 +31091,9 @@ PETS.all ={
         displayID=106617,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="While their tiny tusks may not help much in a fight, the trunkalumpfs make up for it in sheer weight.",
         icon="3946882",
@@ -32325,10 +31110,10 @@ PETS.all ={
         companionID=189112,
         displayID=109369,
         family=7,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="World Drop",
         flavor="A spark can become an ember. An ember can become a raging fire. This creature was never a spark or an ember, it has only ever been a raging fire.",
         icon="4554438",
@@ -32348,10 +31133,10 @@ PETS.all ={
         companionID=189113,
         displayID=106619,
         family=8,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Treasure",
         flavor="It sits anywhere it wants to, but it prefers to sit on laps.",
         icon="3946885",
@@ -32365,10 +31150,10 @@ PETS.all ={
         companionID=189115,
         displayID=106620,
         family=8,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Scruffles' lust for battle runs deep.",
         icon="3946886",
@@ -32383,10 +31168,10 @@ PETS.all ={
         companionID=189117,
         displayID=106643,
         family=6,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         intermittent=true,
         source="Quest",
         flavor="Some think this creature is smoldering because it is on fire. In truth it's because of its burning gaze.",
@@ -32429,10 +31214,10 @@ PETS.all ={
         companionID=189118,
         displayID=106644,
         family=6,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Red for the fires in which it was born.",
         icon="4007140",
@@ -32447,10 +31232,10 @@ PETS.all ={
         companionID=189119,
         displayID=106645,
         family=6,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Achievement",
         flavor="Is it possible to rise from the ashes of time? Gerald thinks so and he will not be denied.",
         icon="4007141",
@@ -32465,9 +31250,9 @@ PETS.all ={
         displayID=108322,
         family=7,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="An Igneoid is formed when magma makes it to Azeroth's surface and is infused with dark elemental magic. The resulting creature is tiny, fierce, and very cute.",
         icon="1016245",
@@ -32486,9 +31271,9 @@ PETS.all ={
         displayID=106623,
         family=9,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="This salamanther wants to be your best friend.",
         icon="4056158",
@@ -32507,10 +31292,10 @@ PETS.all ={
         companionID=189130,
         displayID=109371,
         family=7,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="World Drop",
         flavor="What the deep claims, none can reclaim.",
         icon="4554443",
@@ -32531,9 +31316,9 @@ PETS.all ={
         displayID=106632,
         family=3,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Though many creatures of the Dragon Isles are mysterious, the ducks are perhaps the most so. Where did they come from? Where are they going? What are they planning? We may never know.",
         icon="3953209",
@@ -32551,9 +31336,9 @@ PETS.all ={
         displayID=106636,
         family=9,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Quack.",
         icon="4048813",
@@ -32571,10 +31356,10 @@ PETS.all ={
         companionID=189138,
         displayID=106637,
         family=9,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Quest",
         flavor="Still learning how to fly.",
         icon="4048814",
@@ -32589,10 +31374,10 @@ PETS.all ={
         companionID=189140,
         displayID=106638,
         family=9,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="What do you feed a cute little duckling? What? No, not cheese and quackers! Quackers aren't healthy for ducks.",
         icon="4048815",
@@ -32608,10 +31393,10 @@ PETS.all ={
         companionID=189142,
         displayID=106639,
         family=9,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Profession",
         flavor="Beep. Beep. Beep. Quack.",
         icon="4048816",
@@ -32626,9 +31411,9 @@ PETS.all ={
         displayID=106640,
         family=9,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="This is the terror that flaps o'er the Dragon Isles. This is the winged nightmare that pecks at your emerald dreams. What? No it's not Deathwing, it's a duck!",
         icon="4048817",
@@ -32646,10 +31431,10 @@ PETS.all ={
         companionID=189133,
         displayID=106633,
         family=3,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Treasure",
         flavor="These beautiful, elusive birds have very erratic migratory patterns, which can be difficult to track, leading some explorers to erroneously believe ducks simply didn't exist.",
         icon="3953211",
@@ -32664,10 +31449,10 @@ PETS.all ={
         companionID=189132,
         displayID=109374,
         family=7,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="World Drop",
         flavor="In the mountain air, frost lingers upon the grass as a storm rolls in.",
         icon="4554444",
@@ -32687,10 +31472,10 @@ PETS.all ={
         companionID=189134,
         displayID=109378,
         family=3,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Drop",
         flavor="Its eyes can see the flick of a mouse tail from leagues away.",
         icon="4094306",
@@ -32711,9 +31496,9 @@ PETS.all ={
         displayID=106651,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Each of this creature's steps shakes the ground. When enough of them run together it sounds like a raging thunderstorm.",
         icon="4033837",
@@ -32731,10 +31516,10 @@ PETS.all ={
         companionID=189152,
         displayID=108969,
         family=2,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Quest",
         flavor="Who's the cutest little monster? You are!",
         icon="4452489",
@@ -32749,10 +31534,10 @@ PETS.all ={
         companionID=189154,
         displayID=106652,
         family=8,
-        isWild=false,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
+
         source="Vendor",
         flavor="Though it's rare, thunder lizards have been known to bond with centaurs. And their close allies. Lucky you!",
         icon="4033840",
@@ -32769,9 +31554,9 @@ PETS.all ={
         displayID=106653,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="When these creatures stampede, they sound like a thunderstorm. When these creatures stampede in a thunderstorm, they sound like a cataclysm.",
         icon="4033841",
@@ -32785,10 +31570,10 @@ PETS.all ={
         companionID=189204,
         displayID=106659,
         family=3,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Quest",
         flavor="Soon after you put down this slyvern's decay-twisted mother, you learned the hard way both how it got its name and why Zon'Wogi asked you to care for it.",
         icon="4215001",
@@ -32804,9 +31589,9 @@ PETS.all ={
         displayID=106660,
         family=3,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="These critters' white coats help them hide in the snow when  predators are around.",
         icon="4215002",
@@ -32820,10 +31605,10 @@ PETS.all ={
         companionID=189156,
         displayID=106654,
         family=3,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Treasure",
         flavor="There is no fury quite like that of a mother Blackfeather defending her nest.",
         icon="3998670",
@@ -32839,9 +31624,9 @@ PETS.all ={
         displayID=106655,
         family=3,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="These birds use their sharp beaks and dragon-like talons to forage for prey on tree trunks and branches. They communicate with each other by drumming on the trees with their beaks, which makes a sound that can be heard over great distances.",
         icon="3998673",
@@ -32858,10 +31643,10 @@ PETS.all ={
         companionID=189158,
         displayID=106656,
         family=3,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Treasure",
         flavor="It has bright feathers. What else is there to say?",
         icon="3998672",
@@ -32875,10 +31660,10 @@ PETS.all ={
         companionID=189159,
         displayID=109382,
         family=8,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Drop",
         flavor="Faithful and ferocious, this bakar is a hero's best friend.",
         icon="1033494",
@@ -32898,10 +31683,10 @@ PETS.all ={
         companionID=189655,
         displayID=106663,
         family=8,
-        isWild=false,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
+
         source="Vendor",
         flavor="When not lazily floating down a river, this Timbertooth is fond of snacks and snuggles.",
         icon="4227787",
@@ -32919,9 +31704,9 @@ PETS.all ={
         displayID=106664,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Hunters value these critters more for their companionship than their pelts.",
         icon="4227788",
@@ -32936,9 +31721,9 @@ PETS.all ={
         displayID=106665,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="As good as gold and better. These little guys are quite frail but exceedingly brave. - Bob Bigheart",
         icon="4227789",
@@ -32956,9 +31741,9 @@ PETS.all ={
         displayID=109390,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         intermittent=true,
         source="Pet Battle",
         flavor="A timbertooth with lighting inside? Shocking!",
@@ -32976,10 +31761,10 @@ PETS.all ={
         companionID=189661,
         displayID=106667,
         family=8,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="Gnawing at the roots of magic trees have given this creature the ability to transcend time itself.",
         icon="4227791",
@@ -32995,10 +31780,10 @@ PETS.all ={
         companionID=189694,
         displayID=106669,
         family=9,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Fishing",
         flavor="Is it normal for a fish to have fangs?",
         icon="4539688",
@@ -33012,10 +31797,10 @@ PETS.all ={
         companionID=189696,
         displayID=106671,
         family=9,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Treasure",
         flavor="This frillfish is a no-frills kind of frillfish.",
         icon="4539690",
@@ -33030,10 +31815,10 @@ PETS.all ={
         companionID=191287,
         displayID=106672,
         family=8,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Treasure",
         flavor="The vorquin of the dragon isles have manes that come in a variety of stunning colors.",
         icon="4218747",
@@ -33047,10 +31832,10 @@ PETS.all ={
         companionID=191298,
         displayID=106673,
         family=8,
-        isWild=false,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
+
         source="Vendor",
         flavor="It's quite possible this creature is aging backwards. It looks a bit younger every time you see it.",
         icon="4218748",
@@ -33067,9 +31852,9 @@ PETS.all ={
         displayID=106675,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Behold! A pale vorquin.",
         icon="4218751",
@@ -33084,9 +31869,9 @@ PETS.all ={
         displayID=106674,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="It will probably grow bigger. Probably.",
         icon="4218749",
@@ -33104,10 +31889,10 @@ PETS.all ={
         companionID=191435,
         displayID=111668,
         family=6,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Treasure",
         flavor="Sharp crystal needles protrude from this creature's back, and yet it still wants you to pet it somehow.",
         icon="4572405",
@@ -33122,10 +31907,10 @@ PETS.all ={
         companionID=191381,
         displayID=107463,
         family=2,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Quest",
         flavor="This little dragon is all fired up! It looks like he's got some things to do.",
         icon="4572403",
@@ -33139,10 +31924,10 @@ PETS.all ={
         companionID=191383,
         displayID=107455,
         family=2,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Profession",
         flavor="Sometimes you can see blue light flickering deep inside the gems that make up this strange creature.",
         icon="4397609",
@@ -33156,10 +31941,10 @@ PETS.all ={
         companionID=191384,
         displayID=107456,
         family=2,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Profession",
         flavor="The hardest part to shape was the whelpling's cute little snout.",
         icon="4397692",
@@ -33173,10 +31958,10 @@ PETS.all ={
         companionID=191385,
         displayID=107458,
         family=2,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Profession",
         flavor="Trade Prince Gallywix wants you to know that he already owns three of these.",
         icon="4397694",
@@ -33190,10 +31975,10 @@ PETS.all ={
         companionID=191386,
         displayID=107457,
         family=2,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Profession",
         flavor="A magically infused emerald sits at the heart of this creature.",
         icon="4397693",
@@ -33207,10 +31992,10 @@ PETS.all ={
         companionID=191387,
         displayID=108961,
         family=7,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Quest",
         flavor="Raindrops whip around this creature with frightening speed, ripping and tearing anything that touches it. Experts say the best way to avoid injury is to give it a treat and some snuggles.",
         icon="4554454",
@@ -33228,10 +32013,10 @@ PETS.all ={
         companionID=191627,
         displayID=106686,
         family=6,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Quest",
         flavor="A brilliant executive assistant and apprentice, Lord Basilton also loves to stick his nose into piles of anything interesting.",
         icon="4572408",
@@ -33247,9 +32032,9 @@ PETS.all ={
         displayID=107767,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="These small bears will not normally attack people, but they have been known to steal the occasional picnic basket.",
         icon="4532348",
@@ -33267,9 +32052,9 @@ PETS.all ={
         displayID=107768,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="It's not easy having red fur during the winter, but in the autumn it's very fashionable.",
         icon="4532350",
@@ -33284,9 +32069,9 @@ PETS.all ={
         displayID=107772,
         family=9,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="These creatures' shells are not literally made of stone, but they're strong enough that they might as well be.",
         icon="1738680",
@@ -33304,9 +32089,9 @@ PETS.all ={
         displayID=109391,
         family=9,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         intermittent=true,
         source="Pet Battle",
         flavor="A playful splash from this otter will give you quite a shock.",
@@ -33324,10 +32109,10 @@ PETS.all ={
         companionID=192258,
         displayID=109303,
         family=7,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="World Drop",
         flavor="Formed by the reckless use of elemental magic, the slumbering earth awakens. It is angry.",
         icon="4554437",
@@ -33348,9 +32133,9 @@ PETS.all ={
         displayID=107774,
         family=9,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Despite its name, its shell is actually much tougher than chalk.",
         icon="1738684",
@@ -33365,9 +32150,9 @@ PETS.all ={
         displayID=107776,
         family=6,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="These creatures are highly sought after by hunters looking to make weapons from the sharp crystals on its back.",
         icon="4572407",
@@ -33382,9 +32167,9 @@ PETS.all ={
         displayID=107778,
         family=6,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="The blood of a crimsonspine flows through the clear crystal structures that make up its body, which causes its unique coloration.",
         icon="4572409",
@@ -33401,10 +32186,10 @@ PETS.all ={
         companionID=192343,
         displayID=107812,
         family=8,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Treasure",
         flavor="An adult Snowclaw can rattle the very trees with its roar. A cub can rattle one of the smaller branches.",
         icon="4532351",
@@ -33419,10 +32204,10 @@ PETS.all ={
         companionID=192350,
         displayID=107818,
         family=9,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         intermittent=true,
         source="Treasure",
         flavor="This turtle eats bugs, as you'd expect from its name, but you wouldn't believe how large the bugs are.",
@@ -33449,10 +32234,10 @@ PETS.all ={
         companionID=192369,
         displayID=107831,
         family=9,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Treasure",
         flavor="Most brightly colored frogs are incredibly poisonous. The Roseate Hoppers are different because they are only credibly poisonous.",
         icon="2399259",
@@ -33468,9 +32253,9 @@ PETS.all ={
         displayID=108033,
         family=7,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="A troublesome mage named McGwire decided to start a small fire. He summoned a flame which caused him to exclaim: 'This is much more alive than required!'",
         icon="4554448",
@@ -33488,9 +32273,9 @@ PETS.all ={
         displayID=108050,
         family=7,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="The core temperature of an Emberling is hot enough to dissolve anything organic, so make sure to wear gloves if you want to pet it.",
         icon="132847",
@@ -33504,10 +32289,10 @@ PETS.all ={
         companionID=194004,
         displayID=100535,
         family=7,
-        isWild=false,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
+
         source="Quest",
         flavor="Ironically, she has a warm personality.",
         icon="2027946",
@@ -33521,10 +32306,10 @@ PETS.all ={
         companionID=195896,
         displayID=109025,
         family=7,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="Born of living stone. Reforged by the hands of Wrathion's agents. Sadly much too tiny to make a difference in the black dragons' war against the djaradin.",
         icon="2101174",
@@ -33540,10 +32325,10 @@ PETS.all ={
         companionID=196304,
         displayID=109140,
         family=2,
-        isWild=false,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
+
         source="Vendor",
         flavor="It's tried to cut down, but magic is just so tasty.",
         icon="4452485",
@@ -33560,10 +32345,10 @@ PETS.all ={
         companionID=196305,
         displayID=109141,
         family=2,
-        isWild=false,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
+
         source="Vendor",
         flavor="This proto-whelp's distinctive coloration is highly prized by pet trainers.",
         icon="4452488",
@@ -33580,10 +32365,10 @@ PETS.all ={
         companionID=196409,
         displayID=109169,
         family=3,
-        isWild=false,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
+
         source="Vendor",
         flavor="After pestering the Dragonscale Basecamp for weeks, Granpap Whiskers discovered a way to catch them and use them to get rid of other more annoying insects.",
         icon="3995637",
@@ -33600,10 +32385,10 @@ PETS.all ={
         companionID=194893,
         displayID=108710,
         family=1,
-        isWild=false,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
+
         source="Vendor",
         flavor="Under the invitation and tutelage of Doc Nanners many Gray Marmoni have become common, but not always desired guests at the Dragonscale Expedition Basecamp.",
         icon="877482",
@@ -33620,10 +32405,10 @@ PETS.all ={
         companionID=196666,
         displayID=109273,
         family=2,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="As an egg, this proto-drake was struck by a freak bolt of lightning. Years later, the lightning still lives inside.",
         icon="4509432",
@@ -33640,9 +32425,9 @@ PETS.all ={
         displayID=109392,
         family=3,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         intermittent=true,
         source="Pet Battle",
         flavor="Peck. Peck. Zap!",
@@ -33661,9 +32446,9 @@ PETS.all ={
         displayID=109393,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         intermittent=true,
         source="Pet Battle",
         flavor="This what your mother always warned you would happen if you ate grass that was struck by lightning.",
@@ -33682,9 +32467,9 @@ PETS.all ={
         displayID=109413,
         family=4,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="This is not your grandfather's duck! Or.. maybe it is?",
         icon="3953207",
@@ -33698,10 +32483,10 @@ PETS.all ={
         companionID=197089,
         displayID=109418,
         family=7,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Profession",
         flavor="A small fraction of the titans' power, an even smaller fraction of their size.",
         icon="4554442",
@@ -33716,9 +32501,9 @@ PETS.all ={
         displayID=109639,
         family=3,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="The bad news is that these bugs are carnivorous. The good news is that they usually just eat other bugs.",
         icon="3995638",
@@ -33733,9 +32518,9 @@ PETS.all ={
         displayID=109641,
         family=9,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="These critters often leave their spawning groups as soon as they can move around on land.",
         icon="2481372",
@@ -33749,10 +32534,10 @@ PETS.all ={
         companionID=197963,
         displayID=110328,
         family=6,
-        isWild=false,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
+
         source="Quest",
         flavor="The greatest souvenir available in a dragon's spa in the clouds. Not so good at facials any more, though.",
         icon="1500916",
@@ -33767,10 +32552,10 @@ PETS.all ={
         companionID=197969,
         displayID=109789,
         family=6,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Achievement",
         flavor="Though she may be fashionably late, Lady Feathersworth will always show up for a party.",
         icon="2103802",
@@ -33784,10 +32569,10 @@ PETS.all ={
         companionID=192108,
         displayID=110085,
         family=8,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="Scout came to the Dragon Isles for adventure and excitement. After finding you, he got both.",
         icon="1600295",
@@ -33804,10 +32589,10 @@ PETS.all ={
         companionID=198077,
         displayID=109895,
         family=6,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="When the Bushbeard clan decided they were going to have a wedding, they chose Petal to be the flower girl. She was spectacular.",
         icon="1500941",
@@ -33824,10 +32609,10 @@ PETS.all ={
         companionID=198269,
         displayID=109983,
         family=7,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Profession",
         flavor="I wish that I could bind the tides and bend them to my will. But in its depths the sea abides and waits for no one still.",
         icon="252995",
@@ -33841,10 +32626,10 @@ PETS.all ={
         companionID=198271,
         displayID=109985,
         family=7,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Profession",
         flavor="When it was captured and bound to a cage made of enchanted metal, this spirit managed to twist and reshape the metal into the suit of armor it now wears.",
         icon="4632784",
@@ -33858,10 +32643,10 @@ PETS.all ={
         companionID=198272,
         displayID=109987,
         family=7,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Profession",
         flavor="This is the soul of a forest fire. Though its armor keeps its flames under control, you sometimes notice it gazing longingly at dead trees and dry underbrush.",
         icon="1786407",
@@ -33875,10 +32660,10 @@ PETS.all ={
         companionID=198273,
         displayID=109988,
         family=7,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Profession",
         flavor="When it was the wind, this spirit carried scents to every corner of Azeroth. Sometimes you can still smell on it the barest hint of food, smoke, or the carnage of battle.",
         icon="606549",
@@ -33892,10 +32677,10 @@ PETS.all ={
         companionID=198316,
         displayID=110016,
         family=2,
-        isWild=false,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
+
         source="Vendor",
         flavor="After finding a clutch of black proto-whelps, Wrathion took them under his wing.",
         icon="4452486",
@@ -33911,10 +32696,10 @@ PETS.all ={
         companionID=198480,
         displayID=110109,
         family=8,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Treasure",
         flavor="Cubbly's extended proximity to time magic has given him powers far beyond the average bear.",
         icon="4532349",
@@ -33929,10 +32714,10 @@ PETS.all ={
         companionID=198511,
         displayID=110161,
         family=6,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="Do you dare to open this book of draconic secrets?",
         icon="4549126",
@@ -33949,10 +32734,10 @@ PETS.all ={
         companionID=198543,
         displayID=110188,
         family=8,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="With her distinctive coloration and impeccable work ethic, Pinkie has propelled herself to the top of the tallstrider fashion world.",
         icon="4037556",
@@ -33969,10 +32754,10 @@ PETS.all ={
         companionID=200259,
         displayID=111824,
         family=7,
-        isWild=false,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
+
         source="Vendor",
         flavor="This creature is usually known to be quite docile, but try to stick a carrot in its face and YOU WILL lose feeling in your fingers.",
         icon="4905304",
@@ -33989,10 +32774,10 @@ PETS.all ={
         companionID=200769,
         displayID=111254,
         family=7,
-        isWild=false,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
+
         intermittent=true,
         source="Pet Battle",
         flavor="Arrogant from a past life in the stormy Forbidden Reach, pines after the good old days when the elements controlled the land. Bit of a blow hard really.",
@@ -34020,10 +32805,10 @@ PETS.all ={
         companionID=200770,
         displayID=111258,
         family=7,
-        isWild=false,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
+
         intermittent=true,
         source="Pet Battle",
         flavor="Claims to be from a long lost land from the remnants of a massive volcano, but that story seems a little shaky.",
@@ -34051,10 +32836,10 @@ PETS.all ={
         companionID=200771,
         displayID=111262,
         family=7,
-        isWild=false,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
+
         intermittent=true,
         source="Pet Battle",
         flavor="The flames surrounding it burn more intensely during combat. Could even say that pet battles get it stoked.",
@@ -34082,10 +32867,10 @@ PETS.all ={
         companionID=200772,
         displayID=111266,
         family=7,
-        isWild=false,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
+
         intermittent=true,
         source="Pet Battle",
         flavor="Perks its head up when hearing conversation as it likes to stay current on world affairs.",
@@ -34113,10 +32898,10 @@ PETS.all ={
         companionID=202548,
         displayID=111677,
         family=10,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Promotion",
         flavor="Who needs a toolbelt when a handy robot can follow you around! Just don't bump into it too hard.",
         icon="4679804",
@@ -34130,10 +32915,10 @@ PETS.all ={
         companionID=202484,
         displayID=111667,
         family=10,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Treasure",
         flavor="An old and dangerous discarded toy.",
         icon="2399252",
@@ -34150,9 +32935,9 @@ PETS.all ={
         displayID=111300,
         family=9,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Puddlehoppers are known to eat bugs almost as large as they are. In one gulp!",
         icon="4879733",
@@ -34167,9 +32952,9 @@ PETS.all ={
         displayID=111301,
         family=3,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Rock martins make their nests out of scavenged pebbles.",
         icon="4870957",
@@ -34184,9 +32969,9 @@ PETS.all ={
         displayID=111304,
         family=3,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="When these insects move in a swarm they look like a golden fog.",
         icon="3995641",
@@ -34201,9 +32986,9 @@ PETS.all ={
         displayID=111302,
         family=5,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="This creature usually has a muddy appearance, but occasionally you may find one that shines a brilliant red.",
         icon="5008150",
@@ -34218,9 +33003,9 @@ PETS.all ={
         displayID=111303,
         family=5,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="The bright glow of a stonewhisker's ears is said to be the result of eating magical cheeses. This may also explain its extremely bad breath.",
         icon="4616696",
@@ -34235,9 +33020,9 @@ PETS.all ={
         displayID=111893,
         family=5,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Slimy, yet also gritty. It would not make a good meal.",
         icon="5003559",
@@ -34252,9 +33037,9 @@ PETS.all ={
         displayID=111307,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Boulderfangs are known to make cozy nests in cabinets, shoes, and other inconvenient places.",
         icon="5045824",
@@ -34269,9 +33054,9 @@ PETS.all ={
         displayID=111306,
         family=7,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Despite being made mostly of rock, these creatures can fly. Some attribute this to the strength of their wings, but most agree it's probably just magic.",
         icon="5009626",
@@ -34286,9 +33071,9 @@ PETS.all ={
         displayID=111900,
         family=3,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Not all moths spin silk. These moths spin lies.",
         icon="5015301",
@@ -34303,9 +33088,9 @@ PETS.all ={
         displayID=111914,
         family=3,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="The call of the lithengale is unique among birds in that it has a persistent, driving rhythm.",
         icon="4870956",
@@ -34320,9 +33105,9 @@ PETS.all ={
         displayID=111991,
         family=5,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Because their dens tend to be close to drogbar settlements, these snails are both faster and stronger than those on the surface.",
         icon="5003562",
@@ -34337,9 +33122,9 @@ PETS.all ={
         displayID=111919,
         family=7,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="The fire at the center of the world burns within its carapace.",
         icon="5009628",
@@ -34354,9 +33139,9 @@ PETS.all ={
         displayID=111922,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="A tiny sun seems to burn in its chest.",
         icon="5045825",
@@ -34371,9 +33156,9 @@ PETS.all ={
         displayID=112383,
         family=3,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Because they are often attracted to candles, these moths can be a big problem for kobolds.",
         icon="5015306",
@@ -34387,10 +33172,10 @@ PETS.all ={
         companionID=203463,
         displayID=111022,
         family=4,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Drop",
         flavor="There must always be a Lick King.",
         icon="4878473",
@@ -34405,10 +33190,10 @@ PETS.all ={
         companionID=204036,
         displayID=112343,
         family=5,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Achievement",
         flavor="If Roland has taught you anything, it's that friendship comes at a price. That price is lots and lots of cheese.",
         icon="515993",
@@ -34423,10 +33208,10 @@ PETS.all ={
         companionID=204217,
         displayID=112142,
         family=7,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Like a campfire, but it wants skritches.",
         icon="4952368",
@@ -34448,10 +33233,10 @@ PETS.all ={
         companionID=204221,
         displayID=112143,
         family=7,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Nothing sparked joy in Ambre's heart until it found the perfect match.",
         icon="4952370",
@@ -34473,10 +33258,10 @@ PETS.all ={
         companionID=204225,
         displayID=113275,
         family=9,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Quest",
         flavor="Annuna's distinctive coloration is due to her eating nothing but orange dragonflies.",
         icon="4879736",
@@ -34491,10 +33276,10 @@ PETS.all ={
         companionID=204226,
         displayID=112147,
         family=9,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="Crimson swoglets are considered the most scholarly of all swoglets because they're well red.",
         icon="4879737",
@@ -34515,10 +33300,10 @@ PETS.all ={
         companionID=204263,
         displayID=112156,
         family=7,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         intermittent=true,
         source="Treasure",
         flavor="Lord Stantley will arrive fashionably early to any party that serves shrimp.",
@@ -34547,10 +33332,10 @@ PETS.all ={
         companionID=204268,
         displayID=112159,
         family=7,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="It got its name because its favorite food is fondue.",
         icon="5008078",
@@ -34571,10 +33356,10 @@ PETS.all ={
         companionID=204269,
         displayID=112161,
         family=7,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Drop",
         flavor="Fortunately it mainly devours pet treats.",
         icon="5008079",
@@ -34589,10 +33374,10 @@ PETS.all ={
         companionID=204286,
         displayID=112167,
         family=5,
-        isWild=false,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
+
         source="Vendor",
         flavor="This type of beetle feeds on dragon scales. Its bright coloration warns predators against attack.",
         icon="5008154",
@@ -34608,10 +33393,10 @@ PETS.all ={
         companionID=204288,
         displayID=112168,
         family=5,
-        isWild=false,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
+
         source="Vendor",
         flavor="If bananas grew in caves, they would be Rango's favorite food.",
         icon="5008157",
@@ -34627,10 +33412,10 @@ PETS.all ={
         companionID=204293,
         displayID=112169,
         family=8,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="Miloh likes naps. Also snacks.",
         icon="5008008",
@@ -34653,10 +33438,10 @@ PETS.all ={
         companionID=204303,
         displayID=112172,
         family=7,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         intermittent=true,
         source="Drop",
         flavor="Sure it's just a rock, but how much can it lift?",
@@ -34685,10 +33470,10 @@ PETS.all ={
         companionID=204320,
         displayID=112175,
         family=5,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="These snails are especially prized by many drogbar snail-racers for being fast and looking fantastic.",
         icon="5003559",
@@ -34704,10 +33489,10 @@ PETS.all ={
         companionID=204321,
         displayID=112176,
         family=5,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Quest",
         flavor="While not as fast as some of the other snails in the Zaralek Cavern, Bashful makes up for it with sheer power.",
         icon="5003563",
@@ -34722,10 +33507,10 @@ PETS.all ={
         companionID=204323,
         displayID=112177,
         family=5,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="Known to hide money in its shell.",
         icon="5003560",
@@ -34741,10 +33526,10 @@ PETS.all ={
         companionID=204324,
         displayID=112178,
         family=5,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Quest",
         flavor="Layers of rocky skin make Ambershells very tough to hurt.",
         icon="5003564",
@@ -34759,10 +33544,10 @@ PETS.all ={
         companionID=204326,
         displayID=112180,
         family=5,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Quest",
         flavor="Somehow pretty and gross at the same time.",
         icon="5003563",
@@ -34777,10 +33562,10 @@ PETS.all ={
         companionID=204339,
         displayID=112185,
         family=7,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         intermittent=true,
         source="Drop",
         flavor="For a creature made of rocks it hovers quite effortlessly.",
@@ -34805,10 +33590,10 @@ PETS.all ={
         companionID=204343,
         displayID=112644,
         family=6,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         intermittent=true,
         source="Achievement",
         flavor="Perhaps you'd like to see how snakelike it can be!",
@@ -34843,10 +33628,10 @@ PETS.all ={
         companionID=204345,
         displayID=112191,
         family=8,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         intermittent=true,
         source="Drop",
         flavor="Skaarn likes to coil up inside of your backpack.",
@@ -34872,10 +33657,10 @@ PETS.all ={
         companionID=204359,
         displayID=112193,
         family=7,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         intermittent=true,
         source="Drop",
         flavor="The fury of the sea in the packge of a puddle.",
@@ -34900,10 +33685,10 @@ PETS.all ={
         companionID=204360,
         displayID=112195,
         family=3,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="World Event",
         flavor="Whereas some moths are attracted to light, this particular moth seems attracted to warm, fuzzy feelings. Some say the phrase \"butterflies in your stomach\" actually refers to an infestation of Heartseeker Moths.",
         icon="5015302",
@@ -34917,10 +33702,10 @@ PETS.all ={
         companionID=204363,
         displayID=112201,
         family=3,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         intermittent=true,
         source="Drop",
         flavor="Contrary to their name, these moths are actually quite happy.",
@@ -34945,10 +33730,10 @@ PETS.all ={
         companionID=201008,
         displayID=111311,
         family=2,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Quest",
         flavor="While napping in shrubbery, sometimes his snaggletooth gets caught on a leaf.",
         icon="4719555",
@@ -34963,10 +33748,10 @@ PETS.all ={
         companionID=204367,
         displayID=113259,
         family=2,
-        isWild=false,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
+
         source="Quest",
         flavor="Augmented by Adamanthia's Ebon Might, this whelpling is ready to face any challenge.",
         icon="4719553",
@@ -34980,10 +33765,10 @@ PETS.all ={
         companionID=204369,
         displayID=112204,
         family=2,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         intermittent=true,
         source="Achievement",
         flavor="Axel likes to chase bees. No one knows why.",
@@ -35008,10 +33793,10 @@ PETS.all ={
         companionID=204621,
         displayID=112270,
         family=5,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Achievement",
         flavor="Roggy is the kind of snail that never gives up, no matter how hard things get.",
         icon="5003559",
@@ -35025,10 +33810,10 @@ PETS.all ={
         companionID=205359,
         displayID=112429,
         family=5,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Quest",
         flavor="Newsy delivers mail all around the Dragon Isles. She is so quick and reliable that the small holes on the letters she delivers are negligible.",
         icon="5003562",
@@ -35042,10 +33827,10 @@ PETS.all ={
         companionID=205637,
         displayID=112632,
         family=6,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Promotion",
         flavor="Also known as the Lord of Lies, Baa'lial is a master of deceit.",
         icon="5159899",
@@ -35060,8 +33845,8 @@ PETS.all ={
         companionID=205649,
         displayID=112636,
         family=7,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
         isPassive=true,
         source="Treasure",
@@ -35084,10 +33869,10 @@ PETS.all ={
         companionID=205795,
         displayID=112678,
         family=9,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Trading Post",
         flavor="Blub's heart has always been bigger than her tank, but once the rest of her got too big she had to find a new home. Fortunately, she can now travel with you and see all the marvels of the world!",
         icon="4777763",
@@ -35100,10 +33885,10 @@ PETS.all ={
         companionID=207064,
         displayID=112589,
         family=7,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Quest",
         flavor="Solid and dependable, Iggy is always ready for a fierce battle or a gentle metaphor.",
         icon="4554457",
@@ -35118,9 +33903,9 @@ PETS.all ={
         companionID=207176,
         displayID=113200,
         family=2,
-        isWild=false,
-        isTradeable=false,
-        isUnique=false,
+
+
+
         isPassive=true,
         source="Quest",
         flavor="Rusziona's newfound courage means she can accompany you on adventures! Nothing in all of Azeroth can stop her! Not even a duck!",
@@ -35136,9 +33921,9 @@ PETS.all ={
         companionID=207220,
         displayID=113202,
         family=2,
-        isWild=false,
-        isTradeable=false,
-        isUnique=false,
+
+
+
         isPassive=true,
         source="Quest",
         flavor="Bela has learned some humility since you first met her, so she likely won't boss you around too much.",
@@ -35154,10 +33939,10 @@ PETS.all ={
         companionID=207310,
         displayID=113210,
         family=7,
-        isWild=false,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
+
         source="Quest",
         flavor="Ten thousand years spent floating in a time stasis is quite a bit of time to work on material.",
         icon="4952382",
@@ -35171,10 +33956,10 @@ PETS.all ={
         companionID=207535,
         displayID=113271,
         family=8,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Quest",
         flavor="Princess Vorquistrasza wants you to know that she appreciates you coming to her birthday party, but is underwhelmed by your gift.",
         icon="4218751",
@@ -35189,9 +33974,9 @@ PETS.all ={
         companionID=207552,
         displayID=113274,
         family=2,
-        isWild=false,
-        isTradeable=false,
-        isUnique=false,
+
+
+
         isPassive=true,
         source="Quest",
         flavor="Now that he's no longer sneezing through time, Zhusa is ready to accompany you on your future adventures! Or past adventures! Or future adventures!",
@@ -35207,9 +33992,9 @@ PETS.all ={
         companionID=207556,
         displayID=113277,
         family=2,
-        isWild=false,
-        isTradeable=false,
-        isUnique=false,
+
+
+
         isPassive=true,
         source="Quest",
         flavor="Zaleth is looking forward to accompanying you on your adventures. He's already got a list of books he wants to take with him, but Lasztak said he could only bring 2.",
@@ -35225,10 +34010,10 @@ PETS.all ={
         companionID=207558,
         displayID=113279,
         family=6,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Quest",
         flavor="Pallibrius is an amazing book because of its wealth of arcane knowledge. Also because of all the pie recipes its previous owner scribbled in the margins.",
         icon="4624734",
@@ -35243,9 +34028,9 @@ PETS.all ={
         companionID=207568,
         displayID=113281,
         family=2,
-        isWild=false,
-        isTradeable=false,
-        isUnique=false,
+
+
+
         isPassive=true,
         source="Quest",
         flavor="Posidriss is excited to go on adventures with you, but maybe let them have a nap first?",
@@ -35261,10 +34046,10 @@ PETS.all ={
         companionID=207571,
         displayID=113282,
         family=8,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Quest",
         flavor="Somnius is legendary for her ability to sleep through everything except suppertime.",
         icon="4532351",
@@ -35279,10 +34064,10 @@ PETS.all ={
         companionID=208436,
         displayID=113581,
         family=3,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Trading Post",
         flavor="These astral phenomena are rarely sighted due to the speed of the slyvern. It is a good omen to have one following you around.",
         icon="5238769",
@@ -35295,10 +34080,10 @@ PETS.all ={
         companionID=208624,
         displayID=113657,
         family=8,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="Loves: Broccoli, playing, and smashing things. Hates: Meat, sleeping, and mean titan keepers who won't let you smash things.",
         icon="5242418",
@@ -35315,10 +34100,10 @@ PETS.all ={
         companionID=208630,
         displayID=113659,
         family=1,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="Gill'dan earned his great power by drinking the blood of a demon, which would also have turned his scales green had they not already been that color.",
         icon="5168681",
@@ -35335,10 +34120,10 @@ PETS.all ={
         companionID=208631,
         displayID=113661,
         family=3,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="This eye has witnessed untold horrors, and these fangs may be responsible for a few of their own.",
         icon="5242523",
@@ -35355,10 +34140,10 @@ PETS.all ={
         companionID=208634,
         displayID=113662,
         family=6,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="He seems to be very angry, but it's possible he's just hungry.",
         icon="5157541",
@@ -35375,10 +34160,10 @@ PETS.all ={
         companionID=208636,
         displayID=113663,
         family=10,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="DEFECTIVE; REFUSES TO KILL. MARK FOR IMMEDIATE DESTRUCTION OR SALE TO LESS INTELLIGENT ENTITY.",
         icon="5242530",
@@ -35395,10 +34180,10 @@ PETS.all ={
         companionID=208637,
         displayID=113664,
         family=2,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="A war-obsessed world turned her into a weapon... but they couldn't break her spirit.",
         icon="5194264",
@@ -35415,10 +34200,10 @@ PETS.all ={
         companionID=208639,
         displayID=113666,
         family=6,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="A lifetime of servitude to Anub'arak, then the Lich King, and now... you!",
         icon="237410",
@@ -35435,10 +34220,10 @@ PETS.all ={
         companionID=208643,
         displayID=114316,
         family=8,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Achievement",
         flavor="With a nose for secrets, Tobias is ready to be by the side of super sleuths.",
         icon="5279605",
@@ -35452,10 +34237,10 @@ PETS.all ={
         companionID=209259,
         displayID=113829,
         family=2,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Promotion",
         flavor="Feel the chill nipping at your toes! A menace of Azeroth, now in festive blue and travel-size!",
         icon="5260512",
@@ -35470,10 +34255,10 @@ PETS.all ={
         companionID=209681,
         displayID=113934,
         family=3,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Promotion",
         flavor="Though this little one's flight training has yet to be completed, their playfulness and enthusiasm are already fully grown.",
         icon="5333904",
@@ -35488,9 +34273,9 @@ PETS.all ={
         displayID=114318,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="The first thing you might notice about this creature is its huge expressive eyes. This is a mistake. Instead focus on its razor-sharp claws.",
         icon="2103796",
@@ -35505,9 +34290,9 @@ PETS.all ={
         displayID=114319,
         family=5,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Keep it out of your backpack or it will eat all your food and then take a nap.",
         icon="4748412",
@@ -35522,9 +34307,9 @@ PETS.all ={
         displayID=114320,
         family=5,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Sapnibblers are always up for a game of hide and squeak.",
         icon="4883968",
@@ -35539,9 +34324,9 @@ PETS.all ={
         displayID=114321,
         family=5,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="This little one likes cheese, but most fawn do.",
         icon="3636845",
@@ -35556,9 +34341,9 @@ PETS.all ={
         displayID=114322,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="As younglings, these critters need a lot of naps. Fortunately, adventurers' backpacks make good napping spots.",
         icon="4899643",
@@ -35573,9 +34358,9 @@ PETS.all ={
         displayID=114518,
         family=5,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="If you think the skunks of the Emerald Dream smell bad, pray that you never smell the skunks of the Emerald Nightmare.",
         icon="4866713",
@@ -35589,10 +34374,10 @@ PETS.all ={
         companionID=211939,
         displayID=114494,
         family=9,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Achievement",
         flavor="When enemy combatants fly overhead, there's only one thing to do. Duck.",
         icon="1455891",
@@ -35606,10 +34391,10 @@ PETS.all ={
         companionID=211942,
         displayID=114495,
         family=6,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Trading Post",
         flavor="At a young age Aura donned her magic hat, took her crystal staff, and set off for adventure into the unknown.",
         icon="5211620",
@@ -35622,10 +34407,10 @@ PETS.all ={
         companionID=212192,
         displayID=114607,
         family=6,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="The duck of your dreams... or perhaps someone else's dreams.",
         icon="3953210",
@@ -35641,10 +34426,10 @@ PETS.all ={
         companionID=212206,
         displayID=114609,
         family=6,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         intermittent=true,
         source="Achievement",
         flavor="If you ever have an outdoor feast in the Emerald Dream, look out for wild blueloos. A blueloo won't steal your picinic basket, but it will politely ask for some snacks.",
@@ -35689,10 +34474,10 @@ PETS.all ={
         companionID=212267,
         displayID=114635,
         family=6,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="Compared to a fully grown dreamborne scarab, this is the lesser of two weevils.",
         icon="5008153",
@@ -35708,10 +34493,10 @@ PETS.all ={
         companionID=212273,
         displayID=114642,
         family=6,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="Be sure to sleep with some grass under your pillow so you can give this critter a snack while you dream.",
         icon="3636844",
@@ -35727,10 +34512,10 @@ PETS.all ={
         companionID=212275,
         displayID=114645,
         family=5,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Achievement",
         flavor="Since you rescued her from Larodar, this grateful little doe hasn't stopped following you around.",
         icon="5095682",
@@ -35744,10 +34529,10 @@ PETS.all ={
         companionID=212315,
         displayID=114660,
         family=6,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="It is said that some animals dream in black and white. This animal only dreams in green.",
         icon="132130",
@@ -35763,10 +34548,10 @@ PETS.all ={
         companionID=212328,
         displayID=114666,
         family=5,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="This creature could sleep through another Cataclysm.",
         icon="4748414",
@@ -35782,10 +34567,10 @@ PETS.all ={
         companionID=212329,
         displayID=114667,
         family=5,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="Snoozles was once given a choice between life in the timeless beautiful snowfields and life in a warm home with pet treats. We know which one he chose.",
         icon="4748413",
@@ -35801,10 +34586,10 @@ PETS.all ={
         companionID=212399,
         displayID=114693,
         family=2,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Quest",
         flavor="Rescued from the Druids of the Flame's onslaught upon the Emerald Dream, this juvenile faerie dragon has taken a liking to you -- and to your food. Don't leave your snacks unattended!",
         icon="3071791",
@@ -35819,10 +34604,10 @@ PETS.all ={
         companionID=212408,
         displayID=114704,
         family=5,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="Seedles burrow beneath plants in the emerald dreams and nibble at their roots.",
         icon="4883967",
@@ -35838,10 +34623,10 @@ PETS.all ={
         companionID=212413,
         displayID=114707,
         family=5,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="Dustites scavenge among the roots of great trees for any small leavings they can find.",
         icon="4883970",
@@ -35857,10 +34642,10 @@ PETS.all ={
         companionID=212417,
         displayID=114708,
         family=5,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="Dream on. Dream until your dream comes true!",
         icon="4883966",
@@ -35877,9 +34662,9 @@ PETS.all ={
         displayID=114746,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="These creatures live in bushes and near trees, but they sleep so soundly they're practically invisible. If you want to interrupt their dreaming, you'd best bring friends.",
         icon="4899644",
@@ -35894,9 +34679,9 @@ PETS.all ={
         displayID=114754,
         family=8,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="Such toof. Such snaggle.",
         icon="2103794",
@@ -35911,9 +34696,9 @@ PETS.all ={
         displayID=114780,
         family=5,
         isWild=true,
-        isTradeable=false,
-        isUnique=false,
-        isPassive=false,
+
+
+
         source="Pet Battle",
         flavor="A brown dream badger is a rare sight. Not so rare a smell though.",
         icon="4866714",
@@ -35927,10 +34712,10 @@ PETS.all ={
         companionID=212562,
         displayID=114781,
         family=6,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="Snoots has a supernatural sense of smell. It's not any better than normal, it's just supernatural.",
         icon="4899641",
@@ -35946,10 +34731,10 @@ PETS.all ={
         companionID=212567,
         displayID=114782,
         family=6,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="Elmer once ate a whole cake all by himself. It wasn't even his cake.",
         icon="4899642",
@@ -35968,10 +34753,10 @@ PETS.all ={
         companionID=212569,
         displayID=114783,
         family=5,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="What Spruce lacks in speed, she makes up for with sheer stubbornness.",
         icon="3636843",
@@ -35987,10 +34772,10 @@ PETS.all ={
         companionID=212570,
         displayID=114784,
         family=5,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="Juniper's unique coloration makes it hard to hide from predators in the Emerald Dream's lush green foliage. She therefore made the wise decision to travel with you instead.",
         icon="3636846",
@@ -36006,10 +34791,10 @@ PETS.all ={
         companionID=212877,
         displayID=114910,
         family=6,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="Is it a snail? Is it a dream? Is it the dream of a sleeping snail?",
         icon="1396974",
@@ -36025,10 +34810,10 @@ PETS.all ={
         companionID=212954,
         displayID=115016,
         family=6,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="Vendor",
         flavor="Wyvern whelps are sleepy by nature. The dreams of wyvern whelps are doubly so.",
         icon="4630421",
@@ -36044,10 +34829,10 @@ PETS.all ={
         companionID=213111,
         displayID=115261,
         family=5,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Trading Post",
         flavor="When she grows up, Mitzy wants to guide Greatfather Winter's sleigh just like Metzen, her famous dad. Until then, she's more than happy to come with you on your adventures.",
         icon="1339669",
@@ -36060,10 +34845,10 @@ PETS.all ={
         companionID=214286,
         displayID=115967,
         family=5,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Trading Post",
         flavor="Teele's grandparents told him they were the mice that discovered Azeroth. They were also champion fibbers.",
         icon="4616694",
@@ -36076,10 +34861,10 @@ PETS.all ={
         companionID=216179,
         displayID=116543,
         family=5,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Promotion",
         flavor="When he's not hanging out with Harth Stonebrew or winning competitions at the tavern, Sarge loves to stow away in the backpacks of visiting adventurers.",
         icon="5502861",
@@ -36094,10 +34879,10 @@ PETS.all ={
         companionID=216345,
         displayID=116571,
         family=5,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Trading Post",
         flavor="Though fully-grown maidenbugs are able to fly, Nelle is just a bit too young for that. She's happy to skitter alongside you all the same.",
         icon="5505320",
@@ -36110,10 +34895,10 @@ PETS.all ={
         companionID=216379,
         displayID=116580,
         family=5,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Trading Post",
         flavor="Farmers will often release maidenbugs to battle the pests that threaten their crops. Buggsy was so good at this that she decided to go pro.",
         icon="5505319",
@@ -36126,10 +34911,10 @@ PETS.all ={
         companionID=215565,
         displayID=116389,
         family=9,
-        isWild=false,
+
         isTradeable=true,
-        isUnique=false,
-        isPassive=false,
+
+
         source="World Event",
         flavor="Of all the shades and colors of ducklings that come forth in the spring, the most prized are the pink ones. There are many theories about why, but it's likely just because pink is awesome.",
         icon="5456184",
@@ -36143,10 +34928,10 @@ PETS.all ={
         companionID=216933,
         displayID=116800,
         family=6,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Achievement",
         flavor="It is bewildering how the most arrogant and stuck up of the Azerothian Archivists can't help but create the most adorable arcane familiars. Perhaps Nirobin does have a soft side...",
         icon="4093847",
@@ -36160,10 +34945,10 @@ PETS.all ={
         companionID=218647,
         displayID=118606,
         family=9,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Promotion",
         flavor="Glamrok followed you back to the ship one day after a particularly good plunder, sensing your keen knack for treasure-finding.",
         icon="5559624",
@@ -36178,10 +34963,10 @@ PETS.all ={
         companionID=218646,
         displayID=118078,
         family=9,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Promotion",
         flavor="Where do all of the bubbles come from? What are they made of? Perhaps some mysteries are best left unexplored.",
         icon="2027924",
@@ -36196,8 +34981,8 @@ PETS.all ={
         companionID=218977,
         displayID=118654,
         family=9,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
         isPassive=true,
         source="Promotion",
@@ -36214,10 +34999,10 @@ PETS.all ={
         companionID=219134,
         displayID=117704,
         family=6,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Trading Post",
         flavor="The needle in Pokee's eye isn't exactly comfortable fashion, but he's stuck with it.",
         icon="5206188",
@@ -36230,10 +35015,10 @@ PETS.all ={
         companionID=218060,
         displayID=117265,
         family=9,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Promotion",
         flavor="Weighed down by all the loot he has plundered. He could share the burden he carries but it turns out he's a little shellfish.",
         icon="5559623",
@@ -36246,10 +35031,10 @@ PETS.all ={
         companionID=223316,
         displayID=119402,
         family=1,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Trading Post",
         flavor="Ancient Gorian blood runs through Marrlok's veins. As far as anyone knows, his desire to rest for long stretches of time on a sunny beach keeps his imperial ambitions in check.",
         icon="4215254",
@@ -36262,10 +35047,10 @@ PETS.all ={
         companionID=223600,
         displayID=119579,
         family=1,
-        isWild=false,
-        isTradeable=false,
+
+
         isUnique=true,
-        isPassive=false,
+
         source="Trading Post",
         flavor="She sees you when you're sleeping.",
         icon="5788267",

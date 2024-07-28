@@ -1235,7 +1235,7 @@ local function UpdateWindow(pet, locationIdx)
                             pin:SetAtlas("ComboPoints-ComboPoint")
                             pin:SetSize(6,6)
                         end
-                    elseif requestedLocation.currencies then
+                    elseif requestedLocation.currencies or type == "vendor" then
                         pin:SetAtlas("Levelup-Icon-Bag")
                         pin:SetSize(8,10)
                     elseif type == "npc" then                        
