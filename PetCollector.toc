@@ -2,7 +2,7 @@
 ## Title: PetCollector
 ## Author: Salkari
 ## Version: v10.2.7-1
-## SavedVariables: PETC_DB, PETC_tradingPostVendor
+## SavedVariables: PETC_DB, PETC_tradingPostVendor, PETC_States, PETC_Settings
 
 embeds.xml
 Libs\LibQTip-1.0\LibQTip-1.0.lua
@@ -29,10 +29,12 @@ Utilities.lua
 Display\DisplayUtil.lua
 Display\DebugWindow.lua
 Display\LinkDisplay.lua
+Display\TotalPets.lua
 Display\PetCard.lua
 Display\ReportDisplay.lua
 Display\TodaysEvents.lua
 Display\Capturable.lua
+Display\Settings.lua
 Display\MainDisplay.lua
 Display\PetDataEntryHelper.lua
 

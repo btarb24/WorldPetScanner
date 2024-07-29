@@ -45,6 +45,14 @@ function UTILITIES:Count(table)
     return count
 end
 
+function UTILITIES:Ternary(cond, yes, no)
+    return cond and yes or no
+end
+
+function UTILITIES:Ternary2(cond, no)
+    return cond and cond or no
+end
+
 function UTILITIES:GetDaysSince(startYear, startDayOfYear)
     local currentYear = date("%Y")
     local currentDayOfYear = date("*t").yday

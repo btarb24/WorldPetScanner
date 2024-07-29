@@ -159,6 +159,7 @@ function DISPLAY:CreateHostWindow()
     tab4:SetPoint("TOPLEFT", tab3, "TOPRIGHT", 3, 0)
     --right tabs
     local tabSettings = CreateTab(5, "Settings")
+	DISPLAY.Settings:Initialize()
     tabSettings:SetPoint("TOPRIGHT", PAMainFrame, "BOTTOMRIGHT", -11, 2)
     local tabHelp = CreateTab(6, "Help")
     tabHelp:SetPoint("TOPRIGHT", tabSettings, "TOPLEFT", -3, 0)

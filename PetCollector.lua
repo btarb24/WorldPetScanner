@@ -167,9 +167,17 @@ local function BuildPetList()
 end
 
 function PETC:OnInitialize()
+    if PETC_Settings == nil then
+        PETC_Settings = {}
+    end
+    if PETC_States == nil then
+        PETC_States = {}
+    end
+
 	self.event = CreateFrame("Frame")
 	self.event:SetScript("OnEvent", Event_OnEvent)
 	self.event:RegisterEvent("PERKS_PROGRAM_DATA_REFRESH")
+	self.event:RegisterEvent("VARIABLES_LOADED")
 
 	self.faction = UnitFactionGroup("player")
 
@@ -190,13 +198,17 @@ function PETC:OnInitialize()
 	-- Minimap Icon
 	icon:Register("PetCollector", dataobj, self.db.profile.options.LibDBIcon)
 	TieIn()
+
+	if (PETC_Settings.petTotal) then
+		DISPLAY.TotalPets:Show()
+	end
 end
 
 function PETC:OnEnable()
-	LibPetJournal.RegisterCallback(self, "PetListUpdated", "Initialize")
+	LibPetJournal.RegisterCallback(self, "PetListUpdated", "PetListUpdated")
 end
 
-function PETC:Initialize()
+function PETC:PetListUpdated()
 	BuildPetList()
 	CreatePetSortLists()
 	DISPLAY:CreateHostWindow()
@@ -207,15 +219,14 @@ PETC:RegisterChatCommand("petcollector", "ChatCommand")
 PETC:RegisterChatCommand("pc", "ChatCommand")
 function PETC:ChatCommand(input)
 	local cmds = strsplittable(" ", input)
-	local arg1 = string.lower(cmds[1])
-	if (arg1 == "flip") then
-		print("FlipMode engaged!")
-		PETC.flipIsHere = true
-		if (#cmds == 4) then
-			PETC.flipR = cmds[2]
-			PETC.flipG = cmds[3]
-			PETC.flipB = cmds[4]
+	local arg1 = string.lower(cmds[1])if (arg1 == "count" or arg1 == "total") then
+		if (DISPLAY.TotalPets.Shown) then
+			DISPLAY.TotalPets:Hide()			
+		else
+			DISPLAY.TotalPets:Show()
+			print("Pet Total shown - scroll to change scale; drag to move")
 		end
+		DISPLAY.Settings:UpdatePetTotal()
 	elseif (arg1 == "petdata") then
 		DISPLAY.PetDataEntryHelper:Show()
 	elseif not input or arg1 == "report" or arg1 == "test" then

@@ -571,6 +571,19 @@ local function CreateTab(idNum, name, tabButtonWidth)
     return tab
 end
 
+local function UpdateFullScreenBackgroundColor()
+    local a = PETC_aSlider:GetValue()
+    local r = PETC_rSlider:GetValue()
+    local g = PETC_gSlider:GetValue()
+    local b = PETC_bSlider:GetValue()
+    PAPetCard.tab1.content.modelPopoutFullScreenFrame.bg:SetColorTexture(r, g, b, a)
+
+    PETC_States.fullScreenBG_a = a
+    PETC_States.fullScreenBG_r = r
+    PETC_States.fullScreenBG_g = g
+    PETC_States.fullScreenBG_b = b
+end
+
 local function CreateWindow()
     DISPLAY.PetCard.winWidth = 400;
 
@@ -682,9 +695,8 @@ local function CreateWindow()
     tab1.content.modelPopoutFullScreenFrame:SetFrameStrata("FULLSCREEN")
     tab1.content.modelPopoutFullScreenFrame:SetAllPoints()
     tab1.content.modelPopoutFullScreenFrame.bg = tab1.content.modelPopoutFullScreenFrame:CreateTexture(nil, "BACKGROUND")
-    tab1.content.modelPopoutFullScreenFrame.bg:Hide()
     tab1.content.modelPopoutFullScreenFrame.bg:SetAllPoints(true)
-    tab1.content.modelPopoutFullScreenFrame.bg:SetColorTexture(0,0,0)
+    tab1.content.modelPopoutFullScreenFrame.bg:SetColorTexture(0,0,0,0)
 
     tab1.content.modelFrame.PopOut = CreateFrame("BUTTON", nil, tab1.content.modelFrame)
     tab1.content.modelFrame.PopOut:SetNormalAtlas("RedButton-Expand")
@@ -698,14 +710,13 @@ local function CreateWindow()
         tab1.content.model:SetAllPoints()
         tab1.content.model:SetFrameStrata("FULLSCREEN_DIALOG")
         tab1.content.modelPopoutFullScreenFrame:Show()
-        if (PETC.flipIsHere) then
-            tab1.content.modelPopoutFullScreenFrame.bg:Show()
-            if (PETC.flipR) then
-                tab1.content.modelPopoutFullScreenFrame.bg:SetColorTexture(tonumber(PETC.flipR), tonumber(PETC.flipG), tonumber(PETC.flipB))
+        tab1.content.modelPopoutFullScreenFrame:SetScript("OnKeyDown", function(self, key)
+            if key == "ESCAPE" then
+                tab1.content.modelPopoutFullScreenFrame.PopOutClose:Click("LeftButton")
             end
-        end
+        end)
     end)
-    tab1.content.modelPopoutFullScreenFrame.PopOutClose = CreateFrame("BUTTON", nill, tab1.content.modelPopoutFullScreenFrame, "BigRedExitButtonTemplate")
+    tab1.content.modelPopoutFullScreenFrame.PopOutClose = CreateFrame("BUTTON", nil, tab1.content.modelPopoutFullScreenFrame, "BigRedExitButtonTemplate")
     tab1.content.modelPopoutFullScreenFrame.PopOutClose:SetPoint("TOPLEFT", UIParent, "TOPLEFT")
     tab1.content.modelPopoutFullScreenFrame.PopOutClose:SetFrameStrata("FULLSCREEN_DIALOG")
     tab1.content.modelPopoutFullScreenFrame.PopOutClose:SetFrameLevel(1000)
@@ -715,7 +726,50 @@ local function CreateWindow()
         tab1.content.model:SetPoint("TOPLEFT", tab1.content.modelFrame, "TOPLEFT", 15, -15)
         tab1.content.model:SetPoint("BOTTOMRIGHT", tab1.content.modelFrame, "BOTTOMRIGHT", -15, 15)
         tab1.content.modelPopoutFullScreenFrame:Hide()
+        tab1.content.modelPopoutFullScreenFrame:SetScript("OnKeyDown", nil)
     end)
+    
+    tab1.content.modelPopoutFullScreenFrame.aSlider = CreateFrame("Slider", "PETC_aSlider", tab1.content.modelPopoutFullScreenFrame, "OptionsSliderTemplate")
+    tab1.content.modelPopoutFullScreenFrame.aSlider:SetFrameStrata("FULLSCREEN_DIALOG")
+    tab1.content.modelPopoutFullScreenFrame.aSlider:SetFrameLevel(1000)
+    tab1.content.modelPopoutFullScreenFrame.aSlider:SetPoint("TOPLEFT", tab1.content.modelPopoutFullScreenFrame.PopOutClose, "BOTTOMLEFT", 20, -40)
+    tab1.content.modelPopoutFullScreenFrame.aSlider:SetValueStep(.01)
+    tab1.content.modelPopoutFullScreenFrame.aSlider:SetMinMaxValues(0, 1)
+    tab1.content.modelPopoutFullScreenFrame.aSlider:SetValue(UTILITIES:Ternary2(PETC_States.fullScreenBG_a, 0))
+    tab1.content.modelPopoutFullScreenFrame.aSlider:SetScript("OnValueChanged", UpdateFullScreenBackgroundColor)
+    PETC_aSliderLow:SetText("Alpha")
+    PETC_aSliderHigh:SetText("")
+    tab1.content.modelPopoutFullScreenFrame.rSlider = CreateFrame("Slider", "PETC_rSlider", tab1.content.modelPopoutFullScreenFrame, "OptionsSliderTemplate")
+    tab1.content.modelPopoutFullScreenFrame.rSlider:SetFrameStrata("FULLSCREEN_DIALOG")
+    tab1.content.modelPopoutFullScreenFrame.rSlider:SetFrameLevel(1000)
+    tab1.content.modelPopoutFullScreenFrame.rSlider:SetPoint("TOPLEFT", PETC_aSlider, "BOTTOMLEFT", 0, -10)
+    tab1.content.modelPopoutFullScreenFrame.rSlider:SetValueStep(.01)
+    tab1.content.modelPopoutFullScreenFrame.rSlider:SetMinMaxValues(0, 1)
+    tab1.content.modelPopoutFullScreenFrame.rSlider:SetValue(UTILITIES:Ternary2(PETC_States.fullScreenBG_r, 0))
+    tab1.content.modelPopoutFullScreenFrame.rSlider:SetScript("OnValueChanged", UpdateFullScreenBackgroundColor)
+    PETC_rSliderLow:SetText("Red")
+    PETC_rSliderHigh:SetText("")    
+    tab1.content.modelPopoutFullScreenFrame.gSlider = CreateFrame("Slider", "PETC_gSlider", tab1.content.modelPopoutFullScreenFrame, "OptionsSliderTemplate")
+    tab1.content.modelPopoutFullScreenFrame.gSlider:SetFrameStrata("FULLSCREEN_DIALOG")
+    tab1.content.modelPopoutFullScreenFrame.gSlider:SetFrameLevel(1000)
+    tab1.content.modelPopoutFullScreenFrame.gSlider:SetPoint("TOPLEFT", PETC_rSlider, "BOTTOMLEFT", 0, -10)
+    tab1.content.modelPopoutFullScreenFrame.gSlider:SetValueStep(.01)
+    tab1.content.modelPopoutFullScreenFrame.gSlider:SetMinMaxValues(0, 1)
+    tab1.content.modelPopoutFullScreenFrame.gSlider:SetValue(UTILITIES:Ternary2(PETC_States.fullScreenBG_g, 0))
+    tab1.content.modelPopoutFullScreenFrame.gSlider:SetScript("OnValueChanged", UpdateFullScreenBackgroundColor)
+    PETC_gSliderLow:SetText("Green")
+    PETC_gSliderHigh:SetText("")    
+    tab1.content.modelPopoutFullScreenFrame.bSlider = CreateFrame("Slider", "PETC_bSlider", tab1.content.modelPopoutFullScreenFrame, "OptionsSliderTemplate")
+    tab1.content.modelPopoutFullScreenFrame.bSlider:SetFrameStrata("FULLSCREEN_DIALOG")
+    tab1.content.modelPopoutFullScreenFrame.bSlider:SetFrameLevel(1000)
+    tab1.content.modelPopoutFullScreenFrame.bSlider:SetPoint("TOPLEFT", PETC_gSlider, "BOTTOMLEFT", 0, -10)
+    tab1.content.modelPopoutFullScreenFrame.bSlider:SetValueStep(.01)
+    tab1.content.modelPopoutFullScreenFrame.bSlider:SetMinMaxValues(0, 1)
+    tab1.content.modelPopoutFullScreenFrame.bSlider:SetValue(UTILITIES:Ternary2(PETC_States.fullScreenBG_b, 0))
+    tab1.content.modelPopoutFullScreenFrame.bSlider:SetScript("OnValueChanged", UpdateFullScreenBackgroundColor)
+    PETC_bSliderLow:SetText("Blue")
+    PETC_bSliderHigh:SetText("")
+    UpdateFullScreenBackgroundColor()
 
     tab1.content.unobtainable = tab1.content.modelFrame:CreateFontString(nil, "OVERLAY", "NumberFont_Outline_Large")
     tab1.content.unobtainable:SetPoint("LEFT", tab1.content.modelFrame, "LEFT", -12, 0)

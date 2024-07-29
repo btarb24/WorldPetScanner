@@ -6,7 +6,8 @@ PetCollector = LibStub("AceAddon-3.0"):NewAddon("PetCollector", "AceConsole-3.0"
 local PETC = PetCollector
 PETC.UTILITIES = {}
 PETC.TASKFINDER = {}
-PETC.DISPLAY = {Util = {}, Report = {}, Main = {}, TodaysEvents = {}, Capturable = {}, TestWindow = {}, PetDataEntryHelper = {}, PetCard = {}, LinkWindow = {}, Debug = {}}
+PETC.DISPLAY = { Util = {}, Report = {}, Main = {}, TodaysEvents = {}, Capturable = {}, Settings = {}, 
+                 TestWindow = {}, PetDataEntryHelper = {}, PetCard = {}, LinkWindow = {}, Debug = {}, TotalPets = {}}
 PETC.DATA = {}
 PETC.ZONES = {}
 PETC.EXPANSIONS = {}
