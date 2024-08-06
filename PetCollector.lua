@@ -1,8 +1,11 @@
----@class PetCollector
+local file="PetCollector"
+
 local PETC = PetCollector
 local DATA = PETC.DATA
 local PETS = PETC.PETS
+local SUMMON = PETC.SUMMON
 local DISPLAY = PETC.DISPLAY
+local SETTINGS = DISPLAY.Settings
 local UTILITIES = PETC.UTILITIES
 local TASKFINDER = PETC.TASKFINDER
 local MAPS = PETC.MAPS
@@ -164,15 +167,12 @@ local function BuildPetList()
 		end
 	end
 
+	PETS.TriggerInitialzedEvent()
 end
 
 function PETC:OnInitialize()
-    if PETC_Settings == nil then
-        PETC_Settings = {}
-    end
-    if PETC_States == nil then
-        PETC_States = {}
-    end
+	SETTINGS:EstablishDefaults()
+	SUMMON:Initialize()
 
 	self.event = CreateFrame("Frame")
 	self.event:SetScript("OnEvent", Event_OnEvent)

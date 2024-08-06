@@ -8,6 +8,9 @@ embeds.xml
 Libs\LibQTip-1.0\LibQTip-1.0.lua
 
 Core.lua
+Display\DebugWindow.lua
+Utilities.lua
+Events.lua
 
 
 DB\Expansions.lua
@@ -24,20 +27,18 @@ Models\Reward.lua
 Models\Task.lua
 
 Data\Tasks.lua
-Utilities.lua
 
 Display\DisplayUtil.lua
-Display\DebugWindow.lua
+Display\Settings.lua
 Display\LinkDisplay.lua
 Display\TotalPets.lua
 Display\PetCard.lua
 Display\ReportDisplay.lua
 Display\TodaysEvents.lua
 Display\Capturable.lua
-Display\Settings.lua
 Display\MainDisplay.lua
 Display\PetDataEntryHelper.lua
 
+PetSummon.lua
 TaskFinder.lua
 PetCollector.lua
-Options.lua

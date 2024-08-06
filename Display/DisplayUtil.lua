@@ -1,3 +1,5 @@
+local file="DisplayUtil"
+
 local PETC = PetCollector
 local DISPLAY = PETC.DISPLAY
 local DISPLAY_UTIL = PETC.DISPLAY.Util

@@ -1,8 +1,22 @@
-local PETC =PetCollector
-local PETS =PETC.PETS
-local SHARED =PETC.SHARED
+local PETC = PetCollector
+local EVENTS = PETC.EVENTS
+local SHARED = PETC.SHARED
+local PETS = PETC.PETS
 
-PETS.SOURCES ={
+local initialized = false
+function PETS.IsInitialized()
+    return initialized
+end
+
+function PETS.TriggerInitialzedEvent()
+    initialized = true
+    EVENTS.Raise(PETS, "Initialized")
+end
+function PETS.TriggerCollectedStatusUpdatedEvent(pet)
+    EVENTS.Raise(PETS, "CollectedStatusUpdated", pet)
+end
+
+PETS.SOURCES = {
     BATTLE ="Pet Battle",
     PROFESSION ="Profession",
     VENDOR ="Vendor",
@@ -25,7 +39,7 @@ PETS.SOURCES ={
     TRADINGPOST ="Trading Post"
 }
 
-PETS.FAMILIES ={
+PETS.FAMILIES = {
     [1] ="Humanoid",
     [2] ="Dragon",
     [3] ="Flying",
@@ -41,7 +55,7 @@ PETS.FAMILIES ={
 PETS.lowest = 39 --updated later
 PETS.highest = 39 --updated later
 
-PETS.all ={
+PETS.all = {
     [39]={
         name="Mechanical Squirrel",
         speciesID=39,
@@ -10685,15 +10699,15 @@ PETS.all ={
         displayID=40584,
         family=9,
         isWild=true,
-
-
-
         source="Pet Battle",
         flavor="Named for their apparent dancelike behavior when skimming aquatic surfaces, the species uses erratic movements to avoid being devoured by fish and other underwater predators.",
         icon="643423",
         locations={{mapID=390, coords={{29,73.6},{29.2,77.4},{29.2,77.6},{29.4,72.4},{29.4,72.6},{29.6,72},{30,78.6},{30.2,77.2},{30.2,77.6},{30.4,67.6},{30.6,78.2},{30.8,77.4},{31,67.6},{31.2,78.8},{31.4,66.8},{31.6,66.8},{31.8,67.6},{33.2,64.6},{33.6,64.2},{33.6,64.8},{70.8,41.4},{70.8,46.8},{71,46.4},{71.2,40.2},{71.4,31.2},{71.4,32.2},{71.4,44},{71.4,44.6},{71.6,31.6},{71.6,43.8},{71.6,44.6},{71.8,31.4},{72,28.8},{72.2,28.4},{72.4,38.4},{72.4,38.6},{72.6,38},{72.6,38.6},{72.8,58.2},{74.4,58},{74.8,57.4},{74.8,58.4},{74.8,58.6},{75.2,61},{75.6,60.8},{76.2,60},{76.8,41.8},{77.2,41.4},{77.4,58.8},{77.6,58.8},{81.4,46},{81.8,45.8},{82.4,45},{86.8,46.6},{87,46.2},{89.2,47.4},{89.4,48},{89.4,48.6},{89.6,47.6},{89.6,48.8},}}},
         possbileBreeds={"B/B", "H/S", "S/B", "H/B"},
         baseStats={8, 7.5, 8.5},
+        acquisition={
+            {"Also available as a secondary pet."},
+        }
     }, 
     [752]={
         name="Yellow-Bellied Bullfrog",

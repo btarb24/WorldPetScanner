@@ -1,3 +1,5 @@
+local file="TaskFinder"
+
 local PETC = PetCollector
 local TASKFINDER = PETC.TASKFINDER
 local DISPLAY = PETC.DISPLAY
@@ -7,7 +9,6 @@ local UTILITIES = PETC.UTILITIES
 local ZONES = PETC.ZONES
 local DEBUG = PETC.DISPLAY.Debug
 
-local file="TaskFinder"
 local retryTimer
 
 local function UpdateItemTotals(task)

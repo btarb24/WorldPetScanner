@@ -1,4 +1,3 @@
----@class PetCollector
 local PETC = PetCollector
 local DISPLAY = PETC.DISPLAY
 

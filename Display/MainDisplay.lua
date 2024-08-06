@@ -1,4 +1,5 @@
----@class PetCollector
+local file="MainDisplay"
+
 local PETC = PetCollector
 local DISPLAY = PETC.DISPLAY
 local UTILITIES = PETC.UTILITIES

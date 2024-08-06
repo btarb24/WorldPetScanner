@@ -1,10 +1,32 @@
----@class PetCollector
+local file="TotalPets"
+
 local PETC = PetCollector
 local DISPLAY = PETC.DISPLAY
 
 local function UpdateCount()
-    local _, numOwned = C_PetJournal.GetNumPets()
-    PCTotalPets.content.petCount:SetText(numOwned)
+    -- master list of pets, either a petID ("BattlePet-0-etc") for owned pets, or a speciesID (42) for uncollected pets
+    local allPets = {}
+    -- indexed by speciesID, an ordered list of owned petIDs for the speciesID
+    local speciesPetIDs = {}
+    local uniqueOwnedCount = 0
+    local numPets = C_PetJournal.GetNumPets()
+
+    for i=1,numPets do
+        local petID, speciesID = C_PetJournal.GetPetInfoByIndex(i)
+        tinsert(allPets,petID or speciesID)
+        if not speciesPetIDs[speciesID] then
+            speciesPetIDs[speciesID] = {}
+        end
+
+        if petID then
+            if #speciesPetIDs[speciesID]==0 then
+                uniqueOwnedCount = uniqueOwnedCount + 1
+            end
+            tinsert(speciesPetIDs[speciesID],petID)
+        end
+    end
+
+    PCTotalPets.content.petCount:SetText(uniqueOwnedCount)
 end
 
 local function Event_OnEvent(self, event, name, ...)
@@ -38,8 +60,6 @@ local function CreateWindow()
             PCTotalPets:StopMovingOrSizing()
             PETC_States.totalPet_Bottom = PCTotalPets:GetBottom()
             PETC_States.totalPet_Left = PCTotalPets:GetLeft()
-            print("L:",PCTotalPets:GetLeft(), " B:", PCTotalPets:GetBottom() )
-
         end
     )
     
@@ -58,7 +78,6 @@ local function CreateWindow()
                 PETC_States.totalPet_Scale = scale
             end
         end
-        print (self:GetScale())
     end);
 
     f.content.bgGradientL = f.content:CreateTexture(nil, "BACKGROUND")

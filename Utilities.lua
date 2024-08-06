@@ -1,7 +1,7 @@
----@class PetCollector
+local file="Utilities"
+
 local PETC = PetCollector
 local UTILITIES = PETC.UTILITIES
-local CONTINENTS = PETC.CONTINENTS
 
 local GetTitleForQuestID = C_QuestLog.GetTitleForQuestID
 
@@ -167,11 +167,6 @@ function UTILITIES:SortTasks(a, b)
 	return a.challenge.zoneID < b.challenge.zoneID
 end
 
-function UTILITIES:SortRegionList(list)
-	table.sort(list, function(a, b) return UTILITIES:SortRegions(a, b) end)
-	return list
-end
-
 local function GetRarityMultiplier(quality)
     if (quality == 1) then --poor
         return 1
@@ -253,21 +248,6 @@ function UTILITIES:GetMaxStatsForBreed(breed, baseStats)
     local power = round((baseStats[2] + breedMultiplier[2]) * 25 * rarityMultiplier)
     local speed = round((baseStats[3] + breedMultiplier[3]) * 25 * rarityMultiplier)
     return {health, power, speed}
-end
-
-function UTILITIES:SortRegions(a, b)
-    aContinentInt = CONTINENTS:GetSortOrder(a.continent)
-    bContinentInt = CONTINENTS:GetSortOrder(b.continent)
-	if aContinentInt > bContinentInt then return true end
-	if aContinentInt < bContinentInt then return false end
-	if a.zone > b.zone then return true end
-	if a.zone < b.zone then return false end
-    
-    if (a.area == nil and b.area == nil) then return false end
-    if (a.area == nil) then return false end
-    if (b.area == nil) then return true end
-
-    return a.area < b.area
 end
 
 function UTILITIES:GroupTasks(list)
