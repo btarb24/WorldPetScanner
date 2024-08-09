@@ -23,9 +23,9 @@ namespace PetCollectorUtils.ParseFromWowHead
       var html = getHtml(pet.companionID);
       
       var breeds = getBreeds(pet, html);
-      if (AreBreedsUpdated(pet.possbileBreeds, breeds))
+      if (AreBreedsUpdated(pet.possibleBreeds, breeds))
       {
-        pet.possbileBreeds = breeds;
+        pet.possibleBreeds = breeds;
       }
 
       if (pet.locations == null && pet.acquisition == null)

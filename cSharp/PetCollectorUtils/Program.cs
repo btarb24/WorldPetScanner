@@ -56,6 +56,7 @@ namespace PetCollectorUtils
       new CsvParser().ParseCsvData(ref petsBySpeciesId);
       new WowHeadParser().Parse(ref petsBySpeciesId);
 
+      RemoveBreedless(ref petsBySpeciesId);
       ApplyDefaultBaseStats(ref petsBySpeciesId);
 
       var petsStr = SerializePets(petsBySpeciesId.Values);
@@ -76,6 +77,22 @@ namespace PetCollectorUtils
       sb.Append("}");
 
       return sb.ToString();
+    }
+
+    static void RemoveBreedless(ref Dictionary<int, Pet> petsBySpeciesId)
+    {
+      var toRemove = new List<int>();
+      foreach (var pet in petsBySpeciesId.Values)
+      {
+        if (!pet.isPassive && (pet.possibleBreeds == null || pet.possibleBreeds.Count == 0))
+        {
+          toRemove.Add(pet.speciesID);
+          Console.WriteLine($"Removing {pet.speciesID}:{pet.name} due to no breeds");
+        }
+      }
+
+      foreach (var id in toRemove)
+        petsBySpeciesId.Remove(id);
     }
 
     static void ApplyDefaultBaseStats(ref Dictionary<int, Pet> petsBySpeciesId)

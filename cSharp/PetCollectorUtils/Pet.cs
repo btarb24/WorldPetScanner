@@ -42,7 +42,7 @@ namespace PetCollectorUtils
     public bool intermittent;
     public bool unobtainable;
     public double chance;
-    public List<string> possbileBreeds;
+    public List<string> possibleBreeds;
     public List<double> baseStats = new List<double> { -1, -1, -1 };
     public int soundID_key;
     public int npcSoundID_key;
@@ -134,7 +134,7 @@ namespace PetCollectorUtils
             locations = Location.Parse((LuaTable)value);
             break;
           case "possibleBreeds":
-            possbileBreeds.AddRange(ParseBreeds((LuaTable)value));
+            possibleBreeds.AddRange(ParseBreeds((LuaTable)value));
             break;
           case "baseStats":
             baseStats.AddRange(ProcessBaseStats((LuaTable)value));
@@ -198,9 +198,9 @@ namespace PetCollectorUtils
       if (!string.IsNullOrEmpty(achievement)) sb.AppendLine($"        achievement={achievement},");
       if (!string.IsNullOrEmpty(professionDetail)) sb.AppendLine($"        professionDetail={professionDetail},");
 
-      if (possbileBreeds != null && possbileBreeds.Count > 0)
+      if (possibleBreeds != null && possibleBreeds.Count > 0)
       {
-        sb.AppendLine($"        possbileBreeds={SerializeStringArray(possbileBreeds.ToArray())},");
+        sb.AppendLine($"        possibleBreeds={SerializeStringArray(possibleBreeds.ToArray())},");
       }
       sb.AppendLine($"        baseStats={{{string.Join(", ", baseStats)}}},");
 

@@ -92,7 +92,6 @@ local function Event_OnEvent(self, event, arg1, arg2, ...)
         previouslyMounted = IsMounted()
 	elseif event == "ZONE_CHANGED" then
         local newZone = C_Map.GetBestMapForUnit("player")
-        print(newZone)
         if (trigger == "zone" and priorZone ~= newZone) then
             SummonRandomPet()
         end

@@ -7,6 +7,113 @@ local UTILITIES = PETC.UTILITIES
 local PETS = PETC.PETS
 local MAPS = PETC.MAPS
 
+local function getFamilyDetails(family)
+    if family == 1 then 
+        return "Humanoid", "humanoid", 8/256, 138/256, 222/256
+    elseif family == 2 then 
+        return "Dragonkin", "dragon", 34/256, 165/256, 24/256
+    elseif family == 3 then 
+        return "Flying", "flying", 214/256, 199/256, 74/256
+    elseif family == 4 then 
+        return "Undead", "undead", 164/256, 109/256, 115/256
+    elseif family == 5 then 
+        return "Critter", "critter", 140/256, 101/256, 74/256
+    elseif family == 6 then 
+        return "Magical", "magical", 156/256, 105/256, 255/256
+    elseif family == 7 then 
+        return "Elemental", "elemental", 247/256, 105/256, 0/256
+    elseif family == 8 then 
+        return "Beast", "beast", 193/256, 36/256, 33/256
+    elseif family == 9 then 
+        return "Aquatic", "water", 8/256, 170/256, 181/256
+    elseif family == 10 then 
+        return "Mechanical", "mechanical", 132/256, 125/256, 115/256
+    end
+end
+
+local function getCreatureSoundDetails(creatureSound)
+    local nameId, soundId = strsplit("_", creatureSound)
+    nameId = tonumber(nameId)
+
+    if (nameId == 1) then
+        return "Exertion", soundId
+    elseif (nameId == 2) then
+        return "Exterion critical", soundId
+    elseif (nameId == 3) then
+        return "Injury", soundId
+    elseif (nameId == 4) then
+        return "Injury critical", soundId
+    elseif (nameId == 5) then
+        return "Injury crushing blow", soundId
+    elseif (nameId == 6) then
+        return "Death", soundId
+    elseif (nameId == 7) then
+        return "Stun", soundId
+    elseif (nameId == 8) then
+        return "Stand", soundId
+    elseif (nameId == 9) then
+        return "Footstep", soundId
+    elseif (nameId == 10) then
+        return "Aggro", soundId
+    elseif (nameId == 11) then
+        return "Wing flap", soundId
+    elseif (nameId == 12) then
+        return "Wing glide", soundId
+    elseif (nameId == 13) then
+        return "Alert", soundId
+    elseif (nameId == 14) then
+        return "Jump (start)", soundId
+    elseif (nameId == 15) then
+        return "Jump (end)", soundId
+    elseif (nameId == 16) then
+        return "Attack", soundId
+    elseif (nameId == 17) then
+        return "Order", soundId
+    elseif (nameId == 18) then
+        return "Dismiss", soundId
+    elseif (nameId == 19) then
+        return "Loop", soundId
+    elseif (nameId == 20) then
+        return "Birth", soundId
+    elseif (nameId == 21) then
+        return "Spell cast directed", soundId
+    elseif (nameId == 22) then
+        return "Submerge", soundId
+    elseif (nameId == 23) then
+        return "Submerged", soundId
+    elseif (nameId == 24) then
+        return "Windup", soundId
+    elseif (nameId == 25) then
+        return "Windup critical", soundId
+    elseif (nameId == 26) then
+        return "Charge", soundId
+    elseif (nameId == 27) then
+        return "Charge critical", soundId
+    elseif (nameId == 28) then
+        return "Battle shout", soundId
+    elseif (nameId == 29) then
+        return "Taunt", soundId
+    elseif (nameId == 30) then
+        return "Fidget", soundId
+    elseif (nameId == 31) then
+        return "Fidget 2", soundId
+    elseif (nameId == 32) then
+        return "Fidget 3", soundId
+    elseif (nameId == 33) then
+        return "Fidget 4", soundId
+    elseif (nameId == 34) then
+        return "Fidget 5", soundId
+    elseif (nameId == 35) then
+        return "Custom attack", soundId
+    elseif (nameId == 36) then
+        return "Custom attack 2", soundId
+    elseif (nameId == 37) then
+        return "Custom attack 3", soundId
+    elseif (nameId == 38) then
+        return "Custom attack 4", soundId
+    end
+end
+
 local function Tab_OnClick(self)
     PanelTemplates_SetTab(self:GetParent(), self:GetID())
     if (self:GetParent().content) then
@@ -588,6 +695,7 @@ end
 local function CreateWindow()
     DISPLAY.PetCard.winWidth = 400;
 
+   --window
     local f = CreateFrame("Frame", "PAPetCard", UIParent, "UIPanelDialogTemplate", "TitleDragAreaTemplate")
     f.pools = {}
     f:SetResizable(true)
@@ -670,7 +778,7 @@ local function CreateWindow()
     end)
 
     --SpellBook-SkillLineTab
-    PAPetCard.numTabs = 2
+    PAPetCard.numTabs = 3
     local tab1 = CreateTab(1, "Pet Info")
     f.tab1 = tab1
     tab1:SetPoint("TOPRIGHT", PAPetCardTopLeft, "TOPLEFT", 4, -45)
@@ -681,6 +789,12 @@ local function CreateWindow()
     tab2:SetPoint("TOPRIGHT", tab1, "BOTTOMRIGHT", 0, -10)
     tab2:SetPoint("TOPLEFT", tab1, "BOTTOMRIGHT", -32, -10)
 
+    local tab3 = CreateTab(3, "Sounds")
+    f.tab3 = tab3
+    tab3:SetPoint("TOPRIGHT", tab2, "BOTTOMRIGHT", 0, -10)
+    tab3:SetPoint("TOPLEFT", tab2, "BOTTOMRIGHT", -32, -10)
+
+   --tab1
     tab1.content.modelFrame = CreateFrame("FRAME", nil, tab1.content, "InsetFrameTemplate4")
     tab1.content.modelFrame:SetPoint("TOP", tab1.content, "TOP", 0, -25)
     tab1.content.modelFrame:SetPoint("LEFT", tab1.content, "LEFT", 30, 0)
@@ -781,7 +895,7 @@ local function CreateWindow()
     tab1.content.unobtainable:SetTextColor(.7, .4, .4)
 
     tab1.content.flavor = tab1.content:CreateFontString(nil, "ARTWORK", "NumberFont_Outline_Huge")
-    tab1.content.flavor:SetPoint("TOPLEFT", tab1.content.modelFrame, "BOTTOMLEFT", 0, -20)
+    tab1.content.flavor:SetPoint("TOPLEFT", tab1.content.modelFrame, "BOTTOMLEFT", 0, -15)
     tab1.content.flavor:SetPoint("RIGHT", tab1.content.modelFrame, "RIGHT")
     local fontFile, fontHeight, fontFlags = tab1.content.flavor:GetFont()
     tab1.content.flavor:SetFont(fontFile, 15, nil)
@@ -791,7 +905,7 @@ local function CreateWindow()
 
     tab1.content.flavorbg = tab1.content:CreateTexture(nil, "BACKGROUND")
     tab1.content.flavorbg:SetAtlas("bonusobjectives-title-bg")
-   -- tab1.content.flavorbg:SetDesaturated(true)
+    -- tab1.content.flavorbg:SetDesaturated(true)
     tab1.content.flavorbg:SetPoint("TOPLEFT", tab1.content.flavor, "TOPLEFT", -10, 10)
     tab1.content.flavorbg:SetPoint("BOTTOMRIGHT", tab1.content.flavor, "BOTTOMRIGHT", 10, -15)
 
@@ -818,17 +932,17 @@ local function CreateWindow()
 
 
     tab1.content.tradable = tab1.content:CreateFontString(nil, "ARTWORK", "GameFontNormal")
-    tab1.content.tradable:SetText("Tradable")
-    tab1.content.tradable:SetPoint("TOPRIGHT", tab1.content.flavorbg, "BOTTOMRIGHT", -10, -5)
+    tab1.content.tradable:SetText("Tradable ")
+    tab1.content.tradable:SetPoint("TOPRIGHT", tab1.content.flavorbg, "BOTTOMRIGHT", -20, -5)
     tab1.content.tradable:SetAlpha(.5)
-    tab1.content.tradableCheck = CreateFrame("Button", nil, tab1.content)
-    tab1.content.tradableCheck:SetNormalAtlas("auctionhouse-icon-checkmark")
+    tab1.content.tradableCheck = tab1.content:CreateTexture(nil, "ARTWORK")
+    tab1.content.tradableCheck:SetAtlas("auctionhouse-icon-checkmark")
     tab1.content.tradableCheck:SetSize(16,16)
-    tab1.content.tradableCheck:SetPoint("TOPLEFT", tab1.content.tradable, "TOPRIGHT", 2, 3);
+    tab1.content.tradableCheck:SetPoint("TOPLEFT", tab1.content.tradable, "TOPRIGHT", 3, 3);
     tab1.content.tradableLine = tab1.content:CreateLine(nil, "OVERLAY", nil, 7)
     tab1.content.tradableLine:SetColorTexture(.6, .4, .4, .7)
     tab1.content.tradableLine:SetStartPoint("TOPLEFT", tab1.content.tradable, -5, -6)
-    tab1.content.tradableLine:SetEndPoint("TOPRIGHT", tab1.content.tradable, 5, -6)
+    tab1.content.tradableLine:SetEndPoint("TOPRIGHT", tab1.content.tradable, 2, -6)
     tab1.content.tradableLine:SetThickness(1)
     
     tab1.content.collectedLbl = tab1.content:CreateFontString(nil, "ARTWORK", "GameFontNormal")
@@ -852,8 +966,78 @@ local function CreateWindow()
     tab1.content.collected3 = tab1.content:CreateFontString(nil, "ARTWORK", "GameFontHighlight")
     tab1.content.collected3:SetPoint("TOPLEFT", tab1.content.collected2, "TOPRIGHT", 10,0)
 
+    tab1.content.variantsLbl = tab1.content:CreateFontString(nil, "ARTWORK", "GameFontNormal")
+    tab1.content.variantsLbl:SetPoint("TOPLEFT", tab1.content.collectedLbl, "BOTTOMLEFT", 0, -7)
+    tab1.content.variantsLbl:SetText("Variants:  ")
+    
+    local variantEnter = function(self)
+        if (PAPetCard.selectedVariant ~= self.index) then
+            self:SetAlpha(1)
+            self:SetShadowColor(1,1,1, .4)
+        end
+    end
+    local variantLeave = function(self)
+        if (PAPetCard.selectedVariant ~= self.index) then
+            self:SetAlpha(.7)
+        end
+        self:SetShadowColor(0,0,0, 0)
+    end
+    local variantClick = function(self)
+        if (PAPetCard.selectedVariant == self.index) then
+            return
+        end
+
+        local actor = PAPetCardTab1.content.model:GetActorByTag("unwrapped")
+        if actor then
+            actor:SetModelByCreatureDisplayID(PAPetCard.pet.displayIDs[self.index])
+        end
+
+        PAPetCard.selectedVariant = self.index
+        PAPetCardTab1.content.variant1:SetAlpha(.7)
+        PAPetCardTab1.content.variant2:SetAlpha(.7)
+        PAPetCardTab1.content.variant3:SetAlpha(.7)
+        PAPetCardTab1.content.variant4:SetAlpha(.7)
+        self:SetShadowColor(0,0,0, 0)
+        self:SetAlpha(1)
+    end
+    tab1.content.variant1 = tab1.content:CreateFontString(nil, "ARTWORK", "GameFontHighlight")
+    tab1.content.variant1:SetPoint("TOPLEFT", tab1.content.variantsLbl, "TOPRIGHT")
+    tab1.content.variant1:SetText("A")
+    tab1.content.variant1.index = 1
+    tab1.content.variant1:SetScript("OnEnter", variantEnter)
+    tab1.content.variant1:SetScript("OnLeave", variantLeave)
+    tab1.content.variant1:SetScript("OnMouseDown", variantClick)
+    tab1.content.variant2 = tab1.content:CreateFontString(nil, "ARTWORK", "GameFontHighlight")
+    tab1.content.variant2:SetPoint("TOPLEFT", tab1.content.variant1, "TOPRIGHT", 10,0)
+    tab1.content.variant2:SetText("B")
+    tab1.content.variant2.index = 2
+    tab1.content.variant2:SetScript("OnEnter", variantEnter)
+    tab1.content.variant2:SetScript("OnLeave", variantLeave)
+    tab1.content.variant2:SetScript("OnMouseDown", variantClick)
+    tab1.content.variant3 = tab1.content:CreateFontString(nil, "ARTWORK", "GameFontHighlight")
+    tab1.content.variant3:SetPoint("TOPLEFT", tab1.content.variant2, "TOPRIGHT", 10,0)
+    tab1.content.variant3:SetText("C")
+    tab1.content.variant3.index = 3
+    tab1.content.variant3:SetScript("OnEnter", variantEnter)
+    tab1.content.variant3:SetScript("OnLeave", variantLeave)
+    tab1.content.variant3:SetScript("OnMouseDown", variantClick)
+    tab1.content.variant4 = tab1.content:CreateFontString(nil, "ARTWORK", "GameFontHighlight")
+    tab1.content.variant4:SetPoint("TOPLEFT", tab1.content.variant3, "TOPRIGHT", 10,0)
+    tab1.content.variant4:SetText("D")
+    tab1.content.variant4.index = 4
+    tab1.content.variant4:SetScript("OnEnter", variantEnter)
+    tab1.content.variant4:SetScript("OnLeave", variantLeave)
+    tab1.content.variant4:SetScript("OnMouseDown", variantClick)
+    
+    tab1.content.familyLbl = tab1.content:CreateFontString(nil, "ARTWORK", "GameFontNormal")
+    tab1.content.familyLbl:SetPoint("TOPRIGHT", tab1.content.tradable, "BOTTOMRIGHT", -4, -7)
+    tab1.content.familyIcon = tab1.content:CreateTexture(nil, "ARTWORK")
+    tab1.content.familyIcon:SetTexCoord(.1, .9, .1, .9)
+    tab1.content.familyIcon:SetSize(18,18)
+    tab1.content.familyIcon:SetPoint("TOPLEFT", tab1.content.familyLbl, "TOPRIGHT", 6, 3);
+
     tab1.content.possibleBreedsLbl = tab1.content:CreateFontString(nil, "ARTWORK", "GameFontNormal")
-    tab1.content.possibleBreedsLbl:SetPoint("TOPLEFT", tab1.content.collectedLbl, "BOTTOMLEFT", 0, -25)
+    tab1.content.possibleBreedsLbl:SetPoint("TOPLEFT", tab1.content.variantsLbl, "BOTTOMLEFT", 0, -20)
     tab1.content.possibleBreedsLbl:SetText("Possible Breeds")
     tab1.content.possibleBreedsLbl:SetWidth(180)
     tab1.content.possibleBreedsLbl:SetJustifyH("CENTER")
@@ -943,6 +1127,7 @@ local function CreateWindow()
     tab1.content.ability6Border:SetPoint("TOPLEFT", tab1.content.abilitiesCol3, "TOPLEFT", 8, -57)
     tab1.content.ability6Border:SetSize(41,40)
 
+   --tab2
     tab2.content.mapLbl = tab2.content:CreateFontString(nil, "ARTWORK", "GameFontHighlight")
     tab2.content.mapLbl:SetPoint("TOP", tab2.content, "TOP", 0, -10)
     tab2.content.mapLbl:SetPoint("CENTER", tab2.content)
@@ -1036,6 +1221,8 @@ local function CreateWindow()
     tab2.content.scrollFrame.child:SetScript("OnHyperlinkEnter", hyperlinkEnter)
     tab2.content.scrollFrame.child:SetScript("OnHyperlinkLeave", GameTooltip_HideResetCursor)
     tab2.content.scrollFrame.child:SetScript("OnHyperlinkClick", hyperlinkClick)
+
+   --tab3
 end
 
 local function UpdateWindow(pet, locationIdx)
@@ -1063,9 +1250,12 @@ local function UpdateWindow(pet, locationIdx)
         f.tab1.content.flavorbgColor:SetPoint("BOTTOM", f.tab1.content.flavorbg, "BOTTOM",0, 8)
     elseif (f.tab1.content.flavor:GetHeight() <= 50) then  --3lines (40)
         f.tab1.content.flavorbgColor:SetPoint("BOTTOM", f.tab1.content.flavorbg, "BOTTOM",0, 10)
-    else --4+lines (4288)
+    elseif (f.tab1.content.flavor:GetHeight() <= 60) then  --4+lines (id=4288)
         f.tab1.content.flavorbgColor:SetPoint("BOTTOM", f.tab1.content.flavorbg, "BOTTOM",0, 12)
+    else --5+lines (id=1639)
+        f.tab1.content.flavorbgColor:SetPoint("BOTTOM", f.tab1.content.flavorbg, "BOTTOM",0, 14)
     end
+    
   --tradable
     if (pet.isTradable == true) then
         f.tab1.content.tradable:SetAlpha(1)
@@ -1079,11 +1269,13 @@ local function UpdateWindow(pet, locationIdx)
   
   --model
     local sceneID = C_PetJournal.GetPetModelSceneInfoBySpeciesID(pet.speciesID)
-    f.tab1.content.model:TransitionToModelSceneID(sceneID)
+    if (sceneID) then
+        f.tab1.content.model:TransitionToModelSceneID(sceneID)
+    end
 
     local actor = f.tab1.content.model:GetActorByTag("unwrapped")
     if actor then
-        actor:SetModelByCreatureDisplayID(pet.displayID)
+        actor:SetModelByCreatureDisplayID(pet.displayIDs[1])
     end
 
     f.tab1.content.model.activeCamera:SetMaxZoomDistance(50)
@@ -1127,10 +1319,30 @@ local function UpdateWindow(pet, locationIdx)
         f.tab1.content.collected1:Hide()
     end
 
-  --posible breeds
+  --variants
+    f.selectedVariant = 1
+    f.tab1.content.variant2:Hide();
+    f.tab1.content.variant3:Hide();
+    f.tab1.content.variant4:Hide();
+    f.tab1.content.variant1:SetAlpha(1)
+    f.tab1.content.variant2:SetAlpha(.7)
+    f.tab1.content.variant3:SetAlpha(.7)
+    f.tab1.content.variant4:SetAlpha(.7)
+    local variantCount = UTILITIES:Count(pet.displayIDs)
+    if variantCount >= 2 then f.tab1.content.variant2:Show(); end
+    if variantCount >= 3 then f.tab1.content.variant3:Show(); end
+    if variantCount >= 4 then f.tab1.content.variant4:Show(); end
+    
+  --family
+    local famName, famIcon, famR, famG, famB = getFamilyDetails(pet.family)
+    f.tab1.content.familyLbl:SetText(famName)
+    f.tab1.content.familyLbl:SetTextColor(famR, famG, famB)
+    f.tab1.content.familyIcon:SetTexture("interface\\icons\\Icon_petfamily_" .. famIcon)
+
+  --possible breeds
     local statsForAbilities
-    if (pet.possbileBreeds) then
-        for breedIdx, breed in pairs(pet.possbileBreeds) do
+    if (pet.possibleBreeds) then
+        for breedIdx, breed in pairs(pet.possibleBreeds) do
             local breedFrame = DISPLAY_UTIL:AcquireListItemFrame(PAPetCard, f.tab1.content, true, breedIdx == 1)
             breedFrame:SetFrameStrata("DIALOG")
             breedFrame:SetPoint("LEFT", f.tab1.content.possibleBreedsLbl, "LEFT", 2, 0)
@@ -1178,12 +1390,14 @@ local function UpdateWindow(pet, locationIdx)
         f.tab1.content.cannotBattleLbl:Hide()
         f.tab1.content.abilitiesFrame:Show()
         local abilities = C_PetJournal.GetPetAbilityListTable(pet.speciesID)
-        UpdateAbility(f.tab1.content.ability1, abilities[1].abilityID, pet.petType)
-        UpdateAbility(f.tab1.content.ability2, abilities[2].abilityID, pet.petType)
-        UpdateAbility(f.tab1.content.ability3, abilities[3].abilityID, pet.petType)
-        UpdateAbility(f.tab1.content.ability4, abilities[4].abilityID, pet.petType)
-        UpdateAbility(f.tab1.content.ability5, abilities[5].abilityID, pet.petType)
-        UpdateAbility(f.tab1.content.ability6, abilities[6].abilityID, pet.petType)
+        if (abilities) then
+            UpdateAbility(f.tab1.content.ability1, abilities[1].abilityID, pet.petType)
+            UpdateAbility(f.tab1.content.ability2, abilities[2].abilityID, pet.petType)
+            UpdateAbility(f.tab1.content.ability3, abilities[3].abilityID, pet.petType)
+            UpdateAbility(f.tab1.content.ability4, abilities[4].abilityID, pet.petType)
+            UpdateAbility(f.tab1.content.ability5, abilities[5].abilityID, pet.petType)
+            UpdateAbility(f.tab1.content.ability6, abilities[6].abilityID, pet.petType)
+        end
     else
         f.tab1.content.cannotBattleLbl:Show()
         f.tab1.content.abilitiesFrame:Hide()
@@ -1446,7 +1660,11 @@ local function UpdateWindow(pet, locationIdx)
     local lineFrame = DISPLAY_UTIL:AcquireFrame(PAPetCard, f.tab2.content.scrollFrame.child)
     lineFrame:SetPoint("LEFT", f.tab2.content.scrollFrame.child, "LEFT", 5,0)
     lineFrame:SetPoint("RIGHT", f.tab2.content.scrollFrame.child, "RIGHT", -5,0)
-    lineFrame:SetPoint("TOP", priorBottom, "BOTTOM", 0, -13)
+    if (priorBottom) then
+        lineFrame:SetPoint("TOP", priorBottom, "BOTTOM", 0, -13)
+    else
+        lineFrame:SetPoint("TOP", f.tab2.content.scrollFrame.child, "TOP", 0, -13)
+    end
     lineFrame:SetHeight(1)
 
     local line = lineFrame:CreateLine()
@@ -1460,7 +1678,7 @@ local function UpdateWindow(pet, locationIdx)
     externalLinksLbl:SetPoint("TOP", line, "BOTTOM", 0, -10)
     externalLinksLbl:SetPoint("LEFT", f.tab2.content.scrollFrame.child, "LEFT")
     externalLinksLbl:SetText("External links:")
-    local wowhead = DISPLAY_UTIL:AcquireMultiValueFont(PAPetCard, f.tab2.content.scrollFrame.child)    
+    local wowhead = DISPLAY_UTIL:AcquireMultiValueFont(PAPetCard, f.tab2.content.scrollFrame.child)
     wowhead:SetPoint("TOPLEFT", externalLinksLbl, "TOPRIGHT", 10, 0)
     wowhead:SetText("|Hwh|hWowHead|h")
     wowhead:SetScript("OnMouseDown",
@@ -1492,6 +1710,33 @@ local function UpdateWindow(pet, locationIdx)
     
     PAPetCard.pet = pet;
     PAPetCard:Show()
+
+ --TAB 3
+    local soundLinkClick = function(self)
+        PlaySound(self.soundId)
+    end
+    local soundNum = 0
+    if (not UTILITIES:IsEmpty(pet.npcSounds)) then
+        for npcSoundIndex, npcSoundId in pairs(pet.npcSounds) do
+            local soundLink = DISPLAY_UTIL:AcquireMultiValueFont(PAPetCard, f.tab3.content)
+            soundLink:SetPoint("TOPLEFT", f.tab3.content, "TOPLEFT", 30, -20 - soundNum*24)
+            soundLink:SetText("NPC ".. npcSoundIndex)
+            soundLink.soundId = npcSoundId
+            soundLink:SetScript("OnMouseDown", soundLinkClick)
+            soundNum = soundNum +1
+        end
+    end
+    if (not UTILITIES:IsEmpty(pet.creatureSounds)) then
+        for creatureSoundIndex, creatureSound in pairs(pet.creatureSounds) do
+            local soundName, soundId = getCreatureSoundDetails(creatureSound)
+            local soundLink = DISPLAY_UTIL:AcquireMultiValueFont(PAPetCard, f.tab3.content)
+            soundLink:SetPoint("TOPLEFT", f.tab3.content, "TOPLEFT", 30, -20 - soundNum*24)
+            soundLink:SetText(soundName)
+            soundLink.soundId = soundId
+            soundLink:SetScript("OnMouseDown", soundLinkClick)
+            soundNum = soundNum +1
+        end
+    end
 end
 
 local function PrefetchItemInfo(itemIDStr)
@@ -1526,7 +1771,7 @@ local function PrefetchInfo(infoStr)
     elseif (type == "i") then
         return PrefetchItemInfo(infoStr)
     else
-        return false
+        return
     end
 end
 

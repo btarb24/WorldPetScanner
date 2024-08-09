@@ -29,7 +29,7 @@ namespace PetCollectorUtils.LUA
     const string flavor           = "        flavor=";
     const string icon             = "        icon=";
     const string characterClass   = "        characterClass=";
-    const string possbileBreeds   = "        possbileBreeds=";
+    const string possibleBreeds   = "        possibleBreeds=";
     const string baseStats        = "        baseStats=";
     const string chance           = "        chance=";
     const string feature          = "        feature=";
@@ -134,9 +134,9 @@ namespace PetCollectorUtils.LUA
         {
           currentPet.icon = GetSimpleString(line);
         }
-        else if (line.StartsWith(possbileBreeds))
+        else if (line.StartsWith(possibleBreeds))
         {
-          currentPet.possbileBreeds= GetStringList(line);
+          currentPet.possibleBreeds= GetStringList(line);
         }
         else if (line.StartsWith(baseStats))
         {
