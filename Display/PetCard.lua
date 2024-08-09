@@ -619,18 +619,18 @@ local function CreateWindow()
     f.Title:SetPoint("TOP", 0, -9)
     f.Title:SetPoint("CENTER")
 
-    f.NextPet = CreateFrame("BUTTON", nil, f.TitleArea)
-    f.NextPet:SetNormalAtlas("perks-nextbutton")
-    f.NextPet:SetPushedAtlas("perks-nextbutton-down")
-    -- f.NextPet:SetHighlightAtlas("chatframe-button-up")
-    f.NextPet:SetHighlightAtlas("hud-microbutton-highlight")
-    f.NextPet:SetPoint("TOPLEFT", f.Title, "TOPRIGHT", 10, 5)
-    f.NextPet:SetSize(24,22)
-    f.NextPet:SetScript("OnClick", function(self)
-        if PAPetCard.pet.speciesID == PETS.highest then
-            DISPLAY.PetCard:Show(PETS.all[PETS.lowest])
+
+    f.PrevPet = CreateFrame("BUTTON", nil, f.TitleArea)
+    f.PrevPet:SetNormalAtlas("perks-backbutton")
+    f.PrevPet:SetPushedAtlas("perks-backbutton-down")
+    f.PrevPet:SetHighlightAtlas("hud-microbutton-highlight")
+    f.PrevPet:SetPoint("TOPLEFT", f.TitleArea, "TOPLEFT", 10, -4)
+    f.PrevPet:SetSize(24,22)
+    f.PrevPet:SetScript("OnClick", function(self)
+        if PAPetCard.pet.speciesID == PETS.lowest then
+            DISPLAY.PetCard:Show(PETS.all[PETS.highest])
         else
-            for idx = PAPetCard.pet.speciesID+1, PETS.highest, 1 do
+            for idx = PAPetCard.pet.speciesID-1, PETS.lowest, -1 do
                 if (PETS.all[idx]) then
                     DISPLAY.PetCard:Show(PETS.all[idx])
                     return;
@@ -639,17 +639,18 @@ local function CreateWindow()
         end
     end)
 
-    f.PrevPet = CreateFrame("BUTTON", nil, f.TitleArea)
-    f.PrevPet:SetNormalAtlas("perks-backbutton")
-    f.PrevPet:SetPushedAtlas("perks-backbutton-down")
-    f.PrevPet:SetHighlightAtlas("hud-microbutton-highlight")
-    f.PrevPet:SetPoint("TOPRIGHT", f.Title, "TOPLEFT", -10, 5)
-    f.PrevPet:SetSize(24,22)
-    f.PrevPet:SetScript("OnClick", function(self)
-        if PAPetCard.pet.speciesID == PETS.lowest then
-            DISPLAY.PetCard:Show(PETS.all[PETS.highest])
+    f.NextPet = CreateFrame("BUTTON", nil, f.TitleArea)
+    f.NextPet:SetNormalAtlas("perks-nextbutton")
+    f.NextPet:SetPushedAtlas("perks-nextbutton-down")
+    -- f.NextPet:SetHighlightAtlas("chatframe-button-up")
+    f.NextPet:SetHighlightAtlas("hud-microbutton-highlight")
+    f.NextPet:SetPoint("TOPLEFT", f.PrevPet, "TOPRIGHT", 2, 0)
+    f.NextPet:SetSize(24,22)
+    f.NextPet:SetScript("OnClick", function(self)
+        if PAPetCard.pet.speciesID == PETS.highest then
+            DISPLAY.PetCard:Show(PETS.all[PETS.lowest])
         else
-            for idx = PAPetCard.pet.speciesID-1, PETS.lowest, -1 do
+            for idx = PAPetCard.pet.speciesID+1, PETS.highest, 1 do
                 if (PETS.all[idx]) then
                     DISPLAY.PetCard:Show(PETS.all[idx])
                     return;
@@ -816,19 +817,19 @@ local function CreateWindow()
     tab1.content.flavorbgColorR:SetPoint("RIGHT", tab1.content, "RIGHT", -20, 0)
 
 
-    tab1.content.tradeable = tab1.content:CreateFontString(nil, "ARTWORK", "GameFontNormal")
-    tab1.content.tradeable:SetText("Tradeable")
-    tab1.content.tradeable:SetPoint("TOPRIGHT", tab1.content.flavorbg, "BOTTOMRIGHT", -10, -5)
-    tab1.content.tradeable:SetAlpha(.5)
-    tab1.content.tradeableCheck = CreateFrame("Button", nil, tab1.content)
-    tab1.content.tradeableCheck:SetNormalAtlas("auctionhouse-icon-checkmark")
-    tab1.content.tradeableCheck:SetSize(16,16)
-    tab1.content.tradeableCheck:SetPoint("TOPLEFT", tab1.content.tradeable, "TOPRIGHT", 2, 3);
-    tab1.content.tradeableLine = tab1.content:CreateLine(nil, "OVERLAY", nil, 7)
-    tab1.content.tradeableLine:SetColorTexture(.6, .4, .4, .7)
-    tab1.content.tradeableLine:SetStartPoint("TOPLEFT", tab1.content.tradeable, -5, -6)
-    tab1.content.tradeableLine:SetEndPoint("TOPRIGHT", tab1.content.tradeable, 5, -6)
-    tab1.content.tradeableLine:SetThickness(1)
+    tab1.content.tradable = tab1.content:CreateFontString(nil, "ARTWORK", "GameFontNormal")
+    tab1.content.tradable:SetText("Tradable")
+    tab1.content.tradable:SetPoint("TOPRIGHT", tab1.content.flavorbg, "BOTTOMRIGHT", -10, -5)
+    tab1.content.tradable:SetAlpha(.5)
+    tab1.content.tradableCheck = CreateFrame("Button", nil, tab1.content)
+    tab1.content.tradableCheck:SetNormalAtlas("auctionhouse-icon-checkmark")
+    tab1.content.tradableCheck:SetSize(16,16)
+    tab1.content.tradableCheck:SetPoint("TOPLEFT", tab1.content.tradable, "TOPRIGHT", 2, 3);
+    tab1.content.tradableLine = tab1.content:CreateLine(nil, "OVERLAY", nil, 7)
+    tab1.content.tradableLine:SetColorTexture(.6, .4, .4, .7)
+    tab1.content.tradableLine:SetStartPoint("TOPLEFT", tab1.content.tradable, -5, -6)
+    tab1.content.tradableLine:SetEndPoint("TOPRIGHT", tab1.content.tradable, 5, -6)
+    tab1.content.tradableLine:SetThickness(1)
     
     tab1.content.collectedLbl = tab1.content:CreateFontString(nil, "ARTWORK", "GameFontNormal")
     tab1.content.collectedLbl:SetPoint("TOPLEFT", tab1.content.flavorbg, "BOTTOMLEFT", 0, -5)
@@ -1065,15 +1066,15 @@ local function UpdateWindow(pet, locationIdx)
     else --4+lines (4288)
         f.tab1.content.flavorbgColor:SetPoint("BOTTOM", f.tab1.content.flavorbg, "BOTTOM",0, 12)
     end
-  --tradeable
-    if (pet.isTradeable == true) then
-        f.tab1.content.tradeable:SetAlpha(1)
-        f.tab1.content.tradeableLine:Hide()
-        f.tab1.content.tradeableCheck:Show()
+  --tradable
+    if (pet.isTradable == true) then
+        f.tab1.content.tradable:SetAlpha(1)
+        f.tab1.content.tradableLine:Hide()
+        f.tab1.content.tradableCheck:Show()
     else
-        f.tab1.content.tradeable:SetAlpha(.4)
-        f.tab1.content.tradeableLine:Show()
-        f.tab1.content.tradeableCheck:Hide()
+        f.tab1.content.tradable:SetAlpha(.4)
+        f.tab1.content.tradableLine:Show()
+        f.tab1.content.tradableCheck:Hide()
     end
   
   --model

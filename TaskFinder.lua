@@ -297,7 +297,7 @@ local function PerformRetry(mode)
             end
 
             if (tradingPostPet.confirmedPet) then
-                local name, icon, petType, creatureID, sourceText, description, isWild, canBattle, tradeable, unique, obtainable, displayID, speciesID = C_PetJournal.GetPetInfoByItemID(tradingPostPet.itemID)
+                local name, icon, petType, creatureID, sourceText, description, isWild, canBattle, tradable, unique, obtainable, displayID, speciesID = C_PetJournal.GetPetInfoByItemID(tradingPostPet.itemID)
                 if speciesID then
                     tradingPostPet.speciesID = speciesID
                     tradingPostPet.name = name
@@ -382,7 +382,7 @@ local function GetTradingPostPets(mode)
                 pet = PETS.all[itemData.speciesID]
             }
             
-            local speciesName, speciesIcon, petType, companionID, tooltipSource, flavor, isWild, canBattle, isTradeable, isUnique, obtainable, creatureDisplayID = C_PetJournal.GetPetInfoBySpeciesID(itemData.speciesID)
+            local speciesName, speciesIcon, petType, companionID, tooltipSource, flavor, isWild, canBattle, isTradable, isUnique, obtainable, creatureDisplayID = C_PetJournal.GetPetInfoBySpeciesID(itemData.speciesID)
             tradingPostPet.name = speciesName
             DEBUG:AddLine(file, method, "speciesID: ", itemData.speciesID, " name: ", speciesName)
             AddTradingPostPet(tradingPostPet, mode)
@@ -400,7 +400,7 @@ local function GetTradingPostPets(mode)
             DEBUG:AddLine(file, method, "itemType: ", itemType, " itemReward: ", tierInfo.itemReward)
             if itemType == "Companion Pets" then
                 tradingPostPet.confirmedPet = true
-                local name, icon, petType, creatureID, sourceText, description, isWild, canBattle, tradeable, unique, obtainable, displayID, speciesID = C_PetJournal.GetPetInfoByItemID(tierInfo.itemReward)
+                local name, icon, petType, creatureID, sourceText, description, isWild, canBattle, tradable, unique, obtainable, displayID, speciesID = C_PetJournal.GetPetInfoByItemID(tierInfo.itemReward)
                 if speciesID then
                     tradingPostPet.speciesID = speciesID
                     tradingPostPet.name = name

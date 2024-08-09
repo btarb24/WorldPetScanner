@@ -168,6 +168,8 @@ function UTILITIES:SortTasks(a, b)
 end
 
 local function GetRarityMultiplier(quality)
+   --https://wago.tools/db2/BattlePetBreedQuality  .. times 2
+
     if (quality == 1) then --poor
         return 1
     elseif (quality == 2) then --common
@@ -187,6 +189,7 @@ local function round(num)
     return math.floor(num + .5)
 end
 
+-- base stat source: https://wago.tools/db2/BattlePetSpeciesState
 function UTILITIES:GetBreed(baseStats, health, power, speed, rarity, level)
     local rarityMultiplier = GetRarityMultiplier(rarity)
 

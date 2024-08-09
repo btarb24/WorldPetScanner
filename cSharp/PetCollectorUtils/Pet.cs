@@ -2,75 +2,56 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Security.Cryptography.X509Certificates;
-using System.Security.Policy;
+using System.Runtime.InteropServices;
 using System.Text;
-using System.Threading.Tasks;
+using System.Threading;
 
 namespace PetCollectorUtils
 {
   public class Pet
   {
     public int speciesID;
-    public int displayID;
+    public List<int> displayIDs = new List<int>();
+    public List<int> npcSoundIDs= new List<int>();
+    public List<string> creatureSoundIDs = new List<string>();
     public int companionID;
-    public double cost;
     public string name;
     public string source;
-    public string currency;
-    public string iconPath;
+    public string icon;
     public string flavor;
-    public int petType;
+    public int family;
     public string eventName;
     public string missionSource;
-    public string note;
+    public string note; //todo: remove
     public string characterClass;
-    public string profession;
     public string promotion;
     public string tcg;
     public string feature;
     public string reputation;
     public string covenant;
     public string mission;
+    public string achievement;
+    public string professionDetail;
+    public string locations;
+    public string pois;
+    public string acquisition;
     public bool isPassive;
     public bool isUnique;
-    public bool isTradeable;
+    public bool isTradable;
     public bool isWild;
+    public bool intermittent;
     public bool unobtainable;
-    public Entity quest;
-    public Entity achievement;
-    public Entity[] npcs;
-    public Location[] locations;
-    public string[] possbileBreeds;
-    public double[] baseStats;
-    public Entity[] items;
-    public AcquisitionLine[] acquisition;
+    public double chance;
+    public List<string> possbileBreeds;
+    public List<double> baseStats = new List<double> { -1, -1, -1 };
+    public int soundID_key;
+    public int npcSoundID_key;
 
-    private int MapPetType(string typeStr){
-      if (typeStr == "Humanoid")
-        return 1;
-      else if (typeStr == "Dragon")
-        return 2;
-      else if (typeStr == "Flying")
-        return 3;
-      else if (typeStr == "Undead")
-        return 4;
-      else if (typeStr == "Critter")
-        return 5;
-      else if (typeStr == "Magical")
-        return 6;
-      else if (typeStr == "Elemental")
-        return 7;
-      else if (typeStr == "Beast")
-        return 8;
-      else if (typeStr == "Water")
-        return 9;
-      else if (typeStr == "Mechanical")
-        return 10;
-
-      throw new ArgumentOutOfRangeException();
+    public Pet(int speciesID)
+    {
+      this.speciesID = speciesID;
     }
-
+    /*
     public Pet(LuaTable table)
     {
       foreach(var key in table.Keys)
@@ -84,14 +65,11 @@ namespace PetCollectorUtils
           case "source":
             source = value.ToString();
             break;
-          case "currency":
-            currency = value.ToString();
+          case "icon":
+            icon = value.ToString();
             break;
-          case "iconPath":
-            iconPath = value.ToString();
-            break;
-          case "petType":
-            petType = MapPetType(value.ToString());
+          case "family":
+            family = Convert.ToInt16(value.ToString());
             break;
           case "flavor":
             flavor = value.ToString().Replace("\"", "\\\"").Replace("\n", "\\n");
@@ -114,9 +92,6 @@ namespace PetCollectorUtils
           case "class":
             characterClass = value.ToString();
             break;
-          case "profession":
-            profession = value.ToString();
-            break;
           case "reputation":
             reputation = value.ToString();
             break;
@@ -133,8 +108,10 @@ namespace PetCollectorUtils
             speciesID = int.Parse(value.ToString());
             break;
           case "displayID":
-            displayID = int.Parse(value.ToString());
+            displayIDs.Add(int.Parse(value.ToString()));
             break;
+          case "displayIDs":
+            throw new NotImplementedException();
           case "companionID":
             companionID = int.Parse(value.ToString());
             break;
@@ -144,8 +121,8 @@ namespace PetCollectorUtils
           case "isUnique":
             isUnique= bool.Parse(value.ToString());
             break;
-          case "isTradeable":
-            isTradeable = bool.Parse(value.ToString());
+          case "isTradable":
+            isTradable = bool.Parse(value.ToString());
             break;
           case "isWild":
             isWild = bool.Parse(value.ToString());
@@ -153,35 +130,20 @@ namespace PetCollectorUtils
           case "unobtainable":
             unobtainable = bool.Parse(value.ToString());
             break;
-          case "cost":
-            cost = Convert.ToDouble(value.ToString());
-            break;
           case "locations":
             locations = Location.Parse((LuaTable)value);
             break;
           case "possibleBreeds":
-            possbileBreeds = ParseBreeds((LuaTable)value);
+            possbileBreeds.AddRange(ParseBreeds((LuaTable)value));
             break;
           case "baseStats":
-            baseStats = ProcessBaseStats((LuaTable)value);
+            baseStats.AddRange(ProcessBaseStats((LuaTable)value));
             break;
-          case "item":
-            items = Entity.Parse((LuaTable)value);
-            break;
-          case "npc":
-            npcs = Entity.Parse((LuaTable)value);
-            break;
-          case "achievementName":
-            achievement = new Entity { name = value.ToString() };
+          case "achievement":
+           // achievement = new Entity { name = value.ToString() };
             var achId = table["achievementID"];
-            if (achId != null)
-              achievement.ID = Convert.ToInt32(achId);
-            break;
-          case "quest":
-            quest = new Entity { name = value.ToString() };
-            var questId = table["questID"];
-            if (questId != null)
-              quest.ID = Convert.ToInt32(questId);
+         //   if (achId != null)
+          //    achievement.ID = Convert.ToInt32(achId);
             break;
           case "acquisition":
             acquisition = ParseAcquistion((LuaTable)value);
@@ -197,7 +159,7 @@ namespace PetCollectorUtils
 
       if (isWild && (source == "Drop" || source == "Achievement" || source == "Quest"))
         isWild = false;
-    }
+    }*/
 
     public string Serialize()
     {
@@ -206,91 +168,50 @@ namespace PetCollectorUtils
       sb.AppendLine($"        name=\"{name}\",");
       sb.AppendLine($"        speciesID={speciesID},");
       sb.AppendLine($"        companionID={companionID},");
-      sb.AppendLine($"        displayID={displayID},");
-      sb.AppendLine($"        petType={petType},");
-      sb.AppendLine($"        isWild={(isWild ? "true" : "false")},");
-      sb.AppendLine($"        isTradeable={(isTradeable ? "true" : "false")},");
-      sb.AppendLine($"        isUnique={(isUnique ? "true" : "false")},");
-      sb.AppendLine($"        isPassive={(isPassive ? "true" : "false")},");
+      sb.AppendLine($"        displayIDs={{{string.Join(",", displayIDs)}}},");
+      sb.AppendLine($"        family={family},");
+      if (isWild) sb.AppendLine($"        isWild={(isWild ? "true" : "false")},");
+      if (isTradable) sb.AppendLine($"        isTradable={(isTradable ? "true" : "false")},");
+      if (isUnique) sb.AppendLine($"        isUnique={(isUnique ? "true" : "false")},");
+      if (isPassive) sb.AppendLine($"        isPassive={(isPassive ? "true" : "false")},");
+      if (intermittent) sb.AppendLine($"        intermittent={(intermittent ? "true" : "false")},");
+      if (unobtainable) sb.AppendLine($"        unobtainable={(unobtainable ? "true" : "false")},");
       sb.AppendLine($"        source=\"{source}\",");
-      sb.AppendLine($"        tooltip= \"{flavor}\",");
-      sb.AppendLine($"        icon= \"{iconPath}\",");
-      if (currency != null) sb.AppendLine($"        currency=\"{currency}\",");
-      if (cost != 0) sb.AppendLine($"        cost={cost},");
+      sb.AppendLine($"        flavor=\"{flavor}\",");
+      sb.AppendLine($"        icon=\"{icon}\",");
+      if (!string.IsNullOrEmpty(reputation)) sb.AppendLine($"        reputation={reputation},");
+      if (npcSoundIDs.Any()) sb.AppendLine($"        npcSounds={{{string.Join(",", npcSoundIDs)}}},");
+      if (creatureSoundIDs.Any()) sb.AppendLine($"        creatureSounds={SerializeStringArray(creatureSoundIDs.ToArray())},");
       if (!string.IsNullOrEmpty(eventName)) sb.AppendLine($"        eventName=\"{eventName}\",");
       if (!string.IsNullOrEmpty(missionSource)) sb.AppendLine($"        missionSource=\"{missionSource}\",");
       if (!string.IsNullOrEmpty(mission)) sb.AppendLine($"        mission=\"{mission}\",");
       if (!string.IsNullOrEmpty(note)) sb.AppendLine($"        note=\"{note}\",");
       if (!string.IsNullOrEmpty(characterClass)) sb.AppendLine($"        characterClass=\"{characterClass}\",");
-      if (!string.IsNullOrEmpty(profession)) sb.AppendLine($"        profession=\"{profession}\",");
       if (!string.IsNullOrEmpty(promotion)) sb.AppendLine($"        promotion=\"{promotion}\",");
       if (!string.IsNullOrEmpty(tcg)) sb.AppendLine($"        tcg=\"{tcg}\",");
       if (!string.IsNullOrEmpty(feature)) sb.AppendLine($"        feature=\"{feature}\",");
-      if (!string.IsNullOrEmpty(reputation)) sb.AppendLine($"        reputation=\"{reputation}\",");
       if (!string.IsNullOrEmpty(covenant)) sb.AppendLine($"        covenant=\"{covenant}\",");
-      if (unobtainable) sb.AppendLine($"        unobtainable={(unobtainable ? "true" : "false")},");
-      if (quest != null) sb.AppendLine($"        quest={quest.Serialize()},");
-      if (achievement != null) sb.AppendLine($"        achievement={achievement.Serialize()},");
+      if (chance > 0) sb.AppendLine($"        chance={chance},");
 
-      if (npcs != null && npcs.Length > 0)
-      {
-        sb.AppendLine($"        npcs={SerializeArray(npcs)},");
-      }
 
-      if (items != null && items.Length > 0)
-      {
-        sb.AppendLine($"        items={SerializeArray(items)},");
-      }
+      //blobs
+      if (!string.IsNullOrEmpty(achievement)) sb.AppendLine($"        achievement={achievement},");
+      if (!string.IsNullOrEmpty(professionDetail)) sb.AppendLine($"        professionDetail={professionDetail},");
 
-      if (locations != null && locations.Length > 0)
+      if (possbileBreeds != null && possbileBreeds.Count > 0)
       {
-        sb.AppendLine($"        locations={SerializeArray(locations)},");
+        sb.AppendLine($"        possbileBreeds={SerializeStringArray(possbileBreeds.ToArray())},");
       }
+      sb.AppendLine($"        baseStats={{{string.Join(", ", baseStats)}}},");
 
-      if (possbileBreeds != null && possbileBreeds.Length > 0)
-      {
-        sb.AppendLine($"        possbileBreeds={SerializeStringArray(possbileBreeds)},");
-      }
-
-      if (baseStats != null && baseStats.Length > 0)
-      {
-        sb.AppendLine($"        baseStats={{{string.Join(", ", baseStats)}}},");
-      }
-
-      if (acquisition != null && acquisition.Length > 0)
-      {
-        sb.AppendLine("        acquisition= {");
-        for (var i = 0; i < acquisition.Length; i++)
-        {
-          var acq = acquisition[i];
-          sb.AppendLine($"            [{i+1}] = {{\"{string.Join("\", \"", acq.contents)}\"}},");
-        }
-        sb.AppendLine("        }");
-      }
+      if (!string.IsNullOrEmpty(locations)) sb.AppendLine($"        locations={locations},");
+      if (!string.IsNullOrEmpty(pois)) sb.AppendLine($"        pois={pois},");
+      if (!string.IsNullOrEmpty(acquisition)) sb.AppendLine($"        acquisition={acquisition},");
 
       sb.Append("    }");
       return sb.ToString();
     }
 
-    private string SerializeArray(ISerializable[] entities)
-    {
-      if (entities.Length == 1)
-      {
-        return $"{{{entities[0].Serialize()}}}";
-      }
-      else
-      {
-        var sb = new StringBuilder();
-        sb.AppendLine("{");
-        for (var i = 0; i < entities.Length; i++)
-        {
-          var comma = i != entities.Length - 1 ? "," : "";
-          sb.AppendLine($"            {entities[i].Serialize()}{comma}");
-        }
-        sb.Append("        }");
-        return sb.ToString();
-      }
-    }
     private string SerializeStringArray(string[] arr)
     {
       var result = "{";
@@ -312,66 +233,6 @@ namespace PetCollectorUtils
       }
 
       return result.ToArray();
-    }
-
-    public static string[] ParseBreeds(LuaTable breeds)
-    {
-      List<string> list = new List<string>();
-      foreach (var breed in breeds.Values)
-      {
-        switch (Convert.ToInt16(breed))
-        {
-          case 3:
-            list.Add("B/B");
-            break;
-          case 4:
-            list.Add("P/P");
-            break;
-          case 5:
-            list.Add("S/S");
-            break;
-          case 6:
-            list.Add("H/H");
-            break;
-          case 7:
-            list.Add("H/P");
-            break;
-          case 8:
-            list.Add("P/S");
-            break;
-          case 9:
-            list.Add("H/S");
-            break;
-          case 10:
-            list.Add("P/B");
-            break;
-          case 11:
-            list.Add("S/B");
-            break;
-          case 12:
-            list.Add("H/B");
-            break;
-          default: throw new Exception();
-        }
-      }
-
-      return list.ToArray();
-    }
-
-    public static AcquisitionLine[] ParseAcquistion(LuaTable acquistions)
-    {
-      var lines = new List<AcquisitionLine>();
-      foreach (var subTable in acquistions.Values)
-      {
-        var acquisitionLine = new AcquisitionLine();
-        foreach (var item in ((LuaTable)subTable).Values)
-        {
-          acquisitionLine.contents.Add((string)item);
-        }
-        lines.Add(acquisitionLine);
-      }
-
-      return lines.ToArray();
     }
   }
 }
