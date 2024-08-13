@@ -130,6 +130,10 @@ namespace PetCollectorUtils.Csv
       var dispId2Index = -1;
       var dispId3Index = -1;
       var dispId4Index = -1;
+      var dispProbability1Index = -1;
+      var dispProbability2Index = -1;
+      var dispProbability3Index = -1;
+      var dispProbability4Index = -1;
 
       var keys = parser.ReadFields();
       for (var i = 0; i < keys.Length; i++)
@@ -146,6 +150,14 @@ namespace PetCollectorUtils.Csv
           dispId3Index = i;
         else if (keys[i] == "DisplayID_3")
           dispId4Index = i;
+        else if (keys[i] == "DisplayProbability_0")
+          dispProbability1Index = i;
+        else if (keys[i] == "DisplayProbability_1")
+          dispProbability2Index = i;
+        else if (keys[i] == "DisplayProbability_2")
+          dispProbability3Index = i;
+        else if (keys[i] == "DisplayProbability_3")
+          dispProbability4Index = i;
       }
 
       while (!parser.EndOfData)
@@ -155,20 +167,40 @@ namespace PetCollectorUtils.Csv
         var companionID = Convert.ToInt32(items[companionIdIndex]);
         if (petsByCompanionID.TryGetValue(companionID, out var pet))
         {
-          pet.displayIDs.Clear();
           pet.name = items[nameIndex];
+
+          //https://www.warcraftmounts.com/multi_look_companions.php
           var dispId1 = Convert.ToInt32(items[dispId1Index]);
           var dispId2 = Convert.ToInt32(items[dispId2Index]);
           var dispId3 = Convert.ToInt32(items[dispId3Index]);
           var dispId4 = Convert.ToInt32(items[dispId4Index]);
           if (dispId1 > 0)
-            pet.displayIDs.Add(dispId1);
+          {
+            var probability = Convert.ToDouble(items[dispProbability1Index]);
+            pet.variants.Add(new Variant(dispId1, probability));
+          }
           if (dispId2 > 0)
-            pet.displayIDs.Add(dispId2);
+          {
+            var probability = Convert.ToDouble(items[dispProbability2Index]);
+            if (probability > 0)
+              pet.variants.Add(new Variant(dispId2, probability));
+            else Console.WriteLine($"impossible variant {pet.speciesID} 2");
+          }
           if (dispId3 > 0)
-            pet.displayIDs.Add(dispId3);
+          {
+            var probability = Convert.ToDouble(items[dispProbability3Index]);
+            if (probability > 0)
+              pet.variants.Add(new Variant(dispId3, probability));
+            else Console.WriteLine($"impossible variant {pet.speciesID} 3");
+          }
           if (dispId4 > 0)
-            pet.displayIDs.Add(dispId4);
+          {
+            var probability = Convert.ToDouble(items[dispProbability4Index]);
+            if (probability > 0)
+              pet.variants.Add(new Variant(dispId4, probability));
+            else Console.WriteLine($"impossible variant {pet.speciesID} 4");
+          }
+          ConvertProbabilityToPercentChance(pet.variants);
 
           //for now let's just assume each displayID has the same sounds assocaited with it
           if (soundIdKeysByDisplayId.TryGetValue(dispId1, out var soundKeys))
@@ -579,6 +611,19 @@ namespace PetCollectorUtils.Csv
         default:
           return "??";
       }
+    }
+
+    private void ConvertProbabilityToPercentChance(List<Variant> variants)
+    {
+      if (variants.Count == 1)
+      {
+        variants[0].probability = 100;
+        return;
+      }
+
+      var sum = variants.Sum(p => p.probability);
+      foreach (var variant in variants)
+        variant.probability = (int)(variant.probability / sum * 100);
     }
   }
 }

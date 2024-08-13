@@ -36,7 +36,6 @@ IDEAS
 * listen to events to remove completed Items
 * alert when specifics are IsActive
 * achievements
-* Shinies for Flip  https://www.warcraftmounts.com/multi_look_companions.php
 
 * seasons: snowy owl
 

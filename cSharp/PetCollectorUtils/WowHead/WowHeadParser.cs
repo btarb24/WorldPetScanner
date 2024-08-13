@@ -23,10 +23,7 @@ namespace PetCollectorUtils.ParseFromWowHead
       var html = getHtml(pet.companionID);
       
       var breeds = getBreeds(pet, html);
-      if (AreBreedsUpdated(pet.possibleBreeds, breeds))
-      {
-        pet.possibleBreeds = breeds;
-      }
+      pet.possibleBreeds = breeds;
 
       if (pet.locations == null && pet.acquisition == null)
       {
@@ -55,7 +52,7 @@ namespace PetCollectorUtils.ParseFromWowHead
       return html;
     }
 
-    private List<string> getBreeds(Pet pet, string html)
+    private List<int> getBreeds(Pet pet, string html)
     {
       var split = html.Split('\n');
       var line = split.FirstOrDefault(l => l.TrimStart().StartsWith("species:") && l.Contains("\"breeds\":"));
@@ -67,7 +64,7 @@ namespace PetCollectorUtils.ParseFromWowHead
       var breedInt = Convert.ToInt16(breedBitwise);
       var breedsEnum = (Breeds)breedInt;
 
-      var breeds = ConvertBreedsToStrings(breedsEnum);
+      var breeds = ConvertBreedsToInts(breedsEnum);
       return breeds;
     }
 
@@ -174,29 +171,29 @@ namespace PetCollectorUtils.ParseFromWowHead
         return jtoken[mapFloor.ToString()]["coords"];
     }
 
-    private List<string> ConvertBreedsToStrings(Breeds breeds)
+    private List<int> ConvertBreedsToInts(Breeds breeds)
     {
-      var result = new List<string>();
+      var result = new List<int>();
       if (breeds.HasFlag(Breeds.BB))
-        result.Add("B/B");
+        result.Add(1);
       if (breeds.HasFlag(Breeds.PP))
-        result.Add("P/P");
+        result.Add(2);
       if (breeds.HasFlag(Breeds.SS))
-        result.Add("S/S");
+        result.Add(3);
       if (breeds.HasFlag(Breeds.HH))
-        result.Add("H/H");
+        result.Add(4);
       if (breeds.HasFlag(Breeds.HP))
-        result.Add("H/P");
+        result.Add(5);
       if (breeds.HasFlag(Breeds.PS))
-        result.Add("P/S");
+        result.Add(6);
       if (breeds.HasFlag(Breeds.HS))
-        result.Add("H/S");
+        result.Add(7);
       if (breeds.HasFlag(Breeds.PB))
-        result.Add("P/B");
+        result.Add(8);
       if (breeds.HasFlag(Breeds.SB))
-        result.Add("S/B");
+        result.Add(9);
       if (breeds.HasFlag(Breeds.HB))
-        result.Add("H/B");
+        result.Add(10);
 
       return result;
     }

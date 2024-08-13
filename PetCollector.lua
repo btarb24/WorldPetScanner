@@ -146,6 +146,7 @@ local function BuildPetList()
 				level = level,
 				petID = petID,
 				rarity = rarity,
+				displayID = displayID
 			}
 
 			if (pet.baseStats) then

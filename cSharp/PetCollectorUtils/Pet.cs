@@ -2,17 +2,15 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.InteropServices;
 using System.Text;
-using System.Threading;
 
 namespace PetCollectorUtils
 {
   public class Pet
   {
     public int speciesID;
-    public List<int> displayIDs = new List<int>();
-    public List<int> npcSoundIDs= new List<int>();
+    public List<Variant> variants = new List<Variant>();
+    public List<int> npcSoundIDs = new List<int>();
     public List<string> creatureSoundIDs = new List<string>();
     public int companionID;
     public string name;
@@ -42,7 +40,7 @@ namespace PetCollectorUtils
     public bool intermittent;
     public bool unobtainable;
     public double chance;
-    public List<string> possibleBreeds;
+    public List<int> possibleBreeds;
     public List<double> baseStats = new List<double> { -1, -1, -1 };
     public int soundID_key;
     public int npcSoundID_key;
@@ -168,7 +166,7 @@ namespace PetCollectorUtils
       sb.AppendLine($"        name=\"{name}\",");
       sb.AppendLine($"        speciesID={speciesID},");
       sb.AppendLine($"        companionID={companionID},");
-      sb.AppendLine($"        displayIDs={{{string.Join(",", displayIDs)}}},");
+      sb.AppendLine($"        variants={{{string.Join(",", variants)}}},");
       sb.AppendLine($"        family={family},");
       if (isWild) sb.AppendLine($"        isWild={(isWild ? "true" : "false")},");
       if (isTradable) sb.AppendLine($"        isTradable={(isTradable ? "true" : "false")},");
@@ -200,7 +198,7 @@ namespace PetCollectorUtils
 
       if (possibleBreeds != null && possibleBreeds.Count > 0)
       {
-        sb.AppendLine($"        possibleBreeds={SerializeStringArray(possibleBreeds.ToArray())},");
+        sb.AppendLine($"        possibleBreeds={{{string.Join(",", possibleBreeds)}}},");
       }
       sb.AppendLine($"        baseStats={{{string.Join(", ", baseStats)}}},");
 

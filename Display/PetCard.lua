@@ -572,7 +572,7 @@ local function UpdateAbility(texture, abilityID, petType)
     texture:SetTexture(icon)
     texture:SetScript("OnEnter",
         function(self)
-            local stats = PAPetCardTab1.content.SelectedBreed.stats
+            local stats = PAPetCardTab1.content.SelectedBreedFrame.stats
             local abilityInfo = {}
             abilityInfo.petOwner = Enum.BattlePetOwner.Ally;
             abilityInfo.petIndex = nil;
@@ -684,12 +684,144 @@ local function UpdateFullScreenBackgroundColor()
     local r = PETC_rSlider:GetValue()
     local g = PETC_gSlider:GetValue()
     local b = PETC_bSlider:GetValue()
-    PAPetCard.tab1.content.modelPopoutFullScreenFrame.bg:SetColorTexture(r, g, b, a)
+    PAPetCardTab1.content.modelPopoutFullScreenFrame.bg:SetColorTexture(r, g, b, a)
 
     PETC_States.fullScreenBG_a = a
     PETC_States.fullScreenBG_r = r
     PETC_States.fullScreenBG_g = g
     PETC_States.fullScreenBG_b = b
+end
+
+local function AddBreed(breedsHeader, heartIcon, swordIcon, speedIcon, breeds, num)
+    local topOffset = -6 -(num * 20)
+
+    local frame = CreateFrame("BUTTON", nil, PAPetCardTab1.content);
+    frame:SetPoint("TOP", breedsHeader, "BOTTOM", 0, topOffset + 3)
+    frame:SetPoint("LEFT", PAPetCardTab1.content, "LEFT", 16, 0)
+    frame:SetPoint("RIGHT", PAPetCardTab1.content, "LEFT", 200, 0)
+    frame:SetHeight(17)
+
+    local texture = frame:CreateTexture(nil, "BACKGROUND")
+    texture:SetColorTexture(1, .82, 0) --gameFontNormal Color
+    texture:SetGradient("HORIZONTAL", CreateColor(1, 1, 1, .3), CreateColor(1, 1, 1, .01))
+    texture:SetAllPoints()
+    texture:Hide()
+    frame.texture = texture
+    
+    local label = frame:CreateFontString(nil, "OVERLAY", "GameFontNormal")
+    label:SetText(PETS.BREEDS[num])
+    label:SetPoint("TOPRIGHT", breedsHeader, "BOTTOMLEFT", 40, topOffset)
+    
+    local health = frame:CreateFontString(nil, "OVERLAY", "GameFontHighlight")
+    health:SetPoint("TOPLEFT", breedsHeader, "BOTTOMLEFT", 29, topOffset)
+    health:SetWidth(75)
+    health:SetJustifyH("CENTER")
+    
+    local power = frame:CreateFontString(nil, "OVERLAY", "GameFontHighlight")
+    power:SetPoint("TOPLEFT", breedsHeader, "BOTTOMLEFT", 70, topOffset)
+    power:SetWidth(75)
+    power:SetJustifyH("CENTER")
+
+    local speed = frame:CreateFontString(nil, "OVERLAY", "GameFontHighlight")
+    speed:SetPoint("TOPLEFT", breedsHeader, "BOTTOMLEFT", 110, topOffset)
+    speed:SetWidth(75)
+    speed:SetJustifyH("CENTER")
+
+    breeds[num] = {
+        frame = frame,
+        label = label,
+        health = health,
+        power = power,
+        speed = speed,
+    }
+
+    --alpha==1 when the breed is available for this pet
+    frame:SetScript("OnEnter", function(self)
+        if (self:GetAlpha() == 1) then
+            if (PAPetCardTab1.content.SelectedBreedFrame ~= self) then
+                self.texture:SetDesaturated(true)
+                self.texture:Show()
+            end
+        end
+    end)
+    frame:SetScript("OnLeave", function(self)
+        if (self:GetAlpha() == 1) then
+            self.texture:SetDesaturated(false)
+            if PAPetCardTab1.content.SelectedBreedFrame ~= self then
+                self.texture:Hide()
+            end
+        end
+    end)
+
+    frame:SetScript("OnClick", function(self)
+        if (self:GetAlpha() == 1) then
+            if (PAPetCardTab1.content.SelectedBreedFrame == self) then
+                return
+            end
+            
+            if (PAPetCardTab1.content.SelectedBreedFrame == nil) then
+                PAPetCardTab1.content.SelectedBreedFrame = self;
+            end
+
+            PAPetCardTab1.content.SelectedBreedFrame.texture:Hide()
+            PAPetCardTab1.content.SelectedBreedFrame = self
+            self.texture:Show()
+            self.texture:SetDesaturated(false)
+        end
+    end)
+end
+
+local function CreateVariant(num)
+    local button = CreateFrame("BUTTON", nill, PAPetCardTab1.content.modelFrame.variantsFrame)
+    button:SetNormalTexture("Interface\\EncounterJournal\\UI-EncounterJournalTextures")
+    button:GetNormalTexture():SetTexCoord(.50585938, 0.63085938, 0.02246094, 0.08203125)
+    button:SetHighlightTexture("Interface\\EncounterJournal\\UI-EncounterJournalTextures")
+    button:GetHighlightTexture():SetTexCoord(.50585938, 0.63085938, 0.02246094, 0.08203125)
+    --button:SetSize(64,61)
+    button:SetSize(34,33)
+    button.variantIndex = num
+
+    button.text = button:CreateFontString(nil, "OVERLAY", "GameFontNormal")
+    button.text:SetText(tostring(num))
+    local offset = 0
+    if (num == 1) then offset = 2 end
+    if (num == 3) then offset = 1 end
+    button.text:SetPoint("RIGHT", button, "RIGHT", -11 - offset, 0)
+    button.text:SetPoint("CENTER", button, "CENTER", 0, 0)
+    button.text:SetPropagateMouseClicks(true)
+    button.text:SetPropagateMouseMotion(true)
+    
+    local bg = button:CreateTexture(nil, "BACKGROUND")
+    bg:SetPoint("RIGHT", button, "RIGHT", -6, 0)
+    bg:SetSize(20,20)
+    bg:SetTexture("Interface/Addons/PetCollector/textures/black64")
+
+    button.owned = button:CreateTexture(nil, "OVERLAY")
+    button.owned:SetPoint("BOTTOMRIGHT", button, "BOTTOMRIGHT", 3, -3)
+    button.owned:SetAtlas("perks-owned-large")
+    button.owned:SetSize(16,16)
+    
+    local chanceBg = button:CreateTexture(nil, "OVERLAY")
+    chanceBg:SetPoint("TOPLEFT", button, "TOPRIGHT", -15, -5)
+    chanceBg:SetSize(48,15)
+    chanceBg:SetColorTexture(0,0,0)
+    chanceBg:SetGradient("HORIZONTAL", CreateColor(0, 0, 0, .5), CreateColor(0, 0, 0, 0))
+
+    button.chance = button:CreateFontString(nil, "OVERLAY", "GameFontNormalTiny")
+    button.chance:SetText("25%")
+    button.chance:SetPoint("TOPLEFT", button, "TOPRIGHT", 0, -8)
+    button.chance:SetAlpha(.5)
+
+    button:SetScript("OnClick", function(self)
+        PAPetCardTab1.content.modelFrame.variant1:SetScale(1)
+        PAPetCardTab1.content.modelFrame.variant2:SetScale(1)
+        PAPetCardTab1.content.modelFrame.variant3:SetScale(1)
+        PAPetCardTab1.content.modelFrame.variant4:SetScale(1)
+        self:SetScale(1.3)
+        PAPetCardTab1.modelDisplayGenerator:SetModelByCreatureDisplayID(PAPetCard.pet.variants[self.variantIndex].id)
+    end)
+
+    return button
 end
 
 local function CreateWindow()
@@ -796,16 +928,22 @@ local function CreateWindow()
 
    --tab1
     tab1.content.modelFrame = CreateFrame("FRAME", nil, tab1.content, "InsetFrameTemplate4")
-    tab1.content.modelFrame:SetPoint("TOP", tab1.content, "TOP", 0, -25)
-    tab1.content.modelFrame:SetPoint("LEFT", tab1.content, "LEFT", 30, 0)
-    tab1.content.modelFrame:SetPoint("RIGHT", tab1.content, "RIGHT", -30, 0)
+    tab1.content.modelFrame:SetPoint("TOP", tab1.content, "TOP", 0, -15)
+    tab1.content.modelFrame:SetPoint("LEFT", tab1.content, "LEFT", 15, 0)
+    tab1.content.modelFrame:SetPoint("RIGHT", tab1.content, "RIGHT", -13, 0)
     tab1.content.modelFrame:SetHeight(200)
     tab1.content.modelFrame.bg = tab1.content.modelFrame:CreateTexture(nil, "BACKGROUND")
     tab1.content.modelFrame.bg:SetAllPoints(true)
-    tab1.content.modelFrame.bg:SetColorTexture(0,0,0)
+    tab1.content.modelFrame.bg:SetAtlas("store-card-transmog")
+    tab1.content.modelFrame.bg:SetTexCoord(.1,.9,.1,.9)
+    tab1.content.modelFrame.shadow = tab1.content.modelFrame:CreateTexture(nil, "BACKGROUND")
+    tab1.content.modelFrame.shadow:SetPoint("CENTER", tab1.content.modelFrame, "CENTER", 0, -70)
+    tab1.content.modelFrame.shadow:SetHeight(150)
+    tab1.content.modelFrame.shadow:SetAtlas("GarrFollower-Shadow")
+    tab1.content.modelFrame.shadow:SetAlpha(.5)
     tab1.content.model = CreateFrame("ModelScene", nil, tab1.content.modelFrame, "WrappedAndUnwrappedModelScene")
-    tab1.content.model:SetPoint("TOPLEFT", tab1.content.modelFrame, "TOPLEFT", 15, -15)
-    tab1.content.model:SetPoint("BOTTOMRIGHT", tab1.content.modelFrame, "BOTTOMRIGHT", -15, 15)
+    tab1.content.model:SetPoint("TOPLEFT", tab1.content.modelFrame, "TOPLEFT", 4, -4)
+    tab1.content.model:SetPoint("BOTTOMRIGHT", tab1.content.modelFrame, "BOTTOMRIGHT", -4, 4)
     tab1.content.modelPopoutFullScreenFrame = CreateFrame("FRAME", nill, UIParent, BackdropTemplateMixin and "BackdropTemplate")
     tab1.content.modelPopoutFullScreenFrame:Hide()
     tab1.content.modelPopoutFullScreenFrame:SetFrameStrata("FULLSCREEN")
@@ -825,6 +963,11 @@ local function CreateWindow()
         tab1.content.model:ClearAllPoints()
         tab1.content.model:SetAllPoints()
         tab1.content.model:SetFrameStrata("FULLSCREEN_DIALOG")
+        
+        tab1.content.modelFrame.variantsFrame:ClearAllPoints()
+        tab1.content.modelFrame.variantsFrame:SetPoint("TOPLEFT", tab1.content.modelPopoutFullScreenFrame.bSlider, "BOTTOMLEFT", 0, -30)
+        tab1.content.modelFrame.variantsFrame:SetFrameStrata("FULLSCREEN_DIALOG")
+
         tab1.content.modelPopoutFullScreenFrame:Show()
         tab1.content.modelPopoutFullScreenFrame:SetScript("OnKeyDown", function(self, key)
             if key == "ESCAPE" then
@@ -839,8 +982,13 @@ local function CreateWindow()
     tab1.content.modelPopoutFullScreenFrame.PopOutClose:SetScript("OnClick", function(self)
         tab1.content.model:SetParent(tab1.content.modelFrame)
         tab1.content.model:ClearAllPoints()
-        tab1.content.model:SetPoint("TOPLEFT", tab1.content.modelFrame, "TOPLEFT", 15, -15)
-        tab1.content.model:SetPoint("BOTTOMRIGHT", tab1.content.modelFrame, "BOTTOMRIGHT", -15, 15)
+        tab1.content.model:SetPoint("TOPLEFT", tab1.content.modelFrame, "TOPLEFT", 4, -4)
+        tab1.content.model:SetPoint("BOTTOMRIGHT", tab1.content.modelFrame, "BOTTOMRIGHT", -4, 4)
+        
+        tab1.content.modelFrame.variantsFrame:ClearAllPoints()
+        tab1.content.modelFrame.variantsFrame:SetPoint("TOPLEFT", tab1.content.modelFrame, "TOPLEFT", 3, -5)
+        tab1.content.modelFrame.variantsFrame:SetFrameStrata("DIALOG")
+
         tab1.content.modelPopoutFullScreenFrame:Hide()
         tab1.content.modelPopoutFullScreenFrame:SetScript("OnKeyDown", nil)
     end)
@@ -887,6 +1035,19 @@ local function CreateWindow()
     PETC_bSliderHigh:SetText("")
     UpdateFullScreenBackgroundColor()
 
+    tab1.content.modelFrame.variantsFrame = CreateFrame("FRAME", nil, tab1.content.modelFrame)
+    tab1.content.modelFrame.variantsFrame:SetPoint("TOPLEFT", tab1.content.modelFrame, "TOPLEFT", 3, -5)
+    tab1.content.modelFrame.variantsFrame:SetSize(200,300) --arbitrary
+    tab1.content.modelFrame.variant1 = CreateVariant(1)
+    tab1.content.modelFrame.variant1:SetPoint("TOPLEFT", tab1.content.modelFrame.variantsFrame, "TOPLEFT")
+    tab1.content.modelFrame.variant1:SetScale(1.3)
+    tab1.content.modelFrame.variant2 = CreateVariant(2)
+    tab1.content.modelFrame.variant2:SetPoint("TOPLEFT", tab1.content.modelFrame.variant1, "BOTTOMLEFT")
+    tab1.content.modelFrame.variant3 = CreateVariant(3)
+    tab1.content.modelFrame.variant3:SetPoint("TOPLEFT", tab1.content.modelFrame.variant2, "BOTTOMLEFT")
+    tab1.content.modelFrame.variant4 = CreateVariant(4)
+    tab1.content.modelFrame.variant4:SetPoint("TOPLEFT", tab1.content.modelFrame.variant3, "BOTTOMLEFT")
+
     tab1.content.unobtainable = tab1.content.modelFrame:CreateFontString(nil, "OVERLAY", "NumberFont_Outline_Large")
     tab1.content.unobtainable:SetPoint("LEFT", tab1.content.modelFrame, "LEFT", -12, 0)
     tab1.content.unobtainable:SetPoint("TOP", tab1.content.modelFrame, "CENTER", 0, 52)
@@ -895,8 +1056,9 @@ local function CreateWindow()
     tab1.content.unobtainable:SetTextColor(.7, .4, .4)
 
     tab1.content.flavor = tab1.content:CreateFontString(nil, "ARTWORK", "NumberFont_Outline_Huge")
-    tab1.content.flavor:SetPoint("TOPLEFT", tab1.content.modelFrame, "BOTTOMLEFT", 0, -15)
-    tab1.content.flavor:SetPoint("RIGHT", tab1.content.modelFrame, "RIGHT")
+    tab1.content.flavor:SetPoint("TOP", tab1.content.modelFrame, "BOTTOM", 0, -15)
+    tab1.content.flavor:SetPoint("LEFT", tab1.content, "LEFT", 30, 0)
+    tab1.content.flavor:SetPoint("RIGHT", tab1.content, "RIGHT", -30, 0)
     local fontFile, fontHeight, fontFlags = tab1.content.flavor:GetFont()
     tab1.content.flavor:SetFont(fontFile, 15, nil)
     tab1.content.flavor:SetTextColor(.920, 0.858, 0.761)
@@ -966,111 +1128,82 @@ local function CreateWindow()
     tab1.content.collected3 = tab1.content:CreateFontString(nil, "ARTWORK", "GameFontHighlight")
     tab1.content.collected3:SetPoint("TOPLEFT", tab1.content.collected2, "TOPRIGHT", 10,0)
 
-    tab1.content.variantsLbl = tab1.content:CreateFontString(nil, "ARTWORK", "GameFontNormal")
-    tab1.content.variantsLbl:SetPoint("TOPLEFT", tab1.content.collectedLbl, "BOTTOMLEFT", 0, -7)
-    tab1.content.variantsLbl:SetText("Variants:  ")
-    
-    local variantEnter = function(self)
-        if (PAPetCard.selectedVariant ~= self.index) then
-            self:SetAlpha(1)
-            self:SetShadowColor(1,1,1, .4)
-        end
-    end
-    local variantLeave = function(self)
-        if (PAPetCard.selectedVariant ~= self.index) then
-            self:SetAlpha(.7)
-        end
-        self:SetShadowColor(0,0,0, 0)
-    end
-    local variantClick = function(self)
-        if (PAPetCard.selectedVariant == self.index) then
-            return
-        end
+   --breeds & family
+    local breedsHeader = tab1.content:CreateTexture(nil, "BACKGROUND", nil, 1)
+    breedsHeader:SetHeight(20)
+    breedsHeader:SetPoint("TOPLEFT", tab1.content.collectedLbl, "TOPLEFT", 0, -30);
+    breedsHeader:SetPoint("RIGHT", tab1.content, "RIGHT", -15, 0);
+    breedsHeader:SetColorTexture(39/256, 38/256, 41/256)
 
-        local actor = PAPetCardTab1.content.model:GetActorByTag("unwrapped")
-        if actor then
-            actor:SetModelByCreatureDisplayID(PAPetCard.pet.displayIDs[self.index])
-        end
-
-        PAPetCard.selectedVariant = self.index
-        PAPetCardTab1.content.variant1:SetAlpha(.7)
-        PAPetCardTab1.content.variant2:SetAlpha(.7)
-        PAPetCardTab1.content.variant3:SetAlpha(.7)
-        PAPetCardTab1.content.variant4:SetAlpha(.7)
-        self:SetShadowColor(0,0,0, 0)
-        self:SetAlpha(1)
-    end
-    tab1.content.variant1 = tab1.content:CreateFontString(nil, "ARTWORK", "GameFontHighlight")
-    tab1.content.variant1:SetPoint("TOPLEFT", tab1.content.variantsLbl, "TOPRIGHT")
-    tab1.content.variant1:SetText("A")
-    tab1.content.variant1.index = 1
-    tab1.content.variant1:SetScript("OnEnter", variantEnter)
-    tab1.content.variant1:SetScript("OnLeave", variantLeave)
-    tab1.content.variant1:SetScript("OnMouseDown", variantClick)
-    tab1.content.variant2 = tab1.content:CreateFontString(nil, "ARTWORK", "GameFontHighlight")
-    tab1.content.variant2:SetPoint("TOPLEFT", tab1.content.variant1, "TOPRIGHT", 10,0)
-    tab1.content.variant2:SetText("B")
-    tab1.content.variant2.index = 2
-    tab1.content.variant2:SetScript("OnEnter", variantEnter)
-    tab1.content.variant2:SetScript("OnLeave", variantLeave)
-    tab1.content.variant2:SetScript("OnMouseDown", variantClick)
-    tab1.content.variant3 = tab1.content:CreateFontString(nil, "ARTWORK", "GameFontHighlight")
-    tab1.content.variant3:SetPoint("TOPLEFT", tab1.content.variant2, "TOPRIGHT", 10,0)
-    tab1.content.variant3:SetText("C")
-    tab1.content.variant3.index = 3
-    tab1.content.variant3:SetScript("OnEnter", variantEnter)
-    tab1.content.variant3:SetScript("OnLeave", variantLeave)
-    tab1.content.variant3:SetScript("OnMouseDown", variantClick)
-    tab1.content.variant4 = tab1.content:CreateFontString(nil, "ARTWORK", "GameFontHighlight")
-    tab1.content.variant4:SetPoint("TOPLEFT", tab1.content.variant3, "TOPRIGHT", 10,0)
-    tab1.content.variant4:SetText("D")
-    tab1.content.variant4.index = 4
-    tab1.content.variant4:SetScript("OnEnter", variantEnter)
-    tab1.content.variant4:SetScript("OnLeave", variantLeave)
-    tab1.content.variant4:SetScript("OnMouseDown", variantClick)
-    
-    tab1.content.familyLbl = tab1.content:CreateFontString(nil, "ARTWORK", "GameFontNormal")
-    tab1.content.familyLbl:SetPoint("TOPRIGHT", tab1.content.tradable, "BOTTOMRIGHT", -4, -7)
-    tab1.content.familyIcon = tab1.content:CreateTexture(nil, "ARTWORK")
+    local familyCirclebg = tab1.content:CreateTexture(nil, "BACKGROUND", nil, 2)
+    familyCirclebg:SetPoint("TOPLEFT", breedsHeader, "TOPLEFT", -7, 10);
+    familyCirclebg:SetSize(40,40)
+    familyCirclebg:SetTexture("Interface/Addons/PetCollector/textures/black64")
+    tab1.content.familyIcon = tab1.content:CreateTexture(nil, "ARTWORK", nil, 3)
     tab1.content.familyIcon:SetTexCoord(.1, .9, .1, .9)
-    tab1.content.familyIcon:SetSize(18,18)
-    tab1.content.familyIcon:SetPoint("TOPLEFT", tab1.content.familyLbl, "TOPRIGHT", 6, 3);
-
-    tab1.content.possibleBreedsLbl = tab1.content:CreateFontString(nil, "ARTWORK", "GameFontNormal")
-    tab1.content.possibleBreedsLbl:SetPoint("TOPLEFT", tab1.content.variantsLbl, "BOTTOMLEFT", 0, -20)
-    tab1.content.possibleBreedsLbl:SetText("Possible Breeds")
-    tab1.content.possibleBreedsLbl:SetWidth(180)
-    tab1.content.possibleBreedsLbl:SetJustifyH("CENTER")
-
-    tab1.content.possibleBreedsTable = CreateFrame("Frame", nil, tab1.content, "ThinBorderTemplate")
-    tab1.content.possibleBreedsTable:SetPoint("TOPLEFT", tab1.content.possibleBreedsLbl, "TOPLEFT", 0, 7)
-    tab1.content.possibleBreedsTable:SetPoint("TOPRIGHT", tab1.content.possibleBreedsLbl, "BOTTOMLEFT", 180, -5)
-    tab1.content.possibleBreedsTable:SetAlpha(.25)
+    tab1.content.familyIcon:SetSize(30,30)
+    tab1.content.familyIcon:SetPoint("CENTER", familyCirclebg, "CENTER");
+    local familyCircle = tab1.content:CreateTexture(nil, "BACKGROUND", nil, 4)
+    familyCircle:SetSize(40,40)
+    familyCircle:SetAtlas("ChallengeMode-AffixRing-Lg")
+    familyCircle:SetPoint("CENTER", familyCirclebg, "CENTER");
     
-    tab1.content.healthIcon = tab1.content:CreateTexture(nil, "BACKGROUND")
-    tab1.content.healthIcon:SetTexture("Interface\\PetBattles\\PetBattle-StatIcons")
-    tab1.content.healthIcon:SetTexCoord(.5, 1, .5, 1)
-    tab1.content.healthIcon:SetSize(16,16)
-    tab1.content.healthIcon:SetPoint("TOPLEFT", tab1.content.possibleBreedsLbl, "BOTTOMLEFT", 58, -8)
-    tab1.content.powerIcon = tab1.content:CreateTexture(nil, "BACKGROUND")
-    tab1.content.powerIcon:SetTexture("Interface\\PetBattles\\PetBattle-StatIcons")
-    tab1.content.powerIcon:SetTexCoord(0, .5, 0, .5)
-    tab1.content.powerIcon:SetSize(16,16)
-    tab1.content.powerIcon:SetPoint("TOPLEFT", tab1.content.healthIcon, "TOPRIGHT", 25, 0)
-    tab1.content.speedIcon = tab1.content:CreateTexture(nil, "BACKGROUND")
-    tab1.content.speedIcon:SetTexture("Interface\\PetBattles\\PetBattle-StatIcons")
-    tab1.content.speedIcon:SetTexCoord(0, .5, .5, 1)
-    tab1.content.speedIcon:SetSize(16,16)
-    tab1.content.speedIcon:SetPoint("TOPLEFT", tab1.content.powerIcon, "TOPRIGHT", 24, 0)
-            
+    local breedsLbl = tab1.content:CreateFontString(nil, "ARTWORK", "GameFontNormal")
+    breedsLbl:SetText("Possible Breeds")
+    breedsLbl:SetPoint("TOPLEFT", breedsHeader, "TOPLEFT", 60, -4)
+
+    local healthIcon = tab1.content:CreateTexture(nil, "BACKGROUND")
+    healthIcon:SetTexture("Interface\\PetBattles\\PetBattle-StatIcons")
+    healthIcon:SetTexCoord(.5, 1, .5, 1)
+    healthIcon:SetSize(16,16)
+    healthIcon:SetPoint("TOPLEFT", breedsHeader, "BOTTOMLEFT", 58, -5)
+    local powerIcon = tab1.content:CreateTexture(nil, "BACKGROUND")
+    powerIcon:SetTexture("Interface\\PetBattles\\PetBattle-StatIcons")
+    powerIcon:SetTexCoord(0, .5, 0, .5)
+    powerIcon:SetSize(16,16)
+    powerIcon:SetPoint("TOPLEFT", healthIcon, "TOPRIGHT", 25, 0)
+    local speedIcon = tab1.content:CreateTexture(nil, "BACKGROUND")
+    speedIcon:SetTexture("Interface\\PetBattles\\PetBattle-StatIcons")
+    speedIcon:SetTexCoord(0, .5, .5, 1)
+    speedIcon:SetSize(16,16)
+    speedIcon:SetPoint("TOPLEFT", powerIcon, "TOPRIGHT", 24, 0)
+    
+    tab1.content.breeds = {}
+    for i = 1, 10 do
+        AddBreed(breedsHeader, healthIcon, powerIcon, speedIcon, tab1.content.breeds, i)
+    end
+    
+    local borderAlpha = .3
+    local leftBorderLine = tab1.content:CreateTexture(nil, "BACKGROUND")
+    leftBorderLine:SetWidth(1)
+    leftBorderLine:SetPoint("TOPLEFT", tab1.content.breeds[3].frame, "TOPLEFT", -1, 0)
+    leftBorderLine:SetPoint("BOTTOM", tab1.content.breeds[10].frame, "BOTTOM", 0, -8)
+    leftBorderLine:SetColorTexture(.7, .7, .7)
+    leftBorderLine:SetGradient("VERTICAL", CreateColor(.7, .7, .7, borderAlpha), CreateColor(.7, .7, .7, 0))
+    local rightBorderLine = tab1.content:CreateTexture(nil, "BACKGROUND")
+    rightBorderLine:SetWidth(1)
+    rightBorderLine:SetPoint("TOPLEFT", tab1.content.breeds[3].frame, "TOPRIGHT", 1, 0)
+    rightBorderLine:SetPoint("BOTTOM", tab1.content.breeds[10].frame, "BOTTOM", 0, -8)
+    rightBorderLine:SetColorTexture(.7, .7, .7)
+    rightBorderLine:SetGradient("VERTICAL", CreateColor(.7, .7, .7, borderAlpha), CreateColor(.7, .7, .7, 0))
+    tab1.content.bottomBorderLine = tab1.content:CreateTexture(nil, "BACKGROUND")
+    tab1.content.bottomBorderLine:SetHeight(1)
+    tab1.content.bottomBorderLine:SetPoint("LEFT", leftBorderLine, "RIGHT")
+    tab1.content.bottomBorderLine:SetPoint("RIGHT", rightBorderLine, "LEFT")
+    tab1.content.bottomBorderLine:SetPoint("BOTTOM", leftBorderLine, "BOTTOM")
+    tab1.content.bottomBorderLine:SetColorTexture(.7, .7, .7, borderAlpha)
+                
     tab1.content.cannotBattleLbl = tab1.content:CreateFontString(nil, "ARTWORK", "GameFontNormal")
-    tab1.content.cannotBattleLbl:SetPoint("TOPLEFT", tab1.content.possibleBreedsTable, "TOPRIGHT", 10, -30)
+    tab1.content.cannotBattleLbl:SetPoint("TOPLEFT", tab1.content.collectedColon, "TOPRIGHT", 0, 0)
     tab1.content.cannotBattleLbl:SetText("This pet cannot battle")
-    tab1.content.cannotBattleLbl:SetWidth(191)
-    tab1.content.cannotBattleLbl:SetJustifyH("CENTER")
-    
+
+   --abilities    
+    local abilitiesLbl = tab1.content:CreateFontString(nil, "ARTWORK", "GameFontNormal")
+    abilitiesLbl:SetText("Abilities")
+    abilitiesLbl:SetPoint("TOPLEFT", breedsLbl, "TOPLEFT", 192.5, 0)
+
     tab1.content.abilitiesFrame = CreateFrame("FRAME", nil, tab1.content)
-    tab1.content.abilitiesFrame:SetPoint("TOPLEFT", tab1.content.possibleBreedsTable, "TOPRIGHT", 15, 8)
+    tab1.content.abilitiesFrame:SetPoint("TOPRIGHT", breedsHeader, "BOTTOMRIGHT", 30, -10)
     tab1.content.abilitiesFrame:SetSize(191, 105)
     tab1.content.abilitiesCol1 = CreateFrame("BUTTON", nil, tab1.content.abilitiesFrame)
     tab1.content.abilitiesCol1:SetNormalAtlas("PetJournal-PetCard-Abilities")
@@ -1273,10 +1406,8 @@ local function UpdateWindow(pet, locationIdx)
         f.tab1.content.model:TransitionToModelSceneID(sceneID)
     end
 
-    local actor = f.tab1.content.model:GetActorByTag("unwrapped")
-    if actor then
-        actor:SetModelByCreatureDisplayID(pet.displayIDs[1])
-    end
+    f.tab1.modelDisplayGenerator = f.tab1.content.model:GetActorByTag("unwrapped")
+    f.tab1.modelDisplayGenerator:SetModelByCreatureDisplayID(pet.variants[1].id)
 
     f.tab1.content.model.activeCamera:SetMaxZoomDistance(50)
     f.tab1.content.model.activeCamera:SetZoomDistance(14)
@@ -1320,70 +1451,74 @@ local function UpdateWindow(pet, locationIdx)
     end
 
   --variants
+    local checkIfVariantCollected = function(displayId, pet, ownedTexture)
+        if UTILITIES:IsEmpty(pet.collected) then
+            ownedTexture:Hide()
+            return;
+        end
+
+        for _, collectedPet in pairs(pet.collected) do
+            if (collectedPet.displayID == displayId) then
+                ownedTexture:Show()
+                return
+            end
+        end
+        ownedTexture:Hide()
+    end
     f.selectedVariant = 1
-    f.tab1.content.variant2:Hide();
-    f.tab1.content.variant3:Hide();
-    f.tab1.content.variant4:Hide();
-    f.tab1.content.variant1:SetAlpha(1)
-    f.tab1.content.variant2:SetAlpha(.7)
-    f.tab1.content.variant3:SetAlpha(.7)
-    f.tab1.content.variant4:SetAlpha(.7)
-    local variantCount = UTILITIES:Count(pet.displayIDs)
-    if variantCount >= 2 then f.tab1.content.variant2:Show(); end
-    if variantCount >= 3 then f.tab1.content.variant3:Show(); end
-    if variantCount >= 4 then f.tab1.content.variant4:Show(); end
+    f.tab1.content.modelFrame.variant1:Hide();
+    f.tab1.content.modelFrame.variant2:Hide();
+    f.tab1.content.modelFrame.variant3:Hide();
+    f.tab1.content.modelFrame.variant4:Hide();
+    f.tab1.content.modelFrame.variant1:SetAlpha(1)
+    f.tab1.content.modelFrame.variant2:SetAlpha(.7)
+    f.tab1.content.modelFrame.variant3:SetAlpha(.7)
+    f.tab1.content.modelFrame.variant4:SetAlpha(.7)
+    local variantCount = UTILITIES:Count(pet.variants)
+    if variantCount >= 2 then
+        f.tab1.content.modelFrame.variant1.chance:SetText(tostring(pet.variants[1].chance) .. "%")
+        checkIfVariantCollected(pet.variants[1].id, pet, f.tab1.content.modelFrame.variant1.owned)
+        f.tab1.content.modelFrame.variant1:Show();
+        f.tab1.content.modelFrame.variant2.chance:SetText(tostring(pet.variants[2].chance) .. "%")
+        checkIfVariantCollected(pet.variants[2].id, pet, f.tab1.content.modelFrame.variant2.owned)
+        f.tab1.content.modelFrame.variant2:Show();
+    end
+    if variantCount >= 3 then
+        f.tab1.content.modelFrame.variant3.chance:SetText(tostring(pet.variants[3].chance) .. "%")
+        checkIfVariantCollected(pet.variants[3].id, pet, f.tab1.content.modelFrame.variant3.owned)
+        f.tab1.content.modelFrame.variant3:Show(); 
+    end
+    if variantCount >= 4 then
+        f.tab1.content.modelFrame.variant4.chance:SetText(tostring(pet.variants[4].chance) .. "%")
+        checkIfVariantCollected(pet.variants[4].id, pet, f.tab1.content.modelFrame.variant4.owned)
+        f.tab1.content.modelFrame.variant4:Show();
+    end
     
   --family
     local famName, famIcon, famR, famG, famB = getFamilyDetails(pet.family)
-    f.tab1.content.familyLbl:SetText(famName)
-    f.tab1.content.familyLbl:SetTextColor(famR, famG, famB)
-    f.tab1.content.familyIcon:SetTexture("interface\\icons\\Icon_petfamily_" .. famIcon)
+    f.tab1.content.familyIcon:SetTexture("interface\\icons\\pet_type_" .. famIcon)
 
   --possible breeds
-    local statsForAbilities
+   --reset
+    for _, breed in ipairs(f.tab1.content.breeds) do
+        breed.frame:SetAlpha(.3)
+        breed.health:SetText("-")
+        breed.power:SetText("-")
+        breed.speed:SetText("-")
+    end
+   --apply new values
     if (pet.possibleBreeds) then
-        for breedIdx, breed in pairs(pet.possibleBreeds) do
-            local breedFrame = DISPLAY_UTIL:AcquireListItemFrame(PAPetCard, f.tab1.content, true, breedIdx == 1)
-            breedFrame:SetFrameStrata("DIALOG")
-            breedFrame:SetPoint("LEFT", f.tab1.content.possibleBreedsLbl, "LEFT", 2, 0)
-            breedFrame:SetPoint("RIGHT", f.tab1.content.possibleBreedsTable, "RIGHT")
+        for breedIdx, possibleBreedId in pairs(pet.possibleBreeds) do
+            local breed = f.tab1.content.breeds[possibleBreedId]
+            local stats = UTILITIES:GetMaxStatsForBreed(possibleBreedId, pet.baseStats)
+            breed.frame.stats = stats
 
-            local stats = UTILITIES:GetMaxStatsForBreed(breed, pet.baseStats)
-            breedFrame.stats = stats
-
-            local breedName = DISPLAY_UTIL:AcquireLabelFont(PAPetCard, f.tab1.content)
-            breedName:SetText(breed)
-            if (breedIdx == 1) then
-                breedName:SetPoint("TOPRIGHT", f.tab1.content.possibleBreedsLbl, "BOTTOMLEFT", 40, -31)
-                f.tab1.content.SelectedBreed = breedFrame
-                breedFrame:Click()
-            else
-                breedName:SetPoint("TOPRIGHT", f.tab1.content.possibleBreedsLbl, "BOTTOMLEFT", 40, breedIdx * -20 - 10)
-            end
-
-            local health = DISPLAY_UTIL:AcquireHighlightFont(PAPetCard, f.tab1.content)
-            health:SetText(stats[1])
-            health:SetWidth(40)
-            health:SetJustifyH("CENTER")
-            health:SetPoint("TOPLEFT", breedName, "TOPRIGHT", 5, 0)
-            local power = DISPLAY_UTIL:AcquireHighlightFont(PAPetCard, f.tab1.content)
-            power:SetText(stats[2])
-            power:SetWidth(35)
-            power:SetJustifyH("CENTER")
-            power:SetPoint("TOPLEFT", health, "TOPRIGHT", 5, 0)
-            local speed = DISPLAY_UTIL:AcquireHighlightFont(PAPetCard, f.tab1.content)
-            speed:SetText(stats[3])
-            speed:SetWidth(35)
-            speed:SetJustifyH("CENTER")
-            speed:SetPoint("TOPLEFT", power, "TOPRIGHT", 5, 0)
-            
-            breedFrame:SetPoint("TOP", breedName, "TOP")
-            breedFrame:SetPoint("BOTTOM", breedName, "BOTTOM")
-            
-            f.tab1.content.possibleBreedsTable:SetPoint("BOTTOMLEFT", breedName, "BOTTOMLEFT", 0, -10)
+            breed.frame:SetAlpha(1)
+            breed.health:SetText(stats[1])
+            breed.power:SetText(stats[2])
+            breed.speed:SetText(stats[3])
         end
-    else
-        f.tab1.content.possibleBreedsTable:SetPoint("BOTTOMLEFT", f.tab1.content.possibleBreedsLbl, "BOTTOMLEFT", 0, -40)
+        f.tab1.content.breeds[pet.possibleBreeds[1]].frame:Click()
     end
 
     if (not pet.isPassive) then
@@ -1402,8 +1537,8 @@ local function UpdateWindow(pet, locationIdx)
         f.tab1.content.cannotBattleLbl:Show()
         f.tab1.content.abilitiesFrame:Hide()
     end
-
-    local actualContentHeight = f.tab1.content:GetTop() - f.tab1.content.possibleBreedsTable:GetBottom() +50
+    
+    local actualContentHeight = f.tab1.content:GetTop() - f.tab1.content.bottomBorderLine:GetBottom() +45
     if (actualContentHeight < 550) then
         actualContentHeight = 550
     end

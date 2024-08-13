@@ -16,8 +16,7 @@ namespace PetCollectorUtils.LUA
     const string name             = "        name=";
     const string speciesID        = "        speciesID=";
     const string companionID      = "        companionID=";
-    const string displayID        = "        displayID=";
-    const string displayIDs       = "        displayIDs=";
+    const string variants = "        variants=";
     const string family           = "        family=";
     const string isWild           = "        isWild=";
     const string isTradable       = "        isTradable=";
@@ -78,21 +77,14 @@ namespace PetCollectorUtils.LUA
         {
           currentPet.name = GetSimpleString(line);
         }
-        else if (line.StartsWith(speciesID))
+        else if (line.StartsWith(speciesID) || line.StartsWith(variants) || line.StartsWith(possibleBreeds))
         {
+          //always gather fresh values from csv/wowhead
           continue;
         }
         else if (line.StartsWith(companionID))
         {
           currentPet.companionID = GetSimpleInt(line);
-        }
-        else if (line.StartsWith(displayID))
-        {
-          currentPet.displayIDs.Add(GetSimpleInt(line));
-        }
-        else if (line.StartsWith(displayIDs))
-        {
-          currentPet.displayIDs.AddRange(GetIntList(line));
         }
         else if (line.StartsWith(family))
         {
@@ -133,10 +125,6 @@ namespace PetCollectorUtils.LUA
         else if (line.StartsWith(icon))
         {
           currentPet.icon = GetSimpleString(line);
-        }
-        else if (line.StartsWith(possibleBreeds))
-        {
-          currentPet.possibleBreeds= GetStringList(line);
         }
         else if (line.StartsWith(baseStats))
         {

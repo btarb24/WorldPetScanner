@@ -221,26 +221,26 @@ function UTILITIES:GetBreed(baseStats, health, power, speed, rarity, level)
 end
 
 local function GetMultipliersForBreed(breed)
-    if (breed == "H/H") then
-        return {2, 0, 0}
-    elseif (breed == "P/P") then
-        return {0, 2, 0}
-    elseif (breed == "S/S") then
-        return {0, 0, 2}
-    elseif (breed == "B/B") then
+    if (breed == 1) then
         return {.5, .5, .5}
-    elseif (breed == "H/P") then
+    elseif (breed == 2) then
+        return {0, 2, 0}
+    elseif (breed == 3) then
+        return {0, 0, 2}
+    elseif (breed == 4) then
+        return {2, 0, 0}
+    elseif (breed == 5) then
         return {.9, .9, 0}
-    elseif (breed == "H/S") then
-        return {.9, 0, .9}
-    elseif (breed == "H/B") then
-        return {.9, .4, .4}
-    elseif (breed == "P/S") then
+    elseif (breed == 6) then
         return {0, .9, .9}
-    elseif (breed == "P/B") then
+    elseif (breed == 7) then
+        return {.9, 0, .9}
+    elseif (breed == 8) then
         return {.4, .9, .4}
-    elseif (breed == "S/B") then
+    elseif (breed == 9) then
         return {.4, .4, .9}
+    elseif (breed == 10) then
+        return {.9, .4, .4}
     end
 end
 
