@@ -166,18 +166,6 @@ local function ParseLocation(location, pet)
     return type, depth1, depth2, depth3
 end
 
-local function SetPetColor(fontString, rarity)
-    if rarity == 0 then
-        fontString:SetTextColor(.5, .1, .57) -- poor
-    elseif rarity == 1 then
-        fontString:SetTextColor(1, 1, 1) -- common
-    elseif rarity == 2 then
-        fontString:SetTextColor(.32, 1, .52) -- uncommon
-    elseif rarity == 3 then
-        fontString:SetTextColor(.59, 1, .5) -- rare
-    end
-end
-
 local function GetCurrency(currencyIdStr, fontHeight)
     local stripCNotation =  strsub(currencyIdStr, 2)
     local currencyID, qty, itemID = strsplit(":", stripCNotation)
@@ -569,6 +557,7 @@ end
 
 local function UpdateAbility(texture, abilityID, petType)
     local _, icon = C_PetJournal.GetPetAbilityInfo(abilityID)
+    texture:Show()
     texture:SetTexture(icon)
     texture:SetScript("OnEnter",
         function(self)
@@ -696,34 +685,45 @@ local function AddBreed(breedsHeader, heartIcon, swordIcon, speedIcon, breeds, n
     local topOffset = -6 -(num * 20)
 
     local frame = CreateFrame("BUTTON", nil, PAPetCardTab1.content);
-    frame:SetPoint("TOP", breedsHeader, "BOTTOM", 0, topOffset + 3)
-    frame:SetPoint("LEFT", PAPetCardTab1.content, "LEFT", 16, 0)
-    frame:SetPoint("RIGHT", PAPetCardTab1.content, "LEFT", 200, 0)
+    frame:SetPoint("TOP", breedsHeader, "BOTTOM", 0, topOffset -2)
+    frame:SetPoint("LEFT", PAPetCardTab1.content, "CENTER", 15, 0)
+    frame:SetPoint("RIGHT", PAPetCardTab1.content, "RIGHT", -15, 0)
     frame:SetHeight(17)
 
-    local texture = frame:CreateTexture(nil, "BACKGROUND")
-    texture:SetColorTexture(1, .82, 0) --gameFontNormal Color
-    texture:SetGradient("HORIZONTAL", CreateColor(1, 1, 1, .3), CreateColor(1, 1, 1, .01))
-    texture:SetAllPoints()
-    texture:Hide()
-    frame.texture = texture
+    local textureL = frame:CreateTexture(nil, "BACKGROUND")
+    textureL:SetColorTexture(1, .82, 0) --gameFontNormal Color
+    textureL:SetGradient("HORIZONTAL", CreateColor(1, 1, 1, 0), CreateColor(1, 1, 1, .3))
+    textureL:SetPoint("TOPLEFT", frame, "TOPLEFT", 0, 0)
+    textureL:SetPoint("BOTTOMRIGHT", frame, "BOTTOMLEFT", frame:GetWidth()/2, 0)
+    textureL:Hide()
+    frame.textureL = textureL
+    local textureR = frame:CreateTexture(nil, "BACKGROUND")
+    textureR:SetColorTexture(1, .82, 0) --gameFontNormal Color
+    textureR:SetGradient("HORIZONTAL", CreateColor(1, 1, 1, .3), CreateColor(1, 1, 1, 0))
+    textureR:SetPoint("TOPLEFT", textureL, "TOPRIGHT", 0, 0)
+    textureR:SetPoint("BOTTOMRIGHT", frame, "BOTTOMRIGHT", 0, 0)
+    textureR:Hide()
+    frame.textureR = textureR
     
     local label = frame:CreateFontString(nil, "OVERLAY", "GameFontNormal")
     label:SetText(PETS.BREEDS[num])
-    label:SetPoint("TOPRIGHT", breedsHeader, "BOTTOMLEFT", 40, topOffset)
+    label:SetPoint("TOPRIGHT", heartIcon, "TOPLEFT", -20, topOffset)
     
     local health = frame:CreateFontString(nil, "OVERLAY", "GameFontHighlight")
-    health:SetPoint("TOPLEFT", breedsHeader, "BOTTOMLEFT", 29, topOffset)
+    health:SetPoint("TOP", heartIcon, "TOP", 0, topOffset)
+    health:SetPoint("CENTER", heartIcon, "CENTER", 0, 0)
     health:SetWidth(75)
     health:SetJustifyH("CENTER")
     
     local power = frame:CreateFontString(nil, "OVERLAY", "GameFontHighlight")
-    power:SetPoint("TOPLEFT", breedsHeader, "BOTTOMLEFT", 70, topOffset)
+    power:SetPoint("TOP", swordIcon, "TOP", 0, topOffset)
+    power:SetPoint("CENTER", swordIcon, "CENTER", 0, 0)
     power:SetWidth(75)
     power:SetJustifyH("CENTER")
 
     local speed = frame:CreateFontString(nil, "OVERLAY", "GameFontHighlight")
-    speed:SetPoint("TOPLEFT", breedsHeader, "BOTTOMLEFT", 110, topOffset)
+    speed:SetPoint("TOP", speedIcon, "TOP", 0, topOffset)
+    speed:SetPoint("CENTER", speedIcon, "CENTER", 0, 0)
     speed:SetWidth(75)
     speed:SetJustifyH("CENTER")
 
@@ -739,16 +739,20 @@ local function AddBreed(breedsHeader, heartIcon, swordIcon, speedIcon, breeds, n
     frame:SetScript("OnEnter", function(self)
         if (self:GetAlpha() == 1) then
             if (PAPetCardTab1.content.SelectedBreedFrame ~= self) then
-                self.texture:SetDesaturated(true)
-                self.texture:Show()
+                self.textureL:SetDesaturated(true)
+                self.textureR:SetDesaturated(true)
+                self.textureL:Show()
+                self.textureR:Show()
             end
         end
     end)
     frame:SetScript("OnLeave", function(self)
         if (self:GetAlpha() == 1) then
-            self.texture:SetDesaturated(false)
+            self.textureL:SetDesaturated(false)
+            self.textureR:SetDesaturated(false)
             if PAPetCardTab1.content.SelectedBreedFrame ~= self then
-                self.texture:Hide()
+                self.textureL:Hide()
+                self.textureR:Hide()
             end
         end
     end)
@@ -763,10 +767,13 @@ local function AddBreed(breedsHeader, heartIcon, swordIcon, speedIcon, breeds, n
                 PAPetCardTab1.content.SelectedBreedFrame = self;
             end
 
-            PAPetCardTab1.content.SelectedBreedFrame.texture:Hide()
+            PAPetCardTab1.content.SelectedBreedFrame.textureL:Hide()
+            PAPetCardTab1.content.SelectedBreedFrame.textureR:Hide()
             PAPetCardTab1.content.SelectedBreedFrame = self
-            self.texture:Show()
-            self.texture:SetDesaturated(false)
+            self.textureL:Show()
+            self.textureL:SetDesaturated(false)
+            self.textureR:Show()
+            self.textureR:SetDesaturated(false)
         end
     end)
 end
@@ -828,7 +835,7 @@ local function CreateWindow()
     DISPLAY.PetCard.winWidth = 400;
 
    --window
-    local f = CreateFrame("Frame", "PAPetCard", UIParent, "UIPanelDialogTemplate", "TitleDragAreaTemplate")
+    local f = CreateFrame("Frame", "PAPetCard", UIParent, "ButtonFrameBaseTemplate", "TitleDragAreaTemplate")
     f.pools = {}
     f:SetResizable(true)
     f:SetSize(DISPLAY.PetCard.winWidth, 600)
@@ -837,10 +844,16 @@ local function CreateWindow()
     f:SetMovable(true)
     f:EnableMouse(true)
     f:SetClampedToScreen(true)
-
+    f.NineSlice.TopLeftCorner:SetDesaturated(true)
+    f.Bg:SetTexture("Interface/Addons/PetCollector/textures/petCard")
+    f.Bg:SetTexCoord(0, 0.45703125, 0, 0.6650390625)
+    f.bgOverlay = f:CreateTexture(nil, "BACKGROUND")
+    f.bgOverlay:SetAllPoints(f.Bg)
+    f.bgOverlay:SetColorTexture(0,0,0, .4)
     f.TitleArea = CreateFrame("Frame", nil, f)
-    f.TitleArea:SetPoint("TOPLEFT", f, "TOPLEFT", 0, -40)
-    f.TitleArea:SetPoint("BOTTOMRIGHT", f, "TOPRIGHT", -50, 0)
+    f.TitleArea:SetFrameLevel(500)
+    f.TitleArea:SetPoint("TOPLEFT", f, "TOPLEFT", 0, -20)
+    f.TitleArea:SetPoint("BOTTOMRIGHT", f, "TOPRIGHT", -20, 0)
     f.TitleArea:EnableMouse(true)
     f.TitleArea:RegisterForDrag("LeftButton")
     f.TitleArea:SetScript("OnDragStart",
@@ -855,16 +868,13 @@ local function CreateWindow()
             PAPetCard:StopMovingOrSizing()
         end
     )
-    f.Title:ClearAllPoints()
-    f.Title:SetPoint("TOP", 0, -9)
-    f.Title:SetPoint("CENTER")
 
 
     f.PrevPet = CreateFrame("BUTTON", nil, f.TitleArea)
     f.PrevPet:SetNormalAtlas("perks-backbutton")
     f.PrevPet:SetPushedAtlas("perks-backbutton-down")
     f.PrevPet:SetHighlightAtlas("hud-microbutton-highlight")
-    f.PrevPet:SetPoint("TOPLEFT", f.TitleArea, "TOPLEFT", 10, -4)
+    f.PrevPet:SetPoint("TOPLEFT", f.TitleArea, "TOPLEFT", 55, 0)
     f.PrevPet:SetSize(24,22)
     f.PrevPet:SetScript("OnClick", function(self)
         if PAPetCard.pet.speciesID == PETS.lowest then
@@ -909,12 +919,16 @@ local function CreateWindow()
         self:GetParent():Hide()
     end)
 
+    f.TitleContainer:ClearAllPoints()
+    f.TitleContainer:SetPoint("TOPLEFT", f.NextPet, "TOPRIGHT")
+    f.TitleContainer:SetPoint("BOTTOMRIGHT", f.Close, "BOTTOMLEFT")
+
     --SpellBook-SkillLineTab
     PAPetCard.numTabs = 3
     local tab1 = CreateTab(1, "Pet Info")
     f.tab1 = tab1
-    tab1:SetPoint("TOPRIGHT", PAPetCardTopLeft, "TOPLEFT", 4, -45)
-    tab1:SetPoint("TOPLEFT", PAPetCardTopLeft, "TOPLEFT", -28, -45)
+    tab1:SetPoint("TOPRIGHT", f.NineSlice.TopLeftCorner, "TOPLEFT", 12, -75)
+    tab1:SetPoint("TOPLEFT", f.NineSlice.TopLeftCorner, "TOPLEFT", -20, -75)
 
     local tab2 = CreateTab(2, "Acquisition")
     f.tab2 = tab2
@@ -926,16 +940,20 @@ local function CreateWindow()
     tab3:SetPoint("TOPRIGHT", tab2, "BOTTOMRIGHT", 0, -10)
     tab3:SetPoint("TOPLEFT", tab2, "BOTTOMRIGHT", -32, -10)
 
-   --tab1
-    tab1.content.modelFrame = CreateFrame("FRAME", nil, tab1.content, "InsetFrameTemplate4")
-    tab1.content.modelFrame:SetPoint("TOP", tab1.content, "TOP", 0, -15)
-    tab1.content.modelFrame:SetPoint("LEFT", tab1.content, "LEFT", 15, 0)
-    tab1.content.modelFrame:SetPoint("RIGHT", tab1.content, "RIGHT", -13, 0)
+ --tab1
+    tab1.content.modelFrame = CreateFrame("FRAME", nil, tab1.content)
+    tab1.content.modelFrame:SetPoint("TOP", tab1.content, "TOP", 0, -10)
+    tab1.content.modelFrame:SetPoint("LEFT", tab1.content, "LEFT", 10, 0)
+    tab1.content.modelFrame:SetPoint("RIGHT", tab1.content, "RIGHT", -10, 0)
     tab1.content.modelFrame:SetHeight(200)
+    tab1.content.modelFrame.border = CreateFrame("FRAME", nil, tab1.content.modelFrame, "ThinBorderTemplate")
+    tab1.content.modelFrame.border:SetAllPoints(true)
+    tab1.content.modelFrame.border:SetAlpha(.25)
     tab1.content.modelFrame.bg = tab1.content.modelFrame:CreateTexture(nil, "BACKGROUND")
-    tab1.content.modelFrame.bg:SetAllPoints(true)
-    tab1.content.modelFrame.bg:SetAtlas("store-card-transmog")
-    tab1.content.modelFrame.bg:SetTexCoord(.1,.9,.1,.9)
+    tab1.content.modelFrame.bg:SetPoint("TOPLEFT", tab1.content.modelFrame, "TOPLEFT", 1, -1)
+    tab1.content.modelFrame.bg:SetPoint("BOTTOMRIGHT", tab1.content.modelFrame, "BOTTOMRIGHT", -1, 1)
+    tab1.content.modelFrame.bg:SetTexture("Interface/Addons/PetCollector/textures/petCard")
+    tab1.content.modelFrame.bg:SetTexCoord(0.572265625, 1, 0, 0.2333984375)
     tab1.content.modelFrame.shadow = tab1.content.modelFrame:CreateTexture(nil, "BACKGROUND")
     tab1.content.modelFrame.shadow:SetPoint("CENTER", tab1.content.modelFrame, "CENTER", 0, -70)
     tab1.content.modelFrame.shadow:SetHeight(150)
@@ -1036,7 +1054,7 @@ local function CreateWindow()
     UpdateFullScreenBackgroundColor()
 
     tab1.content.modelFrame.variantsFrame = CreateFrame("FRAME", nil, tab1.content.modelFrame)
-    tab1.content.modelFrame.variantsFrame:SetPoint("TOPLEFT", tab1.content.modelFrame, "TOPLEFT", 3, -5)
+    tab1.content.modelFrame.variantsFrame:SetPoint("TOPLEFT", tab1.content.modelFrame, "TOPLEFT", 3, -25)
     tab1.content.modelFrame.variantsFrame:SetSize(200,300) --arbitrary
     tab1.content.modelFrame.variant1 = CreateVariant(1)
     tab1.content.modelFrame.variant1:SetPoint("TOPLEFT", tab1.content.modelFrame.variantsFrame, "TOPLEFT")
@@ -1049,94 +1067,43 @@ local function CreateWindow()
     tab1.content.modelFrame.variant4:SetPoint("TOPLEFT", tab1.content.modelFrame.variant3, "BOTTOMLEFT")
 
     tab1.content.unobtainable = tab1.content.modelFrame:CreateFontString(nil, "OVERLAY", "NumberFont_Outline_Large")
-    tab1.content.unobtainable:SetPoint("LEFT", tab1.content.modelFrame, "LEFT", -12, 0)
-    tab1.content.unobtainable:SetPoint("TOP", tab1.content.modelFrame, "CENTER", 0, 52)
+    tab1.content.unobtainable:SetPoint("RIGHT", tab1.content.modelFrame, "RIGHT", -12, 0)
+    tab1.content.unobtainable:SetPoint("BOTTOM", tab1.content.modelFrame, "BOTTOM", 0, 52)
     tab1.content.unobtainable:SetText("*UNOBTAINABLE*")
     tab1.content.unobtainable:SetRotation(math.pi/4 )
     tab1.content.unobtainable:SetTextColor(.7, .4, .4)
 
-    tab1.content.flavor = tab1.content:CreateFontString(nil, "ARTWORK", "NumberFont_Outline_Huge")
-    tab1.content.flavor:SetPoint("TOP", tab1.content.modelFrame, "BOTTOM", 0, -15)
-    tab1.content.flavor:SetPoint("LEFT", tab1.content, "LEFT", 30, 0)
-    tab1.content.flavor:SetPoint("RIGHT", tab1.content, "RIGHT", -30, 0)
-    local fontFile, fontHeight, fontFlags = tab1.content.flavor:GetFont()
-    tab1.content.flavor:SetFont(fontFile, 15, nil)
-    tab1.content.flavor:SetTextColor(.920, 0.858, 0.761)
+    tab1.content.flavor = tab1.content:CreateFontString(nil, "ARTWORK", "GameFontNormal")
+    tab1.content.flavor:SetPoint("TOP", tab1.content.modelFrame, "BOTTOM", 0, -5)
+    tab1.content.flavor:SetPoint("LEFT", tab1.content, "LEFT", 15, 0)
+    tab1.content.flavor:SetPoint("RIGHT", tab1.content, "RIGHT", -15, 0)
     tab1.content.flavor:SetWordWrap(true)
-    --bastion-zone-ability-2
+    tab1.content.flavor:SetHeight(50)
 
     tab1.content.flavorbg = tab1.content:CreateTexture(nil, "BACKGROUND")
-    tab1.content.flavorbg:SetAtlas("bonusobjectives-title-bg")
+    tab1.content.flavorbg:SetAtlas("QuestLog-quest-glow-yellow")
     -- tab1.content.flavorbg:SetDesaturated(true)
-    tab1.content.flavorbg:SetPoint("TOPLEFT", tab1.content.flavor, "TOPLEFT", -10, 10)
-    tab1.content.flavorbg:SetPoint("BOTTOMRIGHT", tab1.content.flavor, "BOTTOMRIGHT", 10, -15)
+    tab1.content.flavorbg:SetPoint("TOPLEFT", tab1.content.modelFrame, "BOTTOMLEFT", -30, 50)
+    tab1.content.flavorbg:SetPoint("BOTTOMRIGHT", tab1.content.modelFrame, "BOTTOMRIGHT", 30, -70)
+    tab1.content.flavorbg:SetAlpha(.6)
 
-    tab1.content.flavorbgColor = tab1.content:CreateTexture(nil, "BACKGROUND")
-    tab1.content.flavorbgColor:SetColorTexture(0,0,0)
-    tab1.content.flavorbgColor:SetPoint("TOP", tab1.content.flavorbg, "TOP",0, -1)
-    tab1.content.flavorbgColor:SetPoint("BOTTOM", tab1.content.flavorbg, "BOTTOM",0, 8)
-    tab1.content.flavorbgColor:SetPoint("LEFT", tab1.content, "LEFT", 6,0)
-    tab1.content.flavorbgColor:SetPoint("RIGHT", tab1.content, "RIGHT",-3, 0)
-    tab1.content.flavorbgColorL = tab1.content:CreateTexture(nil, "BACKGROUND")
-    tab1.content.flavorbgColorL:SetColorTexture(1,1,1)
-    tab1.content.flavorbgColorL:SetGradient("HORIZONTAL", CreateColor(1, 1, 1, 0), CreateColor(1, 1, 1, .5))
-    tab1.content.flavorbgColorL:SetPoint("TOP", tab1.content.flavorbgColor, "TOP")
-    tab1.content.flavorbgColorL:SetPoint("BOTTOM", tab1.content.flavorbgColor, "BOTTOM")
-    tab1.content.flavorbgColorL:SetPoint("LEFT", tab1.content, "LEFT", 20,0)
-    tab1.content.flavorbgColorL:SetPoint("RIGHT", tab1.content, "CENTER")
-    tab1.content.flavorbgColorR = tab1.content:CreateTexture(nil, "BACKGROUND")
-    tab1.content.flavorbgColorR:SetColorTexture(1,1,1)
-    tab1.content.flavorbgColorR:SetGradient("HORIZONTAL", CreateColor(1, 1, 1, .5), CreateColor(1, 1, 1, 0))
-    tab1.content.flavorbgColorR:SetPoint("TOP", tab1.content.flavorbgColor, "TOP")
-    tab1.content.flavorbgColorR:SetPoint("BOTTOM", tab1.content.flavorbgColor, "BOTTOM")
-    tab1.content.flavorbgColorR:SetPoint("LEFT", tab1.content, "CENTER")
-    tab1.content.flavorbgColorR:SetPoint("RIGHT", tab1.content, "RIGHT", -20, 0)
-
-
-    tab1.content.tradable = tab1.content:CreateFontString(nil, "ARTWORK", "GameFontNormal")
-    tab1.content.tradable:SetText("Tradable ")
-    tab1.content.tradable:SetPoint("TOPRIGHT", tab1.content.flavorbg, "BOTTOMRIGHT", -20, -5)
-    tab1.content.tradable:SetAlpha(.5)
-    tab1.content.tradableCheck = tab1.content:CreateTexture(nil, "ARTWORK")
-    tab1.content.tradableCheck:SetAtlas("auctionhouse-icon-checkmark")
-    tab1.content.tradableCheck:SetSize(16,16)
-    tab1.content.tradableCheck:SetPoint("TOPLEFT", tab1.content.tradable, "TOPRIGHT", 3, 3);
-    tab1.content.tradableLine = tab1.content:CreateLine(nil, "OVERLAY", nil, 7)
-    tab1.content.tradableLine:SetColorTexture(.6, .4, .4, .7)
-    tab1.content.tradableLine:SetStartPoint("TOPLEFT", tab1.content.tradable, -5, -6)
-    tab1.content.tradableLine:SetEndPoint("TOPRIGHT", tab1.content.tradable, 2, -6)
-    tab1.content.tradableLine:SetThickness(1)
-    
-    tab1.content.collectedLbl = tab1.content:CreateFontString(nil, "ARTWORK", "GameFontNormal")
-    tab1.content.collectedLbl:SetPoint("TOPLEFT", tab1.content.flavorbg, "BOTTOMLEFT", 0, -5)
-    tab1.content.collectedLbl:SetText("Collected ")
-    tab1.content.collectedCount = tab1.content:CreateFontString(nil, "ARTWORK", "GameFontNormal")
-    tab1.content.collectedCount:SetPoint("TOPLEFT", tab1.content.collectedLbl, "TOPRIGHT")
-    tab1.content.collectedSlash = tab1.content:CreateFontString(nil, "ARTWORK", "GameFontNormal")
-    tab1.content.collectedSlash:SetPoint("TOPLEFT", tab1.content.collectedCount, "TOPRIGHT")
-    tab1.content.collectedSlash:SetText("/")
-    tab1.content.collectedMax = tab1.content:CreateFontString(nil, "ARTWORK", "GameFontNormal")
-    tab1.content.collectedMax:SetPoint("TOPLEFT", tab1.content.collectedSlash, "TOPRIGHT")
-    tab1.content.collectedColon = tab1.content:CreateFontString(nil, "ARTWORK", "GameFontNormal")
-    tab1.content.collectedColon:SetPoint("TOPLEFT", tab1.content.collectedMax, "TOPRIGHT")
-    tab1.content.collectedColon:SetText(":  ")
-
-    tab1.content.collected1 = tab1.content:CreateFontString(nil, "ARTWORK", "GameFontHighlight")
-    tab1.content.collected1:SetPoint("TOPLEFT", tab1.content.collectedColon, "TOPRIGHT")
-    tab1.content.collected2 = tab1.content:CreateFontString(nil, "ARTWORK", "GameFontHighlight")
-    tab1.content.collected2:SetPoint("TOPLEFT", tab1.content.collected1, "TOPRIGHT", 10,0)
-    tab1.content.collected3 = tab1.content:CreateFontString(nil, "ARTWORK", "GameFontHighlight")
-    tab1.content.collected3:SetPoint("TOPLEFT", tab1.content.collected2, "TOPRIGHT", 10,0)
-
-   --breeds & family
-    local breedsHeader = tab1.content:CreateTexture(nil, "BACKGROUND", nil, 1)
-    breedsHeader:SetHeight(20)
-    breedsHeader:SetPoint("TOPLEFT", tab1.content.collectedLbl, "TOPLEFT", 0, -30);
-    breedsHeader:SetPoint("RIGHT", tab1.content, "RIGHT", -15, 0);
-    breedsHeader:SetColorTexture(39/256, 38/256, 41/256)
+  --breeds & family
+    local detailsHeaderL = tab1.content:CreateTexture(nil, "BACKGROUND", nil, 1)
+    detailsHeaderL:SetHeight(24)
+    detailsHeaderL:SetPoint("LEFT", tab1.content, "BOTTOMLEFT", 0, 0);
+    detailsHeaderL:SetPoint("TOP", tab1.content.flavor, "BOTTOM", 0, -10);
+    detailsHeaderL:SetPoint("RIGHT", tab1.content, "RIGHT", -tab1.content:GetWidth()/2, 0);
+    detailsHeaderL:SetColorTexture(.7, .7, .7)
+    detailsHeaderL:SetGradient("HORIZONTAL", CreateColor(64/256, 64/256, 61/256, 0), CreateColor(64/256, 64/256, 61/256, 1))
+    local detailsHeaderR = tab1.content:CreateTexture(nil, "BACKGROUND", nil, 1)
+    detailsHeaderR:SetHeight(24)
+    detailsHeaderR:SetPoint("TOPLEFT", detailsHeaderL, "TOPRIGHT", 0, 0);
+    detailsHeaderR:SetPoint("RIGHT", tab1.content, "RIGHT", 0, 0);
+    detailsHeaderR:SetColorTexture(.7, .7, .7)
+    detailsHeaderR:SetGradient("HORIZONTAL", CreateColor(64/256, 64/256, 61/256, 1), CreateColor(64/256, 64/256, 61/256, 0))
 
     local familyCirclebg = tab1.content:CreateTexture(nil, "BACKGROUND", nil, 2)
-    familyCirclebg:SetPoint("TOPLEFT", breedsHeader, "TOPLEFT", -7, 10);
+    familyCirclebg:SetPoint("TOPLEFT", detailsHeaderL, "TOPLEFT", 7, 10);
     familyCirclebg:SetSize(40,40)
     familyCirclebg:SetTexture("Interface/Addons/PetCollector/textures/black64")
     tab1.content.familyIcon = tab1.content:CreateTexture(nil, "ARTWORK", nil, 3)
@@ -1144,19 +1111,23 @@ local function CreateWindow()
     tab1.content.familyIcon:SetSize(30,30)
     tab1.content.familyIcon:SetPoint("CENTER", familyCirclebg, "CENTER");
     local familyCircle = tab1.content:CreateTexture(nil, "BACKGROUND", nil, 4)
-    familyCircle:SetSize(40,40)
-    familyCircle:SetAtlas("ChallengeMode-AffixRing-Lg")
-    familyCircle:SetPoint("CENTER", familyCirclebg, "CENTER");
+    familyCircle:SetSize(67,66)
+    familyCircle:SetAtlas("talents-heroclass-ring-mainpane")
+    familyCircle:SetAlpha(.6)
+    familyCircle:SetPoint("CENTER", familyCirclebg, "CENTER", 0, -1);
+    tab1.content.familyName = tab1.content:CreateFontString(nil, "ARTWORK", "GameFontNormal")
+    tab1.content.familyName:SetPoint("LEFT", familyCircle, "RIGHT", 4, 0);
+    tab1.content.familyName:SetPoint("TOP", detailsHeaderL, "TOP", 0, -6.5);
     
     local breedsLbl = tab1.content:CreateFontString(nil, "ARTWORK", "GameFontNormal")
     breedsLbl:SetText("Possible Breeds")
-    breedsLbl:SetPoint("TOPLEFT", breedsHeader, "TOPLEFT", 60, -4)
+    breedsLbl:SetPoint("TOPLEFT", detailsHeaderR, "TOPLEFT", 75, -6.5)
 
     local healthIcon = tab1.content:CreateTexture(nil, "BACKGROUND")
     healthIcon:SetTexture("Interface\\PetBattles\\PetBattle-StatIcons")
     healthIcon:SetTexCoord(.5, 1, .5, 1)
     healthIcon:SetSize(16,16)
-    healthIcon:SetPoint("TOPLEFT", breedsHeader, "BOTTOMLEFT", 58, -5)
+    healthIcon:SetPoint("TOPLEFT", detailsHeaderR, "BOTTOMLEFT", 73, -5)
     local powerIcon = tab1.content:CreateTexture(nil, "BACKGROUND")
     powerIcon:SetTexture("Interface\\PetBattles\\PetBattle-StatIcons")
     powerIcon:SetTexCoord(0, .5, 0, .5)
@@ -1170,19 +1141,19 @@ local function CreateWindow()
     
     tab1.content.breeds = {}
     for i = 1, 10 do
-        AddBreed(breedsHeader, healthIcon, powerIcon, speedIcon, tab1.content.breeds, i)
+        AddBreed(detailsHeaderR, healthIcon, powerIcon, speedIcon, tab1.content.breeds, i)
     end
     
     local borderAlpha = .3
     local leftBorderLine = tab1.content:CreateTexture(nil, "BACKGROUND")
     leftBorderLine:SetWidth(1)
-    leftBorderLine:SetPoint("TOPLEFT", tab1.content.breeds[3].frame, "TOPLEFT", -1, 0)
+    leftBorderLine:SetPoint("TOPLEFT", tab1.content.breeds[2].frame, "TOPLEFT", -1, 0)
     leftBorderLine:SetPoint("BOTTOM", tab1.content.breeds[10].frame, "BOTTOM", 0, -8)
     leftBorderLine:SetColorTexture(.7, .7, .7)
     leftBorderLine:SetGradient("VERTICAL", CreateColor(.7, .7, .7, borderAlpha), CreateColor(.7, .7, .7, 0))
     local rightBorderLine = tab1.content:CreateTexture(nil, "BACKGROUND")
     rightBorderLine:SetWidth(1)
-    rightBorderLine:SetPoint("TOPLEFT", tab1.content.breeds[3].frame, "TOPRIGHT", 1, 0)
+    rightBorderLine:SetPoint("TOPLEFT", tab1.content.breeds[2].frame, "TOPRIGHT", 1, 0)
     rightBorderLine:SetPoint("BOTTOM", tab1.content.breeds[10].frame, "BOTTOM", 0, -8)
     rightBorderLine:SetColorTexture(.7, .7, .7)
     rightBorderLine:SetGradient("VERTICAL", CreateColor(.7, .7, .7, borderAlpha), CreateColor(.7, .7, .7, 0))
@@ -1192,85 +1163,91 @@ local function CreateWindow()
     tab1.content.bottomBorderLine:SetPoint("RIGHT", rightBorderLine, "LEFT")
     tab1.content.bottomBorderLine:SetPoint("BOTTOM", leftBorderLine, "BOTTOM")
     tab1.content.bottomBorderLine:SetColorTexture(.7, .7, .7, borderAlpha)
-                
+    local breedBg = tab1.content:CreateTexture(nil, "BACKGROUND")
+    breedBg:SetColorTexture(0,0,0)
+    breedBg:SetGradient("VERTICAL", CreateColor(0,0,0, .4), CreateColor(0,0,0, 0))
+    breedBg:SetPoint("TOPLEFT", leftBorderLine, "TOPRIGHT")
+    breedBg:SetPoint("BOTTOMRIGHT", rightBorderLine, "BOTTOMLEFT")
+
+    
+    local collectedBg = tab1.content:CreateTexture(nil, "BACKGROUND")
+    collectedBg:SetColorTexture(.3,.3,.3, .1)
+    collectedBg:SetPoint("TOP", detailsHeaderL, "BOTTOM", 0, -20)
+    collectedBg:SetPoint("LEFT", tab1.content, "Left", 15, 0)
+    collectedBg:SetPoint("RIGHT", tab1.content, "Left", tab1.content:GetWidth()/2 -10, 0)
+    collectedBg:SetHeight(20)
+    tab1.content.collectedLbl = tab1.content:CreateFontString(nil, "ARTWORK", "GameFontNormal")
+    tab1.content.collectedLbl:SetPoint("TOPLEFT", collectedBg, "TOPLEFT", 45, -5)
+    tab1.content.collectedLbl:SetText("Collected ")
+    tab1.content.collectedCount = tab1.content:CreateFontString(nil, "ARTWORK", "GameFontNormal")
+    tab1.content.collectedCount:SetPoint("TOPLEFT", tab1.content.collectedLbl, "TOPRIGHT")
+    tab1.content.collectedSlash = tab1.content:CreateFontString(nil, "ARTWORK", "GameFontNormal")
+    tab1.content.collectedSlash:SetPoint("TOPLEFT", tab1.content.collectedCount, "TOPRIGHT")
+    tab1.content.collectedSlash:SetText("/")
+    tab1.content.collectedMax = tab1.content:CreateFontString(nil, "ARTWORK", "GameFontNormal")
+    tab1.content.collectedMax:SetPoint("TOPLEFT", tab1.content.collectedSlash, "TOPRIGHT")
+
+    tab1.content.collected = tab1.content:CreateFontString(nil, "ARTWORK", "GameFontHighlight")
+    tab1.content.collected:SetPoint("TOPLEFT", collectedBg, "BOTTOMLEFT", 0, -5)
+    tab1.content.collected:SetPoint("RIGHT", collectedBg, "RIGHT")
+    tab1.content.collected:SetJustifyH("CENTER")
+        
+    local tradeableBg = tab1.content:CreateTexture(nil, "BACKGROUND")
+    tradeableBg:SetColorTexture(.3,.3,.3, .1)
+    tradeableBg:SetPoint("TOP", collectedBg, "TOP", 0, -50)
+    tradeableBg:SetPoint("LEFT", tab1.content, "Left", 20, 0)
+    tradeableBg:SetPoint("RIGHT", tab1.content, "Left", tab1.content:GetWidth()/2 -10, 0)
+    tradeableBg:SetHeight(20)
+    tab1.content.tradable = tab1.content:CreateFontString(nil, "ARTWORK", "GameFontNormal")
+    tab1.content.tradable:SetText("Tradeable")
+    tab1.content.tradable:SetPoint("TOPLEFT", tradeableBg, "TOPLEFT", 54, -5)
+    tab1.content.tradableCheck = tab1.content:CreateTexture(nil, "ARTWORK")
+    tab1.content.tradableCheck:SetAtlas("common-icon-checkmark")
+    tab1.content.tradableCheck:SetSize(14,14)
+    tab1.content.tradableCheck:SetPoint("TOPLEFT", tab1.content.tradable, "BOTTOMLEFT", 10, -10);
+    tab1.content.tradableRedX = tab1.content:CreateTexture(nil, "ARTWORK")
+    tab1.content.tradableRedX:SetAtlas("common-icon-redx")
+    tab1.content.tradableRedX:SetSize(14,14)
+    tab1.content.tradableRedX:SetPoint("TOPLEFT", tab1.content.tradableCheck, "TOPRIGHT", 10, 0);
+    
+  --abilities
+    tab1.content.ability4 = tab1.content:CreateTexture(nil, "OVERLAY")
+    tab1.content.ability4:SetPoint("BOTTOMLEFT", tab1.content, "BOTTOMLEFT", 20, 15)
+    tab1.content.ability4:SetSize(50,50)
+    tab1.content.ability5 = tab1.content:CreateTexture(nil, "OVERLAY")
+    tab1.content.ability5:SetPoint("TOPLEFT", tab1.content.ability4, "TOPRIGHT", 7, 0)
+    tab1.content.ability5:SetSize(50,50)
+    tab1.content.ability6 = tab1.content:CreateTexture(nil, "OVERLAY")
+    tab1.content.ability6:SetPoint("TOPLEFT", tab1.content.ability5, "TOPRIGHT", 7, 0)
+    tab1.content.ability6:SetSize(50,50)
+    tab1.content.ability1 = tab1.content:CreateTexture(nil, "OVERLAY")
+    tab1.content.ability1:SetPoint("BOTTOMLEFT", tab1.content.ability4, "TOPLEFT", 0, 7)
+    tab1.content.ability1:SetSize(50,50)
+    tab1.content.ability2 = tab1.content:CreateTexture(nil, "OVERLAY")
+    tab1.content.ability2:SetPoint("BOTTOMLEFT", tab1.content.ability5, "TOPLEFT", 0, 7)
+    tab1.content.ability2:SetSize(50,50)
+    tab1.content.ability3 = tab1.content:CreateTexture(nil, "OVERLAY")
+    tab1.content.ability3:SetPoint("BOTTOMLEFT", tab1.content.ability6, "TOPLEFT", 0, 7)
+    tab1.content.ability3:SetSize(50,50)
+
     tab1.content.cannotBattleLbl = tab1.content:CreateFontString(nil, "ARTWORK", "GameFontNormal")
-    tab1.content.cannotBattleLbl:SetPoint("TOPLEFT", tab1.content.collectedColon, "TOPRIGHT", 0, 0)
+    tab1.content.cannotBattleLbl:SetPoint("TOPLEFT", tradeableBg, "BOTTOMLEFT", 0, -75)
+    tab1.content.cannotBattleLbl:SetPoint("RIGHT", tradeableBg, "RIGHT")
+    tab1.content.cannotBattleLbl:SetJustifyH("CENTER")
     tab1.content.cannotBattleLbl:SetText("This pet cannot battle")
 
-   --abilities    
-    local abilitiesLbl = tab1.content:CreateFontString(nil, "ARTWORK", "GameFontNormal")
-    abilitiesLbl:SetText("Abilities")
-    abilitiesLbl:SetPoint("TOPLEFT", breedsLbl, "TOPLEFT", 192.5, 0)
-
-    tab1.content.abilitiesFrame = CreateFrame("FRAME", nil, tab1.content)
-    tab1.content.abilitiesFrame:SetPoint("TOPRIGHT", breedsHeader, "BOTTOMRIGHT", 30, -10)
-    tab1.content.abilitiesFrame:SetSize(191, 105)
-    tab1.content.abilitiesCol1 = CreateFrame("BUTTON", nil, tab1.content.abilitiesFrame)
-    tab1.content.abilitiesCol1:SetNormalAtlas("PetJournal-PetCard-Abilities")
-    tab1.content.abilitiesCol1:SetPoint("TOPLEFT", tab1.content.abilitiesFrame, "TOPLEFT")
-    tab1.content.abilitiesCol1:SetSize(57, 105)
-    tab1.content.ability1 = tab1.content.abilitiesCol1:CreateTexture(nil, "OVERLAY")
-    tab1.content.ability1:SetPoint("TOPLEFT", tab1.content.abilitiesCol1, "TOPLEFT", 11, -12)
-    tab1.content.ability1:SetSize(34,34)
-    tab1.content.ability1Border = CreateFrame("BUTTON", nil, tab1.content.abilitiesFrame)
-    tab1.content.ability1Border:SetNormalAtlas("Adventures-Spell-Border")
-    tab1.content.ability1Border:SetPoint("TOPLEFT", tab1.content.abilitiesCol1, "TOPLEFT", 8, -9)
-    tab1.content.ability1Border:SetSize(41,40)
-    tab1.content.ability4 = tab1.content.abilitiesCol1:CreateTexture(nil, "OVERLAY")
-    tab1.content.ability4:SetPoint("TOPLEFT", tab1.content.abilitiesCol1, "TOPLEFT", 11, -60)
-    tab1.content.ability4:SetSize(34,34)
-    tab1.content.ability4Border = CreateFrame("BUTTON", nil, tab1.content.abilitiesFrame)
-    tab1.content.ability4Border:SetNormalAtlas("Adventures-Spell-Border")
-    tab1.content.ability4Border:SetPoint("TOPLEFT", tab1.content.abilitiesCol1, "TOPLEFT", 8, -57)
-    tab1.content.ability4Border:SetSize(41,40)
-    tab1.content.abilitiesCol2 = CreateFrame("BUTTON", nil, tab1.content.abilitiesFrame)
-    tab1.content.abilitiesCol2:SetNormalAtlas("PetJournal-PetCard-Abilities")
-    tab1.content.abilitiesCol2:SetPoint("TOPLEFT", tab1.content.abilitiesCol1, "TOPRIGHT", -5, 0)
-    tab1.content.abilitiesCol2:SetSize(57, 105)
-    tab1.content.ability2 = tab1.content.abilitiesCol2:CreateTexture(nil, "OVERLAY")
-    tab1.content.ability2:SetPoint("TOPLEFT", tab1.content.abilitiesCol2, "TOPLEFT", 11, -12)
-    tab1.content.ability2:SetSize(34,34)
-    tab1.content.ability2Border = CreateFrame("BUTTON", nil, tab1.content.abilitiesFrame)
-    tab1.content.ability2Border:SetNormalAtlas("Adventures-Spell-Border")
-    tab1.content.ability2Border:SetPoint("TOPLEFT", tab1.content.abilitiesCol2, "TOPLEFT", 8, -9)
-    tab1.content.ability2Border:SetSize(41,40)
-    tab1.content.ability5 = tab1.content.abilitiesCol2:CreateTexture(nil, "OVERLAY")
-    tab1.content.ability5:SetPoint("TOPLEFT", tab1.content.abilitiesCol2, "TOPLEFT", 11, -60)
-    tab1.content.ability5:SetSize(34,34)
-    tab1.content.ability5Border = CreateFrame("BUTTON", nil, tab1.content.abilitiesFrame)
-    tab1.content.ability5Border:SetNormalAtlas("Adventures-Spell-Border")
-    tab1.content.ability5Border:SetPoint("TOPLEFT", tab1.content.abilitiesCol2, "TOPLEFT", 8, -57)
-    tab1.content.ability5Border:SetSize(41,40)
-    tab1.content.abilitiesCol3 = CreateFrame("BUTTON", nil, tab1.content.abilitiesFrame)
-    tab1.content.abilitiesCol3:SetNormalAtlas("PetJournal-PetCard-Abilities")
-    tab1.content.abilitiesCol3:SetPoint("TOPLEFT", tab1.content.abilitiesCol2, "TOPRIGHT", -5, 0)
-    tab1.content.abilitiesCol3:SetSize(57, 105)
-    tab1.content.ability3 = tab1.content.abilitiesCol3:CreateTexture(nil, "OVERLAY")
-    tab1.content.ability3:SetPoint("TOPLEFT", tab1.content.abilitiesCol3, "TOPLEFT", 11, -12)
-    tab1.content.ability3:SetSize(34,34)
-    tab1.content.ability3Border = CreateFrame("BUTTON", nil, tab1.content.abilitiesFrame)
-    tab1.content.ability3Border:SetNormalAtlas("Adventures-Spell-Border")
-    tab1.content.ability3Border:SetPoint("TOPLEFT", tab1.content.abilitiesCol3, "TOPLEFT", 8, -9)
-    tab1.content.ability3Border:SetSize(41,40)
-    tab1.content.ability6 = tab1.content.abilitiesCol3:CreateTexture(nil, "OVERLAY")
-    tab1.content.ability6:SetPoint("TOPLEFT", tab1.content.abilitiesCol3, "TOPLEFT", 11, -60)
-    tab1.content.ability6:SetSize(34,34)
-    tab1.content.ability6Border = CreateFrame("BUTTON", nil, tab1.content.abilitiesFrame)
-    tab1.content.ability6Border:SetNormalAtlas("Adventures-Spell-Border")
-    tab1.content.ability6Border:SetPoint("TOPLEFT", tab1.content.abilitiesCol3, "TOPLEFT", 8, -57)
-    tab1.content.ability6Border:SetSize(41,40)
-
-   --tab2
+ --tab2
     tab2.content.mapLbl = tab2.content:CreateFontString(nil, "ARTWORK", "GameFontHighlight")
     tab2.content.mapLbl:SetPoint("TOP", tab2.content, "TOP", 0, -10)
     tab2.content.mapLbl:SetPoint("CENTER", tab2.content)
-    tab2.content.mapLbl:SetWidth(tab2.content:GetWidth() - 30)
-    tab2.content.mapLbl:SetHeight(30)
+    tab2.content.mapLbl:SetPoint("LEFT", tab2.content, "LEFT", 45, 0)
+    tab2.content.mapLbl:SetPoint("RIGHT", tab2.content, "RIGHT", -10, 0)
 
     tab2.content.mapFrame = CreateFrame("Frame", nil, tab2.content)
     tab2.content.mapFrame:SetSize(350, 240)
-    tab2.content.mapFrame:SetPoint("TOP", tab2.content.mapLbl, "BOTTOM",0, 0)
-    tab2.content.mapFrame:SetPoint("CENTER", tab2.content)
+    tab2.content.mapFrame:SetPoint("TOP", tab2.content.mapLbl, "BOTTOM", 0, -10)
+    tab2.content.mapFrame:SetPoint("LEFT", tab2.content, "LEFT", 10, 0)
+    tab2.content.mapFrame:SetPoint("RIGHT", tab2.content, "RIGHT", -10, 0)
 	tab2.content.mapFrame:SetScript("OnMouseWheel", function(self, delta)
         local curScale = self:GetScale()
         if (delta>0) then
@@ -1367,7 +1344,8 @@ local function UpdateWindow(pet, locationIdx)
     PAPetCard.pendingLocationIdx = nil
 
     local f = PAPetCard
-    f.Title:SetText(pet.name)
+    PAPetCardTitleText:SetText(pet.name)
+    PAPetCardPortrait:SetTexture(pet.icon)
     
  --TAB 1
     f.tab1.content.flavor:SetText(pet.flavor)
@@ -1376,28 +1354,18 @@ local function UpdateWindow(pet, locationIdx)
     else
         f.tab1.content.unobtainable:Hide()
     end
-
-    if (f.tab1.content.flavor:GetHeight() <= 20) then --1line (3546)
-        f.tab1.content.flavorbgColor:SetPoint("BOTTOM", f.tab1.content.flavorbg, "BOTTOM",0, 5)
-    elseif (f.tab1.content.flavor:GetHeight() <= 40) then --2lines (39)
-        f.tab1.content.flavorbgColor:SetPoint("BOTTOM", f.tab1.content.flavorbg, "BOTTOM",0, 8)
-    elseif (f.tab1.content.flavor:GetHeight() <= 50) then  --3lines (40)
-        f.tab1.content.flavorbgColor:SetPoint("BOTTOM", f.tab1.content.flavorbg, "BOTTOM",0, 10)
-    elseif (f.tab1.content.flavor:GetHeight() <= 60) then  --4+lines (id=4288)
-        f.tab1.content.flavorbgColor:SetPoint("BOTTOM", f.tab1.content.flavorbg, "BOTTOM",0, 12)
-    else --5+lines (id=1639)
-        f.tab1.content.flavorbgColor:SetPoint("BOTTOM", f.tab1.content.flavorbg, "BOTTOM",0, 14)
-    end
     
   --tradable
     if (pet.isTradable == true) then
-        f.tab1.content.tradable:SetAlpha(1)
-        f.tab1.content.tradableLine:Hide()
-        f.tab1.content.tradableCheck:Show()
+        f.tab1.content.tradableRedX:SetAlpha(.5)
+        f.tab1.content.tradableCheck:SetAlpha(1)
+        f.tab1.content.tradableRedX:SetDesaturated(true)
+        f.tab1.content.tradableCheck:SetDesaturated(false)
     else
-        f.tab1.content.tradable:SetAlpha(.4)
-        f.tab1.content.tradableLine:Show()
-        f.tab1.content.tradableCheck:Hide()
+        f.tab1.content.tradableRedX:SetAlpha(1)
+        f.tab1.content.tradableCheck:SetAlpha(.3)
+        f.tab1.content.tradableRedX:SetDesaturated(false)
+        f.tab1.content.tradableCheck:SetDesaturated(true)
     end
   
   --model
@@ -1418,37 +1386,26 @@ local function UpdateWindow(pet, locationIdx)
         collectedCount = #pet.collected
     end
     f.tab1.content.collectedCount:SetText(collectedCount)
-    if pet.unique then
+    if pet.isUnique then
         f.tab1.content.collectedMax:SetText(1)
     else
         f.tab1.content.collectedMax:SetText(3)
     end
 
+    local collectedText = ""
     if (collectedCount > 0) then
-        SetPetColor(f.tab1.content.collected1, pet.collected[1].rarity)
-        f.tab1.content.collected1:SetText(pet.collected[1].level .. " " .. pet.collected[1].breed)
-        f.tab1.content.collected1:Show()
+        local hex = ITEM_QUALITY_COLORS[pet.collected[1].rarity -1].hex
+        collectedText = hex .. pet.collected[1].level .. " " .. pet.collected[1].breed
     end
     if (collectedCount > 1) then
-        SetPetColor(f.tab1.content.collected2, pet.collected[2].rarity)
-        f.tab1.content.collected2:SetText(pet.collected[2].level .. " " .. pet.collected[2].breed)
-        f.tab1.content.collected2:Show()
+        local hex = ITEM_QUALITY_COLORS[pet.collected[2].rarity -1].hex
+        collectedText = collectedText .. "    " .. hex .. pet.collected[2].level .. " " .. pet.collected[2].breed
     end
     if (collectedCount > 2) then
-        SetPetColor(f.tab1.content.collected3, pet.collected[3].rarity)
-        f.tab1.content.collected3:SetText(pet.collected[3].level .. " " .. pet.collected[3].breed)
-        f.tab1.content.collected3:Show()
+        local hex = ITEM_QUALITY_COLORS[pet.collected[3].rarity -1].hex
+        collectedText = collectedText .. "    " .. hex .. pet.collected[3].level .. " " .. pet.collected[3].breed
     end
-
-    if (collectedCount < 3) then
-        f.tab1.content.collected3:Hide()
-    end
-    if (collectedCount < 2) then
-        f.tab1.content.collected2:Hide()
-    end
-    if (collectedCount < 1) then
-        f.tab1.content.collected1:Hide()
-    end
+    f.tab1.content.collected:SetText(collectedText)
 
   --variants
     local checkIfVariantCollected = function(displayId, pet, ownedTexture)
@@ -1497,6 +1454,8 @@ local function UpdateWindow(pet, locationIdx)
   --family
     local famName, famIcon, famR, famG, famB = getFamilyDetails(pet.family)
     f.tab1.content.familyIcon:SetTexture("interface\\icons\\pet_type_" .. famIcon)
+    f.tab1.content.familyName:SetText(famName)
+    f.tab1.content.familyName:SetTextColor(famR, famG, famB)
 
   --possible breeds
    --reset
@@ -1523,7 +1482,7 @@ local function UpdateWindow(pet, locationIdx)
 
     if (not pet.isPassive) then
         f.tab1.content.cannotBattleLbl:Hide()
-        f.tab1.content.abilitiesFrame:Show()
+        --f.tab1.content.abilitiesFrame:Show()
         local abilities = C_PetJournal.GetPetAbilityListTable(pet.speciesID)
         if (abilities) then
             UpdateAbility(f.tab1.content.ability1, abilities[1].abilityID, pet.petType)
@@ -1535,7 +1494,12 @@ local function UpdateWindow(pet, locationIdx)
         end
     else
         f.tab1.content.cannotBattleLbl:Show()
-        f.tab1.content.abilitiesFrame:Hide()
+        f.tab1.content.ability1:Hide()
+        f.tab1.content.ability2:Hide()
+        f.tab1.content.ability3:Hide()
+        f.tab1.content.ability4:Hide()
+        f.tab1.content.ability5:Hide()
+        f.tab1.content.ability6:Hide()
     end
     
     local actualContentHeight = f.tab1.content:GetTop() - f.tab1.content.bottomBorderLine:GetBottom() +45
@@ -1566,6 +1530,7 @@ local function UpdateWindow(pet, locationIdx)
         local layers = C_Map.GetMapArtLayers(mapID)
 
         if layers and layers[1] then
+            priorBottom = mapFrame
             local layerInfo = layers[1]
 
             local textures = C_Map.GetMapArtLayerTextures(mapID,1)
@@ -1668,8 +1633,9 @@ local function UpdateWindow(pet, locationIdx)
         if (pet.locations) then
             local locationsFrame = f.tab2.content.locationsFrame
             local locationLbl = DISPLAY_UTIL:AcquireLabelFont(PAPetCard, locationsFrame)
+            local baseSeparationUnderMap = 5
             locationLbl:SetText("Locations:  ")
-            locationLbl:SetPoint("TOPLEFT", locationsFrame, "TOPLEFT")
+            locationLbl:SetPoint("TOPLEFT", locationsFrame, "TOPLEFT", 0, -baseSeparationUnderMap)
             local locationLineWidth = locationLbl:GetWidth()
             local priorLoc
             local line = 0
@@ -1691,7 +1657,7 @@ local function UpdateWindow(pet, locationIdx)
                         end
                         locationLineWidth = locationLbl:GetWidth() + loc:GetWidth()
                         loc:SetPoint("LEFT", locationLbl, "RIGHT")
-                        loc:SetPoint("TOP", locationLbl, "TOP", 0, line * locationLbl:GetHeight()*-1)
+                        loc:SetPoint("TOP", locationLbl, "TOP", 0, line * locationLbl:GetHeight()*-1 )
                     else
                         local comma = DISPLAY_UTIL:AcquireHighlightFont(PAPetCard, locationsFrame)
                         comma:SetText(", ")
@@ -1717,6 +1683,12 @@ local function UpdateWindow(pet, locationIdx)
         end
     else
         f.tab2.content.mapLbl:SetText(nil)
+    end
+
+    if (priorBottom == nil) then
+        --empty placeholder to bump things down below the portrait icon
+        priorBottom = DISPLAY_UTIL:AcquireLabelFont(PAPetCard, f.tab2.content.scrollFrame.child)
+        priorBottom:SetPoint("TOP", f.tab2.content.mapLbl, "BOTTOM", 0, -10)
     end
 
     if (pet.achievement) then
@@ -1854,7 +1826,7 @@ local function UpdateWindow(pet, locationIdx)
     if (not UTILITIES:IsEmpty(pet.npcSounds)) then
         for npcSoundIndex, npcSoundId in pairs(pet.npcSounds) do
             local soundLink = DISPLAY_UTIL:AcquireMultiValueFont(PAPetCard, f.tab3.content)
-            soundLink:SetPoint("TOPLEFT", f.tab3.content, "TOPLEFT", 30, -20 - soundNum*24)
+            soundLink:SetPoint("TOPLEFT", f.tab3.content, "TOPLEFT", 30, -45 - soundNum*24)
             soundLink:SetText("NPC ".. npcSoundIndex)
             soundLink.soundId = npcSoundId
             soundLink:SetScript("OnMouseDown", soundLinkClick)
@@ -1865,7 +1837,7 @@ local function UpdateWindow(pet, locationIdx)
         for creatureSoundIndex, creatureSound in pairs(pet.creatureSounds) do
             local soundName, soundId = getCreatureSoundDetails(creatureSound)
             local soundLink = DISPLAY_UTIL:AcquireMultiValueFont(PAPetCard, f.tab3.content)
-            soundLink:SetPoint("TOPLEFT", f.tab3.content, "TOPLEFT", 30, -20 - soundNum*24)
+            soundLink:SetPoint("TOPLEFT", f.tab3.content, "TOPLEFT", 30, -45 - soundNum*24)
             soundLink:SetText(soundName)
             soundLink.soundId = soundId
             soundLink:SetScript("OnMouseDown", soundLinkClick)

@@ -47,6 +47,11 @@ local function PetTotal_Click(checkbox)
     end
 end
 
+local function OmitDraenor_Click(checkbox)
+    PETC_Settings.omitDraenorFromTodaysEvents = checkbox:GetChecked()
+    PAMainFrameTab1.content.refreshButton:Click()
+end
+
 local function GenericCheckbox_Click(checkbox)
     SetSettingValue(checkbox.backingVariable, checkbox:GetChecked())
 end
@@ -227,6 +232,9 @@ function SETTINGS:EstablishDefaults()
     if PETC_Settings == nil then
         PETC_Settings = {}
     end
+    if (PETC_Settings.omitDraenorFromTodaysEvents == nil) then
+        PETC_Settings.omitDraenorFromTodaysEvents = false
+    end
     if (PETC_Settings.petTotal == nil) then
         PETC_Settings.petTotal = false
     end
@@ -257,7 +265,8 @@ end
 function SETTINGS:Initialize()
     local tabContent = PAMainFrameTab5.content
 
-    tabContent.petTotal = CreateCheckBoxSetting(tabContent, nil, "Show total pets collected", PetTotal_Click, "petTotal")
+    tabContent.omitDraenorFromTodaysEvents = CreateCheckBoxSetting(tabContent, nil, "Omit Draenor from Today's Events", OmitDraenor_Click, "omitDraenorFromTodaysEvents")
+    tabContent.petTotal = CreateCheckBoxSetting(tabContent, tabContent.omitDraenorFromTodaysEvents, "Show total pets collected", PetTotal_Click, "petTotal")
     tabContent.summonPet = CreateCheckBoxSetting(tabContent, tabContent.petTotal, "Summon random pet", GenericCheckbox_Click, "summonPet")
     tabContent.summonPetLimitToFaves = CreateCheckBoxSetting(tabContent, tabContent.summonPet, "Limit to only favorites", GenericCheckbox_Click, "summonPet_LimitToFaves", 1)
     tabContent.summonPetTrigger = CreateDropdownSetting(tabContent, tabContent.summonPetLimitToFaves, "When to summon a new pet", summonPetTrigger_Options, SummonPetTrigger_MenuClosed, "summonPet_Trigger", 1)

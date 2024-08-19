@@ -74,11 +74,11 @@ end
 
 local function TieIn()
 	PETC.event:RegisterEvent("ADDON_LOADED")
-	if IsAddOnLoaded("Blizzard_Collections") then
+	if C_AddOns.IsAddOnLoaded("Blizzard_Collections") then
 		TieInBliz()
 	end
 
-	if IsAddOnLoaded("Rematch") then
+	if C_AddOns.IsAddOnLoaded("Rematch") then
 		TieInRematch()
 	end
 end

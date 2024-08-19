@@ -73,6 +73,12 @@ end
 
 local function AddTask(mode, taskData)
     local method = "AddTask"
+
+    if (PETC_Settings.omitDraenorFromTodaysEvents and taskData.challenge.expansionID == 6) then
+        DEBUG:AddLine(file, method, "task: ", taskData.trigger.id, " omitting draenor task")
+        return
+    end
+
     if mode == "test" or mode == "report" then
         DEBUG:AddLine(file, method, "task: ", taskData.trigger.id, " adding due to test/report")
         local task = Task:new(taskData.trigger, taskData.challenge, taskData.rewards)
