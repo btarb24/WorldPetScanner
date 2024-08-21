@@ -181,12 +181,19 @@ PETS.all = {
         pois={
             {name="Vendors:", entries={
                 {id="", maps={
+                    {id="n63596:Audrey Burnhep", type="prof", currencies={"cgold:.05"}, mapID=84, coords={{69.4,24.4},}},
                     {id="n6367:Donni Anthania", currencies={"cgold:.4"}, type="vendor", mapID=37, coords={{44.2,53.2},}}
                 }}
             }}
         },
+        condition={
+            race="Human"
+        },
         acquisition={
             {"Purchase a %s from a vendor.", "i8487"},
+            {"Only purchasable by human characters."},
+            {"One quick way to acquire it is to create a Class Trial for a human mage. Complete the quick training session and then teleport to Stormwind."},
+            {"If purchasing from Audrey Burnhep, the pet is taught via training rather than bought like a typical vendor."},
         },
     }, 
     [44]={
@@ -400,6 +407,7 @@ PETS.all = {
         pois={
             {name="Vendors:", entries= {
                 {id="", maps={
+                    {id="n63086:Matty", type="prof", currencies={"cgold:.05"}, mapID=85, coords={{37.6,79.0},}},
                     {id="n20980:Dealer Rashaad", currencies={"cgold:.5"}, type="vendor", mapID=109, coords={{43.4,29.2}}},
                     {id="n140137:Bugcatcher Cal'yoon", currencies={"cgold:.5"}, type="vendor", mapID=862, coords={{77,15.8}}},
                     {id="n130975:Jeremiah Payson", currencies={"cgold:.5"}, type="vendor", mapID=90, coords={{67.4,44.6}}},
@@ -408,8 +416,14 @@ PETS.all = {
                 }}
             }}
         },
+        condition={
+            race="Undead"
+        },
         acquisition={
-            {"Purchase a %s from a vendor.", "i10393"}
+            {"Purchase a %s from a vendor.", "i10393"},
+            {"Only purchasable by Undead characters."},
+            {"One quick way to acquire it is to create a Class Trial for an undead mage. Complete the quick training session and then teleport to Orgrimmar."},
+            {"If purchasing from Matty, the pet is taught via training rather than bought like a typical vendor."},
         },
     }, 
     [56]={
@@ -605,13 +619,20 @@ PETS.all = {
         pois={
             {name="Vendors:", entries={
                 {id="", maps={
+                    {id="n63596:Audrey Burnhep", type="prof", currencies={"cgold:.05"}, mapID=84, coords={{69.4,24.4},}},
                     {id="n8665:Shylenai", currencies={"cgold:.5"}, type="vendor", mapID=89, coords={{64,53.2}}},
                     {id="n8665:Shylenai", currencies={"cgold:.5"}, type="vendor", mapID=84, coords={{55.8,3.6}}},
                 }}
             }}
         },
+        condition={
+            race="Night Elf"
+        },
         acquisition={
             {"Purchase a %s from a vendor.", "i8500"},
+            {"Only purchasable by night elf characters."},
+            {"One quick way to acquire it is to create a Class Trial for a human mage. Complete the quick training session and then teleport to Stormwind."},
+            {"If purchasing from Audrey Burnhep, the pet is taught via training rather than bought like a typical vendor."},
         },
     }, 
     [69]={
@@ -650,12 +671,19 @@ PETS.all = {
         pois={
             {name="Vendors:", entries={
                 {id="", maps={
+                    {id="n63086:Matty", type="prof", currencies={"cgold:.05"}, mapID=85, coords={{37.6,79.0},}},
                     {id="n8401:Halpa", currencies={"cgold:.4"}, type="vendor", mapID=88, coords={{62.8,58.4}}},
                 }}
             }}
         },
+        condition={
+            race="Tauren"
+        },
         acquisition={
             {"Purchase a %s from a vendor.", "i10394"},
+            {"Only purchasable by Tauren characters."},
+            {"One quick way to acquire it is to create a Class Trial for a tauren mage. Complete the quick training session and then teleport to Orgrimmar."},
+            {"If purchasing from Matty, the pet is taught via training rather than bought like a typical vendor."},
         },
     }, 
     [72]={
@@ -674,12 +702,19 @@ PETS.all = {
         pois={
             {name="Vendors:", entries={
                 {id="", maps={
+                    {id="n63596:Audrey Burnhep", type="prof", currencies={"cgold:.05"}, mapID=84, coords={{69.4,24.4},}},
                     {id="n1263:Yarlyn Amberstill", currencies={"cgold:.2"}, type="vendor", mapID=27, coords={{70.6,49}}},
                 }}
             }}
         },
+        condition={
+            race={"Drarf", "Gnome"}
+        },
         acquisition={
             {"Purchase a %s from a vendor.", "i8497"},
+            {"Only purchasable by dwarf and gnome characters."},
+            {"One quick way to acquire it is to create a Class Trial for a dwarf or gnome mage. Complete the quick training session and then teleport to Stormwind."},
+            {"If purchasing from Audrey Burnhep, the pet is taught via training rather than bought like a typical vendor."},
         },
     }, 
     [74]={
@@ -724,12 +759,19 @@ PETS.all = {
         pois={
             {name="Vendors:", entries={
                 {id="", maps={
+                    {id="n63086:Matty", type="prof", currencies={"cgold:.05"}, mapID=85, coords={{37.6,79.0},}},
                     {id="n8404:Xan'tish", currencies={"cgold:.475"}, type="vendor", mapID=85, coords={{32,66},{32.4,63.2},{32.4,65.2},{32.6,67},{33.6,63.8},{33.8,68},{34.2,64.6},{34.2,66.6}}},
                 }}
             }}
         },
+        condition={
+            race={"Orc", "Troll"}
+        },
         acquisition={
             {"Purchase a %s from a vendor.", "i10360"},
+            {"Only able to be purchased by Orc and Troll characters."},
+            {"One quick way to acquire it is to create a Class Trial for an orc or troll mage. Complete the quick training session and then teleport to Orgrimmar."},
+            {"If purchasing from Matty, the pet is taught via training rather than bought like a typical vendor."},
         },
     }, 
     [77]={
@@ -1736,13 +1778,20 @@ PETS.all = {
         pois={
             {name="Vendors:", entries={
                 {id="", maps={
+                    {id="n63596:Audrey Burnhep", type="prof", currencies={"cgold:.05"}, mapID=84, coords={{69.4,24.4},}},
                     {id="n21019:Sixx", mapID=103, currencies={"cgold:.5"}, type="npc", coords={{30.8,34.6}}},
                     {id="n140137:Bugcatcher Cal'yoon", mapID=862, currencies={"cgold:.5"}, type="npc", coords={{77.0,15.8}}},
                 }}
             }}
         },
+        condition={
+            race="Draenei"
+        },
         acquisition={
             {"Purchase a %s.", "i29901"},
+            {"Only purchasable by draenei characters."},
+            {"One quick way to acquire it is to create a Class Trial for a human mage. Complete the quick training session and then teleport to Stormwind."},
+            {"If purchasing from Audrey Burnhep, the pet is taught via training rather than bought like a typical vendor."},
         },
     }, 
     [139]={
@@ -1835,12 +1884,19 @@ PETS.all = {
         pois={
             {name="Vendors:", entries={
                 {id="", maps={
+                    {id="n63086:Matty", type="prof", currencies={"cgold:.05"}, mapID=85, coords={{37.6,79.0},}},
                     {id="n16860:Jilanne", mapID=94, currencies={"cgold:.4750"}, type="npc", coords={{44.8,71.6}}},
                 }}
             }}
         },
+        condition={
+            race="Blood Elf"
+        },
         acquisition={
             {"Purchase a %s.", "i29953"},
+            {"Only purchasable by blood elf characters."},
+            {"One quick way to acquire it is to create a Class Trial for a worgen mage. Complete the quick training session and then teleport to Orgrimmar."},
+            {"If purchasing from Matty, the pet is taught via training rather than bought like a typical vendor."},
         },
     }, 
     [143]={
@@ -6021,7 +6077,7 @@ PETS.all = {
             }}
         },
         acquisition={
-            {"Complete the quest to recive a %s", "i72042"},
+            {"Complete the quest to receive a %s", "i72042"},
             {"You can then buy 2 more at any pet trainer around the world."}
         },
     }, 
@@ -6044,7 +6100,7 @@ PETS.all = {
             }}
         },
         acquisition={
-            {"Complete the quest to recive a %s", "i72045"},
+            {"Complete the quest to receive a %s", "i72045"},
             {"You can then buy 2 more at any pet trainer around the world."}
         },
     }, 
@@ -9946,7 +10002,6 @@ PETS.all = {
         icon="2027878",
         npcSounds={33993},
         creatureSounds={"3_210296", "10_210299", "13_210298", "30_210301", "31_210302", "32_210303", "33_210304"},
-        note="The pet is only available if your character is a Goblin.  Creating a Class Trial character works. Choose a mage and you can port right to Orgrimmar.",
         possibleBreeds={1,2,5},
         baseStats={8.5, 8, 7.5},
         pois={
@@ -9955,6 +10010,9 @@ PETS.all = {
                     {id="n63086:Matty", type="prof", mapID=85, coords={{37.6,79.0},}}
                 }}
             }}
+        },
+        condition={
+            race="Goblin"
         },
         acquisition={
             {"Only available to Goblin characters."},
@@ -9983,8 +10041,8 @@ PETS.all = {
             }},
             {name="Vendor:", entries={
                 {id="", maps={
-                    {id="n63083:Will Larsons", type="prof", mapID=62, coords={{50.2,20.0,}}},
-                    {id="n63596:Audrey Burnhep", type="prof", mapID=84, coords={{69.4,24.4},}}
+                    {id="n63596:Audrey Burnhep", type="prof", currencies={"cgold:.05"}, mapID=84, coords={{69.4,24.4},}},
+                    {id="n63083:Will Larsons", type="prof", mapID=62, coords={{50.2,20.0,}}}
                 }}
             }}
         },
@@ -11277,6 +11335,9 @@ PETS.all = {
         possibleBreeds={1,2,10},
         baseStats={9, 7.5, 7.5},
         locations={{mapID=390, coords={{24.6,30.8},{69,44.8},}}},
+        acquisition={
+            {"Also available as a secondary pet."},
+        },
     }, 
     [753]={
         name="Garden Moth",
@@ -11292,6 +11353,9 @@ PETS.all = {
         possibleBreeds={1,7},
         baseStats={7.5, 8.5, 8},
         locations={{mapID=371, coords={{51.4,46.2},{52.4,43.4},{52.4,43.6},{52.4,44.8},{52.4,45.6},{52.8,46},{52.8,47.4},{53,43},{53,47.6},{53.2,49},{53.4,43.8},{53.6,45.2},{53.8,48.8},{54,43.2},{54,46.4},{54,47.8},{54.2,42.4},{54.6,48.8},{55.4,42.8},{56,42},{56.2,42.8},{56.6,42.4},}}},
+        acquisition={
+            {"Also available as a secondary pet."},
+        },
     }, 
     [754]={
         name="Shrine Fly",
@@ -11308,6 +11372,9 @@ PETS.all = {
         possibleBreeds={1,3,5,6,7,9,10},
         baseStats={8, 8, 8},
         locations={{mapID=371, coords={{33.4,50.6},{36.6,58.6},}}},
+        acquisition={
+            {"Also available as a secondary pet."},
+        },
     }, 
     [755]={
         name="Death's Head Cockroach",
@@ -11323,6 +11390,9 @@ PETS.all = {
         possibleBreeds={6,8},
         baseStats={9, 6.5, 8.5},
         locations={{mapID=198, coords={{25.4,36.4},{25.4,36.6},{25.6,36.4},{26,37.4},{26,37.6},{26.6,40.4},{26.8,32.6},{27,34},{27.4,35.8},{27.6,34.6},{27.8,36},{27.8,41.4},{28,40},{28.6,36},{29.4,39.6},{29.8,39.6},{30.6,39},{32.2,39.8},{42.4,21.6},{42.4,23.4},{42.4,23.6},{42.6,21.2},{42.6,21.8},{43.6,20.4},{43.8,20.8},{44,22},{44.4,19},{44.6,21.8},{45,21.2},{55,66},{56.4,67.8},{56.8,69.8},{56.8,84.8},{57.2,83},{57.4,67},{57.4,79.2},{57.6,67.2},{57.6,79.2},{57.6,83.4},{57.8,67.6},{57.8,70},{57.8,80},{58.2,82.2},{58.4,71.2},{58.6,83.4},{58.8,79.8},{59,78.4},{59.8,70.8},{60.2,73},{60.2,77.2},{60.6,80.4},}}},
+        acquisition={
+            {"Also available as a secondary pet."},
+        },
     }, 
     [756]={
         name="Fungal Moth",
@@ -11338,6 +11408,9 @@ PETS.all = {
         possibleBreeds={1,3,7},
         baseStats={8.5, 7, 8.5},
         locations={{mapID=207, coords={{21.2,47.2},{21.6,49.6},{21.8,49.4},{22,47.2},{22.8,48},{23.4,44.2},{23.4,44.6},{23.4,47},{23.8,48},{24,50.4},{24.2,51.2},{24.4,45},{25.8,42},{27.6,29.8},{28.8,36.8},{66.6,68.2},{66.6,70.4},{66.6,70.6},{67.8,25},{68,67.8},{68,68.6},{68.4,24.2},{68.6,25},{69.4,24.2},{69.4,69.8},{70.2,59},{70.4,63.6},{70.6,60.8},{70.6,63.6},{70.8,65.4},{71,58.4},{71,60},{71,62},{71,70.8},{71.6,65.8},{72,57.8},{72.4,28.4},{72.4,61},{72.8,60.6},{72.8,65.4},{72.8,65.6},{73,60},{73.2,25.8},{73.2,28.6},{73.4,62.8},{73.6,62.6},{73.8,27.8},{73.8,64.4},{73.8,65.4},{74,58.8},{74.6,68.8},{74.8,27.8},}}},
+        acquisition={
+            {"Also available as a secondary pet."},
+        },
     }, 
     [757]={
         name="Tiny Green Dragon",
@@ -11354,6 +11427,9 @@ PETS.all = {
         promotion="iCoke China",
         possibleBreeds={3},
         baseStats={8.5, 8, 7.5},
+        acquisition={
+            {"This pet was first given to players in China as part of an iCoke promotionin 2008."},
+        },
     }, 
     [758]={
         name="Tiny Red Dragon",
@@ -11370,6 +11446,9 @@ PETS.all = {
         promotion="iCoke China",
         possibleBreeds={6},
         baseStats={7.5, 8.5, 8},
+        acquisition={
+            {"This pet was first given to players in China as part of an iCoke promotionin 2008."},
+        },
     }, 
     [792]={
         name="Jade Crane Chick",
@@ -11385,9 +11464,19 @@ PETS.all = {
         creatureSounds={"1_26830", "2_26831", "3_26834", "4_26835", "6_26832", "9_313", "10_26829", "13_26833", "30_26836"},
         possibleBreeds={1,10},
         baseStats={8, 8.5, 7.5},
-        locations={
-            {continent="Eastern Kingdoms", zone="Stormwind City", mapID=1637, mapFloor=1, coords={{69.6,24.4},{52.7,58.8},}},
-            {continent="Kalimdor", zone="Orgrimmar"}
+        pois={
+            {name="Vendor:", entries={
+                {id="", maps={
+                    {id="n63596:Audrey Burnhep",faction="a", type="prof", currencies={"cgold:.05"}, mapID=84, coords={{69.4,24.4},}},
+                    {id="n63086:Matty", faction="h", type="prof", currencies={"cgold:.05"}, mapID=85, coords={{37.6,79.0},}},
+                }}
+            }}
+        },
+        race="Pandaren",
+        acquisition={
+            {"Only purchasable by pandaren characters."},
+            {"One quick way to acquire it is to create a Class Trial for a pandaren mage. Complete the quick training session and then teleport to either Stormwind or Orgrimmar."},
+            {"The pet is taught via training rather than bought like a typical vendor."},
         },
     }, 
     [802]={
@@ -11403,16 +11492,9 @@ PETS.all = {
         creatureSounds={"1_32292", "2_32291", "3_32288", "4_32287", "6_32290", "10_32293", "13_32289", "19_32294"},
         possibleBreeds={2},
         baseStats={8.5, 8.5, 7},
-        locations={
-            {continent="", zone="unknown-Undercity", mapID=90, coords={{69.6,43.4},}},
-            {continent="", zone="unknown-Stormwind City", mapID=84, coords={{64.6,76.8},}},
-            {continent="", zone="unknown-Ironforge", mapID=87, coords={{36.6,84.6},}},
-            {continent="", zone="unknown-Orgrimmar", mapID=85, coords={{48.2,75.6},}},
-            {continent="", zone="unknown-Thunder Bluff", mapID=88, coords={{37.6,62.8},}},
-            {continent="", zone="unknown-Darnassus", mapID=89, coords={{64.6,37.6},}},
-            {continent="", zone="unknown-Silvermoon City", mapID=110, coords={{78.2,85},}},
-            {continent="", zone="unknown-The Exodar", mapID=103, coords={{53.6,70.6},}},
-            {continent="", zone="unknown-Shattrath City", mapID=111, coords={{58.6,46.6},}}
+        acquisition={
+            {"This was formerly available via a guild achievement, but that was removed from the game at the end of Mists of Pandaria."},
+            {"It is now only available as a very low chance to drop as %s in %s.", "i85513", "i169430"},
         },
     }, 
     [817]={
@@ -11425,12 +11507,14 @@ PETS.all = {
         source="Pet Battle",
         flavor="So cute, yet so epic.",
         icon="646018",
-        reputation="Order of the Cloud Serpent (Exalted)",
+        reputation={type="Order of the Cloud Serpent", level="Exalted"},
         npcSounds={17637},
-        note="This will only spawn in the world for pet battle if you have the exalted rep.",
         possibleBreeds={5},
         baseStats={8.5, 8, 7.5},
         locations={{mapID=371, coords={{51.8,43.8},{51.8,45.6},{52,46.8},{52.4,42.8},{52.4,44.8},{52.6,47.2},{52.8,43.6},{52.8,48.4},{52.8,48.6},{53.4,43},{53.4,45.8},{53.6,41.8},{53.6,43.6},{53.8,47.8},{54.2,49},{54.4,42.6},{54.4,46.4},{54.6,44},{54.6,45.2},{54.8,47.2},{55,42},{55,47.6},{55.4,42.6},{55.4,45.6},{55.8,45.4},{56.2,47},{56.2,48.4},{56.2,48.6},{56.4,41.4},{56.4,41.6},{56.4,42.6},{56.4,46.4},{56.6,43.8},{56.6,45.6},{56.6,47.8},{56.8,41.4},{56.8,49.2},{57,44.6},{57.2,41.8},{57.2,43},{57.2,47.2},{57.6,47.8},{57.6,49},{57.8,45.6},{58,45},{58.2,43.8},}}},
+        acquisition={
+            {"This will only spawn in the world for pet battle if you have an exalted reputation with the Order of the Cloud Serpent."},
+        },
     }, 
     [818]={
         name="Wild Golden Hatchling",
@@ -11442,12 +11526,14 @@ PETS.all = {
         source="Pet Battle",
         flavor="The offspring of Tsulong, hidden away before the corruption of the Sha had fully taken hold of the Terrace of Endless Spring.",
         icon="652138",
-        reputation="Order of the Cloud Serpent (Exalted)",
+        reputation={type="Order of the Cloud Serpent", level="Exalted"},
         npcSounds={17637},
-        note="This will only spawn in the world for pet battle if you have the exalted rep.",
         possibleBreeds={6},
         baseStats={8, 8.5, 7.5},
         locations={{mapID=371, coords={{51.8,43.8},{51.8,45.6},{52,46.8},{52.4,42.8},{52.4,44.8},{52.6,44.8},{52.6,47.2},{52.8,43.6},{52.8,48.4},{52.8,48.6},{53.4,43},{53.4,45.8},{53.6,41.8},{53.6,43.6},{53.8,47.8},{54.2,49},{54.4,42.6},{54.4,46.4},{54.6,44},{54.6,45.2},{54.8,47.2},{55,42},{55.4,42.6},{55.4,45.6},{55.4,48.2},{55.8,45.4},{56.2,47},{56.2,48.4},{56.2,48.6},{56.4,41.4},{56.4,41.6},{56.4,42.6},{56.4,46.4},{56.6,47.8},{56.8,41.4},{56.8,43.8},{56.8,46.4},{56.8,49.2},{57,44.6},{57.2,41.8},{57.2,43},{57.4,46.8},{57.6,47.8},{57.6,49},{57.8,45.6},{58,44.8},{58.2,43.8},}}},
+        acquisition={
+            {"This will only spawn in the world for pet battle if you have an exalted reputation with the Order of the Cloud Serpent."},
+        },
     }, 
     [819]={
         name="Wild Crimson Hatchling",
@@ -11459,12 +11545,14 @@ PETS.all = {
         source="Pet Battle",
         flavor="It's red, so it must fly faster.",
         icon="630863",
-        reputation="Order of the Cloud Serpent (Exalted)",
+        reputation={type="Order of the Cloud Serpent", level="Exalted"},
         npcSounds={17637},
-        note="This will only spawn in the world for pet battle if you have the exalted rep.",
         possibleBreeds={3},
         baseStats={7.5, 8.5, 8},
         locations={{mapID=371, coords={{51.8,43.8},{51.8,45.6},{52,46.8},{52.4,42.8},{52.4,44.8},{52.6,47.2},{52.8,43.6},{52.8,48.4},{52.8,48.6},{53.4,43},{53.4,45.8},{53.6,41.8},{53.8,47.8},{54.2,49},{54.4,42.6},{54.4,46.4},{54.6,44},{54.6,45.2},{54.8,47.2},{55,42},{55.4,42.6},{55.4,45.6},{55.4,48.2},{55.8,41.6},{55.8,45.4},{55.8,45.6},{56.2,47},{56.2,48.4},{56.2,48.6},{56.4,41.4},{56.4,42.6},{56.6,44},{56.6,45.6},{56.6,47.8},{56.8,41.4},{56.8,49.2},{57,44.6},{57.2,41.6},{57.2,43},{57.2,47.2},{57.6,47.8},{57.6,48.8},{57.8,45.6},{58,45},{58.2,43.8},}}},
+        acquisition={
+            {"This will only spawn in the world for pet battle if you have an exalted reputation with the Order of the Cloud Serpent."},
+        },
     }, 
     [820]={
         name="Singing Cricket",
@@ -11477,9 +11565,12 @@ PETS.all = {
         flavor="Known to feast on the tasty plants in Krasarang Wilds.",
         icon="646325",
         npcSounds={33988},
-        achievement={name="Pro Pet Mob", ID=6582},
+        achievement={id="a6582"},
         possibleBreeds={10},
         baseStats={8, 8, 8},
+        acquisition={
+            {"Level 75 pets to 25 and to earn the achievement and receive the pet automatically in your journal."},
+        },
     }, 
     [821]={
         name="Feral Vermling",
@@ -11493,10 +11584,12 @@ PETS.all = {
         icon="646445",
         npcSounds={33576},
         creatureSounds={"1_28780", "2_28779", "3_28775", "4_28774", "6_28778", "9_8", "10_28781", "13_28776"},
-        achievement={name="Going to Need More Leashes", ID=7500},
+        achievement={id="a7500"},
         possibleBreeds={9},
         baseStats={8, 8, 8},
-        locations={{continent="Zandalar", zone="Dazar'alor", mapID=1165, coords={{57.2,31.4},{57.2,31.8},}}},
+        acquisition={
+            {"Collect 250 unique pets to earn the achievement and receive the pet automatically in your journal."},
+        },
     }, 
     [823]={
         name="Highlands Skunk",
@@ -11512,6 +11605,9 @@ PETS.all = {
         possibleBreeds={1,3,7,10},
         baseStats={8, 8, 8},
         locations={{mapID=241, coords={{24,19.8},{42.4,37.4},{42.4,37.6},{43.4,38.4},{43.4,38.6},{44,38.6},{44.2,38.4},{45.4,31},{46.2,23.2},{46.2,25},{46.2,29.4},{46.6,30.2},{46.8,39.6},{47.8,24.6},{49,33.4},{49.2,24.6},{49.6,34.4},{50,32.2},{50.6,35.6},{50.8,30.4},{50.8,30.6},{52,34.8},{52.8,34.2},{53,34.6},{53.4,31.8},{53.6,31.2},{53.6,31.8},{54.2,28.8},{55,26.4},{55,26.6},{56,67.2},{56,67.6},{57.2,76.4},{57.2,76.6},{57.6,69},{57.8,73.6},{58,73.4},{58.8,67.6},{59,67.2},{59.2,41.4},{59.2,41.6},{59.2,44},{61,42.2},{64,57.8},{65.2,56.4},{65.6,53.4},{65.8,53.6},{66.4,56.4},{66.4,56.6},{66.4,58.8},{68.6,69.6},{69.6,68.6},{69.8,66},{70.2,63.6},{70.4,63.4},{71,67.8},{72.2,65.4},{72.2,65.6},{72.2,72.4},{72.2,72.6},{72.8,68.4},{72.8,68.6},{74.4,65.8},{74.4,69.4},{74.4,69.6},}}},
+        acquisition={
+            {"Also available as a secondary pet."},
+        },
     }, 
     [834]={
         name="Grinder",
@@ -11526,7 +11622,17 @@ PETS.all = {
         npcSounds={33658},
         possibleBreeds={5},
         baseStats={8.5, 8, 7.5},
-        locations={{mapID=422, coords={{71.8,31.6},}}},
+        pois={
+            {name="Npc drop:", entries={
+                {id="", maps={
+                    {id="n50347:Karr the Darkener", mapID=422, chance=8, type="boss", coords={{71.8,37.6}}},
+                }}
+            }}
+        },
+        acquisition={
+            {"Kill %s for a chance to receive a %s", "n50347:Karr the Darkener", "i86564"},
+            {"It's reported that Karr has roughly a 1 to 2 hour spawn timer."},
+        },
     }, 
     [835]={
         name="Hopling",
@@ -11540,9 +11646,25 @@ PETS.all = {
         icon="594273",
         npcSounds={33576},
         creatureSounds={"1_28780", "2_28779", "3_28775", "4_28774", "6_28778", "9_8", "10_28781", "13_28776"},
-        achievement={name="Ling-Ting's Herbal Journey", ID=6402},
+        achievement={id="a6402"},
         possibleBreeds={3},
         baseStats={8, 8, 8},
+        pois={
+            {name="Npcs:", entries={
+                {id="", maps={
+                    {id="n59824:Golden Hopling", mapID=439, type="dot", coords={{16.4,58.4},{16.4,58.8},{16.6,58.2},{16.6,58.8},{16.8,58.8},{18,55.4},{18.2,55.4},{18.2,55.6},{18.4,56},{19,73.2},{19,73.6},{19.2,72.4},{19.2,73},{20.2,56.4},{20.2,56.8},{20.4,57},{20.6,56.2},{21.2,79.4},{21.2,79.8},{21.4,57},{21.4,57.6},{21.4,80.6},{22.2,80.4},{22.2,87},{22.2,87.6},{22.6,86.8},{23,70.4},{23,70.6},{23.2,76.4},{23.2,76.6},{23.4,77.8},{23.6,65.2},{23.6,77.2},{23.6,78.4},{23.6,78.8},{24,87.4},{24.2,88},{24.8,79.4},{24.8,79.6},{25.2,77},{25.6,76.4},{25.6,76.8},{27.4,69.2},{27.4,69.6},{27.6,70.2},{27.6,70.6},{28.8,67.8},{29,70},{29.4,69.4},{29.6,69},{30.6,80.4},{31.2,80.8},{31.8,86.6},{32.2,86.4},{33.4,66.2},{33.4,67.2},{33.6,66.8},{34.6,71.4},{34.8,72.2},{34.8,72.6},{35.4,42.4},{35.4,42.6},{35.6,42.4},{35.8,42.4},{35.8,42.6},{36,45.2},{36.4,44.2},{36.8,43.8},{37,83.4},{37,83.6},{37.4,42.8},{37.8,42.4},{37.8,42.6},{39,45.6},{39.2,45.4},{39.2,62.8},{39.4,62.8},{39.4,63.6},{39.6,62.8},{39.6,63.8},{39.8,63.8},{40.8,70.4},{41,70.6},{41,72.6},{41.4,41.4},{41.4,41.6},{41.4,62.4},{41.4,71.8},{41.4,72.2},{41.6,71.8},{41.8,41.4},{41.8,41.6},{41.8,62.6},{42.2,62.2},{42.2,62.6},{43.2,42.8},{43.2,60.4},{43.6,43.6},{43.8,42.8},{44.2,70},{44.4,69.2},{44.6,43.2},{44.6,69.2},{44.8,68.4},{44.8,69},{45,43.6},{45.2,66.8},{45.6,42.8},{45.8,42.2},{48.4,42.2},{48.6,42.4},{49,60.8},{49.2,60.4},{49.4,43.6},{49.8,43.6},{49.8,60.4},{50,43.4},{51.4,43.8},{51.6,44.6},{51.8,44},{52.2,55.4},{52.2,55.8},{52.6,56},{52.8,55.2},{53.2,44.4},{53.4,44.8},{54.4,46.2},{54.6,46.6},{55.4,52.4},{55.4,52.6},{55.6,52.4},{55.6,52.6},{55.8,47},{57,50.4},{57,50.8},{57.2,50.2},{57.6,51},{64.2,34.6},{64.4,34.4},{64.4,34.6},{64.6,34.4},{64.6,34.6},{67.4,37.2},{67.4,38},{67.6,37.8},{68.2,54.8},{68.4,54.4},{69.8,49.8},{70.2,53.8},{70.4,31},{70.6,31},{70.8,55.2},{71,55.2},{71,55.6},{71.8,31.8},{73,39.4},{73,39.8},{74,50.2},{74,50.6},{74.2,50.4},{75.2,33.2},{75.2,35.4},{75.2,51.2},{75.2,51.8},{75.4,29},{75.4,29.6},{75.4,35.4},{75.4,35.6},{75.4,37},{75.4,51.6},{75.6,29.8},{75.6,35.2},{75.6,35.4},{75.6,35.6},{75.6,51.4},{75.8,28.4},{75.8,28.6},{76,36.6}}},
+                    {id="n59824:Golden Hopling", mapID=440, type="dot", coords={{32.4,49.8},{32.6,49.6},{33,44.2},{33,44.4},{33,44.6},{33,49},{37.8,37.8},{38,36.8},{38.2,36.4},{38.2,37.4},{40.2,74.6},{40.4,74.2},{40.6,74.2},{40.8,73.4},{40.8,74.2},{41.6,71.8},{43,74.4},{43,75},{48.4,72.2},{48.4,72.6},{48.6,72},{50,70},{50.2,70.6},{50.6,70},{58.4,33.2},{58.4,33.8},{58.6,33.2},{58.6,33.6},{60.8,22.8},{60.8,60.2},{63.4,61},{63.6,61.8},{67.4,71.4},{67.4,71.8},{67.4,72.2},{67.4,72.6},{67.6,71.4},{67.6,71.6},{67.6,72.6},{68.2,24.8},{68.4,24.4},{68.6,24.2},{68.6,24.6},{69.6,34.8},{69.8,34.2},{71.4,78.6},{71.6,78.4},{71.6,78.6},{72.4,50.8},{72.4,51.2},{72.6,50.8},{72.6,51.2},{72.6,51.6},{74.4,64.2},{75,64.4},{76.6,75.8},{77,75.4},{87.4,80.8},{87.6,80.2},{87.8,73.4},{87.8,73.8},{87.8,80.6},{88.8,50.8}}},
+                    {id="n59824:Golden Hopling", mapID=441, type="dot", coords={{12,60.4},{12,60.8},{12.2,61},{15.4,81.2},{15.4,81.4},{15.4,81.6},{15.6,81},{15.6,81.4},{15.6,81.6},{19.4,48.2},{19.4,48.4},{19.4,48.6},{19.6,48.4},{19.6,48.8},{19.8,48.4},{19.8,48.8},{23,46.4},{23,46.8},{26.4,45.2},{26.6,45.4},{26.6,45.6},{26.8,45.2},{26.8,45.8},{30,85},{30,85.2},{30,85.8},{33.8,79.2},{33.8,79.6},{34,79.8},{37.4,32.4},{37.4,32.8},{37.6,32.4},{37.8,32.6},{39.4,32.6},{39.8,31.4},{40,31.6},{40.8,40},{40.8,40.2},{42,25.4},{42,25.6},{42.2,25.4},{42.4,29},{42.6,28.4},{42.6,29},{42.8,28.6},{54.8,24.4},{55,24.8},{55.2,16.2},{55.4,17},{55.6,16.6},{57.2,30},{57.4,29.4},{57.4,37.2},{57.4,37.4},{57.4,37.8},{57.6,29.6},{57.6,37},{57.8,37.6},{58.4,35.4},{58.4,35.6},{58.6,35.4},{58.6,35.6},{59.6,49.6},{61,56.4},{61.2,56.6},{61.4,27.2},{61.4,28},{61.6,27.4},{61.6,27.8},{62,61.4},{62,61.6},{62.4,34.8},{62.8,34.8},{63,34.4},{63,35},{63,66.2},{63.6,68.2},{65.4,72.4},{65.4,72.6},{65.6,72.4},{65.6,72.8},{67.4,33.6},{67.6,33.6},{67.8,33.2},{67.8,33.4},{69.4,34.2},{69.4,34.6},{69.6,33.8},{69.6,34.6},{71.4,40.8},{71.8,41},{72.4,43},{72.6,42.8},{72.8,42.2},{73.2,47.6},{73.2,48.6},{73.4,47.4},{73.6,47.2},{73.6,47.6},{76.4,37.4},{76.4,37.6},{76.6,37.4},{76.6,37.6},{85.4,31.4},{85.4,31.6},{85.6,31.6},{88.4,31.4},{88.4,31.8},{88.4,49.6},{88.6,31.4},{88.6,31.8},{88.6,49.2},{88.6,49.6},{90.8,45.4},{91.2,46.6},{91.4,46},{91.6,46.2}}},
+                    {id="n59824:Golden Hopling", mapID=442, type="dot", coords={{32.4,68},{34,32},{36.6,30.8},{43.4,79.4},{47.8,52.2},{48.4,50.2},{49,50.4},{49,52.2},{49,54},{49.2,50.6},{49.4,49.4},{49.4,52.8},{49.6,50.2},{49.6,50.4},{49.6,50.6},{49.8,25},{49.8,53.6},{52.6,24.4},{56.4,27.8},{60.4,80.4},{60.8,80.8}}},
+                }}
+            }}
+        },
+        acquisition={
+            {"Find all 30 %s in the Stormstout Brewery to complete the achievement and receive a %s in the mail.", "n59824:Golden Hopling", "i86562"},
+            {"Turning on nameplates makes them easier to notice. Default keybind is SHIFT+V"},
+            {"Creating a macro can also help.  /tar Golden Hopling"},
+            {"You could also eat a %s to gain the Track Humanoids buff.", "i42997"}
+        },
     }, 
     [836]={
         name="Aqua Strider",
@@ -11557,7 +11679,17 @@ PETS.all = {
         npcSounds={33989},
         possibleBreeds={3},
         baseStats={7.5, 7, 9.5},
-        locations={{mapID=422, coords={{64.2,58.6},}}},
+        pois={
+            {name="Npc drop:", entries={
+                {id="", maps={
+                    {id="n50776:Nalash Verdantis", mapID=422, chance=8, type="boss", coords={{64.2,58.6}}},
+                }}
+            }}
+        },
+        acquisition={
+            {"Kill %s for a chance to receive a %s", "n50776:Nalash Verdantis", "i86563"},
+            {"It's reported that Karr has roughly a 30 minute to 2 hours spawn timer."},
+        },
     }, 
     [837]={
         name="Emerald Shale Hatchling",
@@ -11573,6 +11705,9 @@ PETS.all = {
         possibleBreeds={1,2,3,4,5,6,7,8,9,10},
         baseStats={8.5, 8, 7.5},
         locations={{mapID=207, coords={{29.4,49},{29.6,48.8},{29.8,45.8},{30.4,47.4},{30.4,47.6},{30.6,47.2},{31,48.6},{31.4,48.4},{31.4,79.4},{31.4,79.6},{31.6,79.8},{31.6,81.2},{32.4,84.2},{32.6,83.8},{33,78},{33,79.4},{33,79.6},{33.4,83},{33.6,78.4},{33.6,78.6},{34,82.4},{34,82.6},{34.4,71.4},{34.4,73.8},{34.4,76.4},{34.4,76.6},{34.6,71},{34.6,78},{34.8,83.4},{35,78.6},{35,83.6},{35.2,73.4},{35.2,73.6},{35.2,74.6},{35.4,71.6},{35.6,71.6},{35.6,77.8},{35.6,78.8},{35.6,82},{35.8,72.6},{35.8,75.4},{36,84.2},{36.4,81.4},{36.6,81.4},{37.4,80},{37.6,78.6},{37.6,80},{37.8,78.4},{37.8,84.2},{38,80.6},{39.4,79.6},{39.8,86.2},{40,79.6},{40.4,88.4},{40.8,86.6},{41.2,85.8},{42,86.6},{42.2,86.4},{43,45},{43.4,44.4},{43.4,89},{43.6,45.8},{44,44.4},{44,44.6},{44,89.4},{44.2,84.4},{44.2,89.6},{44.8,83.4},{44.8,89.4},{44.8,89.6},{45,40.8},{45,83.6},{45.2,80.4},{45.2,87.2},{45.4,42.2},{45.4,80.6},{45.4,87.6},{45.6,86.6},{45.8,79.8},{45.8,85},{45.8,88},{46,42.2},{46,43.4},{46.4,82.4},{46.4,82.6},{46.4,85.8},{46.6,80.4},{46.6,82.4},{46.6,85.8},{47,83.4},{47,83.6},{47,86.8},{47.2,84.6},{48.2,86},{59.2,43.8},{59.6,42},{59.8,46.8},{60.4,43.2},{60.4,44.8},{60.4,45.8},{60.4,48.6},{60.6,43.4},{60.6,44.8},{60.6,48.6},{60.8,46.4},{60.8,48},{61,46.8},{61.2,44},}}},
+        acquisition={
+            {"Also available as a secondary pet."},
+        },
     }, 
     [838]={
         name="Amethyst Shale Hatchling",
@@ -11591,6 +11726,9 @@ PETS.all = {
             {mapID=207, coords={{41,46.6},{44,83.4},{45.8,60.2},{46.2,61.6},{46.4,42.6},{52,60.8},{52.2,63},{52.6,43.8},{52.8,37.4},{54.4,14.2},{54.8,14.6},{55.6,13.2},{56,42.8},{56,56.2},{56.4,13.8},{56.8,12.8},{56.8,54.8},{57,14.2},{57.2,12.2},{57.2,47.6},{57.2,53.8},{57.4,11},{58.4,13.4},{58.6,46.8},{58.8,13.8},{59,12.6},{59.6,14.6},{66.2,69.8},{69.6,35.6},{69.8,32.2},{71.2,46},{71.4,63},{71.6,62.8},{72,64},{73.6,64.4},{74.4,51.2},{74.6,51.2},}},
             {mapID=66, coords={{27.8,57},{27.8,57.8},{28.8,53.4},{29,61.4},{29,62},{29.2,56},{29.4,55.2},{29.4,56.8},{29.4,57.6},{29.4,58.6},{29.6,55.2},{29.6,57.4},{29.6,58.4},{29.6,61.2},{30,59.2},{30.4,59.6},{30.8,60.2},}}
         },
+        acquisition={
+            {"Also available as a secondary pet in Deepholm."},
+        },
     }, 
     [844]={
         name="Mechanical Pandaren Dragonling",
@@ -11606,7 +11744,20 @@ PETS.all = {
         creatureSounds={"3_34622", "4_34622", "6_34623"},
         possibleBreeds={3},
         baseStats={8, 8.5, 7.5},
-        locations={{continent="Zandalar", zone="Dazar'alor", mapID=1165, coords={{57.8,32.8},}}},
+        professionDetail={
+            profession="Engineering",
+            desc="Pandaria 50",
+            recipe=127135,
+            materials= {
+                {qty=4, id=72096},
+                {qty=6, id=72095},
+                {qty=2, id=76061},
+            }
+        },
+        acquisition={
+            {"The recipe can be learned from many Engineering trainers."},
+            {"Both the crafted %s and the caged pet are tradeable.", "i87526"},
+        },
     }, 
     [845]={
         name="Jade Owl",
@@ -11621,6 +11772,19 @@ PETS.all = {
         npcSounds={25458},
         possibleBreeds={1,6,8},
         baseStats={8, 8, 8},
+        professionDetail={
+            profession="Jewelcrafting",
+            desc="Pandaria 75",
+            recipe=131897,
+            materials= {
+                {qty=3, id=76139},
+                {qty=3, id=76061}
+            }
+        },
+        acquisition={
+            {"The %s recipe is Bind on Pickup and has extremely low drop rates from a couple time-restricted sources. The auction house price is rather cheap so it's hard to justify the recipe grind.", "i90470"},
+            {"Both the crafted %s and the caged pet are tradeable.", "i82774"},
+        },
     }, 
     [846]={
         name="Sapphire Cub",
@@ -11635,6 +11799,19 @@ PETS.all = {
         npcSounds={24110},
         possibleBreeds={3},
         baseStats={6, 8, 10},
+        professionDetail={
+            profession="Jewelcrafting",
+            desc="Pandaria 75",
+            recipe=131898,
+            materials= {
+                {qty=3, id=76138},
+                {qty=3, id=76061}
+            }
+        },
+        acquisition={
+            {"The %s recipe is Bind on Pickup and has extremely low drop rates from a couple time-restricted sources. The auction house price is rather cheap so it's hard to justify the recipe grind.", "i90471"},
+            {"Both the crafted %s and the caged pet are tradeable.", "i82775"},
+        },
     }, 
     [847]={
         name="Fishy",
@@ -11649,7 +11826,20 @@ PETS.all = {
         npcSounds={33990},
         possibleBreeds={10},
         baseStats={8, 8, 8},
-        locations={{mapID=371, coords={{28,47},{58.8,81.6},}}},
+        pois={
+            {name="Quests:", entries={
+                {id="q29905:Let Them Burn", faction="a", maps={
+                    {id="n60970:Admiral Taylor", faction="a", mapID=371, type="start", coords={{58.8,81.6}}},
+                }},
+                
+                {id="q31239:What's in a Name Name?", faction="h", maps={
+                    {id="n56336:Chief Kah Kah", faction="h", mapID=371, type="start", coords={{28.0,47.0}}},
+                }}
+            }}
+        },
+        acquisition={
+            {"Complete the quest to receive a %s", "i84105"},
+            {"Both of these are part of the a long storyline. For alliance it is quest 37 in the story and for the horde it is quest 18."}        },
     }, 
     [848]={
         name="Darkmoon Rabbit",

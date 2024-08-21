@@ -941,6 +941,7 @@ local function CreateWindow()
     tab3:SetPoint("TOPLEFT", tab2, "BOTTOMRIGHT", -32, -10)
 
  --tab1
+  --model Frame
     tab1.content.modelFrame = CreateFrame("FRAME", nil, tab1.content)
     tab1.content.modelFrame:SetPoint("TOP", tab1.content, "TOP", 0, -10)
     tab1.content.modelFrame:SetPoint("LEFT", tab1.content, "LEFT", 10, 0)
@@ -1053,6 +1054,7 @@ local function CreateWindow()
     PETC_bSliderHigh:SetText("")
     UpdateFullScreenBackgroundColor()
 
+  --variants
     tab1.content.modelFrame.variantsFrame = CreateFrame("FRAME", nil, tab1.content.modelFrame)
     tab1.content.modelFrame.variantsFrame:SetPoint("TOPLEFT", tab1.content.modelFrame, "TOPLEFT", 3, -25)
     tab1.content.modelFrame.variantsFrame:SetSize(200,300) --arbitrary
@@ -1111,10 +1113,33 @@ local function CreateWindow()
     tab1.content.familyIcon:SetSize(30,30)
     tab1.content.familyIcon:SetPoint("CENTER", familyCirclebg, "CENTER");
     local familyCircle = tab1.content:CreateTexture(nil, "BACKGROUND", nil, 4)
-    familyCircle:SetSize(67,66)
-    familyCircle:SetAtlas("talents-heroclass-ring-mainpane")
-    familyCircle:SetAlpha(.6)
-    familyCircle:SetPoint("CENTER", familyCirclebg, "CENTER", 0, -1);
+    --ORIGINAL
+    -- familyCircle:SetSize(67,66)
+    -- familyCircle:SetAtlas("talents-heroclass-ring-mainpane")
+    -- familyCircle:SetAlpha(.6)
+    -- familyCircle:SetPoint("CENTER", familyCirclebg, "CENTER", 0, -1);
+    --#9 60
+    -- familyCircle:SetSize(52,52)
+    -- familyCircle:SetAtlas("Soulbinds_Tree_Ring_Disabled")
+    -- familyCircle:SetAlpha(.6)
+    -- familyCircle:SetPoint("CENTER", familyCirclebg, "CENTER", 0, 0);
+    --#9 100
+    -- familyCircle:SetSize(52,52)
+    -- familyCircle:SetAtlas("Soulbinds_Tree_Ring_Disabled")
+    -- familyCircle:SetAlpha(1)
+    -- familyCircle:SetPoint("CENTER", familyCirclebg, "CENTER", 0, 0);
+    --#10 70
+    -- familyCircle:SetSize(40,40)
+    -- familyCircle:SetAtlas("SpecDial_Outer_TitanLineRing")
+    -- familyCircle:SetDesaturated(true)
+    -- familyCircle:SetAlpha(.7)
+    -- familyCircle:SetPoint("CENTER", familyCirclebg, "CENTER", 0, 0);
+    --#10 40
+    familyCircle:SetSize(40,40)
+    familyCircle:SetAtlas("SpecDial_Outer_TitanLineRing")
+    familyCircle:SetDesaturated(true)
+    familyCircle:SetAlpha(.4)
+    familyCircle:SetPoint("CENTER", familyCirclebg, "CENTER", 0, 0);
     tab1.content.familyName = tab1.content:CreateFontString(nil, "ARTWORK", "GameFontNormal")
     tab1.content.familyName:SetPoint("LEFT", familyCircle, "RIGHT", 4, 0);
     tab1.content.familyName:SetPoint("TOP", detailsHeaderL, "TOP", 0, -6.5);
@@ -1243,11 +1268,14 @@ local function CreateWindow()
     tab2.content.mapLbl:SetPoint("LEFT", tab2.content, "LEFT", 45, 0)
     tab2.content.mapLbl:SetPoint("RIGHT", tab2.content, "RIGHT", -10, 0)
 
+    local mapTopAnchorToEliminateScalingTheTopMargin  = CreateFrame("Frame", nil, tab2.content)
+    mapTopAnchorToEliminateScalingTheTopMargin:SetPoint("TOPLEFT", tab2.content, "TOPLEFT", 0, tab2.content.mapLbl:GetHeight() - f.TitleArea:GetHeight()-10)
+    mapTopAnchorToEliminateScalingTheTopMargin:SetSize(tab2.content:GetWidth(),1)
+
     tab2.content.mapFrame = CreateFrame("Frame", nil, tab2.content)
     tab2.content.mapFrame:SetSize(350, 240)
-    tab2.content.mapFrame:SetPoint("TOP", tab2.content.mapLbl, "BOTTOM", 0, -10)
-    tab2.content.mapFrame:SetPoint("LEFT", tab2.content, "LEFT", 10, 0)
-    tab2.content.mapFrame:SetPoint("RIGHT", tab2.content, "RIGHT", -10, 0)
+    tab2.content.mapFrame:SetPoint("CENTER", tab2.content, "CENTER")
+    tab2.content.mapFrame:SetPoint("TOP", mapTopAnchorToEliminateScalingTheTopMargin, "TOP")
 	tab2.content.mapFrame:SetScript("OnMouseWheel", function(self, delta)
         local curScale = self:GetScale()
         if (delta>0) then
@@ -1277,12 +1305,14 @@ local function CreateWindow()
     
     
     tab2.content.locationsFrame = CreateFrame("Frame", nil, tab2.content)
-    tab2.content.locationsFrame:SetPoint("TOPLEFT", tab2.content.mapFrame, "BOTTOMLEFT")
+    tab2.content.locationsFrame:SetPoint("TOP", tab2.content.mapFrame, "BOTTOM")
+    tab2.content.locationsFrame:SetPoint("LEFT", tab2.content, "LEFT", 10, 0)
     
     tab2.content.scrollFrame = CreateFrame("ScrollFrame", nil, tab2.content, "UIPanelScrollFrameTemplate")
     tab2.content.scrollFrame:SetClipsChildren(true)
-    tab2.content.scrollFrame:SetPoint("TOPLEFT", tab2.content.locationsFrame, "BOTTOMLEFT", 0, -10);
-    tab2.content.scrollFrame:SetPoint("BOTTOMRIGHT", tab2.content, "BOTTOMRIGHT",-4,5);
+    tab2.content.scrollFrame:SetPoint("TOP", tab2.content.locationsFrame, "BOTTOM", 0, -10);
+    tab2.content.scrollFrame:SetPoint("LEFT", tab2.content, "LEFT", 10, 0);
+    tab2.content.scrollFrame:SetPoint("BOTTOMRIGHT", tab2.content, "BOTTOMRIGHT", -4, 5);
     tab2.content.scrollFrame.ScrollBar:ClearAllPoints();
     tab2.content.scrollFrame.ScrollBar:SetPoint("TOPLEFT", tab2.content.scrollFrame, "TOPRIGHT", -20, -18);
     tab2.content.scrollFrame.ScrollBar:SetPoint("BOTTOMRIGHT", tab2.content.scrollFrame, "BOTTOMRIGHT", 0, 17);
@@ -1515,20 +1545,20 @@ local function UpdateWindow(pet, locationIdx)
     local priorBottom
 
     if (pet.locations) then
-        f.tab2.content.scrollFrame:SetPoint("TOPLEFT", f.tab2.content.locationsFrame, "BOTTOMLEFT", 0, -10);
+        f.tab2.content.scrollFrame:SetPoint("TOP", f.tab2.content.locationsFrame, "BOTTOM", 0, -10);
         f.tab2.content.mapFrame:Show()
     elseif (requestedLocation) then
-        f.tab2.content.scrollFrame:SetPoint("TOPLEFT", f.tab2.content.mapFrame, "BOTTOMLEFT", 0, -10);
+        f.tab2.content.scrollFrame:SetPoint("TOP", f.tab2.content.mapFrame, "BOTTOM", 0, -10);
         f.tab2.content.mapFrame:Show()
     else
-        f.tab2.content.scrollFrame:SetPoint("TOPLEFT", f.tab2.content, "TOPLEFT", 20, -20);
+        f.tab2.content.scrollFrame:SetPoint("TOP", f.tab2.content, "TOP", 0, -20);
         f.tab2.content.mapFrame:Hide()
     end
     
     if (requestedLocation) then
+  --map image
         local mapID = requestedLocation.mapID
         local layers = C_Map.GetMapArtLayers(mapID)
-
         if layers and layers[1] then
             priorBottom = mapFrame
             local layerInfo = layers[1]
@@ -1557,12 +1587,13 @@ local function UpdateWindow(pet, locationIdx)
                     local t = DISPLAY_UTIL:AcquireMapTileTexture(PAPetCard, mapFrame)
 
                     t:SetSize(layerInfo.tileWidth*scale,layerInfo.tileHeight*scale)
-                    t:SetPoint("TOPLEFT",adjustX + layerInfo.tileWidth * (x-1) * scale,-(y-1)*layerInfo.tileHeight * scale-adjustY)
+                    t:SetPoint("TOPLEFT", adjustX + layerInfo.tileWidth * (x-1) * scale,-(y-1)*layerInfo.tileHeight * scale-adjustY)
 
                     t:SetTexture(textures[textureIdx])
                 end
             end
 
+  -- map pins
             if (requestedLocation.coords) then
                 mapFrame.pins = {}
                 for _, coord in pairs(requestedLocation.coords) do
@@ -1630,6 +1661,7 @@ local function UpdateWindow(pet, locationIdx)
             f.tab2.content.mapLbl:SetText(mapName)
         end
 
+  --location list
         if (pet.locations) then
             local locationsFrame = f.tab2.content.locationsFrame
             local locationLbl = DISPLAY_UTIL:AcquireLabelFont(PAPetCard, locationsFrame)
@@ -1678,8 +1710,6 @@ local function UpdateWindow(pet, locationIdx)
             locationsFrame:SetSize(DISPLAY.PetCard.winWidth, (line+1) * locationLbl:GetHeight())
             locationsFrame:Show()
             priorBottom = locationsFrame
-        else
-            
         end
     else
         f.tab2.content.mapLbl:SetText(nil)
@@ -1691,6 +1721,7 @@ local function UpdateWindow(pet, locationIdx)
         priorBottom:SetPoint("TOP", f.tab2.content.mapLbl, "BOTTOM", 0, -10)
     end
 
+  -- Source details
     if (pet.achievement) then
         local link = GetLink(pet.achievement.id)
         priorBottom = AddLabelAndVal(priorBottom, "Achievement: ", link)
@@ -1725,11 +1756,11 @@ local function UpdateWindow(pet, locationIdx)
         priorBottom = AddLabelAndVal(priorBottom, "Source: ", pet.source, pet.tcg)
     end
 
-    if (pet.source == "World Drop" or pet.source =="In-Game Shop" or pet.source == "Archaeology" or pet.source == "Pet Battle") then
+    if (pet.source == "World Drop" or pet.source =="In-Game Shop" or pet.source == "Archaeology" or pet.source == "Pet Battle" or pet.source == "Black Market") then
         priorBottom = AddLabelAndVal(priorBottom, "Source: ", pet.source)
     end
 
-   -- INSTRUCTIONS
+  -- INSTRUCTIONS
     local bla = PETC.SHARED.Instr.synthForge
     if (pet.acquisition) then
         f.tab2.content.instructionLbl = DISPLAY_UTIL:AcquireLabelFont(PAPetCard, f.tab2.content.scrollFrame.child)
@@ -1763,7 +1794,7 @@ local function UpdateWindow(pet, locationIdx)
         end
     end
 
-   --SEPARATOR LINE 
+  --SEPARATOR LINE 
     local lineFrame = DISPLAY_UTIL:AcquireFrame(PAPetCard, f.tab2.content.scrollFrame.child)
     lineFrame:SetPoint("LEFT", f.tab2.content.scrollFrame.child, "LEFT", 5,0)
     lineFrame:SetPoint("RIGHT", f.tab2.content.scrollFrame.child, "RIGHT", -5,0)
@@ -1780,7 +1811,7 @@ local function UpdateWindow(pet, locationIdx)
     line:SetStartPoint("TOPLEFT")
     line:SetEndPoint("TOPRIGHT")
 
-   --EXTERNAL LINKS
+  --EXTERNAL LINKS
     local externalLinksLbl = DISPLAY_UTIL:AcquireLabelFont(PAPetCard, f.tab2.content.scrollFrame.child)
     externalLinksLbl:SetPoint("TOP", line, "BOTTOM", 0, -10)
     externalLinksLbl:SetPoint("LEFT", f.tab2.content.scrollFrame.child, "LEFT")
