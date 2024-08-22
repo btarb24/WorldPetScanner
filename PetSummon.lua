@@ -197,4 +197,9 @@ function SUMMON:Initialize()
     EVENTS.Subscribe(SETTINGS, "summonPet_RandomMinMinutes_Changed", Settings_Changed)
     EVENTS.Subscribe(SETTINGS, "summonPet_RandomMaxMinutes_Changed", Settings_Changed)
 
+    if PETC_Settings.summonPet and PETC_Settings.summonPet_Trigger == "periodic" then
+        CreatePeriodic()
+    elseif PETC_Settings.summonPet and PETC_Settings.summonPet_Trigger == "random" then
+        CreateRandom()
+    end
 end

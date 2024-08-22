@@ -595,7 +595,7 @@ local function CreateTab(idNum, name, tabButtonWidth)
     tabButtonWidth = 96
 
     local tab = CreateFrame("Button", "PAPetCardTab"..idNum, PAPetCard, "PanelTabButtonTemplate") --"CharacterFrameTabButtonTemplate"
-    tab:SetFrameStrata("HIGH")
+    tab:SetFrameStrata("DIALOG")
     tab:SetFrameLevel(1000)
     tab:SetID(idNum)
     tab:SetText(name)
