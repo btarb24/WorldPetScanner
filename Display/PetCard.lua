@@ -1715,11 +1715,10 @@ local function UpdateWindow(pet, locationIdx)
         f.tab2.content.mapLbl:SetText(nil)
     end
 
-    if (priorBottom == nil) then
-        --empty placeholder to bump things down below the portrait icon
-        priorBottom = DISPLAY_UTIL:AcquireLabelFont(PAPetCard, f.tab2.content.scrollFrame.child)
-        priorBottom:SetPoint("TOP", f.tab2.content.mapLbl, "BOTTOM", 0, -10)
-    end
+    
+    --empty placeholder to bump things down below the portrait icon and keep docks within scroll child
+    priorBottom = DISPLAY_UTIL:AcquireLabelFont(PAPetCard, f.tab2.content.scrollFrame.child)
+    priorBottom:SetPoint("TOP", f.tab2.content.scrollFrame.child, "TOP", 0, 0)
 
   -- Source details
     if (pet.achievement) then
