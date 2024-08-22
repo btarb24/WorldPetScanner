@@ -260,6 +260,10 @@ function SETTINGS:EstablishDefaults()
     if PETC_States == nil then
         PETC_States = {}
     end
+
+    if PETC_CachedPetData == nil then
+        PETC_CachedPetData = {}
+    end
 end
 
 function SETTINGS:Initialize()

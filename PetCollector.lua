@@ -159,6 +159,17 @@ local function BuildPetList()
 		end
     end
 
+	--workaround for guild herald and guild page factions
+	if (PETC_CachedPetData == nil) then PETC_CachedPetData = {} end
+	local buggyFactionPets = {280, 281, 282, 283}
+	for _, buggyFactionPetId in pairs(buggyFactionPets) do
+		if (UTILITIES:IsEmpty(PETS.all[buggyFactionPetId].collected) and not UTILITIES:IsEmpty(PETC_CachedPetData[buggyFactionPetId])) then
+			PETS.all[buggyFactionPetId].collected = PETC_CachedPetData[buggyFactionPetId]
+		else
+			PETC_CachedPetData[buggyFactionPetId] = PETS.all[buggyFactionPetId].collected
+		end	
+	end
+
 	--get bounds for the next/prev buttons on pet card
 	for idx, pet in pairs(PETS.all) do
 		if idx > PETS.highest then
@@ -210,7 +221,7 @@ function PETC:PetListUpdated()
 	CreatePetSortLists()
 	DISPLAY:CreateHostWindow()
 	TASKFINDER:RefreshTodaysEvents(mode)
-	
+
 	if (PETC_Settings.petTotal) then
 		DISPLAY.TotalPets:Show()
 	end
