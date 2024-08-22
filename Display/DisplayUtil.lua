@@ -350,6 +350,10 @@ function DISPLAY_UTIL:AcquireExpansionFrame(poolOwner, controlParent, name, head
 end
 
 function DISPLAY_UTIL:Reset(poolOwner)
+    if (poolOwner.pools == nil) then
+        return
+    end
+    
     for _, pool in pairs(poolOwner.pools) do
         pool:ReleaseAll()
     end

@@ -2,30 +2,17 @@ local file="TotalPets"
 
 local PETC = PetCollector
 local DISPLAY = PETC.DISPLAY
+local PETS = PETC.PETS
+local UTILITIES = PETC.UTILITIES
 
 local function UpdateCount()
-    -- master list of pets, either a petID ("BattlePet-0-etc") for owned pets, or a speciesID (42) for uncollected pets
-    local allPets = {}
-    -- indexed by speciesID, an ordered list of owned petIDs for the speciesID
-    local speciesPetIDs = {}
     local uniqueOwnedCount = 0
-    local numPets = C_PetJournal.GetNumPets()
 
-    for i=1,numPets do
-        local petID, speciesID = C_PetJournal.GetPetInfoByIndex(i)
-        tinsert(allPets,petID or speciesID)
-        if not speciesPetIDs[speciesID] then
-            speciesPetIDs[speciesID] = {}
-        end
-
-        if petID then
-            if #speciesPetIDs[speciesID]==0 then
-                uniqueOwnedCount = uniqueOwnedCount + 1
-            end
-            tinsert(speciesPetIDs[speciesID],petID)
+    for _, pet in pairs(PETS.all) do
+        if (not UTILITIES:IsEmpty(pet.collected)) then
+            uniqueOwnedCount = uniqueOwnedCount +1;
         end
     end
-
     PCTotalPets.content.petCount:SetText(uniqueOwnedCount)
 end
 

@@ -199,10 +199,6 @@ function PETC:OnInitialize()
 	-- Minimap Icon
 	icon:Register("PetCollector", dataobj, self.db.profile.options.LibDBIcon)
 	TieIn()
-
-	if (PETC_Settings.petTotal) then
-		DISPLAY.TotalPets:Show()
-	end
 end
 
 function PETC:OnEnable()
@@ -214,6 +210,10 @@ function PETC:PetListUpdated()
 	CreatePetSortLists()
 	DISPLAY:CreateHostWindow()
 	TASKFINDER:RefreshTodaysEvents(mode)
+	
+	if (PETC_Settings.petTotal) then
+		DISPLAY.TotalPets:Show()
+	end
 end
 
 PETC:RegisterChatCommand("petcollector", "ChatCommand")
