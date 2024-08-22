@@ -16,7 +16,7 @@ namespace PetCollectorUtils.LUA
     const string name             = "        name=";
     const string speciesID        = "        speciesID=";
     const string companionID      = "        companionID=";
-    const string variants = "        variants=";
+    const string variants         = "        variants=";
     const string family           = "        family=";
     const string isWild           = "        isWild=";
     const string isTradable       = "        isTradable=";
@@ -44,6 +44,7 @@ namespace PetCollectorUtils.LUA
     const string locations        = "        locations=";
     const string pois             = "        pois=";
     const string acquisition      = "        acquisition=";
+    const string condition        = "        condition=";
 
     const string note             = "        note="; //todo: remove
     const string currency_Eat     = "        currency=";
@@ -55,7 +56,7 @@ namespace PetCollectorUtils.LUA
 
     public Dictionary<int, Pet> Parse()
     {
-      var lines = File.ReadAllLines(@"..\..\PetsInput.lua");
+      var lines = File.ReadAllLines(@"..\..\..\..\Data\Pets.lua");
       var pets = new Dictionary<int, Pet>();
       Pet currentPet = null;
       for (var i = 1; i < lines.Count()-1; i++)
@@ -149,6 +150,10 @@ namespace PetCollectorUtils.LUA
         else if (line.StartsWith(reputation))
         {
           currentPet.reputation = GetBlobString(lines, line, ref i);
+        }
+        else if (line.StartsWith(condition))
+        {
+          currentPet.condition = GetBlobString(lines, line, ref i);
         }
         else if (line.StartsWith(achievement))
         {

@@ -1,32 +1,15 @@
 ﻿using Microsoft.VisualBasic.FileIO;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Net;
+using System.Reflection.Emit;
 
 namespace PetCollectorUtils.Csv
 {
   public class CsvParser
   {
-    private static string ver = "11.0.2.55959";
-
-    //https://wago.tools/db2/BattlePetSpecies
-    private string csv_BattlePetSpecies = $@"..\..\BattlePetSpecies.{ver}.csv";
-
-    //https://wago.tools/db2/Creature
-    private string csv_Creature = $@"..\..\Creature.{ver}.csv";
-
-    //https://wago.tools/db2/CreatureDisplayInfo
-    private string csv_CreatureDisplayInfo= $@"..\..\CreatureDisplayInfo.{ver}.csv";
-
-    //https://wago.tools/db2/NPCSounds
-    private string csv_NpcSounds = $@"..\..\NPCSounds.{ver}.csv";
-
-    //https://wago.tools/db2/CreatureSoundData
-    private string csv_CreatureSoundData = $@"..\..\CreatureSoundData.{ver}.csv";
-
-    //https://wago.tools/db2/BattlePetSpeciesState    
-    private string csv_BattlePetSpeciesState = $@"..\..\BattlePetSpeciesState.{ver}.csv";
-
     public void ParseCsvData(ref Dictionary<int, Pet> petsBySpeciesId)
     {
       var soundIdKeysByDisplayId = GetSoundIdKeysByDisplayId();
@@ -38,6 +21,17 @@ namespace PetCollectorUtils.Csv
       GetCreatureInfo(ref petsByCompanionId, soundIdKeysByDisplayId, creatureSoundIdsBySoundIdKey, npcSoundsByNpcSoundIDKey);
 
       GetBaseStats(ref petsBySpeciesId);
+    }
+
+    private string downloadCSV(string table)
+    {
+      string csv = null;
+      using (WebClient client = new WebClient()) // WebClient class inherits IDisposable
+      {
+        csv = client.DownloadString($"https://wago.tools/db2/{table}/csv");
+      }
+
+      return csv;
     }
 
     private Dictionary<int, Pet> HashPetsByCompanionId(IEnumerable<Pet> pets)
@@ -52,7 +46,8 @@ namespace PetCollectorUtils.Csv
 
     private void ParseSpeciesData(ref Dictionary<int, Pet> petsBySpeciesId)
     {
-      var parser = new TextFieldParser(csv_BattlePetSpecies);
+      var csv = downloadCSV("BattlePetSpecies");
+      var parser = new TextFieldParser(new StringReader(csv));
       parser.SetDelimiters(",");
 
       var flavorIndex = -1;
@@ -121,7 +116,8 @@ namespace PetCollectorUtils.Csv
     private void GetCreatureInfo(ref Dictionary<int, Pet> petsByCompanionID, Dictionary<int, string> soundIdKeysByDisplayId, Dictionary<int, string> creatureSoundIdsBySoundIdKey,
                                  Dictionary<int, string> npcSoundsByNpcSoundIDKey)
     {
-      var parser = new TextFieldParser(csv_Creature);
+      var csv = downloadCSV("Creature");
+      var parser = new TextFieldParser(new StringReader(csv));
       parser.SetDelimiters(",");
 
       var companionIdIndex = -1;
@@ -240,7 +236,8 @@ namespace PetCollectorUtils.Csv
 
     private void GetBaseStats(ref Dictionary<int, Pet> petsBySpeciesId)
     {
-      var parser = new TextFieldParser(csv_BattlePetSpeciesState);
+      var csv = downloadCSV("BattlePetSpeciesState");
+      var parser = new TextFieldParser(new StringReader(csv));
       parser.SetDelimiters(",");
 
       var statTypeIndex = -1;
@@ -297,8 +294,8 @@ namespace PetCollectorUtils.Csv
     private Dictionary<int, string> GetSoundIdKeysByDisplayId()
     {
       var result = new Dictionary<int, string>();
-
-      var parser = new TextFieldParser(csv_CreatureDisplayInfo);
+      var csv = downloadCSV("CreatureDisplayInfo");
+      var parser = new TextFieldParser(new StringReader(csv));
       parser.SetDelimiters(",");
 
       var dispIdIndex = -1;
@@ -330,8 +327,8 @@ namespace PetCollectorUtils.Csv
     private Dictionary<int, string> GetNpcSoundIdsByNpcSoundIdKey()
     {
       var result = new Dictionary<int, string>();
-
-      var parser = new TextFieldParser(csv_NpcSounds);
+      var csv = downloadCSV("NPCSounds");
+      var parser = new TextFieldParser(new StringReader(csv));
       parser.SetDelimiters(",");
 
       var npcSoundIdIndex = -1;
@@ -385,7 +382,8 @@ namespace PetCollectorUtils.Csv
     {
       var result = new Dictionary<int, string>();
 
-      var parser = new TextFieldParser(csv_CreatureSoundData);
+      var csv = downloadCSV("CreatureSoundData");
+      var parser = new TextFieldParser(new StringReader(csv));
       parser.SetDelimiters(",");
 
       var soundIdIndex = -1;

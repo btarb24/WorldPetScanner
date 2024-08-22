@@ -26,6 +26,7 @@ namespace PetCollectorUtils
     public string tcg;
     public string feature;
     public string reputation;
+    public string condition;
     public string covenant;
     public string mission;
     public string achievement;
@@ -49,115 +50,6 @@ namespace PetCollectorUtils
     {
       this.speciesID = speciesID;
     }
-    /*
-    public Pet(LuaTable table)
-    {
-      foreach(var key in table.Keys)
-      {
-        var value = table[key];
-        switch(key)
-        {
-          case "name":
-            name = value.ToString();
-            break;
-          case "source":
-            source = value.ToString();
-            break;
-          case "icon":
-            icon = value.ToString();
-            break;
-          case "family":
-            family = Convert.ToInt16(value.ToString());
-            break;
-          case "flavor":
-            flavor = value.ToString().Replace("\"", "\\\"").Replace("\n", "\\n");
-            break;
-          case "promotion":
-            promotion = value.ToString();
-            break;
-          case "tcg":
-            tcg = value.ToString();
-            break;
-          case "event":
-            eventName = value.ToString();
-            break;
-          case "note":
-            note = value.ToString();
-            break;
-          case "feature":
-            feature = value.ToString();
-            break;
-          case "class":
-            characterClass = value.ToString();
-            break;
-          case "reputation":
-            reputation = value.ToString();
-            break;
-          case "covenant":
-            covenant = value.ToString();
-            break;
-          case "mission":
-            mission = value.ToString();
-            break;
-          case "missionSource":
-            missionSource = value.ToString();
-            break;
-          case "speciesID":
-            speciesID = int.Parse(value.ToString());
-            break;
-          case "displayID":
-            displayIDs.Add(int.Parse(value.ToString()));
-            break;
-          case "displayIDs":
-            throw new NotImplementedException();
-          case "companionID":
-            companionID = int.Parse(value.ToString());
-            break;
-          case "canBattle":
-            isPassive = !bool.Parse(value.ToString());
-            break;
-          case "isUnique":
-            isUnique= bool.Parse(value.ToString());
-            break;
-          case "isTradable":
-            isTradable = bool.Parse(value.ToString());
-            break;
-          case "isWild":
-            isWild = bool.Parse(value.ToString());
-            break;
-          case "unobtainable":
-            unobtainable = bool.Parse(value.ToString());
-            break;
-          case "locations":
-            locations = Location.Parse((LuaTable)value);
-            break;
-          case "possibleBreeds":
-            possibleBreeds.AddRange(ParseBreeds((LuaTable)value));
-            break;
-          case "baseStats":
-            baseStats.AddRange(ProcessBaseStats((LuaTable)value));
-            break;
-          case "achievement":
-           // achievement = new Entity { name = value.ToString() };
-            var achId = table["achievementID"];
-         //   if (achId != null)
-          //    achievement.ID = Convert.ToInt32(achId);
-            break;
-          case "acquisition":
-            acquisition = ParseAcquistion((LuaTable)value);
-            break;
-          case "questID":
-          case "achievementID":
-            break; //skip
-          default:
-            Console.WriteLine(key);
-            break;
-        }
-      }
-
-      if (isWild && (source == "Drop" || source == "Achievement" || source == "Quest"))
-        isWild = false;
-    }*/
 
     public string Serialize()
     {
@@ -204,6 +96,7 @@ namespace PetCollectorUtils
 
       if (!string.IsNullOrEmpty(locations)) sb.AppendLine($"        locations={locations},");
       if (!string.IsNullOrEmpty(pois)) sb.AppendLine($"        pois={pois},");
+      if (!string.IsNullOrEmpty(condition)) sb.AppendLine($"        condition={condition},");
       if (!string.IsNullOrEmpty(acquisition)) sb.AppendLine($"        acquisition={acquisition},");
 
       sb.Append("    }");

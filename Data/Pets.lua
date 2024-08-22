@@ -11472,7 +11472,9 @@ PETS.all = {
                 }}
             }}
         },
-        race="Pandaren",
+        condition={
+            race="Pandaren"
+        },
         acquisition={
             {"Only purchasable by pandaren characters."},
             {"One quick way to acquire it is to create a Class Trial for a pandaren mage. Complete the quick training session and then teleport to either Stormwind or Orgrimmar."},
@@ -11742,8 +11744,6 @@ PETS.all = {
         icon="236473",
         npcSounds={34621},
         creatureSounds={"3_34622", "4_34622", "6_34623"},
-        possibleBreeds={3},
-        baseStats={8, 8.5, 7.5},
         professionDetail={
             profession="Engineering",
             desc="Pandaria 50",
@@ -11754,6 +11754,8 @@ PETS.all = {
                 {qty=2, id=76061},
             }
         },
+        possibleBreeds={3},
+        baseStats={8, 8.5, 7.5},
         acquisition={
             {"The recipe can be learned from many Engineering trainers."},
             {"Both the crafted %s and the caged pet are tradeable.", "i87526"},
@@ -11770,8 +11772,6 @@ PETS.all = {
         flavor="Jade is naturally rich with life and color, making it the perfect raw material for this gentle companion.  It is said the wind created by their wings can soothe the troubled mind.",
         icon="133247",
         npcSounds={25458},
-        possibleBreeds={1,6,8},
-        baseStats={8, 8, 8},
         professionDetail={
             profession="Jewelcrafting",
             desc="Pandaria 75",
@@ -11781,6 +11781,8 @@ PETS.all = {
                 {qty=3, id=76061}
             }
         },
+        possibleBreeds={1,6,8},
+        baseStats={8, 8, 8},
         acquisition={
             {"The %s recipe is Bind on Pickup and has extremely low drop rates from a couple time-restricted sources. The auction house price is rather cheap so it's hard to justify the recipe grind.", "i90470"},
             {"Both the crafted %s and the caged pet are tradeable.", "i82774"},
@@ -11797,8 +11799,6 @@ PETS.all = {
         flavor="While each cub is crafted in the same fashion, tiny imperfections in the gemstones create a unique personality when imbued with life.  They are, however, always playful and friendly.",
         icon="133236",
         npcSounds={24110},
-        possibleBreeds={3},
-        baseStats={6, 8, 10},
         professionDetail={
             profession="Jewelcrafting",
             desc="Pandaria 75",
@@ -11808,6 +11808,8 @@ PETS.all = {
                 {qty=3, id=76061}
             }
         },
+        possibleBreeds={3},
+        baseStats={6, 8, 10},
         acquisition={
             {"The %s recipe is Bind on Pickup and has extremely low drop rates from a couple time-restricted sources. The auction house price is rather cheap so it's hard to justify the recipe grind.", "i90471"},
             {"Both the crafted %s and the caged pet are tradeable.", "i82775"},
@@ -11839,7 +11841,8 @@ PETS.all = {
         },
         acquisition={
             {"Complete the quest to receive a %s", "i84105"},
-            {"Both of these are part of the a long storyline. For alliance it is quest 37 in the story and for the horde it is quest 18."}        },
+            {"Both of these are part of the a long storyline. For alliance it is quest 37 in the story and for the horde it is quest 18."}
+        },
     }, 
     [848]={
         name="Darkmoon Rabbit",
