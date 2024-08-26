@@ -56,7 +56,7 @@ namespace PetCollectorUtils
       new CsvParser().ParseCsvData(ref petsBySpeciesId);
       new WowHeadParser().Parse(ref petsBySpeciesId);
 
-      RemoveBreedless(ref petsBySpeciesId);
+   //   RemoveBreedless(ref petsBySpeciesId);
       ApplyDefaultBaseStats(ref petsBySpeciesId);
 
       var petsStr = SerializePets(petsBySpeciesId.Values);

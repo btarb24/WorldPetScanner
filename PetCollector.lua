@@ -43,7 +43,7 @@ local function TieInBliz()
     journalButton:SetScript("OnClick", function(self)
 		local speciesID = PetJournalPetCard.speciesID
 		DISPLAY.PetCard:Show(PETS.all[speciesID])
-    end)
+	end)
 end
 
 local function TieInRematch()
@@ -54,9 +54,13 @@ local function TieInRematch()
 	journalButton:SetPoint("TOPRIGHT", RematchPetCard.MinimizeButton, "TOPLEFT", 0, 0)
     journalButton:SetSize(RematchPetCard.MinimizeButton:GetSize())
     journalButton:SetScript("OnClick", function(self)
-		local speciesID = C_PetJournal.GetPetInfoByPetID(RematchPetCard.petID)
-		DISPLAY.PetCard:Show(PETS.all[speciesID])
-    end)
+		local pet = PETS.all[RematchPetCard.petID];
+		if (pet == nil) then
+			local speciesID = C_PetJournal.GetPetInfoByPetID(RematchPetCard.petID)			
+			pet = PETS.all[speciesID]
+		end
+		DISPLAY.PetCard:Show(pet)
+	end)
 end
 
 local function Event_OnEvent(self, event, name, ...)
@@ -127,10 +131,10 @@ local function BuildPetList()
 	PETS.built = true
 
 	for _,petID in LibPetJournal:IteratePetIDs() do 
-        local speciesID, customName, level, xp, maxXp, displayID, isFavorite, name, icon,
-            petType, creatureID, sourceText, description, isWild, canBattle,
-            tradable, unique, obtainable = C_PetJournal.GetPetInfoByPetID(petID)
-         
+		local speciesID, customName, level, xp, maxXp, displayID, isFavorite, name, icon,
+			petType, creatureID, sourceText, description, isWild, canBattle,
+			tradable, unique, obtainable = C_PetJournal.GetPetInfoByPetID(petID)
+			
 		local pet = PETS.all[speciesID];
 		if (not pet) then
 			print("unknown speciesID: " .. tostring(speciesID) .. "  name:" .. tostring(name))
@@ -157,7 +161,7 @@ local function BuildPetList()
 	
 			table.insert(pet.collected, collectedPet)
 		end
-    end
+	end
 
 	--workaround for guild herald and guild page factions
 	if (PETC_CachedPetData == nil) then PETC_CachedPetData = {} end
