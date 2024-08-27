@@ -52,6 +52,7 @@ PETC.NotableItems = {
 }
 
 PETC.Textures = {
+    ["pet"] = 613074,
     [PETC.PetCharm] = 2004597, -- charm
     [PETC.Bandage] = 133675, -- bandage
     [PETC.BlueStone] = 667492, -- rare upgrade

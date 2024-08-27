@@ -12,37 +12,39 @@ local DEBUG = PETC.DISPLAY.Debug
 local retryTimer
 
 local function UpdateItemTotals(task)
-    local method = "CleanRewards"
-    if not task.iconReward then
-        return
-    end
-
-    local itemID = task.iconReward.itemID
-    local quantity = task.iconReward.quantity
-    if itemID == PETC.PetCharm then
-        DEBUG:AddLine(file, method, "task: ", task.trigger.id, " charms ", DATA.charmTotal, "+", quantity, "=", DATA.charmTotal+quantity)
-        DATA.charmTotal = DATA.charmTotal + quantity
-    end
-
-    if itemID == PETC.Bandage then
-        DEBUG:AddLine(file, method, "task: ", task.trigger.id, " bandages ", DATA.bandageTotal, "+", quantity, "=", DATA.bandageTotal+quantity)
-        DATA.bandageTotal = DATA.bandageTotal + quantity
-    end
-
-    if itemID == PETC.BlueStone then
-        DEBUG:AddLine(file, method, "task: ", task.trigger.id, " blueStones ", DATA.blueStoneTotal, "+", quantity, "=", DATA.blueStoneTotal+quantity)
-        DATA.blueStoneTotal = DATA.blueStoneTotal + quantity
-    end
-
-    if PETC.TrainingStones[itemID] then
-        local existingTrainingStones = DATA.trainingStoneTotals[itemID]
-        DATA.hasTrainingStones = true
-        if (existingTrainingStones == nil) then
-            table.insert(DATA.trainingStoneTotals, itemID, quantity)
-        else
-            DATA.trainingStoneTotals[itemID] = existingTrainingStones + quantity
+    local method = "UpdateItemTotals"
+    if task.iconReward then
+        local itemID = task.iconReward.itemID
+        local quantity = task.iconReward.quantity
+        if itemID == PETC.PetCharm then
+            DEBUG:AddLine(file, method, "task: ", task.trigger.id, " charms ", DATA.charmTotal, "+", quantity, "=", DATA.charmTotal+quantity)
+            DATA.charmTotal = DATA.charmTotal + quantity
         end
-        DEBUG:AddLine(file, method, "task: ", task.trigger.id, " trainingStoneID ", itemID, " qty: ", quantity, " newTotal: ", DATA.trainingStoneTotals[itemID])
+
+        if itemID == PETC.Bandage then
+            DEBUG:AddLine(file, method, "task: ", task.trigger.id, " bandages ", DATA.bandageTotal, "+", quantity, "=", DATA.bandageTotal+quantity)
+            DATA.bandageTotal = DATA.bandageTotal + quantity
+        end
+
+        if itemID == PETC.BlueStone then
+            DEBUG:AddLine(file, method, "task: ", task.trigger.id, " blueStones ", DATA.blueStoneTotal, "+", quantity, "=", DATA.blueStoneTotal+quantity)
+            DATA.blueStoneTotal = DATA.blueStoneTotal + quantity
+        end
+
+        if PETC.TrainingStones[itemID] then
+            local existingTrainingStones = DATA.trainingStoneTotals[itemID]
+            DATA.hasTrainingStones = true
+            if (existingTrainingStones == nil) then
+                table.insert(DATA.trainingStoneTotals, itemID, quantity)
+            else
+                DATA.trainingStoneTotals[itemID] = existingTrainingStones + quantity
+            end
+            DEBUG:AddLine(file, method, "task: ", task.trigger.id, " trainingStoneID ", itemID, " qty: ", quantity, " newTotal: ", DATA.trainingStoneTotals[itemID])
+        end
+    else
+        for _, reward in pairs(task.nonIconRewards) do
+            DATA.petTotal = DATA.petTotal + 1
+        end
     end
 end
 
@@ -442,6 +444,7 @@ function TASKFINDER:RefreshTodaysEvents(mode)
     DATA.worldQuestTaskResults = {}
     DATA.questsWithNotableRewards = {}	
 	DATA.taskList = {}
+	DATA.petTotal = 0;
 	DATA.charmTotal = 0;
 	DATA.bandageTotal = 0;
 	DATA.blueStoneTotal = 0;

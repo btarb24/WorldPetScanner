@@ -30,6 +30,10 @@ EXPANSIONS.list = {
     [10] = {
         Name = "Dragonflight",
         Collapsed = false,
+    },
+    [11] = {
+        Name = "The War Within",
+        Collapsed = false,
     }
 }
 

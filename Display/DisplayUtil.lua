@@ -1,6 +1,7 @@
 local file="DisplayUtil"
 
 local PETC = PetCollector
+local UTILITIES = PETC.UTILITIES
 local DISPLAY = PETC.DISPLAY
 local DISPLAY_UTIL = PETC.DISPLAY.Util
 
@@ -30,12 +31,20 @@ local function CollapseButton_OnClick(self)
         expansionFrame.movingAnchor:SetPoint("TOPLEFT", self, "BOTTOMLEFT")
         
         scrollFrameChild:SetHeight(currentHeight-heightAdjustment)
+
+        if (self.persistanceTable) then
+            self.persistanceTable[self.persistanceID] = true
+        end
     else
         self:SetNormalTexture("Interface\\Buttons\\UI-MinusButton-UP");
         expansionFrame.childrenHostFrame:Show()
         expansionFrame.movingAnchor:ClearAllPoints()
         expansionFrame.movingAnchor:SetPoint("TOPLEFT", expansionFrame, "BOTTOMLEFT")
         scrollFrameChild:SetHeight(currentHeight+heightAdjustment)
+        
+        if (self.persistanceTable) then
+            self.persistanceTable[self.persistanceID] = nil
+        end
     end
 end
 
@@ -269,7 +278,52 @@ function DISPLAY_UTIL:AcquireButton(poolOwner, controlParent)
     return t
 end
 
-function DISPLAY_UTIL:AcquireListItemFrame(poolOwner, controlParent, selectable, selected)
+function DISPLAY_UTIL:AcquireToggleFilterButtonFrame(poolOwner, controlParent, filterName, count, textureId)
+    if (not controlParent.filterButtonPool) then
+        controlParent.filterButtonPool = CreateFramePool("Button", controlParent)
+        AddToPoolOwner(poolOwner, controlParent.filterButtonPool)
+    end
+
+    local t = controlParent.filterButtonPool:Acquire()
+    t:Enable()
+
+    local isChecked = PETC_States.TodaysEvents.Filters[filterName] == true
+    t.filterName = filterName
+    t:Show()
+    
+    if (not t.text) then
+        local iconHeight = 30;
+        t:SetHeight(iconHeight + 4)
+        t:SetHighlightAtlas("PetList-ButtonHighlight")
+
+        t.text = t:CreateFontString(nil, "OVERLAY", "GameFontHighlight");
+        t.text:SetPoint("TOPLEFT", t, "TOPLEFT", 2, -11)
+
+        t.icon = t:CreateTexture(nil, "BACKGROUND")
+        t.icon:SetPoint("TOPRIGHT", t, "TOPRIGHT", -2, -2)
+        t.icon:SetSize(iconHeight, iconHeight)        
+    end
+    t.icon:SetTexture(textureId)
+    t.text:SetText(tostring(count) .. "x")
+    t:SetWidth(t.text:GetWidth() + t.icon:GetWidth() + 4)
+    t:ClearNormalTexture()
+    if (isChecked) then
+       t:SetNormalAtlas("PetList-ButtonSelect")
+    end
+    t:SetScript("OnClick", function(self)
+        if (PETC_States.TodaysEvents.Filters[self.filterName]) then
+            PETC_States.TodaysEvents.Filters[self.filterName] = nil
+        else
+            PETC_States.TodaysEvents.Filters[self.filterName] = true
+        end
+
+        PETC_States.TodaysEvents.lastStateSetPoint = UTILITIES:GetDaysSince(2024, 1)
+        PETC.DISPLAY.TodaysEvents:Update()
+    end)    
+    return t
+end
+
+function DISPLAY_UTIL:AcquireListItemFrame(poolOwner, controlParent, selectable, selected, expansionID)
     if (not controlParent.framePool) then
         controlParent.framePool = CreateFramePool("BUTTON", controlParent)
         AddToPoolOwner(poolOwner, controlParent.framePool)
@@ -286,6 +340,7 @@ function DISPLAY_UTIL:AcquireListItemFrame(poolOwner, controlParent, selectable,
     end
     t:Show()
     t:SetFrameStrata("LOW")
+    t.expansionID = expansionID or 0
 
     t:SetScript("OnEnter", function(self)
         if (self:GetParent().SelectedBreed ~= self) then
@@ -316,7 +371,7 @@ function DISPLAY_UTIL:AcquireListItemFrame(poolOwner, controlParent, selectable,
     return t
 end
 
-function DISPLAY_UTIL:AcquireExpansionFrame(poolOwner, controlParent, name, headerDescription)
+function DISPLAY_UTIL:AcquireExpansionFrame(poolOwner, controlParent, name, persistanceTable, persistanceID)
     if (not controlParent.expansionFramesPool) then
         controlParent.expansionFramesPool = CreateFramePool("FRAME", controlParent)
         AddToPoolOwner(poolOwner, controlParent.expansionFramesPool)
@@ -338,8 +393,15 @@ function DISPLAY_UTIL:AcquireExpansionFrame(poolOwner, controlParent, name, head
         
         expansionFrame.movingAnchor = CreateFrame("Frame", nil, expansionFrame)
         expansionFrame.movingAnchor:SetSize(1, 1)
+    else
+        expansionFrame.collapseButton.persistanceTable = nil
+        if expansionFrame.collapseButton.collapsed then
+            expansionFrame.collapseButton:Click()
+        end
     end
 
+    expansionFrame.collapseButton.persistanceTable = persistanceTable
+    expansionFrame.collapseButton.persistanceID = persistanceID
     expansionFrame.header:SetText(string.format("|cff33ff33%s|r", name))
     expansionFrame.childrenHostFrame:SetSize(1,1)
     expansionFrame.movingAnchor:ClearAllPoints()
@@ -353,7 +415,7 @@ function DISPLAY_UTIL:Reset(poolOwner)
     if (poolOwner.pools == nil) then
         return
     end
-    
+
     for _, pool in pairs(poolOwner.pools) do
         pool:ReleaseAll()
     end

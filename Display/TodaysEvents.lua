@@ -64,6 +64,73 @@ local function ResetTabContent()
     end
 end
 
+local function Filter(unfilteredTasks)
+    local currentDays = UTILITIES:GetDaysSince(2024, 1)
+    
+    if (not PETC_States.TodaysEvents.lastStateSetPoint or PETC_States.TodaysEvents.lastStateSetPoint < currentDays) then
+        PETC_States.TodaysEvents.lastStateSetDate = -1
+        PETC_States.TodaysEvents.Filters = {}
+        PETC_States.TodaysEvents.CollapsedGroups = {}
+        return unfilteredTasks
+    end
+
+    if UTILITIES:IsEmpty(PETC_States.TodaysEvents.Filters) then
+        return unfilteredTasks
+    end
+
+    local filteredResult = {}
+    for _, expansion in ipairs(unfilteredTasks) do
+        local filteredExpansion = { ID = expansion.ID, zones = {} }
+        for _, zone in ipairs(expansion.zones) do
+            local filteredZone = { ID = zone.ID, tasks = {} }
+            for _, task in ipairs(zone.tasks) do
+                local skip = false
+                if (task.iconReward) then
+                    local itemID = task.iconReward.itemID
+                    if itemID == PETC.PetCharm then
+                        if not PETC_States.TodaysEvents.Filters["charms"] then
+                            skip = true
+                        end
+                    end
+
+                    if itemID == PETC.Bandage then
+                        if not PETC_States.TodaysEvents.Filters["bandages"] then
+                            skip = true
+                        end
+                    end
+
+                    if itemID == PETC.BlueStone then
+                        if not PETC_States.TodaysEvents.Filters["bluestones"] then
+                            skip = true
+                        end
+                    end
+
+                    if PETC.TrainingStones[itemID] then
+                        if not PETC_States.TodaysEvents.Filters[itemID] then
+                            skip = true
+                        end
+                    end
+                elseif not PETC_States.TodaysEvents.Filters["pets"] then
+                    skip = true
+                end
+
+                if not skip then
+                    tinsert(filteredZone.tasks, task)
+                end
+            end
+            if not UTILITIES:IsEmpty(filteredZone.tasks) then
+                tinsert(filteredExpansion.zones, filteredZone)
+            end
+        end
+        
+        if not UTILITIES:IsEmpty(filteredExpansion.zones) then
+            tinsert(filteredResult, filteredExpansion)
+        end
+    end
+
+    return filteredResult
+end
+
 function DISPLAY.TodaysEvents:ShowLoading()
     PAMainFrameTab1.content.refreshButton:Hide()
     PAMainFrameTab1.content.spinner:Show()
@@ -86,32 +153,32 @@ function DISPLAY.TodaysEvents:Update()
         return
     end
 
+    local filteredTasks = Filter(DATA.groupedTasks)
+
     local totalWidth, maxZoneWidth, maxTimeWidth, maxChallengeWidth, maxRewardLinkWidth = DetermineTab1Width(tab1Content:CreateFontString(nil, "OVERLAY", "GameFontHighlight"))
     tab1Content.contentWidth = totalWidth + 100 --arbitrary
 
    --ITEM TOTALS AT TOP
-    
-    local charms = DATA.charmTotal.."x".."|T"..PETC.Textures[PETC.PetCharm]..":26:26:0:0:32:32:2:30:2:30|t"        
-    local bandages  = DATA.bandageTotal.."x".."|T"..PETC.Textures[PETC.Bandage]..":26:26:0:0:32:32:2:30:2:30|t"
-    local blueStones  = DATA.blueStoneTotal.."x".."|T"..PETC.Textures[PETC.BlueStone]..":26:26:0:0:32:32:2:30:2:30|t"
-    local trainingStones = ""
+    local petsButton = DISPLAY_UTIL:AcquireToggleFilterButtonFrame(PAMainFrameTab1, PAMainFrameTab1.content, "pets", DATA.petTotal + UTILITIES:Count(DATA.tradingPost), PETC.Textures["pet"])
+    petsButton:SetPoint("TOPRIGHT", PAMainFrameTab1.content, "TOPRIGHT", -10, -2)
+    local priorFilterButton = petsButton;
+
     for tStone, _ in pairs(PETC.TrainingStones) do
         local tStoneTotal = DATA.trainingStoneTotals[tStone]
         if tStoneTotal ~= nil then
-            trainingStones = trainingStones .. tStoneTotal.."x".."|T"..PETC.Textures[tStone]..":26:26:0:0:32:32:2:30:2:30|t   "
+            local stoneButton = DISPLAY_UTIL:AcquireToggleFilterButtonFrame(PAMainFrameTab1, PAMainFrameTab1.content, tStone, tStoneTotal, PETC.Textures[tStone])
+            stoneButton:SetPoint("TOPRIGHT", priorFilterButton, "TOPLEFT", -5, 0)
+            priorFilterButton = stoneButton;
         end
     end
-    local header = charms .. "    " .. bandages .. "    " .. blueStones .. "    " .. trainingStones
-    
-    if (PAMainFrameTab1.content.totals1) then
-        PAMainFrameTab1.content.totals1:SetText()
-    else
-        PAMainFrameTab1.content.totals1 = PAMainFrameTab1.content:CreateFontString(nil, "OVERLAY", "GameFontHighlight");
-        local fontFile, fontHeight, fontFlags = PAMainFrameTab1.content.totals1:GetFont()
-        PAMainFrameTab1.content.totals1:SetFont(fontFile, fontHeight+2, fontFlags)
-        PAMainFrameTab1.content.totals1:SetPoint("TOPRIGHT", -2, -4);
-    end
-    PAMainFrameTab1.content.totals1:SetText(header)
+
+    local blueStoneButton = DISPLAY_UTIL:AcquireToggleFilterButtonFrame(PAMainFrameTab1, PAMainFrameTab1.content, "bluestones", DATA.blueStoneTotal, PETC.Textures[PETC.BlueStone])
+    blueStoneButton:SetPoint("TOPRIGHT", priorFilterButton, "TOPLEFT", -5, 0)
+
+    local bandagesButton = DISPLAY_UTIL:AcquireToggleFilterButtonFrame(PAMainFrameTab1, PAMainFrameTab1.content, "bandages", DATA.bandageTotal, PETC.Textures[PETC.Bandage])
+    bandagesButton:SetPoint("TOPRIGHT", blueStoneButton, "TOPLEFT", -5, 0)
+    local charmsButton = DISPLAY_UTIL:AcquireToggleFilterButtonFrame(PAMainFrameTab1, PAMainFrameTab1.content, "charms", DATA.charmTotal, PETC.Textures[PETC.PetCharm])
+    charmsButton:SetPoint("TOPRIGHT", bandagesButton, "TOPLEFT", -5, 0)
 
    --SEPARATOR LINE
     local line = PAMainFrameTab1.content:CreateLine()
@@ -165,11 +232,11 @@ function DISPLAY.TodaysEvents:Update()
     local currentExpansionID, currentZoneID
     local priorExpansionFrame = nil
     local totalHeight = 0
-    for expansionIdx, expansion in ipairs(DATA.groupedTasks) do
+    for _, expansion in ipairs(filteredTasks) do
         local expansionHeight = 0
         local expansionLargestWidth = 0
        --EXPANSION HEADER
-        local expansionFrame = DISPLAY_UTIL:AcquireExpansionFrame(PAMainFrameTab1, scrollFrame, EXPANSIONS:GetName(expansion.ID))
+        local expansionFrame = DISPLAY_UTIL:AcquireExpansionFrame(PAMainFrameTab1, scrollFrame, EXPANSIONS:GetName(expansion.ID), PETC_States.TodaysEvents.CollapsedGroups, expansion.ID)
         if (priorExpansionFrame) then
             expansionFrame:SetPoint("TOPLEFT", priorExpansionFrame.movingAnchor, "BOTTOMLEFT", 0, -DISPLAY.Constants.lineHeight -DISPLAY.Constants.lineSeparation)
         else
@@ -180,14 +247,14 @@ function DISPLAY.TodaysEvents:Update()
                         
         local zonesFrame = expansionFrame.childrenHostFrame
        --ZONE HEADER
-        for zoneIdx, zone in ipairs(expansion.zones) do
+        for _, zone in ipairs(expansion.zones) do
             local zoneWidth = 0
             local zoneHeight = 0
             local zoneHeader = DISPLAY_UTIL:AcquireHighlightFont(PAMainFrameTab1, expansionFrame.childrenHostFrame);
             zoneHeader:SetText(ZONES:GetName(expansion.ID, zone.ID))
             zoneHeader:SetPoint("TOPLEFT", zonesFrame, "TOPLEFT", 0, -expansionHeight -DISPLAY.Constants.lineSeparation);
             
-            for taskIdx, task in ipairs(zone.tasks) do
+            for _, task in ipairs(zone.tasks) do
                 local lineHighlight = DISPLAY_UTIL:AcquireListItemFrame(PAMainFrameTab1, expansionFrame.childrenHostFrame, false)
                 --TASK TIME
                 local taskTime = DISPLAY_UTIL:AcquireHighlightFont(PAMainFrameTab1, expansionFrame.childrenHostFrame);
@@ -292,6 +359,10 @@ function DISPLAY.TodaysEvents:Update()
         expansionFrame.expansionHeight = expansionFrame:GetHeight()
         expansionFrame.movingAnchor:GetHeight()
         totalHeight = totalHeight + expansionHeight +DISPLAY.Constants.lineHeight +DISPLAY.Constants.lineSeparation
+
+        if (PETC_States.TodaysEvents.CollapsedGroups[expansion.ID] and not expansionFrame.collapseButton.collapsed) then
+            expansionFrame.collapseButton:Click()
+        end
     end
 
     scrollFrame.child:SetSize(totalWidth, totalHeight)

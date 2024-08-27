@@ -260,6 +260,15 @@ function SETTINGS:EstablishDefaults()
     if PETC_States == nil then
         PETC_States = {}
     end
+    if (PETC_States.TodaysEvents == nil) then
+        PETC_States.TodaysEvents = {}
+    end
+    if (PETC_States.TodaysEvents.Filters == nil) then
+        PETC_States.TodaysEvents.Filters = {}
+    end
+    if (PETC_States.TodaysEvents.CollapsedGroups == nil) then
+        PETC_States.TodaysEvents.CollapsedGroups = {}
+    end
 
     if PETC_CachedPetData == nil then
         PETC_CachedPetData = {}

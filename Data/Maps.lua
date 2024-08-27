@@ -15,6 +15,7 @@ MAPS.continents = {
     [11]="Zandalar",
     [12]="Shadowlands",
     [13]="Dragon Isles",
+    [14]="Khaz Algar",
 }
 
 MAPS.maps = {
