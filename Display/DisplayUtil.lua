@@ -34,6 +34,7 @@ local function CollapseButton_OnClick(self)
 
         if (self.persistanceTable) then
             self.persistanceTable[self.persistanceID] = true
+            PETC_States.TodaysEvents.lastStateSetPoint = UTILITIES:GetDaysSince(2024, 1)
         end
     else
         self:SetNormalTexture("Interface\\Buttons\\UI-MinusButton-UP");
@@ -44,6 +45,7 @@ local function CollapseButton_OnClick(self)
         
         if (self.persistanceTable) then
             self.persistanceTable[self.persistanceID] = nil
+            PETC_States.TodaysEvents.lastStateSetPoint = UTILITIES:GetDaysSince(2024, 1)
         end
     end
 end

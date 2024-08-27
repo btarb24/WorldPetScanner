@@ -360,7 +360,7 @@ function DISPLAY.TodaysEvents:Update()
         expansionFrame.movingAnchor:GetHeight()
         totalHeight = totalHeight + expansionHeight +DISPLAY.Constants.lineHeight +DISPLAY.Constants.lineSeparation
 
-        if (PETC_States.TodaysEvents.CollapsedGroups[expansion.ID] and not expansionFrame.collapseButton.collapsed) then
+        if (PETC_States.TodaysEvents.CollapsedGroups[expansion.ID]) then
             expansionFrame.collapseButton:Click()
         end
     end
