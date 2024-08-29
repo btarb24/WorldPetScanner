@@ -323,6 +323,7 @@ local function PerformRetry(mode)
         DEBUG:AddLine(file, method, "got all our data. done with retries")
         DATA.sortedTasks = UTILITIES:SortTaskList(DATA.taskList)
         DATA.groupedTasks = UTILITIES:GroupTasks(DATA.sortedTasks)
+        DEBUG:AddLine(file, method, "sortedCount: ", UTILITIES:Count(DATA.sortedTasks), "  groupedCount: ", UTILITIES:Count(DATA.groupedTasks))
         DISPLAY.TodaysEvents:HideLoading()
     else
         retryTimer = PETC:ScheduleTimer(PerformRetry, 1, mode)
@@ -375,25 +376,31 @@ local function GetTradingPostPets(mode)
         local itemData = C_PerksProgram.GetVendorItemInfo(itemID)
         if (not itemData or itemData.perksVendorItemID == 0) then
             itemData = PETC_tradingPostVendor.itemDetails[itemID]
-            itemData.timeRemaining = PETC_tradingPostVendor.expiration - GetTime()
+            if (itemData) then
+                itemData.timeRemaining = PETC_tradingPostVendor.expiration - GetTime()
+            end
         else
             PETC_tradingPostVendor.itemDetails[itemID] = itemData
         end
 
-        DEBUG:AddLine(file, method, "id: ", itemID, " cat: ", itemData.perksVendorCategoryID)
-        if (itemData.perksVendorCategoryID == 3) then
-            local tradingPostPet = {
-                speciesID = itemData.speciesID,
-                name = itemData.Name,
-                price = itemData.price,
-                timeRemaining = itemData.timeRemaining,
-                pet = PETS.all[itemData.speciesID]
-            }
-            
-            local speciesName, speciesIcon, petType, companionID, tooltipSource, flavor, isWild, canBattle, isTradable, isUnique, obtainable, creatureDisplayID = C_PetJournal.GetPetInfoBySpeciesID(itemData.speciesID)
-            tradingPostPet.name = speciesName
-            DEBUG:AddLine(file, method, "speciesID: ", itemData.speciesID, " name: ", speciesName)
-            AddTradingPostPet(tradingPostPet, mode)
+        if (not itemData) then
+            DEBUG:AddLine(file, method, "id: ", itemID, " no item data available")
+        else
+            DEBUG:AddLine(file, method, "id: ", itemID, " cat: ", itemData.perksVendorCategoryID)
+            if (itemData.perksVendorCategoryID == 3) then
+                local tradingPostPet = {
+                    speciesID = itemData.speciesID,
+                    name = itemData.Name,
+                    price = itemData.price,
+                    timeRemaining = itemData.timeRemaining,
+                    pet = PETS.all[itemData.speciesID]
+                }
+                
+                local speciesName, speciesIcon, petType, companionID, tooltipSource, flavor, isWild, canBattle, isTradable, isUnique, obtainable, creatureDisplayID = C_PetJournal.GetPetInfoBySpeciesID(itemData.speciesID)
+                tradingPostPet.name = speciesName
+                DEBUG:AddLine(file, method, "speciesID: ", itemData.speciesID, " name: ", speciesName)
+                AddTradingPostPet(tradingPostPet, mode)
+            end
         end
     end
 
@@ -506,4 +513,6 @@ function TASKFINDER:RefreshTodaysEvents(mode)
     
 	DATA.sortedTasks = UTILITIES:SortTaskList(DATA.taskList)
 	DATA.groupedTasks = UTILITIES:GroupTasks(DATA.sortedTasks)
+    
+    DEBUG:AddLine(file, method, "sortedCount: ", UTILITIES:Count(DATA.sortedTasks), "  groupedCount: ", UTILITIES:Count(DATA.groupedTasks))
 end

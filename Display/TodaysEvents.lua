@@ -147,7 +147,7 @@ function DISPLAY.TodaysEvents:Update()
     local tab1Content = PAMainFrameTab1.content
     local scrollFrame = tab1Content.scrollFrame
     if UTILITIES:IsEmpty(DATA.groupedTasks) then
-        local noResults = scrollFrame:CreateFontString(nil, "OVERLAY", "GameFontHighlight");
+        local noResults = DISPLAY_UTIL:AcquireHighlightFont(PAMainFrameTab1, scrollFrame);
         noResults:SetPoint("TOPLEFT", scrollFrame, "TOPLEFT", 50,0);
         noResults:SetText("There are currently no tasks available")
         return
