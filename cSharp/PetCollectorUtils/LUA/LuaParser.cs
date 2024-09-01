@@ -78,10 +78,14 @@ namespace PetCollectorUtils.LUA
         {
           currentPet.name = GetSimpleString(line);
         }
-        else if (line.StartsWith(speciesID) || line.StartsWith(variants) || line.StartsWith(possibleBreeds))
+        else if (line.StartsWith(speciesID) || line.StartsWith(variants))
         {
           //always gather fresh values from csv/wowhead
           continue;
+        }
+        else if (line.StartsWith(possibleBreeds))
+        {
+          currentPet.possibleBreeds = GetIntList(line);
         }
         else if (line.StartsWith(companionID))
         {

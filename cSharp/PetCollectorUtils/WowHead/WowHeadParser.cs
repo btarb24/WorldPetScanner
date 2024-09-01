@@ -34,7 +34,11 @@ namespace PetCollectorUtils.ParseFromWowHead
     
     private string getHtml(int companionID)
     {
-      var filename = $"../../wowHeadData/{companionID}.html";
+      var dir = "../../wowHeadData/";
+      if (!Directory.Exists(dir))
+        Directory.CreateDirectory(dir);
+
+      var filename = $"{dir}{companionID}.html";
       string html;
       if (File.Exists(filename))
       {

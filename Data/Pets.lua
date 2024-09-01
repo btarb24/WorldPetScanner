@@ -4522,8 +4522,8 @@ PETS.all = {
         possibleBreeds={4},
         baseStats={8.5, 9, 6.5},
         acquisition={
-            {"Awarded to those that purchased the Collector's Edition of Starcraft II."},
-            {"It sometimes returns to the store as variants of Starcraft II deluxe/collectors editions, campaign collections, etc"},
+            {"Awarded to those that purchased the Collector's Edition of Starcraft II. You may still be able to buy this on eBay."},
+            {"It is also awarded to those that purchase the Digital Deluxe bundle of Starcraft II. This purchase will also give you %s and %s", "i90177", "i128423"},
         },
     }, 
     [259]={
@@ -11857,7 +11857,17 @@ PETS.all = {
         npcSounds={34157},
         possibleBreeds={1,3,7},
         baseStats={8, 7, 9},
-        locations={{mapID=407, coords={{75.6,86.8},}}},
+        pois={
+            {name="Npc drop:", entries={
+                {id="", maps={
+                    {id="n58336:Darkmoon Rabbit", mapID=407, chance=11, type="boss", coords={{75.6,86.8}}},
+                }}
+            }}
+        },
+        acquisition={
+            {"Kill %s located in a cave for a chance to receive a %s", "n58336:Darkmoon Rabbit", "i80008"},
+            {"Spawn timer doesn't appear to be confirmed. Also, the drop rate may be higher due to it now being personal loot instead of 1 per kill."},
+        },
     }, 
     [849]={
         name="Chi-Ji Kite",
@@ -11869,7 +11879,19 @@ PETS.all = {
         source="Profession",
         flavor="A beautiful kite brought to life by the scribes of Pandaria.",
         icon="604252",
+        professionDetail={
+            profession="Inscription",
+            desc="Pandaria 75",
+            recipe=127009,
+            materials= {
+                {qty=1, id=39354},
+                {qty=4, id=79254}
+            }
+        },
         baseStats={8, 8, 8},
+        acquisition={
+            {"The recipe is learned from a trainer and will create a %s.", "i89368"},
+        },
     }, 
     [850]={
         name="Yu'lon Kite",
@@ -11881,7 +11903,19 @@ PETS.all = {
         source="Profession",
         flavor="Who knew scribes could make kites?",
         icon="133840",
+        professionDetail={
+            profession="Inscription",
+            desc="Pandaria 75",
+            recipe=127007,
+            materials= {
+                {qty=1, id=39354},
+                {qty=4, id=79254}
+            }
+        },
         baseStats={8, 8, 8},
+        acquisition={
+            {"The recipe is learned from a trainer and will create a %s.", "i89367"},
+        },
     }, 
     [851]={
         name="Horned Lizard",
@@ -11905,6 +11939,9 @@ PETS.all = {
                 }}
             }}
         },
+        acquisition={
+            {"Only available in the pre-BFA version of Uldum. Talk to Zidormi to switch."},
+        },
     }, 
     [855]={
         name="Venus",
@@ -11917,9 +11954,12 @@ PETS.all = {
         flavor="Seems odd that he doesn't like flies... right?",
         icon="463540",
         npcSounds={23758},
-        achievement={name="That's a Lot of Pet Food", ID=7501},
+        achievement={id="a7501"},
         possibleBreeds={1},
         baseStats={7.5, 8.5, 8},
+        acquisition={
+            {"Collect 400 unique pets to earn the achievement and receive a %s.", "i89736"},
+        },
     }, 
     [856]={
         name="Jade Tentacle",
@@ -11933,9 +11973,13 @@ PETS.all = {
         icon="254105",
         npcSounds={23659},
         creatureSounds={"1_15303", "2_15303", "6_15305", "19_25152", "20_15304", "22_15304", "23_15305"},
-        achievement={name="Time to Open a Pet Store", ID=7521},
+        achievement={id="a7521"},
         possibleBreeds={7,10},
         baseStats={8, 8, 8},
+        acquisition={
+            {"Complete other achievements in the Pet category until you've earned this achievement."},
+            {"The pet will be delivered directly into your pet journal."},
+        },
     }, 
     [868]={
         name="Pandaren Water Spirit",
@@ -11950,7 +11994,37 @@ PETS.all = {
         npcSounds={33663},
         possibleBreeds={7},
         baseStats={8, 8, 8},
-        locations={{continent="Pandaria", zone="Vale of Eternal Blossoms", mapID=422, coords={{61.2,87.4},}}},
+        pois={
+            {name="Zone phase change:", entries={
+                {id="", maps={
+                    {id="n162419:Zidormi", type="npc", mapID=249, coords={{56.0,35.2},}}
+                }}
+            }},
+            {id="q32428:Pandaren Spirit Tamer", entries={
+                {id="", maps={
+                    {id="n64572:Sara Finkleswitch", type="start", faction="a", mapID=390, coords={{86.4,60},}},
+                    {id="n64582:Gentle San", type="start", faction="h", mapID=390, coords={{60.8,23.6},}},
+                    {id="n32439:Flowing Pandaren Spirit", type="dot", mapID=422, coords={{61.2,87.4},}},
+                    {id="n68465:Thundering Pandaren Spirit", type="dot", mapID=379, coords={{64.8,93.6},}},
+                    {id="n68463:Burning Pandaren Spirit", type="dot", mapID=388, coords={{57.0,42.2},}},
+                    {id="n68464:Whispering Pandaren Spirit", type="dot", mapID=371, coords={{28.8,36.0},}},
+                }}
+            }},
+            {name="Earlier quest chain start:", entries={
+                {id="", maps={
+                    {id="n63596:Audrey Burnhep", faction="a", mapID=84, type="start", coords={{69.4,24.4}}},
+                    {id="n63626:Varzok", faction="h", mapID=85, type="start", coords={{52.4,59.2}}},
+                }}
+            }}
+        },
+        acquisition={
+            {"When you complete the quest you will get to choose 1 of the 4 Pandarent spirit pets."},
+            {"After you've completed the quest, you'll daily pet battles with the four spirits."},
+            {"The daily battles will reward a %s, which has an 11%% chance to contain the pet associated with that battle. The Water spirit is only dropped from the Flowing battle.", "i93147"},
+            {"Be sure to be in the Pandaria timeline. Talk to Zidormi to switch if you are in the BFA timeline."},
+            {"If your faction's quest npc does not offer the quest then you still need to complete earlier quests.  Talk to Audrey or Varzok to complete all of their offerings."},
+            {"The pandaria spirit quests are #18 in the quest chain sequence that has you travel through all of the early continents until you reach Pandaria."},
+        },
     }, 
     [903]={
         name="Baneling",
@@ -11967,6 +12041,10 @@ PETS.all = {
         promotion="StarCraft II: Heart of the Swarm Collector's Edition",
         possibleBreeds={8},
         baseStats={7.5, 9, 7.5},
+        acquisition={
+            {"This is a reward for those that purchase the Collector's Edition of Starcraft II: Heart of the Swarm. You may still be able to find this on eBay."},
+            {"It is also awarded to those that purchase the Digital Deluxe bundle of Starcraft II. This purchase will also give you %s and %s", "i56806", "i128423"},
+        },
     }, 
     [1013]={
         name="Wanderer's Festival Hatchling",
@@ -11984,6 +12062,11 @@ PETS.all = {
         possibleBreeds={1,4,7},
         baseStats={9, 7.5, 7.5},
         locations={{mapID=418, coords={{78,24},}}},
+        acquisition={
+            {"Spawns every Sunday at 9pm and 11pm PST to celebrate the opening and closing of the Wander's Festival event."},
+            {"A couple handfuls of them will spawn."},
+            {"Note that this is specifically Pacific Standard Time. It does not appear to follow daylight savings time, and it is not your ServerTime (unless your server is in california)."},
+        },
     }, 
     [1039]={
         name="Imperial Moth",
@@ -11996,9 +12079,20 @@ PETS.all = {
         flavor="The larval form of this moth is world-renowned for creating the finest silk in Azeroth.",
         icon="236193",
         npcSounds={23756},
+        professionDetail={
+            profession="Tailoring",
+            desc="Pandaria 25",
+            recipe=125557,
+            materials= {
+                {qty=8, id=82441}
+            }
+        },
         possibleBreeds={4},
         baseStats={7.5, 7.5, 9},
         locations={{mapID=376, coords={{62,58},}}},
+        acquisition={
+            {"You can craft a single %s per day. There is a 2%% chance that it will contain a %s.", "i92960", "i90900"},
+        },
     }, 
     [1040]={
         name="Imperial Silkworm",
@@ -12012,9 +12106,20 @@ PETS.all = {
         icon="648918",
         npcSounds={34842},
         creatureSounds={"1_33806", "2_33804", "3_33801", "4_33800", "6_33803", "9_611", "10_33807", "13_33802"},
+        professionDetail={
+            profession="Tailoring",
+            desc="Pandaria 25",
+            recipe=125557,
+            materials= {
+                {qty=8, id=82441}
+            }
+        },
         possibleBreeds={4},
         baseStats={8, 8, 8},
         locations={{mapID=376, coords={{62,58},}}},
+        acquisition={
+            {"You can craft a single %s per day. There is an 8%% chance that it will contain a %s.", "i92960", "i90902"},
+        },
     }, 
     [1042]={
         name="Red Cricket",
@@ -12025,11 +12130,20 @@ PETS.all = {
         source="Quest",
         flavor="Be careful, he might eat all your crops!",
         icon="646325",
-        reputation="Sho (Best Friends)",
+        reputation={type="Sho", level="Best Friends"},
         npcSounds={33988},
         possibleBreeds={6},
         baseStats={6.75, 10.5, 6.75},
-        locations={{continent="Pandaria", zone="Valley of the Four Winds"}},
+        pois={
+            {name="Points of interest:", entries={
+                {id="", maps={
+                    {id="n58708:Sho", type="npc", mapID=376, coords={{53.0,52.0},{29.6,30.6}}}
+                }}
+            }}
+        },
+        acquisition={
+            {"You will be mailed a %s once you achieve a Best Friends reputation with Sho.", "i85497"},
+        },
     }, 
     [1061]={
         name="Darkmoon Hatchling",
@@ -12145,7 +12259,37 @@ PETS.all = {
         npcSounds={34829},
         possibleBreeds={6},
         baseStats={8, 8, 8},
-        locations={{continent="Pandaria", zone="Vale of Eternal Blossoms", mapID=388, coords={{57,42.2},}}},
+        pois={
+            {name="Zone phase change:", entries={
+                {id="", maps={
+                    {id="n162419:Zidormi", type="npc", mapID=249, coords={{56.0,35.2},}}
+                }}
+            }},
+            {id="q32428:Pandaren Spirit Tamer", entries={
+                {id="", maps={
+                    {id="n64572:Sara Finkleswitch", type="start", faction="a", mapID=390, coords={{86.4,60},}},
+                    {id="n64582:Gentle San", type="start", faction="h", mapID=390, coords={{60.8,23.6},}},
+                    {id="n32439:Flowing Pandaren Spirit", type="dot", mapID=422, coords={{61.2,87.4},}},
+                    {id="n68465:Thundering Pandaren Spirit", type="dot", mapID=379, coords={{64.8,93.6},}},
+                    {id="n68463:Burning Pandaren Spirit", type="dot", mapID=388, coords={{57.0,42.2},}},
+                    {id="n68464:Whispering Pandaren Spirit", type="dot", mapID=371, coords={{28.8,36.0},}},
+                }}
+            }},
+            {name="Earlier quest chain start:", entries={
+                {id="", maps={
+                    {id="n63596:Audrey Burnhep", faction="a", mapID=84, type="start", coords={{69.4,24.4}}},
+                    {id="n63626:Varzok", faction="h", mapID=85, type="start", coords={{52.4,59.2}}},
+                }}
+            }}
+        },
+        acquisition={
+            {"When you complete the quest you will get to choose 1 of the 4 Pandarent spirit pets."},
+            {"After you've completed the quest, you'll daily pet battles with the four spirits."},
+            {"The daily battles will reward a %s, which has an 11%% chance to contain the pet associated with that battle. The Fire spirit is only dropped from the Burning battle.", "i93147"},
+            {"Be sure to be in the Pandaria timeline. Talk to Zidormi to switch if you are in the BFA timeline."},
+            {"If your faction's quest npc does not offer the quest then you still need to complete earlier quests.  Talk to Audrey or Varzok to complete all of their offerings."},
+            {"The pandaria spirit quests are #18 in the quest chain sequence that has you travel through all of the early continents until you reach Pandaria."},
+        },
     }, 
     [1125]={
         name="Pandaren Air Spirit",
@@ -12161,7 +12305,37 @@ PETS.all = {
         creatureSounds={"1_34830", "2_34831", "3_34832", "4_34833", "6_34834", "19_28611", "30_34835"},
         possibleBreeds={1},
         baseStats={8, 8, 8},
-        locations={{continent="Pandaria", zone="Vale of Eternal Blossoms", mapID=371, coords={{28.8,36},}}},
+        pois={
+            {name="Zone phase change:", entries={
+                {id="", maps={
+                    {id="n162419:Zidormi", type="npc", mapID=249, coords={{56.0,35.2},}}
+                }}
+            }},
+            {id="q32428:Pandaren Spirit Tamer", entries={
+                {id="", maps={
+                    {id="n64572:Sara Finkleswitch", type="start", faction="a", mapID=390, coords={{86.4,60},}},
+                    {id="n64582:Gentle San", type="start", faction="h", mapID=390, coords={{60.8,23.6},}},
+                    {id="n32439:Flowing Pandaren Spirit", type="dot", mapID=422, coords={{61.2,87.4},}},
+                    {id="n68465:Thundering Pandaren Spirit", type="dot", mapID=379, coords={{64.8,93.6},}},
+                    {id="n68463:Burning Pandaren Spirit", type="dot", mapID=388, coords={{57.0,42.2},}},
+                    {id="n68464:Whispering Pandaren Spirit", type="dot", mapID=371, coords={{28.8,36.0},}},
+                }}
+            }},
+            {name="Earlier quest chain start:", entries={
+                {id="", maps={
+                    {id="n63596:Audrey Burnhep", faction="a", mapID=84, type="start", coords={{69.4,24.4}}},
+                    {id="n63626:Varzok", faction="h", mapID=85, type="start", coords={{52.4,59.2}}},
+                }}
+            }}
+        },
+        acquisition={
+            {"When you complete the quest you will get to choose 1 of the 4 Pandarent spirit pets."},
+            {"After you've completed the quest, you'll daily pet battles with the four spirits."},
+            {"The daily battles will reward a %s, which has an 11%% chance to contain the pet associated with that battle. The Air spirit is only dropped from the Whispering battle.", "i93147"},
+            {"Be sure to be in the Pandaria timeline. Talk to Zidormi to switch if you are in the BFA timeline."},
+            {"If your faction's quest npc does not offer the quest then you still need to complete earlier quests.  Talk to Audrey or Varzok to complete all of their offerings."},
+            {"The pandaria spirit quests are #18 in the quest chain sequence that has you travel through all of the early continents until you reach Pandaria."},
+        },
     }, 
     [1126]={
         name="Pandaren Earth Spirit",
@@ -12176,7 +12350,37 @@ PETS.all = {
         npcSounds={34816},
         possibleBreeds={5},
         baseStats={8, 8, 8},
-        locations={{continent="Pandaria", zone="Vale of Eternal Blossoms", mapID=379, coords={{64.8,93.6},}}},
+        pois={
+            {name="Zone phase change:", entries={
+                {id="", maps={
+                    {id="n162419:Zidormi", type="npc", mapID=249, coords={{56.0,35.2},}}
+                }}
+            }},
+            {id="q32428:Pandaren Spirit Tamer", entries={
+                {id="", maps={
+                    {id="n64572:Sara Finkleswitch", type="start", faction="a", mapID=390, coords={{86.4,60},}},
+                    {id="n64582:Gentle San", type="start", faction="h", mapID=390, coords={{60.8,23.6},}},
+                    {id="n32439:Flowing Pandaren Spirit", type="dot", mapID=422, coords={{61.2,87.4},}},
+                    {id="n68465:Thundering Pandaren Spirit", type="dot", mapID=379, coords={{64.8,93.6},}},
+                    {id="n68463:Burning Pandaren Spirit", type="dot", mapID=388, coords={{57.0,42.2},}},
+                    {id="n68464:Whispering Pandaren Spirit", type="dot", mapID=371, coords={{28.8,36.0},}},
+                }}
+            }},
+            {name="Earlier quest chain start:", entries={
+                {id="", maps={
+                    {id="n63596:Audrey Burnhep", faction="a", mapID=84, type="start", coords={{69.4,24.4}}},
+                    {id="n63626:Varzok", faction="h", mapID=85, type="start", coords={{52.4,59.2}}},
+                }}
+            }}
+        },
+        acquisition={
+            {"When you complete the quest you will get to choose 1 of the 4 Pandarent spirit pets."},
+            {"After you've completed the quest, you'll daily pet battles with the four spirits."},
+            {"The daily battles will reward a %s, which has an 11%% chance to contain the pet associated with that battle. The Earth spirit is only dropped from the Thundering battle.", "i93147"},
+            {"Be sure to be in the Pandaria timeline. Talk to Zidormi to switch if you are in the BFA timeline."},
+            {"If your faction's quest npc does not offer the quest then you still need to complete earlier quests.  Talk to Audrey or Varzok to complete all of their offerings."},
+            {"The pandaria spirit quests are #18 in the quest chain sequence that has you travel through all of the early continents until you reach Pandaria."},
+        },
     }, 
     [1127]={
         name="Spectral Cub",
@@ -13329,6 +13533,10 @@ PETS.all = {
         promotion="StarCraft II: Legacy of the Void Collector's Edition",
         possibleBreeds={5},
         baseStats={8, 8, 8},
+        acquisition={
+            {"Awarded to those that purchased the Collector's Edition of Starcraft II: Legacy of the Void. You may still be able to buy this on eBay."},
+            {"It is also awarded to those that purchase the Digital Deluxe bundle of Starcraft II. This purchase will also give you %s and %s", "i56806", "i90177"},
+        },
     }, 
     [1256]={
         name="Rascal-Bot",
@@ -28530,6 +28738,7 @@ PETS.all = {
         icon="133247",
         npcSounds={219344},
         creatureSounds={"1_219345", "2_219345", "3_219348", "4_219349", "6_219347", "10_219346", "11_219342"},
+        possibleBreeds={2},
         baseStats={7.75, 8.5, 7.75},
     }, 
     [3255]={
@@ -29948,6 +30157,7 @@ PETS.all = {
         icon="2027876",
         npcSounds={33993},
         creatureSounds={"3_210296", "10_210299", "13_210298", "30_210301", "31_210302", "32_210303", "33_210304"},
+        possibleBreeds={1},
         baseStats={8.5, 8, 7.5},
     }, 
     [3362]={
@@ -29962,6 +30172,7 @@ PETS.all = {
         icon="2027883",
         npcSounds={33993},
         creatureSounds={"3_210296", "10_210299", "13_210298", "30_210301", "31_210302", "32_210303", "33_210304"},
+        possibleBreeds={1},
         baseStats={8.5, 8, 7.5},
     }, 
     [3365]={
@@ -30960,6 +31171,7 @@ PETS.all = {
         flavor="A warlock won this little guy at an infernal carnival, but it quickly outgrew its aquarium.",
         icon="2921473",
         npcSounds={147030},
+        possibleBreeds={6},
         baseStats={8, 8, 8},
     }, 
     [3528]={
@@ -31171,6 +31383,7 @@ PETS.all = {
         npcSounds={261235},
         creatureSounds={"3_261221", "10_261225", "11_261226", "13_261222", "30_261227", "31_261228", "32_261231", "33_261232"},
         baseStats={9, 7.5, 7.5},
+        locations={{continent="", zone="unknown-Isle of Dorn", mapID=2248, coords={{33.2,77.4},{33.4,75.6},{34.4,76.6},{39.4,73.4},{39.4,73.6},{39.8,76.6},{48.2,56.2},{56.6,25.4},{57.4,24},{59.6,26.2},{60.2,25},{60.8,24.8},{63.4,66.6},{63.8,69.4},{64.2,70},}}},
     }, 
     [3544]={
         name="Shalewing Devourer",
@@ -31185,6 +31398,7 @@ PETS.all = {
         npcSounds={261235},
         creatureSounds={"3_261221", "10_261225", "11_261226", "13_261222", "30_261227", "31_261228", "32_261231", "33_261232"},
         baseStats={9, 7.5, 7.5},
+        locations={{continent="", zone="unknown-Isle of Dorn", mapID=2248, coords={{57.8,25.4},{57.8,25.6},{60.6,26.2},}}},
     }, 
     [3545]={
         name="Salverun",
@@ -31262,6 +31476,7 @@ PETS.all = {
         icon="5015300",
         npcSounds={228803},
         creatureSounds={"3_222525", "9_506", "10_222527", "13_222526", "30_222528", "31_222529", "32_222531", "33_222532"},
+        possibleBreeds={1},
         baseStats={7.5, 8, 8.5},
     }, 
     [3548]={
@@ -31317,6 +31532,7 @@ PETS.all = {
         icon="5015303",
         npcSounds={226203,226204},
         creatureSounds={"3_226143", "10_226145", "11_226142", "13_226144", "30_226146", "31_226147", "32_226148", "33_226137"},
+        possibleBreeds={1},
         baseStats={9, 7.5, 7.5},
     }, 
     [3551]={
@@ -32603,7 +32819,14 @@ PETS.all = {
         icon="5688871",
         npcSounds={252552,252553},
         creatureSounds={"3_252528", "9_621", "10_252535", "13_252531", "28_252536", "30_252539", "31_252541", "32_252542", "33_252446"},
+        possibleBreeds={1,3,4,6,8,9},
         baseStats={6.5, 8.5, 9},
+        locations={
+            {continent="", zone="unknown-Azj-Kahet", mapID=2255, coords={{42.6,53.4},{76,66.2},{77.8,61.4},}},
+            {continent="", zone="unknown-oddFormat", mapID=99999, coords={{60.4,34.4},}},
+            {continent="", zone="unknown-The Ringing Deeps", mapID=2214, coords={{54.8,42},{55.4,35.2},{55.4,45.2},{58,43.2},{59.4,54.6},{62.6,44.4},{62.6,44.6},{63.2,40.2},{65,41.4},{66.2,42.4},{72.2,38},{72.6,37},}},
+            {continent="", zone="unknown-Hallowfall", mapID=2215, coords={{37.8,83.2},{39,82.2},{39.8,81.6},{55.4,43.2},{55.6,43.2},}}
+        },
     }, 
     [4457]={
         name="Chitin Burrower",
@@ -32617,7 +32840,13 @@ PETS.all = {
         icon="5688871",
         npcSounds={252552,252553},
         creatureSounds={"3_252528", "9_621", "10_252535", "13_252531", "28_252536", "30_252539", "31_252541", "32_252542", "33_252446"},
+        possibleBreeds={1,2,3,4,6,8,9},
         baseStats={6.5, 8.5, 9},
+        locations={
+            {continent="", zone="unknown-Azj-Kahet", mapID=2255, coords={{76.8,64.4},{78,60.2},}},
+            {continent="", zone="unknown-The Ringing Deeps", mapID=2214, coords={{57.8,60.8},{59.8,36},{60.4,38.8},{62.2,53.8},{64.8,44.8},{73.4,38.8},}},
+            {continent="", zone="unknown-Hallowfall", mapID=2215, coords={{55.8,43},{71.8,57.2},{72.6,59.6},{78.4,42.6},}}
+        },
     }, 
     [4458]={
         name="Illskitter",
@@ -32644,7 +32873,9 @@ PETS.all = {
         flavor="These silkie chickens were taken aboard airships by those departing the Arathi Empire in pursuit of their emperor's prophetic vision.",
         icon="2027866",
         npcSounds={251474,251477},
+        possibleBreeds={1,3,10},
         baseStats={7.5, 8.25, 8.25},
+        locations={{continent="", zone="unknown-Hallowfall", mapID=2215, coords={{47,62.8},{47,64.8},{48.6,35.6},{48.6,38.2},{48.8,37.2},{48.8,63},{49,63.6},{49.4,38.6},{49.6,38.8},{50,37},{50.2,40.4},{50.2,40.6},{51,40},{62.2,33.2},{63.2,28},{64.2,32.8},{64.6,28.6},{64.8,28.4},{65,26.6},}}},
     }, 
     [4461]={
         name="Greenlands Chicken",
@@ -32657,7 +32888,9 @@ PETS.all = {
         flavor="Free-range chickens are difficult to take care of in Hallowfall, what with all the shadow monsters and fish people.",
         icon="2027866",
         npcSounds={251474,251477},
+        possibleBreeds={1,3,4,10},
         baseStats={7, 8.5, 8.5},
+        locations={{continent="", zone="unknown-Hallowfall", mapID=2215, coords={{47,60.4},{47,60.6},{47.8,63.4},{47.8,63.6},{48.8,40},{61.2,29.8},{61.4,32.6},{61.6,32.6},{63,29.2},}}},
     }, 
     [4462]={
         name="Thunder",
@@ -32671,6 +32904,7 @@ PETS.all = {
         icon="5648285",
         npcSounds={250305,250306},
         creatureSounds={"3_250321", "9_493", "10_250322", "30_250308", "31_250311", "32_250312", "33_250314"},
+        possibleBreeds={5},
         baseStats={8.25, 8.5, 7.25},
     }, 
     [4463]={
@@ -32713,6 +32947,7 @@ PETS.all = {
         icon="5648287",
         npcSounds={250305,250306},
         creatureSounds={"3_250321", "9_493", "10_250322", "30_250308", "31_250311", "32_250312", "33_250314"},
+        possibleBreeds={1},
         baseStats={8.25, 8, 7.75},
     }, 
     [4467]={
@@ -32727,6 +32962,7 @@ PETS.all = {
         icon="5771176",
         npcSounds={256711,256712},
         creatureSounds={"1_256698", "10_256703", "13_256702", "19_256704", "30_256698", "31_256731", "32_256701", "33_256736"},
+        possibleBreeds={9},
         baseStats={8.5, 8, 9},
     }, 
     [4469]={
@@ -32741,6 +32977,7 @@ PETS.all = {
         icon="2027853",
         npcSounds={117655},
         creatureSounds={"3_256510", "4_256511", "10_256513", "13_256512", "19_256515", "28_256514", "30_256516", "31_256517", "32_256518", "33_256519"},
+        possibleBreeds={9},
         baseStats={7, 8.5, 8.5},
     }, 
     [4470]={
@@ -32754,6 +32991,7 @@ PETS.all = {
         flavor="He's a little jumpy... especially around the face.",
         icon="5869499",
         npcSounds={115011},
+        possibleBreeds={8},
         baseStats={8, 8, 8},
     }, 
     [4471]={
@@ -32767,7 +33005,9 @@ PETS.all = {
         flavor="Not a squid, nor a kid, the scootlefish prefers to keep its ink to itself except under dire circumstances.",
         icon="2101158",
         npcSounds={115011},
+        possibleBreeds={1,2,3,4,6,7,9,10},
         baseStats={7.75, 7.75, 8.5},
+        locations={{continent="", zone="unknown-Azj-Kahet", mapID=2255, coords={{35.4,49.8},{36.4,55},{36.6,55},{54.8,67.2},{55,45.6},{59.4,47.4},{59.4,47.6},{59.4,67.6},{59.6,67.8},{70.4,74.6},{75.2,36.4},{77,38},{77,42.4},}}},
     }, 
     [4472]={
         name="Shadowbog Hopper",
@@ -32793,6 +33033,7 @@ PETS.all = {
         flavor="She'll try spinning, that's a good trick.",
         icon="5342948",
         npcSounds={252502,252503},
+        possibleBreeds={2},
         baseStats={5.5, 8.5, 10},
     }, 
     [4476]={
@@ -32820,7 +33061,9 @@ PETS.all = {
         icon="5869500",
         npcSounds={115011},
         creatureSounds={"10_256550", "13_256549", "19_256558", "30_256544", "31_256572", "32_256582", "33_256548"},
+        possibleBreeds={1,2,3,4,5,6,7,9,10},
         baseStats={8.5, 7.75, 7.75},
+        locations={{continent="", zone="unknown-Azj-Kahet", mapID=2255, coords={{35.2,53},{40,61.2},{54.2,41},{61.4,47.2},{61.4,47.6},{61.4,51.2},{61.6,47.6},{61.6,51},{71,45.8},{73.6,38.8},}}},
     }, 
     [4478]={
         name="Caustic Oozeling",
@@ -32849,6 +33092,7 @@ PETS.all = {
         npcSounds={252313,252314},
         creatureSounds={"3_252318", "10_252319", "19_248127", "30_252320", "31_252351", "32_252347", "33_252342"},
         baseStats={8.5, 7.5, 8},
+        locations={{continent="", zone="unknown-oddFormat", mapID=99999, coords={{61.2,77.8},{61.4,80},{61.6,80},{63.6,85.2},{63.8,87.2},{64.2,87.6},{66.4,77.6},{66.6,77.4},}}},
     }, 
     [4481]={
         name="Voidling Ooze",
@@ -32863,6 +33107,7 @@ PETS.all = {
         npcSounds={252313,252314},
         creatureSounds={"3_252318", "10_252319", "19_248127", "30_252320", "31_252351", "32_252347", "33_252342"},
         baseStats={7.5, 8, 8.5},
+        locations={{continent="", zone="unknown-oddFormat", mapID=99999, coords={{60.4,79.4},{60.8,74.6},{61,81.4},{62.6,84.4},{62.6,84.6},{63.6,89},{65,83.6},{65.4,83.2},{65.4,87},{65.6,87.2},{65.8,79.2},{66.2,82.8},}}},
     }, 
     [4482]={
         name="Writhing Transmutagen",
@@ -32890,7 +33135,9 @@ PETS.all = {
         icon="1723705",
         npcSounds={243258,243259},
         creatureSounds={"3_243247", "9_611", "10_243248", "13_243249", "30_243296", "31_243297", "32_243298", "33_243299"},
+        possibleBreeds={5,7},
         baseStats={8.75, 8, 7.25},
+        locations={{continent="", zone="unknown-Azj-Kahet", mapID=2255, coords={{47.2,56.4},{47.2,56.6},{47.4,51.2},{53.6,68.2},{56,66.6},{57.2,63.4},{57.2,63.6},}}},
     }, 
     [4485]={
         name="Mossy Snail",
@@ -32904,7 +33151,9 @@ PETS.all = {
         icon="5003559",
         npcSounds={196348},
         creatureSounds={"3_221925", "10_221928", "13_221926", "30_221918", "31_221920", "32_221921", "33_221922"},
+        possibleBreeds={1,5,7,10},
         baseStats={9, 8.5, 6.5},
+        locations={{continent="", zone="unknown-Isle of Dorn", mapID=2248, coords={{24,66.6},{24.4,69},{24.6,69},{26.2,51.8},{26.8,53.2},{27,69},{29.4,71.2},{29.6,71.4},{31.2,72.4},{31.8,51.8},{31.8,53.4},{32,53.6},{33,55.4},{33,55.6},{33,57.4},{33.4,63},{33.6,63},{35.4,64.2},{35.4,75.4},{35.6,75.4},{35.6,75.6},{36.4,73.6},{36.4,76.6},{36.6,64.8},{36.6,73.6},{36.6,76.4},{36.6,76.6},{37.8,74.2},{38.8,26.2},{39,67},{39.4,73.8},{39.6,74},{40.2,74.6},{40.4,66.4},{40.4,66.6},{40.8,66.2},{41.2,66.6},{41.4,30.8},{41.4,33.2},{41.4,74},{41.6,23.2},{41.6,30.8},{41.8,65.4},{41.8,65.6},{42,29.2},{42,72.8},{42.2,28.2},{42.2,64.2},{42.2,73.6},{42.4,17},{42.6,17},{42.6,72.4},{42.6,72.6},{42.8,19.6},{42.8,37.6},{42.8,66},{43,62},{43,64},{43.6,61.6},{43.8,61.4},{44.2,19.8},{44.2,60.4},{44.6,59.4},{45.6,22.4},{45.6,22.6},{49.2,79.4},{49.2,79.6},{49.4,75},{49.4,76.4},{49.6,75},{49.6,76.2},{49.8,64.4},{49.8,64.6},{50.8,77.8},{51.4,57.8},{51.4,79.2},{51.6,58},{51.6,60.2},{51.6,79},{53,62},{54.2,60.4},{54.6,77},{55.4,75},{55.6,63.4},{55.6,63.6},{55.8,34.4},{55.8,59.4},{55.8,59.6},{56.6,30.2},{57.4,63},{57.4,63.6},{57.6,63},{57.6,63.6},{57.8,46},{58.4,32.6},{58.4,42.2},{58.6,32.6},{58.6,62.4},{58.8,55.4},{58.8,73.8},{58.8,74.8},{59.8,31.8},{60,55.8},{60,73.6},{60.4,43.4},{60.4,70.2},{60.6,43.2},{60.8,55.4},{60.8,69.4},{60.8,69.6},{61,68.4},{61.2,72.8},{61.6,73.4},{61.6,73.6},{61.8,69},{62.4,66.8},{62.6,65.2},{62.6,71.2},{63.4,57.2},{63.4,67.8},{63.6,57.4},{63.8,26.4},{63.8,26.6},{64,71},{64.4,67.4},{66,24.2},{66,58.6},{66.2,58.4},{66.8,24.8},{67.4,60.4},{67.4,60.6},{68,58},{68.2,30.2},{68.8,28},{68.8,54.8},{70,54.2},{71.4,27},{71.6,31.8},{72.2,29.6},{72.4,18.2},{72.6,18.2},{72.6,26.2},{72.8,29.8},{73.2,20.2},{73.4,44.8},{73.6,44.6},{73.6,49.8},{74,31.8},{74.2,18.4},{74.2,18.6},{74.2,48},{74.8,51.4},{74.8,51.6},{75.6,60},{76.2,27.4},{77.2,19},{77.2,49},{77.4,20.4},{77.6,20.4},{77.6,46.4},{78,30.4},{78.4,49.2},{78.8,39.2},{80,41.2},{80.2,30.6},}}},
     }, 
     [4489]={
         name="Bouncer",
@@ -32917,6 +33166,7 @@ PETS.all = {
         flavor="Awww, aren't it's fuzzy little pedipalps cute?",
         icon="5755546",
         npcSounds={28522},
+        possibleBreeds={9},
         baseStats={8.5, 7, 8.5},
     }, 
     [4491]={
@@ -32959,6 +33209,7 @@ PETS.all = {
         icon="5763497",
         npcSounds={252634,252635},
         creatureSounds={"3_252606", "9_16", "10_252608", "13_252607", "30_252609", "31_252610", "32_252612", "33_252614"},
+        possibleBreeds={7},
         baseStats={8.375, 8.375, 7.25},
     }, 
     [4496]={
@@ -32987,7 +33238,9 @@ PETS.all = {
         icon="5659379",
         npcSounds={254794,254795},
         creatureSounds={"3_246231", "9_13", "10_246240", "13_246240", "30_246239", "31_246253", "32_246248", "33_246236"},
+        possibleBreeds={1,2,3,4,5,6,7,9,10},
         baseStats={8.5, 7.75, 7.75},
+        locations={{continent="", zone="unknown-The Ringing Deeps", mapID=2214, coords={{42.6,22.2},{43.6,27.4},{43.6,27.6},{45.2,25.6},}}},
     }, 
     [4499]={
         name="Common Ploughworm",
@@ -33001,7 +33254,9 @@ PETS.all = {
         icon="5659381",
         npcSounds={254794,254795},
         creatureSounds={"3_246231", "9_13", "10_246240", "13_246240", "30_246239", "31_246253", "32_246248", "33_246236"},
+        possibleBreeds={1,2,3,4,6,7,9,10},
         baseStats={7.75, 7.75, 8.5},
+        locations={{continent="", zone="unknown-The Ringing Deeps", mapID=2214, coords={{40.4,20.6},{42.4,19.6},{42.6,19.6},{42.8,27.4},{43,17.2},{43,21.8},{43,28},{44.2,27},{44.6,27.2},{44.8,27.8},{45.8,26.4},{49.8,28.4},{49.8,28.6},{57.6,29.2},}}},
     }, 
     [4500]={
         name="Lil' Bonechewer",
@@ -33057,7 +33312,12 @@ PETS.all = {
         icon="5162543",
         npcSounds={252426,252431},
         creatureSounds={"3_242922", "9_619", "10_242924", "11_252425", "13_242923", "28_242927", "30_242928", "31_242929", "32_242930", "33_242932"},
+        possibleBreeds={2,6,8,9},
         baseStats={6.5, 8.5, 9},
+        locations={
+            {continent="", zone="unknown-Azj-Kahet", mapID=2255, coords={{68.8,77.6},{69,77.4},{78.2,75.6},{78.2,80.6},{78.4,75.4},{78.6,79.2},{78.8,73.2},{79.6,79.6},{79.8,79.4},}},
+            {continent="", zone="unknown-Hallowfall", mapID=2215, coords={{35.4,77},{35.6,77},{38.2,81.2},{39.4,80.4},{40,74.6},{42,78.4},{42,78.6},{42.2,82.2},{43,76.2},{46.2,82.6},{53.4,66.4},{53.4,66.6},{54.2,66.4},{54.4,66.6},{55.4,66},{56,64},{58.4,65.2},{63.2,40.2},{64.4,68.6},{64.8,66.6},{65.4,64.2},{65.8,39.4},{67,37.8},{67.6,65.2},{68.4,63.6},{68.6,63.8},{68.8,32.2},{68.8,59},{69.2,38.6},{69.6,59.4},{69.8,53.8},{70.4,54.6},{70.6,54.4},{70.6,54.8},{71,61},{71.4,55.8},{72,59.4},{72.2,63},}}
+        },
     }, 
     [4511]={
         name="Venomwing",
@@ -33071,6 +33331,7 @@ PETS.all = {
         icon="5162542",
         npcSounds={252426,252431},
         creatureSounds={"3_242922", "9_619", "10_242924", "11_252425", "13_242923", "28_242927", "30_242928", "31_242929", "32_242930", "33_242932"},
+        possibleBreeds={3},
         baseStats={7, 8.5, 8.5},
     }, 
     [4513]={
@@ -33085,6 +33346,7 @@ PETS.all = {
         icon="5162544",
         npcSounds={252426,252431},
         creatureSounds={"3_242922", "9_619", "10_242924", "11_252425", "13_242923", "28_242927", "30_242928", "31_242929", "32_242930", "33_242932"},
+        possibleBreeds={9},
         baseStats={6.5, 8.75, 8.75},
     }, 
     [4514]={
@@ -33099,7 +33361,14 @@ PETS.all = {
         icon="5771178",
         npcSounds={256711,256712},
         creatureSounds={"1_256698", "10_256703", "13_256702", "19_256704", "30_256698", "31_256731", "32_256701", "33_256736"},
+        possibleBreeds={2,3,6,8,9},
         baseStats={8.5, 8, 9},
+        locations={
+            {continent="", zone="unknown-Isle of Dorn", mapID=2248, coords={{51.4,69},{51.6,69},{52.4,66},{52.8,66.2},{53.2,68.4},{53.4,65.2},{53.6,68.4},{56.4,60.2},{56.8,59},{58,29.8},{58.4,61.8},{58.6,40.6},{59,61.4},{59.2,41.8},{59.8,30.6},{60.2,31.8},{60.6,42.2},{67,31.2},{68.6,45},{71.6,47.2},}},
+            {continent="", zone="unknown-Dornogal", mapID=2339, coords={{56,18.8},}},
+            {continent="", zone="unknown-The Ringing Deeps", mapID=2214, coords={{44.8,28.8},{46.6,39.2},{47,33.2},{48,37.6},{48.6,29.2},{49,30.4},{54,32.4},}},
+            {continent="", zone="unknown-Hallowfall", mapID=2215, coords={{62,54.8},}}
+        },
     }, 
     [4515]={
         name="Azure Flickerfly",
@@ -33113,7 +33382,12 @@ PETS.all = {
         icon="5771177",
         npcSounds={256711,256712},
         creatureSounds={"1_256698", "10_256703", "13_256702", "19_256704", "30_256698", "31_256731", "32_256701", "33_256736"},
+        possibleBreeds={2,3,6,8,9},
         baseStats={8.5, 8, 9},
+        locations={
+            {continent="", zone="unknown-The Ringing Deeps", mapID=2214, coords={{40.8,18.2},{42.6,28.4},{42.6,28.6},{43.2,24},}},
+            {continent="", zone="unknown-Hallowfall", mapID=2215, coords={{55.8,43.4},{63.6,46},}}
+        },
     }, 
     [4516]={
         name="Vibrant Glowfly",
@@ -33127,7 +33401,13 @@ PETS.all = {
         icon="5771179",
         npcSounds={256711,256712},
         creatureSounds={"1_256698", "10_256703", "13_256702", "19_256704", "30_256698", "31_256731", "32_256701", "33_256736"},
+        possibleBreeds={2,3,6,8,9},
         baseStats={8.5, 8, 9},
+        locations={
+            {continent="", zone="unknown-Azj-Kahet", mapID=2255, coords={{29.2,52.4},{36.4,57.4},{36.6,57.4},{39.2,61},{40.8,60.2},{42,66.8},{44.6,30.6},{46.6,44.6},{48.4,49.4},{48.4,49.6},{48.6,49.4},{49,47},{51.4,32.8},{51.6,32.8},{52.2,29.2},{53,32.4},{53,32.6},{56.4,41.8},{56.4,53.4},{56.8,35},{57,42.2},{57.8,71.4},{58.4,24},{59.4,64},{60.4,31},{61.2,51},{62.2,23.4},{62.2,23.6},{66,52},{67.2,53.4},{67.2,53.6},{73.2,82.2},{73.4,65},{73.4,67.8},{74,75.2},{74.4,61.8},{74.4,79.4},{74.8,78.2},{75,83.4},{75,83.6},{76,78.4},{76,78.6},{76.4,68},{77.4,79.8},{77.6,79.6},}},
+            {continent="", zone="unknown-The Ringing Deeps", mapID=2214, coords={{40.2,19.8},{41.8,24.4},{41.8,24.6},{42.4,22.8},{43,16.2},{43,25.4},{43.4,22.4},{43.4,22.6},{44.4,14.8},{44.4,38},{45,29},{45.6,14},{47,41.8},{47.2,20.6},{47.4,32.2},{47.6,33.8},{47.6,38.8},{47.8,32.4},{48,14.6},{48,20.2},{48,34.6},{49.8,30.4},{49.8,30.6},{50.2,15.8},{51,20},{52.4,25.2},{52.6,25},{53.4,8.2},{56.8,22.4},{58,21.2},{58,23.8},{58.4,26.2},{58.6,26.4},{59.8,44.4},{59.8,44.6},{60.4,25.4},{60.4,25.6},{61.2,25},{61.4,47.8},{62,60.4},{62.4,47.4},{62.4,47.6},{62.6,47.4},{62.6,47.6},{63.2,35.4},{63.6,35.2},{64,32},{65.8,30.8},{66.8,39.4},}},
+            {continent="", zone="unknown-Hallowfall", mapID=2215, coords={{34,53},{36,69.6},{36.2,52.4},{36.2,52.6},{36.4,76.2},{39.2,68.4},{39.2,68.6},{39.4,54.4},{39.4,54.6},{40,68.8},{40.6,68.2},{40.8,49.8},{41.4,55},{43.4,80},{44,80.6},{44.2,80.4},{45.2,56.6},{48.8,54},{49.2,16.8},{49.6,50.4},{49.6,50.6},{50,40},{52.6,32},{65,23.2},}}
+        },
     }, 
     [4517]={
         name="Waxwick",
@@ -33140,6 +33420,7 @@ PETS.all = {
         flavor="In a miracle of dreams and wishes, Waxwick awoke and climbed off a kobold's head to pursue her own path.",
         icon="5757162",
         npcSounds={258953,258957},
+        possibleBreeds={2},
         baseStats={8, 9, 7},
     }, 
     [4518]={
@@ -33154,7 +33435,12 @@ PETS.all = {
         icon="3996704",
         npcSounds={196348},
         creatureSounds={"3_196349", "10_196351", "13_196350", "30_196352", "31_196353", "32_196354", "33_196356"},
+        possibleBreeds={1,5,7,10},
         baseStats={9, 8, 7},
+        locations={
+            {continent="", zone="unknown-Dornogal", mapID=2339, coords={{45.2,59.6},{45.4,58.8},{45.8,59.2},{45.8,60},{47.6,61.4},{47.6,61.6},{47.6,62.8},{47.8,55.4},{47.8,55.6},{48.4,54.4},{48.6,54.2},{48.6,55},{50,65.4},{50,65.6},{50.4,54.2},{50.8,54},{51,65.4},{51.2,64.4},}},
+            {continent="", zone="unknown-The Ringing Deeps", mapID=2214, coords={{41.4,8.6},{41.4,19.2},{41.4,20.4},{41.4,20.6},{42,8.8},{42,18.8},{42.2,19.8},{43,7.4},{43.2,13},{43.2,13.6},{45,13},{45.4,12},{48.2,18.4},{48.2,18.6},{48.4,11.2},{48.4,16},{48.8,14.6},{48.8,15.6},{49.2,19.8},{49.4,21.8},{49.6,21.8},{50,15.8},{50,17},{50.6,16.8},{50.6,17.8},{51,20.8},}}
+        },
     }, 
     [4520]={
         name="Fathom Incher",
@@ -33167,6 +33453,7 @@ PETS.all = {
         flavor="In the depths of the Endless Sea, strange thalassic horrors lurk. Not this fella, though. He's completely normal.",
         icon="2763645",
         npcSounds={208052},
+        possibleBreeds={9},
         baseStats={9.5, 8, 6.5},
     }, 
     [4521]={
@@ -33181,7 +33468,14 @@ PETS.all = {
         icon="2399261",
         npcSounds={256667,256668},
         creatureSounds={"1_256660", "9_312", "10_256665", "30_256679", "31_256673", "32_256680", "33_256664"},
+        possibleBreeds={9},
         baseStats={7.5, 8, 8.5},
+        locations={
+            {continent="", zone="unknown-Isle of Dorn", mapID=2248, coords={{41.6,72.8},{51.4,70},{53.4,67},{56.8,59.6},{56.8,61},{57.4,44.8},{57.6,44.4},{57.6,44.6},{57.6,66.8},{58.4,66.4},{59,61},{59.6,54.8},{59.8,51},{60.4,50},{61.2,46.4},{62,26.4},{62.8,61.6},{63,31.2},{63.4,46},{63.6,46.2},{64.8,32.2},{66.4,50.8},{66.6,50.8},{67,47.2},{68.2,46.2},{68.4,51},{68.6,51},{71.4,44.8},{71.6,44.8},{73,44.4},{73,44.6},}},
+            {continent="", zone="unknown-Azj-Kahet", mapID=2255, coords={{36.2,55.2},{41.2,62.2},{42.4,27.8},{49,35.6},{49.4,35.4},{52.8,32.4},{53,32.6},{53.6,41.8},{54.8,45.8},{57.8,56.8},{58.2,35},{59.2,47.4},{59.8,67.2},{60,41},{74.8,44.4},{77.8,36.6},}},
+            {continent="", zone="unknown-The Ringing Deeps", mapID=2214, coords={{44.2,31.8},{44.2,41.4},{44.4,36.2},{44.4,36.6},{44.4,41.6},{46.8,49.6},{47.4,44.4},{48.4,43.8},{48.6,43.8},{49.6,65},{50.6,65},{52,27.8},{52.8,26.8},{52.8,59.8},{53,54.4},{53,54.6},{53,58.6},{53.2,27.8},{53.2,33.2},{53.2,58.4},{53.6,32.4},{54.4,65.4},{54.6,34.2},{55.4,74.2},{56.4,65.2},{56.6,65.4},{56.6,66.4},{56.6,66.6},{57.2,34.2},{57.4,34.6},{57.6,34.6},{63.4,33.2},{65,36.4},{65,36.6},{67.8,37.2},{67.8,37.6},{71,39.6},{71.8,35.8},{72.8,39},{73,42},{73.4,42.6},{73.6,42.4},{73.6,42.6},}},
+            {continent="", zone="unknown-Hallowfall", mapID=2215, coords={{29.2,60.4},{29.2,60.6},{29.2,62},{29.6,59.2},{29.8,49.8},{36.4,45.4},{38.2,65.4},{39,61.2},{39.8,64},{40.6,67.4},{43.8,23.2},{44.2,64.8},{45.4,32.2},{45.6,66.8},{45.8,32.8},{46.8,17.4},{46.8,17.6},{47.4,58.6},{47.6,58.4},{47.6,58.6},{48.6,55.6},{49.8,49},{49.8,63.4},{49.8,64.2},{50.8,48},{51.2,28.4},{51.4,59.8},{52.2,63.8},{54.6,68},{62,13.6},{62.6,40},{62.8,56.4},{62.8,56.6},{64.6,10.4},{66.6,23},{68.4,30.4},{68.4,30.6},{69.6,35.2},}}
+        },
     }, 
     [4522]={
         name="Troglofrog",
@@ -33195,7 +33489,14 @@ PETS.all = {
         icon="2399263",
         npcSounds={256667,256668},
         creatureSounds={"1_256660", "9_312", "10_256665", "30_256679", "31_256673", "32_256680", "33_256664"},
+        possibleBreeds={9},
         baseStats={8, 8.5, 7.5},
+        locations={
+            {continent="", zone="unknown-Isle of Dorn", mapID=2248, coords={{51.2,69.2},{53.2,66.8},{53.4,65.4},{53.4,65.6},{53.8,65.4},{53.8,65.6},{53.8,66.6},{56.6,71.8},{57.6,69.2},{58.2,60.8},{59,55.8},{60.2,60.4},{60.8,61.4},{61.6,60.2},{62.6,62.6},}},
+            {continent="", zone="unknown-Azj-Kahet", mapID=2255, coords={{38,58.2},}},
+            {continent="", zone="unknown-The Ringing Deeps", mapID=2214, coords={{43.6,41.4},{44.4,39.2},{44.8,31.4},{45.4,36.8},{45.6,37},{47.4,48.2},{53,30.6},{53,32},{53.2,64.4},{53.6,32},{58.2,77.4},{58.4,32.6},{70,40},}},
+            {continent="", zone="unknown-Hallowfall", mapID=2215, coords={{44.8,64.6},{46.6,30.4},{49.2,65.4},{52.4,62.8},{57.4,28},{62.2,54.2},{62.4,61.2},{62.8,52.6},{76.6,40},}}
+        },
     }, 
     [4524]={
         name="Starkstripe Hopper",
@@ -33208,6 +33509,7 @@ PETS.all = {
         flavor="Brightly colored means do not touch. Red is nature's warning light!",
         icon="2399260",
         npcSounds={8353},
+        possibleBreeds={3},
         baseStats={7.25, 8.25, 8.5},
     }, 
     [4525]={
@@ -33221,7 +33523,9 @@ PETS.all = {
         flavor="Protosheep spend winters bereft their flowers. When the seasons turn, the plains are filled with a variety of earthy, sweet scents.",
         icon="4279015",
         npcSounds={254766,254767},
+        possibleBreeds={1,2,3,4,5,6,7,8,9,10},
         baseStats={9, 7, 8},
+        locations={{continent="", zone="unknown-Isle of Dorn", mapID=2248, coords={{27.4,67.4},{27.4,67.6},{27.6,67.4},{27.6,67.6},{28.4,65.4},{28.4,65.8},{28.6,65.4},{28.6,65.6},{29.2,67.6},{30.4,60.2},{30.4,64.6},{30.4,68.6},{30.6,64.6},{30.6,68.4},{30.6,68.6},{31,58.2},{31.4,60.6},{31.8,59},{32.2,62.4},{33,73.8},{34,72.8},{34.8,70.4},{34.8,70.6},{35.8,66.4},{35.8,71.8},{36,70.6},{36.2,67},{37,68.2},{37.4,71.2},{37.6,71.2},{38.2,73.2},{38.8,71.6},{39.8,70.4},{39.8,70.6},{40,74.2},{41,74.4},{41,74.6},{41.2,76.2},{41.4,77.2},{42.2,21.6},{42.4,66.2},{42.6,66},{43.2,30.8},{43.2,68.8},{43.6,36},{43.8,62.4},{43.8,65.8},{43.8,73},{44.2,76},{45.4,72.4},{45.4,72.6},{45.6,17.2},{45.8,21.4},{45.8,73.2},{46,21.6},{46.2,72.4},{46.4,18.6},{46.6,20.8},{46.6,22.4},{46.6,22.6},{46.8,62.4},{48.2,69},{51.8,72.6},{52,71.4},{52,71.6},{53.4,57.4},{53.4,57.6},{53.4,74.6},{53.6,74.8},{54.4,53.8},{54.8,58.8},{55,72},{56,65.4},{56,65.6},{56.2,31.4},{56.2,31.6},{56.2,69.4},{56.2,69.6},{56.6,40.2},{56.6,64.2},{56.8,33},{56.8,42.8},{57,54.2},{57.2,42.2},{57.4,38.2},{58.2,52.6},{58.4,28.2},{58.4,30.2},{58.4,52.4},{58.6,30.2},{58.8,27},{58.8,37.4},{58.8,37.6},{59.4,38.8},{59.4,49.4},{59.4,49.6},{59.6,25.4},{59.6,25.6},{59.8,42.8},{59.8,68.2},{59.8,72.4},{59.8,72.6},{60.2,40.8},{60.4,26.8},{60.6,26.8},{60.8,29.4},{61,31.4},{61,31.6},{61.6,57.4},{61.6,57.6},{64.2,52.2},{64.2,54.8},{64.4,48},{65,57.2},{66,51.4},{66.2,39.4},{66.2,39.6},{66.6,41.4},{66.6,41.6},{66.6,54.2},{67.6,32},{68,46.8},{68.2,31.4},{68.8,30.4},{68.8,32.8},{69,40},{69.4,26.2},{69.4,43},{69.4,46.2},{69.6,26.2},{69.6,46.2},{69.8,28.4},{69.8,31.2},{71,29.4},{71,29.6},{71.2,31.2},}}},
     }, 
     [4526]={
         name="Sandstone Mosswool",
@@ -33234,7 +33538,12 @@ PETS.all = {
         flavor="These lambs savor a journey to the beaches of Khaz Algar to rest in warm sands.",
         icon="4279015",
         npcSounds={254766,254767},
+        possibleBreeds={1,2,3,4,5,6,7,8,9,10},
         baseStats={9.5, 6, 8.5},
+        locations={
+            {continent="", zone="unknown-Isle of Dorn", mapID=2248, coords={{40.4,72.8},{41.4,71.6},{41.6,74.8},{41.8,70.8},{41.8,73.2},{42.4,71.8},{42.6,73.2},{55.4,28.6},{55.6,28.6},{57.4,29.2},{61.6,27.6},}},
+            {continent="", zone="unknown-Dornogal", mapID=2339, coords={{34.2,39.2},{34.4,39.6},{34.6,39.2},{35.2,32.2},{35.4,32.8},{35.8,32.8},{36.2,72.6},{36.4,72},{36.6,72.4},{36.6,72.6},{40.2,34},{40.6,33.4},{40.6,34.2},{45.4,24.8},{45.4,25.6},{45.8,25.2},{45.8,25.6},{48.4,21.4},{48.4,21.6},{48.6,21.2},{48.6,21.6},{48.8,20.4},{51.2,36.2},{53,23.4},{53,23.8},{63.8,27},{64,26.4},{72.8,22},{73.2,39.2},{73.2,39.8},{73.4,32},{73.4,32.6},{73.6,32.6},{73.6,40.2},{73.8,32.2},}}
+        },
     }, 
     [4527]={
         name="Lil' Moss Rosy",
@@ -33247,6 +33556,7 @@ PETS.all = {
         flavor="Counting sheep to a dream of springtime.",
         icon="4279015",
         npcSounds={254766,254767},
+        possibleBreeds={7},
         baseStats={9.5, 6.5, 8},
     }, 
     [4529]={
@@ -33260,7 +33570,9 @@ PETS.all = {
         flavor="Expert Earthen florists are capable of arranging beautiful floral patterns upon the backs of protosheep.",
         icon="4279015",
         npcSounds={254766,254767},
+        possibleBreeds={1,2,3,4,5,6,7,9,10},
         baseStats={9.5, 8, 6.5},
+        locations={{continent="", zone="unknown-Isle of Dorn", mapID=2248, coords={{36.8,42.4},{36.8,42.6},{37,39.4},{37,39.6},{37.4,44.4},{37.6,44.2},{38,38.8},{38.4,43},{40.2,39.8},{55.4,60.2},{55.6,60.2},{55.6,62.2},{56.8,28},{57,26.6},{57.2,26.4},{57.4,57.4},{57.4,57.6},{58.6,59.2},{59.4,60.2},{59.6,60.4},{60,57.2},{60.8,59.4},{60.8,59.6},{61.2,62},{61.4,27},}}},
     }, 
     [4530]={
         name="Loamy",
@@ -33285,7 +33597,12 @@ PETS.all = {
         source="Pet Battle",
         flavor="Fungal lashers are typically violent and carnivorous. This diminuative variety is better suited to shyly flail its limbs against fellow small fry.",
         icon="2027889",
+        possibleBreeds={2,3,6,8,9},
         baseStats={8.5, 8.5, 7},
+        locations={
+            {continent="", zone="unknown-Isle of Dorn", mapID=2248, coords={{51.6,67.4},{52.4,68.2},{52.6,68.6},{53,68},{53.8,66.8},{54.2,67.6},{55,66.4},}},
+            {continent="", zone="unknown-The Ringing Deeps", mapID=2214, coords={{43.4,35.2},{43.4,36.6},{43.6,33.6},{43.6,35.2},{43.8,33},{46.2,40.8},{46.4,36.4},{50.4,39.2},{52,31.6},{53.8,60.2},{54.4,30.8},{55.2,62},}}
+        },
     }, 
     [4534]={
         name="Nightfarm Growthling",
@@ -33297,6 +33614,7 @@ PETS.all = {
         source="Drop",
         flavor="These highly destructive pests are known to destroy crops in Hallowfall.",
         icon="2027888",
+        possibleBreeds={7},
         baseStats={8.25, 8.25, 7.5},
     }, 
     [4535]={
@@ -33309,7 +33627,13 @@ PETS.all = {
         source="Pet Battle",
         flavor="The alluring twin mushroom cap colors of these fungal creatures attracts sentient and beastial victims alike.",
         icon="2027892",
+        possibleBreeds={2,3,6,8,9},
         baseStats={8.75, 8.25, 7},
+        locations={
+            {continent="", zone="unknown-Isle of Dorn", mapID=2248, coords={{51.4,70.4},{51.6,70.4},{52,69.2},{52.4,66.4},{52.4,66.6},{52.6,66.6},{53.2,65},{53.4,66.4},{53.6,65.4},{54,68.6},{54.4,66},{54.6,66},{64.4,49.8},{66,48.8},{67.8,44.4},{68,41},}},
+            {continent="", zone="unknown-The Ringing Deeps", mapID=2214, coords={{45.2,33},{47,38},{48.8,39.2},{50.4,43.6},{51.6,30.6},{51.8,37},{51.8,43},{52.6,63.8},{53.6,31.4},{54.8,32.2},{55.2,63.4},{55.8,32},{56,33},{56.4,34},{56.4,68.6},{56.6,34},{56.6,68.6},}},
+            {continent="", zone="unknown-Hallowfall", mapID=2215, coords={{45.4,57.8},{50.6,31.4},{50.8,37.8},{56.4,29.8},{57,33.4},{58.4,31.8},}}
+        },
     }, 
     [4536]={
         name="Blightbud",
@@ -33321,6 +33645,7 @@ PETS.all = {
         source="Drop",
         flavor="Please keep your blightbud on a leash at all times! They are notorious for the havoc they can wreak on unprotected gardens.",
         icon="2027890",
+        possibleBreeds={10},
         baseStats={8.5, 8.5, 7},
     }, 
     [4537]={
@@ -33334,6 +33659,7 @@ PETS.all = {
         flavor="Part lean, mean candle-throwing machine. Part adventurer wannabe. All kobold.\nAlwaise raring to test his mettle against new opponents.",
         icon="134168",
         npcSounds={255875,255874,255876},
+        possibleBreeds={1},
         baseStats={8.25, 8, 7.75},
     }, 
     [4538]={
@@ -33348,7 +33674,9 @@ PETS.all = {
         icon="5767166",
         npcSounds={254784,254783},
         creatureSounds={"3_254730", "9_10", "10_254731", "30_254732", "31_254733", "32_254735", "33_254736"},
+        possibleBreeds={1,2,3,4,5,6,7,8,9,10},
         baseStats={6.5, 9, 8.5},
+        locations={{continent="", zone="unknown-Isle of Dorn", mapID=2248, coords={{24.4,52.6},{25.4,54.2},{25.4,62},{25.6,54.4},{25.6,62},{25.8,67.2},{29,64.6},{30.8,57.2},{32.4,66},{32.6,66},{33,71},{33.6,64},{35.2,66},{42.2,28.4},{42.4,31.2},{42.6,24.2},{43,26.8},{44,23.4},{44.4,31.4},{44.4,31.6},{44.4,34},{44.6,31.6},{44.6,66.4},{44.6,66.6},{45,19},{45,31},{45.4,61},{45.8,24},{46.8,35},{46.8,59.6},{47.2,18.8},{47.8,19.4},{47.8,20.2},{47.8,62.8},{48,17.2},{48.2,14.4},{48.2,14.6},{49.8,22.6},{51,31.6},{51.2,20},{52.8,32},{53.4,20},{53.6,20},{53.6,31.8},{54.2,17},{55,13},{55,34},{55,57.4},{55,57.6},{55.8,17.6},{55.8,34.6},{56,15},{56,16.4},{56,62.8},{56.2,16.6},{56.4,11},{56.6,10.8},{57.4,13.8},{57.8,16.8},{58.4,14.2},{58.6,14.2},{59.4,16},{60.4,14},{61.8,51.2},{62.6,52.4},{62.6,52.6},{63.2,56.2},{65,50.4},{65,50.6},{65.2,40.6},{65.2,45.4},{65.2,45.6},{65.4,40.4},{65.4,42.2},{65.6,42.2},{66,44.6},{66.2,44.4},{67.2,45.8},{67.4,53.2},{67.4,53.6},{67.6,42},{68.4,53.2},{68.6,53.2},{69.4,50},{69.6,50},}}},
     }, 
     [4539]={
         name="Granite Ramolith",
@@ -33362,7 +33690,9 @@ PETS.all = {
         icon="5767165",
         npcSounds={254784,254783},
         creatureSounds={"3_254730", "9_10", "10_254731", "30_254732", "31_254733", "32_254735", "33_254736"},
+        possibleBreeds={1,2,3,4,5,6,7,8,9,10},
         baseStats={7, 8, 9},
+        locations={{continent="", zone="unknown-Isle of Dorn", mapID=2248, coords={{24.2,51.4},{24.2,51.6},{26.2,63.8},{30.4,60.8},{31.8,56},{32.2,60.6},{32.4,60.4},{32.6,67.4},{32.6,67.6},{34.4,67.6},{34.6,65.4},{34.6,67.6},{35.2,72.8},{35.2,75.2},{35.6,74.6},{35.8,67.8},{35.8,74.2},{36.4,45.4},{36.4,45.6},{37,75.6},{37.2,44.2},{37.2,75.4},{38,69.8},{38.4,45.2},{38.6,45.2},{39.4,43.2},{39.6,41.8},{42.6,74.4},{42.8,74.6},{43.4,70},{43.4,70.8},{43.6,69.8},{43.6,71.8},{44,67.2},{44,74.2},{44.4,65.2},{44.4,78.6},{44.6,65.2},{44.6,78.6},{44.8,74},{44.8,74.8},{45.2,77.2},{46,57.6},{46.2,67.4},{46.2,67.6},{47,63.6},{47.8,76.2},{47.8,79.2},{49,56.2},{52,77},{70.2,20.2},{73.8,21.4},{73.8,21.6},{74.2,33},{74.8,20.6},{74.8,34.4},{75,34.6},}}},
     }, 
     [4540]={
         name="Alabaster Stonecharger",
@@ -33376,7 +33706,9 @@ PETS.all = {
         icon="5767172",
         npcSounds={254784,254783},
         creatureSounds={"3_254730", "9_10", "10_254731", "30_254732", "31_254733", "32_254735", "33_254736"},
+        possibleBreeds={1,2,3,4,5,6,7,8,9,10},
         baseStats={8, 8, 8},
+        locations={{continent="", zone="unknown-Isle of Dorn", mapID=2248, coords={{45.4,28},{45.6,25.4},{46,30.8},{46.4,28.4},{46.4,28.6},{46.6,28.6},{46.6,33.6},{47,29.6},{47,31.2},{48,27.4},{48,27.6},{49.4,29.8},{49.4,30.6},{49.6,28.4},{50.2,26.2},{50.4,31.2},{50.4,32},{50.8,28.8},{51.2,27.4},{51.2,27.6},{57,18},{57.8,18.4},{57.8,20.2},}}},
     }, 
     [4541]={
         name="Bedrock Stonecharger",
@@ -33390,7 +33722,9 @@ PETS.all = {
         icon="5767167",
         npcSounds={254784,254783},
         creatureSounds={"3_254730", "9_10", "10_254731", "30_254732", "31_254733", "32_254735", "33_254736"},
+        possibleBreeds={1,2,3,4,5,6,7,8,9,10},
         baseStats={8, 8, 8},
+        locations={{continent="", zone="unknown-Isle of Dorn", mapID=2248, coords={{34.4,81.6},{34.6,73.4},{34.6,73.6},{36,75},{36,76.8},{36.2,76},{38,79.4},{38,79.6},{39.2,80.2},{40.6,80.2},{42.6,77.4},{42.6,77.6},{43,75},{44.2,52.4},{44.2,71.6},{45.2,52.4},{45.2,52.6},{47.6,53.2},{48.4,71.8},{49.8,53.8},{53,70.8},{53.2,77.8},{54.8,53},{57,41.4},{58.2,41.6},{58.6,39.6},{60.4,44.4},{60.4,44.6},{61.2,54.6},{62.4,37.2},{62.6,32.4},{62.6,37.2},{62.8,38.8},{64.4,57.4},{67,56},{69.6,51.6},{70.2,22},{71,20.4},{71,20.6},{71.8,22.4},{71.8,22.6},{72.2,42.6},{72.8,22.8},{73,50.4},{74.6,24},{74.8,22.6},{75.4,40.6},{75.8,24.4},{75.8,42.2},{76,44.8},{76.2,35.6},{76.2,49},{76.8,43.4},{78.2,28},{80.6,29.8},}}},
     }, 
     [4542]={
         name="Slim",
@@ -33430,6 +33764,7 @@ PETS.all = {
         icon="136221",
         creatureSounds={"3_246156", "10_246158", "13_246157", "19_246173", "30_246160", "31_246161", "32_246162", "33_246163"},
         baseStats={6, 9, 9},
+        locations={{continent="", zone="unknown-Hallowfall", mapID=2215, coords={{37.4,46},{46.2,31.8},{48.4,59},{54.2,52},{58.8,49.2},{61.4,46},{61.6,45.8},{61.8,44.2},{63.2,49},{72,46},}}},
     }, 
     [4546]={
         name="Sandstone Ramolith",
@@ -33443,6 +33778,7 @@ PETS.all = {
         icon="5767168",
         npcSounds={254784,254783},
         creatureSounds={"3_254730", "9_10", "10_254731", "30_254732", "31_254733", "32_254735", "33_254736"},
+        possibleBreeds={1},
         baseStats={9, 9, 6},
     }, 
     [4548]={
@@ -33514,6 +33850,7 @@ PETS.all = {
         flavor="Now that is one spicy bee!",
         icon="5633720",
         npcSounds={117655},
+        possibleBreeds={6},
         baseStats={8, 8.5, 7.5},
     }, 
     [4571]={
@@ -33526,7 +33863,12 @@ PETS.all = {
         source="Pet Battle",
         flavor="So wrinkly!! So scrunchy!!",
         icon="5777859",
+        possibleBreeds={1,5,7,10},
         baseStats={8.25, 8, 7.75},
+        locations={
+            {continent="", zone="unknown-Azj-Kahet", mapID=2255, coords={{76,61.6},{77,64.6},{77.2,61.8},{78.4,64},{78.6,64.2},{78.6,65.2},{78.8,63.2},}},
+            {continent="", zone="unknown-The Ringing Deeps", mapID=2214, coords={{52,31.4},{52,36.4},{52,36.6},{52.6,38.6},{52.8,37.4},{52.8,38.4},{53,33.6},{53.4,58},{53.8,46.2},{53.8,59.2},{54.2,56.4},{54.2,56.6},{54.4,31.4},{54.6,31.4},{54.6,31.6},{54.8,61.6},{55,33.2},{55.4,46.2},{55.6,46.2},{55.8,48},{57.6,46.2},{57.8,86.6},{58.2,46.8},{58.2,82.6},{58.4,49.4},{58.4,49.6},{58.4,82.4},{58.6,49.2},{58.8,81.4},{58.8,81.6},{59.4,45.4},{59.4,91.2},{59.6,87.4},{59.8,37.8},{60.2,88.2},{60.4,36.4},{60.4,37.2},{60.6,36.4},{60.6,36.6},{60.6,87.8},{60.8,92.8},{61,95.2},{61.8,37},{61.8,39.8},{62,90.8},{62.4,83.2},{63.6,39.6},}}
+        },
     }, 
     [4573]={
         name="Skittish Sniffler",
@@ -33538,7 +33880,12 @@ PETS.all = {
         source="Pet Battle",
         flavor="Capable of sensing vibrations and tremors nearly a mile away, these young moles tend to burrow at the first sign of mortal danger.",
         icon="5777860",
+        possibleBreeds={1,5,7,10},
         baseStats={9, 8, 7},
+        locations={
+            {continent="", zone="unknown-Azj-Kahet", mapID=2255, coords={{76.4,61.8},{76.6,61.8},{77,62.8},{78,61.4},{78,61.6},{78,66.4},{78.2,63.6},}},
+            {continent="", zone="unknown-The Ringing Deeps", mapID=2214, coords={{50.6,38.6},{52.2,49.4},{52.4,34.2},{52.4,49.6},{52.6,34.2},{52.8,32},{53,47.4},{53.4,30.6},{53.4,47.8},{53.6,47.8},{53.8,46.6},{54.2,58.4},{54.2,58.6},{54.4,54.4},{54.4,54.6},{54.6,54.6},{56,45},{57.2,44.4},{57.8,46.4},{57.8,46.6},{57.8,52.4},{57.8,52.6},{58,85.4},{58,85.6},{59.6,85.8},{60.8,43.8},{61.6,88.4},{61.8,81.6},{62.4,86.2},{62.4,94.4},{62.4,94.6},}}
+        },
     }, 
     [4574]={
         name="Snuffling",
@@ -33550,7 +33897,9 @@ PETS.all = {
         source="Pet Battle",
         flavor="Even hard sediment poses little challenge to the digging claws of these critters.",
         icon="5777855",
+        possibleBreeds={1,7},
         baseStats={8.5, 8, 7.5},
+        locations={{continent="", zone="unknown-The Ringing Deeps", mapID=2214, coords={{66,49.4},{67,47.4},{67,47.6},{67,51.8},{67.4,49.2},{67.6,49.2},{68.4,47.4},{68.4,47.6},{68.8,45.4},{68.8,45.6},{68.8,48.4},{69,48.6},{69.4,49.8},}}},
     }, 
     [4575]={
         name="Sneef",
@@ -33587,7 +33936,9 @@ PETS.all = {
         flavor="THE BEES ARE ON FIRE NOW?",
         icon="5633719",
         npcSounds={117655},
+        possibleBreeds={6},
         baseStats={8, 8.5, 7.5},
+        locations={{continent="", zone="unknown-Isle of Dorn", mapID=2248, coords={{68.2,41.6},{68.4,41.4},{69.8,41.2},{71.2,39.2},{71.4,41.8},{71.6,36},{72.2,46.8},{72.4,41.8},{72.6,41.6},{73.8,46.6},{74,40.2},{74.2,44.8},{74.8,44.8},{75,43.6},{75.2,43.4},{75.2,47.8},}}},
     }, 
     [4579]={
         name="Muskpaw Calf",
@@ -33642,6 +33993,7 @@ PETS.all = {
         flavor="Raised as living tanks for Anub'azal's army, Rak-Ush's battleshells are surprisingly affectionate. Who's a good beetle?",
         icon="5764865",
         npcSounds={261387},
+        possibleBreeds={10},
         baseStats={8.5, 8, 7.5},
     }, 
     [4586]={
@@ -33655,6 +34007,7 @@ PETS.all = {
         flavor="When you tell a bad joke, he'll be there to let you know.",
         icon="5795781",
         npcSounds={265964},
+        possibleBreeds={3},
         baseStats={6.5, 8, 9.5},
     }, 
     [4589]={
@@ -33708,6 +34061,7 @@ PETS.all = {
         source="Vendor",
         flavor="Incredibly lifelike, this enchanted wax statue could pass for a real mole. If petting it didn't cause it to melt, that is.",
         icon="5777858",
+        possibleBreeds={1},
         baseStats={7.5, 8, 8.25},
     }, 
     [4599]={
@@ -33722,6 +34076,7 @@ PETS.all = {
         icon="3459799",
         npcSounds={252313,252314},
         creatureSounds={"3_252318", "10_252319", "19_248127", "30_252320", "31_252351", "32_252347", "33_252342"},
+        possibleBreeds={10},
         baseStats={7.5, 8, 8.5},
     }, 
     [4602]={
@@ -33748,6 +34103,7 @@ PETS.all = {
         flavor="Ancient Gorian blood runs through Parrlok's veins. As far as anyone knows, his desire for enjoying pastries and chatting with his friends keeps his imperial ambitions in check.",
         icon="4215254",
         npcSounds={218825,218824},
+        possibleBreeds={1},
         baseStats={8.5, 8.5, 7},
     }, 
     [4616]={

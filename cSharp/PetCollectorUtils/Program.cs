@@ -52,6 +52,14 @@ namespace PetCollectorUtils
     */
     static void Main(string[] args)
     {
+      //RefreshData();
+      CompareWithXuFu();
+
+      Console.ReadLine();
+    }
+
+    static void RefreshData()
+    {
       var petsBySpeciesId = new LuaParser().Parse();
       new CsvParser().ParseCsvData(ref petsBySpeciesId);
       new WowHeadParser().Parse(ref petsBySpeciesId);
@@ -60,9 +68,12 @@ namespace PetCollectorUtils
       ApplyDefaultBaseStats(ref petsBySpeciesId);
 
       var petsStr = SerializePets(petsBySpeciesId.Values);
-      //Clipboard.SetText(result);
+    }
 
-        Console.ReadLine();
+    static void CompareWithXuFu()
+    {
+      var petsBySpeciesId = new LuaParser().Parse();
+      new XuFuCsvParser().Compare(petsBySpeciesId);
     }
 
     static string SerializePets(IEnumerable<Pet> pets)
