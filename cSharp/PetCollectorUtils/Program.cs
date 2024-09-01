@@ -52,13 +52,13 @@ namespace PetCollectorUtils
     */
     static void Main(string[] args)
     {
-      //RefreshData();
-      CompareWithXuFu();
+      var petsStr = RefreshData();
+      //CompareWithXuFu();
 
       Console.ReadLine();
     }
 
-    static void RefreshData()
+    static string RefreshData()
     {
       var petsBySpeciesId = new LuaParser().Parse();
       new CsvParser().ParseCsvData(ref petsBySpeciesId);
@@ -68,6 +68,7 @@ namespace PetCollectorUtils
       ApplyDefaultBaseStats(ref petsBySpeciesId);
 
       var petsStr = SerializePets(petsBySpeciesId.Values);
+      return petsStr;
     }
 
     static void CompareWithXuFu()
