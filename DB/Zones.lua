@@ -102,6 +102,7 @@ ZONES.list = {
         [2248] = {scanWorldQuests = true, Name = "Isle of Dorn"},
         [2214] = {scanWorldQuests = true, Name = "The Ringing Deeps"},
         [2215] = {scanWorldQuests = true, Name = "Hallowfall"},
+        [2216] = {scanWorldQuests = true, Name = "City of Threads"},
         [2255] = {scanWorldQuests = true, Name = "Azj-Kahet"},
         [2256] = {scanWorldQuests = true, Name = "Azj-Kahet Lower"},
     }

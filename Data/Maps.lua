@@ -178,7 +178,7 @@ MAPS.maps = {
     [2112]={13, "Valdrakken"},
     [2151]={13, "The Forbidden Reach"},
     [2133]={13, "Zaralek Cavern"},
-    [2200]={13, "Emerald Dream"}
+    [2200]={13, "Emerald Dream"},
 }
 
 function MAPS.GetContinent(mapID)
