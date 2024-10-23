@@ -1,4 +1,5 @@
 https://www.townlong-yak.com/framexml/live/Blizzard_APIDocumentation
+https://www.wow-petguide.com/classes/export_collection_xlsx.php?m=Collection&language=EN&region=us&realm=stormrage&name=salkari&language=EN
 
 /dump C_Map.GetBestMapForUnit('player')
 
@@ -27,6 +28,8 @@ TODO
 * better option to 'show for collected pets'
 * font scaler option
 * track these pets: 265, 279
+* show pets that have higher chance due to bonus event like Sign of the Warrior (Bop) https://www.wowhead.com/spells/uncategorized/name-extended:Bonus+event?filter=57;1;0
+
 
 DATA
 * requiresScan -- for pets that show up Today's Events

@@ -161,6 +161,12 @@ function UTILITIES:SortTasks(a, b)
 	if a.challenge.expansionID > b.challenge.expansionID then return true end
 	if a.challenge.expansionID < b.challenge.expansionID then return false end
     if a.challenge.zoneID == b.challenge.zoneID then
+        local aDisplay = a.challenge:Display()
+        local bDisplay = b.challenge:Display()
+        if (aDisplay == null or bDisplay == null) then
+            return true;
+        end
+        
         return a.challenge:Display() < b.challenge:Display()
     end
 

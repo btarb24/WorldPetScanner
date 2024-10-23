@@ -466,8 +466,9 @@ function TASKFINDER:RefreshTodaysEvents(mode)
                 DEBUG:AddLine(file, method, "scanned ", mapID, " received ", taskPOIs, " with amt of ", UTILITIES:Count(taskPOIs))
 				if taskPOIs then
 					for i = 1, #taskPOIs do
-                        local questID = taskPOIs[i].questId
+                        local questID = taskPOIs[i].questID
 
+                        _G.lastQuestDebug = taskPOIs[i]
                         if (not DATA.scannedQuestList[questID]) then
                             local zoneID = taskPOIs[i].mapID
                             table.insert(DATA.scannedQuestList, questID, {taskPOI = taskPOIs[i], expansionID = expansionID, zoneID = zoneID})
