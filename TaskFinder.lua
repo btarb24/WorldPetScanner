@@ -180,7 +180,7 @@ local function ProcessWorldQuestRewardTrigger(mode, taskData)
     DEBUG:AddLine(file, method, "task: ", taskData.trigger.id, " questMatch: ", questMatch)
 
     if questMatch then
-        taskData.challenge.questID = questMatch.questId
+        taskData.challenge.questID = questMatch.questID
         AddTask(mode, taskData)
         return
     end
@@ -209,7 +209,7 @@ end
 local function GetDesiredQuestRewards(taskPOI, expansionID, zoneID)
     local method = "GetDesiredQuestRewards"
 	local rewards = {}
-    local questID = taskPOI.questId
+    local questID = taskPOI.questID
 	local numQuestRewards = GetNumQuestLogRewards(questID)
 
     DEBUG:AddLine(file, method, "questID: ", questID, " numQuestRewards: ", numQuestRewards)
@@ -235,10 +235,10 @@ end
 local function AnalyzeQuestRewards(taskPOI, expansionID, zoneID)
     local method = "AnalyzeQuestRewards"
     local directQuestRewards = GetDesiredQuestRewards(taskPOI, expansionID, zoneID)
-    DEBUG:AddLine(file, method, "questID: ", taskPOI.questId, " exp:", expansionID, " z: ", zoneID, " desired reward count: ", UTILITIES:Count(directQuestRewards))
+    DEBUG:AddLine(file, method, "questID: ", taskPOI.questID, " exp:", expansionID, " z: ", zoneID, " desired reward count: ", UTILITIES:Count(directQuestRewards))
     
     if (not UTILITIES:IsEmpty(directQuestRewards)) then
-        local questID = taskPOI.questId
+        local questID = taskPOI.questID
         local trigger = {type = PETC.TRIGGER_TYPE.WORLD_QUEST, questID = questID}
         local challenge = Challenge:newWorldQuest(questID, expansionID, zoneID)
         local task = Task:new(trigger, challenge, directQuestRewards)
