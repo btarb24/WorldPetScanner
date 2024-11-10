@@ -7,6 +7,71 @@ local UTILITIES = PETC.UTILITIES
 local PETS = PETC.PETS
 local MAPS = PETC.MAPS
 
+--[[
+  POI GROUP  
+    {name="Zone phase change:", entries={
+        {id="", maps={
+            {id="n162419:Zidormi", type="npc", mapID=249, coords={{56.0,35.2},}}
+        }}
+    }},
+    {id="q32428:Pandaren Spirit Tamer", entries={
+
+   Root > mid > entry
+   Root - yellow header text. No links (required) 
+   Mid - required, but there's no visual nesting if id&name are omitted. Quets will show status
+   Entry - required
+
+   name: (optional)
+   id: (optional)
+   
+
+  POI ENTRY
+    {id="i123", display="Cave Entrance", mapID=51, type="cave", currencies={"ci:350:23247"}, faction="a", coords={{55.8,88.1}}},
+     id: links (optional)
+     display: custom display text (optional)
+     faction: a | h (optional)
+     currencies: 0-many currencies (optional)
+     type: 
+        start, end, = yellow quest icons
+        poi = star
+        dot = yellow circle
+        prof = book icon
+        treasure = chest
+        fish
+        cave
+        boss = big skull
+        kill = red dot
+        vendor = item bag
+        npc = head icon
+        [default] = green pet paw
+
+
+    LINK IDS
+     a####:name    Achiement
+     i####         Item (name usually not needed)
+     n####:name    Npc
+     c####:name    Currency
+     s####         Spell
+     q####:name    Quest (name usually not needed)
+     e####:name    Event
+     o####:name    World object
+     f####:name    Faction/Reputation
+     z:name        My proprietary links
+
+     CURRENCIES
+      currencies={"ci:350:23247", "c416:30", "cgold:38"}
+       cID:AMT a true currency
+       cgold:AMT some amount of gold.. 1 = 1gold. .5 = 50 silver
+       ci:AMT:ID an item-based currency
+
+
+    REPUTATIONS
+        reputations={{id=2526, rank=8, rankName="Exalted"}},  .. standard and friendships
+        reputations={{id=2511, rank=9, type="renown"}},       .. major factions - renown tracks
+        covenant={id=1, name="Kyrian", level=27},             .. 1=kyrian, 2=Venthyr, 3=NightFae, 4-=Necrolord
+]]
+
+
 local function getFamilyDetails(family)
     if family == 1 then 
         return "Humanoid", "humanoid", 8/256, 138/256, 222/256
@@ -224,6 +289,13 @@ local function GetLink(idStr, color)
             color = "b3b3b3"
         end
         link = string.format("|cFF%s|Hobject:%d|h%s|h|r", color, id, name)
+    elseif(type == "f") then
+        local detail = strsub(idStr, 2)
+        id, name = strsplit(":", detail)
+        if not color then
+            color = "ffffff"
+        end
+        link = string.format("|cFF%s|Hfaction:%d|h%s|h|r", color, id, name)
     elseif(type == "c") then
         link = GetCurrency(idStr)
     elseif(type == "e") then
@@ -426,6 +498,110 @@ local function GetPois(topDock, pet, selectedIdx)
     end
     
     return topDock
+end
+
+local function GetStandardFactionRankName(rank)
+    if (rank <= 1) then
+        return "Hated"
+    elseif (rank == 2) then
+        return "Hostile"
+    elseif (rank == 3) then
+        return "Unfriendly"
+    elseif (rank == 4) then
+        return "Neutral"
+    elseif (rank == 5) then
+        return "Friendly"
+    elseif (rank == 6) then
+        return "Honored"
+    elseif (rank == 7) then
+        return "Revered"
+    end
+
+    return "Exalted"
+end
+
+local function GetReputationText(topDock, repDetails)
+    local repLbl = DISPLAY_UTIL:AcquireLabelFont(PAPetCard, PAPetCardTab2.content.scrollFrame.child)
+    if (topDock) then
+        repLbl:SetPoint("LEFT", PAPetCardTab2.content.scrollFrame.child, "LEFT")
+        repLbl:SetPoint("TOP", topDock, "BOTTOM", 0, -10)
+    else
+        repLbl:SetPoint("TOPLEFT", PAPetCardTab2.content.scrollFrame.child, "TOPLEFT")        
+    end
+    repLbl:SetText("Reputation: ")
+
+    local currentBottom
+    for idx, repDetail in pairs(repDetails) do        
+        local factionInfo = C_Reputation.GetFactionDataByID(repDetail.id)
+        local repName = factionInfo.name
+        local completed = false
+        local tooltip
+
+        --renown tracks for 'major faction'
+        if (repDetail.type == "renown") then
+            local majorFactionData = C_MajorFactions.GetMajorFactionData(repDetail.id)
+            
+            completed = majorFactionData.renownLevel >= repDetail.rank
+            tooltip = string.format("Current renown: %d", majorFactionData.renownLevel)
+        else
+            local friendshipInfo = C_GossipInfo.GetFriendshipReputation(repDetail.id)
+            local friendshipRankInfo = C_GossipInfo.GetFriendshipReputationRanks(repDetail.id)
+            local repCurrentRankName = friendshipInfo.reaction
+            local repCurrentRankNum = friendshipRankInfo.currentLevel
+            
+            --'standard' faction (friendly>exalted)
+            if (repCurrentRankName == nil or repCurrentRankName == "") then
+                repCurrentRankName = GetStandardFactionRankName(factionInfo.reaction)
+                repCurrentRankNum = factionInfo.reaction
+            end
+
+            completed = repCurrentRankNum >= repDetail.rank
+            tooltip = string.format("Current rank: %d-%s", repCurrentRankNum, repCurrentRankName)
+        end
+
+        local repSatisfiedIcon = DISPLAY_UTIL:AcquireTexture(PAPetCard, PAPetCardTab2.content.scrollFrame.child)
+        if (completed) then
+            repSatisfiedIcon:SetAtlas("auctionhouse-icon-checkmark")
+        else
+            repSatisfiedIcon:SetAtlas("common-icon-redx")
+        end
+        repSatisfiedIcon:SetSize(12,12)
+        if (currentBottom) then
+            repSatisfiedIcon:SetPoint("TOP", currentBottom, "BOTTOM", 0, -2)
+        else
+            repSatisfiedIcon:SetPoint("TOP", repLbl, "TOP")
+        end
+        repSatisfiedIcon:SetPoint("LEFT", repLbl, "RIGHT")
+        if (not completed) then
+            repSatisfiedIcon:SetScript("OnEnter",
+                function(self)
+                    GameTooltip_SetDefaultAnchor(GameTooltip, self)
+                    GameTooltip:ClearLines()
+                    GameTooltip:ClearAllPoints()
+                    GameTooltip:SetPoint("BOTTOMLEFT", self, "TOPLEFT", 0, 0)
+                    GameTooltip:SetText(tooltip)
+                    GameTooltip:Show()
+                end
+            )
+            repSatisfiedIcon:SetScript("OnLeave",
+                function()
+                    GameTooltip:Hide()
+                end
+            )
+        end
+            
+        local repValLbl = DISPLAY_UTIL:AcquireHighlightFont(PAPetCard, PAPetCardTab2.content.scrollFrame.child)
+        if (repDetail.rankName) then
+            repValLbl:SetText(string.format("|Hfaction:%d|h%s|h |cFFb3b3b3(%d-%s)|r", repDetail.id, repName, repDetail.rank, repDetail.rankName))
+        else
+            repValLbl:SetText(string.format("|Hfaction:%d|h%s|h |cFFb3b3b3(rank %d)|r", repDetail.id, repName, repDetail.rank))
+        end
+        repValLbl:SetPoint("TOPLEFT", repSatisfiedIcon, "TOPRIGHT", 4, 0)
+
+        currentBottom = repValLbl
+    end
+
+    return currentBottom
 end
 
 local function GetProfessionText(topDock, professionDetail)    
@@ -1327,7 +1503,7 @@ local function CreateWindow()
         GameTooltip:SetPoint("BOTTOM",region,"TOP",0,6)
 
         local linkType = strsplit(":", link)
-        if (linkType == "npc" or linkType == "object" or linkType == "event") then
+        if (linkType == "npc" or linkType == "object" or linkType == "event" or linkType == "faction") then
             GameTooltip:SetText("Click for WowHead link")
         else
             GameTooltip:SetHyperlink(link)
@@ -1347,6 +1523,8 @@ local function CreateWindow()
             DISPLAY.LinkWindow:Show(text, "https://www.wowhead.com/object=" .. id)
         elseif (type == "event") then
             DISPLAY.LinkWindow:Show(text, "https://www.wowhead.com/event=" .. id)
+        elseif (type == "faction") then
+            DISPLAY.LinkWindow:Show(text, "https://www.wowhead.com/faction=" .. id)
         else
             ChatFrame_OnHyperlinkShow(self, link, text, button, region, left, bottom, width, height)
         end
@@ -1738,9 +1916,17 @@ local function UpdateWindow(pet, locationIdx)
         local link = GetLink(pet.quest)
         priorBottom = AddLabelAndVal(priorBottom, "Quest: ", link)
     end
+
+    if (pet.reputations) then
+        priorBottom = GetReputationText(priorBottom, pet.reputations)
+    end
     
-    if (pet.reputation and pet.reputation.type) then
-        priorBottom = AddLabelAndVal(priorBottom, "Reputation: ", pet.reputation.type, pet.reputation.level)
+    if (pet.covenant) then
+        priorBottom = AddLabelAndVal(priorBottom, "Covenant: ", pet.covenant.name .. " renown " .. pet.covenant.level)
+    end
+
+    if (pet.pvpHonorLevel) then
+        priorBottom = AddLabelAndVal(priorBottom, "PVP Honor Level: ", pet.pvpHonorLevel)
     end
 
     if (pet.source == "World Event") then
