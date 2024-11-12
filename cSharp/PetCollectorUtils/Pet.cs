@@ -41,6 +41,7 @@ namespace PetCollectorUtils
     public bool intermittent;
     public bool unobtainable;
     public double chance;
+    public int pvpHonorLevel;
     public List<int> possibleBreeds;
     public List<double> baseStats = new List<double> { -1, -1, -1 };
     public int soundID_key;
@@ -69,7 +70,8 @@ namespace PetCollectorUtils
       sb.AppendLine($"        source=\"{source}\",");
       sb.AppendLine($"        flavor=\"{flavor}\",");
       sb.AppendLine($"        icon=\"{icon}\",");
-      if (!string.IsNullOrEmpty(reputation)) sb.AppendLine($"        reputation={reputation},");
+      if (!string.IsNullOrEmpty(reputation)) sb.AppendLine($"        reputations={reputation},");
+      if (pvpHonorLevel > 0) sb.AppendLine($"        pvpHonorLevel={pvpHonorLevel},");
       if (npcSoundIDs.Any()) sb.AppendLine($"        npcSounds={{{string.Join(",", npcSoundIDs)}}},");
       if (creatureSoundIDs.Any()) sb.AppendLine($"        creatureSounds={SerializeStringArray(creatureSoundIDs.ToArray())},");
       if (!string.IsNullOrEmpty(eventName)) sb.AppendLine($"        eventName=\"{eventName}\",");
@@ -80,7 +82,7 @@ namespace PetCollectorUtils
       if (!string.IsNullOrEmpty(promotion)) sb.AppendLine($"        promotion=\"{promotion}\",");
       if (!string.IsNullOrEmpty(tcg)) sb.AppendLine($"        tcg=\"{tcg}\",");
       if (!string.IsNullOrEmpty(feature)) sb.AppendLine($"        feature=\"{feature}\",");
-      if (!string.IsNullOrEmpty(covenant)) sb.AppendLine($"        covenant=\"{covenant}\",");
+      if (!string.IsNullOrEmpty(covenant)) sb.AppendLine($"        covenant={covenant},");
       if (chance > 0) sb.AppendLine($"        chance={chance},");
 
 

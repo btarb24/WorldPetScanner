@@ -31,11 +31,12 @@ namespace PetCollectorUtils.LUA
     const string possibleBreeds   = "        possibleBreeds=";
     const string baseStats        = "        baseStats=";
     const string chance           = "        chance=";
+    const string pvpHonorLevel    = "        pvpHonorLevel=";
     const string feature          = "        feature=";
     const string covenant         = "        covenant=";
     const string mission          = "        mission=";
     const string missionSource    = "        missionSource=";
-    const string reputation       = "        reputation=";
+    const string reputations      = "        reputations=";
     const string promotion        = "        promotion=";
     const string tcg              = "        tcg=";
     const string eventName        = "        eventName=";
@@ -139,6 +140,10 @@ namespace PetCollectorUtils.LUA
         {
           currentPet.chance = GetSimpleDouble(line);
         }
+        else if (line.StartsWith(pvpHonorLevel))
+        {
+          currentPet.pvpHonorLevel = GetSimpleInt(line);
+        }
         else if (line.StartsWith(promotion))
         {
           currentPet.promotion = GetSimpleString(line);
@@ -151,7 +156,7 @@ namespace PetCollectorUtils.LUA
         {
           currentPet.tcg = GetSimpleString(line);
         }
-        else if (line.StartsWith(reputation))
+        else if (line.StartsWith(reputations))
         {
           currentPet.reputation = GetBlobString(lines, line, ref i);
         }
@@ -185,7 +190,7 @@ namespace PetCollectorUtils.LUA
         }
         else if (line.StartsWith(covenant))
         {
-          currentPet.covenant = GetSimpleString(line);
+          currentPet.covenant = GetBlobString(lines, line, ref i);
         }
         else if (line.StartsWith(feature))
         {

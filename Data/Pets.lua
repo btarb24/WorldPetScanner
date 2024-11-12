@@ -12530,7 +12530,16 @@ PETS.all = {
         npcSounds={28522},
         possibleBreeds={6},
         baseStats={8, 8, 8},
-        locations={{continent="Northrend", zone="Dragonblight", area="Naxxramas", mapID=3456, mapFloor=2, coords={{71.6,14.2},}}},
+        pois={
+            {name="Npc Drop:", entries={
+                {id="", maps={
+                    {id="n15952:Maexxna", mapID=163, chance=28, type="boss", coords={{68,15}}},
+                }}
+            }}
+        },
+        acquisition={
+            {"Kill %s for a chance of receiving a %s", "n15952:Maexxna", "i93030"},
+        },
     }, 
     [1144]={
         name="Fungal Abomination",
@@ -12545,7 +12554,16 @@ PETS.all = {
         npcSounds={34855},
         possibleBreeds={7},
         baseStats={8, 8, 8},
-        locations={{continent="Northrend", zone="Dragonblight", area="Naxxramas", mapID=3456, mapFloor=4, coords={{76,28.4},}}},
+        pois={
+            {name="Npc Drop:", entries={
+                {id="", maps={
+                    {id="n16011:Loatheb", mapID=165, chance=21, type="boss", coords={{76,28}}},
+                }}
+            }}
+        },
+        acquisition={
+            {"Kill %s for a chance of receiving a %s", "n16011:Loatheb", "i93032"},
+        },
     }, 
     [1145]={
         name="Mr. Bigglesworth",
@@ -12558,7 +12576,7 @@ PETS.all = {
         flavor="Upon exiting the freezing necropolis of Naxxramas, Mr. Bigglesworth promptly found a warm spot in the sun to take a long nap in.",
         icon="656579",
         npcSounds={25349},
-        achievement={name="Raiding with Leashes", ID=7934},
+        achievement={id="a7934"},
         possibleBreeds={3},
         baseStats={8, 8, 8},
     }, 
@@ -12575,7 +12593,16 @@ PETS.all = {
         npcSounds={34868},
         possibleBreeds={5},
         baseStats={8, 8, 8},
-        locations={{continent="Northrend", zone="Dragonblight", area="Naxxramas", mapID=3456, mapFloor=1, coords={{48.4,47.6},}}},
+        pois={
+            {name="Npc Drop:", entries={
+                {id="", maps={
+                    {id="n15932:Gluth", mapID=162, chance=29, type="boss", coords={{46,44}}},
+                }}
+            }}
+        },
+        acquisition={
+            {"Kill %s for a chance of receiving a %s", "n15932:Gluth", "i93029"},
+        },
     }, 
     [1147]={
         name="Harbinger of Flame",
@@ -12591,7 +12618,16 @@ PETS.all = {
         creatureSounds={"1_34856", "3_34859", "6_34857", "9_506"},
         possibleBreeds={2},
         baseStats={8, 8, 8},
-        locations={{continent="Eastern Kingdoms", zone="Blackrock Mountain", area="Molten Core"}},
+        pois={
+            {name="Npc Drop:", entries={
+                {id="", maps={
+                    {id="n12098:Sulfuron Harbinger", mapID=232, chance=20, type="boss", coords={{82,82}}},
+                }}
+            }}
+        },
+        acquisition={
+            {"Kill %s for a chance of receiving a %s", "n12098:Sulfuron Harbinger", "i93033"},
+        },
     }, 
     [1149]={
         name="Corefire Imp",
@@ -12606,7 +12642,16 @@ PETS.all = {
         npcSounds={25658},
         possibleBreeds={6},
         baseStats={8, 8, 8},
-        locations={{continent="Eastern Kingdoms", zone="Blackrock Mountain", area="Molten Core"}},
+        pois={
+            {name="Npc Drop:", entries={
+                {id="", maps={
+                    {id="n11982:Magmadar", mapID=232, chance=22, type="boss", coords={{69,21}}},
+                }}
+            }}
+        },
+        acquisition={
+            {"Kill %s for a chance of receiving a %s", "n11982:Magmadar", "i93034"},
+        },
     }, 
     [1150]={
         name="Ashstone Core",
@@ -12621,7 +12666,16 @@ PETS.all = {
         npcSounds={23865},
         possibleBreeds={7},
         baseStats={8, 8, 8},
-        locations={{continent="Eastern Kingdoms", zone="Blackrock Mountain", area="Molten Core"}},
+        pois={
+            {name="Npc Drop:", entries={
+                {id="", maps={
+                    {id="n11988:Golemagg the Incinerator", mapID=232, chance=20, type="boss", coords={{69,57}}},
+                }}
+            }}
+        },
+        acquisition={
+            {"Kill %s for a chance of receiving a %s", "n11988:Golemagg the Incinerator", "i93035"},
+        },
     }, 
     [1151]={
         name="Untamed Hatchling",
@@ -12637,7 +12691,16 @@ PETS.all = {
         creatureSounds={"1_367", "3_370", "4_371", "6_369", "9_8", "10_368", "13_368"},
         possibleBreeds={5},
         baseStats={8, 8, 8},
-        locations={{continent="Eastern Kingdoms", zone="Blackrock Mountain", area="Blackwing Lair", mapID=2677, mapFloor=1, coords={{35.8,69},}}},
+        pois={
+            {name="Npc Drop:", entries={
+                {id="", maps={
+                    {id="n12435:Razorgore the Untamed", mapID=287, chance=26, type="boss", coords={{42,60}}},
+                }}
+            }}
+        },
+        acquisition={
+            {"Kill %s for a chance of receiving a %s", "n12435:Razorgore the Untamed", "i93036"},
+        },
     }, 
     [1152]={
         name="Chrominius",
@@ -12652,7 +12715,16 @@ PETS.all = {
         npcSounds={34847},
         possibleBreeds={4},
         baseStats={7.5, 8.5, 8},
-        locations={{continent="Eastern Kingdoms", zone="Blackrock Mountain", area="Blackwing Lair", mapID=2677, mapFloor=4, coords={{44.8,59.4},}}},
+        pois={
+            {name="Npc Drop:", entries={
+                {id="", maps={
+                    {id="n14020:Chromaggus", mapID=290, chance=24, type="boss", coords={{39.4,72.6}}},
+                }}
+            }}
+        },
+        acquisition={
+            {"Kill %s for a chance of receiving a %s", "n14020:Chromaggus", "i93038"},
+        },
     }, 
     [1153]={
         name="Death Talon Whelpguard",
@@ -12668,7 +12740,16 @@ PETS.all = {
         creatureSounds={"1_34849", "3_34850", "4_34851", "6_8160", "9_7"},
         possibleBreeds={2},
         baseStats={8, 8, 8},
-        locations={{continent="Eastern Kingdoms", zone="Blackrock Mountain", area="Blackwing Lair", mapID=2677, mapFloor=3, coords={{50,60.4},}}},
+        pois={
+            {name="Npc Drop:", entries={
+                {id="", maps={
+                    {id="n12017:Broodlord Lashlayer", mapID=289, chance=25, type="boss", coords={{50.5,61.7}}},
+                }}
+            }}
+        },
+        acquisition={
+            {"Kill %s for a chance of receiving a %s", "n12017:Broodlord Lashlayer", "i93037"},
+        },
     }, 
     [1154]={
         name="Viscidus Globule",
@@ -12683,7 +12764,16 @@ PETS.all = {
         npcSounds={23816},
         possibleBreeds={7},
         baseStats={8, 8, 8},
-        locations={{continent="Kalimdor", zone="Silithus", area="Temple of Ahn'Qiraj", mapID=3428, mapFloor=1, coords={{71.8,18.6},}}},
+        pois={
+            {name="Npc Drop:", entries={
+                {id="", maps={
+                    {id="n15299:Viscidus", mapID=319, chance=28, type="boss", coords={{72,18}}},
+                }}
+            }}
+        },
+        acquisition={
+            {"Kill %s for a chance of receiving a %s", "n15299:Viscidus", "i93039"},
+        },
     }, 
     [1155]={
         name="Anubisath Idol",
@@ -12698,7 +12788,16 @@ PETS.all = {
         npcSounds={34843},
         possibleBreeds={4},
         baseStats={8, 8.5, 7.5},
-        locations={{continent="Kalimdor", zone="Silithus", area="Temple of Ahn'Qiraj", mapID=3428, mapFloor=1, coords={{61.6,65.6},}}},
+        pois={
+            {name="Npc Drop:", entries={
+                {id="", maps={
+                    {id="n15276:Emperor Vek'lor", mapID=319, chance=21, type="boss", coords={{60.6,69.7}}},
+                }}
+            }}
+        },
+        acquisition={
+            {"Kill %s for a chance of receiving a %s", "n15276:Emperor Vek'lor", "i93040"},
+        },
     }, 
     [1156]={
         name="Mini Mindslayer",
@@ -12714,7 +12813,16 @@ PETS.all = {
         creatureSounds={"1_34861", "3_34862", "6_34863", "9_8"},
         possibleBreeds={6},
         baseStats={8, 8, 8},
-        locations={{continent="Kalimdor", zone="Silithus", area="Temple of Ahn'Qiraj", mapID=3428, mapFloor=2, coords={{44.6,45.6},}}},
+        pois={
+            {name="Npc Drop:", entries={
+                {id="", maps={
+                    {id="n15263:The Prophet Skeram", mapID=320, chance=21, type="boss", coords={{45.7,52.2}}},
+                }}
+            }}
+        },
+        acquisition={
+            {"Kill %s for a chance of receiving a %s", "n15263:The Prophet Skeram", "i93041"},
+        },
     }, 
     [1157]={
         name="Harpy Youngling",
@@ -12730,6 +12838,9 @@ PETS.all = {
         possibleBreeds={1,10},
         baseStats={8, 8, 8},
         locations={{mapID=10, coords={{23.4,33.4},{23.4,33.6},{24,34.4},{24.2,34.6},{24.4,33},{24.6,33},{25,26.4},{25,26.6},{25.2,28.4},{25.2,28.6},{25.4,35.2},{25.6,31.6},{25.6,33},{26,28},{26.2,25.4},{26.2,29},{26.2,30.4},{26.2,30.6},{26.4,26.4},{26.4,34.8},{26.6,34.8},{26.8,26.8},{26.8,28.8},{26.8,31.2},{27,29.8},{27,33.4},{27,33.6},{27.4,26.4},{27.4,27.8},{27.4,32},{27.6,28.4},{27.6,28.6},{27.6,32.2},{27.8,34.6},{28,34.4},{28.2,25.4},{28.2,25.6},{28.2,37.4},{28.2,37.6},{28.2,39.2},{28.4,33},{28.4,35.6},{28.6,33},{29,38},{29.2,34.4},{29.2,34.6},{29.4,36.4},{29.4,36.6},{29.6,39.2},{30,37},{30.4,33.6},{30.4,35.4},{30.4,35.6},{30.6,33.4},{30.6,33.6},{30.6,39.8},{30.8,38.4},{30.8,38.6},{31.4,40.8},{31.6,40.8},{32,31.4},{32,31.6},}}},
+        acquisition={
+            {"Shares spawns with other battle pets, critters and mobs in the area.  Kill everything around to help trigger a spawn."}
+        },
     }, 
     [1158]={
         name="Stunted Yeti",
@@ -12746,6 +12857,9 @@ PETS.all = {
         possibleBreeds={10},
         baseStats={8, 8, 8},
         locations={{mapID=69, coords={{50.4,58.6},{51,59.8},{51.4,58},{51.8,57.2},{51.8,58.6},{51.8,59.6},{52,60.8},{52.2,58},{52.6,57.4},{52.6,60.6},{53,59.4},{53,59.6},{53.2,55.4},{53.4,56},{53.6,55.2},{53.6,55.6},{55.4,55.4},{55.4,55.6},{56.2,56.2},{56.2,57.8},{56.4,57.2},}}},
+        acquisition={
+            {"Shares spawns with other battle pets, critters and mobs in the area.  Kill everything around to help trigger a spawn."}
+        },
     }, 
     [1159]={
         name="Lofty Libram",
@@ -12762,6 +12876,10 @@ PETS.all = {
         possibleBreeds={10},
         baseStats={7.5, 8.5, 8},
         locations={{mapID=25, coords={{27.4,39.8},{27.6,41},{28,42.8},{28.6,32.2},{28.8,44.2},{29.4,42.6},{29.6,42.6},{30.4,31.4},{30.4,31.6},{30.4,44},{31,31.8},{31.2,44.4},{31.4,42.2},{31.6,42.2},{31.8,40.2},{32.4,31.4},{32.4,31.6},{32.6,41.2},{32.8,33},{32.8,35.8},{33,43.4},{33,43.6},{33.2,31.4},{33.4,31.8},{33.6,34.8},{33.8,36.8},{33.8,38.6},{33.8,40.4},{33.8,40.6},{33.8,42.2},{33.8,42.6},{34.4,34},{34.4,37.6},{35.2,33.4},{35.2,33.6},{35.2,34.8},}}},
+        acquisition={
+            {"Shares spawns with other battle pets and critters in the area.  Kill everything around to help trigger a spawn."},
+            {"It also spawns as a secondary pet to the rats, so you should start those battles to check."},
+        },
     }, 
     [1160]={
         name="Arcane Eye",
@@ -12814,6 +12932,9 @@ PETS.all = {
             {mapID=27, coords={{25.6,36.2},{25.8,31.8},{26.8,36},{27,31.4},{27,32.4},{27,32.6},{27.4,35.4},{27.8,34.8},{28,35.8},{28.4,31.2},{28.6,31.2},{28.8,32.2}}},
             {mapID=30, coords={{31.8,71.6},{32.2,71.2},{32.4,66.2},{32.4,67},{32.8,70.6},{33.6,64.6},{33.8,32.8},{34.6,31},{34.8,32.6},{35.4,31.8},{35.8,28.6},{35.8,31.4},{36,35.4},{42.6,66.4},{43.6,67.2},{44,30.4},{44.8,61.8},{44.8,63.2},{45.2,37.2},{45.4,29.2},{45.6,29},{45.6,36.6},{45.6,37.6},{45.8,36},{45.8,62.2},{45.8,62.6},{46,26.6},{46.6,26},{46.8,28.4},{47.4,62.6},{48.6,61},{51.2,57.6},{51.6,55.8},{51.8,57.4},{51.8,57.6},{52,59.2},{52.6,65.6},{53.6,65},{53.8,64},{54.6,66.6},{54.6,67.6},{54.8,66.4},{58.4,26.6},{58.4,27.6},{59,28.2},{59.2,26.2},{60.6,36.4},{60.8,34.4},{61.2,35},{61.6,34.2},{62,34.6}}},
         },
+        acquisition={
+            {"It's a level 1 pet so you'll kill it in one shot. This is fine since it's mechanical, just trap it after it comes back to life."},
+        },
     }, 
     [1163]={
         name="Anodized Robo Cub",
@@ -12830,6 +12951,9 @@ PETS.all = {
         possibleBreeds={4,5},
         baseStats={9, 8, 7},
         locations={{mapID=83, coords={{57.4,49.4},{57.4,49.6},{57.6,49.6},{57.8,51.2},{58,48.4},{58,48.6},{58,52.4},{58,52.6},{58.2,47.4},{58.6,50.8},{58.6,51.6},{58.8,49.4},{58.8,49.6},{59,48},{59,52.8},{59.2,45.4},{59.2,45.6},{59.6,50},{59.6,53.6},{59.8,45.4},{59.8,45.6},{60.2,50.6},{60.4,52.4},{60.4,52.6},{60.6,46.2},{60.6,47.6},{60.6,53.8},{61,50.2},{61.2,46.8},{61.2,49.2},{61.2,51.6},{61.4,50.8},{61.4,53.2},{61.6,53.2},{62.2,50.8},{62.4,51.8},{62.6,51.8},}}},
+        acquisition={
+            {"Shares spawns with other battle pets and critters in the area.  Kill everything around to help trigger a spawn."},
+        },
     }, 
     [1164]={
         name="Cogblade Raptor",
@@ -12892,6 +13016,9 @@ PETS.all = {
         possibleBreeds={2,6,8},
         baseStats={8, 8.5, 7.5},
         locations={{mapID=119, coords={{44,28.8},{44.2,30.4},{44.4,24},{44.4,25.4},{44.4,25.6},{44.4,27.4},{44.4,27.6},{44.4,30.6},{44.6,24},{44.6,27.6},{45,22.2},{45.4,23.2},{45.4,26.4},{45.4,26.6},{45.4,32.2},{45.6,24.6},{45.6,28},{45.8,29.4},{45.8,29.6},{46.4,22.8},{46.4,30.8},{46.8,23.6},{46.8,25.2},{46.8,26.8},{46.8,33.4},{46.8,33.6},{47,23.4},{47.4,28.8},{47.4,31.4},{47.4,31.6},{47.6,28.8},{47.6,31.4},{47.6,31.6},{47.8,23.2},{48,26.4},{48.4,30.2},{48.6,22.4},{48.6,30.4},{48.8,25},{48.8,28.2},{49,28.6},{49.2,27},{49.4,23.8},{49.6,23.8},}}},
+        acquisition={
+            {"Shares spawns with other battle pets and critters in the area.  Kill everything around to help trigger a spawn."},
+        },
     }, 
     [1168]={
         name="Murki",
@@ -12924,7 +13051,9 @@ PETS.all = {
         tcg="Betrayal of the Guardian",
         possibleBreeds={10},
         baseStats={7.5, 8.5, 8},
-        locations={{mapID=210, coords={{42.6,71.6},}}},
+        acquisition={
+            {"This pet was part of the Trading Card Game system. You can buy cards on eBay etc."}
+        },
     }, 
     [1175]={
         name="Thundertail Flapper",
@@ -12949,12 +13078,38 @@ PETS.all = {
         family=8,
         isUnique=true,
         source="Quest",
-        flavor="Can you believe how cute i am? Mei Neither.",
+        flavor="Can you believe how cute i am? Me Neither.",
         icon="774009",
         npcSounds={36230},
         possibleBreeds={1},
         baseStats={8, 8, 8},
-        locations={{continent="Pandaria", zone="Vale of Eternal Blossoms"}},
+        pois={
+            {name="Prerequisite:", entries={
+                {id="", maps={
+                    {id="n66741:Aki the Chosen", mapID=390, type="pet", coords={{31.2,74.2}}}
+                }},
+            }},
+            {name="Quest:", entries={
+                {id="q32603:Beasts of Fable", maps={
+                    {id="n64572:Sara Finkleswitch", mapID=390, type="start", faction="a", coords={{86.6,60.2}}},
+                    {id="n64582:Gentle San", mapID=390, type="start", faction="h", coords={{60.8,23.6}}},
+                    {id="n68555:Ka'wi the Gorger", mapID=371, type="pet", coords={{48.4,71.0}}},
+                    {id="n68558:Gorespine", mapID=422, type="pet", coords={{26.2,50.2}}},
+                    {id="n68559:No-No", mapID=390, type="pet", coords={{11.0,70.6}}},
+                    {id="n68560:Greyhoof", mapID=376, type="pet", coords={{25.2,78.6}}},
+                    {id="n68561:Lucky Yi", mapID=376, type="pet", coords={{40.4,43.8}}},
+                    {id="n68562:Ti'un the Wanderer", mapID=388, type="pet", coords={{72.2,79.8}}},
+                    {id="n68563:Kafi", mapID=379, type="pet", coords={{35.2,56.0}}},
+                    {id="n68564:Dos-Ryga", mapID=379, type="pet", coords={{67.8,84.6}}},
+                    {id="n68565:Nitun", mapID=371, type="pet", coords={{57.0,29.2}}},
+                    {id="n68566:Skitterer Xi'a", mapID=418, type="pet", coords={{36.2,37.2}}},
+                }},
+            }},
+        },
+        acquisition={
+            {"Complete the pet battles in the quest to receive a %s.", "i94025"},
+            {"%s is a prerequisite to the quest line.", "n66741:Aki the Chosen"},
+        },
     }, 
     [1177]={
         name="Living Sandling",
@@ -12969,7 +13124,17 @@ PETS.all = {
         npcSounds={36137},
         possibleBreeds={4,5,7,8},
         baseStats={9, 8, 7},
-        locations={{continent="Pandaria", zone="Isle of Thunder", area="Throne of Thunder"}},
+        pois={
+            {name="Npc Drop:", entries={
+                {id="", maps={
+                    {id="n69944:Sand Elemental", mapID=509, chance=1.7, type="kill", coords={{27,56},{27,44},{27,39},{27,20}}},
+                }}
+            }}
+        },
+        acquisition={
+            {"Kill %s for a chance of receiving a %s. They are trash mobs between Horridon and The Council of Elders.", "n69944:Sand Elemental", "i94125"},
+            {"It is also available on the Black Market Auction House."}
+        },
     }, 
     [1178]={
         name="Sunreaver Micro-Sentry",
@@ -12985,7 +13150,17 @@ PETS.all = {
         creatureSounds={"1_36301", "3_36302", "6_36303", "9_8", "13_36301"},
         possibleBreeds={2},
         baseStats={8, 8, 8},
-        locations={{mapID=504, coords={{48.6,89.8},}}},
+        pois={
+            {name="Npc Drop:", entries={
+                {id="", maps={
+                    {id="n50358:Haywire Sunreaver Construct", mapID=504, chance=21, type="kill", coords={{48,88.8},{48.2,87.6},{48.4,86.4},{48.4,87.2},{48.8,87.4},{49,88},{49,89},{49.2,86.4},{49.2,89.8},{49.4,90.6},{49.8,90.4},{50,90.6}}},
+                }}
+            }}
+        },
+        acquisition={
+            {"Kill %s for a chance of receiving a %s.", "n50358:Haywire Sunreaver Construct", "i94124"},
+            {"The rare is on roughly a 1 hour spawn timer."}
+        },
     }, 
     [1179]={
         name="Electrified Razortooth",
@@ -13000,7 +13175,7 @@ PETS.all = {
         npcSounds={12127},
         possibleBreeds={1},
         baseStats={8, 8.5, 7.5},
-        locations={{mapID=504, coords={{40,59.2},}}},
+        locations={{mapID=504, coords={{43.5,65.5},{40.4,52.7},{48.6,45.8},{47.7,49.3},{50.3,48.6}}}},
     }, 
     [1180]={
         name="Zandalari Kneebiter",
@@ -13015,7 +13190,19 @@ PETS.all = {
         npcSounds={18178},
         possibleBreeds={2,3,6,8},
         baseStats={7, 8.5, 8.5},
-        locations={{continent="Pandaria", zone="Kun-Lai Summit", area="Isle Of Giants", mapID=507, coords={{23.6,58.6},}}},
+        pois={
+            {name="Npc Drop:", entries={
+                {id="", maps={
+                    {id="n69925:Zandalari Dinomancer", mapID=507, chance=1.2, type="kill", coords={{38.8,70.6},{39,72.2},{39.2,73.2},{41,70.8},{46.4,54.8},{46.6,54.4},{47.2,55.2},{47.4,56},{47.4,57.4},{47.4,57.6},{47.6,57.4},{47.6,57.6},{48.8,57.8},{49.4,52.2},{49.4,52.8},{49.6,52.4},{49.6,53.2},{50.6,52.2},{50.6,52.6},{52.2,52.8},{52.4,52},{52.4,53.6},{52.6,53.4},{52.6,53.6},{53,55.8},{53.2,55.2},{53.6,56},{64.4,65.6},{64.8,64.4},{65,64.6},{65,65.8},{65,76.4},{65.6,75.2},{65.6,76},{67,53.8},{67,75.4},{67,76.2},{67.2,37.4},{67.2,37.6},{67.2,39},{67.2,53.4},{67.6,76},{67.8,38.4},{67.8,38.6},{67.8,39.6},{68,40.6},{68.2,53.4},{68.4,71},{68.6,41.8},{68.8,41},{69.2,69.4},{69.2,70.6},{69.4,70.2},{69.6,69},{69.6,70.4},{69.8,71.4},{69.8,71.6},{75.4,76},{75.8,77.6},{76.2,77.2},{77.2,81.2},{77.4,82.8},{77.8,79.6},{77.8,83.2},{78,79.4},{78,81.6},{78,85},{78.2,80.8},{78.6,80.2},{78.6,82},{78.6,82.8},{79.2,79},{79.4,78.4},{79.8,77.4},{79.8,80.2},{80.4,77.6}}},
+                    {id="n70096:War-God Dokah", mapID=507, chance=.08, type="kill", coords={{76.4,83.4},{76.4,83.8},{77,83.4},{77,83.6},{77.4,82.4},{77.6,80.2},{77.6,82.4},{77.6,82.6},{78,83.8},{78,84.8},{78.2,81.4},{78.6,80.4},{78.6,80.6}}},
+                    {id="n70008:Primal Devilsaur", mapID=507, chance=.04, type="kill", coords={{42.4,55.8},{43.4,53},{43.6,55.8},{44.4,49.8},{44.4,57.6},{44.8,50},{45.4,48.8},{49.4,45},{50,45},{50.2,45.8},{50.8,45.6},{51,45},{51.2,50},{51.8,45.2},{52.6,54.2},{54.2,47.8},{54.6,48.6},{55.6,50.4},{56.2,47.6},{56.2,53.6},{56.2,55.2},{56.4,52.8},{75,77.8},{75.4,78.6},{75.8,77.4},{76,77.6}}},
+                    {id="n70012:Primal Direhorn Hatchling", mapID=507, chance=.02, type="kill", coords={{53.8,70.6},{54.4,70.4},{55,69.4},{55.2,70.2},{55.2,71},{55.2,71.6},{55.6,70.4},{55.6,70.6},{59.4,72},{60,70.8},{60.2,71.8},{60.6,70.6},{60.6,71.8},{61,75.2},{61.2,74.2},{61.8,73},{62.2,72.2},{62.2,74.6},{62.4,73.8},{62.6,74},{62.8,73.4},{62.8,75.2},{63.4,71},{63.4,72.2},{63.6,71.4},{64,72.2},{64.2,72.6},{64.6,72.2},{64.6,72.6}}},
+                }}
+            }}
+        },
+        acquisition={
+            {"Kill the mobs for a chance of receiving a %s.", "i94126"},
+        },
     }, 
     [1181]={
         name="Elder Python",
@@ -13061,7 +13248,17 @@ PETS.all = {
         creatureSounds={"1_36632", "2_36633", "3_36634", "4_36635", "6_36636", "9_8", "10_36638", "13_36637", "33_36639"},
         possibleBreeds={2},
         baseStats={8, 8, 8},
-        locations={{continent="Pandaria", zone="Isle of Thunder", area="Throne of Thunder", mapID=6622, mapFloor=5, coords={{43,57.1},}}},
+        pois={
+            {name="Npc Drop:", entries={
+                {id="", maps={
+                    {id="n69427:Dark Animus", mapID=512, chance=3, type="boss", coords={{43,57}}},
+                }}
+            }}
+        },
+        acquisition={
+            {"Kill %s for a chance of receiving a %s.", "n69427:Dark Animus", "i94152"},
+            {"It is also available on the Black Market Auction House."},
+        },
     }, 
     [1184]={
         name="Stunted Direhorn",
@@ -13074,7 +13271,7 @@ PETS.all = {
         flavor="Even at this tiny size, Direhorns are known to wreak havoc on unsuspecting victims.",
         icon="840541",
         npcSounds={37579},
-        achievement={name="Brutal Pet Brawler", ID=8300},
+        achievement={id="a8300"},
         possibleBreeds={2},
         baseStats={8.25, 8, 7.75},
     }, 
@@ -13091,7 +13288,19 @@ PETS.all = {
         npcSounds={33921},
         possibleBreeds={7},
         baseStats={8, 8, 8},
-        locations={{continent="Pandaria", zone="Kun-Lai Summit", area="Isle Of Giants", mapID=507, coords={{32.8,54.4},}}},
+        pois={
+            {name="Quest:", entries={
+                {id="q32616:A Large Pile of Giant Dinosaur Bones", maps={
+                    {display="Cave entrance", mapID=507, type="cave", coords={{27.27,57.65}}},
+                    {id="n70022:Ku'ma", mapID=507, type="start", coords={{33,53.4}}},
+                }}
+            }}
+        },
+        acquisition={
+            {"The quest giver is located in a cave."},
+            {"%s can be obtained by killing any mob on the Isle of Giants. Farm 999 of them for the quest.", "i94288"},
+            {"Complete the quest to receive a %s.", "i94190"},
+        },
     }, 
     [1196]={
         name="Sunfur Panda",
@@ -13106,7 +13315,35 @@ PETS.all = {
         npcSounds={36230},
         possibleBreeds={7},
         baseStats={8, 8, 8},
-        locations={{continent="Pandaria", zone="Vale of Eternal Blossoms"}},
+        pois={
+            {name="Prerequisite:", entries={
+                {id="", maps={
+                    {id="n66741:Aki the Chosen", mapID=390, type="pet", coords={{31.2,74.2}}},
+                }},
+                {id="a8080"},
+            }},
+            {name="Daily quest:", entries={
+                {id="", maps={
+                    {id="n64572:Sara Finkleswitch", mapID=390, type="start", faction="a", coords={{86.6,60.2}}},
+                    {id="n64582:Gentle San", mapID=390, type="start", faction="h", coords={{60.8,23.6}}},
+                    {id="n68555:Ka'wi the Gorger", mapID=371, type="pet", coords={{48.4,71.0}}},
+                    {id="n68558:Gorespine", mapID=422, type="pet", coords={{26.2,50.2}}},
+                    {id="n68559:No-No", mapID=390, type="pet", coords={{11.0,70.6}}},
+                    {id="n68560:Greyhoof", mapID=376, type="pet", coords={{25.2,78.6}}},
+                    {id="n68561:Lucky Yi", mapID=376, type="pet", coords={{40.4,43.8}}},
+                    {id="n68562:Ti'un the Wanderer", mapID=388, type="pet", coords={{72.2,79.8}}},
+                    {id="n68563:Kafi", mapID=379, type="pet", coords={{35.2,56.0}}},
+                    {id="n68564:Dos-Ryga", mapID=379, type="pet", coords={{67.8,84.6}}},
+                    {id="n68565:Nitun", mapID=371, type="pet", coords={{57.0,29.2}}},
+                    {id="n68566:Skitterer Xi'a", mapID=418, type="pet", coords={{36.2,37.2}}},
+                }},
+            }},
+        },
+        acquisition={
+            {"The daily quests wont be offered until you complete %s the achievement.", "a8080"},
+            {"Complete the pet battles in the daily quest to receive a %s.", "i94207"},
+            {"The bag has a 7%% chance of containing a %s.", "i94208"},
+        },
     }, 
     [1197]={
         name="Snowy Panda",
@@ -13121,7 +13358,35 @@ PETS.all = {
         npcSounds={36230},
         possibleBreeds={5},
         baseStats={8, 8, 8},
-        locations={{continent="Pandaria", zone="Vale of Eternal Blossoms"}},
+        pois={
+            {name="Prerequisite:", entries={
+                {id="", maps={
+                    {id="n66741:Aki the Chosen", mapID=390, type="pet", coords={{31.2,74.2}}},
+                }},
+                {id="a8080"},
+            }},
+            {name="Daily quest:", entries={
+                {id="", maps={
+                    {id="n64572:Sara Finkleswitch", mapID=390, type="start", faction="a", coords={{86.6,60.2}}},
+                    {id="n64582:Gentle San", mapID=390, type="start", faction="h", coords={{60.8,23.6}}},
+                    {id="n68555:Ka'wi the Gorger", mapID=371, type="pet", coords={{48.4,71.0}}},
+                    {id="n68558:Gorespine", mapID=422, type="pet", coords={{26.2,50.2}}},
+                    {id="n68559:No-No", mapID=390, type="pet", coords={{11.0,70.6}}},
+                    {id="n68560:Greyhoof", mapID=376, type="pet", coords={{25.2,78.6}}},
+                    {id="n68561:Lucky Yi", mapID=376, type="pet", coords={{40.4,43.8}}},
+                    {id="n68562:Ti'un the Wanderer", mapID=388, type="pet", coords={{72.2,79.8}}},
+                    {id="n68563:Kafi", mapID=379, type="pet", coords={{35.2,56.0}}},
+                    {id="n68564:Dos-Ryga", mapID=379, type="pet", coords={{67.8,84.6}}},
+                    {id="n68565:Nitun", mapID=371, type="pet", coords={{57.0,29.2}}},
+                    {id="n68566:Skitterer Xi'a", mapID=418, type="pet", coords={{36.2,37.2}}},
+                }},
+            }},
+        },
+        acquisition={
+            {"The daily quests wont be offered until you complete %s the achievement.", "a8080"},
+            {"Complete the pet battles in the daily quest to receive a %s.", "i94207"},
+            {"The bag has a 7%% chance of containing a %s.", "i94209"},
+        },
     }, 
     [1198]={
         name="Mountain Panda",
@@ -13136,7 +13401,35 @@ PETS.all = {
         npcSounds={36230},
         possibleBreeds={6},
         baseStats={8, 8, 8},
-        locations={{continent="Pandaria", zone="Vale of Eternal Blossoms"}},
+        pois={
+            {name="Prerequisite:", entries={
+                {id="", maps={
+                    {id="n66741:Aki the Chosen", mapID=390, type="pet", coords={{31.2,74.2}}},
+                }},
+                {id="a8080"},
+            }},
+            {name="Daily quest:", entries={
+                {id="", maps={
+                    {id="n64572:Sara Finkleswitch", mapID=390, type="start", faction="a", coords={{86.6,60.2}}},
+                    {id="n64582:Gentle San", mapID=390, type="start", faction="h", coords={{60.8,23.6}}},
+                    {id="n68555:Ka'wi the Gorger", mapID=371, type="pet", coords={{48.4,71.0}}},
+                    {id="n68558:Gorespine", mapID=422, type="pet", coords={{26.2,50.2}}},
+                    {id="n68559:No-No", mapID=390, type="pet", coords={{11.0,70.6}}},
+                    {id="n68560:Greyhoof", mapID=376, type="pet", coords={{25.2,78.6}}},
+                    {id="n68561:Lucky Yi", mapID=376, type="pet", coords={{40.4,43.8}}},
+                    {id="n68562:Ti'un the Wanderer", mapID=388, type="pet", coords={{72.2,79.8}}},
+                    {id="n68563:Kafi", mapID=379, type="pet", coords={{35.2,56.0}}},
+                    {id="n68564:Dos-Ryga", mapID=379, type="pet", coords={{67.8,84.6}}},
+                    {id="n68565:Nitun", mapID=371, type="pet", coords={{57.0,29.2}}},
+                    {id="n68566:Skitterer Xi'a", mapID=418, type="pet", coords={{36.2,37.2}}},
+                }},
+            }},
+        },
+        acquisition={
+            {"The daily quests wont be offered until you complete %s the achievement.", "a8080"},
+            {"Complete the pet battles in the daily quest to receive a %s.", "i94207"},
+            {"The bag has a 7%% chance of containing a %s.", "i94210"},
+        },
     }, 
     [1200]={
         name="Pygmy Direhorn",
@@ -13151,7 +13444,17 @@ PETS.all = {
         npcSounds={37579},
         possibleBreeds={6},
         baseStats={8.25, 8, 7.75},
-        locations={{continent="Pandaria", zone="Isle of Thunder", area="Throne of Thunder"}},
+        pois={
+            {name="Npc Drop:", entries={
+                {id="", maps={
+                    {id="n68476:Horridon", mapID=509, chance=1.3, type="boss", coords={{26.8,78.7}}},
+                }}
+            }}
+        },
+        acquisition={
+            {"Kill %s for a chance of receiving a %s.", "n68476:Horridon", "i94574"},
+            {"It is also available on the Black Market Auction House."},
+        },
     }, 
     [1201]={
         name="Spawn of G'nathus",
@@ -13166,7 +13469,17 @@ PETS.all = {
         npcSounds={36937},
         possibleBreeds={8},
         baseStats={7, 8.5, 8.5},
-        locations={{continent="Pandaria", zone="Townlong Steppes"}},
+        pois={
+            {name="Npc Drop:", entries={
+                {id="", maps={
+                    {id="n66467:G'nathus", mapID=388, chance=100, type="kill", coords={{17.8,11.6},{20.4,7.4},{36.4,7.8}}},
+                }}
+            }}
+        },
+        acquisition={
+            {"Kill %s for a guaranteed drop of %s.", "n66467:G'nathus", "i94595"},
+            {"Spawn timer is 10-20 minutes."},
+        },
     }, 
     [1202]={
         name="Ji-Kun Hatchling",
@@ -13181,7 +13494,16 @@ PETS.all = {
         npcSounds={13592},
         possibleBreeds={1,8},
         baseStats={8, 7.5, 8.5},
-        locations={{continent="Pandaria", zone="Isle of Thunder", area="Throne of Thunder", mapID=6622, mapFloor=4, coords={{49.7,41.6},}}},
+        pois={
+            {name="Npc Drop:", entries={
+                {id="", maps={
+                    {id="n69712:Ji-Kun", mapID=511, chance=2, type="boss", coords={{49.7,41.6}}},
+                }}
+            }}
+        },
+        acquisition={
+            {"Kill %s for a chance of receiving a %s.", "n69712:Ji-Kun", "i94835"},
+        },
     }, 
     [1204]={
         name="Pierre",
@@ -13194,9 +13516,21 @@ PETS.all = {
         flavor="Every cook's dream wrapped up in a perfect bundle of metal and bolts. Too bad what he cooks up isn't suitable for humanoid consumption. According to Jard's notes, he intends to make this little guy for his friend, Emily Cole.",
         icon="798062",
         npcSounds={36282},
+        professionDetail={
+            profession="Engineering",
+            desc="Pandaria 75",
+            recipe=139196,
+            materials= {
+                {qty=15, id=94113},
+                {qty=15, id=72104}
+            }
+        },
         possibleBreeds={9},
         baseStats={8.5, 7.5, 8},
-        locations={{continent="Northrend", zone="Dalaran (Northrend)", mapID=51, mapFloor=10, coords={{30.6,22.8},{32,23.4},}}},
+        acquisition={
+            {"The recipe is %s and can be looted by seemingly any mob in Pandaria with a drop rate of rougly .01%%.", "i100910"},
+            {"You'll then be able to craft a %s.", "i94903"},
+        },
     }, 
     [1205]={
         name="Direhorn Runt",
@@ -13211,7 +13545,17 @@ PETS.all = {
         npcSounds={37579},
         possibleBreeds={1,4,5,7,8},
         baseStats={8.25, 8, 7.75},
-        locations={{continent="Pandaria", zone="Isle of Giants"}},
+        pois={
+            {name="Npc Drop:", entries={
+                {id="", maps={
+                    {id="n69983:Primal Direhorn", mapID=507, chance=4, type="kill", coords={{32.4,74.4},{33.2,75.2},{33.4,75.6},{33.4,76.8},{33.4,79.6},{33.6,76.8},{34,75.4},{34.2,76},{34.4,67},{34.6,66.8},{34.6,72.8},{34.6,75.8},{34.8,66.4},{35,67.8},{35,75.4},{35,77},{35.2,74.2},{35.8,68},{36,76.8},{36.2,75.8},{36.4,72.8},{36.4,73.6},{36.4,74.6},{36.6,72.4},{36.6,72.6},{37,73.8},{37.8,72.2},{44.4,72.4},{44.4,73},{44.4,74.2},{44.6,73.2},{45.2,72.4},{45.8,72},{46,72.8},{47.2,72.6},{47.4,72},{47.4,74},{47.8,71.4},{47.8,72},{47.8,72.6},{48.8,72.2},{52.6,69.4},{53.2,73.2},{56.4,71.2},{56.4,71.6},{56.4,74},{56.6,71.6},{57,73},{57.2,73.6},{57.4,71.4},{57.6,73.6},{57.8,73.2},{58,71.2},{26,68.4},{26.8,68.2},{27.2,67.2},{27.2,68.6},{27.6,68.4},{28,69},{29.2,70.6},{30.2,68.4},{30.4,69.2},{30.4,69.6},{30.6,69.2},{30.6,69.6},{31.2,67.6},{62,63.4},{62,67.2},{62.2,66.4},{62.6,63.2},{62.6,63.6},{62.8,66.2},{62.8,66.6},{63,65.2},{63.6,66.2},{63.8,65.2},{64.4,64},{64.6,64.2}}},
+                    {id="n70014:Primal Direhorn Hatchling", mapID=507, chance=1, type="kill", coords={{63,63.6},{63.4,66.2},{63.6,64.2},{63.8,66.2},{64,63.4},{64.2,66.6},{64.4,61.2},{64.4,61.6},{64.6,61.8},{64.6,63},{64.8,61.2},{66,55.4},{66.2,56.4},{66.2,58.4},{66.4,57},{66.4,58.6},{66.4,59.6},{66.4,60.6},{66.6,58.2},{66.6,59.2},{66.8,55.4},{66.8,56.2},{66.8,57.2},{66.8,59.8},{67.6,55.8},{32.6,78.4},{33.2,79.6},{33.4,79.2},{33.6,79.6},{33.8,78.6},{34,77},{34.4,78},{34.8,77.4},{34.8,78.2},{34.8,78.6},{35,68.2},{35.2,75.2},{35.4,69.2},{35.4,69.6},{35.4,75.6},{35.6,78.6},{35.8,68.4},{35.8,78.2},{36,68.6},{36,76.8},{36.2,75.4},{36.4,70},{36.4,76},{36.6,69.4},{36.6,69.6},{36.6,75.8},{36.8,75},{36.8,76.6},{42.4,74},{42.4,74.8},{43.2,74.6},{43.4,73.2},{43.4,74.4},{43.6,74},{43.6,74.6},{44,73.2},{44.2,75.8},{44.6,73.8},{46.2,73.2},{46.8,75.8},{47,74.8},{47.4,73.4},{47.4,74.2},{47.6,74.4},{47.6,74.6},{47.8,72.4},{47.8,73.4},{48.2,75.8},{48.4,71.4},{48.4,77.4},{49.2,71.2},{49.2,71.6},{49.4,70.4},{49.4,72.8},{49.6,71.4},{49.8,70.4},{49.8,71.6},{50,72.6},{50.6,71.6},{53.8,70.6},{54.4,70.4},{55,69.4},{55.2,70.2},{55.2,71},{55.2,71.6},{55.6,70.4},{55.6,70.6},{59.4,72},{60,70.8},{60.2,71.8},{60.6,70.6},{60.6,71.8},{61,75.2},{61.2,74.2},{61.8,73},{62.2,72.2},{62.2,74.6},{62.4,73.8},{62.6,74},{62.8,73.4},{62.8,75.2},{63.4,71},{63.4,72.2},{63.6,71.4},{64,72.2},{64.2,72.6},{64.6,72.2},{64.6,72.6},{25.4,69.4},{25.4,70.8},{26,72.8},{26.2,69.4},{26.2,71.2},{26.2,71.6},{26.4,68.4},{26.4,69.6},{26.6,68},{26.6,70},{26.6,72.2},{26.6,72.8},{26.8,68.6},{26.8,71},{26.8,74},{28.4,69.6},{28.4,70.6},{28.6,68.4},{29,69.4},{29,71},{29.2,70.2},{29.4,71.6},{29.6,71},{29.6,71.6},{30,70.4},{30.2,68.8},{30.6,73.2}}},
+                }}
+            }}
+        },
+        acquisition={
+            {"Kill mobs for a chance of receiving a %s.", "i94573"},
+        },
     }, 
     [1206]={
         name="Tiny Red Carp",
@@ -13227,7 +13571,19 @@ PETS.all = {
         note="Can be fished up from Spinefish Schools",
         possibleBreeds={8},
         baseStats={7.5, 8, 8.5},
-        locations={{mapID=379, coords={{72.7,86},}}},
+        pois={
+            {name="Fishing:", entries={
+                {id="", maps={
+                    {display="Inland fishing", mapID=388, type="fish", coords={{35.2,52.8}}},
+                }}
+            }}
+        },
+        acquisition={
+            {"%s can be fished up from the pond near Niuzao in Townlong Steppes.", "i94932"},
+            {"You need not cast into any specific kind of pool. Open water is fine."},
+            {"If fishing in a pool then it must be a Spinefish pool. The pool can be on any map."},
+            {"It has a low drop rate and may take thousands of casts."}
+        },
     }, 
     [1207]={
         name="Tiny Blue Carp",
@@ -13243,9 +13599,19 @@ PETS.all = {
         note="Can be fished up from Jewel Danio Schools and Redbelly Mandarin Schools",
         possibleBreeds={10},
         baseStats={7.5, 8.25, 8.25},
-        locations={
-            {continent="", zone="unknown-Vale of Eternal Blossoms", mapID=390, coords={{20.8,20},{29.4,73.9},{41.8,50.2},{62.1,53.3},{69.6,31.8},{69.6,45.4},{73.3,59.6},}},
-            {continent="", zone="unknown-Townlong Steppes", mapID=388, coords={{34.9,51},}}
+        pois={
+            {name="Fishing:", entries={
+                {id="", maps={
+                    {display="Inland fishing", mapID=554, type="fish", coords={{61,32},{64,28.3},{48,53.5}}},
+                    {display="Inland fishing", mapID=390, type="fish", coords={{22.5,17.8},{41.6,50},{76,58.8}}}
+                }}
+            }}
+        },
+        acquisition={
+            {"%s can be fished up from the ponds within the Timeless Isles, Vale of Eternal Blossoms", "i94933"},
+            {"You need not cast into any specific kind of pool. Open water is fine."},
+            {"If fishing in a pool then it must be either a Jewel Danio or Redbelly Madarin pool. The pool can be on any map."},
+            {"It has a low drop rate and may take hundreds of casts."}
         },
     }, 
     [1208]={
@@ -13262,9 +13628,20 @@ PETS.all = {
         note="Can be fished up from Emperor Salmon Schools, Jade Lungfish Schools, and Krasarang Paddlefish Schools",
         possibleBreeds={9},
         baseStats={7.5, 8, 8.5},
-        locations={
-            {continent="", zone="unknown-The Jade Forest", mapID=371, coords={{50.5,20.7},}},
-            {continent="", zone="unknown-Valley of the Four Winds", mapID=376, coords={{41.8,70.8},}}
+        pois={
+            {name="Fishing:", entries={
+                {id="", maps={
+                    {display="Inland fishing", mapID=371, type="fish", coords={{22.9,36.5},{41.2,25.1},{50.9,20.7},{56.8,43.3},{59.8,87.9}}},
+                    {display="Inland fishing", mapID=376, type="fish", coords={{44.6,69.6},{58.9,47},{58.9,48.2}}},
+                    {display="Inland fishing", mapID=418, type="fish", coords={{32.5,34.9},{33.2,53},{33.3,33.3},{35.4,38.9},{37.4,42.4},{61,23},{61.9,27.2},{62.7,33.1},{62.9,23.3},{64,18.1},{64.8,24},{64.9,32.3},{65.1,30.1},{65.2,22.7},{65.5,23.6},{66.7,29.6}}}
+                }}
+            }}
+        },
+        acquisition={
+            {"%s can be fished up from the rivers and ponds within the Jade Forest, Krasarang Wilds, or Valley of the Four Winds", "i94934"},
+            {"You need not cast into any specific kind of pool. Open water is fine."},
+            {"If fishing in a pool then it must be either a Jewel Danio or Redbelly Madarin pool. The pool can be on any map."},
+            {"It has a low drop rate and may take hundreds of casts."}
         },
     }, 
     [1209]={
@@ -13280,7 +13657,17 @@ PETS.all = {
         note="Can be fished up from Giant Mantis Shrimp Swarms, Reef Octopus Swarms, and Tiger Gourami Schools",
         possibleBreeds={1},
         baseStats={7.5, 8, 8.5},
-        locations={{mapID=379, coords={{33.4,40.9},}}},
+        pois={
+            {name="Fishing:", entries={
+                {id="", maps={
+                    {display="Coastal fishing", mapID=418, type="fish", coords={{37.7,64.1},{40,68.3},{47.7,84.2},{52.9,54.8},{57.6,53.3},{59.6,47.4}}},
+                }}
+            }}
+        },
+        acquisition={
+            {"%s can be fished up from the coastal waters around Pandari", "i94935"},
+            {"It has a low drop rate and may take thousands of casts."}
+        },
     }, 
     [1211]={
         name="Zandalari Anklerender",
@@ -13295,7 +13682,17 @@ PETS.all = {
         npcSounds={18178},
         possibleBreeds={2,3,6,8},
         baseStats={7, 8.5, 8.5},
-        locations={{continent="Pandaria", zone="Kun-Lai Summit", area="Isle Of Giants", mapID=507, coords={{30.6,69.4},{65.6,65},}}},
+        pois={
+            {name="Npc Drop:", entries={
+                {id="", maps={
+                    {id="n69925:Zandalari Dinomancer", mapID=507, chance=1.7, type="kill", coords={{38.8,70.6},{39,72.2},{39.2,73.2},{41,70.8},{46.4,54.8},{46.6,54.4},{47.2,55.2},{47.4,56},{47.4,57.4},{47.4,57.6},{47.6,57.4},{47.6,57.6},{48.8,57.8},{49.4,52.2},{49.4,52.8},{49.6,52.4},{49.6,53.2},{50.6,52.2},{50.6,52.6},{52.2,52.8},{52.4,52},{52.4,53.6},{52.6,53.4},{52.6,53.6},{53,55.8},{53.2,55.2},{53.6,56},{64.4,65.6},{64.8,64.4},{65,64.6},{65,65.8},{65,76.4},{65.6,75.2},{65.6,76},{67,53.8},{67,75.4},{67,76.2},{67.2,37.4},{67.2,37.6},{67.2,39},{67.2,53.4},{67.6,76},{67.8,38.4},{67.8,38.6},{67.8,39.6},{68,40.6},{68.2,53.4},{68.4,71},{68.6,41.8},{68.8,41},{69.2,69.4},{69.2,70.6},{69.4,70.2},{69.6,69},{69.6,70.4},{69.8,71.4},{69.8,71.6},{75.4,76},{75.8,77.6},{76.2,77.2},{77.2,81.2},{77.4,82.8},{77.8,79.6},{77.8,83.2},{78,79.4},{78,81.6},{78,85},{78.2,80.8},{78.6,80.2},{78.6,82},{78.6,82.8},{79.2,79},{79.4,78.4},{79.8,77.4},{79.8,80.2},{80.4,77.6}}},
+                    {id="n70096:War-God Dokah", mapID=507, chance=.09, type="kill", coords={{76.4,83.4},{76.4,83.8},{77,83.4},{77,83.6},{77.4,82.4},{77.6,80.2},{77.6,82.4},{77.6,82.6},{78,83.8},{78,84.8},{78.2,81.4},{78.6,80.4},{78.6,80.6}}},
+                }}
+            }}
+        },
+        acquisition={
+            {"Kill the mobs for a chance of receiving a %s.", "i95422"},
+        },
     }, 
     [1212]={
         name="Zandalari Footslasher",
@@ -13310,7 +13707,19 @@ PETS.all = {
         npcSounds={18178},
         possibleBreeds={2,3,6,8},
         baseStats={7, 8.5, 8.5},
-        locations={{continent="Pandaria", zone="Kun-Lai Summit", area="Isle Of Giants", mapID=507, coords={{67.8,56.2},}}},
+        pois={
+            {name="Npc Drop:", entries={
+                {id="", maps={
+                    {id="n69925:Zandalari Dinomancer", mapID=507, chance=1.3, type="kill", coords={{38.8,70.6},{39,72.2},{39.2,73.2},{41,70.8},{46.4,54.8},{46.6,54.4},{47.2,55.2},{47.4,56},{47.4,57.4},{47.4,57.6},{47.6,57.4},{47.6,57.6},{48.8,57.8},{49.4,52.2},{49.4,52.8},{49.6,52.4},{49.6,53.2},{50.6,52.2},{50.6,52.6},{52.2,52.8},{52.4,52},{52.4,53.6},{52.6,53.4},{52.6,53.6},{53,55.8},{53.2,55.2},{53.6,56},{64.4,65.6},{64.8,64.4},{65,64.6},{65,65.8},{65,76.4},{65.6,75.2},{65.6,76},{67,53.8},{67,75.4},{67,76.2},{67.2,37.4},{67.2,37.6},{67.2,39},{67.2,53.4},{67.6,76},{67.8,38.4},{67.8,38.6},{67.8,39.6},{68,40.6},{68.2,53.4},{68.4,71},{68.6,41.8},{68.8,41},{69.2,69.4},{69.2,70.6},{69.4,70.2},{69.6,69},{69.6,70.4},{69.8,71.4},{69.8,71.6},{75.4,76},{75.8,77.6},{76.2,77.2},{77.2,81.2},{77.4,82.8},{77.8,79.6},{77.8,83.2},{78,79.4},{78,81.6},{78,85},{78.2,80.8},{78.6,80.2},{78.6,82},{78.6,82.8},{79.2,79},{79.4,78.4},{79.8,77.4},{79.8,80.2},{80.4,77.6}}},
+                    {id="n70096:War-God Dokah", mapID=507, chance=.06, type="kill", coords={{76.4,83.4},{76.4,83.8},{77,83.4},{77,83.6},{77.4,82.4},{77.6,80.2},{77.6,82.4},{77.6,82.6},{78,83.8},{78,84.8},{78.2,81.4},{78.6,80.4},{78.6,80.6}}},
+                    {id="n70008:Primal Devilsaur", mapID=507, chance=.05, type="kill", coords={{42.4,55.8},{43.4,53},{43.6,55.8},{44.4,49.8},{44.4,57.6},{44.8,50},{45.4,48.8},{49.4,45},{50,45},{50.2,45.8},{50.8,45.6},{51,45},{51.2,50},{51.8,45.2},{52.6,54.2},{54.2,47.8},{54.6,48.6},{55.6,50.4},{56.2,47.6},{56.2,53.6},{56.2,55.2},{56.4,52.8},{75,77.8},{75.4,78.6},{75.8,77.4},{76,77.6}}},
+                    {id="n70012:Primal Direhorn Hatchling", mapID=507, chance=.04, type="kill", coords={{53.8,70.6},{54.4,70.4},{55,69.4},{55.2,70.2},{55.2,71},{55.2,71.6},{55.6,70.4},{55.6,70.6},{59.4,72},{60,70.8},{60.2,71.8},{60.6,70.6},{60.6,71.8},{61,75.2},{61.2,74.2},{61.8,73},{62.2,72.2},{62.2,74.6},{62.4,73.8},{62.6,74},{62.8,73.4},{62.8,75.2},{63.4,71},{63.4,72.2},{63.6,71.4},{64,72.2},{64.2,72.6},{64.6,72.2},{64.6,72.6}}},
+                }}
+            }}
+        },
+        acquisition={
+            {"Kill the mobs for a chance of receiving a %s.", "i95423"},
+        },
     }, 
     [1213]={
         name="Zandalari Toenibbler",
@@ -13325,7 +13734,18 @@ PETS.all = {
         npcSounds={18178},
         possibleBreeds={2,3,6,8},
         baseStats={7, 8.5, 8.5},
-        locations={{continent="Pandaria", zone="Kun-Lai Summit", area="Isle Of Giants", mapID=507, coords={{36.4,69.8},}}},
+        pois={
+            {name="Npc Drop:", entries={
+                {id="", maps={
+                    {id="n69925:Zandalari Dinomancer", mapID=507, chance=1.5, type="kill", coords={{38.8,70.6},{39,72.2},{39.2,73.2},{41,70.8},{46.4,54.8},{46.6,54.4},{47.2,55.2},{47.4,56},{47.4,57.4},{47.4,57.6},{47.6,57.4},{47.6,57.6},{48.8,57.8},{49.4,52.2},{49.4,52.8},{49.6,52.4},{49.6,53.2},{50.6,52.2},{50.6,52.6},{52.2,52.8},{52.4,52},{52.4,53.6},{52.6,53.4},{52.6,53.6},{53,55.8},{53.2,55.2},{53.6,56},{64.4,65.6},{64.8,64.4},{65,64.6},{65,65.8},{65,76.4},{65.6,75.2},{65.6,76},{67,53.8},{67,75.4},{67,76.2},{67.2,37.4},{67.2,37.6},{67.2,39},{67.2,53.4},{67.6,76},{67.8,38.4},{67.8,38.6},{67.8,39.6},{68,40.6},{68.2,53.4},{68.4,71},{68.6,41.8},{68.8,41},{69.2,69.4},{69.2,70.6},{69.4,70.2},{69.6,69},{69.6,70.4},{69.8,71.4},{69.8,71.6},{75.4,76},{75.8,77.6},{76.2,77.2},{77.2,81.2},{77.4,82.8},{77.8,79.6},{77.8,83.2},{78,79.4},{78,81.6},{78,85},{78.2,80.8},{78.6,80.2},{78.6,82},{78.6,82.8},{79.2,79},{79.4,78.4},{79.8,77.4},{79.8,80.2},{80.4,77.6}}},
+                    {id="n70096:War-God Dokah", mapID=507, chance=.06, type="kill", coords={{76.4,83.4},{76.4,83.8},{77,83.4},{77,83.6},{77.4,82.4},{77.6,80.2},{77.6,82.4},{77.6,82.6},{78,83.8},{78,84.8},{78.2,81.4},{78.6,80.4},{78.6,80.6}}},
+                    {id="n70012:Primal Direhorn Hatchling", mapID=507, chance=.03, type="kill", coords={{53.8,70.6},{54.4,70.4},{55,69.4},{55.2,70.2},{55.2,71},{55.2,71.6},{55.6,70.4},{55.6,70.6},{59.4,72},{60,70.8},{60.2,71.8},{60.6,70.6},{60.6,71.8},{61,75.2},{61.2,74.2},{61.8,73},{62.2,72.2},{62.2,74.6},{62.4,73.8},{62.6,74},{62.8,73.4},{62.8,75.2},{63.4,71},{63.4,72.2},{63.6,71.4},{64,72.2},{64.2,72.6},{64.6,72.2},{64.6,72.6}}},
+                }}
+            }}
+        },
+        acquisition={
+            {"Kill the mobs for a chance of receiving a %s.", "i95424"},
+        },
     }, 
     [1226]={
         name="Lil' Bad Wolf",
