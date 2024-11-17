@@ -86,8 +86,8 @@ namespace PetCollectorUtils.Csv
           continue;
 
         var sourceType = (CsvSourceType)Convert.ToInt32(items[sourceTypeIndex]);
-        if (sourceType == CsvSourceType.Unknown)
-          continue;
+        //if (sourceType == CsvSourceType.Unknown) //blizz sometimes screws up and leaves the source as -1 even though the pet is now obtainable
+        //  continue;
 
         var speciesIdStr = items[speciesIdIndex];
         var speciesId = Convert.ToInt32(speciesIdStr);
