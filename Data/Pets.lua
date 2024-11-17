@@ -31875,6 +31875,7 @@ PETS.all = {
         icon="5009629",
         npcSounds={261235},
         creatureSounds={"3_261221", "10_261225", "11_261226", "13_261222", "30_261227", "31_261228", "32_261231", "33_261232"},
+        possibleBreeds={1},
         baseStats={9, 7.5, 7.5},
     }, 
     [3543]={
@@ -33312,6 +33313,7 @@ PETS.all = {
         icon="5688871",
         npcSounds={252552,252553},
         creatureSounds={"3_252528", "9_621", "10_252535", "13_252531", "28_252536", "30_252539", "31_252541", "32_252542", "33_252446"},
+        possibleBreeds={4},
         baseStats={6.5, 8.5, 9},
     }, 
     [4456]={
@@ -33395,7 +33397,7 @@ PETS.all = {
         flavor="Free-range chickens are difficult to take care of in Hallowfall, what with all the shadow monsters and fish people.",
         icon="2027866",
         npcSounds={251474,251477},
-        possibleBreeds={1,3,4,5,9,10},
+        possibleBreeds={1,2,3,4,5,9,10},
         baseStats={7, 8.5, 8.5},
         locations={{continent="", zone="unknown-Hallowfall", mapID=2215, coords={{47,60.4},{47,60.6},{47.8,63.4},{47.8,63.6},{48.8,40},{61.2,29.8},{61.4,32.6},{61.6,32.6},{63,29.2},}}},
     }, 
@@ -33426,6 +33428,7 @@ PETS.all = {
         icon="5648286",
         npcSounds={250305,250306},
         creatureSounds={"3_250321", "9_493", "10_250322", "30_250308", "31_250311", "32_250312", "33_250314"},
+        possibleBreeds={2},
         baseStats={7.75, 8.5, 8.25},
     }, 
     [4464]={
@@ -33556,6 +33559,7 @@ PETS.all = {
         flavor="A bug? Wait a minute, no, it's a small friendly spider!",
         icon="5342950",
         npcSounds={252502,252503},
+        possibleBreeds={9},
         baseStats={7.5, 9, 7.5},
     }, 
     [4477]={
@@ -33600,7 +33604,7 @@ PETS.all = {
         icon="3459800",
         npcSounds={252313,252314},
         creatureSounds={"3_252318", "10_252319", "19_248127", "30_252320", "31_252351", "32_252347", "33_252342"},
-        possibleBreeds={1,10},
+        possibleBreeds={1,2,3,4,5,6,7,8,9,10},
         baseStats={8.5, 7.5, 8},
         locations={{continent="", zone="unknown-oddFormat", mapID=99999, coords={{61.2,77.8},{61.4,80},{61.6,80},{63.6,85.2},{63.8,87.2},{64.2,87.6},{66.4,77.6},{66.6,77.4},}}},
     }, 
@@ -33616,7 +33620,7 @@ PETS.all = {
         icon="3459799",
         npcSounds={252313,252314},
         creatureSounds={"3_252318", "10_252319", "19_248127", "30_252320", "31_252351", "32_252347", "33_252342"},
-        possibleBreeds={2,3},
+        possibleBreeds={1,2,3,4,5,6,7,8,9,10},
         baseStats={7.5, 8, 8.5},
         locations={{continent="", zone="unknown-oddFormat", mapID=99999, coords={{60.4,79.4},{60.8,74.6},{61,81.4},{62.6,84.4},{62.6,84.6},{63.6,89},{65,83.6},{65.4,83.2},{65.4,87},{65.6,87.2},{65.8,79.2},{66.2,82.8},}}},
     }, 
@@ -33632,6 +33636,7 @@ PETS.all = {
         icon="3459801",
         npcSounds={252313,252314},
         creatureSounds={"3_252318", "10_252319", "19_248127", "30_252320", "31_252351", "32_252347", "33_252342"},
+        possibleBreeds={1,2,3,4,5,6,7,8,9,10},
         baseStats={8, 8, 8},
     }, 
     [4483]={
@@ -33692,6 +33697,7 @@ PETS.all = {
         icon="5755547",
         npcSounds={28522},
         creatureSounds={"9_611", "10_258873", "30_258874", "31_258875", "32_258916", "33_258877"},
+        possibleBreeds={7},
         baseStats={7.5, 9, 7.5},
     }, 
     [4492]={
@@ -33706,6 +33712,7 @@ PETS.all = {
         icon="5755549",
         npcSounds={28522},
         creatureSounds={"9_611", "10_258873", "30_258874", "31_258875", "32_258916", "33_258877"},
+        possibleBreeds={4},
         baseStats={8, 8.25, 7.75},
     }, 
     [4495]={
@@ -33735,6 +33742,7 @@ PETS.all = {
         icon="5763494",
         npcSounds={252634,252635},
         creatureSounds={"3_252606", "9_16", "10_252608", "13_252607", "30_252609", "31_252610", "32_252612", "33_252614"},
+        possibleBreeds={7},
         baseStats={8.375, 9.125, 6.5},
     }, 
     [4498]={
@@ -33781,6 +33789,7 @@ PETS.all = {
         icon="5659382",
         npcSounds={254794,254795},
         creatureSounds={"3_246231", "9_13", "10_246240", "13_246240", "30_246239", "31_246253", "32_246248", "33_246236"},
+        possibleBreeds={7},
         baseStats={7.75, 8.5, 7.75},
     }, 
     [4502]={
@@ -33809,6 +33818,7 @@ PETS.all = {
         icon="5789327",
         npcSounds={51360},
         creatureSounds={"1_258080", "6_258081", "10_258083"},
+        possibleBreeds={3},
         baseStats={7, 8, 9},
     }, 
     [4510]={
@@ -34096,6 +34106,7 @@ PETS.all = {
         flavor="The softest and fluffiest protosheep made of the softest and fluffiest soil.",
         icon="4279015",
         npcSounds={254766,254767},
+        possibleBreeds={4},
         baseStats={9.5, 6.5, 8},
     }, 
     [4533]={
@@ -34261,6 +34272,7 @@ PETS.all = {
         flavor="The shadowy creature has been following Sir Finley Mrgglton around ever since he happened upon it during one of his expeditions. Having grown quite fond of the tenebrous friend, Sir Finley won't part with it easily.",
         icon="135945",
         creatureSounds={"3_246156", "10_246158", "13_246157", "19_246173", "30_246160", "31_246161", "32_246162", "33_246163"},
+        possibleBreeds={6},
         baseStats={6, 8.5, 9.5},
     }, 
     [4544]={
@@ -34274,7 +34286,7 @@ PETS.all = {
         flavor="These swarms of void energy cannot persist in Beledar's light.",
         icon="136221",
         creatureSounds={"3_246156", "10_246158", "13_246157", "19_246173", "30_246160", "31_246161", "32_246162", "33_246163"},
-        possibleBreeds={2,3,4,10},
+        possibleBreeds={1,2,3,4,5,6,7,8,9,10},
         baseStats={6, 9, 9},
         locations={{continent="", zone="unknown-Hallowfall", mapID=2215, coords={{37.4,46},{46.2,31.8},{48.4,59},{54.2,52},{58.8,49.2},{61.4,46},{61.6,45.8},{61.8,44.2},{63.2,49},{72,46},}}},
     }, 
@@ -34424,6 +34436,7 @@ PETS.all = {
         flavor="She's got a schnoz for sniffin'!",
         icon="5777853",
         npcSounds={268798,268800},
+        possibleBreeds={1},
         baseStats={9.25, 8, 6.75},
     }, 
     [4576]={
@@ -34436,6 +34449,7 @@ PETS.all = {
         source="Vendor",
         flavor="This snuffling loves limes.",
         icon="5777857",
+        possibleBreeds={7},
         baseStats={9, 7.5, 7.5},
     }, 
     [4577]={
@@ -34493,6 +34507,7 @@ PETS.all = {
         flavor="",
         icon="5764867",
         npcSounds={261387},
+        possibleBreeds={10},
         baseStats={8.5, 8, 7.5},
     }, 
     [4582]={
@@ -34576,6 +34591,7 @@ PETS.all = {
         flavor="There are many creatures lurking in the Cape of Stranglethorn who would be glad to kill you. Misty is just curious to see the rest of the world.",
         icon="132189",
         npcSounds={271299},
+        possibleBreeds={5},
         baseStats={8.75, 8.25, 7},
     }, 
     [4593]={
@@ -34589,6 +34605,7 @@ PETS.all = {
         flavor="This boarlet escaped Coldridge Valley in search of adventure and maybe a nice apple if she can find one.",
         icon="237175",
         npcSounds={271296},
+        possibleBreeds={5},
         baseStats={8.25, 8.25, 7.5},
     }, 
     [4594]={
@@ -34655,6 +34672,7 @@ PETS.all = {
         flavor="One hero's trash is another kobold's treasure. This unfortunately does not work in reverse.",
         icon="134168",
         npcSounds={255875,255874,255876},
+        possibleBreeds={1},
         baseStats={6.75, 8, 9.25},
     }, 
     [4599]={
@@ -34683,7 +34701,24 @@ PETS.all = {
         flavor="Claudius is known for being brutally honest as well as a great singer. He knows your jewels would look better on him.",
         icon="5559625",
         npcSounds={243034},
+        possibleBreeds={1},
         baseStats={8.5, 8.5, 7},
+    }, 
+    [4614]={
+        name="Gizmo the Pure",
+        speciesID=4614,
+        companionID=229779,
+        variants={{id=122124, chance=100}},
+        family=5,
+        isWild=true,
+        isUnique=true,
+        source="World Event",
+        flavor="In life, Gizmo never hurt a soul. Having been brutally murdered, he now considers violence.",
+        icon="646059",
+        npcSounds={271508,271524},
+        creatureSounds={"3_271517", "4_271518", "9_493", "10_271520", "13_271519", "30_271521", "31_271522", "32_271523", "33_271543"},
+        possibleBreeds={10},
+        baseStats={8, 8, 8},
     }, 
     [4615]={
         name="Parrlok",
@@ -34710,6 +34745,7 @@ PETS.all = {
         flavor="Gummi baubleworms have an abundance of natural predators as they are known for their rubbery texture and sweet flavors.",
         icon="5852399",
         npcSounds={183657},
+        possibleBreeds={8},
         baseStats={6.335, 8.555, 9.11},
     }, 
     [4617]={
@@ -34805,6 +34841,7 @@ PETS.all = {
         flavor="",
         icon="6116549",
         npcSounds={270790},
+        possibleBreeds={1},
         baseStats={7.75, 8.5, 7.75},
     }, 
     [4679]={
@@ -34818,6 +34855,7 @@ PETS.all = {
         flavor="",
         icon="6116552",
         npcSounds={270790},
+        possibleBreeds={1},
         baseStats={7.75, 8.5, 7.75},
     }, 
     [4682]={
@@ -34859,6 +34897,7 @@ PETS.all = {
         flavor="Rarely captured alive, syphoners are some of the most dangerous of the mana wyrms. This one happened to have been distracted while binging on a particularly juicy spell book in the Karazhan library.",
         icon="132841",
         npcSounds={33775},
+        possibleBreeds={8},
         baseStats={8.25, 8.25, 7.5},
     }, 
     [4690]={
@@ -34872,6 +34911,19 @@ PETS.all = {
         flavor="Razeshi B. is known for her short temper, quick wit and sharp barbs. The B. stands for \"Best check yourself.\"",
         icon="5788265",
         baseStats={8.125, 7, 8.875},
+    }, 
+    [4691]={
+        name="Grunch",
+        speciesID=4691,
+        companionID=233564,
+        variants={{id=123987, chance=100}},
+        family=8,
+        isTradable=true,
+        source="Quest",
+        flavor="It's best not to ask how Grunch acquired all these gifts because you know it's not because he's been nice.",
+        icon="6027035",
+        npcSounds={274392,274312},
+        baseStats={7, 8.5, 8.5},
     }, 
     [4692]={
         name="Sparklesnap",
@@ -35090,7 +35142,7 @@ PETS.all = {
         source="Trading Post",
         flavor="The meeksi Teatuft Tamers love lounging with their Teatufts and sipping a cup of mystical tea after a long lazy day.",
         icon="6310499",
-        npcSounds={36230},
+        npcSounds={274616},
         baseStats={9, 7.75, 7.25},
     }, 
     [4729]={
@@ -35103,7 +35155,7 @@ PETS.all = {
         source="Trading Post",
         flavor="The Fullbelly meeksi will often put their own safety at risk if they smell food. Nothing brings them happiness like a cup of tea and a warm meal.",
         icon="6310498",
-        npcSounds={36230},
+        npcSounds={274616},
         baseStats={9, 7.5, 7.5},
     }, 
     [4730]={

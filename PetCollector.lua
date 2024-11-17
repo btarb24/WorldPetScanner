@@ -232,8 +232,14 @@ function PETC:PetListUpdated()
 end
 
 PETC:RegisterChatCommand("petcollector", "ChatCommand")
+PETC:RegisterChatCommand("petc", "ChatCommand")
 PETC:RegisterChatCommand("pc", "ChatCommand")
 function PETC:ChatCommand(input)
+	if input == nil or input == "" then
+		PETC:Show()
+		return
+	end
+
 	local cmds = strsplittable(" ", input)
 	local arg1 = string.lower(cmds[1])if (arg1 == "count" or arg1 == "total") then
 		if (DISPLAY.TotalPets.Shown) then
