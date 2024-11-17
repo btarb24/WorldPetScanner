@@ -34,26 +34,11 @@ namespace PetCollectorUtils.ParseFromWowHead
     
     private string getHtml(int companionID)
     {
-      var dir = "../../wowHeadData/";
-      if (!Directory.Exists(dir))
-        Directory.CreateDirectory(dir);
-
-      var filename = $"{dir}{companionID}.html";
-      string html;
-      if (File.Exists(filename))
+      using (WebClient client = new WebClient()) // WebClient class inherits IDisposable
       {
-        html = File.ReadAllText(filename);
+        var html = client.DownloadString($"https://www.wowhead.com/npc={companionID}");
+        return html;
       }
-      else
-      {
-        using (WebClient client = new WebClient()) // WebClient class inherits IDisposable
-        {
-          html = client.DownloadString($"https://www.wowhead.com/npc={companionID}");
-          File.WriteAllText(filename, html);
-        }
-      }
-
-      return html;
     }
 
     private List<int> getBreeds(Pet pet, string html)
