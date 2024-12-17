@@ -71,7 +71,6 @@ local function Event_OnEvent(self, event, name, ...)
 			TieInRematch()
 		end
 	elseif event == "PERKS_PROGRAM_DATA_REFRESH" then
-		print("PetCollector - updating perks cache")
 		TASKFINDER:UpdateTradingPostCache()
 	end
 end

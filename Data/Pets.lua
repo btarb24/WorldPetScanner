@@ -35198,6 +35198,7 @@ PETS.all = {
         flavor="Gill'el stepped down from leading Frostfin clan to commune with the elements. His return has sparked excitement in all.",
         icon="5834819",
         npcSounds={270431,270434},
+        possibleBreeds={7},
         baseStats={9.25, 6.75, 8},
     }, 
     [4669]={
@@ -35212,6 +35213,7 @@ PETS.all = {
         icon="5206186",
         npcSounds={242635,242626},
         creatureSounds={"3_242624", "9_312", "10_242627", "13_242628", "30_242631", "31_242625", "32_242629"},
+        possibleBreeds={5},
         baseStats={9, 7.5, 7.5},
     }, 
     [4678]={
@@ -35268,6 +35270,7 @@ PETS.all = {
         flavor="Found by Taunka as a newborn pup Specter is fiercely loyal. Yet he is beginning to live up to his name as he stalks into the world.",
         icon="132266",
         npcSounds={10827},
+        possibleBreeds={2},
         baseStats={7.5, 8.25, 8.25},
     }, 
     [4689]={
@@ -35447,7 +35450,7 @@ PETS.all = {
         source="Vendor",
         flavor="With a face this lovable Wuffi is sure you'll wind-up being the best of friends.",
         icon="6231699",
-        npcSounds={34924},
+        npcSounds={274806,274807},
         baseStats={8.5, 7.5, 8},
     }, 
     [4719]={
@@ -35460,7 +35463,7 @@ PETS.all = {
         source="Vendor",
         flavor="A wag of their tail always brings a smile to your face, like clockwork.",
         icon="6231699",
-        npcSounds={34924},
+        npcSounds={274806,274807},
         baseStats={8.25, 7.5, 8.25},
     }, 
     [4723]={
@@ -35481,7 +35484,7 @@ PETS.all = {
         name="Battleboar Piglet",
         speciesID=4724,
         companionID=234734,
-        variants={{id=124558, chance=32},{id=124562, chance=32},{id=124561, chance=32},{id=124559, chance=4}},
+        variants={{id=124562, chance=80},{id=124559, chance=10},{id=124560, chance=10}},
         family=8,
         isTradable=true,
         source="??Discovery",
@@ -35526,7 +35529,7 @@ PETS.all = {
         source="Trading Post",
         flavor="The meeksi Teatuft Tamers love lounging with their Teatufts and sipping a cup of mystical tea after a long lazy day.",
         icon="6310499",
-        npcSounds={274616},
+        npcSounds={274616,274721},
         baseStats={9, 7.75, 7.25},
     }, 
     [4729]={
@@ -35539,7 +35542,7 @@ PETS.all = {
         source="Trading Post",
         flavor="The Fullbelly meeksi will often put their own safety at risk if they smell food. Nothing brings them happiness like a cup of tea and a warm meal.",
         icon="6310498",
-        npcSounds={274616},
+        npcSounds={274616,274721},
         baseStats={9, 7.5, 7.5},
     }, 
     [4730]={
@@ -35552,11 +35555,11 @@ PETS.all = {
         source="In-Game Shop",
         flavor="Meet your new best mech-friend, Maya. Maya loves a good, tight wind-up so she can spring into action.",
         icon="6231701",
-        npcSounds={34924},
+        npcSounds={274806,274807},
         baseStats={8.25, 7.5, 8.25},
     }, 
     [4731]={
-        name="Storminfused Snapdragon",
+        name="Storm-Infused Snapdragon",
         speciesID=4731,
         companionID=236040,
         variants={{id=124566, chance=88},{id=124563, chance=11}},
