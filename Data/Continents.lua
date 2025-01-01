@@ -15,6 +15,7 @@ CONTINENTS.list = {
     ["Zandalar"] = 11,
     ["Shadowlands"] = 12,
     ["Dragon Isles"] = 13,
+    ["Khaz Algar"] = 14,
 }
 
 function CONTINENTS:GetSortOrder(continent)
