@@ -195,6 +195,12 @@ MAPS.maps = {
     [2151]={13, "The Forbidden Reach"},
     [2133]={13, "Zaralek Cavern"},
     [2200]={13, "Emerald Dream"},
+    [2214]={14, "The Ringing Deeps"},
+    [2215]={14, "Hallowfall"},
+    [2248]={14, "Isle of Dorn"},
+    [2255]={14, "Azj-Kahet"},
+    [2339]={14, "Dornogal"},
+    [2369]={14, "Siren Isle"},
 }
 
 function MAPS.GetContinent(mapID)
