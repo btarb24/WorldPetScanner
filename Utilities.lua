@@ -54,7 +54,7 @@ function UTILITIES:Ternary2(cond, no)
 end
 
 function UTILITIES:GetDaysSince(startYear, startDayOfYear)
-    local currentYear = date("%Y")
+    local currentYear = tonumber(date("%Y"))
     local currentDayOfYear = date("*t").yday
 
     local yearsDelta = currentYear - startYear
