@@ -106,6 +106,7 @@ ZONES.list = {
         [2255] = {scanWorldQuests = true, Name = "Azj-Kahet"},
         [2256] = {scanWorldQuests = true, Name = "Azj-Kahet Lower"},
         [2369] = {scanWorldQuests = false, Name = "Siren Isle"},
+        [2346] = {scanWorldQuests = true, Name = "Undermine"},
     }
 }
 
